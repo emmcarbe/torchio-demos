@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Canterbury Tales: The General Prologue</title>
+<title>The Book of the Tales of Canterbury: the General Prologue</title>
 <style>:root{--ground:#FFFFFF;--paper:#FFFFFF;--ink:#1B1B1B;--soft:#6A6A66;--hair:#E5E2D9;--faint:#CFCCC2;--accent:#B01E28;--accent-soft:#9a5a52;--link:#B01E28;--reading:"EB Garamond",Iowan Old Style,Palatino,"Palatino Linotype",Georgia,serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;--serif:var(--reading);--measure:44rem}
 
 *{box-sizing:border-box}
@@ -126,6 +126,8 @@ body.app-off .t-lem{border-bottom:none;cursor:inherit}
 /* a verse followed by its apparatus band opens the scheme on click */
 body.has-band [data-el="l"]{cursor:pointer}
 body.has-align [data-el="l"]{cursor:pointer}
+[data-change],[data-hand]{cursor:pointer}
+.t-add[data-change],.t-add[data-hand]{border-bottom:1px dotted var(--accent-soft)}
 .wv{border-bottom:1px dotted var(--accent-soft);cursor:pointer}
 .app-anchored{border-bottom:1px dotted var(--accent-soft);cursor:pointer}
 body.app-off .app-anchored{border-bottom:none;cursor:inherit}
@@ -300,11 +302,11 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="torchio">
-<div class="tt"><h1>The Canterbury Tales: The General Prologue</h1><p class="sub">data</p></div>
+<div class="tt"><h1>The Book of the Tales of Canterbury: the General Prologue</h1><p class="sub">data</p></div>
 <nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Edition</a><a href="text.html">Texts</a><a href="apparatus.html">Apparatus</a><a href="data.html" class="on">Data</a></nav>
 </header>
 <main id="main" class="torchio"><table class="idx-table"><tr><td class="sigla"><a href="data/apparatus.csv">apparatus.csv</a></td><td>every apparatus reading with its witnesses, one row per reading</td><td class="occ">1.7 MB</td></tr><tr><td class="sigla"><a href="data/tokens.csv">tokens.csv</a></td><td>the token stream of the reading text: position, language, form, lemma, anchor</td><td class="occ">13.6 MB</td></tr></table><p class="occ">Reuse under the edition licence (see the Edition page).</p></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · 89939c7 · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · 667784d · 2026-07-31</footer>
 
 </body>
 </html>

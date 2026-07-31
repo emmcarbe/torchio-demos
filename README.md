@@ -38,9 +38,9 @@ and `node tools/press.js --site demo-src/vangogh docs/vangogh`.
   [paolomonella/ursus](https://github.com/paolomonella/ursus) repository,
   GPL 2.0. Offered by the editor as a test case. The derived demo is
   distributed under the same licence.
-- **The Canterbury Tales, General Prologue** (`sources/canterbury/`):
+- **The Book of the Tales of Canterbury: the General Prologue** (`sources/canterbury/`):
   transcripts of all 54 witnesses and the full collation from the
-  [Canterbury Tales Project](https://talesofcanterbury.org/GP/), ed. Peter
+  [Canterbury Tales Project](https://talesofcanterbury.org/GP/), ed. Barbara Bordalejo and Peter
   Robinson. Materials under copyright; pressed and republished here by
   invitation of the editor as a test case. This is a temporary demo and it
   will be removed.
