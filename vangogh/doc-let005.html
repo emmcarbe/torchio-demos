@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>To Theo van Gogh. The Hague, Monday, 17 March 1873.</title>
 <style>:root{--ground:#FFFFFF;--paper:#FFFFFF;--ink:#1B1B1B;--soft:#6A6A66;--hair:#E5E2D9;--faint:#CFCCC2;--accent:#B01E28;--accent-soft:#9a5a52;--link:#B01E28;--reading:"EB Garamond",Iowan Old Style,Palatino,"Palatino Linotype",Georgia,serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;--serif:var(--reading);--measure:44rem}
 
@@ -174,6 +174,10 @@ body.mode-read .t-add{vertical-align:baseline;font-size:inherit}
   color:var(--soft);text-transform:uppercase}
 .torchio-nav a.on{color:var(--accent)}
 .torchio-nav a.up{color:var(--accent-soft)}
+.torchio-subnav{display:flex;gap:20px;flex-wrap:wrap;padding:10px 0 12px;margin:0 0 1.2em;border-bottom:1px solid var(--hair)}
+.torchio-subnav a{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--soft);text-transform:uppercase}
+.torchio-subnav a.on{color:var(--accent)}
+.torchio-subnav a:hover{color:var(--ink);text-decoration:none}
 .torchio-nav a:hover{color:var(--ink);text-decoration:none}
 header.torchio{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:baseline}
 header.torchio .tt{min-width:14rem}
@@ -322,13 +326,14 @@ ol.toc{columns:2;column-gap:2.5em;padding-left:1.4em;margin:1em 0}
 .lx-table td{padding:4px 10px 4px 0;border-bottom:1px solid var(--faint)}
 .lx-table .lx-num{text-align:right;font-family:var(--mono);font-size:12px;white-space:nowrap}
 .lx-table .lx-w{cursor:pointer}
+.lx-sort{cursor:pointer;user-select:none}
+.lx-sort:hover,.lx-sort.on{color:var(--accent)}
+.lx-arr{color:var(--accent);font-size:8px}
+.lx-alpha{margin:0 0 1em}
 .lx-table .lx-rel{color:var(--soft)}
 .lx-table tr.is-stop .lx-w{color:var(--soft)}
 .lx-lang{font-family:var(--mono);font-size:10px;color:var(--soft)}
 .lx-flip{font-size:11px;line-height:1;color:var(--accent);background:none;border:none;cursor:pointer;padding:2px 4px}
-.lx-cloud{line-height:1.9;padding:1em 0}
-.lx-cloud-w{cursor:pointer;margin:0 .18em;color:var(--ink);transition:opacity .1s}
-.lx-cloud-w:hover{color:var(--accent)}
 .lx-kwic{width:100%;border-collapse:collapse;font-size:14px}
 .lx-kwic td{padding:3px 8px;vertical-align:baseline}
 .lx-kwic .lx-b{text-align:right;color:var(--soft);width:42%}
@@ -357,8 +362,9 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <a class="skip" href="#main">Skip to content</a>
 <header class="torchio">
 <div class="tt"><h1>To Theo van Gogh. The Hague, Monday, 17 March 1873.</h1><p class="sub">Vincent van Gogh, the letters</p></div>
-<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Archive</a><a href="text.html" class="on">Texts</a><a href="data.html">Data</a></nav>
+<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Archive</a><a href="text.html" class="on">Texts</a><a href="lab.html">Lab</a><a href="data.html">Data</a></nav>
 </header>
+
 <div class="torchio-bar"><div class="inner"><button class="sw" data-sw="notes" aria-pressed="true">Notes</button><button class="sw off" data-sw="header" aria-pressed="false">About this file</button></div></div><main id="main" class="torchio"><nav class="prevnext" aria-label="Register"><a href="doc-let004.html">‹ previous</a><a href="text.html">Register</a><a href="doc-let006.html">next ›</a></nav><div id="let005:0.0" class="t-teiHeader s-7-header" data-el="teiHeader">
         <div id="let005:0.0.0" class="t-fileDesc s-7-header" data-el="fileDesc">
 <span id="let005:0.0.0.0" class="t-titleStmt s-7-header" data-el="titleStmt">
@@ -367,7 +373,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <span id="let005:0.0.0.0.2" class="t-editor s-1-bibliografia" data-el="editor">Hans Luijten</span>
 <span id="let005:0.0.0.0.3" class="t-editor s-1-bibliografia" data-el="editor">Nienke Bakker</span>
             </span>
-<span id="let005:0.0.0.1" class="t-publicationStmt s-7-header" data-el="publicationStmt">
+<div id="let005:0.0.0.1" class="t-publicationStmt s-7-header" data-el="publicationStmt">
 <span id="let005:0.0.0.1.0" class="t-publisher s-1-bibliografia" data-el="publisher">
                     <span id="let005:0.0.0.1.0.0" class="t-name s-2-entita" data-el="name">Huygens Instituut voor Nederlandse Geschiedenis (KNAW)</span>
                     <span id="let005:0.0.0.1.0.1" class="t-email s-2-entita" data-el="email">info@huygens.knaw.nl</span>
@@ -375,33 +381,33 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <span id="let005:0.0.0.1.1" class="t-publisher s-1-bibliografia" data-el="publisher">Van Gogh Museum</span>
 <span id="let005:0.0.0.1.2" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Amsterdam</span>
 <span id="let005:0.0.0.1.3" class="t-date s-2-date" data-el="date" data-type="first" data-when="2009">2009</span>
-<span id="let005:0.0.0.1.4" class="t-availability s-1-bibliografia" data-el="availability">
-<span id="let005:0.0.0.1.4.0" class="t-licence s-7-licenza" data-el="licence" data-target="http://creativecommons.org/licenses/by-nc-sa/4.0/ https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode">
+<div id="let005:0.0.0.1.4" class="t-availability s-1-bibliografia" data-el="availability">
+<div id="let005:0.0.0.1.4.0" class="t-licence s-7-licenza" data-el="licence" data-target="http://creativecommons.org/licenses/by-nc-sa/4.0/ https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode">
 <p id="let005:0.0.0.1.4.0.0" class="t-p s-1-struttura" data-el="p">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) </p>
-                    </span>
-                </span>
+                    </div>
+                </div>
 <span id="let005:0.0.0.1.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="http://vangoghletters.org/orig/let005"></span>
-            </span>
+            </div>
             <div id="let005:0.0.0.2" class="t-sourceDesc s-7-header" data-el="sourceDesc">
-                <span id="let005:0.0.0.2.0" class="t-letDesc s-base" data-el="letDesc">
-                    <span id="let005:0.0.0.2.0.0" class="t-letIdentifier s-base" data-el="letIdentifier">
+                <div id="let005:0.0.0.2.0" class="tei-foreign" data-name="vg:letDesc" data-ns="http://www.vangoghletters.org/ns/">
+                    <div id="let005:0.0.0.2.0.0" class="tei-foreign" data-name="vg:letIdentifier" data-ns="http://www.vangoghletters.org/ns/">
 <span id="let005:0.0.0.2.0.0.0" class="t-idno s-2-entita" data-el="idno" data-type="jlb">005</span>
 <span id="let005:0.0.0.2.0.0.1" class="t-idno s-2-entita" data-el="idno" data-type="collectedletters">5</span>
 <span id="let005:0.0.0.2.0.0.2" class="t-idno s-2-entita" data-el="idno" data-type="brieven1990">005</span>
-                    </span>
-                    <span id="let005:0.0.0.2.0.1" class="t-letHeading s-base" data-el="letHeading">
+                    </div>
+                    <div id="let005:0.0.0.2.0.1" class="tei-foreign" data-name="vg:letHeading" data-ns="http://www.vangoghletters.org/ns/">
                         <span id="let005:0.0.0.2.0.1.0" class="t-author s-1-bibliografia" data-el="author">Vincent van Gogh</span>
-                        <span id="let005:0.0.0.2.0.1.1" class="t-addressee s-base" data-el="addressee">Theo van Gogh</span>
-                        <span id="let005:0.0.0.2.0.1.2" class="t-placeLet s-base" data-el="placeLet">The Hague</span>
-                        <span id="let005:0.0.0.2.0.1.3" class="t-dateLet s-base" data-el="dateLet">Monday, 17 March 1873</span>
-                    </span>
-                    <span id="let005:0.0.0.2.0.2" class="t-letContents s-base" data-el="letContents">
+                        <span id="let005:0.0.0.2.0.1.1" class="tei-foreign" data-name="vg:addressee" data-ns="http://www.vangoghletters.org/ns/">Theo van Gogh</span>
+                        <span id="let005:0.0.0.2.0.1.2" class="tei-foreign" data-name="vg:placeLet" data-ns="http://www.vangoghletters.org/ns/">The Hague</span>
+                        <span id="let005:0.0.0.2.0.1.3" class="tei-foreign" data-name="vg:dateLet" data-ns="http://www.vangoghletters.org/ns/">Monday, 17 March 1873</span>
+                    </div>
+                    <div id="let005:0.0.0.2.0.2" class="tei-foreign" data-name="vg:letContents" data-ns="http://www.vangoghletters.org/ns/">
 <p id="let005:0.0.0.2.0.2.0" class="t-p s-1-struttura" data-el="p">To Theo van Gogh. The Hague, Monday, 17 March 1873.</p>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="let005:0.0.0.2.0.2.1" class="t-note s-1-note" data-el="note" data-type="ongoingTopic" data-n="1">
 <p id="let005:0.0.0.2.0.2.1.0" class="t-p s-1-struttura" data-el="p">Uncle Hein’s illness <span id="let005:0.0.0.2.0.2.1.0.0" class="t-ref s-2-corrispondenza" data-el="ref" data-target="let003.xml">(3)</span>
                             </p>
                         </div>
-                    </span>
+                    </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="sourceStatus" class="t-note s-1-note" data-el="note" data-type="sourceStatus">
 <p id="let005:0.0.0.2.0.3.0" class="t-p s-1-struttura" data-el="p">Original manuscript</p>
                     </div>
@@ -411,10 +417,10 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <span class="t-note-mark" aria-hidden="true">°</span><div id="date" class="t-note s-1-note" data-el="note" data-type="date">
 <p id="let005:0.0.0.2.0.5.0" class="t-p s-1-struttura" data-el="p">Letter headed: ‘den Haag 17 Maart 1873’.</p>
                     </div>
-                </span>
+                </div>
             </div>
         </div>
-    </div><span id="let005:0.1" class="t-facsimile s-7-struttura-documento" data-el="facsimile">
+    </div><div id="let005:0.1" class="t-facsimile s-7-struttura-documento" data-el="facsimile">
 <div id="surf-pb-1r" class="t-surface s-5-documentario" data-el="surface" data-n="b 0005">
             <span id="let005:0.1.0.0" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="norend" data-url="VGM001000005_01.TIF"></span>
             <span id="let005:0.1.0.1" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="norend" data-url="VGM001000005_01_n.tif"></span>
@@ -445,13 +451,13 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                 <span id="let005:0.1.1.4.2" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="facstab" data-url="VGM001000005_02_nRf.png"></span>
             </div>
 </div>
-    </span><div id="let005:0.2" class="t-text s-7-struttura-documento" data-el="text">
+    </div><div id="let005:0.2" class="t-text s-7-struttura-documento" data-el="text">
         <div id="let005:0.2.0" class="t-body s-1-struttura" data-el="body">
 <div id="let005:0.2.0.0" class="t-div s-1-struttura" data-el="div" lang="nl" data-type="original">
 <span id="pb-orig-1r-1" class="t-pb" role="separator" title="page break">[1]</span>
                 <span id="l-1" class="t-lb"><br/></span>
 <p id="let005:0.2.0.0.2" class="t-ab s-1-struttura" data-el="ab">den Haag 17 Maart 1873</p>
-<span id="let005:0.2.0.0.3" class="t-whiteline s-base" data-el="whiteline"></span>
+<span id="let005:0.2.0.0.3" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
                 <span id="l-2" class="t-lb"><br/></span>
 <p id="let005:0.2.0.0.5" class="t-ab s-1-struttura" data-el="ab">Waarde Theo,</p>
                 <span id="l-3" class="t-lb"><br/></span>
@@ -488,24 +494,24 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <p id="let005:0.2.0.0.32" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Bij Haanebeek &amp; Tante Fie<span id="note-o-8" class="t-anchor s-1-milestone" data-el="anchor" data-n="8"></span> vragen <span id="l-92" class="t-lb"><br/></span>zij gedurig naar je &amp; laten zij <span id="l-93" class="t-lb"><br/></span>je groeten.</p>
                 <span id="l-94" class="t-lb"><br/></span>
 <p id="let005:0.2.0.0.34" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Wat heerlijk weer tegenwoordig, ik <span id="l-95" class="t-lb"><br/></span>profiteer er maar zooveel van <span id="l-96" class="t-lb"><br/></span>als ik kan, verl. Zondag ben ik al <span id="l-97" class="t-lb"><br/></span>met Willem<span id="note-o-9" class="t-anchor s-1-milestone" data-el="anchor" data-n="9"></span> uit roeien geweest. <span id="l-98" class="t-lb"><br/></span>Wat zou ik dezen zomer nog graag <span id="l-99" class="t-lb"><br/></span>hier gebleven zijn, maar wij moeten <span id="l-100" class="t-lb"><br/></span>het maar nemen zoo als het is. <span id="l-101" class="t-lb"><br/></span>En nu, adieu, heb het goed &amp; schrijf <span id="l-102" class="t-lb"><br/></span>mij eens. Zeg Oom &amp; Tante, <span id="l-103" class="t-lb"><br/></span>Schmidt &amp; Eduard<span id="note-o-10" class="t-anchor s-1-milestone" data-el="anchor" data-n="10"></span> voor mij goeden <span id="l-104" class="t-lb"><br/></span>dag. Ik hoop maar op Paschen. Steeds</p>
-<span id="let005:0.2.0.0.35" class="t-whiteline s-base" data-el="whiteline"></span>
+<span id="let005:0.2.0.0.35" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
                 <span id="l-105" class="t-lb"><br/></span>
 <p id="let005:0.2.0.0.37" class="t-ab s-1-struttura" data-el="ab">je liefh. broer</p>
                 <span id="l-106" class="t-lb"><br/></span>
 <p id="let005:0.2.0.0.39" class="t-ab s-1-struttura" data-el="ab">Vincent</p>
-<span id="let005:0.2.0.0.40" class="t-whiteline s-base" data-el="whiteline"></span>
+<span id="let005:0.2.0.0.40" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
                 <span id="l-75" class="t-lb"><br/></span>
 <p id="let005:0.2.0.0.42" class="t-ab s-1-struttura" data-el="ab">Mijnheer &amp; Jufvr. Roos &amp; Willem laten je ook groeten<span id="let005:0.2.0.0.42.0" class="t-c s-5-documentario" data-el="c" data-type="kp">_</span>
                 </p>
-<span id="let005:0.2.0.0.43" class="t-whiteline s-base" data-el="whiteline"></span>
+<span id="let005:0.2.0.0.43" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
                 <span id="l-20" class="t-lb"><br/></span>
 <p id="let005:0.2.0.0.45" class="t-ab s-1-struttura" data-el="ab">Daar juist ontvang ik je brief, dank er voor. <span id="l-21" class="t-lb"><br/></span>Ik ben zeer in mijn schik met het portret, het is <span id="l-22" class="t-lb"><br/></span>best uitgevallen. Als ik iets naders hoor over <span id="l-23" class="t-lb"><br/></span>mijn naar Helvoirt gaan schrijf ik het je <span id="l-24" class="t-lb"><br/></span>dadelijk; ik zou het heel aardig vinden <span id="l-25" class="t-lb"><br/></span>als wij op den zelfden dag kwamen. Adieu.</p>
-<span id="let005:0.2.0.0.46" class="t-whiteline s-base" data-el="whiteline"></span>
+<span id="let005:0.2.0.0.46" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
                 <span id="l-76" class="t-lb"><br/></span>
 <p id="let005:0.2.0.0.48" class="t-ab s-1-struttura" data-el="ab">Theo ik moet je toch nog eens recommandeeren om pijpen te gaan</p>
                 <span id="l-77" class="t-lb"><br/></span>
 <p id="let005:0.2.0.0.50" class="t-ab s-1-struttura" data-el="ab">rooken, dat is zoo goed als je het land eens krijgt; zooals mij dat tegenwoordig <span id="l-78" class="t-lb"><br/></span>nog al eens overkomt.</p>
-<span id="let005:0.2.0.0.51" class="t-whiteline s-base" data-el="whiteline"></span>
+<span id="let005:0.2.0.0.51" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
 <div id="let005:0.2.0.0.52" class="t-div s-1-struttura" data-el="div" data-type="textualNotes">
 <span class="t-note-mark" aria-hidden="true">°</span><div id="let005:0.2.0.0.52.0" class="t-note s-1-note" data-el="note" data-n="75" data-target="l-75">Mijnheer <span id="let005:0.2.0.0.52.0.0" class="t-supplied s-3-editoriale" data-el="supplied"><span class="t-sign">[</span>...<span class="t-sign">]</span></span> groeten<span id="let005:0.2.0.0.52.0.1" class="t-c s-5-documentario" data-el="c" data-type="kp">_</span> &lt; <span id="let005:0.2.0.0.52.0.2" class="t-hi s-1-inline" data-el="hi" data-rend="ital">In the left margin on p. 1, l. 49-74 (</span>Van Anna <span id="let005:0.2.0.0.52.0.3" class="t-supplied s-3-editoriale" data-el="supplied"><span class="t-sign">[</span>
                             <span id="let005:0.2.0.0.52.0.3.0" class="t-hi s-1-inline" data-el="hi" data-rend="ital">...</span>
@@ -527,18 +533,18 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <div id="let005:0.2.0.1" class="t-div s-1-struttura" data-el="div" data-type="translation">
 <span id="pb-trans-1r-1" class="t-pb" role="separator" title="page break">[1]</span>
 <p id="let005:0.2.0.1.1" class="t-ab s-1-struttura" data-el="ab">The Hague, 17 March 1873</p>
-<span id="let005:0.2.0.1.2" class="t-whiteline s-base" data-el="whiteline"></span>
+<span id="let005:0.2.0.1.2" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
 <p id="let005:0.2.0.1.3" class="t-ab s-1-struttura" data-el="ab">My dear Theo,</p>
-<p id="let005:0.2.0.1.4" class="t-ab s-1-struttura" data-el="ab">It’s time you heard from me again, and I’m also longing to hear how you are and how <span id="let005:0.2.0.1.4.0" class="t-rs s-2-entita" data-el="rs" data-key="399" data-type="pers">Uncle Hein</span> is doing, so I hope you’ll write to me when you can find the time.</p>
+<p id="let005:0.2.0.1.4" class="t-ab s-1-struttura" data-el="ab">It’s time you heard from me again, and I’m also longing to hear how you are and how <span id="let005:0.2.0.1.4.0" class="t-rs s-2-entita" title="type: pers · key: 399" data-el="rs" data-key="399" data-type="pers">Uncle Hein</span> is doing, so I hope you’ll write to me when you can find the time.</p>
 <p id="let005:0.2.0.1.5" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">You’ll have heard that I’m going to London, and probably very soon.<span id="note-t-1" class="t-anchor s-1-milestone" data-el="anchor" data-n="1"></span> I do hope we’ll be able to see each other before then.</p>
-<p id="let005:0.2.0.1.6" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">I’ll go to Helvoirt at Easter<span id="note-t-2" class="t-anchor s-1-milestone" data-el="anchor" data-n="2"></span> if I possibly can, but it will depend on the <span id="let005:0.2.0.1.6.1" class="t-hi s-1-inline" data-el="hi" data-rend="ital">nouveautés</span> that <span id="let005:0.2.0.1.6.2" class="t-rs s-2-entita" data-el="rs" data-key="461" data-type="pers">Iterson</span> takes along on his trip.<span id="note-t-3" class="t-anchor s-1-milestone" data-el="anchor" data-n="3"></span> I won’t be able to leave 
+<p id="let005:0.2.0.1.6" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">I’ll go to Helvoirt at Easter<span id="note-t-2" class="t-anchor s-1-milestone" data-el="anchor" data-n="2"></span> if I possibly can, but it will depend on the <span id="let005:0.2.0.1.6.1" class="t-hi s-1-inline" data-el="hi" data-rend="ital">nouveautés</span> that <span id="let005:0.2.0.1.6.2" class="t-rs s-2-entita" title="type: pers · key: 461" data-el="rs" data-key="461" data-type="pers">Iterson</span> takes along on his trip.<span id="note-t-3" class="t-anchor s-1-milestone" data-el="anchor" data-n="3"></span> I won’t be able to leave 
 <span id="pb-trans-1v-2" class="t-pb" role="separator" title="page break">[2]</span> until he gets back.</p>
 <p id="let005:0.2.0.1.7" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Life in L. will be very different for me, for I’ll probably have to live alone in lodgings, and will therefore have to deal with many things that I needn’t trouble myself with now.</p>
 <p id="let005:0.2.0.1.8" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">I’m looking forward to seeing L. very much, as you can imagine, and yet I’m sorry to have to leave this place. I’m only just noticing how attached I am to The Hague, now that it’s been decided I must go away. Still, it can’t be helped, and I intend not to take things too hard. I think it’s wonderful for my English, which I understand well, though I don’t speak it nearly as well as I’d like.<span id="note-t-4" class="t-anchor s-1-milestone" data-el="anchor" data-n="4"></span> 
 <span id="pb-trans-1v-3" class="t-pb" role="separator" title="page break">[3]</span>
                 </p>
-<p id="let005:0.2.0.1.9" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">I heard from <span id="let005:0.2.0.1.9.0" class="t-rs s-2-entita" data-el="rs" data-key="412" data-type="pers">Anna</span> that you had your portrait taken.<span id="note-t-5" class="t-anchor s-1-milestone" data-el="anchor" data-n="5"></span> If you can spare another, I commend myself.</p>
-<p id="let005:0.2.0.1.10" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">How is <span id="let005:0.2.0.1.10.0" class="t-rs s-2-entita" data-el="rs" data-key="399" data-type="pers">Uncle Hein</span>? Certainly no better, and how is <span id="let005:0.2.0.1.10.1" class="t-rs s-2-entita" data-el="rs" data-key="1613" data-type="pers">Aunt</span> doing? Can Uncle keep himself occupied, and is he in a lot of pain? Give them my warm regards, I think of them so often.</p>
+<p id="let005:0.2.0.1.9" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">I heard from <span id="let005:0.2.0.1.9.0" class="t-rs s-2-entita" title="type: pers · key: 412" data-el="rs" data-key="412" data-type="pers">Anna</span> that you had your portrait taken.<span id="note-t-5" class="t-anchor s-1-milestone" data-el="anchor" data-n="5"></span> If you can spare another, I commend myself.</p>
+<p id="let005:0.2.0.1.10" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">How is <span id="let005:0.2.0.1.10.0" class="t-rs s-2-entita" title="type: pers · key: 399" data-el="rs" data-key="399" data-type="pers">Uncle Hein</span>? Certainly no better, and how is <span id="let005:0.2.0.1.10.1" class="t-rs s-2-entita" title="type: pers · key: 1613" data-el="rs" data-key="1613" data-type="pers">Aunt</span> doing? Can Uncle keep himself occupied, and is he in a lot of pain? Give them my warm regards, I think of them so often.</p>
 <p id="let005:0.2.0.1.11" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">How is business with you? It must be busy, as it is here. You probably know your way around by now.</p>
 <p id="let005:0.2.0.1.12" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">How is your boarding-house? Is it still to your liking? That’s important. Above all, you must write more about the kind of things you see. Sunday a fortnight ago  I was in Amsterdam to see an exhibition of the paintings going to Vienna from here.<span id="note-t-6" class="t-anchor s-1-milestone" data-el="anchor" data-n="6"></span> It was very interesting, and I’m curious 
 <span id="pb-trans-1r-4" class="t-pb" role="separator" title="page break">[4]</span> as to the impression the Dutch will make in Vienna.</p>
@@ -546,38 +552,38 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <p id="let005:0.2.0.1.14" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Goupil has no gallery in London; they only supply the trade.<span id="note-t-7" class="t-anchor s-1-milestone" data-el="anchor" data-n="7"></span>
                 </p>
 <p id="let005:0.2.0.1.15" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">
-                    <span id="let005:0.2.0.1.15.0" class="t-rs s-2-entita" data-el="rs" data-key="423" data-type="pers">Uncle Cent</span> is coming here at the end of the month, I’m longing to hear more from him.</p>
+                    <span id="let005:0.2.0.1.15.0" class="t-rs s-2-entita" title="type: pers · key: 423" data-el="rs" data-key="423" data-type="pers">Uncle Cent</span> is coming here at the end of the month, I’m longing to hear more from him.</p>
 <p id="let005:0.2.0.1.16" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">
-                    <span id="let005:0.2.0.1.16.0" class="t-rs s-2-entita" data-el="rs" data-key="442 443" data-type="pers">The Haanebeeks</span> and <span id="let005:0.2.0.1.16.1" class="t-rs s-2-entita" data-el="rs" data-key="13" data-type="pers">Aunt Fie</span>
+                    <span id="let005:0.2.0.1.16.0" class="t-rs s-2-entita" title="type: pers · key: 442 443" data-el="rs" data-key="442 443" data-type="pers">The Haanebeeks</span> and <span id="let005:0.2.0.1.16.1" class="t-rs s-2-entita" title="type: pers · key: 13" data-el="rs" data-key="13" data-type="pers">Aunt Fie</span>
                     <span id="note-t-8" class="t-anchor s-1-milestone" data-el="anchor" data-n="8"></span> ask after you constantly, and send you their regards.</p>
-<p id="let005:0.2.0.1.17" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">What wonderful weather we’ve been having, I’m taking advantage of it as much as I can. Last Sunday I went rowing with <span id="let005:0.2.0.1.17.0" class="t-rs s-2-entita" data-el="rs" data-key="802" data-type="pers">Willem</span>.<span id="note-t-9" class="t-anchor s-1-milestone" data-el="anchor" data-n="9"></span> How much I’d have liked to stay here this summer, but we must take things as they come. And now, adieu, I wish you well, and write to me. Bid good-day to <span id="let005:0.2.0.1.17.2" class="t-rs s-2-entita" data-el="rs" data-key="399" data-type="pers">Uncle</span> and <span id="let005:0.2.0.1.17.3" class="t-rs s-2-entita" data-el="rs" data-key="1613" data-type="pers">Aunt</span>, <span id="let005:0.2.0.1.17.4" class="t-rs s-2-entita" data-el="rs" data-key="624" data-type="pers">Schmidt</span> and <span id="let005:0.2.0.1.17.5" class="t-rs s-2-entita" data-el="rs" data-key="1069" data-type="pers">Eduard</span> from me.<span id="note-t-10" class="t-anchor s-1-milestone" data-el="anchor" data-n="10"></span> As to Easter, I’m just hoping. Ever,</p>
-<span id="let005:0.2.0.1.18" class="t-whiteline s-base" data-el="whiteline"></span>
+<p id="let005:0.2.0.1.17" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">What wonderful weather we’ve been having, I’m taking advantage of it as much as I can. Last Sunday I went rowing with <span id="let005:0.2.0.1.17.0" class="t-rs s-2-entita" title="type: pers · key: 802" data-el="rs" data-key="802" data-type="pers">Willem</span>.<span id="note-t-9" class="t-anchor s-1-milestone" data-el="anchor" data-n="9"></span> How much I’d have liked to stay here this summer, but we must take things as they come. And now, adieu, I wish you well, and write to me. Bid good-day to <span id="let005:0.2.0.1.17.2" class="t-rs s-2-entita" title="type: pers · key: 399" data-el="rs" data-key="399" data-type="pers">Uncle</span> and <span id="let005:0.2.0.1.17.3" class="t-rs s-2-entita" title="type: pers · key: 1613" data-el="rs" data-key="1613" data-type="pers">Aunt</span>, <span id="let005:0.2.0.1.17.4" class="t-rs s-2-entita" title="type: pers · key: 624" data-el="rs" data-key="624" data-type="pers">Schmidt</span> and <span id="let005:0.2.0.1.17.5" class="t-rs s-2-entita" title="type: pers · key: 1069" data-el="rs" data-key="1069" data-type="pers">Eduard</span> from me.<span id="note-t-10" class="t-anchor s-1-milestone" data-el="anchor" data-n="10"></span> As to Easter, I’m just hoping. Ever,</p>
+<span id="let005:0.2.0.1.18" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
 <p id="let005:0.2.0.1.19" class="t-ab s-1-struttura" data-el="ab">Your loving brother</p>
 <p id="let005:0.2.0.1.20" class="t-ab s-1-struttura" data-el="ab">Vincent</p>
-<span id="let005:0.2.0.1.21" class="t-whiteline s-base" data-el="whiteline"></span>
+<span id="let005:0.2.0.1.21" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
 <p id="let005:0.2.0.1.22" class="t-ab s-1-struttura" data-el="ab">
-                    <span id="let005:0.2.0.1.22.0" class="t-rs s-2-entita" data-el="rs" data-key="642 643" data-type="pers">Mr and Mrs Roos</span> and <span id="let005:0.2.0.1.22.1" class="t-rs s-2-entita" data-el="rs" data-key="802" data-type="pers">Willem</span> also send you their regards.</p>
-<span id="let005:0.2.0.1.23" class="t-whiteline s-base" data-el="whiteline"></span>
+                    <span id="let005:0.2.0.1.22.0" class="t-rs s-2-entita" title="type: pers · key: 642 643" data-el="rs" data-key="642 643" data-type="pers">Mr and Mrs Roos</span> and <span id="let005:0.2.0.1.22.1" class="t-rs s-2-entita" title="type: pers · key: 802" data-el="rs" data-key="802" data-type="pers">Willem</span> also send you their regards.</p>
+<span id="let005:0.2.0.1.23" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
 <p id="let005:0.2.0.1.24" class="t-ab s-1-struttura" data-el="ab">I just received your letter, for which I thank you. I’m very pleased with the portrait, it turned out well. If I hear anything more about my trip to Helvoirt I’ll write to you immediately. It would be nice if we could arrive on the same day. Adieu.</p>
-<span id="let005:0.2.0.1.25" class="t-whiteline s-base" data-el="whiteline"></span>
+<span id="let005:0.2.0.1.25" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
 <p id="let005:0.2.0.1.26" class="t-ab s-1-struttura" data-el="ab">Theo, I must again recommend that you start smoking a pipe. It does you a lot of good when you’re out of spirits, as I quite often am nowadays.</p>
             </div>
 <div id="let005:0.2.0.2" class="t-div s-1-struttura" data-el="div" data-type="notes">
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-1" class="t-note s-1-note" data-el="note" data-n="1" data-target="#note-t-1">
-<p id="let005:0.2.0.2.0.0" class="t-ab s-1-struttura" data-el="ab">The directors of Goupil &amp; Co. had decided, after consulting <span id="let005:0.2.0.2.0.0.0" class="t-rs s-2-entita" data-el="rs" data-key="423" data-type="pers">Uncle Vincent van Gogh</span>, to transfer Vincent to the London branch. <span id="let005:0.2.0.2.0.0.1" class="t-rs s-2-entita" data-el="rs" data-key="524" data-type="pers">Mrs van Gogh</span> wrote to Theo: ‘our Vincent, whom Uncle Cent and the other Gentlemen have decided will go to London this summer’ (FR b2597, 1 February 1873).</p>
+<p id="let005:0.2.0.2.0.0" class="t-ab s-1-struttura" data-el="ab">The directors of Goupil &amp; Co. had decided, after consulting <span id="let005:0.2.0.2.0.0.0" class="t-rs s-2-entita" title="type: pers · key: 423" data-el="rs" data-key="423" data-type="pers">Uncle Vincent van Gogh</span>, to transfer Vincent to the London branch. <span id="let005:0.2.0.2.0.0.1" class="t-rs s-2-entita" title="type: pers · key: 524" data-el="rs" data-key="524" data-type="pers">Mrs van Gogh</span> wrote to Theo: ‘our Vincent, whom Uncle Cent and the other Gentlemen have decided will go to London this summer’ (FR b2597, 1 February 1873).</p>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-2" class="t-note s-1-note" data-el="note" data-n="2" data-target="#note-t-2">
-<p id="let005:0.2.0.2.1.0" class="t-ab s-1-struttura" data-el="ab">Vincent and Theo were both at their <span id="let005:0.2.0.2.1.0.0" class="t-rs s-2-entita" data-el="rs" data-key="524 526" data-type="pers">parents</span>’ house in Helvoirt (North Brabant) for Easter (13 April) (FR b2617 and b2618).</p>
+<p id="let005:0.2.0.2.1.0" class="t-ab s-1-struttura" data-el="ab">Vincent and Theo were both at their <span id="let005:0.2.0.2.1.0.0" class="t-rs s-2-entita" title="type: pers · key: 524 526" data-el="rs" data-key="524 526" data-type="pers">parents</span>’ house in Helvoirt (North Brabant) for Easter (13 April) (FR b2617 and b2618).</p>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-3" class="t-note s-1-note" data-el="note" data-n="3" data-target="#note-t-3">
-<p id="let005:0.2.0.2.2.0" class="t-ab s-1-struttura" data-el="ab">What is meant are the new editions issued by Goupil &amp; Co., in which <span id="let005:0.2.0.2.2.0.0" class="t-rs s-2-entita" data-el="rs" data-key="461" data-type="pers">Teunis van Iterson</span> tried to interest booksellers, printsellers and art dealers during a sales trip. Van Iterson was an employee of Goupil &amp; Co. in The Hague.</p>
+<p id="let005:0.2.0.2.2.0" class="t-ab s-1-struttura" data-el="ab">What is meant are the new editions issued by Goupil &amp; Co., in which <span id="let005:0.2.0.2.2.0.0" class="t-rs s-2-entita" title="type: pers · key: 461" data-el="rs" data-key="461" data-type="pers">Teunis van Iterson</span> tried to interest booksellers, printsellers and art dealers during a sales trip. Van Iterson was an employee of Goupil &amp; Co. in The Hague.</p>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-4" class="t-note s-1-note" data-el="note" data-n="4" data-target="#note-t-4">
 <p id="let005:0.2.0.2.3.0" class="t-ab s-1-struttura" data-el="ab">
-                        <span id="let005:0.2.0.2.3.0.0" class="t-rs s-2-entita" data-el="rs" data-key="524" data-type="pers">Mrs van Gogh</span> reported to Theo: ‘Vincent writes that he finds it strange, always hurrying during the day and then afer 7 p.m. such a quiet evening. Didn’t we write to you about the two parrots at his house, one of whom spoke better English than Vincent himself? I wasn’t sure whether or not he meant the ladies, but <span id="let005:0.2.0.2.3.0.1" class="t-rs s-2-entita" data-el="rs" data-key="423" data-type="pers">Uncle Cent</span> says that having parrots in the drawing room is very common and further inquiry revealed that they were in fact birds’ (FR b2644, 19 July 1873).</p>
+                        <span id="let005:0.2.0.2.3.0.0" class="t-rs s-2-entita" title="type: pers · key: 524" data-el="rs" data-key="524" data-type="pers">Mrs van Gogh</span> reported to Theo: ‘Vincent writes that he finds it strange, always hurrying during the day and then afer 7 p.m. such a quiet evening. Didn’t we write to you about the two parrots at his house, one of whom spoke better English than Vincent himself? I wasn’t sure whether or not he meant the ladies, but <span id="let005:0.2.0.2.3.0.1" class="t-rs s-2-entita" title="type: pers · key: 423" data-el="rs" data-key="423" data-type="pers">Uncle Cent</span> says that having parrots in the drawing room is very common and further inquiry revealed that they were in fact birds’ (FR b2644, 19 July 1873).</p>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-5" class="t-note s-1-note" data-el="note" data-n="5" data-target="#note-t-5">
-<p id="let005:0.2.0.2.4.0" class="t-ab s-1-struttura" data-el="ab">It is not known which portrait this refers to. Theo had sent the portrait to <span id="let005:0.2.0.2.4.0.0" class="t-rs s-2-entita" data-el="rs" data-key="412" data-type="pers">Anna</span>, via his <span id="let005:0.2.0.2.4.0.1" class="t-rs s-2-entita" data-el="rs" data-key="526 524" data-type="pers">parents</span>, shortly before 19 February (FR b2604).</p>
+<p id="let005:0.2.0.2.4.0" class="t-ab s-1-struttura" data-el="ab">It is not known which portrait this refers to. Theo had sent the portrait to <span id="let005:0.2.0.2.4.0.0" class="t-rs s-2-entita" title="type: pers · key: 412" data-el="rs" data-key="412" data-type="pers">Anna</span>, via his <span id="let005:0.2.0.2.4.0.1" class="t-rs s-2-entita" title="type: pers · key: 526 524" data-el="rs" data-key="526 524" data-type="pers">parents</span>, shortly before 19 February (FR b2604).</p>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-6" class="t-note s-1-note" data-el="note" data-n="6" data-target="#note-t-6">
 <p id="let005:0.2.0.2.5.0" class="t-ab s-1-struttura" data-el="ab">On 2 March Van Gogh visited the Dutch exhibit going to the ‘Internationale Tentoonstelling te Wenen’ (International Exhibition at Vienna), which was held from 19 February to 2 March 1873 in <span id="let005:0.2.0.2.5.0.0" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Arti et Amicitiae</span>. See J.J. Heij, <span id="let005:0.2.0.2.5.0.1" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Een vereeniging van ernstige kunstenaars. 150 jaar Maatschappij Arti et Amicitiae 1839-1989</span>. Amsterdam 1989, p. 143. The paintings were exhibited from 1 May to 1 November 1873 in the Dutch pavilion at the World Exhibition in Vienna; the Netherlands was represented by 167 works of art out of a total of 6,600. See Jutta Pemsel, <span id="let005:0.2.0.2.5.0.2" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Die Wiener Weltausstellung von 1873. Das gründerzeitliche Wien am Wendepunkt</span>. Vienna and Cologne 1989, p. 67. Cf. also Sweetman 1988, p. 43.</p>
@@ -587,23 +593,23 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-8" class="t-note s-1-note" data-el="note" data-n="8" data-target="#note-t-8">
 <p id="let005:0.2.0.2.7.0" class="t-ab s-1-struttura" data-el="ab">
-                        <span id="let005:0.2.0.2.7.0.0" class="t-rs s-2-entita" data-el="rs" data-key="13" data-type="pers">Sophia (Fie) Cornelia Elisabeth Carbentus-Van Bemmel</span>.</p>
+                        <span id="let005:0.2.0.2.7.0.0" class="t-rs s-2-entita" title="type: pers · key: 13" data-el="rs" data-key="13" data-type="pers">Sophia (Fie) Cornelia Elisabeth Carbentus-Van Bemmel</span>.</p>
                 </div>
     <span class="t-note-mark" aria-hidden="true">°</span><div id="n-9" class="t-note s-1-note" data-el="note" data-n="9" data-target="#note-t-9">
 <p id="let005:0.2.0.2.8.0" class="t-ab s-1-struttura" data-el="ab">
-                        <span id="let005:0.2.0.2.8.0.0" class="t-rs s-2-entita" data-el="rs" data-key="802" data-type="pers">Willem Marinus Valkis</span> was, like Van Gogh, a boarder at <span id="let005:0.2.0.2.8.0.1" class="t-rs s-2-entita" data-el="rs" data-key="642" data-type="pers">W.M. Roos</span>’s.</p>
+                        <span id="let005:0.2.0.2.8.0.0" class="t-rs s-2-entita" title="type: pers · key: 802" data-el="rs" data-key="802" data-type="pers">Willem Marinus Valkis</span> was, like Van Gogh, a boarder at <span id="let005:0.2.0.2.8.0.1" class="t-rs s-2-entita" title="type: pers · key: 642" data-el="rs" data-key="642" data-type="pers">W.M. Roos</span>’s.</p>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-10" class="t-note s-1-note" data-el="note" data-n="10" data-target="#note-t-10">
 <p id="let005:0.2.0.2.9.0" class="t-ab s-1-struttura" data-el="ab">
-                        <span id="let005:0.2.0.2.9.0.0" class="t-rs s-2-entita" data-el="rs" data-key="1069" data-type="pers">Edouard Hamman</span>.</p>
+                        <span id="let005:0.2.0.2.9.0.0" class="t-rs s-2-entita" title="type: pers · key: 1069" data-el="rs" data-key="1069" data-type="pers">Edouard Hamman</span>.</p>
                 </div>
             </div>
         </div>
     </div><nav class="prevnext" aria-label="Register"><a href="doc-let004.html">‹ previous</a><a href="text.html">Register</a><a href="doc-let006.html">next ›</a></nav></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · fece455 · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.1 · b268ac7 · 2026-07-31</footer>
 <script>
 (function(){
-  var T={"edition":"Edition","text":"Text","indices":"Indices","data":"Data","archive":"Archive","dsa":"digital archive","texts":"Texts","reading":"Reading","diplomatic":"Diplomatic","apparatus":"Apparatus","aboutFile":"About this file","notes":"Notes","dse":"digital scholarly edition","responsibility":"Responsibility","licence":"Licence","witnesses":"Witnesses","apparatusRegisters":"Apparatus","revisions":"Revision history","generator":"Generator","people":"People","places":"Places","orgs":"Organisations","occurrenceOne":"occurrence","occurrenceMany":"occurrences","entries":"entries","skip":"Skip to content","publishedWith":"Published with","map":"Map","mapAria":"Map of the places of the edition","mapNote":"Positional sketch. Filled dots: coordinates declared in the TEI or confirmed by the editor. Hollow dots: gazetteer suggestions awaiting review. Each place links to OpenStreetMap. Coastlines: Natural Earth (public domain).","front":"Front matter","back":"Back matter","lacking":"lacking in","editedText":"edited text","genesis":"Genesis","hand":"hand","version":"version","legend":"Legend","legWord":"word","legDel":"deleted by the writing hand","legAdd":"added above the line","legUnclear":"uncertain reading","legSupplied":"supplied by the editor","legGap":"lost or illegible","legPb":"page break of the source","legMetamark":"a mark of the hand about the text (^ = insert here; hover each mark to read what it does)","legApp":"variant readings: click for the apparatus","legNote":"note mark","legHands":"Hands","legAllHands":"all","legHand":"the hand of","idxSearch":"search a name…","backToTop":"back to top","apparatusCritical":"critical: variants between witnesses","apparatusGenetic":"genetic: the strata of one manuscript in time","apparatusBoth":"critical and genetic: witnesses to collate, strata within them","legMajor":"main hand","lexicon":"Lexicon","lexTokens":"running words","lexForms":"distinct forms","lexTTR":"type-token ratio","lexSearch":"search a word…","lexFrequencies":"Frequencies","lexConcordance":"Concordance","lexCloud":"Cloud","lexPick":"Pick a word to see it in context.","lexLanguage":"Language","lexAllLangs":"all","lexStoplist":"Stopwords","lexStopNone":"none","lexHideStop":"hide stopwords","lexWord":"word","lexLang":"lang","descrFrequencies":"Every attested form with its count, its share per thousand and whether the stopword list you chose covers it.","descrConcordance":"Every occurrence of every form, with the words around it and the anchor back into the text.","descrLemmaConcordance":"The same evidence grouped under the dictionary form, where the edition has lemmas.","lexAbs":"count","lexRel":"per 1000","lexStats":"Lexical statistics","lexStopCol":"stop","lexStopNote":"Frequencies and cloud drop the stopwords you choose; the concordance keeps every word.","genesisNote":"The campaigns of correction the edition declares, in its own order, with the writing operations attributed to each. Every operation links to the place where it happened.","agreement":"Agreement between witnesses","agreementNote":"How often two witnesses carry the same reading. Evidence for a stemma, which remains the editor’s argument.","openPage":"open the page","sectionsN":"sections","sectionOne":"Section","contents":"Contents","bookLabel":"Book","register":"Register","documentsN":"documents","dateCol":"Date","fromCol":"From","toCol":"To","authorCol":"Author","placeCol":"Place","titleCol":"Title","idnoCol":"Ref.","filter":"Filter…","prev":"‹ previous","next":"next ›","fullHeader":"The full header (teiHeader)","fullHeaderNote":"Everything the file declares, rendered as it is.","reuse":"Reuse under the edition licence (see the Edition page).","appEntry":"apparatus entry","descrModel":"the edition model: documents, registries, apparatus (JSON)","descrEntities":"people, places and organisations with occurrence counts and coordinates","descrApparatus":"every apparatus reading with its witnesses, one row per reading","descrSource":"the unmodified TEI source file","lemmas":"Lemmas","lemmaCoverage":"Coverage","tokensWord":"tokens","languagesLabel":"Languages","yearsLabel":"Years","contributorsLabel":"Contributors","interventionsWord":"interventions","licenceVariesNote":"each document declares its own licence, shown on its page","lemmaFromMarkup":"from the markup (w/@lemma)","lemmaFromFile":"from lemmas.json","lemmaPending":"types awaiting the editor’s review","formsLabel":"forms","moreOccurrences":"more occurrences not shown here","descrLemmas":"every lemma with its forms and counts, one row per form","descrTokens":"the token stream of the reading text: position, language, form, lemma, anchor"};
+  var T={"edition":"Edition","text":"Text","indices":"Indices","data":"Data","archive":"Archive","dsa":"digital archive","texts":"Texts","reading":"Reading","diplomatic":"Diplomatic","apparatus":"Apparatus","aboutFile":"About this file","notes":"Notes","dse":"digital scholarly edition","responsibility":"Responsibility","licence":"Licence","witnesses":"Witnesses","apparatusRegisters":"Apparatus","revisions":"Revision history","generator":"Generator","people":"People","places":"Places","orgs":"Organisations","occurrenceOne":"occurrence","occurrenceMany":"occurrences","entries":"entries","skip":"Skip to content","publishedWith":"Published with","map":"Map","lab":"Lab","labAnalyses":"Analyses","labIntro":"The analytical layer, kept apart from the edition: the indices, the quantitative analysis, the lemmas, the map — derived from the text, not attested by it. Choose one above.","labLexDesc":"Frequencies, concordance (KWIC) and the token / type / TTR count.","labMapDesc":"The places that carry coordinates.","mapAria":"Map of the places of the edition","mapNote":"Positional sketch. Filled dots: coordinates declared in the TEI or confirmed by the editor. Hollow dots: gazetteer suggestions awaiting review. Each place links to OpenStreetMap. Coastlines: Natural Earth (public domain).","front":"Front matter","back":"Back matter","lacking":"lacking in","editedText":"edited text","genesis":"Genesis","hand":"hand","version":"version","legend":"Legend","legWord":"word","legDel":"deleted by the writing hand","legAdd":"added above the line","legUnclear":"uncertain reading","legSupplied":"supplied by the editor","legGap":"lost or illegible","legPb":"page break of the source","legMetamark":"a mark of the hand about the text (^ = insert here; hover each mark to read what it does)","legApp":"variant readings: click for the apparatus","legNote":"note mark","legHands":"Hands","legAllHands":"all","legHand":"the hand of","idxSearch":"search a name…","backToTop":"back to top","apparatusCritical":"critical: variants between witnesses","apparatusGenetic":"genetic: the strata of one manuscript in time","apparatusBoth":"critical and genetic: witnesses to collate, strata within them","legMajor":"main hand","lexicon":"Lexicon","lexTokens":"running words","lexForms":"distinct forms","lexTTR":"type-token ratio","lexSearch":"search a word…","lexFrequencies":"Frequencies","lexConcordance":"Concordance","lexPick":"Pick a word to see it in context.","lexLanguage":"Language","lexAllLangs":"all","lexStoplist":"Stopwords","lexStopNone":"none","lexHideStop":"hide stopwords","lexWord":"word","lexLang":"lang","descrFrequencies":"Every attested form with its count, its share per thousand and whether the stopword list you chose covers it.","descrConcordance":"Every occurrence of every form, with the words around it and the anchor back into the text.","descrLemmaConcordance":"The same evidence grouped under the dictionary form, where the edition has lemmas.","lexAbs":"count","lexRel":"per 1000","lexStats":"Lexical statistics","lexStopCol":"stop","lexStopNote":"Frequencies drop the stopwords you choose; the concordance keeps every word.","genesisNote":"The campaigns of correction the edition declares, in its own order, with the writing operations attributed to each. Every operation links to the place where it happened.","agreement":"Agreement between witnesses","agreementNote":"How often two witnesses carry the same reading. Evidence for a stemma, which remains the editor’s argument.","openPage":"open the page","sectionsN":"sections","sectionOne":"Section","contents":"Contents","bookLabel":"Book","register":"Register","documentsN":"documents","dateCol":"Date","fromCol":"From","toCol":"To","authorCol":"Author","placeCol":"Place","titleCol":"Title","idnoCol":"Ref.","filter":"Filter…","prev":"‹ previous","next":"next ›","fullHeader":"The full header (teiHeader)","fullHeaderNote":"Everything the file declares, rendered as it is.","reuse":"Reuse under the edition licence (see the Edition page).","appEntry":"apparatus entry","descrModel":"the edition model: documents, registries, apparatus (JSON)","descrEntities":"people, places and organisations with occurrence counts and coordinates","descrApparatus":"every apparatus reading with its witnesses, one row per reading","descrSource":"the unmodified TEI source file","lemmas":"Lemmas","lemmaCoverage":"Coverage","tokensWord":"tokens","languagesLabel":"Languages","yearsLabel":"Years","contributorsLabel":"Contributors","interventionsWord":"interventions","licenceVariesNote":"each document declares its own licence, shown on its page","lemmaFromMarkup":"from the markup (w/@lemma)","lemmaFromFile":"from lemmas.json","lemmaPending":"types awaiting the editor’s review","formsLabel":"forms","moreOccurrences":"more occurrences not shown here","descrLemmas":"every lemma with its forms and counts, one row per form","descrTokens":"the token stream of the reading text: position, language, form, lemma, anchor"};
   var body=document.body; body.classList.add('mode-read');
   if(document.querySelector('.app-band'))body.classList.add('has-band');
   if(window.TORCHIO_ALIGN)body.classList.add('has-align');
