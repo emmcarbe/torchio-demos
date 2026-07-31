@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lat">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,7 +77,14 @@ body.notes-off .t-note-mark{opacity:.25}
   .t-note.placed{font-size:.78em;line-height:1.4}
 }
 
-.t-app:has([data-el="lem"]) .t-rdg{display:none}
+.t-app.app-has-lem .t-rdg{display:none}
+/* an app without a lem privileges nothing: the first reading stands in the
+   text (the others are in the apparatus), never all of them concatenated */
+.t-app.app-no-lem>[data-el="rdg"]~[data-el="rdg"],
+.t-app.app-no-lem>[data-el="rdgGrp"]~[data-el="rdgGrp"]{display:none}
+/* an app that points to the text (double-end-point, location-referenced)
+   carries no text of its own: the passage is already in the base text */
+.t-app.app-pointing{display:none}
 .t-lem{border-bottom:1px dotted var(--accent-soft)}
 .t-app[data-type="lac"] [data-el="lem"]{font-family:var(--mono);font-size:.62em;
   font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);
@@ -143,7 +150,7 @@ body.app-off.has-band [data-el="l"]{cursor:inherit}
 /* dense notes: marks only, notes open on click */
 body.notes-dense main.torchio .t-note{display:none!important}
 body.notes-dense .t-note-mark{color:var(--accent);cursor:pointer;font-size:.85em;font-weight:700;line-height:0;padding:.3em .3em;margin:-.3em -.1em}
-body.notes-dense [data-notepop]{cursor:pointer}
+[data-notepop]{cursor:pointer}
 body.notes-dense.notes-off .t-note-mark{cursor:default}
 
 /* transcription levels: reading is the default */
@@ -382,8 +389,8 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                 </span>
             </span>
             <span id="chronicon:0.0.0.1" class="t-extent s-1-bibliografia" data-el="extent">
-                <span id="chronicon:0.0.0.1.0" class="t-measure s-1-inline" data-el="measure">Words: 104290</span>
-                <span id="chronicon:0.0.0.1.1" class="t-measure s-1-inline" data-el="measure">Characters (withous spaces): 642387</span>
+                <span id="chronicon:0.0.0.1.0" class="t-measure s-1-inline" data-el="measure" data-unit="words">Words: 104290</span>
+                <span id="chronicon:0.0.0.1.1" class="t-measure s-1-inline" data-el="measure" data-unit="characters_without_spaces">Characters (withous spaces): 642387</span>
             </span>
             <span id="chronicon:0.0.0.2" class="t-publicationStmt s-7-header" data-el="publicationStmt">
                 <span id="chronicon:0.0.0.2.0" class="t-publisher s-1-bibliografia" data-el="publisher">
@@ -396,7 +403,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
             </span>
             <div id="chronicon:0.0.0.3" class="t-sourceDesc s-7-header" data-el="sourceDesc">
                 <div id="chronicon:0.0.0.3.0" class="t-listWit s-1-liste" data-el="listWit">
-                    <div id="a" class="t-witness s-4-apparato" data-el="witness">
+                    <div id="a" class="t-witness s-4-apparato" data-el="witness" data-facs="https://digi.vatlib.it/iiif/MSS_Vat.lat.3973/manifest.json">
                         <div id="chronicon:0.0.0.3.0.0.0" class="t-msDesc s-1-bibliografia" data-el="msDesc">
                             <span id="chronicon:0.0.0.3.0.0.0.0" class="t-msIdentifier s-1-bibliografia" data-el="msIdentifier">
                                 <span id="chronicon:0.0.0.3.0.0.0.0.0" class="t-settlement s-2-entita" data-el="settlement">Biblioteca Apostolica Vaticana</span>
@@ -404,7 +411,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                             </span>
                         </div>
                     </div>
-                    <div id="a2" class="t-witness s-4-apparato" data-el="witness">
+                    <div id="a2" class="t-witness s-4-apparato" data-el="witness" data-facs="https://digi.vatlib.it/iiif/MSS_Vat.lat.3973/manifest.json">
                         <div id="chronicon:0.0.0.3.0.1.0" class="t-msDesc s-1-bibliografia" data-el="msDesc">
                             <span id="chronicon:0.0.0.3.0.1.0.0" class="t-msIdentifier s-1-bibliografia" data-el="msIdentifier">
                                 <span id="chronicon:0.0.0.3.0.1.0.0.0" class="t-settlement s-2-entita" data-el="settlement">Biblioteca Apostolica Vaticana</span>
@@ -413,7 +420,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                             <p id="chronicon:0.0.0.3.0.1.0.1" class="t-ab s-1-struttura" data-el="ab">This siglum represents a later hand, probably of the XVII century, in this manuscript</p>
                         </div>
                     </div>
-                    <div id="o" class="t-witness s-4-apparato" data-el="witness">
+                    <div id="o" class="t-witness s-4-apparato" data-el="witness" data-facs="https://digi.vatlib.it/iiif/MSS_Ott.lat.2940/manifest.json">
                         <div id="chronicon:0.0.0.3.0.2.0" class="t-msDesc s-1-bibliografia" data-el="msDesc">
                             <span id="chronicon:0.0.0.3.0.2.0.0" class="t-msIdentifier s-1-bibliografia" data-el="msIdentifier">
                                 <span id="chronicon:0.0.0.3.0.2.0.0.0" class="t-settlement s-2-entita" data-el="settlement">Ottobonianus</span>
@@ -421,7 +428,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                             </span>
                         </div>
                     </div>
-                    <div id="g" class="t-witness s-4-apparato" data-el="witness">
+                    <div id="g" class="t-witness s-4-apparato" data-el="witness" data-facs="https://archive.org/details/p1rerumitalicarums07card/">
                         <span id="chronicon:0.0.0.3.0.3.0" class="t-biblStruct s-1-bibliografia" data-el="biblStruct">
                             <span id="chronicon:0.0.0.3.0.3.0.0" class="t-monogr s-1-struttura" data-el="monogr">
                                 <span id="chronicon:0.0.0.3.0.3.0.0.0" class="t-author s-1-bibliografia" data-el="author">Guarna, Romualdus</span>
@@ -435,8 +442,8 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                             </span>
                             <span id="chronicon:0.0.0.3.0.3.0.1" class="t-series s-1-bibliografia" data-el="series">
                                 <span id="chronicon:0.0.0.3.0.3.0.1.0" class="t-title s-1-inline" data-el="title">Rerum italicarum scriptores: Nuova edizione</span>
-                                <span id="chronicon:0.0.0.3.0.3.0.1.1" class="t-biblScope s-1-bibliografia" data-el="biblScope">7</span>
-                                <span id="chronicon:0.0.0.3.0.3.0.1.2" class="t-biblScope s-1-bibliografia" data-el="biblScope">1</span>
+                                <span id="chronicon:0.0.0.3.0.3.0.1.1" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">7</span>
+                                <span id="chronicon:0.0.0.3.0.3.0.1.2" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="part">1</span>
                             </span>
                             <span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.0.0.3.0.3.0.2" class="t-note s-1-note" data-el="note">Garufi&#39;s edition was the collation exemplar from the beginning of the text
 			    until (and including) paragraph g163.1-163.5.</div>
@@ -457,7 +464,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                             </span>
                             <span id="chronicon:0.0.0.3.0.4.0.1" class="t-series s-1-bibliografia" data-el="series">
                                 <span id="chronicon:0.0.0.3.0.4.0.1.0" class="t-title s-1-inline" data-el="title">Schola Salernitana. Studi e testi</span>
-                                <span id="chronicon:0.0.0.3.0.4.0.1.1" class="t-biblScope s-1-bibliografia" data-el="biblScope">6</span>
+                                <span id="chronicon:0.0.0.3.0.4.0.1.1" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">6</span>
                             </span>
                             <span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.0.0.3.0.4.0.2" class="t-note s-1-note" data-el="note">Bonetti&#39;s edition was the collation exemplar for the collation
 			    from (and including) paragraph g163.6-163.7 to the end of the text.
@@ -505,50 +512,50 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     <h2 id="chronicon:0.1.1.2.0" class="t-head s-1-struttura" data-el="head">Historia universalis, secunda etas</h2>
 
 <p id="g7.29-7.29" class="t-p s-1-struttura" data-el="p">
-<span id="chronicon:0.1.1.2.1.0" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="orthographic"><span id="chronicon:0.1.1.2.1.0.0" class="t-lem s-4-apparato" data-el="lem" data-resp="#pm">Incipit</span><span id="chronicon:0.1.1.2.1.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#g #a">incipit</span></span> secunda. 
+<span id="chronicon:0.1.1.2.1.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="case"><span id="chronicon:0.1.1.2.1.0.0" class="t-lem s-4-apparato" data-el="lem" data-resp="#pm">Incipit</span><span id="chronicon:0.1.1.2.1.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#g #a">incipit</span></span> secunda. 
 </p>
  
 <p id="g7.30-8.6" class="t-p s-1-struttura" data-el="p">
 Secunda seculi etate, prima 
-<span id="chronicon:0.1.1.2.2.0" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.2.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g"> </span><span id="chronicon:0.1.1.2.2.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">hora</span></span> huius diei, que est uicesima septima mensis secundi, egressus est Noe de arca, in qua pauci, idest octo anime salue facte sunt per aquam, quod 
-<span id="chronicon:0.1.1.2.2.1" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.2.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#a">commemorans</span><span id="chronicon:0.1.1.2.2.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#g">commemoras</span></span> in epistola beatus apostolus Petrus mirifice statim exponere curauit, cum subiunxit: quos, et uos nunc similis forme saluos fecit baptisma non carnis depositio sordium, sed conscientie bone interrogatio in Deum per resurrectionem Iesu Christi, qui est in dextera Dei. In aqua diluuii baptismum in arca, et his que continebat ecclesiam, et fideles illius in octonario animarum numero misterium dominice resurrectionis, in cuius fide baptizamur, docens esse figuram. 
+<span id="chronicon:0.1.1.2.2.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive" data-subtype="missing-in-print"><span id="chronicon:0.1.1.2.2.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g"> </span><span id="chronicon:0.1.1.2.2.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">hora</span></span> huius diei, que est uicesima septima mensis secundi, egressus est Noe de arca, in qua pauci, idest octo anime salue facte sunt per aquam, quod 
+<span id="chronicon:0.1.1.2.2.1" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.2.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#a">commemorans</span><span id="chronicon:0.1.1.2.2.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#g">commemoras</span></span> in epistola beatus apostolus Petrus mirifice statim exponere curauit, cum subiunxit: quos, et uos nunc similis forme saluos fecit baptisma non carnis depositio sordium, sed conscientie bone interrogatio in Deum per resurrectionem Iesu Christi, qui est in dextera Dei. In aqua diluuii baptismum in arca, et his que continebat ecclesiam, et fideles illius in octonario animarum numero misterium dominice resurrectionis, in cuius fide baptizamur, docens esse figuram. 
 </p>
  
 <p id="g8.7-8.11" class="t-p s-1-struttura" data-el="p">
 Uixit quoque Noe post diluuium annos CCCL 
 <span id="chronicon:0.1.1.2.3.0" class="t-pb" role="separator" title="page break">[20v]</span> 
 usque ad LVIII anuum natiuitatis Abrahe. Sem uero centum ac duorum annorum 
-<span id="chronicon:0.1.1.2.3.1" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.3.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">genuit</span><span id="chronicon:0.1.1.2.3.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a"></span></span> Arfaxat 
-<span id="chronicon:0.1.1.2.3.2" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.3.2.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">biennio post diluuium ab Arfaxat</span><span id="chronicon:0.1.1.2.3.2.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a"></span></span> Chaldeos originem duxisse Ieronimus scribit. Superuixit autem Sem nato Arfaxat quingentis annis, idest usque ad quinquagesimum annum natiuitatis 
-<span id="chronicon:0.1.1.2.3.3" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.3.3.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Iacob</span><span id="chronicon:0.1.1.2.3.3.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">Iacobus</span></span>. Septuaginta MMCCCLXXIX, Hebrei MDCXCIII. 
+<span id="chronicon:0.1.1.2.3.1" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive" data-subtype="missing-in-ms"><span id="chronicon:0.1.1.2.3.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">genuit</span><span id="chronicon:0.1.1.2.3.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a"></span></span> Arfaxat 
+<span id="chronicon:0.1.1.2.3.2" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive" data-subtype="missing-in-ms"><span id="chronicon:0.1.1.2.3.2.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">biennio post diluuium ab Arfaxat</span><span id="chronicon:0.1.1.2.3.2.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a"></span></span> Chaldeos originem duxisse Ieronimus scribit. Superuixit autem Sem nato Arfaxat quingentis annis, idest usque ad quinquagesimum annum natiuitatis 
+<span id="chronicon:0.1.1.2.3.3" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.3.3.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Iacob</span><span id="chronicon:0.1.1.2.3.3.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">Iacobus</span></span>. Septuaginta MMCCCLXXIX, Hebrei MDCXCIII. 
 </p>
  
 <p id="g8.12-8.23" class="t-p s-1-struttura" data-el="p">
 Arfaxat annos XXXV genuit Sale. Hic Septuaginta interpretes unam generationem plus quam hebraica ueritas posuere, dicentes, quod Arfaxat 
-<span id="chronicon:0.1.1.2.4.0" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="orthographic"><span id="chronicon:0.1.1.2.4.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">cum</span><span id="chronicon:0.1.1.2.4.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">tum</span></span> esset CCCXXXV annorum genuerit Cainam, qui cum CXXX annorum fuerit, ipse genuerit Sale, quorum translationem euangelista Lucas hoc loco uidetur esse secutus. Uerum chronografi Grecorum cum generationum seriem ad auctoritatem hebraicam castigassent, ablata una generatione Cainan, nec tamen numerum annorum in generationibus, quas cum eis habuere communes, ad eorum auctoritatem castigare curassent, propriam secuti auctoritatem dederunt huic etati annorum summam minorem quidem Septuaginta translatorum editione annis CXXX sed super hebraicam ueritatem annis DCL maiorem, idest annos DCCCXLII. Uixit autem Arfaxat post natum Salem 
+<span id="chronicon:0.1.1.2.4.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="tc"><span id="chronicon:0.1.1.2.4.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">cum</span><span id="chronicon:0.1.1.2.4.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">tum</span></span> esset CCCXXXV annorum genuerit Cainam, qui cum CXXX annorum fuerit, ipse genuerit Sale, quorum translationem euangelista Lucas hoc loco uidetur esse secutus. Uerum chronografi Grecorum cum generationum seriem ad auctoritatem hebraicam castigassent, ablata una generatione Cainan, nec tamen numerum annorum in generationibus, quas cum eis habuere communes, ad eorum auctoritatem castigare curassent, propriam secuti auctoritatem dederunt huic etati annorum summam minorem quidem Septuaginta translatorum editione annis CXXX sed super hebraicam ueritatem annis DCL maiorem, idest annos DCCCXLII. Uixit autem Arfaxat post natum Salem 
 <span id="chronicon:0.1.1.2.4.1" class="t-pb" role="separator" title="page break">[21r]</span> 
 annis CCCIII cui tamen Septuaginta interpretes post natum Cainan scribunt annos 
-<span id="chronicon:0.1.1.2.4.2" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.4.2.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">CCCXXX</span><span id="chronicon:0.1.1.2.4.2.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">CDXXX</span></span> et Cainan post natum Salem CDXXXVIII. A Sale Samaritani et Indi. Septuaginta MMDCXXXIX, Hebrei MDCCXXIII. 
+<span id="chronicon:0.1.1.2.4.2" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive" data-subtype="num-num"><span id="chronicon:0.1.1.2.4.2.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">CCCXXX</span><span id="chronicon:0.1.1.2.4.2.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">CDXXX</span></span> et Cainan post natum Salem CDXXXVIII. A Sale Samaritani et Indi. Septuaginta MMDCXXXIX, Hebrei MDCCXXIII. 
 </p>
  
 <p id="g8.24-8.27" class="t-p s-1-struttura" data-el="p">
 Sale annos XXX genuit Heber, cui superuixit annos CDIII usque ad XVI annum natiuitatis Iacob. Septuaginta interpretes ante natum Heber posuere annos CXXX 
-<span id="chronicon:0.1.1.2.5.0" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="punctuation"><span id="chronicon:0.1.1.2.5.0.0" class="t-lem s-4-apparato" data-el="lem" data-resp="#pm">,</span><span id="chronicon:0.1.1.2.5.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#g"> </span></span> postea CCCIII. ab hoc Heber Hebreorum nomen, et genus oritur. Septuaginta duo M septingenti XXXIX, Hebrei M octingentos LVII. 
+<span id="chronicon:0.1.1.2.5.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="punctuation" data-subtype="add-punctuation"><span id="chronicon:0.1.1.2.5.0.0" class="t-lem s-4-apparato" data-el="lem" data-resp="#pm">,</span><span id="chronicon:0.1.1.2.5.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#g"> </span></span> postea CCCIII. ab hoc Heber Hebreorum nomen, et genus oritur. Septuaginta duo M septingenti XXXIX, Hebrei M octingentos LVII. 
 </p>
  
 <p id="g8.28-9.11" class="t-p s-1-struttura" data-el="p">
 Heber annos XXXIV genuit Falech, cui superuixit annos CDXXX usque ad LXXIX annum natiuitatis Esau, et Iacob. Septuaginta ante natum Falech annos posuere 
-<span id="chronicon:0.1.1.2.6.0" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.6.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">CXLIV</span><span id="chronicon:0.1.1.2.6.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">CXXXIV</span></span> postea CCCXXX. Falech interpretatur diuisio, cui propterea tale 
-<span id="chronicon:0.1.1.2.6.1" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="orthographic"><span id="chronicon:0.1.1.2.6.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#a">nomen</span><span id="chronicon:0.1.1.2.6.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#g">nomem</span></span> imposuere parentes, quia tempore natiuitatis ipsius, turris 
-<span id="chronicon:0.1.1.2.6.2" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="orthographic"><span id="chronicon:0.1.1.2.6.2.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">edificata</span><span id="chronicon:0.1.1.2.6.2.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">hedificata</span></span>, et terra per linguarum confusionem diuisa est, cuius diuisionis Arnobius rethor in expositionem psalmi CIV ita meminit: Sem primogenito Noe pars facta est a Perfida, et Bactris usque in Indiam longe, et 
+<span id="chronicon:0.1.1.2.6.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive" data-subtype="num-num"><span id="chronicon:0.1.1.2.6.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">CXLIV</span><span id="chronicon:0.1.1.2.6.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">CXXXIV</span></span> postea CCCXXX. Falech interpretatur diuisio, cui propterea tale 
+<span id="chronicon:0.1.1.2.6.1" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="mn"><span id="chronicon:0.1.1.2.6.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#a">nomen</span><span id="chronicon:0.1.1.2.6.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#g">nomem</span></span> imposuere parentes, quia tempore natiuitatis ipsius, turris 
+<span id="chronicon:0.1.1.2.6.2" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="h"><span id="chronicon:0.1.1.2.6.2.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">edificata</span><span id="chronicon:0.1.1.2.6.2.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">hedificata</span></span>, et terra per linguarum confusionem diuisa est, cuius diuisionis Arnobius rethor in expositionem psalmi CIV ita meminit: Sem primogenito Noe pars facta est a Perfida, et Bactris usque in Indiam longe, et 
 <span id="chronicon:0.1.1.2.6.3" class="t-pb" role="separator" title="page break">[21v]</span> 
 usque Rinocururis, que spacia terrarum habent linguas sermone barbarico XXVII, in quibus linguis gentes sunt patriarum 
-<span id="chronicon:0.1.1.2.6.4" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.6.4.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">quadrigente</span><span id="chronicon:0.1.1.2.6.4.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">quadringente</span></span> et sex, non diuersarum linguarum, sed, ut dixi, diuersarum patriarum. uerbi gratia, cum una lingua latina sit, sub una lingua diuerse sunt patriae, Apulorum, Calabrorum, Lucanorum, Brutiorum, Sampnitum, Picenorum, Tuscorum, ex his, atque huiusmodi similia si dicamus. Cham uero filius secundus Noe 
-<span id="chronicon:0.1.1.2.6.5" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.6.5.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Rinocururis</span><span id="chronicon:0.1.1.2.6.5.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">Arinocururis</span></span> usque Gadira habens linguas sermone punico a parte Garamantum, latinum a parte Boree, 
-<span id="chronicon:0.1.1.2.6.6" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.6.6.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">barbaricum</span><span id="chronicon:0.1.1.2.6.6.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">barbarico</span></span> a parte meridiei. Etiopum et Egyptiorum a barbaris interioribus uario sermone uiginti duabus linguis in patriis CCC nonaginta quattuor; Iafeth autem tertius a Media usque ad gadira ad Boream: habet autem Iafeth flumen Tigridem, qui diuidit Mediam, et Babiloniam in patriis ducentis sermones uarios in linguis uiginti et tribus. Sunt omnes simul lingue septuaginte due; patrie autem generationum mille, 
-<span id="chronicon:0.1.1.2.6.7" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.6.7.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">que</span><span id="chronicon:0.1.1.2.6.7.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a"></span></span> in tripartito secundo hoc ordine site sunt. Habet autem, ut diximus, Iafeth flumen Tigridem, qui diuidit Mediam, et Babiloniam: Sem autem Eufratem: Cham uero Geon, qui uocatur Nilus. 
+<span id="chronicon:0.1.1.2.6.4" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.6.4.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">quadrigente</span><span id="chronicon:0.1.1.2.6.4.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">quadringente</span></span> et sex, non diuersarum linguarum, sed, ut dixi, diuersarum patriarum. uerbi gratia, cum una lingua latina sit, sub una lingua diuerse sunt patriae, Apulorum, Calabrorum, Lucanorum, Brutiorum, Sampnitum, Picenorum, Tuscorum, ex his, atque huiusmodi similia si dicamus. Cham uero filius secundus Noe 
+<span id="chronicon:0.1.1.2.6.5" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.6.5.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Rinocururis</span><span id="chronicon:0.1.1.2.6.5.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">Arinocururis</span></span> usque Gadira habens linguas sermone punico a parte Garamantum, latinum a parte Boree, 
+<span id="chronicon:0.1.1.2.6.6" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.6.6.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">barbaricum</span><span id="chronicon:0.1.1.2.6.6.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">barbarico</span></span> a parte meridiei. Etiopum et Egyptiorum a barbaris interioribus uario sermone uiginti duabus linguis in patriis CCC nonaginta quattuor; Iafeth autem tertius a Media usque ad gadira ad Boream: habet autem Iafeth flumen Tigridem, qui diuidit Mediam, et Babiloniam in patriis ducentis sermones uarios in linguis uiginti et tribus. Sunt omnes simul lingue septuaginte due; patrie autem generationum mille, 
+<span id="chronicon:0.1.1.2.6.7" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive" data-subtype="missing-in-ms"><span id="chronicon:0.1.1.2.6.7.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">que</span><span id="chronicon:0.1.1.2.6.7.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a"></span></span> in tripartito secundo hoc ordine site sunt. Habet autem, ut diximus, Iafeth flumen Tigridem, qui diuidit Mediam, et Babiloniam: Sem autem Eufratem: Cham uero Geon, qui uocatur Nilus. 
 <span id="chronicon:0.1.1.2.6.8" class="t-pb" role="separator" title="page break">[22r]</span> 
-<span id="chronicon:0.1.1.2.6.9" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="orthographic"><span id="chronicon:0.1.1.2.6.9.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#a">septuaginta</span><span id="chronicon:0.1.1.2.6.9.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#g">Septuaginta</span></span> MMCMIII, Hebrei MCDLXXXVII. 
+<span id="chronicon:0.1.1.2.6.9" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="case"><span id="chronicon:0.1.1.2.6.9.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#a">septuaginta</span><span id="chronicon:0.1.1.2.6.9.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#g">Septuaginta</span></span> MMCMIII, Hebrei MCDLXXXVII. 
 </p>
  
 <p id="g9.12-9.14" class="t-p s-1-struttura" data-el="p">
@@ -557,20 +564,20 @@ Falech annos XXX genuit Reu cui superuixit annos CCIX. Septuaginta ante natum Re
  
 <p id="g9.15-9.17" class="t-p s-1-struttura" data-el="p">
 Reu annos XXXII genuit Seruch, cui superuixit annos 
-<span id="chronicon:0.1.1.2.8.0" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.8.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">CCC</span><span id="chronicon:0.1.1.2.8.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">CCVII</span></span>. Septuaginta ante natum Seruch CXXXII posuere annos, postea CCVII. 
-<span id="chronicon:0.1.1.2.8.1" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.8.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Scitharum</span><span id="chronicon:0.1.1.2.8.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">Tunc Citharum</span></span> regnum dicitur exortum, ubi primus regnauit Thanaus. Septuaginta MMMCLXV, Hebrei MDCCCXLIX. 
+<span id="chronicon:0.1.1.2.8.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive" data-subtype="num-num"><span id="chronicon:0.1.1.2.8.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">CCC</span><span id="chronicon:0.1.1.2.8.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">CCVII</span></span>. Septuaginta ante natum Seruch CXXXII posuere annos, postea CCVII. 
+<span id="chronicon:0.1.1.2.8.1" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.8.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Scitharum</span><span id="chronicon:0.1.1.2.8.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">Tunc Citharum</span></span> regnum dicitur exortum, ubi primus regnauit Thanaus. Septuaginta MMMCLXV, Hebrei MDCCCXLIX. 
 </p>
  
 <p id="g9.18-9.21" class="t-p s-1-struttura" data-el="p">
 Seruch annos XXX genuit 
-<span id="chronicon:0.1.1.2.9.0" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.9.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Nahor</span><span id="chronicon:0.1.1.2.9.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">Nabor</span></span> cui superuixit annos 
-<span id="chronicon:0.1.1.2.9.1" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.9.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">CCVII</span><span id="chronicon:0.1.1.2.9.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">CCC</span></span>: Septuaginta ante natum Nahor ponunt annos CXXX postea CC. Tunc 
-<span id="chronicon:0.1.1.2.9.2" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="orthographic"><span id="chronicon:0.1.1.2.9.2.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Egiptiorum</span><span id="chronicon:0.1.1.2.9.2.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">Egyptiorum</span></span> imperium dicitur inchoasse, primo eis regnante Uizoues; secundum Septuaginta MMMCCXLIV, secundum Hebrei MCMLXXVIII. 
+<span id="chronicon:0.1.1.2.9.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.9.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Nahor</span><span id="chronicon:0.1.1.2.9.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">Nabor</span></span> cui superuixit annos 
+<span id="chronicon:0.1.1.2.9.1" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive" data-subtype="num-num"><span id="chronicon:0.1.1.2.9.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">CCVII</span><span id="chronicon:0.1.1.2.9.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">CCC</span></span>: Septuaginta ante natum Nahor ponunt annos CXXX postea CC. Tunc 
+<span id="chronicon:0.1.1.2.9.2" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="y"><span id="chronicon:0.1.1.2.9.2.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Egiptiorum</span><span id="chronicon:0.1.1.2.9.2.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">Egyptiorum</span></span> imperium dicitur inchoasse, primo eis regnante Uizoues; secundum Septuaginta MMMCCXLIV, secundum Hebrei MCMLXXVIII. 
 </p>
  
 <p id="g9.22-9.24" class="t-p s-1-struttura" data-el="p">
 Nahor annos XXIX genuit Thare, cui superuixit annos CXXVIII. Septuaginta ante natum Thare ponunt annos LXXIX postea CXXIX. Tunc 
-<span id="chronicon:0.1.1.2.10.0" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.10.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#a">Assiriorum</span><span id="chronicon:0.1.1.2.10.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#g">Assisiorum</span></span>, Siciniorumque regnum nascitur, his primum Belo, illis Agialeo regnante. 
+<span id="chronicon:0.1.1.2.10.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.10.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#a">Assiriorum</span><span id="chronicon:0.1.1.2.10.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#g">Assisiorum</span></span>, Siciniorumque regnum nascitur, his primum Belo, illis Agialeo regnante. 
 </p>
  
 <p id="g9.25-9.25" class="t-p s-1-struttura" data-el="p">
@@ -580,22 +587,23 @@ Hebrei MCMXLVIII.
  
 <p id="g9.26-9.31" class="t-p s-1-struttura" data-el="p">
 Thare annos LXX genuit Abraham cui superuixit annis CXXXV. Hactenus seculi secunda etas protenditur, cuius tota series recensita, beatus Augustinus in libro de ciuitate Dei XVI 
-<span id="chronicon:0.1.1.2.12.0" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="punctuation"><span id="chronicon:0.1.1.2.12.0.0" class="t-lem s-4-apparato" data-el="lem" data-resp="#pm"></span><span id="chronicon:0.1.1.2.12.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#g">.</span></span> capitulo X hoc modo conclusit. Fiunt itaque anni a diluuio usque ad Abraham mille septuaginta duo, secundum uulgatam editionem, hoc est interpretum Septuaginta. In Hebreis autem codicibus longe pauciores annos uidelicet CCXCII perhibent inueniri, de quibus, rationem nullam, aut 
-<span id="chronicon:0.1.1.2.12.1" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.12.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">difficilem</span><span id="chronicon:0.1.1.2.12.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">difficillimam</span></span> reddunt. 
-<span id="chronicon:0.1.1.2.12.2" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.12.2.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Orosius</span><span id="chronicon:0.1.1.2.12.2.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">Otosius</span></span>: 
+<span id="chronicon:0.1.1.2.12.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="punctuation" data-subtype="remove-punctuation"><span id="chronicon:0.1.1.2.12.0.0" class="t-lem s-4-apparato" data-el="lem" data-resp="#pm"></span><span id="chronicon:0.1.1.2.12.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#g">.</span></span> capitulo X hoc modo conclusit. Fiunt itaque anni a diluuio usque ad Abraham mille septuaginta duo, secundum uulgatam editionem, hoc est interpretum Septuaginta. In Hebreis autem codicibus longe pauciores annos uidelicet CCXCII perhibent inueniri, de quibus, rationem nullam, aut 
+<span id="chronicon:0.1.1.2.12.1" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.12.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">difficilem</span><span id="chronicon:0.1.1.2.12.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">difficillimam</span></span> reddunt. 
+<span id="chronicon:0.1.1.2.12.2" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.12.2.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Orosius</span><span id="chronicon:0.1.1.2.12.2.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">Otosius</span></span>: 
 </p>
  
 <p id="g10.1-10.5" class="t-p s-1-struttura" data-el="p">
 Ab Adam primo homine usque ad Ninum magnum regem, cuius anno XLII natus est Abraham, 
-<span id="chronicon:0.1.1.2.13.0" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.13.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g"> </span><span id="chronicon:0.1.1.2.13.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">fiunt</span></span> anni tria milia CLXXXIV. A Nino autem uel Abraham, usque ad 
-<span id="chronicon:0.1.1.2.13.1" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.13.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Cesarem</span><span id="chronicon:0.1.1.2.13.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">Cessarem</span></span> Augustum, 
-<span id="chronicon:0.1.1.2.13.2" class="t-app s-4-apparato" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.13.2.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">id est</span><span id="chronicon:0.1.1.2.13.2.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">idem</span></span> usque ad natiuitatem Christi, que fuit anno imperii Cesaris XLII cum facta pace cum Parthis, Iani porte clause sunt et bella toto orbe cessarent, colliguntur anni duo milia XV. 
+<span id="chronicon:0.1.1.2.13.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive" data-subtype="missing-in-print"><span id="chronicon:0.1.1.2.13.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g"> </span><span id="chronicon:0.1.1.2.13.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">fiunt</span></span> anni tria milia CLXXXIV. A Nino autem uel Abraham, usque ad 
+<span id="chronicon:0.1.1.2.13.1" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.13.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Cesarem</span><span id="chronicon:0.1.1.2.13.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">Cessarem</span></span> Augustum, 
+<span id="chronicon:0.1.1.2.13.2" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.2.13.2.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">id est</span><span id="chronicon:0.1.1.2.13.2.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">idem</span></span> usque ad natiuitatem Christi, que fuit anno imperii Cesaris XLII cum facta pace cum Parthis, Iani porte clause sunt et bella toto orbe cessarent, colliguntur anni duo milia XV. 
 </p>
  
 </div><nav class="prevnext" aria-label="Contents"><a href="text-1.html">‹ previous</a><a href="text.html">Contents</a><a href="text-3.html">next ›</a></nav></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · eb43eb4 · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · fece455 · 2026-07-31</footer>
 <script>
 (function(){
+  var T={"edition":"Edition","text":"Text","indices":"Indices","data":"Data","archive":"Archive","dsa":"digital archive","texts":"Texts","reading":"Reading","diplomatic":"Diplomatic","apparatus":"Apparatus","aboutFile":"About this file","notes":"Notes","dse":"digital scholarly edition","responsibility":"Responsibility","licence":"Licence","witnesses":"Witnesses","apparatusRegisters":"Apparatus","revisions":"Revision history","generator":"Generator","people":"People","places":"Places","orgs":"Organisations","occurrenceOne":"occurrence","occurrenceMany":"occurrences","entries":"entries","skip":"Skip to content","publishedWith":"Published with","map":"Map","mapAria":"Map of the places of the edition","mapNote":"Positional sketch. Filled dots: coordinates declared in the TEI or confirmed by the editor. Hollow dots: gazetteer suggestions awaiting review. Each place links to OpenStreetMap. Coastlines: Natural Earth (public domain).","front":"Front matter","back":"Back matter","lacking":"lacking in","editedText":"edited text","genesis":"Genesis","hand":"hand","version":"version","legend":"Legend","legWord":"word","legDel":"deleted by the writing hand","legAdd":"added above the line","legUnclear":"uncertain reading","legSupplied":"supplied by the editor","legGap":"lost or illegible","legPb":"page break of the source","legMetamark":"a mark of the hand about the text (^ = insert here; hover each mark to read what it does)","legApp":"variant readings: click for the apparatus","legNote":"note mark","legHands":"Hands","legAllHands":"all","legHand":"the hand of","idxSearch":"search a name…","backToTop":"back to top","apparatusCritical":"critical: variants between witnesses","apparatusGenetic":"genetic: the strata of one manuscript in time","apparatusBoth":"critical and genetic: witnesses to collate, strata within them","legMajor":"main hand","lexicon":"Lexicon","lexTokens":"running words","lexForms":"distinct forms","lexTTR":"type-token ratio","lexSearch":"search a word…","lexFrequencies":"Frequencies","lexConcordance":"Concordance","lexCloud":"Cloud","lexPick":"Pick a word to see it in context.","lexLanguage":"Language","lexAllLangs":"all","lexStoplist":"Stopwords","lexStopNone":"none","lexHideStop":"hide stopwords","lexWord":"word","lexLang":"lang","descrFrequencies":"Every attested form with its count, its share per thousand and whether the stopword list you chose covers it.","descrConcordance":"Every occurrence of every form, with the words around it and the anchor back into the text.","descrLemmaConcordance":"The same evidence grouped under the dictionary form, where the edition has lemmas.","lexAbs":"count","lexRel":"per 1000","lexStats":"Lexical statistics","lexStopCol":"stop","lexStopNote":"Frequencies and cloud drop the stopwords you choose; the concordance keeps every word.","genesisNote":"The campaigns of correction the edition declares, in its own order, with the writing operations attributed to each. Every operation links to the place where it happened.","agreement":"Agreement between witnesses","agreementNote":"How often two witnesses carry the same reading. Evidence for a stemma, which remains the editor’s argument.","openPage":"open the page","sectionsN":"sections","sectionOne":"Section","contents":"Contents","bookLabel":"Book","register":"Register","documentsN":"documents","dateCol":"Date","fromCol":"From","toCol":"To","authorCol":"Author","placeCol":"Place","titleCol":"Title","idnoCol":"Ref.","filter":"Filter…","prev":"‹ previous","next":"next ›","fullHeader":"The full header (teiHeader)","fullHeaderNote":"Everything the file declares, rendered as it is.","reuse":"Reuse under the edition licence (see the Edition page).","appEntry":"apparatus entry","descrModel":"the edition model: documents, registries, apparatus (JSON)","descrEntities":"people, places and organisations with occurrence counts and coordinates","descrApparatus":"every apparatus reading with its witnesses, one row per reading","descrSource":"the unmodified TEI source file","lemmas":"Lemmas","lemmaCoverage":"Coverage","tokensWord":"tokens","languagesLabel":"Languages","yearsLabel":"Years","contributorsLabel":"Contributors","interventionsWord":"interventions","licenceVariesNote":"each document declares its own licence, shown on its page","lemmaFromMarkup":"from the markup (w/@lemma)","lemmaFromFile":"from lemmas.json","lemmaPending":"types awaiting the editor’s review","formsLabel":"forms","moreOccurrences":"more occurrences not shown here","descrLemmas":"every lemma with its forms and counts, one row per form","descrTokens":"the token stream of the reading text: position, language, form, lemma, anchor"};
   var body=document.body; body.classList.add('mode-read');
   if(document.querySelector('.app-band'))body.classList.add('has-band');
   if(window.TORCHIO_ALIGN)body.classList.add('has-align');
@@ -737,7 +745,7 @@ Ab Adam primo homine usque ad Ninum magnum regem, cuius anno XLII natus est Abra
         +'<span class="'+(r.dataset.el==='lem'?'is-lem':'')+'">'+esc(rr.textContent.trim()||'(om.)')+'</span></div>';
     });
     if(!rows)return false;
-    openPop('<span class="k">'+'Apparatus'.toLowerCase()+'</span>'+rows,el);
+    openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'+rows,el);
     return true;
   }
   if(document.readyState==='complete'){wireWords();wirePointing();}
@@ -791,7 +799,7 @@ Ab Adam primo homine usque ad Ninum magnum regem, cuius anno XLII natus est Abra
   }
   function showZone(n){clearZone();zoneOf(n).forEach(function(e){e.classList.add('note-hi');hiZone.push(e);});}
   document.querySelectorAll('.t-app [data-el="lem"]').forEach(function(el){
-    makeTrigger(el,'apparatus entry: '+el.textContent.trim());
+    makeTrigger(el,''+esc(T.appEntry)+': '+el.textContent.trim());
   });
   document.querySelectorAll('[data-ref],[data-key]').forEach(function(el){
     if(el.classList.contains('ent-ext'))return; /* external links stay links */
@@ -842,7 +850,7 @@ Ab Adam primo homine usque ad Ninum magnum regem, cuius anno XLII natus est Abra
               }
               openPop('<span class="k">'+esc(sig)+'</span>'
                 +'<div class="notebody">'+(txt?esc(txt):'…')+'</div>'
-                +'<div class="meta"><a href="'+tgt+'">open the page</a></div>',bw);
+                +'<div class="meta"><a href="'+tgt+'">'+esc(T.openPage)+'</a></div>',bw);
             })['catch'](function(){location.href=tgt;});
           }catch(e){location.href=tgt;}
         });
@@ -868,12 +876,12 @@ Ab Adam primo homine usque ad Ninum magnum regem, cuius anno XLII natus est Abra
       app.querySelectorAll('.t-note').forEach(function(nn){
         extra+='<div class="meta">'+esc(nn.textContent.replace(/s+/g,' ').trim())+'</div>';
       });
-      openPop('<span class="k">apparatus'+(app.dataset.type?' · '+esc(app.dataset.type):'')+'</span>'+rows+extra,app);
+      openPop('<span class="k">'+esc(T.apparatus.toLowerCase())+''+(app.dataset.type?' · '+esc(app.dataset.type):'')+'</span>'+rows+extra,app);
       ev.stopPropagation();return;
     }
     var ch=ev.target.closest&&ev.target.closest('.t-choice');
     if(ch&&!ch.closest('.t-app')){
-      var kinds={abbr:'Diplomatic',orig:'Diplomatic',sic:'Diplomatic',expan:'Reading',reg:'Reading',corr:'Reading'};
+      var kinds={abbr:esc(T.diplomatic),orig:esc(T.diplomatic),sic:esc(T.diplomatic),expan:esc(T.reading),reg:esc(T.reading),corr:esc(T.reading)};
       var rows='';
       [].slice.call(ch.children).forEach(function(c){
         var k=c.dataset&&c.dataset.el; if(!kinds[k])return;
@@ -894,7 +902,7 @@ Ab Adam primo homine usque ad Ninum magnum regem, cuius anno XLII natus est Abra
       var meta=[];
       if(key&&ent.textContent.trim()!==key)meta.push(esc(ent.textContent.trim()));
       if(ref)meta.push(esc(ref));
-      meta.push(all.length+' '+(all.length===1?'occurrence':'occurrences'));
+      meta.push(all.length+' '+(all.length===1?esc(T.occurrenceOne):esc(T.occurrenceMany)));
       openPop('<span class="k">'+esc(ent.dataset.el)+'</span>'
         +'<div>'+esc(head)+'</div>'
         +'<div class="meta">'+meta.join(' · ')+'</div>',ent);
@@ -909,7 +917,7 @@ Ab Adam primo homine usque ad Ninum magnum regem, cuius anno XLII natus est Abra
       openPop('<span class="k">'+esc(op.dataset.el)+'</span>'
         +'<div class="notebody">'+esc(op.textContent.replace(/s+/g,' ').trim().slice(0,140))+'</div>'
         +'<div class="meta">'+(lab?esc(lab):'')+(hd?' · '+esc(hd):'')
-        +' <a href="genesis.html">Genesis</a></div>',op);
+        +' <a href="genesis.html">'+esc(T.genesis)+'</a></div>',op);
       ev.stopPropagation();return;
     }
     var anc=ev.target.closest&&ev.target.closest('[data-appref]');
@@ -917,7 +925,7 @@ Ab Adam primo homine usque ad Ninum magnum regem, cuius anno XLII natus est Abra
     var wv=ev.target.closest&&ev.target.closest('.wv');
     if(wv&&wv._be&&!body.classList.contains('app-off')){
       var wband=wv._be.closest('.app-band');
-      openPop('<span class="k">'+'Apparatus'.toLowerCase()+'</span>'
+      openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'
         +'<div class="popband" data-ent="'+((wband&&wband.getAttribute('data-ent'))||'')+'">'+wv._be.outerHTML+'</div>',wv);
       ev.stopPropagation();return;
     }
@@ -925,7 +933,7 @@ Ab Adam primo homine usque ad Ninum magnum regem, cuius anno XLII natus est Abra
     if(npFirst){
       var nnF=document.querySelector('.t-note[data-npi="'+npFirst.getAttribute('data-notepop')+'"]');
       if(nnF&&!body.classList.contains('notes-off')){
-        openPop('<span class="k">'+'Notes'.toLowerCase()+'</span><div class="notebody">'+nnF.innerHTML+'</div>',npFirst);
+        openPop('<span class="k">'+esc(T.notes).toLowerCase()+'</span><div class="notebody">'+nnF.innerHTML+'</div>',npFirst);
         showZone(nnF);
         ev.stopPropagation();return;
       }
@@ -948,9 +956,9 @@ Ab Adam primo homine usque ad Ninum magnum regem, cuius anno XLII natus est Abra
           var el=doc.getElementById(id);
           var sec=el&&el.closest?el.closest('.vmap')||el:el;
           if(!sec)return;
-          openPop('<span class="k">'+'Apparatus'.toLowerCase()+'</span>'
+          openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'
             +'<div class="popband" data-ent="'+esc(key)+'">'+sec.innerHTML+'</div>'
-            +'<div class="meta"><a href="'+tgt+'">open the page</a></div>',lw);
+            +'<div class="meta"><a href="'+tgt+'">'+esc(T.openPage)+'</a></div>',lw);
         })['catch'](function(){});
       });
       ev.stopPropagation();return;
@@ -959,7 +967,7 @@ Ab Adam primo homine usque ad Ninum magnum regem, cuius anno XLII natus est Abra
     if(lv&&lv.nextElementSibling&&lv.nextElementSibling.classList
        &&lv.nextElementSibling.classList.contains('app-band')){
       var bd=lv.nextElementSibling;
-      openPop('<span class="k">'+'Apparatus'.toLowerCase()+'</span>'
+      openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'
         +'<div class="popband" data-ent="'+(bd.getAttribute('data-ent')||'')+'">'+bd.innerHTML+'</div>',lv);
       ev.stopPropagation();return;
     }
@@ -967,7 +975,7 @@ Ab Adam primo homine usque ad Ninum magnum regem, cuius anno XLII natus est Abra
     if(np&&!body.classList.contains('notes-off')){
       var nn=document.querySelector('.t-note[data-npi="'+np.getAttribute('data-notepop')+'"]');
       if(nn){
-        openPop('<span class="k">'+'Notes'.toLowerCase()+'</span><div class="notebody">'+nn.innerHTML+'</div>',np);
+        openPop('<span class="k">'+esc(T.notes).toLowerCase()+'</span><div class="notebody">'+nn.innerHTML+'</div>',np);
         showZone(nn);
         ev.stopPropagation();return;
       }
@@ -981,7 +989,12 @@ Ab Adam primo homine usque ad Ninum magnum regem, cuius anno XLII natus est Abra
     var old=document.getElementById('note-leaders'); if(old)old.remove();
     var main=document.querySelector('main.torchio'); if(!main)return;
     var notes=[].slice.call(document.querySelectorAll('main.torchio .t-note'))
-      .filter(function(n){return !n.closest('.header-full')&&!n.closest('.t-teiHeader');});
+      .filter(function(n){
+        /* a header note is metadata, except a standoff note with a target:
+           that one belongs to the passage it names, wherever it was written */
+        var inHeader=n.closest('.header-full')||n.closest('.t-teiHeader');
+        return !inHeader||!!n.dataset.target;
+      });
     function anchorOf(n){
       var app=n.closest('.t-app');
       if(app){return {el:app.querySelector('[data-el="lem"]')||app,kind:'app'};}
@@ -1000,7 +1013,10 @@ Ab Adam primo homine usque ad Ninum magnum regem, cuius anno XLII natus est Abra
        they collapse to their marks and open on click, like the apparatus */
     var dense=notes.length>12;
     body.classList.toggle('notes-dense',dense);
-    if(dense){
+    /* pairing runs ALWAYS: a mark must answer a click whatever the density
+       or the width of the window; density only decides whether the notes
+       collapse to their marks or sit in the margin */
+    {
       // the renderer emits a mark and its note together: pair them by
       // document order, so a mark is never left without its note (C74)
       var marks=[].slice.call(document.querySelectorAll('main.torchio .t-note-mark'))
@@ -1015,20 +1031,23 @@ Ab Adam primo homine usque ad Ninum magnum regem, cuius anno XLII natus est Abra
         if(n.dataset.npi)return;
         n.dataset.npi=String(i);
         var res=anchorOf(n);
-        var el=(res&&res.el)||marks[i];
+        var mk=marks[i];
         /* a standoff note is written apart and declares where it belongs:
            its mark goes to the passage, not to the place it was written */
         var tg=n.dataset.target;
-        if(tg&&el&&el.classList&&el.classList.contains('t-note-mark')){
+        if(tg&&mk){
           var id=tg.split(/s+/)[0].replace(/^#/,'');
           var dest=document.getElementById(id);
-          if(dest&&!dest.contains(el)){
-            if(dest.nextSibling)dest.parentNode.insertBefore(el,dest.nextSibling);
-            else dest.parentNode.appendChild(el);
+          if(dest&&!dest.contains(mk)){
+            if(dest.nextSibling)dest.parentNode.insertBefore(mk,dest.nextSibling);
+            else dest.parentNode.appendChild(mk);
           }
         }
-        if(el){el.setAttribute('data-notepop',String(i));
-          el.removeAttribute('aria-hidden');makeTrigger(el,null);}
+        /* both answer the click: the mark, and the anchored passage */
+        if(mk){mk.setAttribute('data-notepop',String(i));
+          mk.removeAttribute('aria-hidden');makeTrigger(mk,null);}
+        var el=res&&res.el;
+        if(el&&el!==mk){el.setAttribute('data-notepop',String(i));makeTrigger(el,null);}
       });
     }
     if(window.innerWidth<1180||body.classList.contains('notes-off')||dense){

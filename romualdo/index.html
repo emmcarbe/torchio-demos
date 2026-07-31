@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lat">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,7 +77,14 @@ body.notes-off .t-note-mark{opacity:.25}
   .t-note.placed{font-size:.78em;line-height:1.4}
 }
 
-.t-app:has([data-el="lem"]) .t-rdg{display:none}
+.t-app.app-has-lem .t-rdg{display:none}
+/* an app without a lem privileges nothing: the first reading stands in the
+   text (the others are in the apparatus), never all of them concatenated */
+.t-app.app-no-lem>[data-el="rdg"]~[data-el="rdg"],
+.t-app.app-no-lem>[data-el="rdgGrp"]~[data-el="rdgGrp"]{display:none}
+/* an app that points to the text (double-end-point, location-referenced)
+   carries no text of its own: the passage is already in the base text */
+.t-app.app-pointing{display:none}
 .t-lem{border-bottom:1px dotted var(--accent-soft)}
 .t-app[data-type="lac"] [data-el="lem"]{font-family:var(--mono);font-size:.62em;
   font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);
@@ -143,7 +150,7 @@ body.app-off.has-band [data-el="l"]{cursor:inherit}
 /* dense notes: marks only, notes open on click */
 body.notes-dense main.torchio .t-note{display:none!important}
 body.notes-dense .t-note-mark{color:var(--accent);cursor:pointer;font-size:.85em;font-weight:700;line-height:0;padding:.3em .3em;margin:-.3em -.1em}
-body.notes-dense [data-notepop]{cursor:pointer}
+[data-notepop]{cursor:pointer}
 body.notes-dense.notes-off .t-note-mark{cursor:default}
 
 /* transcription levels: reading is the default */
@@ -371,8 +378,8 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                 </span>
             </span>
             <span id="chronicon:0.0.0.1" class="t-extent s-1-bibliografia" data-el="extent">
-                <span id="chronicon:0.0.0.1.0" class="t-measure s-1-inline" data-el="measure">Words: 104290</span>
-                <span id="chronicon:0.0.0.1.1" class="t-measure s-1-inline" data-el="measure">Characters (withous spaces): 642387</span>
+                <span id="chronicon:0.0.0.1.0" class="t-measure s-1-inline" data-el="measure" data-unit="words">Words: 104290</span>
+                <span id="chronicon:0.0.0.1.1" class="t-measure s-1-inline" data-el="measure" data-unit="characters_without_spaces">Characters (withous spaces): 642387</span>
             </span>
             <span id="chronicon:0.0.0.2" class="t-publicationStmt s-7-header" data-el="publicationStmt">
                 <span id="chronicon:0.0.0.2.0" class="t-publisher s-1-bibliografia" data-el="publisher">
@@ -385,7 +392,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
             </span>
             <div id="chronicon:0.0.0.3" class="t-sourceDesc s-7-header" data-el="sourceDesc">
                 <div id="chronicon:0.0.0.3.0" class="t-listWit s-1-liste" data-el="listWit">
-                    <div id="a" class="t-witness s-4-apparato" data-el="witness">
+                    <div id="a" class="t-witness s-4-apparato" data-el="witness" data-facs="https://digi.vatlib.it/iiif/MSS_Vat.lat.3973/manifest.json">
                         <div id="chronicon:0.0.0.3.0.0.0" class="t-msDesc s-1-bibliografia" data-el="msDesc">
                             <span id="chronicon:0.0.0.3.0.0.0.0" class="t-msIdentifier s-1-bibliografia" data-el="msIdentifier">
                                 <span id="chronicon:0.0.0.3.0.0.0.0.0" class="t-settlement s-2-entita" data-el="settlement">Biblioteca Apostolica Vaticana</span>
@@ -393,7 +400,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                             </span>
                         </div>
                     </div>
-                    <div id="a2" class="t-witness s-4-apparato" data-el="witness">
+                    <div id="a2" class="t-witness s-4-apparato" data-el="witness" data-facs="https://digi.vatlib.it/iiif/MSS_Vat.lat.3973/manifest.json">
                         <div id="chronicon:0.0.0.3.0.1.0" class="t-msDesc s-1-bibliografia" data-el="msDesc">
                             <span id="chronicon:0.0.0.3.0.1.0.0" class="t-msIdentifier s-1-bibliografia" data-el="msIdentifier">
                                 <span id="chronicon:0.0.0.3.0.1.0.0.0" class="t-settlement s-2-entita" data-el="settlement">Biblioteca Apostolica Vaticana</span>
@@ -402,7 +409,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                             <p id="chronicon:0.0.0.3.0.1.0.1" class="t-ab s-1-struttura" data-el="ab">This siglum represents a later hand, probably of the XVII century, in this manuscript</p>
                         </div>
                     </div>
-                    <div id="o" class="t-witness s-4-apparato" data-el="witness">
+                    <div id="o" class="t-witness s-4-apparato" data-el="witness" data-facs="https://digi.vatlib.it/iiif/MSS_Ott.lat.2940/manifest.json">
                         <div id="chronicon:0.0.0.3.0.2.0" class="t-msDesc s-1-bibliografia" data-el="msDesc">
                             <span id="chronicon:0.0.0.3.0.2.0.0" class="t-msIdentifier s-1-bibliografia" data-el="msIdentifier">
                                 <span id="chronicon:0.0.0.3.0.2.0.0.0" class="t-settlement s-2-entita" data-el="settlement">Ottobonianus</span>
@@ -410,7 +417,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                             </span>
                         </div>
                     </div>
-                    <div id="g" class="t-witness s-4-apparato" data-el="witness">
+                    <div id="g" class="t-witness s-4-apparato" data-el="witness" data-facs="https://archive.org/details/p1rerumitalicarums07card/">
                         <span id="chronicon:0.0.0.3.0.3.0" class="t-biblStruct s-1-bibliografia" data-el="biblStruct">
                             <span id="chronicon:0.0.0.3.0.3.0.0" class="t-monogr s-1-struttura" data-el="monogr">
                                 <span id="chronicon:0.0.0.3.0.3.0.0.0" class="t-author s-1-bibliografia" data-el="author">Guarna, Romualdus</span>
@@ -424,8 +431,8 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                             </span>
                             <span id="chronicon:0.0.0.3.0.3.0.1" class="t-series s-1-bibliografia" data-el="series">
                                 <span id="chronicon:0.0.0.3.0.3.0.1.0" class="t-title s-1-inline" data-el="title">Rerum italicarum scriptores: Nuova edizione</span>
-                                <span id="chronicon:0.0.0.3.0.3.0.1.1" class="t-biblScope s-1-bibliografia" data-el="biblScope">7</span>
-                                <span id="chronicon:0.0.0.3.0.3.0.1.2" class="t-biblScope s-1-bibliografia" data-el="biblScope">1</span>
+                                <span id="chronicon:0.0.0.3.0.3.0.1.1" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">7</span>
+                                <span id="chronicon:0.0.0.3.0.3.0.1.2" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="part">1</span>
                             </span>
                             <span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.0.0.3.0.3.0.2" class="t-note s-1-note" data-el="note">Garufi&#39;s edition was the collation exemplar from the beginning of the text
 			    until (and including) paragraph g163.1-163.5.</div>
@@ -446,7 +453,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                             </span>
                             <span id="chronicon:0.0.0.3.0.4.0.1" class="t-series s-1-bibliografia" data-el="series">
                                 <span id="chronicon:0.0.0.3.0.4.0.1.0" class="t-title s-1-inline" data-el="title">Schola Salernitana. Studi e testi</span>
-                                <span id="chronicon:0.0.0.3.0.4.0.1.1" class="t-biblScope s-1-bibliografia" data-el="biblScope">6</span>
+                                <span id="chronicon:0.0.0.3.0.4.0.1.1" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">6</span>
                             </span>
                             <span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.0.0.3.0.4.0.2" class="t-note s-1-note" data-el="note">Bonetti&#39;s edition was the collation exemplar for the collation
 			    from (and including) paragraph g163.6-163.7 to the end of the text.
@@ -491,7 +498,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
             <div id="chronicon:0.0.3.0" class="t-change s-7-header" data-el="change" data-when="2020-02">Prima edizione nel formato TEI P5 [livello ALIM2_3]</div>
         </span>
     </div></div></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · eb43eb4 · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · fece455 · 2026-07-31</footer>
 
 </body>
 </html>

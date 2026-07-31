@@ -77,7 +77,14 @@ body.notes-off .t-note-mark{opacity:.25}
   .t-note.placed{font-size:.78em;line-height:1.4}
 }
 
-.t-app:has([data-el="lem"]) .t-rdg{display:none}
+.t-app.app-has-lem .t-rdg{display:none}
+/* an app without a lem privileges nothing: the first reading stands in the
+   text (the others are in the apparatus), never all of them concatenated */
+.t-app.app-no-lem>[data-el="rdg"]~[data-el="rdg"],
+.t-app.app-no-lem>[data-el="rdgGrp"]~[data-el="rdgGrp"]{display:none}
+/* an app that points to the text (double-end-point, location-referenced)
+   carries no text of its own: the passage is already in the base text */
+.t-app.app-pointing{display:none}
 .t-lem{border-bottom:1px dotted var(--accent-soft)}
 .t-app[data-type="lac"] [data-el="lem"]{font-family:var(--mono);font-size:.62em;
   font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);
@@ -405,24 +412,24 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
         </div>
     </div><span id="let013:0.1" class="t-facsimile s-7-struttura-documento" data-el="facsimile">
 <div id="surf-pb-1r" class="t-surface s-5-documentario" data-el="surface" data-n="b 0011">
-            <span id="let013:0.1.0.0" class="t-graphic s-1-paratesti" data-el="graphic"></span>
+            <span id="let013:0.1.0.0" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="norend" data-url="VGM001000011_01.TIF"></span>
             <div id="zone-pb-1r-1" class="t-zone s-2-standoff" data-el="zone">
-<span id="let013:0.1.0.1.0" class="t-graphic s-1-paratesti" data-el="graphic"></span>
-                <span id="let013:0.1.0.1.1" class="t-graphic s-1-paratesti" data-el="graphic"></span>
-                <span id="let013:0.1.0.1.2" class="t-graphic s-1-paratesti" data-el="graphic"></span>
+<span id="let013:0.1.0.1.0" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="norend" data-url="VGM001000011_01_n.tif"></span>
+                <span id="let013:0.1.0.1.1" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="thumbnail" data-url="VGM001000011_01_nt.jpg"></span>
+                <span id="let013:0.1.0.1.2" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="facstab" data-url="VGM001000011_01_nf.png"></span>
             </div>
 </div>
 <div id="surf-pb-1v" class="t-surface s-5-documentario" data-el="surface" data-n="b 0011">
-            <span id="let013:0.1.1.0" class="t-graphic s-1-paratesti" data-el="graphic"></span>
+            <span id="let013:0.1.1.0" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="norend" data-url="VGM001000011_02.TIF"></span>
             <div id="zone-pb-1v-2" class="t-zone s-2-standoff" data-el="zone">
-<span id="let013:0.1.1.1.0" class="t-graphic s-1-paratesti" data-el="graphic"></span>
-                <span id="let013:0.1.1.1.1" class="t-graphic s-1-paratesti" data-el="graphic"></span>
-                <span id="let013:0.1.1.1.2" class="t-graphic s-1-paratesti" data-el="graphic"></span>
+<span id="let013:0.1.1.1.0" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="norend" data-url="VGM001000011_02_n.tif"></span>
+                <span id="let013:0.1.1.1.1" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="thumbnail" data-url="VGM001000011_02_nt.jpg"></span>
+                <span id="let013:0.1.1.1.2" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="facstab" data-url="VGM001000011_02_nf.png"></span>
             </div>
 </div>
     </span><div id="let013:0.2" class="t-text s-7-struttura-documento" data-el="text">
         <div id="let013:0.2.0" class="t-body s-1-struttura" data-el="body">
-<div id="let013:0.2.0.0" class="t-div s-1-struttura" data-el="div" data-type="original">
+<div id="let013:0.2.0.0" class="t-div s-1-struttura" data-el="div" lang="nl" data-type="original">
 <span id="pb-orig-1r-1" class="t-pb" role="separator" title="page break">[1]</span>
                 <span id="l-1" class="t-lb"><br/></span>
 <p id="let013:0.2.0.0.2" class="t-ab s-1-struttura" data-el="ab">Londen 13 Sept<span id="let013:0.2.0.0.2.0" class="t-c s-5-documentario" data-el="c" data-type="kp">_</span> 1873</p>
@@ -432,27 +439,27 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                 <span id="l-3" class="t-lb"><br/></span>
 <p id="let013:0.2.0.0.7" class="t-ab s-1-struttura" data-el="ab">Aan oom Hein schrijvende <span id="l-4" class="t-lb"><br/></span>sluit ik nog een woordje voor <span id="l-5" class="t-lb"><br/></span>je in.─ Zeer nieuwsgierig ben ik om te hooren <span id="l-6" class="t-lb"><br/></span>of je op Moe’s verjaardag naar <span id="l-7" class="t-lb"><br/></span>Helvoirt geweest zijt<span id="note-o-1" class="t-anchor s-1-milestone" data-el="anchor" data-n="1"></span> &amp; hoe je <span id="l-8" class="t-lb"><br/></span>het daar gehad hebt.─</p>
                 <span id="l-9" class="t-lb"><br/></span>
-<p id="let013:0.2.0.0.9" class="t-ab s-1-struttura" data-el="ab">Heb je mijn brief gekregen &amp; de <span id="l-10" class="t-lb"><br/></span>lith. van Weissenbruch die ik <span id="l-11" class="t-lb"><br/></span>in de kist schilderijen gedaan heb.─<span id="note-o-2" class="t-anchor s-1-milestone" data-el="anchor" data-n="2"></span> <span id="l-12" class="t-lb"><br/></span>O, kerel, ik zou je zoo graag eens <span id="l-13" class="t-lb"><br/></span>hier hebben, om mijne nieuwe <span id="l-14" class="t-lb"><br/></span>woning, waarvan je zeker ge<span id="let013:0.2.0.0.9.6" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
+<p id="let013:0.2.0.0.9" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Heb je mijn brief gekregen &amp; de <span id="l-10" class="t-lb"><br/></span>lith. van Weissenbruch die ik <span id="l-11" class="t-lb"><br/></span>in de kist schilderijen gedaan heb.─<span id="note-o-2" class="t-anchor s-1-milestone" data-el="anchor" data-n="2"></span> <span id="l-12" class="t-lb"><br/></span>O, kerel, ik zou je zoo graag eens <span id="l-13" class="t-lb"><br/></span>hier hebben, om mijne nieuwe <span id="l-14" class="t-lb"><br/></span>woning, waarvan je zeker ge<span id="let013:0.2.0.0.9.6" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
                     <span id="l-15" class="t-lb"><br/></span>hoord zult hebben, te zien.─<span id="note-o-3" class="t-anchor s-1-milestone" data-el="anchor" data-n="3"></span> <span id="l-16" class="t-lb"><br/></span>Ik heb nu een kamer zooals ik <span id="l-17" class="t-lb"><br/></span>zoolang gewenscht heb<span id="let013:0.2.0.0.9.11" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span> zonder <span id="l-18" class="t-lb"><br/></span>schuine balken &amp; zonder blauw <span id="l-19" class="t-lb"><br/></span>behangsel met groenen rand.─ <span id="l-20" class="t-lb"><br/></span>Het is een zeer vermakelijk huis<span id="let013:0.2.0.0.9.15" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
                     <span id="l-21" class="t-lb"><br/></span>houden waar ik nu ben, waar <span id="l-22" class="t-lb"><br/></span>men eene school voor “little boys” <span id="l-23" class="t-lb"><br/></span>houdt.─</p>
                 <span id="l-24" class="t-lb"><br/></span>
-<p id="let013:0.2.0.0.11" class="t-ab s-1-struttura" data-el="ab">Eenigen tijd geleden ben ik <span id="l-25" class="t-lb"><br/></span>op een Zaturdag met 2 Engelschen <span id="l-26" class="t-lb"><br/></span>uit roeien geweest op den Theems.─ <span id="l-27" class="t-lb"><br/></span>Dat was prachtig mooi.─</p>
+<p id="let013:0.2.0.0.11" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Eenigen tijd geleden ben ik <span id="l-25" class="t-lb"><br/></span>op een Zaturdag met 2 Engelschen <span id="l-26" class="t-lb"><br/></span>uit roeien geweest op den Theems.─ <span id="l-27" class="t-lb"><br/></span>Dat was prachtig mooi.─</p>
 <span id="pb-orig-1v-2" class="t-pb" role="separator" title="page break">[2]</span>
                 <span id="l-28" class="t-lb"><br/></span>
-<p id="let013:0.2.0.0.14" class="t-ab s-1-struttura" data-el="ab">Gisteren heb ik eene tentoonstel<span id="let013:0.2.0.0.14.0" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
+<p id="let013:0.2.0.0.14" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Gisteren heb ik eene tentoonstel<span id="let013:0.2.0.0.14.0" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
                     <span id="l-29" class="t-lb"><br/></span>ling van Belgische schilderijen <span id="l-30" class="t-lb"><br/></span>gezien,<span id="note-o-4" class="t-anchor s-1-milestone" data-el="anchor" data-n="4"></span> waaronder verscheiden <span id="l-31" class="t-lb"><br/></span>oude bekenden van de laatste <span id="l-32" class="t-lb"><br/></span>Brusselsche Tentoonstelling.─<span id="note-o-5" class="t-anchor s-1-milestone" data-el="anchor" data-n="5"></span> <span id="l-33" class="t-lb"><br/></span>Daar waren verscheiden mooie <span id="l-34" class="t-lb"><br/></span>zaken van Alb. &amp; Julien de Vriendt,<span id="note-o-6" class="t-anchor s-1-milestone" data-el="anchor" data-n="6"></span> <span id="l-35" class="t-lb"><br/></span>Cluysenaer,<span id="note-o-7" class="t-anchor s-1-milestone" data-el="anchor" data-n="7"></span> Wouters,<span id="note-o-8" class="t-anchor s-1-milestone" data-el="anchor" data-n="8"></span> Coosemans<span id="let013:0.2.0.0.14.13" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span>
                     <span id="note-o-9" class="t-anchor s-1-milestone" data-el="anchor" data-n="9"></span> <span id="l-36" class="t-lb"><br/></span>Gabriel,<span id="note-o-10" class="t-anchor s-1-milestone" data-el="anchor" data-n="10"></span> de Schampheleer<span id="note-o-11" class="t-anchor s-1-milestone" data-el="anchor" data-n="11"></span> &amp;c.─</p>
                 <span id="l-37" class="t-lb"><br/></span>
-<p id="let013:0.2.0.0.16" class="t-ab s-1-struttura" data-el="ab">Heb je ooit iets gezien van Terlinden<span id="let013:0.2.0.0.16.0" class="t-c s-5-documentario" data-el="c" data-type="kp">_</span>
+<p id="let013:0.2.0.0.16" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Heb je ooit iets gezien van Terlinden<span id="let013:0.2.0.0.16.0" class="t-c s-5-documentario" data-el="c" data-type="kp">_</span>
                     <span id="note-o-12" class="t-anchor s-1-milestone" data-el="anchor" data-n="12"></span> <span id="l-38" class="t-lb"><br/></span>Zoo ja schrijf mij dat dan eens<span id="let013:0.2.0.0.16.3" class="t-c s-5-documentario" data-el="c" data-type="kp">_</span>
                 </p>
                 <span id="l-39" class="t-lb"><br/></span>
-<p id="let013:0.2.0.0.18" class="t-ab s-1-struttura" data-el="ab">Het was eene ware verkwikking <span id="l-40" class="t-lb"><br/></span>die Belgische schilderijen te zien, <span id="l-41" class="t-lb"><br/></span>de Engelsche<span id="note-o-13" class="t-anchor s-1-milestone" data-el="anchor" data-n="13"></span> zijn met enkele uitzon<span id="let013:0.2.0.0.18.3" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
+<p id="let013:0.2.0.0.18" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Het was eene ware verkwikking <span id="l-40" class="t-lb"><br/></span>die Belgische schilderijen te zien, <span id="l-41" class="t-lb"><br/></span>de Engelsche<span id="note-o-13" class="t-anchor s-1-milestone" data-el="anchor" data-n="13"></span> zijn met enkele uitzon<span id="let013:0.2.0.0.18.3" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
                     <span id="l-42" class="t-lb"><br/></span>deringen zeer naar &amp; dun.– <span id="l-43" class="t-lb"><br/></span>Ik heb er eenigen tijd geleden <span id="l-44" class="t-lb"><br/></span>een gezien waarop een soort <span id="l-45" class="t-lb"><br/></span>visch of draak van zegge 6 el <span id="l-46" class="t-lb"><br/></span>lang.─ Dat was ijsselijk.─ En dan <span id="l-47" class="t-lb"><br/></span>een klein mannetje dat het <span id="l-48" class="t-lb"><br/></span>voornoemde gedierte ging dood<span id="let013:0.2.0.0.18.11" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
                     <span id="l-49" class="t-lb"><br/></span>maken.─ En dit alles stelde <span id="l-50" class="t-lb"><br/></span>geloof ik “den Aartsengel Michael <span id="l-51" class="t-lb"><br/></span>den Satan doodende” voor.─<span id="note-o-14" class="t-anchor s-1-milestone" data-el="anchor" data-n="14"></span>
                 </p>
                 <span id="l-52" class="t-lb"><br/></span>
-<p id="let013:0.2.0.0.20" class="t-ab s-1-struttura" data-el="ab">à Dieu Kerel<span id="let013:0.2.0.0.20.0" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span> heb het goed <span id="l-53" class="t-lb"><br/></span>&amp; schrijf eens spoedig.─</p>
+<p id="let013:0.2.0.0.20" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">à Dieu Kerel<span id="let013:0.2.0.0.20.0" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span> heb het goed <span id="l-53" class="t-lb"><br/></span>&amp; schrijf eens spoedig.─</p>
 <span id="let013:0.2.0.0.21" class="t-whiteline s-base" data-el="whiteline"></span>
                 <span id="l-54" class="t-lb"><br/></span>
 <p id="let013:0.2.0.0.23" class="t-ab s-1-struttura" data-el="ab">Vincent</p>
@@ -479,16 +486,16 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <span id="let013:0.2.0.1.2" class="t-whiteline s-base" data-el="whiteline"></span>
 <p id="let013:0.2.0.1.3" class="t-ab s-1-struttura" data-el="ab">My dear Theo,</p>
 <p id="let013:0.2.0.1.4" class="t-ab s-1-struttura" data-el="ab">Writing to <span id="let013:0.2.0.1.4.0" class="t-rs s-2-entita" data-el="rs" data-key="399" data-type="pers">Uncle Hein</span>, I’m enclosing a word for you. I’m very curious to hear whether you went to Helvoirt<span id="note-t-1" class="t-anchor s-1-milestone" data-el="anchor" data-n="1"></span> on <span id="let013:0.2.0.1.4.2" class="t-rs s-2-entita" data-el="rs" data-key="524" data-type="pers">Ma</span>’s birthday and how it was there.</p>
-<p id="let013:0.2.0.1.5" class="t-ab s-1-struttura" data-el="ab">Did you get my letter and the lithograph by <span id="let013:0.2.0.1.5.0" class="t-rs s-2-entita" data-el="rs" data-key="1443" data-type="pers">Weissenbruch</span> that I put in the crate of paintings?<span id="note-t-2" class="t-anchor s-1-milestone" data-el="anchor" data-n="2"></span>
-                    <span id="let013:0.2.0.1.5.2" class="t-hi s-1-inline" data-el="hi"> </span>Oh, how I’d like to have you here, old chap, to see my new lodgings,<span id="note-t-3" class="t-anchor s-1-milestone" data-el="anchor" data-n="3"></span> which you’ll have heard about. I now have a room, as I’ve long been wishing, without sloping beams and without blue wallpaper with a green border. It’s a very diverting household where I am now, in which they run a school for little boys.</p>
-<p id="let013:0.2.0.1.6" class="t-ab s-1-struttura" data-el="ab">Some time ago I spent a Saturday rowing on the Thames with 2 Englishmen. It was glorious.
+<p id="let013:0.2.0.1.5" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Did you get my letter and the lithograph by <span id="let013:0.2.0.1.5.0" class="t-rs s-2-entita" data-el="rs" data-key="1443" data-type="pers">Weissenbruch</span> that I put in the crate of paintings?<span id="note-t-2" class="t-anchor s-1-milestone" data-el="anchor" data-n="2"></span>
+                    <span id="let013:0.2.0.1.5.2" class="t-hi s-1-inline" data-el="hi" data-rend="ss"> </span>Oh, how I’d like to have you here, old chap, to see my new lodgings,<span id="note-t-3" class="t-anchor s-1-milestone" data-el="anchor" data-n="3"></span> which you’ll have heard about. I now have a room, as I’ve long been wishing, without sloping beams and without blue wallpaper with a green border. It’s a very diverting household where I am now, in which they run a school for little boys.</p>
+<p id="let013:0.2.0.1.6" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Some time ago I spent a Saturday rowing on the Thames with 2 Englishmen. It was glorious.
 <span id="pb-trans-1v-2" class="t-pb" role="separator" title="page break">[2]</span>
                 </p>
-<p id="let013:0.2.0.1.7" class="t-ab s-1-struttura" data-el="ab">Yesterday I saw an exhibition of Belgian paintings,<span id="note-t-4" class="t-anchor s-1-milestone" data-el="anchor" data-n="4"></span> which included various old acquaintances from the last Brussels Exhibition.<span id="note-t-5" class="t-anchor s-1-milestone" data-el="anchor" data-n="5"></span> There were various beautiful things by  <span id="let013:0.2.0.1.7.2" class="t-rs s-2-entita" data-el="rs" data-key="1433 1434" data-type="pers">A. and Julien de Vriendt</span>,<span id="note-t-6" class="t-anchor s-1-milestone" data-el="anchor" data-n="6"></span> <span id="let013:0.2.0.1.7.4" class="t-rs s-2-entita" data-el="rs" data-key="950" data-type="pers">Cluysenaar</span>,<span id="note-t-7" class="t-anchor s-1-milestone" data-el="anchor" data-n="7"></span> <span id="let013:0.2.0.1.7.6" class="t-rs s-2-entita" data-el="rs" data-key="1452" data-type="pers">Wouters</span>,<span id="note-t-8" class="t-anchor s-1-milestone" data-el="anchor" data-n="8"></span> <span id="let013:0.2.0.1.7.8" class="t-rs s-2-entita" data-el="rs" data-key="947" data-type="pers">Coosemans</span>,<span id="note-t-9" class="t-anchor s-1-milestone" data-el="anchor" data-n="9"></span> <span id="let013:0.2.0.1.7.10" class="t-rs s-2-entita" data-el="rs" data-key="1034" data-type="pers">Gabriël</span>,<span id="note-t-10" class="t-anchor s-1-milestone" data-el="anchor" data-n="10"></span> <span id="let013:0.2.0.1.7.12" class="t-rs s-2-entita" data-el="rs" data-key="1340" data-type="pers">De Schampheleer</span>,<span id="note-t-11" class="t-anchor s-1-milestone" data-el="anchor" data-n="11"></span> &amp;c.</p>
-<p id="let013:0.2.0.1.8" class="t-ab s-1-struttura" data-el="ab">Have you ever seen anything by <span id="let013:0.2.0.1.8.0" class="t-rs s-2-entita" data-el="rs" data-key="1377" data-type="pers">Terlinden</span>?<span id="note-t-12" class="t-anchor s-1-milestone" data-el="anchor" data-n="12"></span> If you have, be sure to write to me about it.</p>
-<p id="let013:0.2.0.1.9" class="t-ab s-1-struttura" data-el="ab">It was truly refreshing to see those Belgian paintings; the English ones<span id="note-t-13" class="t-anchor s-1-milestone" data-el="anchor" data-n="13"></span> are, with few exceptions, very disagreeable and feeble. Some time ago I saw one with a sort of fish or dragon no less than 6 ells long. It was ghastly. And a little man who was going to kill the above-mentioned creature. And all this represented, I believe, ‘the archangel Michael slaying Satan’.<span id="note-t-14" class="t-anchor s-1-milestone" data-el="anchor" data-n="14"></span>
+<p id="let013:0.2.0.1.7" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Yesterday I saw an exhibition of Belgian paintings,<span id="note-t-4" class="t-anchor s-1-milestone" data-el="anchor" data-n="4"></span> which included various old acquaintances from the last Brussels Exhibition.<span id="note-t-5" class="t-anchor s-1-milestone" data-el="anchor" data-n="5"></span> There were various beautiful things by  <span id="let013:0.2.0.1.7.2" class="t-rs s-2-entita" data-el="rs" data-key="1433 1434" data-type="pers">A. and Julien de Vriendt</span>,<span id="note-t-6" class="t-anchor s-1-milestone" data-el="anchor" data-n="6"></span> <span id="let013:0.2.0.1.7.4" class="t-rs s-2-entita" data-el="rs" data-key="950" data-type="pers">Cluysenaar</span>,<span id="note-t-7" class="t-anchor s-1-milestone" data-el="anchor" data-n="7"></span> <span id="let013:0.2.0.1.7.6" class="t-rs s-2-entita" data-el="rs" data-key="1452" data-type="pers">Wouters</span>,<span id="note-t-8" class="t-anchor s-1-milestone" data-el="anchor" data-n="8"></span> <span id="let013:0.2.0.1.7.8" class="t-rs s-2-entita" data-el="rs" data-key="947" data-type="pers">Coosemans</span>,<span id="note-t-9" class="t-anchor s-1-milestone" data-el="anchor" data-n="9"></span> <span id="let013:0.2.0.1.7.10" class="t-rs s-2-entita" data-el="rs" data-key="1034" data-type="pers">Gabriël</span>,<span id="note-t-10" class="t-anchor s-1-milestone" data-el="anchor" data-n="10"></span> <span id="let013:0.2.0.1.7.12" class="t-rs s-2-entita" data-el="rs" data-key="1340" data-type="pers">De Schampheleer</span>,<span id="note-t-11" class="t-anchor s-1-milestone" data-el="anchor" data-n="11"></span> &amp;c.</p>
+<p id="let013:0.2.0.1.8" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Have you ever seen anything by <span id="let013:0.2.0.1.8.0" class="t-rs s-2-entita" data-el="rs" data-key="1377" data-type="pers">Terlinden</span>?<span id="note-t-12" class="t-anchor s-1-milestone" data-el="anchor" data-n="12"></span> If you have, be sure to write to me about it.</p>
+<p id="let013:0.2.0.1.9" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">It was truly refreshing to see those Belgian paintings; the English ones<span id="note-t-13" class="t-anchor s-1-milestone" data-el="anchor" data-n="13"></span> are, with few exceptions, very disagreeable and feeble. Some time ago I saw one with a sort of fish or dragon no less than 6 ells long. It was ghastly. And a little man who was going to kill the above-mentioned creature. And all this represented, I believe, ‘the archangel Michael slaying Satan’.<span id="note-t-14" class="t-anchor s-1-milestone" data-el="anchor" data-n="14"></span>
                 </p>
-<p id="let013:0.2.0.1.10" class="t-ab s-1-struttura" data-el="ab">Adieu, old chap, I wish you well, and write soon.</p>
+<p id="let013:0.2.0.1.10" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Adieu, old chap, I wish you well, and write soon.</p>
 <span id="let013:0.2.0.1.11" class="t-whiteline s-base" data-el="whiteline"></span>
 <p id="let013:0.2.0.1.12" class="t-ab s-1-struttura" data-el="ab">Vincent</p>
 <span id="let013:0.2.0.1.13" class="t-whiteline s-base" data-el="whiteline"></span>
@@ -504,13 +511,13 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <p id="let013:0.2.0.2.0.0" class="t-ab s-1-struttura" data-el="ab">Theo visited his <span id="let013:0.2.0.2.0.0.0" class="t-rs s-2-entita" data-el="rs" data-key="524" data-type="pers">mother</span> for her 54th birthday on 10 September (FR b2659 and b2661).</p>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-2" class="t-note s-1-note" data-el="note" data-n="2" data-target="#note-t-2">
-<p id="let013:0.2.0.2.1.0" class="t-ab s-1-struttura" data-el="ab">The lithograph <span id="let013:0.2.0.2.1.0.0" class="t-hi s-1-inline" data-el="hi">Molen langs de Trekvaart </span>(Mill by the Trekvaart) by <span id="let013:0.2.0.2.1.0.1" class="t-rs s-2-entita" data-el="rs" data-key="1443" data-type="pers">Weissenbruch Dzn.</span> is followed in Theo’s album on pp. 2, 3 and 5 by three lithographs after J.H. Weissenbruch: <span id="let013:0.2.0.2.1.0.2" class="t-hi s-1-inline" data-el="hi">Landschap met kerk en molens</span> (Landscape with churches and mills), which was made by <span id="let013:0.2.0.2.1.0.3" class="t-rs s-2-entita" data-el="rs" data-key="1191" data-type="pers">Jacobus Jan van der Maaten</span> (<span id="let013:0.2.0.2.1.0.4" class="t-rs s-2-entita" data-el="rs" data-key="1653" data-type="ill">Ill. 1653</span>), <span id="let013:0.2.0.2.1.0.5" class="t-hi s-1-inline" data-el="hi">Het hofje aan de Nieuwe Haven te ’s-Gravenhage</span> (The courtyard near the Nieuwe Haven in The Hague), by <span id="let013:0.2.0.2.1.0.6" class="t-rs s-2-entita" data-el="rs" data-key="1606" data-type="pers">Frederik Hendrik Weissenbruch</span> (<span id="let013:0.2.0.2.1.0.7" class="t-rs s-2-entita" data-el="rs" data-key="1654" data-type="ill">Ill. 1654</span>) and <span id="let013:0.2.0.2.1.0.8" class="t-hi s-1-inline" data-el="hi">Landschap met bootje</span> (Landscape with boat). <span id="let013:0.2.0.2.1.0.9" class="t-rs s-2-entita" data-el="rs" data-key="1652" data-type="ill">Ill. 1652</span> (Amsterdam, Van Gogh Museum, t*1488). See also <span id="let013:0.2.0.2.1.0.10" class="t-ref s-2-corrispondenza" data-el="ref" data-target="let011.xml#n-16">letter 11, n. 16.</span> Van Gogh sometimes enclosed letters or prints in shipments sent from Goupil’s London office to the branch in The Hague.</p>
+<p id="let013:0.2.0.2.1.0" class="t-ab s-1-struttura" data-el="ab">The lithograph <span id="let013:0.2.0.2.1.0.0" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Molen langs de Trekvaart </span>(Mill by the Trekvaart) by <span id="let013:0.2.0.2.1.0.1" class="t-rs s-2-entita" data-el="rs" data-key="1443" data-type="pers">Weissenbruch Dzn.</span> is followed in Theo’s album on pp. 2, 3 and 5 by three lithographs after J.H. Weissenbruch: <span id="let013:0.2.0.2.1.0.2" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Landschap met kerk en molens</span> (Landscape with churches and mills), which was made by <span id="let013:0.2.0.2.1.0.3" class="t-rs s-2-entita" data-el="rs" data-key="1191" data-type="pers">Jacobus Jan van der Maaten</span> (<span id="let013:0.2.0.2.1.0.4" class="t-rs s-2-entita" data-el="rs" data-key="1653" data-type="ill">Ill. 1653</span>), <span id="let013:0.2.0.2.1.0.5" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Het hofje aan de Nieuwe Haven te ’s-Gravenhage</span> (The courtyard near the Nieuwe Haven in The Hague), by <span id="let013:0.2.0.2.1.0.6" class="t-rs s-2-entita" data-el="rs" data-key="1606" data-type="pers">Frederik Hendrik Weissenbruch</span> (<span id="let013:0.2.0.2.1.0.7" class="t-rs s-2-entita" data-el="rs" data-key="1654" data-type="ill">Ill. 1654</span>) and <span id="let013:0.2.0.2.1.0.8" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Landschap met bootje</span> (Landscape with boat). <span id="let013:0.2.0.2.1.0.9" class="t-rs s-2-entita" data-el="rs" data-key="1652" data-type="ill">Ill. 1652</span> (Amsterdam, Van Gogh Museum, t*1488). See also <span id="let013:0.2.0.2.1.0.10" class="t-ref s-2-corrispondenza" data-el="ref" data-target="let011.xml#n-16">letter 11, n. 16.</span> Van Gogh sometimes enclosed letters or prints in shipments sent from Goupil’s London office to the branch in The Hague.</p>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-3" class="t-note s-1-note" data-el="note" data-n="3" data-target="#note-t-3">
-<p id="let013:0.2.0.2.2.0" class="t-ab s-1-struttura" data-el="ab">Van Gogh moved to Hackford Road 87, Brixton, where he boarded with <span id="let013:0.2.0.2.2.0.0" class="t-rs s-2-entita" data-el="rs" data-key="497" data-type="pers">Ursula Loyer</span> and her daughter <span id="let013:0.2.0.2.2.0.1" class="t-rs s-2-entita" data-el="rs" data-key="498" data-type="pers">Eugenie</span>, who ran a school. Brixton was ‘a relatively well-to-do area on the southern outskirts of the capital’. See exhib. cat. London<span id="let013:0.2.0.2.2.0.2" class="t-hi s-1-inline" data-el="hi"> </span>1992, p. 16; and Bailey 1990, pp. 26-37. <span id="let013:0.2.0.2.2.0.3" class="t-rs s-2-entita" data-el="rs" data-key="526" data-type="pers">Mr van Gogh</span> reported to Theo: ‘Vincent is doing well in London. We are getting cheerful letters. He moved last week to save some money, as his former lodgings had become too expensive for him, and he had found a good place for 180 guilders less a year’ (FR 2651, 25 August 1873).</p>
+<p id="let013:0.2.0.2.2.0" class="t-ab s-1-struttura" data-el="ab">Van Gogh moved to Hackford Road 87, Brixton, where he boarded with <span id="let013:0.2.0.2.2.0.0" class="t-rs s-2-entita" data-el="rs" data-key="497" data-type="pers">Ursula Loyer</span> and her daughter <span id="let013:0.2.0.2.2.0.1" class="t-rs s-2-entita" data-el="rs" data-key="498" data-type="pers">Eugenie</span>, who ran a school. Brixton was ‘a relatively well-to-do area on the southern outskirts of the capital’. See exhib. cat. London<span id="let013:0.2.0.2.2.0.2" class="t-hi s-1-inline" data-el="hi" data-rend="ital"> </span>1992, p. 16; and Bailey 1990, pp. 26-37. <span id="let013:0.2.0.2.2.0.3" class="t-rs s-2-entita" data-el="rs" data-key="526" data-type="pers">Mr van Gogh</span> reported to Theo: ‘Vincent is doing well in London. We are getting cheerful letters. He moved last week to save some money, as his former lodgings had become too expensive for him, and he had found a good place for 180 guilders less a year’ (FR 2651, 25 August 1873).</p>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-4" class="t-note s-1-note" data-el="note" data-n="4" data-target="#note-t-4">
-<p id="let013:0.2.0.2.3.0" class="t-ab s-1-struttura" data-el="ab">The ‘London International Exhibition’ was held from 14 April to 31 October in two halls near the Royal Albert Hall and in the Horticultural Gardens. See <span id="let013:0.2.0.2.3.0.0" class="t-hi s-1-inline" data-el="hi">London International exhibition of 1873. Official catalogue</span>. London 1873, and John E. Findling, <span id="let013:0.2.0.2.3.0.1" class="t-hi s-1-inline" data-el="hi">Historical dictionary of world’s fairs and expositions, 1851-1988</span>. London 1990, pp. 44-47.</p>
+<p id="let013:0.2.0.2.3.0" class="t-ab s-1-struttura" data-el="ab">The ‘London International Exhibition’ was held from 14 April to 31 October in two halls near the Royal Albert Hall and in the Horticultural Gardens. See <span id="let013:0.2.0.2.3.0.0" class="t-hi s-1-inline" data-el="hi" data-rend="ital">London International exhibition of 1873. Official catalogue</span>. London 1873, and John E. Findling, <span id="let013:0.2.0.2.3.0.1" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Historical dictionary of world’s fairs and expositions, 1851-1988</span>. London 1990, pp. 44-47.</p>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-5" class="t-note s-1-note" data-el="note" data-n="5" data-target="#note-t-5">
 <p id="let013:0.2.0.2.4.0" class="t-ab s-1-struttura" data-el="ab">In the summer of 1872, Van Gogh visited the ‘Exposition générale des Beaux-Arts’ (General Exhibition of Fine Arts) at Brussels, at which the painters mentioned were all represented. <span id="let013:0.2.0.2.4.0.0" class="t-ref s-2-corrispondenza" data-el="ref" data-target="let004.xml">See letter 4</span>.</p>
@@ -518,46 +525,46 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-6" class="t-note s-1-note" data-el="note" data-n="6" data-target="#note-t-6">
 <p id="let013:0.2.0.2.5.0" class="t-ab s-1-struttura" data-el="ab">
                         <span id="let013:0.2.0.2.5.0.0" class="t-rs s-2-entita" data-el="rs" data-key="1434" data-type="pers">Albert Frans Lieven de Vriendt</span>, <span id="let013:0.2.0.2.5.0.1" class="t-rs s-2-entita" data-el="rs" data-key="6" data-type="otherart">
-                            <span id="let013:0.2.0.2.5.0.1.0" class="t-hi s-1-inline" data-el="hi">Figures</span>
+                            <span id="let013:0.2.0.2.5.0.1.0" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Figures</span>
                         </span>; <span id="let013:0.2.0.2.5.0.2" class="t-rs s-2-entita" data-el="rs" data-key="1433" data-type="pers">Julien de Vriendt</span>, <span id="let013:0.2.0.2.5.0.3" class="t-rs s-2-entita" data-el="rs" data-key="7" data-type="otherart">
-                            <span id="let013:0.2.0.2.5.0.3.0" class="t-hi s-1-inline" data-el="hi">Figures</span>
+                            <span id="let013:0.2.0.2.5.0.3.0" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Figures</span>
                         </span>, p. 66, cat. nos. 1716 and 1712.</p>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-7" class="t-note s-1-note" data-el="note" data-n="7" data-target="#note-t-7">
 <p id="let013:0.2.0.2.6.0" class="t-ab s-1-struttura" data-el="ab">
                         <span id="let013:0.2.0.2.6.0.0" class="t-rs s-2-entita" data-el="rs" data-key="950" data-type="pers">Alfred Cluysenaar</span>, <span id="let013:0.2.0.2.6.0.1" class="t-rs s-2-entita" data-el="rs" data-key="8" data-type="otherart">
-                            <span id="let013:0.2.0.2.6.0.1.0" class="t-hi s-1-inline" data-el="hi">A vocation</span>
+                            <span id="let013:0.2.0.2.6.0.1.0" class="t-hi s-1-inline" data-el="hi" data-rend="ital">A vocation</span>
                         </span> and <span id="let013:0.2.0.2.6.0.2" class="t-rs s-2-entita" data-el="rs" data-key="9" data-type="otherart">
-                            <span id="let013:0.2.0.2.6.0.2.0" class="t-hi s-1-inline" data-el="hi">La vie en rose </span>
+                            <span id="let013:0.2.0.2.6.0.2.0" class="t-hi s-1-inline" data-el="hi" data-rend="ital">La vie en rose </span>
                         </span>(A rosy view of life), pp. 64-65, cat. nos. 1640 and 1673.</p>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-8" class="t-note s-1-note" data-el="note" data-n="8" data-target="#note-t-8">
 <p id="let013:0.2.0.2.7.0" class="t-ab s-1-struttura" data-el="ab">
                         <span id="let013:0.2.0.2.7.0.0" class="t-rs s-2-entita" data-el="rs" data-key="1452" data-type="pers">Edouard Wouters</span>, <span id="let013:0.2.0.2.7.0.1" class="t-rs s-2-entita" data-el="rs" data-key="10" data-type="otherart">
-                            <span id="let013:0.2.0.2.7.0.1.0" class="t-hi s-1-inline" data-el="hi">The new romance</span>
+                            <span id="let013:0.2.0.2.7.0.1.0" class="t-hi s-1-inline" data-el="hi" data-rend="ital">The new romance</span>
                         </span>, p. 66, cat. no. 1693.</p>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-9" class="t-note s-1-note" data-el="note" data-n="9" data-target="#note-t-9">
 <p id="let013:0.2.0.2.8.0" class="t-ab s-1-struttura" data-el="ab">
                         <span id="let013:0.2.0.2.8.0.0" class="t-rs s-2-entita" data-el="rs" data-key="947" data-type="pers">Joseph Théodore Coosemans</span>, <span id="let013:0.2.0.2.8.0.1" class="t-rs s-2-entita" data-el="rs" data-key="11" data-type="otherart">
-                            <span id="let013:0.2.0.2.8.0.1.0" class="t-hi s-1-inline" data-el="hi">Interior of a wood</span>
+                            <span id="let013:0.2.0.2.8.0.1.0" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Interior of a wood</span>
                         </span> and <span id="let013:0.2.0.2.8.0.2" class="t-rs s-2-entita" data-el="rs" data-key="12" data-type="otherart">
-                            <span id="let013:0.2.0.2.8.0.2.0" class="t-hi s-1-inline" data-el="hi">The marsh</span>
+                            <span id="let013:0.2.0.2.8.0.2.0" class="t-hi s-1-inline" data-el="hi" data-rend="ital">The marsh</span>
                         </span>, pp. 66-67, cat. nos. 1720 and 1724.</p>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-10" class="t-note s-1-note" data-el="note" data-n="10" data-target="#note-t-10">
 <p id="let013:0.2.0.2.9.0" class="t-ab s-1-struttura" data-el="ab">The Dutch painter <span id="let013:0.2.0.2.9.0.0" class="t-rs s-2-entita" data-el="rs" data-key="1034" data-type="pers">Constant Gabriël</span> was often viewed as a Belgian because of his frequent stays in Belgium. He was represented at the exhibition by <span id="let013:0.2.0.2.9.0.1" class="t-rs s-2-entita" data-el="rs" data-key="13" data-type="otherart">
-                            <span id="let013:0.2.0.2.9.0.1.0" class="t-hi s-1-inline" data-el="hi">A bog – View in Holland</span>
+                            <span id="let013:0.2.0.2.9.0.1.0" class="t-hi s-1-inline" data-el="hi" data-rend="ital">A bog – View in Holland</span>
                         </span> and <span id="let013:0.2.0.2.9.0.2" class="t-rs s-2-entita" data-el="rs" data-key="14" data-type="otherart">
-                            <span id="let013:0.2.0.2.9.0.2.0" class="t-hi s-1-inline" data-el="hi">Afternoon – Landscape in Holland</span>
+                            <span id="let013:0.2.0.2.9.0.2.0" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Afternoon – Landscape in Holland</span>
                         </span>, pp. 64-65, cat. nos. 1659 and 1663.</p>
                 </div>
     <span class="t-note-mark" aria-hidden="true">°</span><div id="n-11" class="t-note s-1-note" data-el="note" data-n="11" data-target="#note-t-11">
 <p id="let013:0.2.0.2.10.0" class="t-ab s-1-struttura" data-el="ab">
                         <span id="let013:0.2.0.2.10.0.0" class="t-rs s-2-entita" data-el="rs" data-key="1340" data-type="pers">Edmond de Schampheleer</span>, <span id="let013:0.2.0.2.10.0.1" class="t-rs s-2-entita" data-el="rs" data-key="15" data-type="otherart">
-                            <span id="let013:0.2.0.2.10.0.1.0" class="t-hi s-1-inline" data-el="hi">Marsh of the old bogs of Vreeland, Holland</span>
+                            <span id="let013:0.2.0.2.10.0.1.0" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Marsh of the old bogs of Vreeland, Holland</span>
                         </span> and <span id="let013:0.2.0.2.10.0.2" class="t-rs s-2-entita" data-el="rs" data-key="16" data-type="otherart">
-                            <span id="let013:0.2.0.2.10.0.2.0" class="t-hi s-1-inline" data-el="hi">Road from Loosdrecht to Hilversum, Holland</span>
+                            <span id="let013:0.2.0.2.10.0.2.0" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Road from Loosdrecht to Hilversum, Holland</span>
                         </span>, pp. 67-68, cat. nos. 1743 and 1768.</p>
                 </div>
     <span class="t-note-mark" aria-hidden="true">°</span><div id="n-12" class="t-note s-1-note" data-el="note" data-n="12" data-target="#note-t-12">
@@ -568,13 +575,13 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-14" class="t-note s-1-note" data-el="note" data-n="14" data-target="#note-t-14">
 <p id="let013:0.2.0.2.13.0" class="t-ab s-1-struttura" data-el="ab">
-                        <span id="let013:0.2.0.2.13.0.0" class="t-rs s-2-entita" data-el="rs" data-key="1276" data-type="pers">Sir Edward James (John) Poynter</span>, <span id="let013:0.2.0.2.13.0.1" class="t-hi s-1-inline" data-el="hi">Fight between More of More Hall and the Dragon of Wantley</span> (Wortley Hall (near Sheffield), The Earl of Wharncliffe’s Billiard Room). <span id="let013:0.2.0.2.13.0.2" class="t-rs s-2-entita" data-el="rs" data-key="467" data-type="ill">Ill. 467</span>. It was displayed as a ‘companion picture to Perseus and Andromeda’ at the Royal Academy in 1873 and has nothing to do with the Archangel Michael, as Van Gogh assumes. See exhib. cat. Nottingham 1974, pp. 14-16 (with ill.) and exhib. cat. London 1992, p. 38.</p>
+                        <span id="let013:0.2.0.2.13.0.0" class="t-rs s-2-entita" data-el="rs" data-key="1276" data-type="pers">Sir Edward James (John) Poynter</span>, <span id="let013:0.2.0.2.13.0.1" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Fight between More of More Hall and the Dragon of Wantley</span> (Wortley Hall (near Sheffield), The Earl of Wharncliffe’s Billiard Room). <span id="let013:0.2.0.2.13.0.2" class="t-rs s-2-entita" data-el="rs" data-key="467" data-type="ill">Ill. 467</span>. It was displayed as a ‘companion picture to Perseus and Andromeda’ at the Royal Academy in 1873 and has nothing to do with the Archangel Michael, as Van Gogh assumes. See exhib. cat. Nottingham 1974, pp. 14-16 (with ill.) and exhib. cat. London 1992, p. 38.</p>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-15" class="t-note s-1-note" data-el="note" data-n="15" data-target="#note-t-15">
 <p id="let013:0.2.0.2.14.0" class="t-ab s-1-struttura" data-el="ab">
                         <span id="let013:0.2.0.2.14.0.0" class="t-rs s-2-entita" data-el="rs" data-key="1289" data-type="pers">Valentine Cameron Prinsep</span>, <span id="let013:0.2.0.2.14.0.1" class="t-rs s-2-entita" data-el="rs" data-key="17" data-type="otherart">
-                            <span id="let013:0.2.0.2.14.0.1.0" class="t-hi s-1-inline" data-el="hi">The Gadarene swine</span>
-                        </span> (present whereabouts unknown). The work is very sketchily rendered in a cartoon by <span id="let013:0.2.0.2.14.0.2" class="t-rs s-2-entita" data-el="rs" data-key="1137" data-type="pers">Charles Keene</span> which was published in the 21 June 1873 issue of <span id="let013:0.2.0.2.14.0.3" class="t-hi s-1-inline" data-el="hi">Punch</span>, p. 261.</p>
+                            <span id="let013:0.2.0.2.14.0.1.0" class="t-hi s-1-inline" data-el="hi" data-rend="ital">The Gadarene swine</span>
+                        </span> (present whereabouts unknown). The work is very sketchily rendered in a cartoon by <span id="let013:0.2.0.2.14.0.2" class="t-rs s-2-entita" data-el="rs" data-key="1137" data-type="pers">Charles Keene</span> which was published in the 21 June 1873 issue of <span id="let013:0.2.0.2.14.0.3" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Punch</span>, p. 261.</p>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-16" class="t-note s-1-note" data-el="note" data-n="16" data-target="#note-t-16">
 <p id="let013:0.2.0.2.15.0" class="t-ab s-1-struttura" data-el="ab">Theo had been transferred from Brussels to The Hague. <span id="let013:0.2.0.2.15.0.0" class="t-rs s-2-entita" data-el="rs" data-key="526" data-type="pers">Mr van Gogh</span> had approved of this transfer and had told Theo: ‘I’ve now written to <span id="let013:0.2.0.2.15.0.1" class="t-rs s-2-entita" data-el="rs" data-key="624" data-type="pers">Mr Schmidt</span> and requested that you begin in The Hague on 1 Nov. at the latest. And that His Honour therefore release you before that time. I sympathize with you. You’re attached to Mr S., and that is your perfect right, because he is such an excellent fellow. But in this case there are so many reasons that coincide, which one should in fact heed’ (FR b2661, 17 September 1873. Cf. also FR b2663). Theo arrived on Wednesday, 12 November in The Hague.</p>
@@ -585,9 +592,10 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
             </div>
         </div>
     </div><nav class="prevnext" aria-label="Register"><a href="doc-let012.html">‹ previous</a><a href="text.html">Register</a><a href="doc-let014.html">next ›</a></nav></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · eb43eb4 · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · fece455 · 2026-07-31</footer>
 <script>
 (function(){
+  var T={"edition":"Edition","text":"Text","indices":"Indices","data":"Data","archive":"Archive","dsa":"digital archive","texts":"Texts","reading":"Reading","diplomatic":"Diplomatic","apparatus":"Apparatus","aboutFile":"About this file","notes":"Notes","dse":"digital scholarly edition","responsibility":"Responsibility","licence":"Licence","witnesses":"Witnesses","apparatusRegisters":"Apparatus","revisions":"Revision history","generator":"Generator","people":"People","places":"Places","orgs":"Organisations","occurrenceOne":"occurrence","occurrenceMany":"occurrences","entries":"entries","skip":"Skip to content","publishedWith":"Published with","map":"Map","mapAria":"Map of the places of the edition","mapNote":"Positional sketch. Filled dots: coordinates declared in the TEI or confirmed by the editor. Hollow dots: gazetteer suggestions awaiting review. Each place links to OpenStreetMap. Coastlines: Natural Earth (public domain).","front":"Front matter","back":"Back matter","lacking":"lacking in","editedText":"edited text","genesis":"Genesis","hand":"hand","version":"version","legend":"Legend","legWord":"word","legDel":"deleted by the writing hand","legAdd":"added above the line","legUnclear":"uncertain reading","legSupplied":"supplied by the editor","legGap":"lost or illegible","legPb":"page break of the source","legMetamark":"a mark of the hand about the text (^ = insert here; hover each mark to read what it does)","legApp":"variant readings: click for the apparatus","legNote":"note mark","legHands":"Hands","legAllHands":"all","legHand":"the hand of","idxSearch":"search a name…","backToTop":"back to top","apparatusCritical":"critical: variants between witnesses","apparatusGenetic":"genetic: the strata of one manuscript in time","apparatusBoth":"critical and genetic: witnesses to collate, strata within them","legMajor":"main hand","lexicon":"Lexicon","lexTokens":"running words","lexForms":"distinct forms","lexTTR":"type-token ratio","lexSearch":"search a word…","lexFrequencies":"Frequencies","lexConcordance":"Concordance","lexCloud":"Cloud","lexPick":"Pick a word to see it in context.","lexLanguage":"Language","lexAllLangs":"all","lexStoplist":"Stopwords","lexStopNone":"none","lexHideStop":"hide stopwords","lexWord":"word","lexLang":"lang","descrFrequencies":"Every attested form with its count, its share per thousand and whether the stopword list you chose covers it.","descrConcordance":"Every occurrence of every form, with the words around it and the anchor back into the text.","descrLemmaConcordance":"The same evidence grouped under the dictionary form, where the edition has lemmas.","lexAbs":"count","lexRel":"per 1000","lexStats":"Lexical statistics","lexStopCol":"stop","lexStopNote":"Frequencies and cloud drop the stopwords you choose; the concordance keeps every word.","genesisNote":"The campaigns of correction the edition declares, in its own order, with the writing operations attributed to each. Every operation links to the place where it happened.","agreement":"Agreement between witnesses","agreementNote":"How often two witnesses carry the same reading. Evidence for a stemma, which remains the editor’s argument.","openPage":"open the page","sectionsN":"sections","sectionOne":"Section","contents":"Contents","bookLabel":"Book","register":"Register","documentsN":"documents","dateCol":"Date","fromCol":"From","toCol":"To","authorCol":"Author","placeCol":"Place","titleCol":"Title","idnoCol":"Ref.","filter":"Filter…","prev":"‹ previous","next":"next ›","fullHeader":"The full header (teiHeader)","fullHeaderNote":"Everything the file declares, rendered as it is.","reuse":"Reuse under the edition licence (see the Edition page).","appEntry":"apparatus entry","descrModel":"the edition model: documents, registries, apparatus (JSON)","descrEntities":"people, places and organisations with occurrence counts and coordinates","descrApparatus":"every apparatus reading with its witnesses, one row per reading","descrSource":"the unmodified TEI source file","lemmas":"Lemmas","lemmaCoverage":"Coverage","tokensWord":"tokens","languagesLabel":"Languages","yearsLabel":"Years","contributorsLabel":"Contributors","interventionsWord":"interventions","licenceVariesNote":"each document declares its own licence, shown on its page","lemmaFromMarkup":"from the markup (w/@lemma)","lemmaFromFile":"from lemmas.json","lemmaPending":"types awaiting the editor’s review","formsLabel":"forms","moreOccurrences":"more occurrences not shown here","descrLemmas":"every lemma with its forms and counts, one row per form","descrTokens":"the token stream of the reading text: position, language, form, lemma, anchor"};
   var body=document.body; body.classList.add('mode-read');
   if(document.querySelector('.app-band'))body.classList.add('has-band');
   if(window.TORCHIO_ALIGN)body.classList.add('has-align');
@@ -729,7 +737,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
         +'<span class="'+(r.dataset.el==='lem'?'is-lem':'')+'">'+esc(rr.textContent.trim()||'(om.)')+'</span></div>';
     });
     if(!rows)return false;
-    openPop('<span class="k">'+'Apparatus'.toLowerCase()+'</span>'+rows,el);
+    openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'+rows,el);
     return true;
   }
   if(document.readyState==='complete'){wireWords();wirePointing();}
@@ -783,7 +791,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
   }
   function showZone(n){clearZone();zoneOf(n).forEach(function(e){e.classList.add('note-hi');hiZone.push(e);});}
   document.querySelectorAll('.t-app [data-el="lem"]').forEach(function(el){
-    makeTrigger(el,'apparatus entry: '+el.textContent.trim());
+    makeTrigger(el,''+esc(T.appEntry)+': '+el.textContent.trim());
   });
   document.querySelectorAll('[data-ref],[data-key]').forEach(function(el){
     if(el.classList.contains('ent-ext'))return; /* external links stay links */
@@ -834,7 +842,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
               }
               openPop('<span class="k">'+esc(sig)+'</span>'
                 +'<div class="notebody">'+(txt?esc(txt):'…')+'</div>'
-                +'<div class="meta"><a href="'+tgt+'">open the page</a></div>',bw);
+                +'<div class="meta"><a href="'+tgt+'">'+esc(T.openPage)+'</a></div>',bw);
             })['catch'](function(){location.href=tgt;});
           }catch(e){location.href=tgt;}
         });
@@ -860,12 +868,12 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       app.querySelectorAll('.t-note').forEach(function(nn){
         extra+='<div class="meta">'+esc(nn.textContent.replace(/s+/g,' ').trim())+'</div>';
       });
-      openPop('<span class="k">apparatus'+(app.dataset.type?' · '+esc(app.dataset.type):'')+'</span>'+rows+extra,app);
+      openPop('<span class="k">'+esc(T.apparatus.toLowerCase())+''+(app.dataset.type?' · '+esc(app.dataset.type):'')+'</span>'+rows+extra,app);
       ev.stopPropagation();return;
     }
     var ch=ev.target.closest&&ev.target.closest('.t-choice');
     if(ch&&!ch.closest('.t-app')){
-      var kinds={abbr:'Diplomatic',orig:'Diplomatic',sic:'Diplomatic',expan:'Reading',reg:'Reading',corr:'Reading'};
+      var kinds={abbr:esc(T.diplomatic),orig:esc(T.diplomatic),sic:esc(T.diplomatic),expan:esc(T.reading),reg:esc(T.reading),corr:esc(T.reading)};
       var rows='';
       [].slice.call(ch.children).forEach(function(c){
         var k=c.dataset&&c.dataset.el; if(!kinds[k])return;
@@ -886,7 +894,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       var meta=[];
       if(key&&ent.textContent.trim()!==key)meta.push(esc(ent.textContent.trim()));
       if(ref)meta.push(esc(ref));
-      meta.push(all.length+' '+(all.length===1?'occurrence':'occurrences'));
+      meta.push(all.length+' '+(all.length===1?esc(T.occurrenceOne):esc(T.occurrenceMany)));
       openPop('<span class="k">'+esc(ent.dataset.el)+'</span>'
         +'<div>'+esc(head)+'</div>'
         +'<div class="meta">'+meta.join(' · ')+'</div>',ent);
@@ -901,7 +909,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       openPop('<span class="k">'+esc(op.dataset.el)+'</span>'
         +'<div class="notebody">'+esc(op.textContent.replace(/s+/g,' ').trim().slice(0,140))+'</div>'
         +'<div class="meta">'+(lab?esc(lab):'')+(hd?' · '+esc(hd):'')
-        +' <a href="genesis.html">Genesis</a></div>',op);
+        +' <a href="genesis.html">'+esc(T.genesis)+'</a></div>',op);
       ev.stopPropagation();return;
     }
     var anc=ev.target.closest&&ev.target.closest('[data-appref]');
@@ -909,7 +917,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     var wv=ev.target.closest&&ev.target.closest('.wv');
     if(wv&&wv._be&&!body.classList.contains('app-off')){
       var wband=wv._be.closest('.app-band');
-      openPop('<span class="k">'+'Apparatus'.toLowerCase()+'</span>'
+      openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'
         +'<div class="popband" data-ent="'+((wband&&wband.getAttribute('data-ent'))||'')+'">'+wv._be.outerHTML+'</div>',wv);
       ev.stopPropagation();return;
     }
@@ -917,7 +925,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     if(npFirst){
       var nnF=document.querySelector('.t-note[data-npi="'+npFirst.getAttribute('data-notepop')+'"]');
       if(nnF&&!body.classList.contains('notes-off')){
-        openPop('<span class="k">'+'Notes'.toLowerCase()+'</span><div class="notebody">'+nnF.innerHTML+'</div>',npFirst);
+        openPop('<span class="k">'+esc(T.notes).toLowerCase()+'</span><div class="notebody">'+nnF.innerHTML+'</div>',npFirst);
         showZone(nnF);
         ev.stopPropagation();return;
       }
@@ -940,9 +948,9 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
           var el=doc.getElementById(id);
           var sec=el&&el.closest?el.closest('.vmap')||el:el;
           if(!sec)return;
-          openPop('<span class="k">'+'Apparatus'.toLowerCase()+'</span>'
+          openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'
             +'<div class="popband" data-ent="'+esc(key)+'">'+sec.innerHTML+'</div>'
-            +'<div class="meta"><a href="'+tgt+'">open the page</a></div>',lw);
+            +'<div class="meta"><a href="'+tgt+'">'+esc(T.openPage)+'</a></div>',lw);
         })['catch'](function(){});
       });
       ev.stopPropagation();return;
@@ -951,7 +959,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     if(lv&&lv.nextElementSibling&&lv.nextElementSibling.classList
        &&lv.nextElementSibling.classList.contains('app-band')){
       var bd=lv.nextElementSibling;
-      openPop('<span class="k">'+'Apparatus'.toLowerCase()+'</span>'
+      openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'
         +'<div class="popband" data-ent="'+(bd.getAttribute('data-ent')||'')+'">'+bd.innerHTML+'</div>',lv);
       ev.stopPropagation();return;
     }
@@ -959,7 +967,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     if(np&&!body.classList.contains('notes-off')){
       var nn=document.querySelector('.t-note[data-npi="'+np.getAttribute('data-notepop')+'"]');
       if(nn){
-        openPop('<span class="k">'+'Notes'.toLowerCase()+'</span><div class="notebody">'+nn.innerHTML+'</div>',np);
+        openPop('<span class="k">'+esc(T.notes).toLowerCase()+'</span><div class="notebody">'+nn.innerHTML+'</div>',np);
         showZone(nn);
         ev.stopPropagation();return;
       }

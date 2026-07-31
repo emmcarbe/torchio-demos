@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lat">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,7 +77,14 @@ body.notes-off .t-note-mark{opacity:.25}
   .t-note.placed{font-size:.78em;line-height:1.4}
 }
 
-.t-app:has([data-el="lem"]) .t-rdg{display:none}
+.t-app.app-has-lem .t-rdg{display:none}
+/* an app without a lem privileges nothing: the first reading stands in the
+   text (the others are in the apparatus), never all of them concatenated */
+.t-app.app-no-lem>[data-el="rdg"]~[data-el="rdg"],
+.t-app.app-no-lem>[data-el="rdgGrp"]~[data-el="rdgGrp"]{display:none}
+/* an app that points to the text (double-end-point, location-referenced)
+   carries no text of its own: the passage is already in the base text */
+.t-app.app-pointing{display:none}
 .t-lem{border-bottom:1px dotted var(--accent-soft)}
 .t-app[data-type="lac"] [data-el="lem"]{font-family:var(--mono);font-size:.62em;
   font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);
@@ -413,7 +420,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
            <p id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.2" class="t-p s-1-struttura" data-el="p"><span id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.2.0" class="t-pb" role="separator" title="page break">[347]</span>Ad has siquidem terras nec aliquis Apostolus, nec Apostolorum discipulus pervenit, et ideo prefati nestorini per se et per alios pecunia corruptos, persecuciones michi gravissimas intulerunt, asserentes quod non essem missus a domino <span id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.2.1" class="t-persName s-2-entita" data-el="persName" data-key="Papa">Papa</span> sed essem explorator, magus et dementator hominum. Et facto aliquo intervallo temporis, produxerunt alios falsos testes dicentes <span id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.2.2" class="t-pb" role="separator" title="page break">[171ra]</span>quod alius nuntius fuerat missus, deferens Imperatori maximum thesaurum et quod ego illum occiderim in <a id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.2.3" class="t-placeName s-2-entita ent-ext" href="https://pleiades.stoa.org/places/50004" target="_blank" rel="noopener" data-el="placeName" data-ref="https://pleiades.stoa.org/places/50004" data-key="India">Yndia</a> et abstulerim que portabat. Et duravit hec machynatio circiter quinque annis, ita quod sepe ad judicium fui tractus cum ignominia mortis. Tandem per quorumdam confessionem, Deo disponente, <span id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.2.4" class="t-persName s-2-entita" data-el="persName" data-key="Yesün Temür Khan">Imperator</span> cognovit meam innocentiam et malitiam emulorum, et ipsos cum uxoribus et liberis exilio relegavit.</p>
            <p id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.3" class="t-p s-1-struttura" data-el="p">2. Ego vero solus in hac peregrinatione fui sine confessione annis undecim, donec venit ad me frater <span id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.3.0" class="t-persName s-2-entita" data-el="persName" data-key="Arnoldus de Colonia O.F.M.">Arnoldus Alamannus</span> de provincia <a id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.3.1" class="t-placeName s-2-entita ent-ext" href="https://pleiades.stoa.org/places/108751" target="_blank" rel="noopener" data-el="placeName" data-ref="https://pleiades.stoa.org/places/108751" data-key="Colonia">Colonie</a>, nunc est annus secundus. Unam ecclesiam edificavi in civitate <a id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.3.2" class="t-placeName s-2-entita ent-ext" href="https://www.geonames.org/1816670/" target="_blank" rel="noopener" data-el="placeName" data-ref="https://www.geonames.org/1816670/" data-key="Khanbaliq">Cambaliech</a>, ubi est precipua residentia Regis, quam ante sex annos complevi, ubi etiam feci campanile et ibi tres campanas posui. Battizavi etiam ibidem, ut existimo, usque hodie, circa sex millia personarum. Et nisi fuissent supradicte infamationes, battizassem ultra XXX milia, et sum frequenter in battizando.</p>
         <p id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.4" class="t-p s-1-struttura" data-el="p">3. Item emi successive XL pueros, filios paganorum etatis infra VII et XI annorum, qui nullam adhuc cognoscebant legem, et battizavi eos, et informavi eos licteris latinis et ritu nostro, et scripsi pro eis psalteria cum ymnariis XXX et duo breviaria, ex quibus XI pueri iam sciunt officium nostrum.
-           <span id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.4.0" class="t-pb" role="separator" title="page break">[348]</span>Et tenent chorum et ebdomadas sicut in conventu, sive sim presens sive non. Et plures ex eis scribunt psalteria et alia opportuna. Et dominus <span id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.4.1" class="t-persName s-2-entita" data-el="persName" data-key="Yesün Temür Khan">Imperator</span> delectatur multum in cantu eorum. Campanas ad omnes horas pulso et cum conventu <span id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.4.2" class="t-hi s-1-inline" data-el="hi">infantium et lactentium</span> divinum officium facio. Tamen secundum usum cantamus, quia notatum officium non habemus.</p>
+           <span id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.4.0" class="t-pb" role="separator" title="page break">[348]</span>Et tenent chorum et ebdomadas sicut in conventu, sive sim presens sive non. Et plures ex eis scribunt psalteria et alia opportuna. Et dominus <span id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.4.1" class="t-persName s-2-entita" data-el="persName" data-key="Yesün Temür Khan">Imperator</span> delectatur multum in cantu eorum. Campanas ad omnes horas pulso et cum conventu <span id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.4.2" class="t-hi s-1-inline" data-el="hi" data-rend="italic">infantium et lactentium</span> divinum officium facio. Tamen secundum usum cantamus, quia notatum officium non habemus.</p>
            <p id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.5" class="t-p s-1-struttura" data-el="p">4. De bono Rege Georgio. Quidam Rex illius regionis de septa nestorianorum christianorum, qui erat de genere illius magni Regis qui dictus fuit Presbiter <span id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.5.0" class="t-persName s-2-entita" data-el="persName" data-key="Iohannes">Iohannes</span> de <a id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.5.1" class="t-placeName s-2-entita ent-ext" href="https://pleiades.stoa.org/places/50004" target="_blank" rel="noopener" data-el="placeName" data-ref="https://pleiades.stoa.org/places/50004" data-key="India">Yndia</a>, primo anno quo huc ego veni michi adhesid et ad veritatem vere fidei catholice per me conversus, minores ordines suscepit, michique celebranti sacris vestibus indutus ministravit, ita quod alii nestoriani ipsum de apostasia accusaverunt. Tamen ipse magnam populi sui partem ad veram fidem catholicam adduxit, et ecclesiam pulchram secundum regiam magnificentiam construxit ad honorem Dei nostri, Sancte Trinitatis et <span id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.5.2" class="t-persName s-2-entita" data-el="persName" data-key="Papa">domini Pape</span> et nomine meo vocans eam ecclesiam romanam. Qui Rex Georgius ante VI annos migravit ad Dominum verus christianus, relicto filio herede in cunabulis, qui nunc est annorum novem. Fratres tamen ipsius Regis Georgii cum essent perfidi in erroribus Nestorii, omnes quos ille converterat, <span id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.5.3" class="t-pb" role="separator" title="page break">[349]</span>post Regis obitum, subverterunt, ad scisma pristinum reducendo. Et quia ego <span id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.5.4" class="t-pb" role="separator" title="page break">[171rb]</span>fui solus nec potui recedere ab <a id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.5.5" class="t-persName s-2-entita ent-ext" href="https://viaf.org/50027343" target="_blank" rel="noopener" data-el="persName" data-ref="https://viaf.org/50027343" data-key="Magnus Kaam">Imperatore Chaam</a>, ire non potui ad illam ecclesiam que distat ad XX dietas. Tamen si venerint aliqui boni coadiutores et cooperatores, spero in Deo quod totum poterit reformari ; nam adhuc habeo privilegium predicti Regis Georgii defuncti.</p>
            <p id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.6" class="t-p s-1-struttura" data-el="p">5. Iterum dico quod si non fuissent infamationes supradicte, magnus fructus fuisset secutus. Si habuissem etiam duos vel tres socios coadiutores meos, forte  <a id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.6.0" class="t-persName s-2-entita ent-ext" href="https://viaf.org/50027343" target="_blank" rel="noopener" data-el="persName" data-ref="https://viaf.org/50027343" data-key="Magnus Kaam">Imperator Chaam</a> fuisset battizatus. Rogo ut tales fratres veniant, si venire aliqui volunt, quod studeant se in exemplum dare et non suas fimbrias magnificare.</p>
            <p id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.7" class="t-p s-1-struttura" data-el="p">6. De via notifico quod per terram <span id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.7.0" class="t-placeName s-2-entita" data-el="placeName" data-key="Cathay">Cothay</span> Imperatoris aquilonarium Tartarorum est via brevior et securior, ita quod cum nunciis infra V vel VI menses poterunt pervenire; via autem alia est longissima et periculosissima, habens duas navigationes quarum prima est secundum distantiam inter <span id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.7.1" class="t-placeName s-2-entita" data-el="placeName" data-key="Achon">Achon</span> et provinciam Provincie, alia vero est secundum distantiam inter <span id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.7.2" class="t-placeName s-2-entita" data-el="placeName" data-key="Achon">Achon</span> et <a id="ELA_2_2_iohannesdemontecorvino_epistula2:0.1.0.0.7.3" class="t-placeName s-2-entita ent-ext" href="https://www.geonames.org/6269131" target="_blank" rel="noopener" data-el="placeName" data-ref="https://www.geonames.org/6269131" data-key="Anglia">Angliam</a>, et posset contingere quod in biennio VIX perficerent viam illam. Quia prima via secura non fuit a multo tempore propter guerras, ideo sunt XII anni quod de Curia romana et de nostro Ordine et statu occidentis non suscepi nova.</p>
@@ -424,9 +431,10 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
         </div>
       </div>
   </div><nav class="prevnext" aria-label="Register"><a href="doc-ela-2-2-ignatius-de-loyola-p-francisco-xaverio-10-oct-1549.html">‹ previous</a><a href="text.html">Register</a><a href="doc-ela-2-2-iohannesdemontecorvino-epistula3.html">next ›</a></nav></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · eb43eb4 · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · fece455 · 2026-07-31</footer>
 <script>
 (function(){
+  var T={"edition":"Edition","text":"Text","indices":"Indices","data":"Data","archive":"Archive","dsa":"digital archive","texts":"Texts","reading":"Reading","diplomatic":"Diplomatic","apparatus":"Apparatus","aboutFile":"About this file","notes":"Notes","dse":"digital scholarly edition","responsibility":"Responsibility","licence":"Licence","witnesses":"Witnesses","apparatusRegisters":"Apparatus","revisions":"Revision history","generator":"Generator","people":"People","places":"Places","orgs":"Organisations","occurrenceOne":"occurrence","occurrenceMany":"occurrences","entries":"entries","skip":"Skip to content","publishedWith":"Published with","map":"Map","mapAria":"Map of the places of the edition","mapNote":"Positional sketch. Filled dots: coordinates declared in the TEI or confirmed by the editor. Hollow dots: gazetteer suggestions awaiting review. Each place links to OpenStreetMap. Coastlines: Natural Earth (public domain).","front":"Front matter","back":"Back matter","lacking":"lacking in","editedText":"edited text","genesis":"Genesis","hand":"hand","version":"version","legend":"Legend","legWord":"word","legDel":"deleted by the writing hand","legAdd":"added above the line","legUnclear":"uncertain reading","legSupplied":"supplied by the editor","legGap":"lost or illegible","legPb":"page break of the source","legMetamark":"a mark of the hand about the text (^ = insert here; hover each mark to read what it does)","legApp":"variant readings: click for the apparatus","legNote":"note mark","legHands":"Hands","legAllHands":"all","legHand":"the hand of","idxSearch":"search a name…","backToTop":"back to top","apparatusCritical":"critical: variants between witnesses","apparatusGenetic":"genetic: the strata of one manuscript in time","apparatusBoth":"critical and genetic: witnesses to collate, strata within them","legMajor":"main hand","lexicon":"Lexicon","lexTokens":"running words","lexForms":"distinct forms","lexTTR":"type-token ratio","lexSearch":"search a word…","lexFrequencies":"Frequencies","lexConcordance":"Concordance","lexCloud":"Cloud","lexPick":"Pick a word to see it in context.","lexLanguage":"Language","lexAllLangs":"all","lexStoplist":"Stopwords","lexStopNone":"none","lexHideStop":"hide stopwords","lexWord":"word","lexLang":"lang","descrFrequencies":"Every attested form with its count, its share per thousand and whether the stopword list you chose covers it.","descrConcordance":"Every occurrence of every form, with the words around it and the anchor back into the text.","descrLemmaConcordance":"The same evidence grouped under the dictionary form, where the edition has lemmas.","lexAbs":"count","lexRel":"per 1000","lexStats":"Lexical statistics","lexStopCol":"stop","lexStopNote":"Frequencies and cloud drop the stopwords you choose; the concordance keeps every word.","genesisNote":"The campaigns of correction the edition declares, in its own order, with the writing operations attributed to each. Every operation links to the place where it happened.","agreement":"Agreement between witnesses","agreementNote":"How often two witnesses carry the same reading. Evidence for a stemma, which remains the editor’s argument.","openPage":"open the page","sectionsN":"sections","sectionOne":"Section","contents":"Contents","bookLabel":"Book","register":"Register","documentsN":"documents","dateCol":"Date","fromCol":"From","toCol":"To","authorCol":"Author","placeCol":"Place","titleCol":"Title","idnoCol":"Ref.","filter":"Filter…","prev":"‹ previous","next":"next ›","fullHeader":"The full header (teiHeader)","fullHeaderNote":"Everything the file declares, rendered as it is.","reuse":"Reuse under the edition licence (see the Edition page).","appEntry":"apparatus entry","descrModel":"the edition model: documents, registries, apparatus (JSON)","descrEntities":"people, places and organisations with occurrence counts and coordinates","descrApparatus":"every apparatus reading with its witnesses, one row per reading","descrSource":"the unmodified TEI source file","lemmas":"Lemmas","lemmaCoverage":"Coverage","tokensWord":"tokens","languagesLabel":"Languages","yearsLabel":"Years","contributorsLabel":"Contributors","interventionsWord":"interventions","licenceVariesNote":"each document declares its own licence, shown on its page","lemmaFromMarkup":"from the markup (w/@lemma)","lemmaFromFile":"from lemmas.json","lemmaPending":"types awaiting the editor’s review","formsLabel":"forms","moreOccurrences":"more occurrences not shown here","descrLemmas":"every lemma with its forms and counts, one row per form","descrTokens":"the token stream of the reading text: position, language, form, lemma, anchor"};
   var body=document.body; body.classList.add('mode-read');
   if(document.querySelector('.app-band'))body.classList.add('has-band');
   if(window.TORCHIO_ALIGN)body.classList.add('has-align');
@@ -568,7 +576,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
         +'<span class="'+(r.dataset.el==='lem'?'is-lem':'')+'">'+esc(rr.textContent.trim()||'(om.)')+'</span></div>';
     });
     if(!rows)return false;
-    openPop('<span class="k">'+'Apparatus'.toLowerCase()+'</span>'+rows,el);
+    openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'+rows,el);
     return true;
   }
   if(document.readyState==='complete'){wireWords();wirePointing();}
@@ -622,7 +630,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
   }
   function showZone(n){clearZone();zoneOf(n).forEach(function(e){e.classList.add('note-hi');hiZone.push(e);});}
   document.querySelectorAll('.t-app [data-el="lem"]').forEach(function(el){
-    makeTrigger(el,'apparatus entry: '+el.textContent.trim());
+    makeTrigger(el,''+esc(T.appEntry)+': '+el.textContent.trim());
   });
   document.querySelectorAll('[data-ref],[data-key]').forEach(function(el){
     if(el.classList.contains('ent-ext'))return; /* external links stay links */
@@ -673,7 +681,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
               }
               openPop('<span class="k">'+esc(sig)+'</span>'
                 +'<div class="notebody">'+(txt?esc(txt):'…')+'</div>'
-                +'<div class="meta"><a href="'+tgt+'">open the page</a></div>',bw);
+                +'<div class="meta"><a href="'+tgt+'">'+esc(T.openPage)+'</a></div>',bw);
             })['catch'](function(){location.href=tgt;});
           }catch(e){location.href=tgt;}
         });
@@ -699,12 +707,12 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       app.querySelectorAll('.t-note').forEach(function(nn){
         extra+='<div class="meta">'+esc(nn.textContent.replace(/s+/g,' ').trim())+'</div>';
       });
-      openPop('<span class="k">apparatus'+(app.dataset.type?' · '+esc(app.dataset.type):'')+'</span>'+rows+extra,app);
+      openPop('<span class="k">'+esc(T.apparatus.toLowerCase())+''+(app.dataset.type?' · '+esc(app.dataset.type):'')+'</span>'+rows+extra,app);
       ev.stopPropagation();return;
     }
     var ch=ev.target.closest&&ev.target.closest('.t-choice');
     if(ch&&!ch.closest('.t-app')){
-      var kinds={abbr:'Diplomatic',orig:'Diplomatic',sic:'Diplomatic',expan:'Reading',reg:'Reading',corr:'Reading'};
+      var kinds={abbr:esc(T.diplomatic),orig:esc(T.diplomatic),sic:esc(T.diplomatic),expan:esc(T.reading),reg:esc(T.reading),corr:esc(T.reading)};
       var rows='';
       [].slice.call(ch.children).forEach(function(c){
         var k=c.dataset&&c.dataset.el; if(!kinds[k])return;
@@ -725,7 +733,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       var meta=[];
       if(key&&ent.textContent.trim()!==key)meta.push(esc(ent.textContent.trim()));
       if(ref)meta.push(esc(ref));
-      meta.push(all.length+' '+(all.length===1?'occurrence':'occurrences'));
+      meta.push(all.length+' '+(all.length===1?esc(T.occurrenceOne):esc(T.occurrenceMany)));
       openPop('<span class="k">'+esc(ent.dataset.el)+'</span>'
         +'<div>'+esc(head)+'</div>'
         +'<div class="meta">'+meta.join(' · ')+'</div>',ent);
@@ -740,7 +748,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       openPop('<span class="k">'+esc(op.dataset.el)+'</span>'
         +'<div class="notebody">'+esc(op.textContent.replace(/s+/g,' ').trim().slice(0,140))+'</div>'
         +'<div class="meta">'+(lab?esc(lab):'')+(hd?' · '+esc(hd):'')
-        +' <a href="genesis.html">Genesis</a></div>',op);
+        +' <a href="genesis.html">'+esc(T.genesis)+'</a></div>',op);
       ev.stopPropagation();return;
     }
     var anc=ev.target.closest&&ev.target.closest('[data-appref]');
@@ -748,7 +756,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     var wv=ev.target.closest&&ev.target.closest('.wv');
     if(wv&&wv._be&&!body.classList.contains('app-off')){
       var wband=wv._be.closest('.app-band');
-      openPop('<span class="k">'+'Apparatus'.toLowerCase()+'</span>'
+      openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'
         +'<div class="popband" data-ent="'+((wband&&wband.getAttribute('data-ent'))||'')+'">'+wv._be.outerHTML+'</div>',wv);
       ev.stopPropagation();return;
     }
@@ -756,7 +764,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     if(npFirst){
       var nnF=document.querySelector('.t-note[data-npi="'+npFirst.getAttribute('data-notepop')+'"]');
       if(nnF&&!body.classList.contains('notes-off')){
-        openPop('<span class="k">'+'Notes'.toLowerCase()+'</span><div class="notebody">'+nnF.innerHTML+'</div>',npFirst);
+        openPop('<span class="k">'+esc(T.notes).toLowerCase()+'</span><div class="notebody">'+nnF.innerHTML+'</div>',npFirst);
         showZone(nnF);
         ev.stopPropagation();return;
       }
@@ -779,9 +787,9 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
           var el=doc.getElementById(id);
           var sec=el&&el.closest?el.closest('.vmap')||el:el;
           if(!sec)return;
-          openPop('<span class="k">'+'Apparatus'.toLowerCase()+'</span>'
+          openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'
             +'<div class="popband" data-ent="'+esc(key)+'">'+sec.innerHTML+'</div>'
-            +'<div class="meta"><a href="'+tgt+'">open the page</a></div>',lw);
+            +'<div class="meta"><a href="'+tgt+'">'+esc(T.openPage)+'</a></div>',lw);
         })['catch'](function(){});
       });
       ev.stopPropagation();return;
@@ -790,7 +798,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     if(lv&&lv.nextElementSibling&&lv.nextElementSibling.classList
        &&lv.nextElementSibling.classList.contains('app-band')){
       var bd=lv.nextElementSibling;
-      openPop('<span class="k">'+'Apparatus'.toLowerCase()+'</span>'
+      openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'
         +'<div class="popband" data-ent="'+(bd.getAttribute('data-ent')||'')+'">'+bd.innerHTML+'</div>',lv);
       ev.stopPropagation();return;
     }
@@ -798,7 +806,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     if(np&&!body.classList.contains('notes-off')){
       var nn=document.querySelector('.t-note[data-npi="'+np.getAttribute('data-notepop')+'"]');
       if(nn){
-        openPop('<span class="k">'+'Notes'.toLowerCase()+'</span><div class="notebody">'+nn.innerHTML+'</div>',np);
+        openPop('<span class="k">'+esc(T.notes).toLowerCase()+'</span><div class="notebody">'+nn.innerHTML+'</div>',np);
         showZone(nn);
         ev.stopPropagation();return;
       }

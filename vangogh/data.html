@@ -77,7 +77,14 @@ body.notes-off .t-note-mark{opacity:.25}
   .t-note.placed{font-size:.78em;line-height:1.4}
 }
 
-.t-app:has([data-el="lem"]) .t-rdg{display:none}
+.t-app.app-has-lem .t-rdg{display:none}
+/* an app without a lem privileges nothing: the first reading stands in the
+   text (the others are in the apparatus), never all of them concatenated */
+.t-app.app-no-lem>[data-el="rdg"]~[data-el="rdg"],
+.t-app.app-no-lem>[data-el="rdgGrp"]~[data-el="rdgGrp"]{display:none}
+/* an app that points to the text (double-end-point, location-referenced)
+   carries no text of its own: the passage is already in the base text */
+.t-app.app-pointing{display:none}
 .t-lem{border-bottom:1px dotted var(--accent-soft)}
 .t-app[data-type="lac"] [data-el="lem"]{font-family:var(--mono);font-size:.62em;
   font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);
@@ -352,8 +359,8 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <div class="tt"><h1>Vincent van Gogh, the letters</h1><p class="sub">data</p></div>
 <nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Archive</a><a href="text.html">Texts</a><a href="data.html" class="on">Data</a></nav>
 </header>
-<main id="main" class="torchio"><table class="idx-table"><tr><td class="sigla"><a href="data/model.json">model.json</a></td><td>the edition model: documents, registries, apparatus (JSON)</td><td class="occ">6.4 MB</td></tr><tr><td class="sigla"><a href="data/tokens.csv">tokens.csv</a></td><td>the token stream of the reading text: position, language, form, lemma, anchor</td><td class="occ">888.1 KB</td></tr></table><p class="occ">Reuse under the edition licence (see the Edition page).</p></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · eb43eb4 · 2026-07-31</footer>
+<main id="main" class="torchio"><table class="idx-table"><tr><td class="sigla"><a href="data/model.json">model.json</a></td><td>the edition model: documents, registries, apparatus (JSON)</td><td class="occ">6.4 MB</td></tr><tr><td class="sigla"><a href="data/frequencies.csv">frequencies.csv</a></td><td>Every attested form with its count, its share per thousand and whether the stopword list you chose covers it.</td><td class="occ">82.3 KB</td></tr><tr><td class="sigla"><a href="data/concordance.csv">concordance.csv</a></td><td>Every occurrence of every form, with the words around it and the anchor back into the text.</td><td class="occ">1.7 MB</td></tr><tr><td class="sigla"><a href="data/tokens.csv">tokens.csv</a></td><td>the token stream of the reading text: position, language, form, lemma, anchor</td><td class="occ">888.1 KB</td></tr></table><p class="occ">Reuse under the edition licence (see the Edition page).</p></main>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · fece455 · 2026-07-31</footer>
 
 </body>
 </html>

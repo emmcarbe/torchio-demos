@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lat">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,7 +77,14 @@ body.notes-off .t-note-mark{opacity:.25}
   .t-note.placed{font-size:.78em;line-height:1.4}
 }
 
-.t-app:has([data-el="lem"]) .t-rdg{display:none}
+.t-app.app-has-lem .t-rdg{display:none}
+/* an app without a lem privileges nothing: the first reading stands in the
+   text (the others are in the apparatus), never all of them concatenated */
+.t-app.app-no-lem>[data-el="rdg"]~[data-el="rdg"],
+.t-app.app-no-lem>[data-el="rdgGrp"]~[data-el="rdgGrp"]{display:none}
+/* an app that points to the text (double-end-point, location-referenced)
+   carries no text of its own: the passage is already in the base text */
+.t-app.app-pointing{display:none}
 .t-lem{border-bottom:1px dotted var(--accent-soft)}
 .t-app[data-type="lac"] [data-el="lem"]{font-family:var(--mono);font-size:.62em;
   font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);
@@ -353,7 +360,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html" class="on">Archive</a><a href="text.html">Texts</a><a href="indices.html">Indices</a><a href="lemmas.html">Lemmas</a><a href="map.html">Map</a><a href="data.html">Data</a></nav>
 </header>
 <main id="main" class="torchio about"><dl><dt>Register</dt><dd><a href="text.html">63 documents</a></dd><dt>Years</dt><dd>301-1601</dd><dt>Languages</dt><dd>lat · es · ita · trans-ch · pt</dd><dt>tokens</dt><dd>122102</dd><dt>Contributors</dt><dd>E. Carbé <span class="occ">116 interventions</span> · C. Marzucchi <span class="occ">4 interventions</span> · S. Bettella <span class="occ">3 interventions</span> · E. Bartoli <span class="occ">1 interventions</span> · I. Volpi <span class="occ">1 interventions</span></dd><dt>Licence</dt><dd>each document declares its own licence, shown on its page</dd><dt>Generator</dt><dd class="occ">Torchio v0 · TEI P5 Version 4.12</dd></dl></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · eb43eb4 · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · fece455 · 2026-07-31</footer>
 
 </body>
 </html>

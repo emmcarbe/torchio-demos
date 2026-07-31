@@ -77,7 +77,14 @@ body.notes-off .t-note-mark{opacity:.25}
   .t-note.placed{font-size:.78em;line-height:1.4}
 }
 
-.t-app:has([data-el="lem"]) .t-rdg{display:none}
+.t-app.app-has-lem .t-rdg{display:none}
+/* an app without a lem privileges nothing: the first reading stands in the
+   text (the others are in the apparatus), never all of them concatenated */
+.t-app.app-no-lem>[data-el="rdg"]~[data-el="rdg"],
+.t-app.app-no-lem>[data-el="rdgGrp"]~[data-el="rdgGrp"]{display:none}
+/* an app that points to the text (double-end-point, location-referenced)
+   carries no text of its own: the passage is already in the base text */
+.t-app.app-pointing{display:none}
 .t-lem{border-bottom:1px dotted var(--accent-soft)}
 .t-app[data-type="lac"] [data-el="lem"]{font-family:var(--mono);font-size:.62em;
   font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);
@@ -143,7 +150,7 @@ body.app-off.has-band [data-el="l"]{cursor:inherit}
 /* dense notes: marks only, notes open on click */
 body.notes-dense main.torchio .t-note{display:none!important}
 body.notes-dense .t-note-mark{color:var(--accent);cursor:pointer;font-size:.85em;font-weight:700;line-height:0;padding:.3em .3em;margin:-.3em -.1em}
-body.notes-dense [data-notepop]{cursor:pointer}
+[data-notepop]{cursor:pointer}
 body.notes-dense.notes-off .t-note-mark{cursor:default}
 
 /* transcription levels: reading is the default */
@@ -443,32 +450,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
             </div>
         </div>
         <span id="ox-frankenstein-volume_iii:0.0.1" class="t-encodingDesc s-7-header" data-el="encodingDesc">
-            <span id="ox-frankenstein-volume_iii:0.0.1.0" class="t-classDecl s-7-header" data-el="classDecl">
-    <span id="ox-frankenstein-volume_iii:0.0.1.0.0" class="t-taxonomy s-7-header" data-el="taxonomy">
-        <span id="work" class="t-category s-7-header" data-el="category">
-            <span id="ox-frankenstein-volume_iii:0.0.1.0.0.0.0" class="t-catDesc s-7-header" data-el="catDesc">A work in the Shelley-Godwin Archive, e.g. Frankenstein</span>
-        </span>
-        <span id="work_part" class="t-category s-7-header" data-el="category">
-            <span id="ox-frankenstein-volume_iii:0.0.1.0.0.1.0" class="t-catDesc s-7-header" data-el="catDesc">Metadata about a work in the Shelley-Godwin Archive split across multiple manuscripts</span>
-        </span>
-        <span id="notebook" class="t-category s-7-header" data-el="category">
-            <span id="ox-frankenstein-volume_iii:0.0.1.0.0.2.0" class="t-catDesc s-7-header" data-el="catDesc">A manuscript notebook containing one or more works in the Shelley-Godwin
-                Archive, e.g. Frankenstein Notebook A</span>
-        </span>
-        <span id="volume" class="t-category s-7-header" data-el="category">
-            <span id="ox-frankenstein-volume_iii:0.0.1.0.0.3.0" class="t-catDesc s-7-header" data-el="catDesc">The volume of a work in the Shelley-Godwin Archive, e.g. Frankenstein Vol
-                I</span>
-        </span>
-        <span id="chapter" class="t-category s-7-header" data-el="category">
-            <span id="ox-frankenstein-volume_iii:0.0.1.0.0.4.0" class="t-catDesc s-7-header" data-el="catDesc">The chapter in a volume of a work in the Shelley-Godwin Archive, e.g.
-                Frankenstein Vol I, Chapter 1</span>
-        </span>
-        <span id="miscellaneous" class="t-category s-7-header" data-el="category">
-            <span id="ox-frankenstein-volume_iii:0.0.1.0.0.5.0" class="t-catDesc s-7-header" data-el="catDesc">A part of a manuscript in the Shelley-Godwin Archive that does not fit in other
-                categories of this taxonomy.</span>
-        </span>
-    </span>
-</span>
+            <span id="ox-frankenstein-volume_iii:0.0.1.0" class="t-include s-base" data-el="include"></span>
         </span>
         <span id="ox-frankenstein-volume_iii:0.0.2" class="t-revisionDesc s-7-header" data-el="revisionDesc">
             <div id="ox-frankenstein-volume_iii:0.0.2.0" class="t-change s-7-header" data-el="change" data-when="2015-03-12">Made volume and chapter metadata valid.</div>
@@ -476,7 +458,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
             <div id="ox-frankenstein-volume_iii:0.0.2.2" class="t-change s-7-header" data-el="change" data-when="2014-01-22">Added metadata.</div>   
         </span>
     </div></div></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · eb43eb4 · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · fece455 · 2026-07-31</footer>
 
 </body>
 </html>

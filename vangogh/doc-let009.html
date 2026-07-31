@@ -77,7 +77,14 @@ body.notes-off .t-note-mark{opacity:.25}
   .t-note.placed{font-size:.78em;line-height:1.4}
 }
 
-.t-app:has([data-el="lem"]) .t-rdg{display:none}
+.t-app.app-has-lem .t-rdg{display:none}
+/* an app without a lem privileges nothing: the first reading stands in the
+   text (the others are in the apparatus), never all of them concatenated */
+.t-app.app-no-lem>[data-el="rdg"]~[data-el="rdg"],
+.t-app.app-no-lem>[data-el="rdgGrp"]~[data-el="rdgGrp"]{display:none}
+/* an app that points to the text (double-end-point, location-referenced)
+   carries no text of its own: the passage is already in the base text */
+.t-app.app-pointing{display:none}
 .t-lem{border-bottom:1px dotted var(--accent-soft)}
 .t-app[data-type="lac"] [data-el="lem"]{font-family:var(--mono);font-size:.62em;
   font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);
@@ -405,38 +412,38 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
         </div>
     </div><span id="let009:0.1" class="t-facsimile s-7-struttura-documento" data-el="facsimile">
 <div id="surf-pb-1r" class="t-surface s-5-documentario" data-el="surface" data-n="b 0009">
-            <span id="let009:0.1.0.0" class="t-graphic s-1-paratesti" data-el="graphic"></span>
-            <span id="let009:0.1.0.1" class="t-graphic s-1-paratesti" data-el="graphic"></span>
-            <span id="let009:0.1.0.2" class="t-graphic s-1-paratesti" data-el="graphic"></span>
+            <span id="let009:0.1.0.0" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="norend" data-url="VGM001000009_01.TIF"></span>
+            <span id="let009:0.1.0.1" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="norend" data-url="VGM001000009_01_n.tif"></span>
+            <span id="let009:0.1.0.2" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="thumbnail" data-url="VGM001000009_01_nt.jpg"></span>
             <div id="zone-pb-1r-1" class="t-zone s-2-standoff" data-el="zone">
-<span id="let009:0.1.0.3.0" class="t-graphic s-1-paratesti" data-el="graphic"></span>
-                <span id="let009:0.1.0.3.1" class="t-graphic s-1-paratesti" data-el="graphic"></span>
-                <span id="let009:0.1.0.3.2" class="t-graphic s-1-paratesti" data-el="graphic"></span>
+<span id="let009:0.1.0.3.0" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="norend" data-url="VGM001000009_01_nR.tif"></span>
+                <span id="let009:0.1.0.3.1" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="thumbnail" data-url="VGM001000009_01_nRt.jpg"></span>
+                <span id="let009:0.1.0.3.2" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="facstab" data-url="VGM001000009_01_nRf.png"></span>
             </div>
 <div id="zone-pb-1r-4" class="t-zone s-2-standoff" data-el="zone">
-<span id="let009:0.1.0.4.0" class="t-graphic s-1-paratesti" data-el="graphic"></span>
-                <span id="let009:0.1.0.4.1" class="t-graphic s-1-paratesti" data-el="graphic"></span>
-                <span id="let009:0.1.0.4.2" class="t-graphic s-1-paratesti" data-el="graphic"></span>
+<span id="let009:0.1.0.4.0" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="norend" data-url="VGM001000009_01_nL.tif"></span>
+                <span id="let009:0.1.0.4.1" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="thumbnail" data-url="VGM001000009_01_nLt.jpg"></span>
+                <span id="let009:0.1.0.4.2" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="facstab" data-url="VGM001000009_01_nLf.png"></span>
             </div>
 </div>
 <div id="surf-pb-1v" class="t-surface s-5-documentario" data-el="surface" data-n="b 0009">
-            <span id="let009:0.1.1.0" class="t-graphic s-1-paratesti" data-el="graphic"></span>
-            <span id="let009:0.1.1.1" class="t-graphic s-1-paratesti" data-el="graphic"></span>
-            <span id="let009:0.1.1.2" class="t-graphic s-1-paratesti" data-el="graphic"></span>
+            <span id="let009:0.1.1.0" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="norend" data-url="VGM001000009_02.TIF"></span>
+            <span id="let009:0.1.1.1" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="norend" data-url="VGM001000009_02_n.tif"></span>
+            <span id="let009:0.1.1.2" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="thumbnail" data-url="VGM001000009_02_nt.jpg"></span>
             <div id="zone-pb-1v-2" class="t-zone s-2-standoff" data-el="zone">
-<span id="let009:0.1.1.3.0" class="t-graphic s-1-paratesti" data-el="graphic"></span>
-                <span id="let009:0.1.1.3.1" class="t-graphic s-1-paratesti" data-el="graphic"></span>
-                <span id="let009:0.1.1.3.2" class="t-graphic s-1-paratesti" data-el="graphic"></span>
+<span id="let009:0.1.1.3.0" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="norend" data-url="VGM001000009_02_nL.tif"></span>
+                <span id="let009:0.1.1.3.1" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="thumbnail" data-url="VGM001000009_02_nLt.jpg"></span>
+                <span id="let009:0.1.1.3.2" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="facstab" data-url="VGM001000009_02_nLf.png"></span>
             </div>
 <div id="zone-pb-1v-3" class="t-zone s-2-standoff" data-el="zone">
-<span id="let009:0.1.1.4.0" class="t-graphic s-1-paratesti" data-el="graphic"></span>
-                <span id="let009:0.1.1.4.1" class="t-graphic s-1-paratesti" data-el="graphic"></span>
-                <span id="let009:0.1.1.4.2" class="t-graphic s-1-paratesti" data-el="graphic"></span>
+<span id="let009:0.1.1.4.0" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="norend" data-url="VGM001000009_02_nR.tif"></span>
+                <span id="let009:0.1.1.4.1" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="thumbnail" data-url="VGM001000009_02_nRt.jpg"></span>
+                <span id="let009:0.1.1.4.2" class="t-graphic s-1-paratesti" data-el="graphic" data-rend="facstab" data-url="VGM001000009_02_nRf.png"></span>
             </div>
 </div>
     </span><div id="let009:0.2" class="t-text s-7-struttura-documento" data-el="text">
         <div id="let009:0.2.0" class="t-body s-1-struttura" data-el="body">
-<div id="let009:0.2.0.0" class="t-div s-1-struttura" data-el="div" data-type="original">
+<div id="let009:0.2.0.0" class="t-div s-1-struttura" data-el="div" lang="nl" data-type="original">
 <span id="pb-orig-1r-1" class="t-pb" role="separator" title="page break">[1]</span>
                 <span id="l-1" class="t-lb"><br/></span>
 <p id="let009:0.2.0.0.2" class="t-ab s-1-struttura" data-el="ab">Londen 13 Juni 1873.</p>
@@ -447,39 +454,39 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <p id="let009:0.2.0.0.7" class="t-ab s-1-struttura" data-el="ab">Je zult wel <span id="l-4" class="t-lb"><br/></span>verlangen om wat van <span id="l-5" class="t-lb"><br/></span>mij te hooren, en ik wil <span id="l-6" class="t-lb"><br/></span>je dus niet langer op een <span id="l-7" class="t-lb"><br/></span>brief laten wachten.–<span id="note-o-1" class="t-anchor s-1-milestone" data-el="anchor" data-n="1"></span>
                 </p>
                 <span id="l-8" class="t-lb"><br/></span>
-<p id="let009:0.2.0.0.9" class="t-ab s-1-struttura" data-el="ab">Van huis hoorde ik dat <span id="l-9" class="t-lb"><br/></span>je tegenwoordig bij den <span id="l-10" class="t-lb"><br/></span>Hr. Schmidt in huis zijt <span id="l-11" class="t-lb"><br/></span>&amp; dat Pa bij je is geweest. <span id="l-12" class="t-lb"><br/></span>Ik hoop van harte dat <span id="l-13" class="t-lb"><br/></span>dit je beter zal bevallen <span id="l-14" class="t-lb"><br/></span>dan je vorige kosthuis <span id="l-15" class="t-lb"><br/></span>&amp; twijfel daar ook niet aan.<span id="note-o-2" class="t-anchor s-1-milestone" data-el="anchor" data-n="2"></span> <span id="l-16" class="t-lb"><br/></span>Schrijf mij eens spoedig, <span id="l-17" class="t-lb"><br/></span>ik verlang daar zeer naar <span id="l-18" class="t-lb"><br/></span>&amp; vertel mij eens hoe je 
+<p id="let009:0.2.0.0.9" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Van huis hoorde ik dat <span id="l-9" class="t-lb"><br/></span>je tegenwoordig bij den <span id="l-10" class="t-lb"><br/></span>Hr. Schmidt in huis zijt <span id="l-11" class="t-lb"><br/></span>&amp; dat Pa bij je is geweest. <span id="l-12" class="t-lb"><br/></span>Ik hoop van harte dat <span id="l-13" class="t-lb"><br/></span>dit je beter zal bevallen <span id="l-14" class="t-lb"><br/></span>dan je vorige kosthuis <span id="l-15" class="t-lb"><br/></span>&amp; twijfel daar ook niet aan.<span id="note-o-2" class="t-anchor s-1-milestone" data-el="anchor" data-n="2"></span> <span id="l-16" class="t-lb"><br/></span>Schrijf mij eens spoedig, <span id="l-17" class="t-lb"><br/></span>ik verlang daar zeer naar <span id="l-18" class="t-lb"><br/></span>&amp; vertel mij eens hoe je 
 <span id="pb-orig-1v-2" class="t-pb" role="separator" title="page break">[2]</span>
                     <span id="l-24" class="t-lb"><br/></span>nu je dag doorbrengt &amp;c. <span id="l-25" class="t-lb"><br/></span>Schrijf mij ook vooral eens <span id="l-26" class="t-lb"><br/></span>wat je al zoo voor schilde<span id="let009:0.2.0.0.9.15" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
                     <span id="l-27" class="t-lb"><br/></span>rijen gezien hebt in den <span id="l-28" class="t-lb"><br/></span>laatsten tijd &amp; ook of er <span id="l-29" class="t-lb"><br/></span>wat nieuws in etsen of <span id="l-30" class="t-lb"><br/></span>lithographiën is uitgekomen<span id="let009:0.2.0.0.9.20" class="t-c s-5-documentario" data-el="c" data-type="kp">_</span> <span id="l-31" class="t-lb"><br/></span>Je moet mij daar maar <span id="l-32" class="t-lb"><br/></span>goed van op de hoogte hou<span id="let009:0.2.0.0.9.23" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
                     <span id="l-33" class="t-lb"><br/></span>den, want in dat genre zie <span id="l-34" class="t-lb"><br/></span>ik hier niet veel, daar de <span id="l-35" class="t-lb"><br/></span>zaak hier alleen magazijn <span id="l-36" class="t-lb"><br/></span>is.–<span id="note-o-3" class="t-anchor s-1-milestone" data-el="anchor" data-n="3"></span>
                 </p>
                 <span id="l-37" class="t-lb"><br/></span>
-<p id="let009:0.2.0.0.11" class="t-ab s-1-struttura" data-el="ab">Het gaat mij, de omstandig<span id="let009:0.2.0.0.11.0" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
+<p id="let009:0.2.0.0.11" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Het gaat mij, de omstandig<span id="let009:0.2.0.0.11.0" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
                     <span id="l-38" class="t-lb"><br/></span>heden in aanmerking ge<span id="let009:0.2.0.0.11.2" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
                     <span id="l-39" class="t-lb"><br/></span>nomen, zeer goed.–</p>
                 <span id="l-40" class="t-lb"><br/></span>
-<p id="let009:0.2.0.0.13" class="t-ab s-1-struttura" data-el="ab">Ik heb een kosthuis gekregen <span id="l-41" class="t-lb"><br/></span>waar het mij voorloopig <span id="l-42" class="t-lb"><br/></span>zeer goed bevalt.<span id="note-o-4" class="t-anchor s-1-milestone" data-el="anchor" data-n="4"></span> Er zijn <span id="l-43" class="t-lb"><br/></span>nog 3 Duitschers in huis <span id="l-44" class="t-lb"><br/></span>die veel van muziek hou<span id="let009:0.2.0.0.13.5" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
+<p id="let009:0.2.0.0.13" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Ik heb een kosthuis gekregen <span id="l-41" class="t-lb"><br/></span>waar het mij voorloopig <span id="l-42" class="t-lb"><br/></span>zeer goed bevalt.<span id="note-o-4" class="t-anchor s-1-milestone" data-el="anchor" data-n="4"></span> Er zijn <span id="l-43" class="t-lb"><br/></span>nog 3 Duitschers in huis <span id="l-44" class="t-lb"><br/></span>die veel van muziek hou<span id="let009:0.2.0.0.13.5" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
                     <span id="l-45" class="t-lb"><br/></span>den &amp; zelf piano spelen &amp; <span id="l-46" class="t-lb"><br/></span>zingen, wat de avonden 
 <span id="pb-orig-1v-3" class="t-pb" role="separator" title="page break">[3]</span>
                     <span id="l-47" class="t-lb"><br/></span>heel gezellig maakt. <span id="l-48" class="t-lb"><br/></span>Ik heb het hier niet zoo <span id="l-49" class="t-lb"><br/></span>druk als in den Haag, <span id="l-50" class="t-lb"><br/></span>daar ik maar van s’morgens <span id="l-51" class="t-lb"><br/></span>9 tot s’avonds 6 uur in de <span id="l-52" class="t-lb"><br/></span>zaak behoef te zijn &amp; Zatur<span id="let009:0.2.0.0.13.15" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
                     <span id="l-53" class="t-lb"><br/></span>dags reeds om 4 uur gedaan <span id="l-54" class="t-lb"><br/></span>heb.– Ik woon in eene <span id="l-55" class="t-lb"><br/></span>der voorsteden van Londen, <span id="l-56" class="t-lb"><br/></span>waar het betrekkelijk stil <span id="l-57" class="t-lb"><br/></span>is, het heeft wel iets van <span id="l-58" class="t-lb"><br/></span>Tilburg,<span id="note-o-5" class="t-anchor s-1-milestone" data-el="anchor" data-n="5"></span> of zoo.–</p>
                 <span id="l-59" class="t-lb"><br/></span>
-<p id="let009:0.2.0.0.15" class="t-ab s-1-struttura" data-el="ab">Te Parijs had ik zeer <span id="l-60" class="t-lb"><br/></span>prettige dagen &amp; heb zoo <span id="l-61" class="t-lb"><br/></span>als je denken kunt veel <span id="l-62" class="t-lb"><br/></span>genoten van al het moois <span id="l-63" class="t-lb"><br/></span>dat ik op de tentoonstelling<span id="note-o-6" class="t-anchor s-1-milestone" data-el="anchor" data-n="6"></span> <span id="l-64" class="t-lb"><br/></span>&amp; in de Louvre &amp; Luxembourg<span id="note-o-7" class="t-anchor s-1-milestone" data-el="anchor" data-n="7"></span> <span id="l-65" class="t-lb"><br/></span>gezien heb.– De zaak <span id="l-66" class="t-lb"><br/></span>te Parijs is prachtig &amp; <span id="l-67" class="t-lb"><br/></span>veel grooter dan ik mij <span id="l-68" class="t-lb"><br/></span>had voorgesteld.– Vooral <span id="l-69" class="t-lb"><br/></span>de Place de l’Opera.–<span id="note-o-8" class="t-anchor s-1-milestone" data-el="anchor" data-n="8"></span>
+<p id="let009:0.2.0.0.15" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Te Parijs had ik zeer <span id="l-60" class="t-lb"><br/></span>prettige dagen &amp; heb zoo <span id="l-61" class="t-lb"><br/></span>als je denken kunt veel <span id="l-62" class="t-lb"><br/></span>genoten van al het moois <span id="l-63" class="t-lb"><br/></span>dat ik op de tentoonstelling<span id="note-o-6" class="t-anchor s-1-milestone" data-el="anchor" data-n="6"></span> <span id="l-64" class="t-lb"><br/></span>&amp; in de Louvre &amp; Luxembourg<span id="note-o-7" class="t-anchor s-1-milestone" data-el="anchor" data-n="7"></span> <span id="l-65" class="t-lb"><br/></span>gezien heb.– De zaak <span id="l-66" class="t-lb"><br/></span>te Parijs is prachtig &amp; <span id="l-67" class="t-lb"><br/></span>veel grooter dan ik mij <span id="l-68" class="t-lb"><br/></span>had voorgesteld.– Vooral <span id="l-69" class="t-lb"><br/></span>de Place de l’Opera.–<span id="note-o-8" class="t-anchor s-1-milestone" data-el="anchor" data-n="8"></span>
                 </p>
                 <span id="l-70" class="t-lb"><br/></span>
-<p id="let009:0.2.0.0.17" class="t-ab s-1-struttura" data-el="ab">Het is hier zeer duur leven<span id="let009:0.2.0.0.17.0" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span> <span id="l-71" class="t-lb"><br/></span>in mijn kosthuis verwoon 
+<p id="let009:0.2.0.0.17" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Het is hier zeer duur leven<span id="let009:0.2.0.0.17.0" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span> <span id="l-71" class="t-lb"><br/></span>in mijn kosthuis verwoon 
 <span id="pb-orig-1r-4" class="t-pb" role="separator" title="page break">[4]</span>
                     <span id="l-72" class="t-lb"><br/></span>ik 18 shillings per week behalve <span id="l-73" class="t-lb"><br/></span>de wasch &amp; ik moet dan nog <span id="l-74" class="t-lb"><br/></span>in de stad eten.–<span id="note-o-9" class="t-anchor s-1-milestone" data-el="anchor" data-n="9"></span>
                 </p>
                 <span id="l-75" class="t-lb"><br/></span>
-<p id="let009:0.2.0.0.19" class="t-ab s-1-struttura" data-el="ab">ll. zondag ben ik met Mr. Obach, <span id="l-76" class="t-lb"><br/></span>mijn chef<span id="let009:0.2.0.0.19.1" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span>
+<p id="let009:0.2.0.0.19" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">ll. zondag ben ik met Mr. Obach, <span id="l-76" class="t-lb"><br/></span>mijn chef<span id="let009:0.2.0.0.19.1" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span>
                     <span id="note-o-10" class="t-anchor s-1-milestone" data-el="anchor" data-n="10"></span> naar buiten ge<span id="let009:0.2.0.0.19.3" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
                     <span id="l-77" class="t-lb"><br/></span>weest, naar Boxhill, dat <span id="l-78" class="t-lb"><br/></span>is een hoogen heuvel (zoowat <span id="l-79" class="t-lb"><br/></span>6 uur van L.)<span id="let009:0.2.0.0.19.7" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span>
                     <span id="note-o-11" class="t-anchor s-1-milestone" data-el="anchor" data-n="11"></span> gedeeltelijk <span id="l-80" class="t-lb"><br/></span>krijt &amp; begroeid met palm, <span id="l-81" class="t-lb"><br/></span>en aan de eene zijde een bosch <span id="l-82" class="t-lb"><br/></span>van hooge eikenboomen. <span id="l-83" class="t-lb"><br/></span>Het land is hier prachtig <span id="l-84" class="t-lb"><br/></span>mooi, heel iets anders dan <span id="l-85" class="t-lb"><br/></span>Holland of België.– Overal <span id="l-86" class="t-lb"><br/></span>ziet men prachtige parken <span id="l-87" class="t-lb"><br/></span>met hooge boomen &amp; heesters. <span id="l-88" class="t-lb"><br/></span>Men mag daar in wande<span id="let009:0.2.0.0.19.18" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
                     <span id="l-89" class="t-lb"><br/></span>len. Met de Pinksterdagen<span id="note-o-12" class="t-anchor s-1-milestone" data-el="anchor" data-n="12"></span> <span id="l-90" class="t-lb"><br/></span>heb ik ook een mooie toer <span id="l-91" class="t-lb"><br/></span>gemaakt met die Duitschers, <span id="l-92" class="t-lb"><br/></span>maar die heeren verteeren <span id="l-93" class="t-lb"><br/></span>zeer veel geld &amp; in het ver<span id="let009:0.2.0.0.19.25" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
                     <span id="l-94" class="t-lb"><br/></span>volg zal ik niet meer <span id="l-95" class="t-lb"><br/></span>met hen uitgaan.–</p>
                 <span id="l-96" class="t-lb"><br/></span>
-<p id="let009:0.2.0.0.21" class="t-ab s-1-struttura" data-el="ab">Het deed mij genoegen van Pa <span id="l-97" class="t-lb"><br/></span>te hooren dat het met Oom H. <span id="l-98" class="t-lb"><br/></span>redelijk gaat<span id="let009:0.2.0.0.21.2" class="t-c s-5-documentario" data-el="c" data-type="kp">_</span> Wil hem <span id="l-99" class="t-lb"><br/></span>&amp; Tante hartelijk van mij groeten<span id="note-o-13" class="t-anchor s-1-milestone" data-el="anchor" data-n="13"></span> <span id="l-100" class="t-lb"><br/></span>&amp; het een en ander van mij ver<span id="let009:0.2.0.0.21.6" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
+<p id="let009:0.2.0.0.21" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Het deed mij genoegen van Pa <span id="l-97" class="t-lb"><br/></span>te hooren dat het met Oom H. <span id="l-98" class="t-lb"><br/></span>redelijk gaat<span id="let009:0.2.0.0.21.2" class="t-c s-5-documentario" data-el="c" data-type="kp">_</span> Wil hem <span id="l-99" class="t-lb"><br/></span>&amp; Tante hartelijk van mij groeten<span id="note-o-13" class="t-anchor s-1-milestone" data-el="anchor" data-n="13"></span> <span id="l-100" class="t-lb"><br/></span>&amp; het een en ander van mij ver<span id="let009:0.2.0.0.21.6" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
                     <span id="l-101" class="t-lb"><br/></span>tellen.– Zeg ook de Hr. Schmidt <span id="l-102" class="t-lb"><br/></span>&amp; Eduard<span id="note-o-14" class="t-anchor s-1-milestone" data-el="anchor" data-n="14"></span> van mij goeden <span id="l-103" class="t-lb"><br/></span>dag &amp; schrijf mij eens spoedig. <span id="l-104" class="t-lb"><br/></span>Adieu<span id="let009:0.2.0.0.21.12" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span> heb het goed.</p>
 <span id="let009:0.2.0.0.22" class="t-whiteline s-base" data-el="whiteline"></span>
                 <span id="l-105" class="t-lb"><br/></span>
@@ -488,7 +495,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                 <span id="l-19" class="t-lb"><br/></span>
 <p id="let009:0.2.0.0.27" class="t-ab s-1-struttura" data-el="ab">mijn adres is:</p>
                 <span id="l-20" class="t-lb"><br/></span>
-<p id="let009:0.2.0.0.29" class="t-ab s-1-struttura" data-el="ab">care of Messrs Goupil &amp; C<span id="let009:0.2.0.0.29.0" class="t-hi s-1-inline" data-el="hi">o</span>
+<p id="let009:0.2.0.0.29" class="t-ab s-1-struttura" data-el="ab">care of Messrs Goupil &amp; C<span id="let009:0.2.0.0.29.0" class="t-hi s-1-inline" data-el="hi" data-rend="ss">o</span>
                 </p>
                 <span id="l-21" class="t-lb"><br/></span>
 <p id="let009:0.2.0.0.31" class="t-ab s-1-struttura" data-el="ab">17 Southampton Street</p>
@@ -499,7 +506,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <span id="let009:0.2.0.0.36" class="t-whiteline s-base" data-el="whiteline"></span>
 <div id="let009:0.2.0.0.37" class="t-div s-1-struttura" data-el="div" data-type="textualNotes">
 <span class="t-note-mark" aria-hidden="true">°</span><div id="let009:0.2.0.0.37.0" class="t-note s-1-note" data-el="note" data-n="19-23" data-target="l-19">
-                        <span id="let009:0.2.0.0.37.0.0" class="t-hi s-1-inline" data-el="hi">Written on p. 1, between l. 1 and 2.</span>
+                        <span id="let009:0.2.0.0.37.0.0" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Written on p. 1, between l. 1 and 2.</span>
                     </div>
                 </div>
             </div>
@@ -509,19 +516,19 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <span id="let009:0.2.0.1.2" class="t-whiteline s-base" data-el="whiteline"></span>
 <p id="let009:0.2.0.1.3" class="t-ab s-1-struttura" data-el="ab">My dear Theo,</p>
 <p id="let009:0.2.0.1.4" class="t-ab s-1-struttura" data-el="ab">You’re probably longing to hear from me,<span id="note-t-1" class="t-anchor s-1-milestone" data-el="anchor" data-n="1"></span> so I don’t want to keep you waiting for a letter any longer.</p>
-<p id="let009:0.2.0.1.5" class="t-ab s-1-struttura" data-el="ab">I heard from home that you’re now staying with <span id="let009:0.2.0.1.5.0" class="t-rs s-2-entita" data-el="rs" data-key="624" data-type="pers">Mr Schmidt</span>, and that <span id="let009:0.2.0.1.5.1" class="t-rs s-2-entita" data-el="rs" data-key="526" data-type="pers">Pa</span> has been to see you. I sincerely hope that this will be more to your liking than your previous boarding-house, and don’t doubt that it will be.<span id="note-t-2" class="t-anchor s-1-milestone" data-el="anchor" data-n="2"></span> Write to me soon, I’m longing to hear from you, and tell me how you’re 
+<p id="let009:0.2.0.1.5" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">I heard from home that you’re now staying with <span id="let009:0.2.0.1.5.0" class="t-rs s-2-entita" data-el="rs" data-key="624" data-type="pers">Mr Schmidt</span>, and that <span id="let009:0.2.0.1.5.1" class="t-rs s-2-entita" data-el="rs" data-key="526" data-type="pers">Pa</span> has been to see you. I sincerely hope that this will be more to your liking than your previous boarding-house, and don’t doubt that it will be.<span id="note-t-2" class="t-anchor s-1-milestone" data-el="anchor" data-n="2"></span> Write to me soon, I’m longing to hear from you, and tell me how you’re 
 <span id="pb-trans-1v-2" class="t-pb" role="separator" title="page break">[2]</span> spending your days at present, &amp;c. Write to me especially about the paintings you’ve seen recently, and also whether anything new has been published in the way of etchings or lithographs. You must keep me well informed about this, because here I don’t see much in that genre, as the firm here is just a stockroom.<span id="note-t-3" class="t-anchor s-1-milestone" data-el="anchor" data-n="3"></span>
                 </p>
-<p id="let009:0.2.0.1.6" class="t-ab s-1-struttura" data-el="ab">I’m very well, considering the circumstances.</p>
-<p id="let009:0.2.0.1.7" class="t-ab s-1-struttura" data-el="ab">I’ve come by a boarding-house that suits me very well for the present.<span id="note-t-4" class="t-anchor s-1-milestone" data-el="anchor" data-n="4"></span> There are also three Germans in the house who really love music and play piano and sing themselves, which makes the evenings 
+<p id="let009:0.2.0.1.6" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">I’m very well, considering the circumstances.</p>
+<p id="let009:0.2.0.1.7" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">I’ve come by a boarding-house that suits me very well for the present.<span id="note-t-4" class="t-anchor s-1-milestone" data-el="anchor" data-n="4"></span> There are also three Germans in the house who really love music and play piano and sing themselves, which makes the evenings 
 <span id="pb-trans-1v-3" class="t-pb" role="separator" title="page break">[3]</span> very pleasant indeed. I’m not as busy here as I was in The Hague, as I only have to be in the office from 9 in the morning until 6 in the evening, and on Saturdays I’m finished by 4 o’clock. I live in one of the suburbs of London, where it’s comparatively quiet. It’s a bit like Tilburg<span id="note-t-5" class="t-anchor s-1-milestone" data-el="anchor" data-n="5"></span> or some such place.</p>
-<p id="let009:0.2.0.1.8" class="t-ab s-1-struttura" data-el="ab">I spent some very pleasant days in Paris and, as you can imagine, very much enjoyed all the beautiful things I saw at the exhibition<span id="note-t-6" class="t-anchor s-1-milestone" data-el="anchor" data-n="6"></span> and in the Louvre and the Luxembourg.<span id="note-t-7" class="t-anchor s-1-milestone" data-el="anchor" data-n="7"></span> The Paris branch is splendid, and much larger than I’d imagined. Especially the Place de l’Opéra.<span id="note-t-8" class="t-anchor s-1-milestone" data-el="anchor" data-n="8"></span>
+<p id="let009:0.2.0.1.8" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">I spent some very pleasant days in Paris and, as you can imagine, very much enjoyed all the beautiful things I saw at the exhibition<span id="note-t-6" class="t-anchor s-1-milestone" data-el="anchor" data-n="6"></span> and in the Louvre and the Luxembourg.<span id="note-t-7" class="t-anchor s-1-milestone" data-el="anchor" data-n="7"></span> The Paris branch is splendid, and much larger than I’d imagined. Especially the Place de l’Opéra.<span id="note-t-8" class="t-anchor s-1-milestone" data-el="anchor" data-n="8"></span>
                 </p>
-<p id="let009:0.2.0.1.9" class="t-ab s-1-struttura" data-el="ab">Life here is very expensive. I pay 
+<p id="let009:0.2.0.1.9" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Life here is very expensive. I pay 
 <span id="pb-trans-1r-4" class="t-pb" role="separator" title="page break">[4]</span> 18 shillings a week for my lodgings, not including the washing, and then I still have to eat in town.<span id="note-t-9" class="t-anchor s-1-milestone" data-el="anchor" data-n="9"></span>
                 </p>
-<p id="let009:0.2.0.1.10" class="t-ab s-1-struttura" data-el="ab">Last Sunday I went on an outing with <span id="let009:0.2.0.1.10.0" class="t-rs s-2-entita" data-el="rs" data-key="547" data-type="pers">Mr Obach</span>, my superior,<span id="note-t-10" class="t-anchor s-1-milestone" data-el="anchor" data-n="10"></span> to Box Hill, which is a high hill (some 6 hours from L.),<span id="note-t-11" class="t-anchor s-1-milestone" data-el="anchor" data-n="11"></span> partly of chalk and covered with box trees, and on one side a wood of tall oak trees. The countryside here is magnificent, completely different from Holland or Belgium. Everywhere one sees splendid parks with tall trees and shrubs, where one is allowed to walk. During the Whitsun holiday<span id="note-t-12" class="t-anchor s-1-milestone" data-el="anchor" data-n="12"></span> I also took a nice trip with those Germans, but those gentlemen spend a great deal of money and I shan’t go out with them any more.</p>
-<p id="let009:0.2.0.1.11" class="t-ab s-1-struttura" data-el="ab">I was glad to hear from <span id="let009:0.2.0.1.11.0" class="t-rs s-2-entita" data-el="rs" data-key="526" data-type="pers">Pa</span> that <span id="let009:0.2.0.1.11.1" class="t-rs s-2-entita" data-el="rs" data-key="399" data-type="pers">Uncle H</span>. is reasonably well. Would you give my warm regards to him and <span id="let009:0.2.0.1.11.2" class="t-rs s-2-entita" data-el="rs" data-key="1613" data-type="pers">Aunt</span>
+<p id="let009:0.2.0.1.10" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Last Sunday I went on an outing with <span id="let009:0.2.0.1.10.0" class="t-rs s-2-entita" data-el="rs" data-key="547" data-type="pers">Mr Obach</span>, my superior,<span id="note-t-10" class="t-anchor s-1-milestone" data-el="anchor" data-n="10"></span> to Box Hill, which is a high hill (some 6 hours from L.),<span id="note-t-11" class="t-anchor s-1-milestone" data-el="anchor" data-n="11"></span> partly of chalk and covered with box trees, and on one side a wood of tall oak trees. The countryside here is magnificent, completely different from Holland or Belgium. Everywhere one sees splendid parks with tall trees and shrubs, where one is allowed to walk. During the Whitsun holiday<span id="note-t-12" class="t-anchor s-1-milestone" data-el="anchor" data-n="12"></span> I also took a nice trip with those Germans, but those gentlemen spend a great deal of money and I shan’t go out with them any more.</p>
+<p id="let009:0.2.0.1.11" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">I was glad to hear from <span id="let009:0.2.0.1.11.0" class="t-rs s-2-entita" data-el="rs" data-key="526" data-type="pers">Pa</span> that <span id="let009:0.2.0.1.11.1" class="t-rs s-2-entita" data-el="rs" data-key="399" data-type="pers">Uncle H</span>. is reasonably well. Would you give my warm regards to him and <span id="let009:0.2.0.1.11.2" class="t-rs s-2-entita" data-el="rs" data-key="1613" data-type="pers">Aunt</span>
                     <span id="note-t-13" class="t-anchor s-1-milestone" data-el="anchor" data-n="13"></span> and give them news of me? Bid good-day to <span id="let009:0.2.0.1.11.4" class="t-rs s-2-entita" data-el="rs" data-key="624" data-type="pers">Mr Schmidt</span> and <span id="let009:0.2.0.1.11.5" class="t-rs s-2-entita" data-el="rs" data-key="1069" data-type="pers">Eduard</span> from me,<span id="note-t-14" class="t-anchor s-1-milestone" data-el="anchor" data-n="14"></span> and write to me soon. Adieu, I wish you well.</p>
 <span id="let009:0.2.0.1.12" class="t-whiteline s-base" data-el="whiteline"></span>
 <p id="let009:0.2.0.1.13" class="t-ab s-1-struttura" data-el="ab">Vincent.</p>
@@ -538,7 +545,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-2" class="t-note s-1-note" data-el="note" data-n="2" data-target="#note-t-2">
 <p id="let009:0.2.0.2.1.0" class="t-ab s-1-struttura" data-el="ab">
-                        <span id="let009:0.2.0.2.1.0.0" class="t-rs s-2-entita" data-el="rs" data-key="624" data-type="pers">Tobias Victor Schmidt</span> lived in the Goupil building in Brussels: 58 rue Montagne de la Cour (Hofbergstraat). In a draft of the biographical introduction to her edition of the letters (<span id="let009:0.2.0.2.1.0.1" class="t-hi s-1-inline" data-el="hi">Brieven</span> 1914), Jo van Gogh-Bonger wrote: ‘[Theo] lived in the house of a minister, which <span id="let009:0.2.0.2.1.0.2" class="t-rs s-2-entita" data-el="rs" data-key="526" data-type="pers">Pa</span> found very safe ─ but it was dirty and dismal and he felt so alone and unhappy, he slept alone in the attic, where he was so afraid. He was still so young (15) but he never wrote home about it and bore it well, until finally, when he <span id="let009:0.2.0.2.1.0.3" class="t-hi s-1-inline" data-el="hi">couldn’t</span> stand it any longer, Schmidt asked him to come and live with him. Then everything was much more pleasant and enjoyable ─ in that young bachelor’s household, because Schmidt wasn’t married and Theo prepared their breakfast in the morning and fared very well’ (FR b3262). It is not impossible that there was some connection between Theo’s dissatisfaction with his lodgings and the circumstances of Reverend <span id="let009:0.2.0.2.1.0.4" class="t-rs s-2-entita" data-el="rs" data-key="313" data-type="pers">Van den Brink</span>’s family, to which a daughter, <span id="let009:0.2.0.2.1.0.5" class="t-rs s-2-entita" data-el="rs" data-key="1617" data-type="pers">Catharina Alberta</span>, had been born shortly before this time who was long sickly and eventually died in August (FR b2660 and <span id="let009:0.2.0.2.1.0.6" class="t-hi s-1-inline" data-el="hi">SAB</span>).</p>
+                        <span id="let009:0.2.0.2.1.0.0" class="t-rs s-2-entita" data-el="rs" data-key="624" data-type="pers">Tobias Victor Schmidt</span> lived in the Goupil building in Brussels: 58 rue Montagne de la Cour (Hofbergstraat). In a draft of the biographical introduction to her edition of the letters (<span id="let009:0.2.0.2.1.0.1" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Brieven</span> 1914), Jo van Gogh-Bonger wrote: ‘[Theo] lived in the house of a minister, which <span id="let009:0.2.0.2.1.0.2" class="t-rs s-2-entita" data-el="rs" data-key="526" data-type="pers">Pa</span> found very safe ─ but it was dirty and dismal and he felt so alone and unhappy, he slept alone in the attic, where he was so afraid. He was still so young (15) but he never wrote home about it and bore it well, until finally, when he <span id="let009:0.2.0.2.1.0.3" class="t-hi s-1-inline" data-el="hi" data-rend="ital">couldn’t</span> stand it any longer, Schmidt asked him to come and live with him. Then everything was much more pleasant and enjoyable ─ in that young bachelor’s household, because Schmidt wasn’t married and Theo prepared their breakfast in the morning and fared very well’ (FR b3262). It is not impossible that there was some connection between Theo’s dissatisfaction with his lodgings and the circumstances of Reverend <span id="let009:0.2.0.2.1.0.4" class="t-rs s-2-entita" data-el="rs" data-key="313" data-type="pers">Van den Brink</span>’s family, to which a daughter, <span id="let009:0.2.0.2.1.0.5" class="t-rs s-2-entita" data-el="rs" data-key="1617" data-type="pers">Catharina Alberta</span>, had been born shortly before this time who was long sickly and eventually died in August (FR b2660 and <span id="let009:0.2.0.2.1.0.6" class="t-hi s-1-inline" data-el="hi" data-rend="ital">SAB</span>).</p>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-3" class="t-note s-1-note" data-el="note" data-n="3" data-target="#note-t-3">
 <p id="let009:0.2.0.2.2.0" class="t-ab s-1-struttura" data-el="ab">Regarding Goupil’s London branch, <span id="let009:0.2.0.2.2.0.0" class="t-ref s-2-corrispondenza" data-el="ref" data-target="let005.xml#n-7">see letter 5, n. 7.</span>
@@ -582,9 +589,10 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
             </div>
         </div>
     </div><nav class="prevnext" aria-label="Register"><a href="doc-let008.html">‹ previous</a><a href="text.html">Register</a><a href="doc-let010.html">next ›</a></nav></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · eb43eb4 · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · fece455 · 2026-07-31</footer>
 <script>
 (function(){
+  var T={"edition":"Edition","text":"Text","indices":"Indices","data":"Data","archive":"Archive","dsa":"digital archive","texts":"Texts","reading":"Reading","diplomatic":"Diplomatic","apparatus":"Apparatus","aboutFile":"About this file","notes":"Notes","dse":"digital scholarly edition","responsibility":"Responsibility","licence":"Licence","witnesses":"Witnesses","apparatusRegisters":"Apparatus","revisions":"Revision history","generator":"Generator","people":"People","places":"Places","orgs":"Organisations","occurrenceOne":"occurrence","occurrenceMany":"occurrences","entries":"entries","skip":"Skip to content","publishedWith":"Published with","map":"Map","mapAria":"Map of the places of the edition","mapNote":"Positional sketch. Filled dots: coordinates declared in the TEI or confirmed by the editor. Hollow dots: gazetteer suggestions awaiting review. Each place links to OpenStreetMap. Coastlines: Natural Earth (public domain).","front":"Front matter","back":"Back matter","lacking":"lacking in","editedText":"edited text","genesis":"Genesis","hand":"hand","version":"version","legend":"Legend","legWord":"word","legDel":"deleted by the writing hand","legAdd":"added above the line","legUnclear":"uncertain reading","legSupplied":"supplied by the editor","legGap":"lost or illegible","legPb":"page break of the source","legMetamark":"a mark of the hand about the text (^ = insert here; hover each mark to read what it does)","legApp":"variant readings: click for the apparatus","legNote":"note mark","legHands":"Hands","legAllHands":"all","legHand":"the hand of","idxSearch":"search a name…","backToTop":"back to top","apparatusCritical":"critical: variants between witnesses","apparatusGenetic":"genetic: the strata of one manuscript in time","apparatusBoth":"critical and genetic: witnesses to collate, strata within them","legMajor":"main hand","lexicon":"Lexicon","lexTokens":"running words","lexForms":"distinct forms","lexTTR":"type-token ratio","lexSearch":"search a word…","lexFrequencies":"Frequencies","lexConcordance":"Concordance","lexCloud":"Cloud","lexPick":"Pick a word to see it in context.","lexLanguage":"Language","lexAllLangs":"all","lexStoplist":"Stopwords","lexStopNone":"none","lexHideStop":"hide stopwords","lexWord":"word","lexLang":"lang","descrFrequencies":"Every attested form with its count, its share per thousand and whether the stopword list you chose covers it.","descrConcordance":"Every occurrence of every form, with the words around it and the anchor back into the text.","descrLemmaConcordance":"The same evidence grouped under the dictionary form, where the edition has lemmas.","lexAbs":"count","lexRel":"per 1000","lexStats":"Lexical statistics","lexStopCol":"stop","lexStopNote":"Frequencies and cloud drop the stopwords you choose; the concordance keeps every word.","genesisNote":"The campaigns of correction the edition declares, in its own order, with the writing operations attributed to each. Every operation links to the place where it happened.","agreement":"Agreement between witnesses","agreementNote":"How often two witnesses carry the same reading. Evidence for a stemma, which remains the editor’s argument.","openPage":"open the page","sectionsN":"sections","sectionOne":"Section","contents":"Contents","bookLabel":"Book","register":"Register","documentsN":"documents","dateCol":"Date","fromCol":"From","toCol":"To","authorCol":"Author","placeCol":"Place","titleCol":"Title","idnoCol":"Ref.","filter":"Filter…","prev":"‹ previous","next":"next ›","fullHeader":"The full header (teiHeader)","fullHeaderNote":"Everything the file declares, rendered as it is.","reuse":"Reuse under the edition licence (see the Edition page).","appEntry":"apparatus entry","descrModel":"the edition model: documents, registries, apparatus (JSON)","descrEntities":"people, places and organisations with occurrence counts and coordinates","descrApparatus":"every apparatus reading with its witnesses, one row per reading","descrSource":"the unmodified TEI source file","lemmas":"Lemmas","lemmaCoverage":"Coverage","tokensWord":"tokens","languagesLabel":"Languages","yearsLabel":"Years","contributorsLabel":"Contributors","interventionsWord":"interventions","licenceVariesNote":"each document declares its own licence, shown on its page","lemmaFromMarkup":"from the markup (w/@lemma)","lemmaFromFile":"from lemmas.json","lemmaPending":"types awaiting the editor’s review","formsLabel":"forms","moreOccurrences":"more occurrences not shown here","descrLemmas":"every lemma with its forms and counts, one row per form","descrTokens":"the token stream of the reading text: position, language, form, lemma, anchor"};
   var body=document.body; body.classList.add('mode-read');
   if(document.querySelector('.app-band'))body.classList.add('has-band');
   if(window.TORCHIO_ALIGN)body.classList.add('has-align');
@@ -726,7 +734,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
         +'<span class="'+(r.dataset.el==='lem'?'is-lem':'')+'">'+esc(rr.textContent.trim()||'(om.)')+'</span></div>';
     });
     if(!rows)return false;
-    openPop('<span class="k">'+'Apparatus'.toLowerCase()+'</span>'+rows,el);
+    openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'+rows,el);
     return true;
   }
   if(document.readyState==='complete'){wireWords();wirePointing();}
@@ -780,7 +788,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
   }
   function showZone(n){clearZone();zoneOf(n).forEach(function(e){e.classList.add('note-hi');hiZone.push(e);});}
   document.querySelectorAll('.t-app [data-el="lem"]').forEach(function(el){
-    makeTrigger(el,'apparatus entry: '+el.textContent.trim());
+    makeTrigger(el,''+esc(T.appEntry)+': '+el.textContent.trim());
   });
   document.querySelectorAll('[data-ref],[data-key]').forEach(function(el){
     if(el.classList.contains('ent-ext'))return; /* external links stay links */
@@ -831,7 +839,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
               }
               openPop('<span class="k">'+esc(sig)+'</span>'
                 +'<div class="notebody">'+(txt?esc(txt):'…')+'</div>'
-                +'<div class="meta"><a href="'+tgt+'">open the page</a></div>',bw);
+                +'<div class="meta"><a href="'+tgt+'">'+esc(T.openPage)+'</a></div>',bw);
             })['catch'](function(){location.href=tgt;});
           }catch(e){location.href=tgt;}
         });
@@ -857,12 +865,12 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       app.querySelectorAll('.t-note').forEach(function(nn){
         extra+='<div class="meta">'+esc(nn.textContent.replace(/s+/g,' ').trim())+'</div>';
       });
-      openPop('<span class="k">apparatus'+(app.dataset.type?' · '+esc(app.dataset.type):'')+'</span>'+rows+extra,app);
+      openPop('<span class="k">'+esc(T.apparatus.toLowerCase())+''+(app.dataset.type?' · '+esc(app.dataset.type):'')+'</span>'+rows+extra,app);
       ev.stopPropagation();return;
     }
     var ch=ev.target.closest&&ev.target.closest('.t-choice');
     if(ch&&!ch.closest('.t-app')){
-      var kinds={abbr:'Diplomatic',orig:'Diplomatic',sic:'Diplomatic',expan:'Reading',reg:'Reading',corr:'Reading'};
+      var kinds={abbr:esc(T.diplomatic),orig:esc(T.diplomatic),sic:esc(T.diplomatic),expan:esc(T.reading),reg:esc(T.reading),corr:esc(T.reading)};
       var rows='';
       [].slice.call(ch.children).forEach(function(c){
         var k=c.dataset&&c.dataset.el; if(!kinds[k])return;
@@ -883,7 +891,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       var meta=[];
       if(key&&ent.textContent.trim()!==key)meta.push(esc(ent.textContent.trim()));
       if(ref)meta.push(esc(ref));
-      meta.push(all.length+' '+(all.length===1?'occurrence':'occurrences'));
+      meta.push(all.length+' '+(all.length===1?esc(T.occurrenceOne):esc(T.occurrenceMany)));
       openPop('<span class="k">'+esc(ent.dataset.el)+'</span>'
         +'<div>'+esc(head)+'</div>'
         +'<div class="meta">'+meta.join(' · ')+'</div>',ent);
@@ -898,7 +906,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       openPop('<span class="k">'+esc(op.dataset.el)+'</span>'
         +'<div class="notebody">'+esc(op.textContent.replace(/s+/g,' ').trim().slice(0,140))+'</div>'
         +'<div class="meta">'+(lab?esc(lab):'')+(hd?' · '+esc(hd):'')
-        +' <a href="genesis.html">Genesis</a></div>',op);
+        +' <a href="genesis.html">'+esc(T.genesis)+'</a></div>',op);
       ev.stopPropagation();return;
     }
     var anc=ev.target.closest&&ev.target.closest('[data-appref]');
@@ -906,7 +914,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     var wv=ev.target.closest&&ev.target.closest('.wv');
     if(wv&&wv._be&&!body.classList.contains('app-off')){
       var wband=wv._be.closest('.app-band');
-      openPop('<span class="k">'+'Apparatus'.toLowerCase()+'</span>'
+      openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'
         +'<div class="popband" data-ent="'+((wband&&wband.getAttribute('data-ent'))||'')+'">'+wv._be.outerHTML+'</div>',wv);
       ev.stopPropagation();return;
     }
@@ -914,7 +922,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     if(npFirst){
       var nnF=document.querySelector('.t-note[data-npi="'+npFirst.getAttribute('data-notepop')+'"]');
       if(nnF&&!body.classList.contains('notes-off')){
-        openPop('<span class="k">'+'Notes'.toLowerCase()+'</span><div class="notebody">'+nnF.innerHTML+'</div>',npFirst);
+        openPop('<span class="k">'+esc(T.notes).toLowerCase()+'</span><div class="notebody">'+nnF.innerHTML+'</div>',npFirst);
         showZone(nnF);
         ev.stopPropagation();return;
       }
@@ -937,9 +945,9 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
           var el=doc.getElementById(id);
           var sec=el&&el.closest?el.closest('.vmap')||el:el;
           if(!sec)return;
-          openPop('<span class="k">'+'Apparatus'.toLowerCase()+'</span>'
+          openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'
             +'<div class="popband" data-ent="'+esc(key)+'">'+sec.innerHTML+'</div>'
-            +'<div class="meta"><a href="'+tgt+'">open the page</a></div>',lw);
+            +'<div class="meta"><a href="'+tgt+'">'+esc(T.openPage)+'</a></div>',lw);
         })['catch'](function(){});
       });
       ev.stopPropagation();return;
@@ -948,7 +956,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     if(lv&&lv.nextElementSibling&&lv.nextElementSibling.classList
        &&lv.nextElementSibling.classList.contains('app-band')){
       var bd=lv.nextElementSibling;
-      openPop('<span class="k">'+'Apparatus'.toLowerCase()+'</span>'
+      openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'
         +'<div class="popband" data-ent="'+(bd.getAttribute('data-ent')||'')+'">'+bd.innerHTML+'</div>',lv);
       ev.stopPropagation();return;
     }
@@ -956,7 +964,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     if(np&&!body.classList.contains('notes-off')){
       var nn=document.querySelector('.t-note[data-npi="'+np.getAttribute('data-notepop')+'"]');
       if(nn){
-        openPop('<span class="k">'+'Notes'.toLowerCase()+'</span><div class="notebody">'+nn.innerHTML+'</div>',np);
+        openPop('<span class="k">'+esc(T.notes).toLowerCase()+'</span><div class="notebody">'+nn.innerHTML+'</div>',np);
         showZone(nn);
         ev.stopPropagation();return;
       }
