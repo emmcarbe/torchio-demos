@@ -1,7 +1,8 @@
 {
  "files": [
   "chronicon.xml",
+  "lemmas.json",
   "torchio.json"
  ],
- "count": 2
+ "count": 3
 }
