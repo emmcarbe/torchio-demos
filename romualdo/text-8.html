@@ -45,7 +45,9 @@ body.show-header .t-teiHeader{display:block;border:1px solid var(--hair);
 .t-foreign,.t-hi,.t-emph,.t-title{font-style:italic}
 .t-quote{margin:.8em 0 .8em 1.4em;color:var(--soft)}
 
-.t-del{text-decoration:line-through;color:var(--soft)}
+/* the class carries the behaviour: anything the ODD declares a member of
+   model.pPart.transcriptional is struck through like del, named or not */
+.s-3-editoriale>[data-el="del"],.s-3-editoriale.t-del,.t-del{text-decoration:line-through;color:var(--soft)}
 .t-add{vertical-align:super;font-size:.82em}
 .t-unclear{background:#F5F4EF}
 .t-sign{color:var(--soft)}
@@ -145,6 +147,10 @@ body.notes-dense.notes-off .t-note-mark{cursor:default}
 .t-choice .t-orig,.t-choice .t-abbr,.t-choice .t-sic{display:none}
 body.mode-dipl .t-choice .t-orig,body.mode-dipl .t-choice .t-abbr,body.mode-dipl .t-choice .t-sic{display:inline}
 body.mode-dipl .t-choice .t-reg,body.mode-dipl .t-choice .t-expan,body.mode-dipl .t-choice .t-corr{display:none}
+/* behaviour by class, not by tag: an element that declares itself a member
+   of a TEI model class behaves like the class, whatever it is called */
+body.mode-read .s-3-editoriale [data-el="del"],body.mode-read .t-del{display:none}
+body.mode-dipl .s-3-editoriale .t-orig,body.mode-dipl .s-3-editoriale .t-abbr{display:inline}
 body.mode-read .t-del{display:none}
 body.mode-read .t-am{display:none}
 body.mode-dipl .t-ex{display:none}
@@ -173,6 +179,7 @@ header.torchio .tt{min-width:14rem}
 .md-table td:first-child{font-size:1.05em;white-space:nowrap}
 .wit-table td,.idx-table td{padding:6px 10px 6px 0;border-bottom:1px solid var(--hair);
   vertical-align:baseline}
+.agree-bar{display:inline-block;height:7px;background:var(--accent-soft);border-radius:2px;min-width:2px}
 .sigla{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--accent);
   white-space:nowrap}
 .occ{font-family:var(--mono);font-size:10.5px;color:var(--soft)}
@@ -1872,7 +1879,7 @@ Hic autem Calixtus papatum Romanum in pace et tranquillitate possedit et urbem
 </p>
  
 </div><section class="standoff-notes"><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.63" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app4-in-g180.10-180.12">Missing in MS O.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.64" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app7-in-g181.2-181.5">Bonetti is the collation exemplar and the text in the &#39;print&#39; colums is that of Bonetti, but I also checked Garufi&#39;s text and added it manually to the JuxtaCommons XML file (OK).</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.65" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app19-in-g183.1-184.6">Bonetti is the collation exemplar and the text in the &#39;print&#39; colums is that of Bonetti, but I also checked Garufi&#39;s text and added it manually to the JuxtaCommons XML file (OK).</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.66" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app3-in-g186.12-187.2">In MS O the following words are missing: &#39;Ipso quoque mense hec eadem stella apparuit a parte occidentis, cuius fumus ad meridiem&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.67" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app4-in-g187.14-188.1">MS O doesn&#39;t have the final words of this paragraph, &#39;Sicilie ciuitatem, uiriliter eam expugnans, cepitque eam&#39;. This is the end of the textual fragment of the Chronicon in folios 16r-18v of Ott. Lat. 2940.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.68" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app12-in-g201.1-201.18">Garufi has &#39;Troia&#39;; Bonetti&#39;s latin text omits that word; but Bonetti&#39;s Italian translation has it.</div></section><nav class="prevnext" aria-label="Contents"><a href="text-7.html">‹ previous</a><a href="text.html">Contents</a><a href="text-9.html">next ›</a></nav></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · d92d8b6 · 2026-07-31</footer>
 <script>
 (function(){
   var body=document.body; body.classList.add('mode-read');
@@ -2084,7 +2091,8 @@ Hic autem Calixtus papatum Romanum in pace et tranquillitate possedit et urbem
       ev.preventDefault();ev.target.click();
     }
   });
-  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
   var ALIGNMAP=null;
   function withAlign(cb){
     if(ALIGNMAP){cb(ALIGNMAP);return;}

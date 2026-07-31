@@ -420,7 +420,93 @@
          "\n    "
         ]
        },
-       "\n  "
+       "\n  ",
+       {
+        "id": "specimen:0.0.3",
+        "element": "profileDesc",
+        "section": "7-header",
+        "atts": {},
+        "children": [
+         {
+          "id": "specimen:0.0.3.0",
+          "element": "handNotes",
+          "section": "7-header",
+          "atts": {},
+          "children": [
+           "\n",
+           {
+            "id": "mano-prima",
+            "element": "handNote",
+            "section": "7-header",
+            "atts": {
+             "xml:id": "mano-prima"
+            },
+            "children": [
+             "la prima stesura, a penna"
+            ]
+           },
+           "\n",
+           {
+            "id": "mano-seconda",
+            "element": "handNote",
+            "section": "7-header",
+            "atts": {
+             "xml:id": "mano-seconda"
+            },
+            "children": [
+             "le correzioni, a matita"
+            ]
+           },
+           "\n"
+          ]
+         }
+        ]
+       },
+       "\n",
+       {
+        "id": "specimen:0.0.4",
+        "element": "revisionDesc",
+        "section": "7-header",
+        "atts": {},
+        "children": [
+         {
+          "id": "specimen:0.0.4.0",
+          "element": "listChange",
+          "section": "2-standoff",
+          "atts": {},
+          "children": [
+           "\n",
+           {
+            "id": "stesura",
+            "element": "change",
+            "section": "7-header",
+            "atts": {
+             "xml:id": "stesura",
+             "when": "1826"
+            },
+            "children": [
+             "prima stesura"
+            ]
+           },
+           "\n",
+           {
+            "id": "revisione",
+            "element": "change",
+            "section": "7-header",
+            "atts": {
+             "xml:id": "revisione",
+             "when": "1828"
+            },
+            "children": [
+             "campagna correttoria, prima della stampa"
+            ]
+           },
+           "\n"
+          ]
+         }
+        ]
+       },
+       "\n"
       ]
      },
      "\n  ",
@@ -663,15 +749,82 @@
             "section": "1-struttura",
             "atts": {},
             "children": [
-             "Nel testo in prosa lo specimen mostra anche la\n          ",
+             "Una pagina d'autore, per mostrare la stratigrafia: la sera\n",
              {
               "id": "specimen:0.1.0.0.2.0",
+              "element": "subst",
+              "section": "3-editoriale",
+              "atts": {
+               "change": "#stesura",
+               "hand": "#mano-prima"
+              },
+              "children": [
+               {
+                "id": "specimen:0.1.0.0.2.0.0",
+                "element": "del",
+                "section": "3-trascrizionale",
+                "atts": {},
+                "children": [
+                 "cadeva"
+                ]
+               },
+               {
+                "id": "specimen:0.1.0.0.2.0.1",
+                "element": "add",
+                "section": "3-trascrizionale",
+                "atts": {},
+                "children": [
+                 "scendeva"
+                ]
+               }
+              ]
+             },
+             "\nsul paese, e ",
+             {
+              "id": "specimen:0.1.0.0.2.1",
+              "element": "add",
+              "section": "3-trascrizionale",
+              "atts": {
+               "change": "#revisione",
+               "hand": "#mano-seconda",
+               "place": "above"
+              },
+              "children": [
+               "lentamente"
+              ]
+             },
+             "\nil vento ",
+             {
+              "id": "specimen:0.1.0.0.2.2",
+              "element": "del",
+              "section": "3-trascrizionale",
+              "atts": {
+               "change": "#revisione",
+               "hand": "#mano-seconda"
+              },
+              "children": [
+               "forte"
+              ]
+             },
+             " si placava."
+            ]
+           },
+           "\n",
+           {
+            "id": "specimen:0.1.0.0.3",
+            "element": "p",
+            "section": "1-struttura",
+            "atts": {},
+            "children": [
+             "Nel testo in prosa lo specimen mostra anche la\n          ",
+             {
+              "id": "specimen:0.1.0.0.3.0",
               "element": "choice",
               "section": "3-editoriale",
               "atts": {},
               "children": [
                {
-                "id": "specimen:0.1.0.0.2.0.0",
+                "id": "specimen:0.1.0.0.3.0.0",
                 "element": "abbr",
                 "section": "3-editoriale",
                 "atts": {},
@@ -680,7 +833,7 @@
                 ]
                },
                {
-                "id": "specimen:0.1.0.0.2.0.1",
+                "id": "specimen:0.1.0.0.3.0.1",
                 "element": "expan",
                 "section": "3-editoriale",
                 "atts": {},
@@ -692,7 +845,7 @@
              },
              " abbreviazione\n          col suo scioglimento, un passo\n          ",
              {
-              "id": "specimen:0.1.0.0.2.1",
+              "id": "specimen:0.1.0.0.3.1",
               "element": "unclear",
               "section": "3-editoriale",
               "atts": {},
@@ -702,7 +855,7 @@
              },
              ", una parola\n          ",
              {
-              "id": "specimen:0.1.0.0.2.2",
+              "id": "specimen:0.1.0.0.3.2",
               "element": "supplied",
               "section": "3-editoriale",
               "atts": {
@@ -714,7 +867,7 @@
              },
              ", e il nome di\n          ",
              {
-              "id": "specimen:0.1.0.0.2.3",
+              "id": "specimen:0.1.0.0.3.3",
               "element": "persName",
               "section": "2-entita",
               "atts": {
@@ -726,7 +879,7 @@
              },
              " che punta al registro,\n          come ",
              {
-              "id": "specimen:0.1.0.0.2.4",
+              "id": "specimen:0.1.0.0.3.4",
               "element": "placeName",
               "section": "2-entita",
               "atts": {
@@ -738,7 +891,7 @@
              },
              " alla mappa.\n          ",
              {
-              "id": "specimen:0.1.0.0.2.5",
+              "id": "specimen:0.1.0.0.3.5",
               "element": "note",
               "section": "1-note",
               "atts": {
@@ -783,7 +936,7 @@
      "xml:id": "odisseo"
     },
     "occurrences": [
-     "specimen:0.1.0.0.2.3"
+     "specimen:0.1.0.0.3.3"
     ]
    },
    {
@@ -819,7 +972,7 @@
      "xml:id": "itaca"
     },
     "occurrences": [
-     "specimen:0.1.0.0.2.4"
+     "specimen:0.1.0.0.3.4"
     ],
     "geo": {
      "lat": 38.4381,
@@ -877,6 +1030,24 @@
     },
     "occurrences": [],
     "scope": "minor"
+   },
+   {
+    "id": "mano-prima",
+    "label": "la prima stesura, a penna",
+    "atts": {
+     "xml:id": "mano-prima"
+    },
+    "occurrences": [],
+    "scope": null
+   },
+   {
+    "id": "mano-seconda",
+    "label": "le correzioni, a matita",
+    "atts": {
+     "xml:id": "mano-seconda"
+    },
+    "occurrences": [],
+    "scope": null
    }
   ],
   "layers": [
@@ -888,6 +1059,26 @@
     },
     "occurrences": [],
     "order": 0
+   },
+   {
+    "id": "stesura",
+    "label": "prima stesura",
+    "atts": {
+     "xml:id": "stesura",
+     "when": "1826"
+    },
+    "occurrences": [],
+    "order": 1
+   },
+   {
+    "id": "revisione",
+    "label": "campagna correttoria, prima della stampa",
+    "atts": {
+     "xml:id": "revisione",
+     "when": "1828"
+    },
+    "occurrences": [],
+    "order": 2
    }
   ]
  },
@@ -971,6 +1162,132 @@
  "generator": {
   "name": "torchio",
   "tei": "P5 Version 4.12.0. Last updated on\n        28th July 2026, revision 113e933e2"
+ },
+ "genetic": {
+  "strata": [
+   {
+    "id": "stesura",
+    "label": "prima stesura",
+    "order": 1,
+    "when": "1826",
+    "operations": 1
+   },
+   {
+    "id": "revisione",
+    "label": "campagna correttoria, prima della stampa",
+    "order": 2,
+    "when": "1828",
+    "operations": 2
+   },
+   {
+    "id": "m1",
+    "label": "Mano principale, immaginaria.",
+    "order": 3,
+    "hand": true,
+    "operations": 1
+   },
+   {
+    "id": "m2",
+    "label": "Mano di revisione, immaginaria.",
+    "order": 4,
+    "hand": true,
+    "operations": 1
+   },
+   {
+    "id": "mano-prima",
+    "label": "la prima stesura, a penna",
+    "order": 5,
+    "hand": true,
+    "operations": 1
+   },
+   {
+    "id": "mano-seconda",
+    "label": "le correzioni, a matita",
+    "order": 6,
+    "hand": true,
+    "operations": 2
+   }
+  ],
+  "operations": [
+   {
+    "id": "specimen:0.1.0.0.1.6.0",
+    "doc": "specimen",
+    "element": "del",
+    "layer": null,
+    "hand": "m1",
+    "place": null,
+    "seq": null,
+    "text": "salvar"
+   },
+   {
+    "id": "specimen:0.1.0.0.1.6.1",
+    "doc": "specimen",
+    "element": "add",
+    "layer": null,
+    "hand": "m2",
+    "place": "above",
+    "seq": null,
+    "text": "redimer"
+   },
+   {
+    "id": "specimen:0.1.0.0.2.0",
+    "doc": "specimen",
+    "element": "subst",
+    "layer": "stesura",
+    "hand": "mano-prima",
+    "place": null,
+    "seq": null,
+    "text": "cadevascendeva"
+   },
+   {
+    "id": "specimen:0.1.0.0.2.1",
+    "doc": "specimen",
+    "element": "add",
+    "layer": "revisione",
+    "hand": "mano-seconda",
+    "place": "above",
+    "seq": null,
+    "text": "lentamente"
+   },
+   {
+    "id": "specimen:0.1.0.0.2.2",
+    "doc": "specimen",
+    "element": "del",
+    "layer": "revisione",
+    "hand": "mano-seconda",
+    "place": null,
+    "seq": null,
+    "text": "forte"
+   }
+  ]
+ },
+ "agreement": {
+  "witnesses": [
+   {
+    "id": "A",
+    "readings": 2
+   },
+   {
+    "id": "C",
+    "readings": 2
+   },
+   {
+    "id": "B",
+    "readings": 2
+   }
+  ],
+  "pairs": [
+   {
+    "a": "A",
+    "b": "C",
+    "together": 1
+   },
+   {
+    "a": "B",
+    "b": "C",
+    "together": 1
+   }
+  ]
  },
  "lemmas": null
 }

@@ -45,7 +45,9 @@ body.show-header .t-teiHeader{display:block;border:1px solid var(--hair);
 .t-foreign,.t-hi,.t-emph,.t-title{font-style:italic}
 .t-quote{margin:.8em 0 .8em 1.4em;color:var(--soft)}
 
-.t-del{text-decoration:line-through;color:var(--soft)}
+/* the class carries the behaviour: anything the ODD declares a member of
+   model.pPart.transcriptional is struck through like del, named or not */
+.s-3-editoriale>[data-el="del"],.s-3-editoriale.t-del,.t-del{text-decoration:line-through;color:var(--soft)}
 .t-add{vertical-align:super;font-size:.82em}
 .t-unclear{background:#F5F4EF}
 .t-sign{color:var(--soft)}
@@ -145,6 +147,10 @@ body.notes-dense.notes-off .t-note-mark{cursor:default}
 .t-choice .t-orig,.t-choice .t-abbr,.t-choice .t-sic{display:none}
 body.mode-dipl .t-choice .t-orig,body.mode-dipl .t-choice .t-abbr,body.mode-dipl .t-choice .t-sic{display:inline}
 body.mode-dipl .t-choice .t-reg,body.mode-dipl .t-choice .t-expan,body.mode-dipl .t-choice .t-corr{display:none}
+/* behaviour by class, not by tag: an element that declares itself a member
+   of a TEI model class behaves like the class, whatever it is called */
+body.mode-read .s-3-editoriale [data-el="del"],body.mode-read .t-del{display:none}
+body.mode-dipl .s-3-editoriale .t-orig,body.mode-dipl .s-3-editoriale .t-abbr{display:inline}
 body.mode-read .t-del{display:none}
 body.mode-read .t-am{display:none}
 body.mode-dipl .t-ex{display:none}
@@ -173,6 +179,7 @@ header.torchio .tt{min-width:14rem}
 .md-table td:first-child{font-size:1.05em;white-space:nowrap}
 .wit-table td,.idx-table td{padding:6px 10px 6px 0;border-bottom:1px solid var(--hair);
   vertical-align:baseline}
+.agree-bar{display:inline-block;height:7px;background:var(--accent-soft);border-radius:2px;min-width:2px}
 .sigla{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--accent);
   white-space:nowrap}
 .occ{font-family:var(--mono);font-size:10.5px;color:var(--soft)}
@@ -294,9 +301,9 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="torchio">
 <div class="tt"><h1>Specimen</h1><p class="sub">esempio costruito: testimoni immaginari, varianti didattiche</p></div>
-<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html" class="on">Edizione</a><a href="text.html">Testo</a><a href="indices.html">Indici</a><a href="map.html">Mappa</a><a href="data.html">Dati</a></nav>
+<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html" class="on">Edizione</a><a href="text.html">Testo</a><a href="genesis.html">Genesi</a><a href="indices.html">Indici</a><a href="map.html">Mappa</a><a href="data.html">Dati</a></nav>
 </header>
-<main id="main" class="torchio about"><dl><dt>Responsabilità</dt><dd>Omero, nella traduzione di Ippolito Pindemonte (1822)</dd><dt>Licenza</dt><dd><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0: nessun diritto riservato su questa codifica dimostrativa.</a></dd><dt>Testimoni</dt><dd><table class="wit-table"><tr><td class="sigla">A</td><td>Testimone A, immaginario: la stampa di riferimento.</td></tr><tr><td class="sigla">B</td><td>Testimone B, immaginario: una copia con lezioni proprie.</td></tr><tr><td class="sigla">C</td><td>Testimone C, immaginario: un apografo tardo.</td></tr></table></dd><dt>Apparati</dt><dd>critical (2 voci)</dd><dt>Storia delle revisioni</dt><dd><table class="wit-table"><tr><td class="sigla">2026-07-30</td><td>Specimen creato per la pubblicazione di Torchio.</td></tr></table></dd><dt>Generatore</dt><dd class="occ">Torchio v0 · TEI P5 Version 4.12</dd></dl><h2 class="sec">L'intestazione completa (teiHeader)</h2><p class="occ">Tutto ciò che il file dichiara, reso così com'è.</p><div class="header-full"><div id="specimen:0.0" class="t-teiHeader s-7-header" data-el="teiHeader">
+<main id="main" class="torchio about"><dl><dt>Responsabilità</dt><dd>Omero, nella traduzione di Ippolito Pindemonte (1822)</dd><dt>Licenza</dt><dd><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0: nessun diritto riservato su questa codifica dimostrativa.</a></dd><dt>Testimoni</dt><dd><table class="wit-table"><tr><td class="sigla">A</td><td>Testimone A, immaginario: la stampa di riferimento.</td></tr><tr><td class="sigla">B</td><td>Testimone B, immaginario: una copia con lezioni proprie.</td></tr><tr><td class="sigla">C</td><td>Testimone C, immaginario: un apografo tardo.</td></tr></table></dd><dt>Accordi fra testimoni</dt><dd><table class="wit-table"><tr><td class="sigla">A · C</td><td><span class="agree-bar" style="width:100%"></span></td><td class="occ">1</td></tr><tr><td class="sigla">B · C</td><td><span class="agree-bar" style="width:100%"></span></td><td class="occ">1</td></tr></table><p class="occ">Quante volte due testimoni portano la stessa lezione. Materiale per lo stemma, che resta argomento dell’editore.</p></dd><dt>Apparati</dt><dd>critical (2 voci)</dd><dt>Storia delle revisioni</dt><dd><table class="wit-table"><tr><td class="sigla">2026-07-30</td><td>Specimen creato per la pubblicazione di Torchio.</td></tr></table></dd><dt>Generatore</dt><dd class="occ">Torchio v0 · TEI P5 Version 4.12</dd></dl><h2 class="sec">L'intestazione completa (teiHeader)</h2><p class="occ">Tutto ciò che il file dichiara, reso così com'è.</p><div class="header-full"><div id="specimen:0.0" class="t-teiHeader s-7-header" data-el="teiHeader">
     <div id="specimen:0.0.0" class="t-fileDesc s-7-header" data-el="fileDesc">
       <span id="specimen:0.0.0.0" class="t-titleStmt s-7-header" data-el="titleStmt">
         <span id="specimen:0.0.0.0.0" class="t-title s-1-inline" data-el="title">Specimen</span>
@@ -341,8 +348,16 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     <span id="specimen:0.0.2" class="t-revisionDesc s-7-header" data-el="revisionDesc">
       <div id="specimen:0.0.2.0" class="t-change s-7-header" data-el="change" data-when="2026-07-30">Specimen creato per la pubblicazione di Torchio.</div>
     </span>
-  </div></div></main>
-<footer class="torchio">Pubblicato con <span class="press">Torchio</span> v0</footer>
+  <span id="specimen:0.0.3" class="t-profileDesc s-7-header" data-el="profileDesc"><span id="specimen:0.0.3.0" class="t-handNotes s-7-header" data-el="handNotes">
+<span id="mano-prima" class="t-handNote s-7-header" data-el="handNote">la prima stesura, a penna</span>
+<span id="mano-seconda" class="t-handNote s-7-header" data-el="handNote">le correzioni, a matita</span>
+</span></span>
+<span id="specimen:0.0.4" class="t-revisionDesc s-7-header" data-el="revisionDesc"><div id="specimen:0.0.4.0" class="t-listChange s-2-standoff" data-el="listChange">
+<div id="stesura" class="t-change s-7-header" data-el="change" data-when="1826">prima stesura</div>
+<div id="revisione" class="t-change s-7-header" data-el="change" data-when="1828">campagna correttoria, prima della stampa</div>
+</div></span>
+</div></div></main>
+<footer class="torchio">Pubblicato con <span class="press">Torchio</span> v0.1.0 · d92d8b6 · 2026-07-31</footer>
 
 </body>
 </html>

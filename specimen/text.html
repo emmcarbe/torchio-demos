@@ -45,7 +45,9 @@ body.show-header .t-teiHeader{display:block;border:1px solid var(--hair);
 .t-foreign,.t-hi,.t-emph,.t-title{font-style:italic}
 .t-quote{margin:.8em 0 .8em 1.4em;color:var(--soft)}
 
-.t-del{text-decoration:line-through;color:var(--soft)}
+/* the class carries the behaviour: anything the ODD declares a member of
+   model.pPart.transcriptional is struck through like del, named or not */
+.s-3-editoriale>[data-el="del"],.s-3-editoriale.t-del,.t-del{text-decoration:line-through;color:var(--soft)}
 .t-add{vertical-align:super;font-size:.82em}
 .t-unclear{background:#F5F4EF}
 .t-sign{color:var(--soft)}
@@ -145,6 +147,10 @@ body.notes-dense.notes-off .t-note-mark{cursor:default}
 .t-choice .t-orig,.t-choice .t-abbr,.t-choice .t-sic{display:none}
 body.mode-dipl .t-choice .t-orig,body.mode-dipl .t-choice .t-abbr,body.mode-dipl .t-choice .t-sic{display:inline}
 body.mode-dipl .t-choice .t-reg,body.mode-dipl .t-choice .t-expan,body.mode-dipl .t-choice .t-corr{display:none}
+/* behaviour by class, not by tag: an element that declares itself a member
+   of a TEI model class behaves like the class, whatever it is called */
+body.mode-read .s-3-editoriale [data-el="del"],body.mode-read .t-del{display:none}
+body.mode-dipl .s-3-editoriale .t-orig,body.mode-dipl .s-3-editoriale .t-abbr{display:inline}
 body.mode-read .t-del{display:none}
 body.mode-read .t-am{display:none}
 body.mode-dipl .t-ex{display:none}
@@ -173,6 +179,7 @@ header.torchio .tt{min-width:14rem}
 .md-table td:first-child{font-size:1.05em;white-space:nowrap}
 .wit-table td,.idx-table td{padding:6px 10px 6px 0;border-bottom:1px solid var(--hair);
   vertical-align:baseline}
+.agree-bar{display:inline-block;height:7px;background:var(--accent-soft);border-radius:2px;min-width:2px}
 .sigla{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--accent);
   white-space:nowrap}
 .occ{font-family:var(--mono);font-size:10.5px;color:var(--soft)}
@@ -294,7 +301,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="torchio">
 <div class="tt"><h1>Specimen</h1><p class="sub">Omero, nella traduzione di Ippolito Pindemonte (1822)</p></div>
-<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Edizione</a><a href="text.html" class="on">Testo</a><a href="indices.html">Indici</a><a href="map.html">Mappa</a><a href="data.html">Dati</a></nav>
+<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Edizione</a><a href="text.html" class="on">Testo</a><a href="genesis.html">Genesi</a><a href="indices.html">Indici</a><a href="map.html">Mappa</a><a href="data.html">Dati</a></nav>
 </header>
 <div class="torchio-bar"><div class="inner"><span class="modes" role="group" aria-label="Testo"><button data-mode="read" class="active" aria-pressed="true">Interpretativa</button><button data-mode="dipl" aria-pressed="false">Diplomatica</button></span><button class="sw" data-sw="app" aria-pressed="true">Apparato</button><button class="sw" data-sw="notes" aria-pressed="true">Note</button><button class="sw off" data-sw="header" aria-pressed="false">Scheda del file</button></div></div><main id="main" class="torchio"><div id="specimen:0.0" class="t-teiHeader s-7-header" data-el="teiHeader">
     <div id="specimen:0.0.0" class="t-fileDesc s-7-header" data-el="fileDesc">
@@ -341,7 +348,15 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     <span id="specimen:0.0.2" class="t-revisionDesc s-7-header" data-el="revisionDesc">
       <div id="specimen:0.0.2.0" class="t-change s-7-header" data-el="change" data-when="2026-07-30">Specimen creato per la pubblicazione di Torchio.</div>
     </span>
-  </div><div id="specimen:0.1.0" class="t-body s-1-struttura" data-el="body">
+  <span id="specimen:0.0.3" class="t-profileDesc s-7-header" data-el="profileDesc"><span id="specimen:0.0.3.0" class="t-handNotes s-7-header" data-el="handNotes">
+<span id="mano-prima" class="t-handNote s-7-header" data-el="handNote">la prima stesura, a penna</span>
+<span id="mano-seconda" class="t-handNote s-7-header" data-el="handNote">le correzioni, a matita</span>
+</span></span>
+<span id="specimen:0.0.4" class="t-revisionDesc s-7-header" data-el="revisionDesc"><div id="specimen:0.0.4.0" class="t-listChange s-2-standoff" data-el="listChange">
+<div id="stesura" class="t-change s-7-header" data-el="change" data-when="1826">prima stesura</div>
+<div id="revisione" class="t-change s-7-header" data-el="change" data-when="1828">campagna correttoria, prima della stampa</div>
+</div></span>
+</div><div id="specimen:0.1.0" class="t-body s-1-struttura" data-el="body">
       <div id="specimen:0.1.0.0" class="t-div s-1-struttura" data-el="div" data-type="specimen">
         <h2 id="specimen:0.1.0.0.0" class="t-head s-1-struttura" data-el="head">L&#39;incipit, con apparato dimostrativo</h2>
         <div id="specimen:0.1.0.0.1" class="t-lg s-1-struttura" data-el="lg">
@@ -356,17 +371,21 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
           <div id="specimen:0.1.0.0.1.6" class="t-l s-1-versi" data-el="l">mentre a <span id="specimen:0.1.0.0.1.6.0" class="t-del s-3-trascrizionale" data-el="del" data-hand="#m1">salvar</span><span id="specimen:0.1.0.0.1.6.1" class="t-add s-3-trascrizionale" data-el="add" data-place="above" data-hand="#m2">redimer</span> cercava a sé la vita,</div>
           <div id="specimen:0.1.0.0.1.7" class="t-l s-1-versi" data-el="l">e il ritorno a&#39; compagni.</div>
         </div>
-        <div id="specimen:0.1.0.0.2" class="t-p s-1-struttura" data-el="p">Nel testo in prosa lo specimen mostra anche la
-          <span id="specimen:0.1.0.0.2.0" class="t-choice s-3-editoriale" data-el="choice"><span id="specimen:0.1.0.0.2.0.0" class="t-abbr s-3-editoriale" data-el="abbr">sig.ra</span><span id="specimen:0.1.0.0.2.0.1" class="t-expan s-3-editoriale" data-el="expan">signora</span></span> abbreviazione
+        <p id="specimen:0.1.0.0.2" class="t-p s-1-struttura" data-el="p">Una pagina d&#39;autore, per mostrare la stratigrafia: la sera
+<span id="specimen:0.1.0.0.2.0" class="t-subst s-3-editoriale" data-el="subst" data-hand="#mano-prima"><span id="specimen:0.1.0.0.2.0.0" class="t-del s-3-trascrizionale" data-el="del">cadeva</span><span id="specimen:0.1.0.0.2.0.1" class="t-add s-3-trascrizionale" data-el="add">scendeva</span></span>
+sul paese, e <span id="specimen:0.1.0.0.2.1" class="t-add s-3-trascrizionale" data-el="add" data-place="above" data-hand="#mano-seconda">lentamente</span>
+il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-el="del" data-hand="#mano-seconda">forte</span> si placava.</p>
+<div id="specimen:0.1.0.0.3" class="t-p s-1-struttura" data-el="p">Nel testo in prosa lo specimen mostra anche la
+          <span id="specimen:0.1.0.0.3.0" class="t-choice s-3-editoriale" data-el="choice"><span id="specimen:0.1.0.0.3.0.0" class="t-abbr s-3-editoriale" data-el="abbr">sig.ra</span><span id="specimen:0.1.0.0.3.0.1" class="t-expan s-3-editoriale" data-el="expan">signora</span></span> abbreviazione
           col suo scioglimento, un passo
-          <span id="specimen:0.1.0.0.2.1" class="t-unclear s-3-editoriale" data-el="unclear">di lettura incerta</span>, una parola
-          <span id="specimen:0.1.0.0.2.2" class="t-supplied s-3-editoriale" data-el="supplied"><span class="t-sign">[</span>integrata<span class="t-sign">]</span></span>, e il nome di
-          <span id="specimen:0.1.0.0.2.3" class="t-persName s-2-entita" data-el="persName" data-ref="#odisseo">Odisseo</span> che punta al registro,
-          come <span id="specimen:0.1.0.0.2.4" class="t-placeName s-2-entita" data-el="placeName" data-ref="#itaca">Itaca</span> alla mappa.
-          <span class="t-note-mark" aria-hidden="true">°</span><div id="specimen:0.1.0.0.2.5" class="t-note s-1-note" data-el="note" data-type="editorial">Le note editoriali si mostrano così.</div></div>
+          <span id="specimen:0.1.0.0.3.1" class="t-unclear s-3-editoriale" data-el="unclear">di lettura incerta</span>, una parola
+          <span id="specimen:0.1.0.0.3.2" class="t-supplied s-3-editoriale" data-el="supplied"><span class="t-sign">[</span>integrata<span class="t-sign">]</span></span>, e il nome di
+          <span id="specimen:0.1.0.0.3.3" class="t-persName s-2-entita" data-el="persName" data-ref="#odisseo">Odisseo</span> che punta al registro,
+          come <span id="specimen:0.1.0.0.3.4" class="t-placeName s-2-entita" data-el="placeName" data-ref="#itaca">Itaca</span> alla mappa.
+          <span class="t-note-mark" aria-hidden="true">°</span><div id="specimen:0.1.0.0.3.5" class="t-note s-1-note" data-el="note" data-type="editorial">Le note editoriali si mostrano così.</div></div>
       </div>
     </div></main>
-<footer class="torchio">Pubblicato con <span class="press">Torchio</span> v0</footer>
+<footer class="torchio">Pubblicato con <span class="press">Torchio</span> v0.1.0 · d92d8b6 · 2026-07-31</footer>
 <script>
 (function(){
   var body=document.body; body.classList.add('mode-read');
@@ -578,7 +597,8 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       ev.preventDefault();ev.target.click();
     }
   });
-  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
   var ALIGNMAP=null;
   function withAlign(cb){
     if(ALIGNMAP){cb(ALIGNMAP);return;}

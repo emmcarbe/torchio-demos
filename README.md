@@ -44,6 +44,10 @@ and `node tools/press.js --site demo-src/vangogh docs/vangogh`.
   Robinson. Materials under copyright; pressed and republished here by
   invitation of the editor as a test case. This is a temporary demo and it
   will be removed.
+- **Frankenstein, Volume III** (`sources/frankenstein/`): the
+  [Shelley-Godwin Archive](https://shelleygodwinarchive.org/) transcription of
+  Bodleian MS. Abinger c.56, CC0. A genetic edition: Mary Shelley's hand and
+  her campaigns of correction, followed through the `handShift` declarations.
 - **Specimen** (`sources/specimen/`): a micro-edition constructed for
   demonstration purposes (imaginary witnesses, didactic variants, declared
   as such on the title page); base text: the opening of the Odyssey in
