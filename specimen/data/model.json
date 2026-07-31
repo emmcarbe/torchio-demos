@@ -1215,6 +1215,7 @@
     "element": "del",
     "layer": null,
     "hand": "m1",
+    "handInferred": false,
     "place": null,
     "seq": null,
     "text": "salvar"
@@ -1225,6 +1226,7 @@
     "element": "add",
     "layer": null,
     "hand": "m2",
+    "handInferred": false,
     "place": "above",
     "seq": null,
     "text": "redimer"
@@ -1235,6 +1237,7 @@
     "element": "subst",
     "layer": "stesura",
     "hand": "mano-prima",
+    "handInferred": false,
     "place": null,
     "seq": null,
     "text": "cadevascendeva"
@@ -1245,6 +1248,7 @@
     "element": "add",
     "layer": "revisione",
     "hand": "mano-seconda",
+    "handInferred": false,
     "place": "above",
     "seq": null,
     "text": "lentamente"
@@ -1255,6 +1259,7 @@
     "element": "del",
     "layer": "revisione",
     "hand": "mano-seconda",
+    "handInferred": false,
     "place": null,
     "seq": null,
     "text": "forte"

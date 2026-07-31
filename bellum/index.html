@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Bellum Alexandrinum</title>
 <style>:root{--ground:#FFFFFF;--paper:#FFFFFF;--ink:#1B1B1B;--soft:#6A6A66;--hair:#E5E2D9;--faint:#CFCCC2;--accent:#B01E28;--accent-soft:#9a5a52;--link:#B01E28;--reading:"EB Garamond",Iowan Old Style,Palatino,"Palatino Linotype",Georgia,serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;--serif:var(--reading);--measure:44rem}
 
@@ -322,13 +322,14 @@ ol.toc{columns:2;column-gap:2.5em;padding-left:1.4em;margin:1em 0}
 .lx-table td{padding:4px 10px 4px 0;border-bottom:1px solid var(--faint)}
 .lx-table .lx-num{text-align:right;font-family:var(--mono);font-size:12px;white-space:nowrap}
 .lx-table .lx-w{cursor:pointer}
+.lx-sort{cursor:pointer;user-select:none}
+.lx-sort:hover,.lx-sort.on{color:var(--accent)}
+.lx-arr{color:var(--accent);font-size:8px}
+.lx-alpha{margin:0 0 1em}
 .lx-table .lx-rel{color:var(--soft)}
 .lx-table tr.is-stop .lx-w{color:var(--soft)}
 .lx-lang{font-family:var(--mono);font-size:10px;color:var(--soft)}
 .lx-flip{font-size:11px;line-height:1;color:var(--accent);background:none;border:none;cursor:pointer;padding:2px 4px}
-.lx-cloud{line-height:1.9;padding:1em 0}
-.lx-cloud-w{cursor:pointer;margin:0 .18em;color:var(--ink);transition:opacity .1s}
-.lx-cloud-w:hover{color:var(--accent)}
 .lx-kwic{width:100%;border-collapse:collapse;font-size:14px}
 .lx-kwic td{padding:3px 8px;vertical-align:baseline}
 .lx-kwic .lx-b{text-align:right;color:var(--soft);width:42%}
@@ -367,7 +368,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
             <span id="ldlt-balex:0.0.0.0.2" class="t-sponsor s-1-bibliografia" data-el="sponsor">Society for Classical Studies</span>
             <span id="ldlt-balex:0.0.0.0.3" class="t-respStmt s-1-bibliografia" data-el="respStmt">
                <span id="ldlt-balex:0.0.0.0.3.0" class="t-resp s-1-struttura" data-el="resp">TEI XML encoding:</span>
-               <a id="ldlt-balex:0.0.0.0.3.1" class="t-name s-2-entita ent-ext" href="https://orcid.org/0000-0002-8192-9385" target="_blank" rel="noopener" data-el="name" data-ref="https://orcid.org/0000-0002-8192-9385">Samuel J. Huskey</a>
+               <a id="ldlt-balex:0.0.0.0.3.1" class="t-name s-2-entita ent-ext" href="https://orcid.org/0000-0002-8192-9385" target="_blank" rel="noopener" title="ref: https://orcid.org/0000-0002-8192-9385" data-el="name" data-ref="https://orcid.org/0000-0002-8192-9385">Samuel J. Huskey</a>
             </span>
             <span id="ldlt-balex:0.0.0.0.4" class="t-respStmt s-1-bibliografia" data-el="respStmt">
                <span id="ldlt-balex:0.0.0.0.4.0" class="t-resp s-1-struttura" data-el="resp">Programming for automatic generation of TEI XML:</span>
@@ -435,7 +436,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
             <span id="ldlt-balex:0.0.0.3.0" class="t-title s-1-inline" data-el="title">Library of Digital Latin Texts</span>
             <span id="ldlt-balex:0.0.0.3.1" class="t-respStmt s-1-bibliografia" data-el="respStmt">
                <span id="ldlt-balex:0.0.0.3.1.0" class="t-resp s-1-struttura" data-el="resp">Edited by</span>
-               <a id="ldlt-balex:0.0.0.3.1.1" class="t-name s-2-entita ent-ext" href="https://orcid.org/0000-0002-8192-9385" target="_blank" rel="noopener" data-el="name" data-ref="https://orcid.org/0000-0002-8192-9385">Samuel J. Huskey</a>
+               <a id="ldlt-balex:0.0.0.3.1.1" class="t-name s-2-entita ent-ext" href="https://orcid.org/0000-0002-8192-9385" target="_blank" rel="noopener" title="ref: https://orcid.org/0000-0002-8192-9385" data-el="name" data-ref="https://orcid.org/0000-0002-8192-9385">Samuel J. Huskey</a>
             </span>
             <span id="ldlt-balex:0.0.0.3.2" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">1</span>
             <span id="ldlt-balex:0.0.0.3.3" class="t-idno s-2-entita" data-el="idno" data-type="DOI"></span>
@@ -517,7 +518,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
        </span>
      </span>
    </div></div></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · fece455 · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.1 · 74545a3 · 2026-07-31</footer>
 
 </body>
 </html>

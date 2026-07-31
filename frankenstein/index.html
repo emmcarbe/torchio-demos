@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Frankenstein, Volume III</title>
 <style>:root{--ground:#FFFFFF;--paper:#FFFFFF;--ink:#1B1B1B;--soft:#6A6A66;--hair:#E5E2D9;--faint:#CFCCC2;--accent:#B01E28;--accent-soft:#9a5a52;--link:#B01E28;--reading:"EB Garamond",Iowan Old Style,Palatino,"Palatino Linotype",Georgia,serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;--serif:var(--reading);--measure:44rem}
 
@@ -322,13 +322,14 @@ ol.toc{columns:2;column-gap:2.5em;padding-left:1.4em;margin:1em 0}
 .lx-table td{padding:4px 10px 4px 0;border-bottom:1px solid var(--faint)}
 .lx-table .lx-num{text-align:right;font-family:var(--mono);font-size:12px;white-space:nowrap}
 .lx-table .lx-w{cursor:pointer}
+.lx-sort{cursor:pointer;user-select:none}
+.lx-sort:hover,.lx-sort.on{color:var(--accent)}
+.lx-arr{color:var(--accent);font-size:8px}
+.lx-alpha{margin:0 0 1em}
 .lx-table .lx-rel{color:var(--soft)}
 .lx-table tr.is-stop .lx-w{color:var(--soft)}
 .lx-lang{font-family:var(--mono);font-size:10px;color:var(--soft)}
 .lx-flip{font-size:11px;line-height:1;color:var(--accent);background:none;border:none;cursor:pointer;padding:2px 4px}
-.lx-cloud{line-height:1.9;padding:1em 0}
-.lx-cloud-w{cursor:pointer;margin:0 .18em;color:var(--ink);transition:opacity .1s}
-.lx-cloud-w:hover{color:var(--accent)}
 .lx-kwic{width:100%;border-collapse:collapse;font-size:14px}
 .lx-kwic td{padding:3px 8px;vertical-align:baseline}
 .lx-kwic .lx-b{text-align:right;color:var(--soft);width:42%}
@@ -377,22 +378,22 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                 <span id="ox-frankenstein-volume_iii:0.0.0.1.0" class="t-edition s-1-bibliografia" data-el="edition">Shelley-Godwin Archive edition, <span id="ox-frankenstein-volume_iii:0.0.0.1.0.0" class="t-date s-2-date" data-el="date">2012-2014</span>
                 </span>
             </span>
-            <span id="ox-frankenstein-volume_iii:0.0.0.2" class="t-publicationStmt s-7-header" data-el="publicationStmt">
+            <div id="ox-frankenstein-volume_iii:0.0.0.2" class="t-publicationStmt s-7-header" data-el="publicationStmt">
                 <span id="ox-frankenstein-volume_iii:0.0.0.2.0" class="t-distributor s-1-bibliografia" data-el="distributor">Oxford University</span>
                 <span id="ox-frankenstein-volume_iii:0.0.0.2.1" class="t-address s-1-struttura" data-el="address">
                     <span id="ox-frankenstein-volume_iii:0.0.0.2.1.0" class="t-addrLine s-2-entita" data-el="addrLine">
                         <span id="ox-frankenstein-volume_iii:0.0.0.2.1.0.0" class="t-ref s-2-corrispondenza" data-el="ref" data-target="http://www.shelleygodwinarchive.org/">http://www.shelleygodwinarchive.org/</span>
                     </span>
                 </span>
-                <span id="ox-frankenstein-volume_iii:0.0.0.2.2" class="t-availability s-1-bibliografia" data-el="availability">
-                    <span id="ox-frankenstein-volume_iii:0.0.0.2.2.0" class="t-licence s-7-licenza" data-el="licence" data-target="http://creativecommons.org/publicdomain/zero/1.0/">
+                <div id="ox-frankenstein-volume_iii:0.0.0.2.2" class="t-availability s-1-bibliografia" data-el="availability">
+                    <div id="ox-frankenstein-volume_iii:0.0.0.2.2.0" class="t-licence s-7-licenza" data-el="licence" data-target="http://creativecommons.org/publicdomain/zero/1.0/">
                         <p id="ox-frankenstein-volume_iii:0.0.0.2.2.0.0" class="t-p s-1-struttura" data-el="p">CC0 1.0 Universal.</p>
                         <p id="ox-frankenstein-volume_iii:0.0.0.2.2.0.1" class="t-p s-1-struttura" data-el="p"> To the extent possible under law, the creators of the metadata records for the Shelley-Godwin Archive 
                             have waived all copyright and related or neighboring rights to this work.</p>
-                    </span>
-                </span>
+                    </div>
+                </div>
                 <span id="ox-frankenstein-volume_iii:0.0.0.2.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Oxford, UK, and College Park, MD</span>
-            </span>
+            </div>
             <div id="ox-frankenstein-volume_iii:0.0.0.3" class="t-sourceDesc s-7-header" data-el="sourceDesc">
                 <div id="ox-frankenstein-volume_iii:0.0.0.3.0" class="t-msDesc s-1-bibliografia" data-el="msDesc">
                     <span id="ox-frankenstein-volume_iii:0.0.0.3.0.0" class="t-msIdentifier s-1-bibliografia" data-el="msIdentifier">
@@ -400,34 +401,34 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                         <span id="ox-frankenstein-volume_iii:0.0.0.3.0.0.1" class="t-repository s-7-msdesc" data-el="repository">Bodleian Library, University of Oxford</span>
                         <span id="ox-frankenstein-volume_iii:0.0.0.3.0.0.2" class="t-idno s-2-entita" data-el="idno" data-type="Bod">MS. Abinger c.58</span>
                     </span>
-                    <span id="ox-frankenstein-volume_iii:0.0.0.3.0.1" class="t-msContents s-7-msdesc" data-el="msContents">
-                        <span id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0" class="t-msItem s-7-msdesc" data-el="msItem">
+                    <div id="ox-frankenstein-volume_iii:0.0.0.3.0.1" class="t-msContents s-7-msdesc" data-el="msContents">
+                        <div id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0" class="t-msItem s-7-msdesc" data-el="msItem">
                             <div id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.0" class="t-bibl s-1-bibliografia" data-el="bibl">
                                 <span id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.0.0" class="t-author s-1-bibliografia" data-el="author">Mary Wollstonecraft Shelley</span>
                                 <span id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.0.1" class="t-title s-1-inline" data-el="title">Frankenstein</span>
                             </div>
-                            <span id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1" class="t-msItem s-7-msdesc" data-el="msItem" data-n="III">
+                            <div id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1" class="t-msItem s-7-msdesc" data-el="msItem" data-n="III">
                                 <div id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.0" class="t-bibl s-1-bibliografia" data-el="bibl">
                                     <span id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.0.0" class="t-title s-1-inline" data-el="title">Volume III</span>
                                     <span id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.0.1" class="t-date s-2-date" data-el="date">18 April-[?13] May 1817</span>
                                 </div>
-                                <span id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.1" class="t-msItem s-7-msdesc" data-el="msItem" data-n="5">
+                                <div id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.1" class="t-msItem s-7-msdesc" data-el="msItem" data-n="5">
                                     <span id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.1.0" class="t-locusGrp s-7-msdesc" data-el="locusGrp">
                                         <span id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.1.0.0" class="t-locus s-7-msdesc" data-el="locus" data-target="#ox-ms_abinger_c58-0001 #ox-ms_abinger_c58-0002 #ox-ms_abinger_c58-0003 #ox-ms_abinger_c58-0004 #ox-ms_abinger_c58-0005 #ox-ms_abinger_c58-0006 #ox-ms_abinger_c58-0007 #ox-ms_abinger_c58-0008 #ox-ms_abinger_c58-0009 #ox-ms_abinger_c58-0010 #ox-ms_abinger_c58-0011 #ox-ms_abinger_c58-0012"></span>
                                     </span>
                                     <div id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.1.1" class="t-bibl s-1-bibliografia" data-el="bibl">
                                         <span id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.1.1.0" class="t-title s-1-inline" data-el="title">Chapter 5</span>
                                     </div>
-                                </span>
-                                <span id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.2" class="t-msItem s-7-msdesc" data-el="msItem" data-n="6">
+                                </div>
+                                <div id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.2" class="t-msItem s-7-msdesc" data-el="msItem" data-n="6">
                                     <span id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.2.0" class="t-locusGrp s-7-msdesc" data-el="locusGrp">
                                         <span id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.2.0.0" class="t-locus s-7-msdesc" data-el="locus" data-target="#ox-ms_abinger_c58-0013 #ox-ms_abinger_c58-0014 #ox-ms_abinger_c58-0015 #ox-ms_abinger_c58-0016 #ox-ms_abinger_c58-0017 #ox-ms_abinger_c58-0018 #ox-ms_abinger_c58-0019 #ox-ms_abinger_c58-0020 #ox-ms_abinger_c58-0021 #ox-ms_abinger_c58-0022 #ox-ms_abinger_c58-0023 #ox-ms_abinger_c58-0024 #ox-ms_abinger_c58-0025 #ox-ms_abinger_c58-0026 #ox-ms_abinger_c58-0027 #ox-ms_abinger_c58-0028 #ox-ms_abinger_c58-0029"></span>
                                     </span>
                                     <div id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.2.1" class="t-bibl s-1-bibliografia" data-el="bibl">
                                         <span id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.2.1.0" class="t-title s-1-inline" data-el="title">Chapter 6</span>
                                     </div>
-                                </span>
-                                <span id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.3" class="t-msItem s-7-msdesc" data-el="msItem" data-n="7">
+                                </div>
+                                <div id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.3" class="t-msItem s-7-msdesc" data-el="msItem" data-n="7">
                                     <span id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.3.0" class="t-locusGrp s-7-msdesc" data-el="locusGrp">
                                         <span id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.3.0.0" class="t-locus s-7-msdesc" data-el="locus" data-target="#ox-ms_abinger_c58-0030 #ox-ms_abinger_c58-0031 #ox-ms_abinger_c58-0032 #ox-ms_abinger_c58-0033 #ox-ms_abinger_c58-0034 #ox-ms_abinger_c58-0035 #ox-ms_abinger_c58-0036"></span>
                                         <span id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.3.0.1" class="t-locus s-7-msdesc" data-el="locus" data-target="ox-frankenstein_notebook_c2.xml#ox-ms_abinger_c58-0037">Beginning of second notebook</span>
@@ -436,10 +437,10 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                                     <div id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.3.1" class="t-bibl s-1-bibliografia" data-el="bibl">
                                         <span id="ox-frankenstein-volume_iii:0.0.0.3.0.1.0.1.3.1.0" class="t-title s-1-inline" data-el="title">Chapter 7</span>
                                     </div>
-                                </span>
-                            </span>
-                        </span>
-                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <span id="ox-frankenstein-volume_iii:0.0.0.3.0.2" class="t-physDesc s-7-msdesc" data-el="physDesc">
                         <span id="ox-frankenstein-volume_iii:0.0.0.3.0.2.0" class="t-handDesc s-7-msdesc" data-el="handDesc">
                             <span id="mws" class="t-handNote s-7-header" data-el="handNote"><span id="ox-frankenstein-volume_iii:0.0.0.3.0.2.0.0.0" class="t-persName s-2-entita" data-el="persName">Mary Shelley</span></span>
@@ -450,15 +451,15 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
             </div>
         </div>
         <span id="ox-frankenstein-volume_iii:0.0.1" class="t-encodingDesc s-7-header" data-el="encodingDesc">
-            <span id="ox-frankenstein-volume_iii:0.0.1.0" class="t-include s-base" data-el="include"></span>
+            <span id="ox-frankenstein-volume_iii:0.0.1.0" class="tei-foreign" data-name="xi:include" data-ns="http://www.w3.org/2001/XInclude" data-atts="href=../shared/classDecl.xml"></span>
         </span>
-        <span id="ox-frankenstein-volume_iii:0.0.2" class="t-revisionDesc s-7-header" data-el="revisionDesc">
+        <div id="ox-frankenstein-volume_iii:0.0.2" class="t-revisionDesc s-7-header" data-el="revisionDesc">
             <div id="ox-frankenstein-volume_iii:0.0.2.0" class="t-change s-7-header" data-el="change" data-when="2015-03-12">Made volume and chapter metadata valid.</div>
             <div id="ox-frankenstein-volume_iii:0.0.2.1" class="t-change s-7-header" data-el="change" data-when="2014-04-09">Added metadata about volumes and chapters.</div>
             <div id="ox-frankenstein-volume_iii:0.0.2.2" class="t-change s-7-header" data-el="change" data-when="2014-01-22">Added metadata.</div>   
-        </span>
+        </div>
     </div></div></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · fece455 · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.1 · 74545a3 · 2026-07-31</footer>
 
 </body>
 </html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Specimen</title>
 <style>:root{--ground:#FFFFFF;--paper:#FFFFFF;--ink:#1B1B1B;--soft:#6A6A66;--hair:#E5E2D9;--faint:#CFCCC2;--accent:#B01E28;--accent-soft:#9a5a52;--link:#B01E28;--reading:"EB Garamond",Iowan Old Style,Palatino,"Palatino Linotype",Georgia,serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;--serif:var(--reading);--measure:44rem}
 
@@ -322,13 +322,14 @@ ol.toc{columns:2;column-gap:2.5em;padding-left:1.4em;margin:1em 0}
 .lx-table td{padding:4px 10px 4px 0;border-bottom:1px solid var(--faint)}
 .lx-table .lx-num{text-align:right;font-family:var(--mono);font-size:12px;white-space:nowrap}
 .lx-table .lx-w{cursor:pointer}
+.lx-sort{cursor:pointer;user-select:none}
+.lx-sort:hover,.lx-sort.on{color:var(--accent)}
+.lx-arr{color:var(--accent);font-size:8px}
+.lx-alpha{margin:0 0 1em}
 .lx-table .lx-rel{color:var(--soft)}
 .lx-table tr.is-stop .lx-w{color:var(--soft)}
 .lx-lang{font-family:var(--mono);font-size:10px;color:var(--soft)}
 .lx-flip{font-size:11px;line-height:1;color:var(--accent);background:none;border:none;cursor:pointer;padding:2px 4px}
-.lx-cloud{line-height:1.9;padding:1em 0}
-.lx-cloud-w{cursor:pointer;margin:0 .18em;color:var(--ink);transition:opacity .1s}
-.lx-cloud-w:hover{color:var(--accent)}
 .lx-kwic{width:100%;border-collapse:collapse;font-size:14px}
 .lx-kwic td{padding:3px 8px;vertical-align:baseline}
 .lx-kwic .lx-b{text-align:right;color:var(--soft);width:42%}
@@ -357,10 +358,10 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="torchio">
 <div class="tt"><h1>Specimen</h1><p class="sub">genesi</p></div>
-<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Edizione</a><a href="text.html">Testo</a><a href="genesis.html" class="on">Genesi</a><a href="indices.html">Indici</a><a href="map.html">Mappa</a><a href="data.html">Dati</a></nav>
+<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Edizione</a><a href="text.html">Testo</a><a href="genesis.html" class="on">Genesi</a><a href="indices.html">Indici</a><a href="lab.html">Lab</a><a href="data.html">Dati</a></nav>
 </header>
 <main id="main" class="torchio"><p class="occ">Le campagne correttorie dichiarate dall’edizione, nel suo ordine, con le operazioni di scrittura attribuite a ciascuna. Ogni operazione rimanda al punto in cui è avvenuta.</p><section class="stratum"><h2 class="sec">prima stesura <span class="occ">1826</span></h2><table class="wit-table"><tr><td class="sigla">subst</td><td><a href="text.html#specimen:0.1.0.0.2.0">cadevascendeva</a></td></tr></table></section><section class="stratum"><h2 class="sec">campagna correttoria, prima della stampa <span class="occ">1828</span></h2><table class="wit-table"><tr><td class="sigla">add above</td><td><a href="text.html#specimen:0.1.0.0.2.1">lentamente</a></td></tr><tr><td class="sigla">del</td><td><a href="text.html#specimen:0.1.0.0.2.2">forte</a></td></tr></table></section><section class="stratum"><h2 class="sec">Mano principale, immaginaria. <span class="occ">mano</span></h2><table class="wit-table"><tr><td class="sigla">del</td><td><a href="text.html#specimen:0.1.0.0.1.6.0">salvar</a></td></tr></table></section><section class="stratum"><h2 class="sec">Mano di revisione, immaginaria. <span class="occ">mano</span></h2><table class="wit-table"><tr><td class="sigla">add above</td><td><a href="text.html#specimen:0.1.0.0.1.6.1">redimer</a></td></tr></table></section><section class="stratum"><h2 class="sec">la prima stesura, a penna <span class="occ">mano</span></h2><table class="wit-table"><tr><td class="sigla">subst</td><td><a href="text.html#specimen:0.1.0.0.2.0">cadevascendeva</a></td></tr></table></section><section class="stratum"><h2 class="sec">le correzioni, a matita <span class="occ">mano</span></h2><table class="wit-table"><tr><td class="sigla">add above</td><td><a href="text.html#specimen:0.1.0.0.2.1">lentamente</a></td></tr><tr><td class="sigla">del</td><td><a href="text.html#specimen:0.1.0.0.2.2">forte</a></td></tr></table></section></main>
-<footer class="torchio">Pubblicato con <span class="press">Torchio</span> v0.1.0 · fece455 · 2026-07-31</footer>
+<footer class="torchio">Pubblicato con <span class="press">Torchio</span> v0.2.0-beta.1 · 74545a3 · 2026-07-31</footer>
 
 </body>
 </html>

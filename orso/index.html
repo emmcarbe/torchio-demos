@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Ursus Beneventanus, Adbreviatio artis grammaticae</title>
 <style>:root{--ground:#FFFFFF;--paper:#FFFFFF;--ink:#1B1B1B;--soft:#6A6A66;--hair:#E5E2D9;--faint:#CFCCC2;--accent:#B01E28;--accent-soft:#9a5a52;--link:#B01E28;--reading:"EB Garamond",Iowan Old Style,Palatino,"Palatino Linotype",Georgia,serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;--serif:var(--reading);--measure:44rem}
 
@@ -322,13 +322,14 @@ ol.toc{columns:2;column-gap:2.5em;padding-left:1.4em;margin:1em 0}
 .lx-table td{padding:4px 10px 4px 0;border-bottom:1px solid var(--faint)}
 .lx-table .lx-num{text-align:right;font-family:var(--mono);font-size:12px;white-space:nowrap}
 .lx-table .lx-w{cursor:pointer}
+.lx-sort{cursor:pointer;user-select:none}
+.lx-sort:hover,.lx-sort.on{color:var(--accent)}
+.lx-arr{color:var(--accent);font-size:8px}
+.lx-alpha{margin:0 0 1em}
 .lx-table .lx-rel{color:var(--soft)}
 .lx-table tr.is-stop .lx-w{color:var(--soft)}
 .lx-lang{font-family:var(--mono);font-size:10px;color:var(--soft)}
 .lx-flip{font-size:11px;line-height:1;color:var(--accent);background:none;border:none;cursor:pointer;padding:2px 4px}
-.lx-cloud{line-height:1.9;padding:1em 0}
-.lx-cloud-w{cursor:pointer;margin:0 .18em;color:var(--ink);transition:opacity .1s}
-.lx-cloud-w:hover{color:var(--accent)}
 .lx-kwic{width:100%;border-collapse:collapse;font-size:14px}
 .lx-kwic td{padding:3px 8px;vertical-align:baseline}
 .lx-kwic .lx-b{text-align:right;color:var(--soft);width:42%}
@@ -364,20 +365,20 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       <span id="casanatensis:0.0.0.0" class="t-titleStmt s-7-header" data-el="titleStmt">
         <span id="casanatensis:0.0.0.0.0" class="t-title s-1-inline" data-el="title">Ursus, De nomine - Adbreviatio artis grammaticae (Codex Casanatensis 1086, folia 1r-11r)</span>
       </span>
-      <span id="casanatensis:0.0.0.1" class="t-publicationStmt s-7-header" data-el="publicationStmt">
+      <div id="casanatensis:0.0.0.1" class="t-publicationStmt s-7-header" data-el="publicationStmt">
         <p id="casanatensis:0.0.0.1.0" class="t-p s-1-struttura" data-el="p">An experimental scholarly digital edition of section De nomine (folia 1r-11r)
 		of the Adbreviatio artis grammaticae by Ursus from Benevento from codex
 		Casanatensis  1086 (IX century), edited by Paolo Monella within the
 		ALIM Project (2016).</p>
-      </span>
+      </div>
       <div id="casanatensis:0.0.0.2" class="t-sourceDesc s-7-header" data-el="sourceDesc">
 	      <p id="casanatensis:0.0.0.2.0" class="t-p s-1-struttura" data-el="p">The source of this edition is constituted by the digital images of the
 		      manuscript provided by the Bibliotheca Casanatensis, Rome, Italy.</p>
       </div>
     </div>
-    <span id="casanatensis:0.0.1" class="t-encodingDesc s-7-header" data-el="encodingDesc">
-	    <span id="casanatensis:0.0.1.0" class="t-editorialDecl s-7-header" data-el="editorialDecl">
-		<span id="casanatensis:0.0.1.0.0" class="t-correction s-7-header" data-el="correction">
+    <div id="casanatensis:0.0.1" class="t-encodingDesc s-7-header" data-el="encodingDesc">
+	    <div id="casanatensis:0.0.1.0" class="t-editorialDecl s-7-header" data-el="editorialDecl">
+		<div id="casanatensis:0.0.1.0.0" class="t-correction s-7-header" data-el="correction">
 			<div id="casanatensis:0.0.1.0.0.0" class="t-p s-1-struttura" data-el="p">The following codes are used to categorize corrections identified in this edition:
 				<ul id="casanatensis:0.0.1.0.0.0.0" class="t-list s-1-liste" data-el="list" data-type="gloss">
 					<span id="casanatensis:0.0.1.0.0.0.0.0" class="t-label s-1-struttura" data-el="label">ub</span>
@@ -404,10 +405,10 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 
 				</ul>
 			</div>
-		</span>
-	    </span>
-    </span>
-    <span id="casanatensis:0.0.2" class="t-revisionDesc s-7-header" data-el="revisionDesc">
+		</div>
+	    </div>
+    </div>
+    <div id="casanatensis:0.0.2" class="t-revisionDesc s-7-header" data-el="revisionDesc">
 	<div id="casanatensis:0.0.2.0" class="t-change s-7-header" data-el="change" data-type="agenda" data-subtype="critical">Make a decision about note[@subtype=&quot;§&quot;]</div>
 	<div id="casanatensis:0.0.2.1" class="t-change s-7-header" data-el="change" data-type="agenda" data-subtype="critical">Talk to GDM about note[@cert=&quot;medium&quot;], corr[@cert=&quot;medium&quot;] and
 		corr[@type=&quot;ub&quot;] (and other types of &#39;corr&#39;)</div>
@@ -534,9 +535,9 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 		seem to be the TEI-style, it&#39;s my Phtyon script that does it, so I can&#39;t do anything about it.</div>
 	<div id="casanatensis:0.0.2.65" class="t-change s-7-header" data-el="change" data-type="agenda" data-subtype="skipped">Add &#39;larger&#39; allographs for alphabetic characters to gtos?</div>
 
-    </span>
+    </div>
   </div></div></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · fece455 · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.1 · 74545a3 · 2026-07-31</footer>
 
 </body>
 </html>
