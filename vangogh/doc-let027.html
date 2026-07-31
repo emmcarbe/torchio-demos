@@ -572,7 +572,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
             </div>
         </div>
     </div><nav class="prevnext" aria-label="Register"><a href="doc-let026.html">‹ previous</a><a href="text.html">Register</a><a href="doc-let028.html">next ›</a></nav></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · 89939c7 · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · dbcf9c0 · 2026-07-31</footer>
 <script>
 (function(){
   var body=document.body; body.classList.add('mode-read');
@@ -968,12 +968,34 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     var dense=notes.length>12;
     body.classList.toggle('notes-dense',dense);
     if(dense){
+      // the renderer emits a mark and its note together: pair them by
+      // document order, so a mark is never left without its note (C74)
+      var marks=[].slice.call(document.querySelectorAll('main.torchio .t-note-mark'))
+        .filter(function(m){return !m.closest('.header-full')&&!m.closest('.t-teiHeader');});
+      /* a mark whose note the press does not show (a note of the header, or
+         one filtered out) is not a mark: it is a leftover, and it goes */
+      if(marks.length>notes.length){
+        marks.slice(notes.length).forEach(function(m){m.remove();});
+        marks=marks.slice(0,notes.length);
+      }
       notes.forEach(function(n,i){
         if(n.dataset.npi)return;
         n.dataset.npi=String(i);
         var res=anchorOf(n);
-        if(res){res.el.setAttribute('data-notepop',String(i));
-          res.el.removeAttribute('aria-hidden');makeTrigger(res.el,null);}
+        var el=(res&&res.el)||marks[i];
+        /* a standoff note is written apart and declares where it belongs:
+           its mark goes to the passage, not to the place it was written */
+        var tg=n.dataset.target;
+        if(tg&&el&&el.classList&&el.classList.contains('t-note-mark')){
+          var id=tg.split(/s+/)[0].replace(/^#/,'');
+          var dest=document.getElementById(id);
+          if(dest&&!dest.contains(el)){
+            if(dest.nextSibling)dest.parentNode.insertBefore(el,dest.nextSibling);
+            else dest.parentNode.appendChild(el);
+          }
+        }
+        if(el){el.setAttribute('data-notepop',String(i));
+          el.removeAttribute('aria-hidden');makeTrigger(el,null);}
       });
     }
     if(window.innerWidth<1180||body.classList.contains('notes-off')||dense){
