@@ -5,5 +5,8 @@
   "parent": {
     "href": "../",
     "label": "Home"
+  },
+  "pieces": {
+    "lexicon": true
   }
 }

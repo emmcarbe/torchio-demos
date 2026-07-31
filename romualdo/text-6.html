@@ -48,6 +48,7 @@ body.show-header .t-teiHeader{display:block;border:1px solid var(--hair);
 /* the class carries the behaviour: anything the ODD declares a member of
    model.pPart.transcriptional is struck through like del, named or not */
 .s-3-editoriale>[data-el="del"],.s-3-editoriale.t-del,.t-del{text-decoration:line-through;color:var(--soft)}
+.t-metamark{color:var(--soft);font-size:.78em;cursor:help;border-bottom:1px dotted var(--hair)}
 .t-add{vertical-align:super;font-size:.82em}
 .t-unclear{background:#F5F4EF}
 .t-sign{color:var(--soft)}
@@ -126,6 +127,8 @@ body.app-off .t-lem{border-bottom:none;cursor:inherit}
 /* a verse followed by its apparatus band opens the scheme on click */
 body.has-band [data-el="l"]{cursor:pointer}
 body.has-align [data-el="l"]{cursor:pointer}
+[data-change],[data-hand]{cursor:pointer}
+.t-add[data-change],.t-add[data-hand]{border-bottom:1px dotted var(--accent-soft)}
 .wv{border-bottom:1px dotted var(--accent-soft);cursor:pointer}
 .app-anchored{border-bottom:1px dotted var(--accent-soft);cursor:pointer}
 body.app-off .app-anchored{border-bottom:none;cursor:inherit}
@@ -280,6 +283,52 @@ h2.sec{font-size:20px;font-weight:600;margin:1.6em 0 .4em}
 .prevnext{display:flex;justify-content:space-between;gap:1em;margin:1.2em 0;
   font-family:var(--mono);font-size:11px}
 ol.toc{columns:2;column-gap:2.5em;padding-left:1.4em;margin:1em 0}
+.idx-search{font-family:var(--mono);font-size:13px;padding:7px 11px;border:1px solid var(--hair);
+  border-radius:2px;background:var(--paper);color:var(--ink);min-width:16rem;margin:.6em 0 .2em}
+.alpha{font-family:var(--mono);font-size:11px;letter-spacing:.12em;margin:.3em 0 .6em}
+.alpha a{color:var(--accent);text-decoration:none;padding:0 .18em}
+.alpha a:hover{text-decoration:underline}
+.idx-up{font-size:.7em;color:var(--soft);text-decoration:none;margin-left:.5em}
+.idx-up:hover{color:var(--accent)}
+.totop{position:fixed;right:22px;bottom:22px;width:34px;height:34px;line-height:32px;text-align:center;
+  border:1px solid var(--hair);border-radius:2px;background:var(--paper);color:var(--accent);
+  text-decoration:none;font-size:16px}
+.totop:hover{border-color:var(--accent)}
+.t-line{display:block}
+.t-zone{display:block;margin:0 0 .2em}
+.t-surface{display:block;margin:1.6em 0;padding:1.2em 1.4em;border:1px solid var(--hair);border-radius:2px}
+.t-surface .t-surface{border:none;margin:0;padding:0}
+.lx-bar-top{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin:1em 0;
+  padding-bottom:.8em;border-bottom:1px solid var(--hair)}
+.lx-search{font-family:var(--mono);font-size:13px;padding:7px 11px;border:1px solid var(--hair);
+  border-radius:2px;background:var(--paper);color:var(--ink);min-width:14rem}
+.lx-ctl{font-family:var(--mono);font-size:11px;color:var(--soft);display:inline-flex;gap:.4em;align-items:center}
+.lx-ctl select{font-family:var(--mono);font-size:12px;padding:4px 6px;border:1px solid var(--hair);
+  border-radius:2px;background:var(--paper);color:var(--ink)}
+.lx-views{margin-left:auto;display:inline-flex;border:1px solid var(--hair);border-radius:2px;overflow:hidden}
+.lx-views button{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--soft);background:none;border:none;cursor:pointer;padding:7px 13px}
+.lx-views button.active{background:var(--accent);color:#fff}
+.lx-table{width:100%;border-collapse:collapse}
+.lx-table th{text-align:left;font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--soft);padding:6px 10px 6px 0;border-bottom:1px solid var(--hair)}
+.lx-table td{padding:4px 10px 4px 0;border-bottom:1px solid var(--faint)}
+.lx-table .lx-num{text-align:right;font-family:var(--mono);font-size:12px;white-space:nowrap}
+.lx-table .lx-w{cursor:pointer}
+.lx-table .lx-rel{color:var(--soft)}
+.lx-table tr.is-stop .lx-w{color:var(--soft)}
+.lx-lang{font-family:var(--mono);font-size:10px;color:var(--soft)}
+.lx-flip{font-size:11px;line-height:1;color:var(--accent);background:none;border:none;cursor:pointer;padding:2px 4px}
+.lx-cloud{line-height:1.9;padding:1em 0}
+.lx-cloud-w{cursor:pointer;margin:0 .18em;color:var(--ink);transition:opacity .1s}
+.lx-cloud-w:hover{color:var(--accent)}
+.lx-kwic{width:100%;border-collapse:collapse;font-size:14px}
+.lx-kwic td{padding:3px 8px;vertical-align:baseline}
+.lx-kwic .lx-b{text-align:right;color:var(--soft);width:42%}
+.lx-kwic .lx-k{text-align:center;font-weight:600;color:var(--accent);white-space:nowrap}
+.lx-kwic .lx-k a{color:inherit}
+.lx-kwic .lx-a{color:var(--soft);width:42%}
+.lx-kwic tr:hover td{background:rgba(176,30,40,.04)}
 ol.toc li{margin:.3em 0;break-inside:avoid}
 .idx-toc{font-family:var(--mono);font-size:12px;margin:.6em 0 1.2em;
   padding-bottom:.8em;border-bottom:1px solid var(--hair)}
@@ -303,7 +352,18 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <div class="tt"><h1>Historia universalis, sexta etas · Romualdus Salernitanus, Chronicon</h1><p class="sub">Romualdus Salernitanus, Chronicon</p></div>
 <nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Edition</a><a href="front.html">Introduction</a><a href="text.html" class="on">Text</a><a href="data.html">Data</a></nav>
 </header>
-<div class="torchio-bar"><div class="inner"><button class="sw" data-sw="app" aria-pressed="true">Apparatus</button><button class="sw" data-sw="notes" aria-pressed="true">Notes</button><button class="sw off" data-sw="header" aria-pressed="false">About this file</button></div></div><main id="main" class="torchio"><nav class="prevnext" aria-label="Contents"><a href="text-5.html">‹ previous</a><a href="text.html">Contents</a><a href="text-7.html">next ›</a></nav><div id="chronicon:0.0" class="t-teiHeader s-7-header" data-el="teiHeader">
+<div class="torchio-bar"><div class="inner"><button class="sw" data-sw="app" aria-pressed="true">Apparatus</button><button class="sw" data-sw="notes" aria-pressed="true">Notes</button><button class="sw off" data-sw="header" aria-pressed="false">About this file</button></div></div><main id="main" class="torchio"><style>
+.legend{margin:.8em 0;font-size:13px;color:var(--soft)}
+.legend summary{cursor:pointer;font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase}
+.legend ul{list-style:none;padding:.6em 0 0;margin:0;display:flex;flex-wrap:wrap;gap:.5em 1.8em}
+.leg-sample{display:inline-block;min-width:2.2em;text-align:center}
+.leg-app{border-bottom:1px dashed var(--accent)}
+.hand-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.8em 0}
+.hand-lab{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--soft)}
+.hand-btn{font-size:12px;border:1px solid var(--hair);border-radius:2px;background:var(--paper);color:var(--ink);cursor:pointer;padding:4px 10px;display:inline-flex;align-items:center;gap:6px}
+.hand-btn.on{border-color:var(--accent)}
+.hand-dot{display:inline-block;width:9px;height:9px;border-radius:50%}
+</style><details class="legend"><summary>Legend</summary><ul><li><span class="leg-sample">[12]</span> page break of the source</li><li><span class="leg-sample"><span class="leg-app">word</span></span> variant readings: click for the apparatus</li><li><span class="leg-sample"><sup>1</sup></span> note mark</li></ul></details><nav class="prevnext" aria-label="Contents"><a href="text-5.html">‹ previous</a><a href="text.html">Contents</a><a href="text-7.html">next ›</a></nav><div id="chronicon:0.0" class="t-teiHeader s-7-header" data-el="teiHeader">
         <div id="chronicon:0.0.0" class="t-fileDesc s-7-header" data-el="fileDesc">
             <span id="chronicon:0.0.0.0" class="t-titleStmt s-7-header" data-el="titleStmt">
                 <span id="chronicon:0.0.0.0.0" class="t-title s-1-inline" data-el="title">Chronicon</span>
@@ -3144,7 +3204,7 @@ Rome uero post Iohannem
 </p>
  
 </div><section class="standoff-notes"><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.5" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app14-in-g51.18-52.18">Garufi&#39;s apparatus says that &#39;Notisima certe coenae memorie&#39; is C&#39;s reading, which I am here proposing - without the ae - as my conjecture.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.6" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app6-in-g55.23-55.34">A agrees with C.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.7" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app5-in-g60.5-60.30">A agrees with C.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.8" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app3-in-g60.32-61.15">A agrees with C.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.9" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app1-in-g64.4-64.7">The full Latin name was Marcus Opellius Severus Macrinus Augustus, so I think that &#39;Ofilius&#39; comes from &#39;Opellius&#39;. Ofilius is A&#39;s and C&#39;s reading (A agrees with C). Garufi apparatus notes says: &#39;Filius B, accetto la lezione di A C conforme a quella di Orosio&#39;. But Ororius has &#39;Ophilius&#39;. Probably this is a typo in Garufi&#39;s edition.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.10" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app1-in-g68.9-68.14">I choose A&#39;s reading Roma for the usus scribendi. A agrees with C.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.11" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app2-in-g68.9-68.14">A agrees with C.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.12" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app18-in-g68.33-69.35">MS&#39;s A reading also is Orosius&#39; reading.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.13" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app13-in-g72.20-73.6">&#39;Lectulo&#39; is B&#39;s reading (as per Garufi&#39;s apparatus, not my conjecture).</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.14" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app18-in-g72.20-73.6">A agrees with C. I am accepting Garufi&#39;s reading hominibus because Eutropius 9.19 has it too, but note that C (per Garufi&#39;s apparatus) has &#39;honorius&#39;, which is further proof of a proximity between A and C versus B. Honoribus could also be accepted as lectio difficilior (deriving from an authorial misunderstanding of Eutropius, or from an error in the copy of Eutropius that the author read).</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.15" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app21-in-g73.7-74.20">Vd. Eutropius, 9.21 &#39;Britannias occupauit&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.16" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app67-in-g73.7-74.20">Eutr. 9.26: &#39;qui imperio Romano primus regiae consuetudinis formam magis quam Romanae libertatis invexerit adorarique se iussit&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.17" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app69-in-g73.7-74.20">Eutr. 9.26: &#39;qui imperio Romano primus regiae consuetudinis formam magis quam Romanae libertatis invexerit adorarique se iussit&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.18" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app71-in-g73.7-74.20">Eutropius 9.26 also has &#39;calciamentisque&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.19" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app12-in-g75.20-76.28">A agrees with C.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.20" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app3-in-g77.1-77.10">A agrees with C.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.21" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app4-in-g77.1-77.10">A agrees with C.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.22" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app3-in-g77.11-78.21">A agrees with C in &#39;uarie&#39;. But A has &#39;uarie scripture pronuntiant&#39;, C has &#39;uarie scriptura pronuciat&#39;. I choose A&#39;s text &#39;uarie scripture&#39; because it is parallel to subsequent &#39;diuerse scripture sentiant&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.23" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app18-in-g77.11-78.21">A agrees with C.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.24" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app41-in-g77.11-78.21">A agrees with C almost entirely. C has &#39;episcopus baptizatum consignet papam hereticam suasionem. Constituit etiam ut&#39;. Garufi notes C&#39;s reading in his apparatus and does not mention A.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.25" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app44-in-g77.11-78.21">Garufi&#39;s apparatus says that &#39;ante&#39; is the reading of B and C (he does not mention A). In fact, &#39;ante&#39; also is A&#39;s reading.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.26" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app15-in-g78.22-79.21">Vd. Orosius 7.28.21 &#39;quamuis omnibus iam ministris nefariae persecutionis extinctis&#39; and 7.28.23 &#39;His diebus Arrius, Alexandrinae urbis presbyter, a ueritate fidei catholicae deuians&#39;. Garufi&#39;s apparatus mentions A&#39;s reading &#39;Alexandrie&#39;, but not &#39;his diebus&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.27" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app26-in-g78.22-79.21">Vd. Eutropius 10.7 &#39;nihil occasionum praetermittens&#39;: the author has changed the syntactical construction (&#39;pretermitto&#39; governs the next sentence &#39;quo..&#39;). I am preserving the agreement between &#39;nulla&#39; and &#39;occasione&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.28" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app22-in-g83.23-84.19">Vd. Eutropius 10.11: &#39;Caput eius pilo per urbem circumlatum est&#39;. Romualdus misunderstands &#39;pilum&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.29" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app23-in-g92.9-93.4">Vd. Paulus Diaconus, Hist. Rom. 12.98 &#39;post auctam annis potentiam regalem&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.30" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app43-in-g92.9-93.4">admissurum se diceret, et prohibitionem humiliter pertulit et satisfactionem non erubescens indictum ab episcopo.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.31" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app16-in-g93.21-96.11">The reading of MS A &#39;hostis&#39; is the closest to Romualdus&#39; source, Paulus Diaconus Hist. Rom. 12.100 &#39;quam hosti contiguus fieret&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.32" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app21-in-g93.21-96.11">Vd. Paulus Diaconus Hist. Rom. 12.100 &#39;Gildo et ipse fugam arripiens&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.33" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app24-in-g93.21-96.11">Vd. Paulus Diaconus Hist. Rom. 12.100 &#39;secuta mox poena sacrilegium est&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.34" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app49-in-g93.21-96.11">Vd. Romualdus&#39; source, Orosius Hist. 7.37 &#39;in arido et aspero montis iugo, urguente undique timore concludit&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.35" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app82-in-g93.21-96.11">Garufi&#39;s apparatus says that &#39;Bassentium&#39; is the text of MSS A, B and C, while Paulus Diaconu has &#39;Basentum&#39;. To me this means that the author knew &#39;Basentium&#39; or &#39;Barsentium&#39; as spelling of this toponym.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.36" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app8-in-g96.17-98.14">Reading of A and B.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.37" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app23-in-g96.17-98.14">Vd. Paulus Diaconus, Hist. Rom. 12.103 &#39;virum strenuum et bellicosum&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.38" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app24-in-g96.17-98.14">Vd. Paulus Diaconus, Hist. Rom. 12.103 &#39;Constantium comitem ad Gallias cum exercitu mittit&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.39" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app27-in-g96.17-98.14">Vd. Paulus Diaconus, Hist. Rom. 12.103 &#39;is mox Galliam ingressus est&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.40" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app28-in-g96.17-98.14">Vd. Paulus Diaconus, Hist. Rom. 12.103 &#39;Arelatem&#39;. In constituting a text for this paragraph I am constantly taking the source (Paulus Diaconus) into account.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.41" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app40-in-g96.17-98.14">Vd. Paulus Diaconus, Hist. Rom. 12.103 &#39;Constantium comitem ad Gallias cum exercitu mittit&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.42" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app57-in-g96.17-98.14">Vd. Paulus Diaconus, Hist. Rom. 12.104 &#39;ab Honorio missa&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.43" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app64-in-g96.17-98.14">Beda, Hist. Eccl. 12.12 &#39;valedicunt sociis&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.44" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app88-in-g100.6-103.2">Paulus Diaconus, Hist. Rom. 14.116 has &#39;viginti quinque&#39;, but no MS has &#39;quinque&#39;: this must have been an authorial error. Garufi adds &#39;quinque&#39; based on the source.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.45" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app91-in-g100.6-103.2">Paulus Diaconus, Hist. Rom. 14.116 has &#39;sue gentis&#39; and Garufi restores Paulus&#39; text, but I am keeping the text of all MSS.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.46" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app92-in-g100.6-103.2">Paulus Diaconus, Hist. Rom. 14.116 has &#39;cum adhuc Romanae ecclesiae beatissimus Leo ageret pontificatum&#39;, but Romualdus probably chose to write &#39;glorie&#39; instead of &#39;ecclesie&#39;, since no MS has &#39;ecclesie&#39;.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.47" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app3-in-g103.8-104.3">Paulus Diaconus, Hist. Rom. 14.116 has &#39;haud procul a Dertonensi civitate&#39;. MS A, only &#39;aut procul a Ueronense ciuitate&#39;. It is more likely that &#39;Ueronense&#39; is an authorial error for Paulus&#39; &#39;Detornensi&#39;, than an addition by Romualdus.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.48" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app8-in-g104.12-104.22">Paulus Diaconus, Hist. Rom. 15.122 has &#39;terrarum&#39;, but no MS has it and the sentence makes sense also without it.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.49" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app9-in-g104.12-104.22">Paulus Diaconus, Hist. Rom. 15.122 has &#39;quondam&#39;, but no MS has it and the sentence makes sense also without it.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.50" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app10-in-g104.12-104.22">Paulus Diaconus, Hist. Rom. 15.122 has &#39;cum hoc Augustulo periit&#39;, and &#39;hoc&#39; also is in MS A.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.51" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app9-in-g105.9-105.24">Paulus Diaconus, Hist. Rom. 15.122 has &#39;Gothorum&#39; (Garufi&#39;s text). Garufi&#39;s apparatus says that MSS A and B have Ostrogothorum (in fact, A has Astrogothorum). This is probably what the author meant to write.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.52" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app10-in-g105.9-105.24">Garufi&#39;s integration &#39;Theodoricus&#39;, not extant in the MSS, would in fact be a repetition.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.53" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app10-in-g106.3-106.33">Paulus Diaconus, Hist. Rom. 16.127 has: &#39;plerosque ex sacerdotali numero, multos etiam clericorum&#39;. I think tha the author used genitive with the same partitive function as ex with ablative in Paulus.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.54" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app11-in-g107.1-107.14">The words &#39;si respiceret/resipisceret, atque Acatium cum complicibus suis&#39; are not in the source, i.e. Paulus Diaconus Hist. Rom. 16.128.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.55" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app14-in-g107.1-107.14">&#39;Sed&#39; is Garufi&#39;s integration, not in the MSS. I am only changing the punctuation.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.56" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app10-in-g107.15-107.25">Paulus Diaconus Hist. Rom. 16.128 has &#39;uita caruit&#39;, and Garufi chooses Paulus&#39; reading against that of MSS A and B. I am choosing the MSS reading instead.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.57" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app12-in-g107.15-107.25">Again, Garufi chooses Paulus&#39; reading over that of the MSS. I am retoring Romualdus&#39; MSS text.</div><span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.1.1.11.58" class="t-note s-1-note" data-el="note" data-type="textcrit" data-target="#app20-in-g107.26-108.13">Garufi restores &#39;octauo&#39; from the source (Paulus Diaconus Hist. Rom. 16.130), but &#39;octauo&#39; is in no MS, so I consider this an authorial error.</div></section><nav class="prevnext" aria-label="Contents"><a href="text-5.html">‹ previous</a><a href="text.html">Contents</a><a href="text-7.html">next ›</a></nav></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · 89939c7 · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · eb43eb4 · 2026-07-31</footer>
 <script>
 (function(){
   var body=document.body; body.classList.add('mode-read');
@@ -3451,6 +3511,18 @@ Rome uero post Iohannem
         +'<div class="meta">'+meta.join(' · ')+'</div>',ent);
       ev.stopPropagation();return;
     }
+    /* a writing operation belongs to a campaign and a hand: clicking it says
+       which, and links to the stratum it belongs to */
+    var op=ev.target.closest&&ev.target.closest('[data-change],[data-hand]');
+    if(op&&/^(add|del|subst|restore|retrace|mod|transpose|metamark)$/.test(op.dataset.el||'')){
+      var lab=(op.dataset.change||'').replace(/^#/,''), hd=(op.dataset.hand||'').replace(/^#/,'');
+      var strat=lab?document.querySelector('[data-el="change"][id$="'+lab+'"]'):null;
+      openPop('<span class="k">'+esc(op.dataset.el)+'</span>'
+        +'<div class="notebody">'+esc(op.textContent.replace(/s+/g,' ').trim().slice(0,140))+'</div>'
+        +'<div class="meta">'+(lab?esc(lab):'')+(hd?' · '+esc(hd):'')
+        +' <a href="genesis.html">Genesis</a></div>',op);
+      ev.stopPropagation();return;
+    }
     var anc=ev.target.closest&&ev.target.closest('[data-appref]');
     if(anc&&!body.classList.contains('app-off')&&openAppFor(anc)){ev.stopPropagation();return;}
     var wv=ev.target.closest&&ev.target.closest('.wv');
@@ -3540,12 +3612,34 @@ Rome uero post Iohannem
     var dense=notes.length>12;
     body.classList.toggle('notes-dense',dense);
     if(dense){
+      // the renderer emits a mark and its note together: pair them by
+      // document order, so a mark is never left without its note (C74)
+      var marks=[].slice.call(document.querySelectorAll('main.torchio .t-note-mark'))
+        .filter(function(m){return !m.closest('.header-full')&&!m.closest('.t-teiHeader');});
+      /* a mark whose note the press does not show (a note of the header, or
+         one filtered out) is not a mark: it is a leftover, and it goes */
+      if(marks.length>notes.length){
+        marks.slice(notes.length).forEach(function(m){m.remove();});
+        marks=marks.slice(0,notes.length);
+      }
       notes.forEach(function(n,i){
         if(n.dataset.npi)return;
         n.dataset.npi=String(i);
         var res=anchorOf(n);
-        if(res){res.el.setAttribute('data-notepop',String(i));
-          res.el.removeAttribute('aria-hidden');makeTrigger(res.el,null);}
+        var el=(res&&res.el)||marks[i];
+        /* a standoff note is written apart and declares where it belongs:
+           its mark goes to the passage, not to the place it was written */
+        var tg=n.dataset.target;
+        if(tg&&el&&el.classList&&el.classList.contains('t-note-mark')){
+          var id=tg.split(/s+/)[0].replace(/^#/,'');
+          var dest=document.getElementById(id);
+          if(dest&&!dest.contains(el)){
+            if(dest.nextSibling)dest.parentNode.insertBefore(el,dest.nextSibling);
+            else dest.parentNode.appendChild(el);
+          }
+        }
+        if(el){el.setAttribute('data-notepop',String(i));
+          el.removeAttribute('aria-hidden');makeTrigger(el,null);}
       });
     }
     if(window.innerWidth<1180||body.classList.contains('notes-off')||dense){
@@ -3631,6 +3725,16 @@ Rome uero post Iohannem
     });
   }
 })();
-</script>
+
+(function(){
+  document.querySelectorAll('.hand-btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      var h=b.getAttribute('data-hand-pick');
+      if(h){document.body.setAttribute('data-hand-only',h);}
+      else{document.body.removeAttribute('data-hand-only');}
+      document.querySelectorAll('.hand-btn').forEach(function(x){x.classList.toggle('on',x===b&&!!h);});
+    });
+  });
+})();</script>
 </body>
 </html>

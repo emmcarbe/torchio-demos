@@ -48,6 +48,7 @@ body.show-header .t-teiHeader{display:block;border:1px solid var(--hair);
 /* the class carries the behaviour: anything the ODD declares a member of
    model.pPart.transcriptional is struck through like del, named or not */
 .s-3-editoriale>[data-el="del"],.s-3-editoriale.t-del,.t-del{text-decoration:line-through;color:var(--soft)}
+.t-metamark{color:var(--soft);font-size:.78em;cursor:help;border-bottom:1px dotted var(--hair)}
 .t-add{vertical-align:super;font-size:.82em}
 .t-unclear{background:#F5F4EF}
 .t-sign{color:var(--soft)}
@@ -126,6 +127,8 @@ body.app-off .t-lem{border-bottom:none;cursor:inherit}
 /* a verse followed by its apparatus band opens the scheme on click */
 body.has-band [data-el="l"]{cursor:pointer}
 body.has-align [data-el="l"]{cursor:pointer}
+[data-change],[data-hand]{cursor:pointer}
+.t-add[data-change],.t-add[data-hand]{border-bottom:1px dotted var(--accent-soft)}
 .wv{border-bottom:1px dotted var(--accent-soft);cursor:pointer}
 .app-anchored{border-bottom:1px dotted var(--accent-soft);cursor:pointer}
 body.app-off .app-anchored{border-bottom:none;cursor:inherit}
@@ -140,7 +143,7 @@ body.app-off.has-band [data-el="l"]{cursor:inherit}
 /* dense notes: marks only, notes open on click */
 body.notes-dense main.torchio .t-note{display:none!important}
 body.notes-dense .t-note-mark{color:var(--accent);cursor:pointer;font-size:.85em;font-weight:700;line-height:0;padding:.3em .3em;margin:-.3em -.1em}
-body.notes-dense [data-notepop]{cursor:pointer}
+[data-notepop]{cursor:pointer}
 body.notes-dense.notes-off .t-note-mark{cursor:default}
 
 /* transcription levels: reading is the default */
@@ -280,6 +283,52 @@ h2.sec{font-size:20px;font-weight:600;margin:1.6em 0 .4em}
 .prevnext{display:flex;justify-content:space-between;gap:1em;margin:1.2em 0;
   font-family:var(--mono);font-size:11px}
 ol.toc{columns:2;column-gap:2.5em;padding-left:1.4em;margin:1em 0}
+.idx-search{font-family:var(--mono);font-size:13px;padding:7px 11px;border:1px solid var(--hair);
+  border-radius:2px;background:var(--paper);color:var(--ink);min-width:16rem;margin:.6em 0 .2em}
+.alpha{font-family:var(--mono);font-size:11px;letter-spacing:.12em;margin:.3em 0 .6em}
+.alpha a{color:var(--accent);text-decoration:none;padding:0 .18em}
+.alpha a:hover{text-decoration:underline}
+.idx-up{font-size:.7em;color:var(--soft);text-decoration:none;margin-left:.5em}
+.idx-up:hover{color:var(--accent)}
+.totop{position:fixed;right:22px;bottom:22px;width:34px;height:34px;line-height:32px;text-align:center;
+  border:1px solid var(--hair);border-radius:2px;background:var(--paper);color:var(--accent);
+  text-decoration:none;font-size:16px}
+.totop:hover{border-color:var(--accent)}
+.t-line{display:block}
+.t-zone{display:block;margin:0 0 .2em}
+.t-surface{display:block;margin:1.6em 0;padding:1.2em 1.4em;border:1px solid var(--hair);border-radius:2px}
+.t-surface .t-surface{border:none;margin:0;padding:0}
+.lx-bar-top{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin:1em 0;
+  padding-bottom:.8em;border-bottom:1px solid var(--hair)}
+.lx-search{font-family:var(--mono);font-size:13px;padding:7px 11px;border:1px solid var(--hair);
+  border-radius:2px;background:var(--paper);color:var(--ink);min-width:14rem}
+.lx-ctl{font-family:var(--mono);font-size:11px;color:var(--soft);display:inline-flex;gap:.4em;align-items:center}
+.lx-ctl select{font-family:var(--mono);font-size:12px;padding:4px 6px;border:1px solid var(--hair);
+  border-radius:2px;background:var(--paper);color:var(--ink)}
+.lx-views{margin-left:auto;display:inline-flex;border:1px solid var(--hair);border-radius:2px;overflow:hidden}
+.lx-views button{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--soft);background:none;border:none;cursor:pointer;padding:7px 13px}
+.lx-views button.active{background:var(--accent);color:#fff}
+.lx-table{width:100%;border-collapse:collapse}
+.lx-table th{text-align:left;font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--soft);padding:6px 10px 6px 0;border-bottom:1px solid var(--hair)}
+.lx-table td{padding:4px 10px 4px 0;border-bottom:1px solid var(--faint)}
+.lx-table .lx-num{text-align:right;font-family:var(--mono);font-size:12px;white-space:nowrap}
+.lx-table .lx-w{cursor:pointer}
+.lx-table .lx-rel{color:var(--soft)}
+.lx-table tr.is-stop .lx-w{color:var(--soft)}
+.lx-lang{font-family:var(--mono);font-size:10px;color:var(--soft)}
+.lx-flip{font-size:11px;line-height:1;color:var(--accent);background:none;border:none;cursor:pointer;padding:2px 4px}
+.lx-cloud{line-height:1.9;padding:1em 0}
+.lx-cloud-w{cursor:pointer;margin:0 .18em;color:var(--ink);transition:opacity .1s}
+.lx-cloud-w:hover{color:var(--accent)}
+.lx-kwic{width:100%;border-collapse:collapse;font-size:14px}
+.lx-kwic td{padding:3px 8px;vertical-align:baseline}
+.lx-kwic .lx-b{text-align:right;color:var(--soft);width:42%}
+.lx-kwic .lx-k{text-align:center;font-weight:600;color:var(--accent);white-space:nowrap}
+.lx-kwic .lx-k a{color:inherit}
+.lx-kwic .lx-a{color:var(--soft);width:42%}
+.lx-kwic tr:hover td{background:rgba(176,30,40,.04)}
 ol.toc li{margin:.3em 0;break-inside:avoid}
 .idx-toc{font-family:var(--mono);font-size:12px;margin:.6em 0 1.2em;
   padding-bottom:.8em;border-bottom:1px solid var(--hair)}
@@ -355,22 +404,22 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
             </div>
         </div>
     </div><span id="let006:0.1" class="t-facsimile s-7-struttura-documento" data-el="facsimile">
-<span id="surf-pb-1r" class="t-surface s-5-documentario" data-el="surface" data-n="b 0006">
+<div id="surf-pb-1r" class="t-surface s-5-documentario" data-el="surface" data-n="b 0006">
             <span id="let006:0.1.0.0" class="t-graphic s-1-paratesti" data-el="graphic"></span>
-            <span id="zone-pb-1r-1" class="t-zone s-2-standoff" data-el="zone">
+            <div id="zone-pb-1r-1" class="t-zone s-2-standoff" data-el="zone">
 <span id="let006:0.1.0.1.0" class="t-graphic s-1-paratesti" data-el="graphic"></span>
                 <span id="let006:0.1.0.1.1" class="t-graphic s-1-paratesti" data-el="graphic"></span>
                 <span id="let006:0.1.0.1.2" class="t-graphic s-1-paratesti" data-el="graphic"></span>
-            </span>
-</span>
-<span id="surf-pb-1v" class="t-surface s-5-documentario" data-el="surface" data-n="b 0006">
+            </div>
+</div>
+<div id="surf-pb-1v" class="t-surface s-5-documentario" data-el="surface" data-n="b 0006">
             <span id="let006:0.1.1.0" class="t-graphic s-1-paratesti" data-el="graphic"></span>
-            <span id="zone-pb-1v-2" class="t-zone s-2-standoff" data-el="zone">
+            <div id="zone-pb-1v-2" class="t-zone s-2-standoff" data-el="zone">
 <span id="let006:0.1.1.1.0" class="t-graphic s-1-paratesti" data-el="graphic"></span>
                 <span id="let006:0.1.1.1.1" class="t-graphic s-1-paratesti" data-el="graphic"></span>
                 <span id="let006:0.1.1.1.2" class="t-graphic s-1-paratesti" data-el="graphic"></span>
-            </span>
-</span>
+            </div>
+</div>
     </span><div id="let006:0.2" class="t-text s-7-struttura-documento" data-el="text">
         <div id="let006:0.2.0" class="t-body s-1-struttura" data-el="body">
 <div id="let006:0.2.0.0" class="t-div s-1-struttura" data-el="div" data-type="original">
@@ -464,7 +513,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
             </div>
         </div>
     </div><nav class="prevnext" aria-label="Register"><a href="doc-let005.html">‹ previous</a><a href="text.html">Register</a><a href="doc-let007.html">next ›</a></nav></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · dbcf9c0 · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · eb43eb4 · 2026-07-31</footer>
 <script>
 (function(){
   var body=document.body; body.classList.add('mode-read');
@@ -771,6 +820,18 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
         +'<div class="meta">'+meta.join(' · ')+'</div>',ent);
       ev.stopPropagation();return;
     }
+    /* a writing operation belongs to a campaign and a hand: clicking it says
+       which, and links to the stratum it belongs to */
+    var op=ev.target.closest&&ev.target.closest('[data-change],[data-hand]');
+    if(op&&/^(add|del|subst|restore|retrace|mod|transpose|metamark)$/.test(op.dataset.el||'')){
+      var lab=(op.dataset.change||'').replace(/^#/,''), hd=(op.dataset.hand||'').replace(/^#/,'');
+      var strat=lab?document.querySelector('[data-el="change"][id$="'+lab+'"]'):null;
+      openPop('<span class="k">'+esc(op.dataset.el)+'</span>'
+        +'<div class="notebody">'+esc(op.textContent.replace(/s+/g,' ').trim().slice(0,140))+'</div>'
+        +'<div class="meta">'+(lab?esc(lab):'')+(hd?' · '+esc(hd):'')
+        +' <a href="genesis.html">Genesis</a></div>',op);
+      ev.stopPropagation();return;
+    }
     var anc=ev.target.closest&&ev.target.closest('[data-appref]');
     if(anc&&!body.classList.contains('app-off')&&openAppFor(anc)){ev.stopPropagation();return;}
     var wv=ev.target.closest&&ev.target.closest('.wv');
@@ -840,7 +901,12 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     var old=document.getElementById('note-leaders'); if(old)old.remove();
     var main=document.querySelector('main.torchio'); if(!main)return;
     var notes=[].slice.call(document.querySelectorAll('main.torchio .t-note'))
-      .filter(function(n){return !n.closest('.header-full')&&!n.closest('.t-teiHeader');});
+      .filter(function(n){
+        /* a header note is metadata, except a standoff note with a target:
+           that one belongs to the passage it names, wherever it was written */
+        var inHeader=n.closest('.header-full')||n.closest('.t-teiHeader');
+        return !inHeader||!!n.dataset.target;
+      });
     function anchorOf(n){
       var app=n.closest('.t-app');
       if(app){return {el:app.querySelector('[data-el="lem"]')||app,kind:'app'};}
@@ -859,7 +925,10 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
        they collapse to their marks and open on click, like the apparatus */
     var dense=notes.length>12;
     body.classList.toggle('notes-dense',dense);
-    if(dense){
+    /* pairing runs ALWAYS: a mark must answer a click whatever the density
+       or the width of the window; density only decides whether the notes
+       collapse to their marks or sit in the margin */
+    {
       // the renderer emits a mark and its note together: pair them by
       // document order, so a mark is never left without its note (C74)
       var marks=[].slice.call(document.querySelectorAll('main.torchio .t-note-mark'))
@@ -874,20 +943,23 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
         if(n.dataset.npi)return;
         n.dataset.npi=String(i);
         var res=anchorOf(n);
-        var el=(res&&res.el)||marks[i];
+        var mk=marks[i];
         /* a standoff note is written apart and declares where it belongs:
            its mark goes to the passage, not to the place it was written */
         var tg=n.dataset.target;
-        if(tg&&el&&el.classList&&el.classList.contains('t-note-mark')){
+        if(tg&&mk){
           var id=tg.split(/s+/)[0].replace(/^#/,'');
           var dest=document.getElementById(id);
-          if(dest&&!dest.contains(el)){
-            if(dest.nextSibling)dest.parentNode.insertBefore(el,dest.nextSibling);
-            else dest.parentNode.appendChild(el);
+          if(dest&&!dest.contains(mk)){
+            if(dest.nextSibling)dest.parentNode.insertBefore(mk,dest.nextSibling);
+            else dest.parentNode.appendChild(mk);
           }
         }
-        if(el){el.setAttribute('data-notepop',String(i));
-          el.removeAttribute('aria-hidden');makeTrigger(el,null);}
+        /* both answer the click: the mark, and the anchored passage */
+        if(mk){mk.setAttribute('data-notepop',String(i));
+          mk.removeAttribute('aria-hidden');makeTrigger(mk,null);}
+        var el=res&&res.el;
+        if(el&&el!==mk){el.setAttribute('data-notepop',String(i));makeTrigger(el,null);}
       });
     }
     if(window.innerWidth<1180||body.classList.contains('notes-off')||dense){

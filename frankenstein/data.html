@@ -48,6 +48,7 @@ body.show-header .t-teiHeader{display:block;border:1px solid var(--hair);
 /* the class carries the behaviour: anything the ODD declares a member of
    model.pPart.transcriptional is struck through like del, named or not */
 .s-3-editoriale>[data-el="del"],.s-3-editoriale.t-del,.t-del{text-decoration:line-through;color:var(--soft)}
+.t-metamark{color:var(--soft);font-size:.78em;cursor:help;border-bottom:1px dotted var(--hair)}
 .t-add{vertical-align:super;font-size:.82em}
 .t-unclear{background:#F5F4EF}
 .t-sign{color:var(--soft)}
@@ -282,6 +283,17 @@ h2.sec{font-size:20px;font-weight:600;margin:1.6em 0 .4em}
 .prevnext{display:flex;justify-content:space-between;gap:1em;margin:1.2em 0;
   font-family:var(--mono);font-size:11px}
 ol.toc{columns:2;column-gap:2.5em;padding-left:1.4em;margin:1em 0}
+.idx-search{font-family:var(--mono);font-size:13px;padding:7px 11px;border:1px solid var(--hair);
+  border-radius:2px;background:var(--paper);color:var(--ink);min-width:16rem;margin:.6em 0 .2em}
+.alpha{font-family:var(--mono);font-size:11px;letter-spacing:.12em;margin:.3em 0 .6em}
+.alpha a{color:var(--accent);text-decoration:none;padding:0 .18em}
+.alpha a:hover{text-decoration:underline}
+.idx-up{font-size:.7em;color:var(--soft);text-decoration:none;margin-left:.5em}
+.idx-up:hover{color:var(--accent)}
+.totop{position:fixed;right:22px;bottom:22px;width:34px;height:34px;line-height:32px;text-align:center;
+  border:1px solid var(--hair);border-radius:2px;background:var(--paper);color:var(--accent);
+  text-decoration:none;font-size:16px}
+.totop:hover{border-color:var(--accent)}
 .t-line{display:block}
 .t-zone{display:block;margin:0 0 .2em}
 .t-surface{display:block;margin:1.6em 0;padding:1.2em 1.4em;border:1px solid var(--hair);border-radius:2px}
@@ -341,7 +353,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Edition</a><a href="text.html">Text</a><a href="genesis.html">Genesis</a><a href="data.html" class="on">Data</a></nav>
 </header>
 <main id="main" class="torchio"><table class="idx-table"><tr><td class="sigla"><a href="data/model.json">model.json</a></td><td>the edition model: documents, registries, apparatus (JSON)</td><td class="occ">805.1 KB</td></tr></table><p class="occ">Reuse under the edition licence (see the Edition page).</p></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · c1a6d22 · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · eb43eb4 · 2026-07-31</footer>
 
 </body>
 </html>

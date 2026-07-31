@@ -48,6 +48,7 @@ body.show-header .t-teiHeader{display:block;border:1px solid var(--hair);
 /* the class carries the behaviour: anything the ODD declares a member of
    model.pPart.transcriptional is struck through like del, named or not */
 .s-3-editoriale>[data-el="del"],.s-3-editoriale.t-del,.t-del{text-decoration:line-through;color:var(--soft)}
+.t-metamark{color:var(--soft);font-size:.78em;cursor:help;border-bottom:1px dotted var(--hair)}
 .t-add{vertical-align:super;font-size:.82em}
 .t-unclear{background:#F5F4EF}
 .t-sign{color:var(--soft)}
@@ -126,6 +127,8 @@ body.app-off .t-lem{border-bottom:none;cursor:inherit}
 /* a verse followed by its apparatus band opens the scheme on click */
 body.has-band [data-el="l"]{cursor:pointer}
 body.has-align [data-el="l"]{cursor:pointer}
+[data-change],[data-hand]{cursor:pointer}
+.t-add[data-change],.t-add[data-hand]{border-bottom:1px dotted var(--accent-soft)}
 .wv{border-bottom:1px dotted var(--accent-soft);cursor:pointer}
 .app-anchored{border-bottom:1px dotted var(--accent-soft);cursor:pointer}
 body.app-off .app-anchored{border-bottom:none;cursor:inherit}
@@ -140,7 +143,7 @@ body.app-off.has-band [data-el="l"]{cursor:inherit}
 /* dense notes: marks only, notes open on click */
 body.notes-dense main.torchio .t-note{display:none!important}
 body.notes-dense .t-note-mark{color:var(--accent);cursor:pointer;font-size:.85em;font-weight:700;line-height:0;padding:.3em .3em;margin:-.3em -.1em}
-body.notes-dense [data-notepop]{cursor:pointer}
+[data-notepop]{cursor:pointer}
 body.notes-dense.notes-off .t-note-mark{cursor:default}
 
 /* transcription levels: reading is the default */
@@ -280,6 +283,52 @@ h2.sec{font-size:20px;font-weight:600;margin:1.6em 0 .4em}
 .prevnext{display:flex;justify-content:space-between;gap:1em;margin:1.2em 0;
   font-family:var(--mono);font-size:11px}
 ol.toc{columns:2;column-gap:2.5em;padding-left:1.4em;margin:1em 0}
+.idx-search{font-family:var(--mono);font-size:13px;padding:7px 11px;border:1px solid var(--hair);
+  border-radius:2px;background:var(--paper);color:var(--ink);min-width:16rem;margin:.6em 0 .2em}
+.alpha{font-family:var(--mono);font-size:11px;letter-spacing:.12em;margin:.3em 0 .6em}
+.alpha a{color:var(--accent);text-decoration:none;padding:0 .18em}
+.alpha a:hover{text-decoration:underline}
+.idx-up{font-size:.7em;color:var(--soft);text-decoration:none;margin-left:.5em}
+.idx-up:hover{color:var(--accent)}
+.totop{position:fixed;right:22px;bottom:22px;width:34px;height:34px;line-height:32px;text-align:center;
+  border:1px solid var(--hair);border-radius:2px;background:var(--paper);color:var(--accent);
+  text-decoration:none;font-size:16px}
+.totop:hover{border-color:var(--accent)}
+.t-line{display:block}
+.t-zone{display:block;margin:0 0 .2em}
+.t-surface{display:block;margin:1.6em 0;padding:1.2em 1.4em;border:1px solid var(--hair);border-radius:2px}
+.t-surface .t-surface{border:none;margin:0;padding:0}
+.lx-bar-top{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin:1em 0;
+  padding-bottom:.8em;border-bottom:1px solid var(--hair)}
+.lx-search{font-family:var(--mono);font-size:13px;padding:7px 11px;border:1px solid var(--hair);
+  border-radius:2px;background:var(--paper);color:var(--ink);min-width:14rem}
+.lx-ctl{font-family:var(--mono);font-size:11px;color:var(--soft);display:inline-flex;gap:.4em;align-items:center}
+.lx-ctl select{font-family:var(--mono);font-size:12px;padding:4px 6px;border:1px solid var(--hair);
+  border-radius:2px;background:var(--paper);color:var(--ink)}
+.lx-views{margin-left:auto;display:inline-flex;border:1px solid var(--hair);border-radius:2px;overflow:hidden}
+.lx-views button{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--soft);background:none;border:none;cursor:pointer;padding:7px 13px}
+.lx-views button.active{background:var(--accent);color:#fff}
+.lx-table{width:100%;border-collapse:collapse}
+.lx-table th{text-align:left;font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--soft);padding:6px 10px 6px 0;border-bottom:1px solid var(--hair)}
+.lx-table td{padding:4px 10px 4px 0;border-bottom:1px solid var(--faint)}
+.lx-table .lx-num{text-align:right;font-family:var(--mono);font-size:12px;white-space:nowrap}
+.lx-table .lx-w{cursor:pointer}
+.lx-table .lx-rel{color:var(--soft)}
+.lx-table tr.is-stop .lx-w{color:var(--soft)}
+.lx-lang{font-family:var(--mono);font-size:10px;color:var(--soft)}
+.lx-flip{font-size:11px;line-height:1;color:var(--accent);background:none;border:none;cursor:pointer;padding:2px 4px}
+.lx-cloud{line-height:1.9;padding:1em 0}
+.lx-cloud-w{cursor:pointer;margin:0 .18em;color:var(--ink);transition:opacity .1s}
+.lx-cloud-w:hover{color:var(--accent)}
+.lx-kwic{width:100%;border-collapse:collapse;font-size:14px}
+.lx-kwic td{padding:3px 8px;vertical-align:baseline}
+.lx-kwic .lx-b{text-align:right;color:var(--soft);width:42%}
+.lx-kwic .lx-k{text-align:center;font-weight:600;color:var(--accent);white-space:nowrap}
+.lx-kwic .lx-k a{color:inherit}
+.lx-kwic .lx-a{color:var(--soft);width:42%}
+.lx-kwic tr:hover td{background:rgba(176,30,40,.04)}
 ol.toc li{margin:.3em 0;break-inside:avoid}
 .idx-toc{font-family:var(--mono);font-size:12px;margin:.6em 0 1.2em;
   padding-bottom:.8em;border-bottom:1px solid var(--hair)}
@@ -303,7 +352,29 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <div class="tt"><h1>Specimen</h1><p class="sub">Omero, nella traduzione di Ippolito Pindemonte (1822)</p></div>
 <nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Edizione</a><a href="text.html" class="on">Testo</a><a href="genesis.html">Genesi</a><a href="indices.html">Indici</a><a href="map.html">Mappa</a><a href="data.html">Dati</a></nav>
 </header>
-<div class="torchio-bar"><div class="inner"><span class="modes" role="group" aria-label="Testo"><button data-mode="read" class="active" aria-pressed="true">Interpretativa</button><button data-mode="dipl" aria-pressed="false">Diplomatica</button></span><button class="sw" data-sw="app" aria-pressed="true">Apparato</button><button class="sw" data-sw="notes" aria-pressed="true">Note</button><button class="sw off" data-sw="header" aria-pressed="false">Scheda del file</button></div></div><main id="main" class="torchio"><div id="specimen:0.0" class="t-teiHeader s-7-header" data-el="teiHeader">
+<div class="torchio-bar"><div class="inner"><span class="modes" role="group" aria-label="Testo"><button data-mode="read" class="active" aria-pressed="true">Interpretativa</button><button data-mode="dipl" aria-pressed="false">Diplomatica</button></span><button class="sw" data-sw="app" aria-pressed="true">Apparato</button><button class="sw" data-sw="notes" aria-pressed="true">Note</button><button class="sw off" data-sw="header" aria-pressed="false">Scheda del file</button></div></div><main id="main" class="torchio"><style>
+.legend{margin:.8em 0;font-size:13px;color:var(--soft)}
+.legend summary{cursor:pointer;font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase}
+.legend ul{list-style:none;padding:.6em 0 0;margin:0;display:flex;flex-wrap:wrap;gap:.5em 1.8em}
+.leg-sample{display:inline-block;min-width:2.2em;text-align:center}
+.leg-app{border-bottom:1px dashed var(--accent)}
+.hand-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.8em 0}
+.hand-lab{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--soft)}
+.hand-btn{font-size:12px;border:1px solid var(--hair);border-radius:2px;background:var(--paper);color:var(--ink);cursor:pointer;padding:4px 10px;display:inline-flex;align-items:center;gap:6px}
+.hand-btn.on{border-color:var(--accent)}
+.hand-dot{display:inline-block;width:9px;height:9px;border-radius:50%}
+body[data-hand-only] #main{color:#b9b3a6}
+body[data-hand-only] #main [data-hand]{opacity:.3}
+body[data-hand-only="#m1"] #main{color:var(--ink)}
+[data-hand="#m1"]{background:#1a5fb41f;box-shadow:inset 0 -2px #1a5fb499}
+body[data-hand-only="#m1"] #main [data-hand="#m1"],body[data-hand-only="#m1"] #main [data-hand="#m1"] *{opacity:1;color:var(--ink)}
+[data-hand="#m2"]{background:#26652c1f;box-shadow:inset 0 -2px #26652c99}
+body[data-hand-only="#m2"] #main [data-hand="#m2"],body[data-hand-only="#m2"] #main [data-hand="#m2"] *{opacity:1;color:var(--ink)}
+[data-hand="#mano-prima"]{background:#8a4f001f;box-shadow:inset 0 -2px #8a4f0099}
+body[data-hand-only="#mano-prima"] #main [data-hand="#mano-prima"],body[data-hand-only="#mano-prima"] #main [data-hand="#mano-prima"] *{opacity:1;color:var(--ink)}
+[data-hand="#mano-seconda"]{background:#7a1f6e1f;box-shadow:inset 0 -2px #7a1f6e99}
+body[data-hand-only="#mano-seconda"] #main [data-hand="#mano-seconda"],body[data-hand-only="#mano-seconda"] #main [data-hand="#mano-seconda"] *{opacity:1;color:var(--ink)}
+</style><div class="hand-bar"><span class="hand-lab">Mani</span><button type="button" class="hand-btn" data-hand-pick="#m1"><span class="hand-dot" style="background:#1a5fb4"></span>Mano principale, immaginaria. <span class="occ">(mano principale)</span></button><button type="button" class="hand-btn" data-hand-pick="#m2"><span class="hand-dot" style="background:#26652c"></span>Mano di revisione, immaginaria.</button><button type="button" class="hand-btn" data-hand-pick="#mano-prima"><span class="hand-dot" style="background:#8a4f00"></span>la prima stesura, a penna</button><button type="button" class="hand-btn" data-hand-pick="#mano-seconda"><span class="hand-dot" style="background:#7a1f6e"></span>le correzioni, a matita</button><button type="button" class="hand-btn" data-hand-pick="">tutte</button></div><details class="legend"><summary>Legenda</summary><ul><li><span class="leg-sample"><span class="t-del">parola</span></span> cancellato dalla mano che scrive</li><li><span class="leg-sample"><span class="t-add">parola</span></span> aggiunto sopra la riga</li><li><span class="leg-sample"><span class="t-unclear">parola</span></span> lettura incerta</li><li><span class="leg-sample"><span class="t-sign">[</span>parola<span class="t-sign">]</span></span> integrazione dell'editore</li><li><span class="leg-sample"><span class="leg-app">parola</span></span> varianti: clic per l'apparato</li><li><span class="leg-sample"><sup>1</sup></span> richiamo di nota</li><li><span class="leg-sample"><span class="hand-dot" style="background:#1a5fb4"></span></span> la mano di Mano principale, immaginaria.</li><li><span class="leg-sample"><span class="hand-dot" style="background:#26652c"></span></span> la mano di Mano di revisione, immaginaria.</li><li><span class="leg-sample"><span class="hand-dot" style="background:#8a4f00"></span></span> la mano di la prima stesura, a penna</li><li><span class="leg-sample"><span class="hand-dot" style="background:#7a1f6e"></span></span> la mano di le correzioni, a matita</li></ul></details><div id="specimen:0.0" class="t-teiHeader s-7-header" data-el="teiHeader">
     <div id="specimen:0.0.0" class="t-fileDesc s-7-header" data-el="fileDesc">
       <span id="specimen:0.0.0.0" class="t-titleStmt s-7-header" data-el="titleStmt">
         <span id="specimen:0.0.0.0.0" class="t-title s-1-inline" data-el="title">Specimen</span>
@@ -372,9 +443,9 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
           <div id="specimen:0.1.0.0.1.7" class="t-l s-1-versi" data-el="l">e il ritorno a&#39; compagni.</div>
         </div>
         <p id="specimen:0.1.0.0.2" class="t-p s-1-struttura" data-el="p">Una pagina d&#39;autore, per mostrare la stratigrafia: la sera
-<span id="specimen:0.1.0.0.2.0" class="t-subst s-3-editoriale" data-el="subst" data-hand="#mano-prima"><span id="specimen:0.1.0.0.2.0.0" class="t-del s-3-trascrizionale" data-el="del">cadeva</span><span id="specimen:0.1.0.0.2.0.1" class="t-add s-3-trascrizionale" data-el="add">scendeva</span></span>
-sul paese, e <span id="specimen:0.1.0.0.2.1" class="t-add s-3-trascrizionale" data-el="add" data-place="above" data-hand="#mano-seconda">lentamente</span>
-il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-el="del" data-hand="#mano-seconda">forte</span> si placava.</p>
+<span id="specimen:0.1.0.0.2.0" class="t-subst s-3-editoriale" data-el="subst" data-hand="#mano-prima" data-change="#stesura"><span id="specimen:0.1.0.0.2.0.0" class="t-del s-3-trascrizionale" data-el="del">cadeva</span><span id="specimen:0.1.0.0.2.0.1" class="t-add s-3-trascrizionale" data-el="add">scendeva</span></span>
+sul paese, e <span id="specimen:0.1.0.0.2.1" class="t-add s-3-trascrizionale" data-el="add" data-place="above" data-hand="#mano-seconda" data-change="#revisione">lentamente</span>
+il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-el="del" data-hand="#mano-seconda" data-change="#revisione">forte</span> si placava.</p>
 <div id="specimen:0.1.0.0.3" class="t-p s-1-struttura" data-el="p">Nel testo in prosa lo specimen mostra anche la
           <span id="specimen:0.1.0.0.3.0" class="t-choice s-3-editoriale" data-el="choice"><span id="specimen:0.1.0.0.3.0.0" class="t-abbr s-3-editoriale" data-el="abbr">sig.ra</span><span id="specimen:0.1.0.0.3.0.1" class="t-expan s-3-editoriale" data-el="expan">signora</span></span> abbreviazione
           col suo scioglimento, un passo
@@ -385,7 +456,7 @@ il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-e
           <span class="t-note-mark" aria-hidden="true">°</span><div id="specimen:0.1.0.0.3.5" class="t-note s-1-note" data-el="note" data-type="editorial">Le note editoriali si mostrano così.</div></div>
       </div>
     </div></main>
-<footer class="torchio">Pubblicato con <span class="press">Torchio</span> v0.1.0 · 89939c7 · 2026-07-31</footer>
+<footer class="torchio">Pubblicato con <span class="press">Torchio</span> v0.1.0 · eb43eb4 · 2026-07-31</footer>
 <script>
 (function(){
   var body=document.body; body.classList.add('mode-read');
@@ -692,6 +763,18 @@ il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-e
         +'<div class="meta">'+meta.join(' · ')+'</div>',ent);
       ev.stopPropagation();return;
     }
+    /* a writing operation belongs to a campaign and a hand: clicking it says
+       which, and links to the stratum it belongs to */
+    var op=ev.target.closest&&ev.target.closest('[data-change],[data-hand]');
+    if(op&&/^(add|del|subst|restore|retrace|mod|transpose|metamark)$/.test(op.dataset.el||'')){
+      var lab=(op.dataset.change||'').replace(/^#/,''), hd=(op.dataset.hand||'').replace(/^#/,'');
+      var strat=lab?document.querySelector('[data-el="change"][id$="'+lab+'"]'):null;
+      openPop('<span class="k">'+esc(op.dataset.el)+'</span>'
+        +'<div class="notebody">'+esc(op.textContent.replace(/s+/g,' ').trim().slice(0,140))+'</div>'
+        +'<div class="meta">'+(lab?esc(lab):'')+(hd?' · '+esc(hd):'')
+        +' <a href="genesis.html">Genesi</a></div>',op);
+      ev.stopPropagation();return;
+    }
     var anc=ev.target.closest&&ev.target.closest('[data-appref]');
     if(anc&&!body.classList.contains('app-off')&&openAppFor(anc)){ev.stopPropagation();return;}
     var wv=ev.target.closest&&ev.target.closest('.wv');
@@ -761,7 +844,12 @@ il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-e
     var old=document.getElementById('note-leaders'); if(old)old.remove();
     var main=document.querySelector('main.torchio'); if(!main)return;
     var notes=[].slice.call(document.querySelectorAll('main.torchio .t-note'))
-      .filter(function(n){return !n.closest('.header-full')&&!n.closest('.t-teiHeader');});
+      .filter(function(n){
+        /* a header note is metadata, except a standoff note with a target:
+           that one belongs to the passage it names, wherever it was written */
+        var inHeader=n.closest('.header-full')||n.closest('.t-teiHeader');
+        return !inHeader||!!n.dataset.target;
+      });
     function anchorOf(n){
       var app=n.closest('.t-app');
       if(app){return {el:app.querySelector('[data-el="lem"]')||app,kind:'app'};}
@@ -780,13 +868,41 @@ il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-e
        they collapse to their marks and open on click, like the apparatus */
     var dense=notes.length>12;
     body.classList.toggle('notes-dense',dense);
-    if(dense){
+    /* pairing runs ALWAYS: a mark must answer a click whatever the density
+       or the width of the window; density only decides whether the notes
+       collapse to their marks or sit in the margin */
+    {
+      // the renderer emits a mark and its note together: pair them by
+      // document order, so a mark is never left without its note (C74)
+      var marks=[].slice.call(document.querySelectorAll('main.torchio .t-note-mark'))
+        .filter(function(m){return !m.closest('.header-full')&&!m.closest('.t-teiHeader');});
+      /* a mark whose note the press does not show (a note of the header, or
+         one filtered out) is not a mark: it is a leftover, and it goes */
+      if(marks.length>notes.length){
+        marks.slice(notes.length).forEach(function(m){m.remove();});
+        marks=marks.slice(0,notes.length);
+      }
       notes.forEach(function(n,i){
         if(n.dataset.npi)return;
         n.dataset.npi=String(i);
         var res=anchorOf(n);
-        if(res){res.el.setAttribute('data-notepop',String(i));
-          res.el.removeAttribute('aria-hidden');makeTrigger(res.el,null);}
+        var mk=marks[i];
+        /* a standoff note is written apart and declares where it belongs:
+           its mark goes to the passage, not to the place it was written */
+        var tg=n.dataset.target;
+        if(tg&&mk){
+          var id=tg.split(/s+/)[0].replace(/^#/,'');
+          var dest=document.getElementById(id);
+          if(dest&&!dest.contains(mk)){
+            if(dest.nextSibling)dest.parentNode.insertBefore(mk,dest.nextSibling);
+            else dest.parentNode.appendChild(mk);
+          }
+        }
+        /* both answer the click: the mark, and the anchored passage */
+        if(mk){mk.setAttribute('data-notepop',String(i));
+          mk.removeAttribute('aria-hidden');makeTrigger(mk,null);}
+        var el=res&&res.el;
+        if(el&&el!==mk){el.setAttribute('data-notepop',String(i));makeTrigger(el,null);}
       });
     }
     if(window.innerWidth<1180||body.classList.contains('notes-off')||dense){
@@ -872,6 +988,16 @@ il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-e
     });
   }
 })();
-</script>
+
+(function(){
+  document.querySelectorAll('.hand-btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      var h=b.getAttribute('data-hand-pick');
+      if(h){document.body.setAttribute('data-hand-only',h);}
+      else{document.body.removeAttribute('data-hand-only');}
+      document.querySelectorAll('.hand-btn').forEach(function(x){x.classList.toggle('on',x===b&&!!h);});
+    });
+  });
+})();</script>
 </body>
 </html>
