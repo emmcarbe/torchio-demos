@@ -340,7 +340,22 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <div class="tt"><h1>Frankenstein, Volume III</h1><p class="sub">Raffaele Viglianti · Travis Brown</p></div>
 <nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Edition</a><a href="text.html" class="on">Text</a><a href="genesis.html">Genesis</a><a href="data.html">Data</a></nav>
 </header>
-<div class="torchio-bar"><div class="inner"><button class="sw off" data-sw="header" aria-pressed="false">About this file</button></div></div><main id="main" class="torchio"><div id="ox-frankenstein-volume_iii:0.0" class="t-teiHeader s-7-header" data-el="teiHeader">
+<div class="torchio-bar"><div class="inner"><button class="sw off" data-sw="header" aria-pressed="false">About this file</button></div></div><main id="main" class="torchio"><style>
+.legend{margin:.8em 0;font-size:13px;color:var(--soft)}
+.legend summary{cursor:pointer;font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase}
+.legend ul{list-style:none;padding:.6em 0 0;margin:0;display:flex;flex-wrap:wrap;gap:.5em 1.8em}
+.leg-sample{display:inline-block;min-width:2.2em;text-align:center}
+.leg-app{border-bottom:1px dashed var(--accent)}
+.hand-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:.8em 0}
+.hand-lab{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--soft)}
+.hand-btn{font-size:12px;border:1px solid var(--hair);border-radius:2px;background:var(--paper);color:var(--ink);cursor:pointer;padding:4px 10px;display:inline-flex;align-items:center;gap:6px}
+.hand-btn.on{border-color:var(--accent)}
+.hand-dot{display:inline-block;width:9px;height:9px;border-radius:50%}
+[data-hand="#mws"]{background:#1a5fb414;box-shadow:inset 0 -2px #1a5fb455}
+body[data-hand-only]:not([data-hand-only="#mws"]) [data-hand="#mws"]{opacity:.25}
+[data-hand="#pbs"]{background:#26652c14;box-shadow:inset 0 -2px #26652c55}
+body[data-hand-only]:not([data-hand-only="#pbs"]) [data-hand="#pbs"]{opacity:.25}
+</style><div class="hand-bar"><span class="hand-lab">Hands</span><button type="button" class="hand-btn" data-hand-pick="#mws"><span class="hand-dot" style="background:#1a5fb4"></span>Mary Shelley</button><button type="button" class="hand-btn" data-hand-pick="#pbs"><span class="hand-dot" style="background:#26652c"></span>Percy Shelley</button><button type="button" class="hand-btn" data-hand-pick="">all</button></div><details class="legend"><summary>Legend</summary><ul><li><span class="leg-sample"><span class="t-del">word</span></span> deleted by the writing hand</li><li><span class="leg-sample"><span class="t-add">word</span></span> added above the line</li><li><span class="leg-sample"><span class="t-unclear">word</span></span> uncertain reading</li><li><span class="leg-sample">^</span> a sign of the hand about the text</li><li><span class="leg-sample"><span class="hand-dot" style="background:#1a5fb4"></span></span> the hand of Mary Shelley</li><li><span class="leg-sample"><span class="hand-dot" style="background:#26652c"></span></span> the hand of Percy Shelley</li></ul></details><div id="ox-frankenstein-volume_iii:0.0" class="t-teiHeader s-7-header" data-el="teiHeader">
         <div id="ox-frankenstein-volume_iii:0.0.0" class="t-fileDesc s-7-header" data-el="fileDesc">
             <span id="ox-frankenstein-volume_iii:0.0.0.0" class="t-titleStmt s-7-header" data-el="titleStmt">
                 <span id="ox-frankenstein-volume_iii:0.0.0.0.0" class="t-title s-1-inline" data-el="title" data-type="main">Frankenstein, Volume III</span>
@@ -2357,7 +2372,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
   </div>
 </div>
     </div></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · 7b921b8 · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · c1a6d22 · 2026-07-31</footer>
 <script>
 (function(){
   var body=document.body; body.classList.add('mode-read');
@@ -2878,6 +2893,16 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     });
   }
 })();
-</script>
+
+(function(){
+  document.querySelectorAll('.hand-btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      var h=b.getAttribute('data-hand-pick');
+      if(h){document.body.setAttribute('data-hand-only',h);}
+      else{document.body.removeAttribute('data-hand-only');}
+      document.querySelectorAll('.hand-btn').forEach(function(x){x.classList.toggle('on',x===b&&!!h);});
+    });
+  });
+})();</script>
 </body>
 </html>
