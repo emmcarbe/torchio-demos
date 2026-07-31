@@ -2,5 +2,6 @@
  "files": [
   "specimen.xml",
   "torchio.json"
- ]
+ ],
+ "count": 2
 }
