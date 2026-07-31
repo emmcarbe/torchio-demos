@@ -1,18 +1,22 @@
 {
-  "lang": "en",
-  "title": "The Book of the Tales of Canterbury: the General Prologue",
-  "subtitle": "ed. Barbara Bordalejo and Peter Robinson · Canterbury Tales Project (talesofcanterbury.org/GP) · 2026 · materials under copyright, pressed by invitation of the editors · temporary demo, it will be removed",
-  "parent": {
-    "href": "../",
-    "label": "Home"
-  },
-  "align": {
-    "elements": [
-      "l",
-      "app"
-    ],
-    "strip": "^.*line=",
-    "stripSuffix": "-APP$",
-    "apparatusUnder": "ms-Edition"
-  }
+ "lang": "en",
+ "title": "The Book of the Tales of Canterbury: the General Prologue",
+ "subtitle": "ed. Barbara Bordalejo and Peter Robinson · Canterbury Tales Project (talesofcanterbury.org/GP) · 2026 · materials under copyright, pressed by invitation of the editors · temporary demo, it will be removed",
+ "parent": {
+  "href": "../",
+  "label": "Home"
+ },
+ "align": {
+  "elements": [
+   "l",
+   "app"
+  ],
+  "strip": "^.*line=",
+  "stripSuffix": "-APP$",
+  "apparatusUnder": "ms-Edition"
+ },
+ "pieces": {
+  "lexicon": true,
+  "lexStats": true
+ }
 }
