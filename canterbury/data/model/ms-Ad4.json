@@ -1,0 +1,1087 @@
+{
+ "meta": {
+  "title": "The Canterbury Tales: The General Prologue",
+  "responsibility": [
+   {
+    "role": "edited by",
+    "name": "Barbara Bordalejo, Peter Robinson"
+   },
+   {
+    "role": "transcripts",
+    "name": "the Canterbury Tales Project"
+   }
+  ]
+ },
+ "generator": {
+  "name": "torchio",
+  "tei": "P5 Version 4.12.0. Last updated on\n        28th July 2026, revision 113e933e2"
+ },
+ "documents": [
+  {
+   "id": "ms-Ad4",
+   "tree": {
+    "id": "ms-Ad4",
+    "element": "TEI",
+    "section": "1-struttura",
+    "atts": {
+     "xml:id": "ms-Ad4"
+    },
+    "children": [
+     "\n",
+     {
+      "id": "ms-Ad4:0.0",
+      "element": "teiHeader",
+      "section": "7-header",
+      "atts": {},
+      "children": [
+       {
+        "id": "ms-Ad4:0.0.0",
+        "element": "fileDesc",
+        "section": "7-header",
+        "atts": {},
+        "children": [
+         {
+          "id": "ms-Ad4:0.0.0.0",
+          "element": "titleStmt",
+          "section": "7-header",
+          "atts": {},
+          "children": [
+           {
+            "id": "ms-Ad4:0.0.0.0.0",
+            "element": "title",
+            "section": "1-inline",
+            "atts": {},
+            "children": [
+             "Ad4 · London, British Library, Additional MS 10340"
+            ]
+           }
+          ]
+         },
+         {
+          "id": "ms-Ad4:0.0.0.1",
+          "element": "publicationStmt",
+          "section": "7-header",
+          "atts": {},
+          "children": [
+           {
+            "id": "ms-Ad4:0.0.0.1.0",
+            "element": "p",
+            "section": "1-struttura",
+            "atts": {},
+            "children": [
+             "Canterbury Tales Project."
+            ]
+           }
+          ]
+         },
+         {
+          "id": "ms-Ad4:0.0.0.2",
+          "element": "sourceDesc",
+          "section": "7-header",
+          "atts": {},
+          "children": [
+           {
+            "id": "ms-Ad4:0.0.0.2.0",
+            "element": "p",
+            "section": "1-struttura",
+            "atts": {},
+            "children": [
+             "talesofcanterbury.org/GP/xml/transcripts/Ad4/"
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     "\n",
+     {
+      "id": "ms-Ad4:0.1",
+      "element": "text",
+      "section": "7-struttura-documento",
+      "atts": {},
+      "children": [
+       {
+        "id": "ms-Ad4:0.1.0",
+        "element": "body",
+        "section": "1-struttura",
+        "atts": {},
+        "children": [
+         "\n    ",
+         {
+          "id": "ms-Ad4:0.1.0.0",
+          "element": "text",
+          "section": "7-struttura-documento",
+          "atts": {},
+          "children": [
+           {
+            "id": "ms-Ad4:0.1.0.0.0",
+            "element": "body",
+            "section": "1-struttura",
+            "atts": {},
+            "children": [
+             {
+              "id": "ms-Ad4:0.1.0.0.0.0",
+              "element": "pb",
+              "section": "1-milestone",
+              "atts": {
+               "facs": "Ad4-41r.jpg",
+               "n": "41r"
+              },
+              "children": []
+             },
+             {
+              "id": "ms-Ad4:0.1.0.0.0.1",
+              "element": "div",
+              "section": "1-struttura",
+              "atts": {
+               "type": "G",
+               "n": "GP"
+              },
+              "children": [
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.0",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.1",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "480"
+                },
+                "children": [
+                 "Þere was a pore ",
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.1.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "ꝑ"
+                  ]
+                 },
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.1.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "per"
+                  ]
+                 },
+                 "son of a toune "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.2",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.3",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "479"
+                },
+                "children": [
+                 "And was a goode man of religioune "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.4",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.5",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "481"
+                },
+                "children": [
+                 "Holy he was boþe in þouȝt ",
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.5.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "⁊"
+                  ]
+                 },
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.5.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "and"
+                  ]
+                 },
+                 " werk "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.6",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.7",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "482"
+                },
+                "children": [
+                 "Þerto he was alered man a clerk "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.8",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.9",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "493"
+                },
+                "children": [
+                 "Were hys ",
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.9.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "ꝑ"
+                  ]
+                 },
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.9.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "per"
+                  ]
+                 },
+                 "isshe housed neuer so fer a sonder "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.10",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.11",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "494"
+                },
+                "children": [
+                 "He lefte neiþer for reynes ne for þonder "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.12",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.13",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "495-a"
+                },
+                "children": [
+                 "Þe ferrest in hys ",
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.13.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "ꝑ"
+                  ]
+                 },
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.13.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "per"
+                  ]
+                 },
+                 "ische to visite "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.14",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.15",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "492"
+                },
+                "children": [
+                 "He couþe haue suffisa",
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.15.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "ıı̄"
+                  ]
+                 },
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.15.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "un"
+                  ]
+                 },
+                 "ce in þing ful lite "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.16",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.17",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "488"
+                },
+                "children": [
+                 "Ful loþe was hym to cursen for his tyþes "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.18",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.19",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "487"
+                },
+                "children": [
+                 "And so he was ꝓ yproued ofte syþes "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.20",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.21",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "497"
+                },
+                "children": [
+                 "Þus wolde he walke ",
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.21.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "⁊"
+                  ]
+                 },
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.21.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "and"
+                  ]
+                 },
+                 " in hys hand a staf  "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.22",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.23",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "498"
+                },
+                "children": [
+                 "Þis noble ensample in to hys shepe he ȝaf "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.24",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.25",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "499"
+                },
+                "children": [
+                 "Þat fyrst he wrouȝt ",
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.25.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "⁊"
+                  ]
+                 },
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.25.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "and"
+                  ]
+                 },
+                 " aft",
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.25.2",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "̉"
+                  ]
+                 },
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.25.3",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "er"
+                  ]
+                 },
+                 "ward he tauȝt "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.26",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.27",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "500"
+                },
+                "children": [
+                 "Out of þe gospel he þo wordes rauȝt "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.28",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.29",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "509"
+                },
+                "children": [
+                 "He lete nauȝt hys benefice to hyr",
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.29.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "͗"
+                  ]
+                 },
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.29.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "e"
+                  ]
+                 },
+                 " "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.30",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.31",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "510"
+                },
+                "children": [
+                 "And lete hys shepe emco",
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.31.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "̄"
+                  ]
+                 },
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.31.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "m"
+                  ]
+                 },
+                 "bred in þe myr",
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.31.2",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "͗"
+                  ]
+                 },
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.31.3",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "e"
+                  ]
+                 },
+                 " "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.32",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.33",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "511"
+                },
+                "children": [
+                 "Ne ran to london̄ Vnto seynt poules "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.34",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.35",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "512"
+                },
+                "children": [
+                 "To getyn hym a chauntery for soules "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.36",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.37",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "513"
+                },
+                "children": [
+                 "Oþer wiþ abreþerhede to be wiþholde "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.38",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.39",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "514"
+                },
+                "children": [
+                 "But knelt at home ",
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.39.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "⁊"
+                  ]
+                 },
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.39.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "and"
+                  ]
+                 },
+                 " he kept hys owe",
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.39.2",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "̄"
+                  ]
+                 },
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.39.3",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "n"
+                  ]
+                 },
+                 " fold "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.40",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.41",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "515"
+                },
+                "children": [
+                 "So þat þe wolf ne made it nat myskary "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.42",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.43",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "516"
+                },
+                "children": [
+                 "He was a shepherde ",
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.43.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "⁊"
+                  ]
+                 },
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.43.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "and"
+                  ]
+                 },
+                 " nat amercenary "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.44",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.45",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "501"
+                },
+                "children": [
+                 "And þis figure he added eke þer to "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.46",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.47",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "502"
+                },
+                "children": [
+                 "Þat if gold rust what shal yren do "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.48",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.49",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "503"
+                },
+                "children": [
+                 "For ȝif a prest be foule on whom we trust "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.50",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.51",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "504"
+                },
+                "children": [
+                 "No wonder is a lewed man to rust "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.52",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.53",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "505-a"
+                },
+                "children": [
+                 "For it is a foule þing who so take kepe "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.54",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.55",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "506"
+                },
+                "children": [
+                 "A sheten shepherd ",
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.55.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "⁊"
+                  ]
+                 },
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.55.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "and"
+                  ]
+                 },
+                 " a clene shepe "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.56",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.57",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "527"
+                },
+                "children": [
+                 "He wayted aftr",
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.57.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "͗"
+                  ]
+                 },
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.57.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "e"
+                  ]
+                 },
+                 " no pompe ne reu",
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.57.2",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "̉"
+                  ]
+                 },
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.57.3",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "er"
+                  ]
+                 },
+                 "ence "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.58",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.59",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "528"
+                },
+                "children": [
+                 "Ne made hym a spiced conscience "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.60",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.61",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "529"
+                },
+                "children": [
+                 "But cristis lore ",
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.61.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "⁊"
+                  ]
+                 },
+                 {
+                  "id": "ms-Ad4:0.1.0.0.0.1.61.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "and"
+                  ]
+                 },
+                 " hys apostles tweue "
+                ]
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.62",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Ad4:0.1.0.0.0.1.63",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "530"
+                },
+                "children": [
+                 "He tauȝt but first he folwed it hym selue ."
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         "\n"
+        ]
+       }
+      ]
+     },
+     "\n"
+    ]
+   },
+   "card": {
+    "id": "ms-Ad4",
+    "title": "Ad4 · London, British Library, Additional MS 10340",
+    "date": null,
+    "from": [],
+    "to": [],
+    "author": null,
+    "place": null,
+    "idno": null
+   }
+  }
+ ]
+}

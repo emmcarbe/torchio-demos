@@ -77,7 +77,14 @@ body.notes-off .t-note-mark{opacity:.25}
   .t-note.placed{font-size:.78em;line-height:1.4}
 }
 
-.t-app:has([data-el="lem"]) .t-rdg{display:none}
+.t-app.app-has-lem .t-rdg{display:none}
+/* an app without a lem privileges nothing: the first reading stands in the
+   text (the others are in the apparatus), never all of them concatenated */
+.t-app.app-no-lem>[data-el="rdg"]~[data-el="rdg"],
+.t-app.app-no-lem>[data-el="rdgGrp"]~[data-el="rdgGrp"]{display:none}
+/* an app that points to the text (double-end-point, location-referenced)
+   carries no text of its own: the passage is already in the base text */
+.t-app.app-pointing{display:none}
 .t-lem{border-bottom:1px dotted var(--accent-soft)}
 .t-app[data-type="lac"] [data-el="lem"]{font-family:var(--mono);font-size:.62em;
   font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);
@@ -385,7 +392,7 @@ function fit(){
 fit();
 window.addEventListener('resize',function(){map.invalidateSize();fit();});
 </script><p class="occ">Schizzo posizionale. Punti pieni: coordinate dichiarate nel TEI o confermate dall’editore. Punti vuoti: suggerimenti del gazetteer in attesa di revisione. Ogni luogo rimanda a OpenStreetMap. Coste: Natural Earth (pubblico dominio).</p><table class="idx-table"><tr><td>Itaca</td><td class="occ">38.4381, 20.6903</td><td class="occ"><a href="https://www.openstreetmap.org/?mlat=38.4381&amp;mlon=20.6903#map=12/38.4381/20.6903">OSM</a></td></tr><tr><td>Troia</td><td class="occ">39.9570, 26.2390</td><td class="occ"><a href="https://www.openstreetmap.org/?mlat=39.957&amp;mlon=26.239#map=12/39.957/26.239">OSM</a></td></tr></table></main>
-<footer class="torchio">Pubblicato con <span class="press">Torchio</span> v0.1.0 · eb43eb4 · 2026-07-31</footer>
+<footer class="torchio">Pubblicato con <span class="press">Torchio</span> v0.1.0 · 8453b62 · 2026-07-31</footer>
 
 </body>
 </html>

@@ -1,0 +1,367 @@
+{
+ "split": true,
+ "reason": "the whole model exceeds what a repository can carry",
+ "bytes": 135360257,
+ "documents": [
+  {
+   "id": "ms-Edition",
+   "file": "model/ms-Edition.json",
+   "bytes": 598228
+  },
+  {
+   "id": "ms-Ad1",
+   "file": "model/ms-Ad1.json",
+   "bytes": 603622
+  },
+  {
+   "id": "ms-Ad3",
+   "file": "model/ms-Ad3.json",
+   "bytes": 384457
+  },
+  {
+   "id": "ms-Ad4",
+   "file": "model/ms-Ad4.json",
+   "bytes": 31506
+  },
+  {
+   "id": "ms-Bo1",
+   "file": "model/ms-Bo1.json",
+   "bytes": 634740
+  },
+  {
+   "id": "ms-Bo2",
+   "file": "model/ms-Bo2.json",
+   "bytes": 613022
+  },
+  {
+   "id": "ms-Bw",
+   "file": "model/ms-Bw.json",
+   "bytes": 240766
+  },
+  {
+   "id": "ms-Ch",
+   "file": "model/ms-Ch.json",
+   "bytes": 643901
+  },
+  {
+   "id": "ms-Cn",
+   "file": "model/ms-Cn.json",
+   "bytes": 499302
+  },
+  {
+   "id": "ms-Cp",
+   "file": "model/ms-Cp.json",
+   "bytes": 520722
+  },
+  {
+   "id": "ms-Cx1",
+   "file": "model/ms-Cx1.json",
+   "bytes": 541178
+  },
+  {
+   "id": "ms-Cx2",
+   "file": "model/ms-Cx2.json",
+   "bytes": 587356
+  },
+  {
+   "id": "ms-Dd",
+   "file": "model/ms-Dd.json",
+   "bytes": 307606
+  },
+  {
+   "id": "ms-Dl",
+   "file": "model/ms-Dl.json",
+   "bytes": 411829
+  },
+  {
+   "id": "ms-Do",
+   "file": "model/ms-Do.json",
+   "bytes": 58260
+  },
+  {
+   "id": "ms-Ds1",
+   "file": "model/ms-Ds1.json",
+   "bytes": 533697
+  },
+  {
+   "id": "ms-El",
+   "file": "model/ms-El.json",
+   "bytes": 603311
+  },
+  {
+   "id": "ms-En1",
+   "file": "model/ms-En1.json",
+   "bytes": 656028
+  },
+  {
+   "id": "ms-En3",
+   "file": "model/ms-En3.json",
+   "bytes": 603021
+  },
+  {
+   "id": "ms-Fi",
+   "file": "model/ms-Fi.json",
+   "bytes": 652266
+  },
+  {
+   "id": "ms-Gg",
+   "file": "model/ms-Gg.json",
+   "bytes": 703444
+  },
+  {
+   "id": "ms-Gl",
+   "file": "model/ms-Gl.json",
+   "bytes": 369191
+  },
+  {
+   "id": "ms-Ha2",
+   "file": "model/ms-Ha2.json",
+   "bytes": 683760
+  },
+  {
+   "id": "ms-Ha3",
+   "file": "model/ms-Ha3.json",
+   "bytes": 667719
+  },
+  {
+   "id": "ms-Ha4",
+   "file": "model/ms-Ha4.json",
+   "bytes": 561024
+  },
+  {
+   "id": "ms-Hg",
+   "file": "model/ms-Hg.json",
+   "bytes": 583491
+  },
+  {
+   "id": "ms-Ht",
+   "file": "model/ms-Ht.json",
+   "bytes": 531096
+  },
+  {
+   "id": "ms-Ii",
+   "file": "model/ms-Ii.json",
+   "bytes": 604168
+  },
+  {
+   "id": "ms-La",
+   "file": "model/ms-La.json",
+   "bytes": 600055
+  },
+  {
+   "id": "ms-Lc",
+   "file": "model/ms-Lc.json",
+   "bytes": 603143
+  },
+  {
+   "id": "ms-Ld1",
+   "file": "model/ms-Ld1.json",
+   "bytes": 642067
+  },
+  {
+   "id": "ms-Ld2",
+   "file": "model/ms-Ld2.json",
+   "bytes": 675696
+  },
+  {
+   "id": "ms-Ln",
+   "file": "model/ms-Ln.json",
+   "bytes": 363054
+  },
+  {
+   "id": "ms-Ma",
+   "file": "model/ms-Ma.json",
+   "bytes": 604689
+  },
+  {
+   "id": "ms-Mg",
+   "file": "model/ms-Mg.json",
+   "bytes": 553555
+  },
+  {
+   "id": "ms-Mm",
+   "file": "model/ms-Mm.json",
+   "bytes": 531042
+  },
+  {
+   "id": "ms-Ne",
+   "file": "model/ms-Ne.json",
+   "bytes": 212719
+  },
+  {
+   "id": "ms-Nl",
+   "file": "model/ms-Nl.json",
+   "bytes": 452145
+  },
+  {
+   "id": "ms-Ph2",
+   "file": "model/ms-Ph2.json",
+   "bytes": 665806
+  },
+  {
+   "id": "ms-Pn",
+   "file": "model/ms-Pn.json",
+   "bytes": 523673
+  },
+  {
+   "id": "ms-Ps",
+   "file": "model/ms-Ps.json",
+   "bytes": 619257
+  },
+  {
+   "id": "ms-Pw",
+   "file": "model/ms-Pw.json",
+   "bytes": 605295
+  },
+  {
+   "id": "ms-Py",
+   "file": "model/ms-Py.json",
+   "bytes": 627045
+  },
+  {
+   "id": "ms-Ra2",
+   "file": "model/ms-Ra2.json",
+   "bytes": 259358
+  },
+  {
+   "id": "ms-Ra3",
+   "file": "model/ms-Ra3.json",
+   "bytes": 465148
+  },
+  {
+   "id": "ms-Ry1",
+   "file": "model/ms-Ry1.json",
+   "bytes": 584050
+  },
+  {
+   "id": "ms-Ry2",
+   "file": "model/ms-Ry2.json",
+   "bytes": 712632
+  },
+  {
+   "id": "ms-Se",
+   "file": "model/ms-Se.json",
+   "bytes": 724123
+  },
+  {
+   "id": "ms-Sl1",
+   "file": "model/ms-Sl1.json",
+   "bytes": 142497
+  },
+  {
+   "id": "ms-Sl2",
+   "file": "model/ms-Sl2.json",
+   "bytes": 531511
+  },
+  {
+   "id": "ms-Tc1",
+   "file": "model/ms-Tc1.json",
+   "bytes": 556389
+  },
+  {
+   "id": "ms-Tc2",
+   "file": "model/ms-Tc2.json",
+   "bytes": 646587
+  },
+  {
+   "id": "ms-To1",
+   "file": "model/ms-To1.json",
+   "bytes": 619263
+  },
+  {
+   "id": "ms-Wy",
+   "file": "model/ms-Wy.json",
+   "bytes": 609650
+  },
+  {
+   "id": "collazione-01",
+   "file": "model/collazione-01.json",
+   "bytes": 3479576
+  },
+  {
+   "id": "collazione-02",
+   "file": "model/collazione-02.json",
+   "bytes": 3608614
+  },
+  {
+   "id": "collazione-03",
+   "file": "model/collazione-03.json",
+   "bytes": 3576720
+  },
+  {
+   "id": "collazione-04",
+   "file": "model/collazione-04.json",
+   "bytes": 3762422
+  },
+  {
+   "id": "collazione-05",
+   "file": "model/collazione-05.json",
+   "bytes": 3737524
+  },
+  {
+   "id": "collazione-06",
+   "file": "model/collazione-06.json",
+   "bytes": 3872383
+  },
+  {
+   "id": "collazione-07",
+   "file": "model/collazione-07.json",
+   "bytes": 3702685
+  },
+  {
+   "id": "collazione-08",
+   "file": "model/collazione-08.json",
+   "bytes": 3866928
+  },
+  {
+   "id": "collazione-09",
+   "file": "model/collazione-09.json",
+   "bytes": 3854058
+  },
+  {
+   "id": "collazione-10",
+   "file": "model/collazione-10.json",
+   "bytes": 4228517
+  },
+  {
+   "id": "collazione-11",
+   "file": "model/collazione-11.json",
+   "bytes": 4544791
+  },
+  {
+   "id": "collazione-12",
+   "file": "model/collazione-12.json",
+   "bytes": 4401341
+  },
+  {
+   "id": "collazione-13",
+   "file": "model/collazione-13.json",
+   "bytes": 4356897
+  },
+  {
+   "id": "collazione-14",
+   "file": "model/collazione-14.json",
+   "bytes": 4717916
+  },
+  {
+   "id": "collazione-15",
+   "file": "model/collazione-15.json",
+   "bytes": 4318579
+  },
+  {
+   "id": "collazione-16",
+   "file": "model/collazione-16.json",
+   "bytes": 4359025
+  },
+  {
+   "id": "collazione-17",
+   "file": "model/collazione-17.json",
+   "bytes": 4412354
+  },
+  {
+   "id": "collazione-18",
+   "file": "model/collazione-18.json",
+   "bytes": 4007664
+  }
+ ]
+}

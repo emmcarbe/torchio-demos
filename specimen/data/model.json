@@ -1299,630 +1299,630 @@
     "form": "a",
     "count": 4,
     "lang": "it",
-    "rel": 3.704,
+    "rel": 37.037,
     "stop": true
    },
    {
     "form": "che",
     "count": 4,
     "lang": "it",
-    "rel": 3.704,
+    "rel": 37.037,
     "stop": true
    },
    {
     "form": "e",
     "count": 4,
     "lang": "it",
-    "rel": 3.704,
+    "rel": 37.037,
     "stop": true
    },
    {
     "form": "il",
     "count": 4,
     "lang": "it",
-    "rel": 3.704,
+    "rel": 37.037,
     "stop": true
    },
    {
     "form": "la",
     "count": 4,
     "lang": "it",
-    "rel": 3.704,
+    "rel": 37.037,
     "stop": true
    },
    {
     "form": "di",
     "count": 3,
     "lang": "it",
-    "rel": 2.778,
+    "rel": 27.778,
     "stop": true
    },
    {
     "form": "una",
     "count": 2,
     "lang": "it",
-    "rel": 1.852,
+    "rel": 18.519,
     "stop": true
    },
    {
     "form": "abbreviazione",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "affanni",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "al",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": true
    },
    {
     "form": "alla",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": true
    },
    {
     "form": "anche",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "apparato",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "cercava",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "città",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "col",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "come",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": true
    },
    {
     "form": "compagni",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "con",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": true
    },
    {
     "form": "conobbe",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "cor",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "d",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "d'autore",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "del",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": true
    },
    {
     "form": "delle",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": true
    },
    {
     "form": "dentro",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "dimmi",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "dimostrativo",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "errò",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "genti",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "gittate",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "ilïòn",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "in",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": true
    },
    {
     "form": "incerta",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "indol",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "ingegno",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "integrata",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "itaca",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "l",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "l'incipit",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "le",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": true
    },
    {
     "form": "lentamente",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "lettura",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "lo",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": true
    },
    {
     "form": "mappa",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "mare",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "mentre",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "molte",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "molti",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "molto",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "mostra",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "mostrare",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "multiforme",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "musa",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "nel",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": true
    },
    {
     "form": "nome",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "odisseo",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "paese",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "pagina",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "parola",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "passo",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "per",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": true
    },
    {
     "form": "placava",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "poich'ebbe",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "prosa",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "punta",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "quell'uom",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "redimer",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "registro",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "ritorno",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "sacre",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "scendeva",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "scioglimento",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "sé",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "sera",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "si",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": true
    },
    {
     "form": "signora",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "sofferse",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "sovr'esso",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "specimen",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "stratigrafia",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "sul",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": true
    },
    {
     "form": "suo",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "terra",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "testo",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "torri",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "un",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": true
    },
    {
     "form": "vento",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "vide",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    },
    {
     "form": "vita",
     "count": 1,
     "lang": "it",
-    "rel": 0.926,
+    "rel": 9.259,
     "stop": false
    }
   ],

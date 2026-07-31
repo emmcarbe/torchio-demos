@@ -77,7 +77,14 @@ body.notes-off .t-note-mark{opacity:.25}
   .t-note.placed{font-size:.78em;line-height:1.4}
 }
 
-.t-app:has([data-el="lem"]) .t-rdg{display:none}
+.t-app.app-has-lem .t-rdg{display:none}
+/* an app without a lem privileges nothing: the first reading stands in the
+   text (the others are in the apparatus), never all of them concatenated */
+.t-app.app-no-lem>[data-el="rdg"]~[data-el="rdg"],
+.t-app.app-no-lem>[data-el="rdgGrp"]~[data-el="rdgGrp"]{display:none}
+/* an app that points to the text (double-end-point, location-referenced)
+   carries no text of its own: the passage is already in the base text */
+.t-app.app-pointing{display:none}
 .t-lem{border-bottom:1px dotted var(--accent-soft)}
 .t-app[data-type="lac"] [data-el="lem"]{font-family:var(--mono);font-size:.62em;
   font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);
@@ -432,12 +439,12 @@ body[data-hand-only="#mano-seconda"] #main [data-hand="#mano-seconda"],body[data
         <h2 id="specimen:0.1.0.0.0" class="t-head s-1-struttura" data-el="head">L&#39;incipit, con apparato dimostrativo</h2>
         <div id="specimen:0.1.0.0.1" class="t-lg s-1-struttura" data-el="lg">
           <div id="specimen:0.1.0.0.1.0" class="t-l s-1-versi" data-el="l"><span id="specimen:0.1.0.0.1.0.0" class="t-persName s-2-entita" data-el="persName" data-ref="#musa">Musa</span>, quell&#39;uom di
-            <span id="specimen:0.1.0.0.1.0.1" class="t-app s-4-apparato" data-el="app"><span id="specimen:0.1.0.0.1.0.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#A #C">multiforme</span><span id="specimen:0.1.0.0.1.0.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#B">moltiforme</span></span>
+            <span id="specimen:0.1.0.0.1.0.1" class="t-app s-4-apparato app-has-lem" data-el="app"><span id="specimen:0.1.0.0.1.0.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#A #C">multiforme</span><span id="specimen:0.1.0.0.1.0.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#B">moltiforme</span></span>
             ingegno</div>
           <div id="specimen:0.1.0.0.1.1" class="t-l s-1-versi" data-el="l">dimmi, che molto errò, poich&#39;ebbe a terra</div>
           <div id="specimen:0.1.0.0.1.2" class="t-l s-1-versi" data-el="l">gittate d&#39;<span id="specimen:0.1.0.0.1.2.0" class="t-placeName s-2-entita" data-el="placeName" data-ref="#troia">Ilïòn</span> le sacre torri;</div>
           <div id="specimen:0.1.0.0.1.3" class="t-l s-1-versi" data-el="l">che città vide molte, e delle genti</div>
-          <div id="specimen:0.1.0.0.1.4" class="t-l s-1-versi" data-el="l">l&#39;<span id="specimen:0.1.0.0.1.4.0" class="t-app s-4-apparato" data-el="app"><span id="specimen:0.1.0.0.1.4.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#A">indol</span><span id="specimen:0.1.0.0.1.4.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#B #C" data-type="ortografica">indole</span></span> conobbe; che sovr&#39;esso il mare</div>
+          <div id="specimen:0.1.0.0.1.4" class="t-l s-1-versi" data-el="l">l&#39;<span id="specimen:0.1.0.0.1.4.0" class="t-app s-4-apparato app-has-lem" data-el="app"><span id="specimen:0.1.0.0.1.4.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#A">indol</span><span id="specimen:0.1.0.0.1.4.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#B #C" data-type="ortografica">indole</span></span> conobbe; che sovr&#39;esso il mare</div>
           <div id="specimen:0.1.0.0.1.5" class="t-l s-1-versi" data-el="l">molti dentro del cor sofferse affanni,</div>
           <div id="specimen:0.1.0.0.1.6" class="t-l s-1-versi" data-el="l">mentre a <span id="specimen:0.1.0.0.1.6.0" class="t-del s-3-trascrizionale" data-el="del" data-hand="#m1">salvar</span><span id="specimen:0.1.0.0.1.6.1" class="t-add s-3-trascrizionale" data-el="add" data-place="above" data-hand="#m2">redimer</span> cercava a sé la vita,</div>
           <div id="specimen:0.1.0.0.1.7" class="t-l s-1-versi" data-el="l">e il ritorno a&#39; compagni.</div>
@@ -450,15 +457,16 @@ il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-e
           <span id="specimen:0.1.0.0.3.0" class="t-choice s-3-editoriale" data-el="choice"><span id="specimen:0.1.0.0.3.0.0" class="t-abbr s-3-editoriale" data-el="abbr">sig.ra</span><span id="specimen:0.1.0.0.3.0.1" class="t-expan s-3-editoriale" data-el="expan">signora</span></span> abbreviazione
           col suo scioglimento, un passo
           <span id="specimen:0.1.0.0.3.1" class="t-unclear s-3-editoriale" data-el="unclear">di lettura incerta</span>, una parola
-          <span id="specimen:0.1.0.0.3.2" class="t-supplied s-3-editoriale" data-el="supplied"><span class="t-sign">[</span>integrata<span class="t-sign">]</span></span>, e il nome di
+          <span id="specimen:0.1.0.0.3.2" class="t-supplied s-3-editoriale" data-el="supplied" data-reason="damage"><span class="t-sign">[</span>integrata<span class="t-sign">]</span></span>, e il nome di
           <span id="specimen:0.1.0.0.3.3" class="t-persName s-2-entita" data-el="persName" data-ref="#odisseo">Odisseo</span> che punta al registro,
           come <span id="specimen:0.1.0.0.3.4" class="t-placeName s-2-entita" data-el="placeName" data-ref="#itaca">Itaca</span> alla mappa.
           <span class="t-note-mark" aria-hidden="true">°</span><div id="specimen:0.1.0.0.3.5" class="t-note s-1-note" data-el="note" data-type="editorial">Le note editoriali si mostrano così.</div></div>
       </div>
     </div></main>
-<footer class="torchio">Pubblicato con <span class="press">Torchio</span> v0.1.0 · eb43eb4 · 2026-07-31</footer>
+<footer class="torchio">Pubblicato con <span class="press">Torchio</span> v0.1.0 · 8453b62 · 2026-07-31</footer>
 <script>
 (function(){
+  var T={"edition":"Edizione","text":"Testo","indices":"Indici","data":"Dati","archive":"Archivio","dsa":"archivio digitale","texts":"Testi","reading":"Interpretativa","diplomatic":"Diplomatica","apparatus":"Apparato","aboutFile":"Scheda del file","notes":"Note","dse":"edizione scientifica digitale","responsibility":"Responsabilità","licence":"Licenza","witnesses":"Testimoni","apparatusRegisters":"Apparati","revisions":"Storia delle revisioni","generator":"Generatore","people":"Persone","places":"Luoghi","orgs":"Organizzazioni","occurrenceOne":"occorrenza","occurrenceMany":"occorrenze","entries":"voci","skip":"Vai al contenuto","publishedWith":"Pubblicato con","map":"Mappa","mapAria":"Mappa dei luoghi dell'edizione","mapNote":"Schizzo posizionale. Punti pieni: coordinate dichiarate nel TEI o confermate dall’editore. Punti vuoti: suggerimenti del gazetteer in attesa di revisione. Ogni luogo rimanda a OpenStreetMap. Coste: Natural Earth (pubblico dominio).","front":"Pagine iniziali","back":"Pagine finali","lacking":"manca in","editedText":"testo critico","genesis":"Genesi","hand":"mano","version":"versione","legend":"Legenda","legWord":"parola","legDel":"cancellato dalla mano che scrive","legAdd":"aggiunto sopra la riga","legUnclear":"lettura incerta","legSupplied":"integrazione dell'editore","legGap":"perduto o illeggibile","legPb":"cambio di pagina della fonte","legMetamark":"segno della mano sul testo (^ = inserire qui; passa il mouse su un segno per leggere cosa fa)","legApp":"varianti: clic per l'apparato","legNote":"richiamo di nota","legHands":"Mani","legAllHands":"tutte","legHand":"la mano di","idxSearch":"cerca un nome…","backToTop":"torna su","apparatusCritical":"critico: varianti tra testimoni","apparatusGenetic":"genetico: gli strati di un manoscritto nel tempo","apparatusBoth":"critico e genetico: testimoni da collazionare, strati al loro interno","legMajor":"mano principale","lexicon":"Lessico","lexTokens":"parole","lexForms":"forme distinte","lexTTR":"type-token ratio","lexSearch":"cerca una parola…","lexFrequencies":"Frequenze","lexConcordance":"Concordanza","lexCloud":"Nuvola","lexPick":"Scegli una parola per vederla in contesto.","lexLanguage":"Lingua","lexAllLangs":"tutte","lexStoplist":"Stopword","lexStopNone":"nessuna","lexHideStop":"nascondi le stopword","lexWord":"parola","lexLang":"lingua","descrFrequencies":"Ogni forma attestata con il suo conteggio, la quota per mille e se la lista di stopword scelta la copre.","descrConcordance":"Ogni occorrenza di ogni forma, con le parole intorno e il rimando al punto del testo.","descrLemmaConcordance":"Le stesse occorrenze raggruppate sotto la forma di dizionario, dove l'edizione ha i lemmi.","lexAbs":"assoluta","lexRel":"per 1000","lexStats":"Statistica lessicale","lexStopCol":"stop","lexStopNote":"Frequenze e nuvola tolgono le stopword scelte; la concordanza tiene ogni parola.","genesisNote":"Le campagne correttorie dichiarate dall’edizione, nel suo ordine, con le operazioni di scrittura attribuite a ciascuna. Ogni operazione rimanda al punto in cui è avvenuta.","agreement":"Accordi fra testimoni","agreementNote":"Quante volte due testimoni portano la stessa lezione. Materiale per lo stemma, che resta argomento dell’editore.","openPage":"apri la pagina","sectionsN":"sezioni","sectionOne":"Sezione","contents":"Indice delle sezioni","bookLabel":"Libro","register":"Registro","documentsN":"documenti","dateCol":"Data","fromCol":"Mittente","toCol":"Destinatario","authorCol":"Autore","placeCol":"Luogo","titleCol":"Titolo","idnoCol":"Segn.","filter":"Filtra…","prev":"‹ precedente","next":"successivo ›","fullHeader":"L'intestazione completa (teiHeader)","fullHeaderNote":"Tutto ciò che il file dichiara, reso così com'è.","reuse":"Riuso secondo la licenza dell'edizione (vedi la pagina Edizione).","appEntry":"voce di apparato","descrModel":"il modello dell'edizione: documenti, registri, apparati (JSON)","descrEntities":"persone, luoghi e organizzazioni con conteggio delle occorrenze e coordinate","descrApparatus":"ogni lezione di apparato con i suoi testimoni, una riga per lezione","descrSource":"il file TEI sorgente, senza modifiche","lemmas":"Lemmi","lemmaCoverage":"Copertura","tokensWord":"token","languagesLabel":"Lingue","yearsLabel":"Anni","contributorsLabel":"Contributori","interventionsWord":"interventi","licenceVariesNote":"ogni documento dichiara la propria licenza, mostrata sulla sua pagina","lemmaFromMarkup":"dal markup (w/@lemma)","lemmaFromFile":"da lemmas.json","lemmaPending":"voci in attesa di revisione dell'editore","formsLabel":"forme","moreOccurrences":"altre occorrenze non mostrate qui","descrLemmas":"ogni lemma con le sue forme e i conteggi, una riga per forma","descrTokens":"il flusso dei token del testo di lettura: posizione, lingua, forma, lemma, ancora"};
   var body=document.body; body.classList.add('mode-read');
   if(document.querySelector('.app-band'))body.classList.add('has-band');
   if(window.TORCHIO_ALIGN)body.classList.add('has-align');
@@ -600,7 +608,7 @@ il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-e
         +'<span class="'+(r.dataset.el==='lem'?'is-lem':'')+'">'+esc(rr.textContent.trim()||'(om.)')+'</span></div>';
     });
     if(!rows)return false;
-    openPop('<span class="k">'+'Apparato'.toLowerCase()+'</span>'+rows,el);
+    openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'+rows,el);
     return true;
   }
   if(document.readyState==='complete'){wireWords();wirePointing();}
@@ -654,7 +662,7 @@ il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-e
   }
   function showZone(n){clearZone();zoneOf(n).forEach(function(e){e.classList.add('note-hi');hiZone.push(e);});}
   document.querySelectorAll('.t-app [data-el="lem"]').forEach(function(el){
-    makeTrigger(el,'voce di apparato: '+el.textContent.trim());
+    makeTrigger(el,''+esc(T.appEntry)+': '+el.textContent.trim());
   });
   document.querySelectorAll('[data-ref],[data-key]').forEach(function(el){
     if(el.classList.contains('ent-ext'))return; /* external links stay links */
@@ -705,7 +713,7 @@ il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-e
               }
               openPop('<span class="k">'+esc(sig)+'</span>'
                 +'<div class="notebody">'+(txt?esc(txt):'…')+'</div>'
-                +'<div class="meta"><a href="'+tgt+'">apri la pagina</a></div>',bw);
+                +'<div class="meta"><a href="'+tgt+'">'+esc(T.openPage)+'</a></div>',bw);
             })['catch'](function(){location.href=tgt;});
           }catch(e){location.href=tgt;}
         });
@@ -731,12 +739,12 @@ il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-e
       app.querySelectorAll('.t-note').forEach(function(nn){
         extra+='<div class="meta">'+esc(nn.textContent.replace(/s+/g,' ').trim())+'</div>';
       });
-      openPop('<span class="k">apparato'+(app.dataset.type?' · '+esc(app.dataset.type):'')+'</span>'+rows+extra,app);
+      openPop('<span class="k">'+esc(T.apparatus.toLowerCase())+''+(app.dataset.type?' · '+esc(app.dataset.type):'')+'</span>'+rows+extra,app);
       ev.stopPropagation();return;
     }
     var ch=ev.target.closest&&ev.target.closest('.t-choice');
     if(ch&&!ch.closest('.t-app')){
-      var kinds={abbr:'Diplomatica',orig:'Diplomatica',sic:'Diplomatica',expan:'Interpretativa',reg:'Interpretativa',corr:'Interpretativa'};
+      var kinds={abbr:esc(T.diplomatic),orig:esc(T.diplomatic),sic:esc(T.diplomatic),expan:esc(T.reading),reg:esc(T.reading),corr:esc(T.reading)};
       var rows='';
       [].slice.call(ch.children).forEach(function(c){
         var k=c.dataset&&c.dataset.el; if(!kinds[k])return;
@@ -757,7 +765,7 @@ il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-e
       var meta=[];
       if(key&&ent.textContent.trim()!==key)meta.push(esc(ent.textContent.trim()));
       if(ref)meta.push(esc(ref));
-      meta.push(all.length+' '+(all.length===1?'occorrenza':'occorrenze'));
+      meta.push(all.length+' '+(all.length===1?esc(T.occurrenceOne):esc(T.occurrenceMany)));
       openPop('<span class="k">'+esc(ent.dataset.el)+'</span>'
         +'<div>'+esc(head)+'</div>'
         +'<div class="meta">'+meta.join(' · ')+'</div>',ent);
@@ -772,7 +780,7 @@ il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-e
       openPop('<span class="k">'+esc(op.dataset.el)+'</span>'
         +'<div class="notebody">'+esc(op.textContent.replace(/s+/g,' ').trim().slice(0,140))+'</div>'
         +'<div class="meta">'+(lab?esc(lab):'')+(hd?' · '+esc(hd):'')
-        +' <a href="genesis.html">Genesi</a></div>',op);
+        +' <a href="genesis.html">'+esc(T.genesis)+'</a></div>',op);
       ev.stopPropagation();return;
     }
     var anc=ev.target.closest&&ev.target.closest('[data-appref]');
@@ -780,7 +788,7 @@ il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-e
     var wv=ev.target.closest&&ev.target.closest('.wv');
     if(wv&&wv._be&&!body.classList.contains('app-off')){
       var wband=wv._be.closest('.app-band');
-      openPop('<span class="k">'+'Apparato'.toLowerCase()+'</span>'
+      openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'
         +'<div class="popband" data-ent="'+((wband&&wband.getAttribute('data-ent'))||'')+'">'+wv._be.outerHTML+'</div>',wv);
       ev.stopPropagation();return;
     }
@@ -788,7 +796,7 @@ il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-e
     if(npFirst){
       var nnF=document.querySelector('.t-note[data-npi="'+npFirst.getAttribute('data-notepop')+'"]');
       if(nnF&&!body.classList.contains('notes-off')){
-        openPop('<span class="k">'+'Note'.toLowerCase()+'</span><div class="notebody">'+nnF.innerHTML+'</div>',npFirst);
+        openPop('<span class="k">'+esc(T.notes).toLowerCase()+'</span><div class="notebody">'+nnF.innerHTML+'</div>',npFirst);
         showZone(nnF);
         ev.stopPropagation();return;
       }
@@ -811,9 +819,9 @@ il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-e
           var el=doc.getElementById(id);
           var sec=el&&el.closest?el.closest('.vmap')||el:el;
           if(!sec)return;
-          openPop('<span class="k">'+'Apparato'.toLowerCase()+'</span>'
+          openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'
             +'<div class="popband" data-ent="'+esc(key)+'">'+sec.innerHTML+'</div>'
-            +'<div class="meta"><a href="'+tgt+'">apri la pagina</a></div>',lw);
+            +'<div class="meta"><a href="'+tgt+'">'+esc(T.openPage)+'</a></div>',lw);
         })['catch'](function(){});
       });
       ev.stopPropagation();return;
@@ -822,7 +830,7 @@ il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-e
     if(lv&&lv.nextElementSibling&&lv.nextElementSibling.classList
        &&lv.nextElementSibling.classList.contains('app-band')){
       var bd=lv.nextElementSibling;
-      openPop('<span class="k">'+'Apparato'.toLowerCase()+'</span>'
+      openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'
         +'<div class="popband" data-ent="'+(bd.getAttribute('data-ent')||'')+'">'+bd.innerHTML+'</div>',lv);
       ev.stopPropagation();return;
     }
@@ -830,7 +838,7 @@ il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-e
     if(np&&!body.classList.contains('notes-off')){
       var nn=document.querySelector('.t-note[data-npi="'+np.getAttribute('data-notepop')+'"]');
       if(nn){
-        openPop('<span class="k">'+'Note'.toLowerCase()+'</span><div class="notebody">'+nn.innerHTML+'</div>',np);
+        openPop('<span class="k">'+esc(T.notes).toLowerCase()+'</span><div class="notebody">'+nn.innerHTML+'</div>',np);
         showZone(nn);
         ev.stopPropagation();return;
       }

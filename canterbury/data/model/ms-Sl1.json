@@ -1,0 +1,4752 @@
+{
+ "meta": {
+  "title": "The Canterbury Tales: The General Prologue",
+  "responsibility": [
+   {
+    "role": "edited by",
+    "name": "Barbara Bordalejo, Peter Robinson"
+   },
+   {
+    "role": "transcripts",
+    "name": "the Canterbury Tales Project"
+   }
+  ]
+ },
+ "generator": {
+  "name": "torchio",
+  "tei": "P5 Version 4.12.0. Last updated on\n        28th July 2026, revision 113e933e2"
+ },
+ "documents": [
+  {
+   "id": "ms-Sl1",
+   "tree": {
+    "id": "ms-Sl1",
+    "element": "TEI",
+    "section": "1-struttura",
+    "atts": {
+     "xml:id": "ms-Sl1"
+    },
+    "children": [
+     "\n",
+     {
+      "id": "ms-Sl1:0.0",
+      "element": "teiHeader",
+      "section": "7-header",
+      "atts": {},
+      "children": [
+       {
+        "id": "ms-Sl1:0.0.0",
+        "element": "fileDesc",
+        "section": "7-header",
+        "atts": {},
+        "children": [
+         {
+          "id": "ms-Sl1:0.0.0.0",
+          "element": "titleStmt",
+          "section": "7-header",
+          "atts": {},
+          "children": [
+           {
+            "id": "ms-Sl1:0.0.0.0.0",
+            "element": "title",
+            "section": "1-inline",
+            "atts": {},
+            "children": [
+             "Sl1 · London, British Library Sloane MS 1685"
+            ]
+           }
+          ]
+         },
+         {
+          "id": "ms-Sl1:0.0.0.1",
+          "element": "publicationStmt",
+          "section": "7-header",
+          "atts": {},
+          "children": [
+           {
+            "id": "ms-Sl1:0.0.0.1.0",
+            "element": "p",
+            "section": "1-struttura",
+            "atts": {},
+            "children": [
+             "Canterbury Tales Project."
+            ]
+           }
+          ]
+         },
+         {
+          "id": "ms-Sl1:0.0.0.2",
+          "element": "sourceDesc",
+          "section": "7-header",
+          "atts": {},
+          "children": [
+           {
+            "id": "ms-Sl1:0.0.0.2.0",
+            "element": "p",
+            "section": "1-struttura",
+            "atts": {},
+            "children": [
+             "talesofcanterbury.org/GP/xml/transcripts/Sl1/"
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     "\n",
+     {
+      "id": "ms-Sl1:0.1",
+      "element": "text",
+      "section": "7-struttura-documento",
+      "atts": {},
+      "children": [
+       {
+        "id": "ms-Sl1:0.1.0",
+        "element": "body",
+        "section": "1-struttura",
+        "atts": {},
+        "children": [
+         "\n    ",
+         {
+          "id": "ms-Sl1:0.1.0.0",
+          "element": "text",
+          "section": "7-struttura-documento",
+          "atts": {},
+          "children": [
+           {
+            "id": "ms-Sl1:0.1.0.0.0",
+            "element": "body",
+            "section": "1-struttura",
+            "atts": {},
+            "children": [
+             {
+              "id": "ms-Sl1:0.1.0.0.0.0",
+              "element": "pb",
+              "section": "1-milestone",
+              "atts": {
+               "n": "10r",
+               "facs": "Sl1BL002.Jpg",
+               "rend": "50,0,100,100"
+              },
+              "children": []
+             },
+             {
+              "id": "ms-Sl1:0.1.0.0.0.1",
+              "element": "div",
+              "section": "1-struttura",
+              "atts": {
+               "type": "G",
+               "n": "GP"
+              },
+              "children": [
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.0",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.1",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "649"
+                },
+                "children": [
+                 "He wolde suffre for a quart of wyne "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.2",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.3",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "650"
+                },
+                "children": [
+                 "A good felowe to haue his concubyne "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.4",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.5",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "651"
+                },
+                "children": [
+                 "A twelf monthe and excuse hym atte fulle "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.6",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.7",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "652"
+                },
+                "children": [
+                 "Ful priuyly ek a fynche couthe he pulle "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.8",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.9",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "653"
+                },
+                "children": [
+                 "And if he fonde owhere a goode felawe "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.10",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.11",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "654"
+                },
+                "children": [
+                 "He wolde techen hym to haue noon awe "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.12",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.13",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "655"
+                },
+                "children": [
+                 "In sich cas of the erchedekenes curs "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.14",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.15",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "656"
+                },
+                "children": [
+                 "But if mannes soule were in his purs "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.16",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.17",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "657"
+                },
+                "children": [
+                 "For in his purs he shulde punyshid be "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.18",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.19",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "658"
+                },
+                "children": [
+                 "Purs is the erchedekenes helle seide he "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.20",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.21",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "659"
+                },
+                "children": [
+                 "But wel I wote he lied riȝt in dede "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.22",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.23",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "660"
+                },
+                "children": [
+                 "Of cursing ouȝt ech gylty man hym drede "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.24",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.25",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "661"
+                },
+                "children": [
+                 "For curs wole sle right as assoyling sauith "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.26",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.27",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "662"
+                },
+                "children": [
+                 "And also ware hym of a signyficauit "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.28",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.29",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "663"
+                },
+                "children": [
+                 "In daunger hadde he at his owne gise "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.30",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.31",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "664"
+                },
+                "children": [
+                 "Tho yonge gerles of the diocise "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.32",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.33",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "665"
+                },
+                "children": [
+                 "And knewe her councel and what was al her rede "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.34",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.35",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "666"
+                },
+                "children": [
+                 "A garland hadde he sette vppon his heede "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.36",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.37",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "667"
+                },
+                "children": [
+                 "As gret as it were for an ale stake "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.38",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.39",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "668"
+                },
+                "children": [
+                 "A bokeler hadde ",
+                 {
+                  "id": "ms-Sl1:0.1.0.0.0.1.39.0",
+                  "element": "app",
+                  "section": "4-apparato",
+                  "atts": {},
+                  "children": [
+                   {
+                    "id": "ms-Sl1:0.1.0.0.0.1.39.0.0",
+                    "element": "rdg",
+                    "section": "4-apparato",
+                    "atts": {
+                     "type": "lit"
+                    },
+                    "children": [
+                     {
+                      "id": "ms-Sl1:0.1.0.0.0.1.39.0.0.0",
+                      "element": "seg",
+                      "section": "2-standoff",
+                      "atts": {
+                       "rend": "int"
+                      },
+                      "children": [
+                       "he"
+                      ]
+                     }
+                    ]
+                   },
+                   {
+                    "id": "ms-Sl1:0.1.0.0.0.1.39.0.1",
+                    "element": "rdg",
+                    "section": "4-apparato",
+                    "atts": {
+                     "type": "orig"
+                    },
+                    "children": []
+                   },
+                   {
+                    "id": "ms-Sl1:0.1.0.0.0.1.39.0.2",
+                    "element": "rdg",
+                    "section": "4-apparato",
+                    "atts": {
+                     "type": "mod"
+                    },
+                    "children": [
+                     "he"
+                    ]
+                   }
+                  ]
+                 },
+                 " made him of a cake "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.40",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.41",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "669"
+                },
+                "children": [
+                 "¶ With him ther rode a gentyl pardoner "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.42",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.43",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "670"
+                },
+                "children": [
+                 "Of Rouncevale his frend ",
+                 {
+                  "id": "ms-Sl1:0.1.0.0.0.1.43.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "⁊"
+                  ]
+                 },
+                 {
+                  "id": "ms-Sl1:0.1.0.0.0.1.43.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "and"
+                  ]
+                 },
+                 " his comper "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.44",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.45",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "671"
+                },
+                "children": [
+                 "That streight was comen fro þe court of Rome "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.46",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.47",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "672"
+                },
+                "children": [
+                 "Ful loude songe he come hidir to me loue come "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.48",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.49",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "673"
+                },
+                "children": [
+                 "This somynour bar to hym a stif burdoun    "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.50",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.51",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "674"
+                },
+                "children": [
+                 "Was neuere trumpe of half so greet a sown "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.52",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.53",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "675"
+                },
+                "children": [
+                 "This pardoner hadde heer as yelow as wax "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.54",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.55",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "676"
+                },
+                "children": [
+                 "But smothe it henge as doth a stryk of flax "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.56",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.57",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "677"
+                },
+                "children": [
+                 "By ounces henge his lokkis that he hadde "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.58",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.59",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "678"
+                },
+                "children": [
+                 "And therwith he his shuldris ouerspradde "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.60",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.61",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "679"
+                },
+                "children": [
+                 "But thynne it lay by colpo",
+                 {
+                  "id": "ms-Sl1:0.1.0.0.0.1.61.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {
+                   "rend": "ū"
+                  },
+                  "children": [
+                   "ıı̄"
+                  ]
+                 },
+                 {
+                  "id": "ms-Sl1:0.1.0.0.0.1.61.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "un"
+                  ]
+                 },
+                 "s oon ",
+                 {
+                  "id": "ms-Sl1:0.1.0.0.0.1.61.2",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "⁊"
+                  ]
+                 },
+                 {
+                  "id": "ms-Sl1:0.1.0.0.0.1.61.3",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "and"
+                  ]
+                 },
+                 " oon "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.62",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.63",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "680"
+                },
+                "children": [
+                 "But hoode for Iolite weride he noon "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.64",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.65",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "681"
+                },
+                "children": [
+                 "For it was trussed up in his walet "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.66",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.67",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "682"
+                },
+                "children": [
+                 "Hym thought he rode al of the newe get "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.68",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.69",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "683"
+                },
+                "children": [
+                 "Discheuele saf his cappe roode al bare "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.70",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.0.0.1.71",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "684"
+                },
+                "children": [
+                 "Sich glaring eyghen hadde he as an hare"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         "\n    ",
+         {
+          "id": "ms-Sl1:0.1.0.1",
+          "element": "text",
+          "section": "7-struttura-documento",
+          "atts": {},
+          "children": [
+           {
+            "id": "ms-Sl1:0.1.0.1.0",
+            "element": "body",
+            "section": "1-struttura",
+            "atts": {},
+            "children": [
+             {
+              "id": "ms-Sl1:0.1.0.1.0.0",
+              "element": "div",
+              "section": "1-struttura",
+              "atts": {
+               "type": "G",
+               "n": "GP"
+              },
+              "children": [
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.0",
+                "element": "pb",
+                "section": "1-milestone",
+                "atts": {
+                 "n": "10v",
+                 "facs": "Sl1BL003.Jpg",
+                 "rend": "0,0,50,100"
+                },
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.1",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.2",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "685"
+                },
+                "children": [
+                 "A vernycle hadde he sewid uppon his cappe . "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.3",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.4",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "686"
+                },
+                "children": [
+                 "His walet biforne hym in his lappe . "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.5",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.6",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "687"
+                },
+                "children": [
+                 "Bretful of pardoun comen fro Rome al hote "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.7",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.8",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "688"
+                },
+                "children": [
+                 "A voys he hadde as smal as a gote "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.9",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.10",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "689"
+                },
+                "children": [
+                 "No berd hadde he ne neuere shulde haue "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.11",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.12",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "690"
+                },
+                "children": [
+                 "As smothe it was as it were late shaue "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.13",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.14",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "691"
+                },
+                "children": [
+                 "I trowe he were a gelding or a mare "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.15",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.16",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "692"
+                },
+                "children": [
+                 "But of his craft fro berwyk into ware "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.17",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.18",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "693"
+                },
+                "children": [
+                 "Ne was ther sich another pardoner "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.19",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.20",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "694"
+                },
+                "children": [
+                 "For in his male he hadde a pilowbere "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.21",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.22",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "695"
+                },
+                "children": [
+                 "Which that he seide was oure lady veyle "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.23",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.24",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "696"
+                },
+                "children": [
+                 "He seide he hadde a gobet of the seylke "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.25",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.26",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "697"
+                },
+                "children": [
+                 "That seynt petir hadde whanne that he wente . "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.27",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.28",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "698"
+                },
+                "children": [
+                 "Vppon the see til ",
+                 {
+                  "id": "ms-Sl1:0.1.0.1.0.0.28.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "Iħu"
+                  ]
+                 },
+                 {
+                  "id": "ms-Sl1:0.1.0.1.0.0.28.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "Ihesu"
+                  ]
+                 },
+                 " crist hym hente "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.29",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.30",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "699"
+                },
+                "children": [
+                 "He hadde a Croys of latoun ful of stones "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.31",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.32",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "700"
+                },
+                "children": [
+                 "And in a glas he hadde pigges bones "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.33",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.34",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "701"
+                },
+                "children": [
+                 "But with these whanne that he fonde "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.35",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.36",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "702"
+                },
+                "children": [
+                 "A pouer perso",
+                 {
+                  "id": "ms-Sl1:0.1.0.1.0.0.36.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {
+                   "rend": "ū"
+                  },
+                  "children": [
+                   "ıı̄"
+                  ]
+                 },
+                 {
+                  "id": "ms-Sl1:0.1.0.1.0.0.36.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "un"
+                  ]
+                 },
+                 " dwellinge vppon londe "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.37",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.38",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "703"
+                },
+                "children": [
+                 "Vppon a day he gat he gat hym more moneye "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.39",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.40",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "704"
+                },
+                "children": [
+                 "Than the perso",
+                 {
+                  "id": "ms-Sl1:0.1.0.1.0.0.40.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {
+                   "rend": "ū"
+                  },
+                  "children": [
+                   "ıı̄"
+                  ]
+                 },
+                 {
+                  "id": "ms-Sl1:0.1.0.1.0.0.40.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "un"
+                  ]
+                 },
+                 " gat in monthes tweye "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.41",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.42",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "705"
+                },
+                "children": [
+                 "And thus with feyned flatering ",
+                 {
+                  "id": "ms-Sl1:0.1.0.1.0.0.42.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "⁊"
+                  ]
+                 },
+                 {
+                  "id": "ms-Sl1:0.1.0.1.0.0.42.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "and"
+                  ]
+                 },
+                 " Iapes "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.43",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.44",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "706"
+                },
+                "children": [
+                 "He made the peso",
+                 {
+                  "id": "ms-Sl1:0.1.0.1.0.0.44.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {
+                   "rend": "ū"
+                  },
+                  "children": [
+                   "ıı̄"
+                  ]
+                 },
+                 {
+                  "id": "ms-Sl1:0.1.0.1.0.0.44.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "un"
+                  ]
+                 },
+                 " and the puple his apes "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.45",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.46",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "707"
+                },
+                "children": [
+                 "But trewly to tellen atte the laste "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.47",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.48",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "708"
+                },
+                "children": [
+                 "He was in chirche a noble ecciaste . "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.49",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.50",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "709"
+                },
+                "children": [
+                 "Wel couthe he rede a lesso",
+                 {
+                  "id": "ms-Sl1:0.1.0.1.0.0.50.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {
+                   "rend": "ū"
+                  },
+                  "children": [
+                   "ıı̄"
+                  ]
+                 },
+                 {
+                  "id": "ms-Sl1:0.1.0.1.0.0.50.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "un"
+                  ]
+                 },
+                 " or a storye "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.51",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.52",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "710"
+                },
+                "children": [
+                 "But alther best he songe an offertorye "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.53",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.54",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "711"
+                },
+                "children": [
+                 "For wel he wiste whanne that song was songe "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.55",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.56",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "712"
+                },
+                "children": [
+                 "He most preche and wel affile his tonge "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.57",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.58",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "713"
+                },
+                "children": [
+                 "To wynne siluer as he wel cowde "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.59",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.60",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "714"
+                },
+                "children": [
+                 "Therfore he song so merily and lowde "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.61",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.62",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "715"
+                },
+                "children": [
+                 "Now haue I tolde yow sothly in a clause "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.63",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.64",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "716"
+                },
+                "children": [
+                 "The estat the array the nombre ",
+                 {
+                  "id": "ms-Sl1:0.1.0.1.0.0.64.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "⁊"
+                  ]
+                 },
+                 {
+                  "id": "ms-Sl1:0.1.0.1.0.0.64.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "and"
+                  ]
+                 },
+                 " ek the cause "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.65",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.66",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "717"
+                },
+                "children": [
+                 "Why that assemblid was this companye "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.67",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.68",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "718"
+                },
+                "children": [
+                 "In southwerk at this gentil hosterie "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.69",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.70",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "719"
+                },
+                "children": [
+                 "That hight the tabbard fast by the belle "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.71",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.1.0.0.72",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "720"
+                },
+                "children": [
+                 "But now is tyme to yow for to telle"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         "\n    ",
+         {
+          "id": "ms-Sl1:0.1.0.2",
+          "element": "text",
+          "section": "7-struttura-documento",
+          "atts": {},
+          "children": [
+           {
+            "id": "ms-Sl1:0.1.0.2.0",
+            "element": "body",
+            "section": "1-struttura",
+            "atts": {},
+            "children": [
+             {
+              "id": "ms-Sl1:0.1.0.2.0.0",
+              "element": "div",
+              "section": "1-struttura",
+              "atts": {
+               "type": "G",
+               "n": "GP"
+              },
+              "children": [
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.0",
+                "element": "pb",
+                "section": "1-milestone",
+                "atts": {
+                 "rend": "50,0,100,100",
+                 "facs": "Sl1BL003.Jpg",
+                 "n": "11r"
+                },
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.1",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.2",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "721"
+                },
+                "children": [
+                 "How that we beren vs that ilk nyght "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.3",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.4",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "722"
+                },
+                "children": [
+                 "Whanne we were in that Osterie a lyght "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.5",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.6",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "723"
+                },
+                "children": [
+                 "And aftir wole I tellen of oure viage "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.7",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.8",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "724"
+                },
+                "children": [
+                 "And al the remenaunt of oure pilgrimage "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.9",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.10",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "725"
+                },
+                "children": [
+                 "But first I preye yow of youre curtesye "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.11",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.12",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "726"
+                },
+                "children": [
+                 "That ye ne rette it not my vylonye "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.13",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.14",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "727"
+                },
+                "children": [
+                 "Though that I pleynly speke in this matere "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.15",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.16",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "728"
+                },
+                "children": [
+                 "To tellen yow her wordis and her chere "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.17",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.18",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "729"
+                },
+                "children": [
+                 "Ne though I speke her wordis ",
+                 {
+                  "id": "ms-Sl1:0.1.0.2.0.0.18.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "ꝓ"
+                  ]
+                 },
+                 {
+                  "id": "ms-Sl1:0.1.0.2.0.0.18.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "pro"
+                  ]
+                 },
+                 "purly "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.19",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.20",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "730"
+                },
+                "children": [
+                 "For this ye knowen as wel as I . "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.21",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.22",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "731"
+                },
+                "children": [
+                 "Who so shal tellen a tale aftir a man "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.23",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.24",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "732"
+                },
+                "children": [
+                 "He moot reherce as nygh as euer he kan "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.25",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.26",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "733"
+                },
+                "children": [
+                 "Euerich a word if it be in his charge "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.27",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.28",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "734"
+                },
+                "children": [
+                 "Al speke he neuere so rudely ",
+                 {
+                  "id": "ms-Sl1:0.1.0.2.0.0.28.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "⁊"
+                  ]
+                 },
+                 {
+                  "id": "ms-Sl1:0.1.0.2.0.0.28.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "and"
+                  ]
+                 },
+                 " large "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.29",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.30",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "735"
+                },
+                "children": [
+                 "Or elles he moot telle his tale vntrewe "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.31",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.32",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "736"
+                },
+                "children": [
+                 "Or feyne thingis or fynde wordis newe "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.33",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.34",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "737"
+                },
+                "children": [
+                 "He may nought spare al though he were his brother "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.35",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.36",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "738"
+                },
+                "children": [
+                 "He mote also wel seie o word as an oþer "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.37",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.38",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "739"
+                },
+                "children": [
+                 "Crist spak hym self ful brode in holy writt "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.39",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.40",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "740"
+                },
+                "children": [
+                 "And wel ȝe wote no velonye is itte "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.41",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.42",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "741"
+                },
+                "children": [
+                 "Eke plato seith who so kan hym rede "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.43",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.44",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "742"
+                },
+                "children": [
+                 "The wordes mot be Cosyn to the dede "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.45",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.46",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "743"
+                },
+                "children": [
+                 "Also I preye yow foryeue it me "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.47",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.48",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "744"
+                },
+                "children": [
+                 "Al haue I not sett folk in her degre "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.49",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.50",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "745"
+                },
+                "children": [
+                 "Heere in this tale as that they shulde stonde "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.51",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.52",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "746"
+                },
+                "children": [
+                 "My witt is short ye may wel vndirstonde "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.53",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.54",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "747"
+                },
+                "children": [
+                 "Gret chere made oure Ost vs euerichon "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.55",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.56",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "748"
+                },
+                "children": [
+                 "And to the so",
+                 {
+                  "id": "ms-Sl1:0.1.0.2.0.0.56.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "ꝑ"
+                  ]
+                 },
+                 {
+                  "id": "ms-Sl1:0.1.0.2.0.0.56.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "per"
+                  ]
+                 },
+                 " sette he us anoon "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.57",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.58",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "749"
+                },
+                "children": [
+                 "He seruyde us with vitayles atte the beste "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.59",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.60",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "750"
+                },
+                "children": [
+                 "Strong was the wyne and wel drynke us leste "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.61",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.62",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "751"
+                },
+                "children": [
+                 "A semely man oure Ost was with alle "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.63",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.64",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "752"
+                },
+                "children": [
+                 "Forto ben a marchall in an halle "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.65",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.66",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "753"
+                },
+                "children": [
+                 "A large man he was with yghen stepe "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.67",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.68",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "754"
+                },
+                "children": [
+                 "A fairer burgeys is noon in chepe "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.69",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.70",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "755"
+                },
+                "children": [
+                 "Bolde of his speche and wys ",
+                 {
+                  "id": "ms-Sl1:0.1.0.2.0.0.70.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "⁊"
+                  ]
+                 },
+                 {
+                  "id": "ms-Sl1:0.1.0.2.0.0.70.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "and"
+                  ]
+                 },
+                 " wel taught "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.71",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.2.0.0.72",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "756"
+                },
+                "children": [
+                 "And of manhode hym lakkide right nought "
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         "\n    ",
+         {
+          "id": "ms-Sl1:0.1.0.3",
+          "element": "text",
+          "section": "7-struttura-documento",
+          "atts": {},
+          "children": [
+           {
+            "id": "ms-Sl1:0.1.0.3.0",
+            "element": "body",
+            "section": "1-struttura",
+            "atts": {},
+            "children": [
+             {
+              "id": "ms-Sl1:0.1.0.3.0.0",
+              "element": "div",
+              "section": "1-struttura",
+              "atts": {
+               "type": "G",
+               "n": "GP"
+              },
+              "children": [
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.0",
+                "element": "pb",
+                "section": "1-milestone",
+                "atts": {
+                 "n": "11v",
+                 "facs": "Sl1BL004.Jpg",
+                 "rend": "0,0,50,100"
+                },
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.1",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.2",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "757"
+                },
+                "children": [
+                 "Eke therto he was right a mery man "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.3",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.4",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "758"
+                },
+                "children": [
+                 "And aftir soper pleyn he bygan . "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.5",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.6",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "759"
+                },
+                "children": [
+                 "And spak of mirthe among and othere thingis "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.7",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.8",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "760"
+                },
+                "children": [
+                 "Whanne that he hadde mad oure rykenynges "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.9",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.10",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "761"
+                },
+                "children": [
+                 "And seide thus now lordyngis trewly "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.11",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.12",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "762"
+                },
+                "children": [
+                 "Ye ben to me welcome ryght hertily "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.13",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.14",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "763"
+                },
+                "children": [
+                 "For certis yf that I shal not lye "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.15",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.16",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "764"
+                },
+                "children": [
+                 "I sawe nought this yere so mery a companye "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.17",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.18",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "765"
+                },
+                "children": [
+                 "At ones in this herborowe as it now "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.19",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.20",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "766"
+                },
+                "children": [
+                 "Fayn wolde I don you myrthe wiste I how "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.21",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.22",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "767"
+                },
+                "children": [
+                 "And of a myrthe I am right now bithought "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.23",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.24",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "768"
+                },
+                "children": [
+                 "To don yow ese and it shal coste nought "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.25",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.26",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "769"
+                },
+                "children": [
+                 "Ye gon to Caunterbery god yow spede "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.27",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.28",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "770"
+                },
+                "children": [
+                 "The blisfull martir quyte you youre mede "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.29",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.30",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "771"
+                },
+                "children": [
+                 "And wel I wote as ye gon by the weye "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.31",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.32",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "772"
+                },
+                "children": [
+                 "Ye schapen yow to talen and to pleye "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.33",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.34",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "773"
+                },
+                "children": [
+                 "For truly comfort ne mirthe is noon "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.35",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.36",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "774"
+                },
+                "children": [
+                 "To riden by the weye doumbe as a stoon "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.37",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.38",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "775"
+                },
+                "children": [
+                 "And therfore wole y maken you disport "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.39",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.40",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "776"
+                },
+                "children": [
+                 "As I seide arst and don yow som comfort . "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.41",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.42",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "777"
+                },
+                "children": [
+                 "And if yow liketh alle by oon assent "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.43",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.44",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "778"
+                },
+                "children": [
+                 "Forto stonden att my Iuggement "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.45",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.46",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "779"
+                },
+                "children": [
+                 "And forto werken as I shal yow seye "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.47",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.48",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "780"
+                },
+                "children": [
+                 "To morowe whanne ye riden by the weye "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.49",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.50",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "781-a"
+                },
+                "children": [
+                 "Now so god saue me at my most nede "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.51",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.52",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "782"
+                },
+                "children": [
+                 "But ye be merie I wole yeue yow myn heede "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.53",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.54",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "783"
+                },
+                "children": [
+                 "Holde up youre hondis withoute more speche "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.55",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.56",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "784"
+                },
+                "children": [
+                 "Oure councel was not long forto seche "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.57",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.58",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "785"
+                },
+                "children": [
+                 "Vs thought it was not worth to make to wys "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.59",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.60",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "786"
+                },
+                "children": [
+                 "And grauntide hym withouten more avys. "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.61",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.62",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "787"
+                },
+                "children": [
+                 "And bade hym seie his verdoit as hym liste "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.63",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.64",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "788"
+                },
+                "children": [
+                 "Lordlyngis qd he herkeneth now for the beste "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.65",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.66",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "789"
+                },
+                "children": [
+                 "But take it nought I praie ȝow in disdeigne "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.67",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.68",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "790"
+                },
+                "children": [
+                 "This is the poynt to speke short and pleigne "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.69",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.70",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "791"
+                },
+                "children": [
+                 "That eche of yow to short with oure weye "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.71",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.3.0.0.72",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "792"
+                },
+                "children": [
+                 "In this viage shal telle tales tweye"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         "\n    ",
+         {
+          "id": "ms-Sl1:0.1.0.4",
+          "element": "text",
+          "section": "7-struttura-documento",
+          "atts": {},
+          "children": [
+           {
+            "id": "ms-Sl1:0.1.0.4.0",
+            "element": "body",
+            "section": "1-struttura",
+            "atts": {},
+            "children": [
+             {
+              "id": "ms-Sl1:0.1.0.4.0.0",
+              "element": "div",
+              "section": "1-struttura",
+              "atts": {
+               "type": "G",
+               "n": "GP"
+              },
+              "children": [
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.0",
+                "element": "pb",
+                "section": "1-milestone",
+                "atts": {
+                 "rend": "50,0,100,100",
+                 "facs": "Sl1BL004.Jpg",
+                 "n": "12r"
+                },
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.1",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.2",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "793"
+                },
+                "children": [
+                 "To caunterbury ward I mene it so "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.3",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.4",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "794"
+                },
+                "children": [
+                 "And homward he shal tellen other two "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.5",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.6",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "795"
+                },
+                "children": [
+                 "Of auentoures that haue bifalle "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.7",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.8",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "796"
+                },
+                "children": [
+                 "And which of yow that berith hym best of alle "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.9",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.10",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "797"
+                },
+                "children": [
+                 "That is to seyn that tellith in this cas "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.11",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.12",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "798"
+                },
+                "children": [
+                 "Tales of best sentence and moost solas "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.13",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.14",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "799"
+                },
+                "children": [
+                 "Shal haue a souper at oure aldercost "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.15",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.16",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "800"
+                },
+                "children": [
+                 "Here in this place sittynge bi this post "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.17",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.18",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "801"
+                },
+                "children": [
+                 "Wha",
+                 {
+                  "id": "ms-Sl1:0.1.0.4.0.0.18.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "̄"
+                  ]
+                 },
+                 {
+                  "id": "ms-Sl1:0.1.0.4.0.0.18.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "n"
+                  ]
+                 },
+                 "ne that we comen ageyn fro Cauntirbury "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.19",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.20",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "802"
+                },
+                "children": [
+                 "And forto make yow the more myry "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.21",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.22",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "803"
+                },
+                "children": [
+                 "I wole my siluen goodly with ȝou ride "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.23",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.24",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "804"
+                },
+                "children": [
+                 "Right at myn owne caste and be youre gyde "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.25",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.26",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "805"
+                },
+                "children": [
+                 "And who so wole my iugement withseye "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.27",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.28",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "806"
+                },
+                "children": [
+                 "Shal paye al that we spende by the weye "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.29",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.30",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "807"
+                },
+                "children": [
+                 "And if ye vouche saaf that it be so "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.31",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.32",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "808"
+                },
+                "children": [
+                 "Telle me anoon without ony word moo "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.33",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.34",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "809"
+                },
+                "children": [
+                 "And I wole erly shape me therfore "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.35",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.36",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "810"
+                },
+                "children": [
+                 "This thing was graunted ",
+                 {
+                  "id": "ms-Sl1:0.1.0.4.0.0.36.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "⁊"
+                  ]
+                 },
+                 {
+                  "id": "ms-Sl1:0.1.0.4.0.0.36.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "and"
+                  ]
+                 },
+                 " oure othes swore "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.37",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.38",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "811"
+                },
+                "children": [
+                 "With ful glad herte and preien him also "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.39",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.40",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "812"
+                },
+                "children": [
+                 "That he wolde vouche saaf  forto do soo "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.41",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.42",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "813"
+                },
+                "children": [
+                 "And that he wolde be oure gouernour "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.43",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.44",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "814"
+                },
+                "children": [
+                 "And of oure tales Iugge and reportour "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.45",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.46",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "815"
+                },
+                "children": [
+                 "And sette a soper / at a certeyn prys "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.47",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.48",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "816"
+                },
+                "children": [
+                 "And we wolen reuled ben at youre deuys "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.49",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.50",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "817"
+                },
+                "children": [
+                 "In high and logh and thus by oon assent "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.51",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.52",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "818"
+                },
+                "children": [
+                 "We ben acordid to the Iuggement "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.53",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.54",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "819"
+                },
+                "children": [
+                 "And theruppon the wyn was fet anoon "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.55",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.56",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "820"
+                },
+                "children": [
+                 "We dronken and to rest wente echon "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.57",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.58",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "821"
+                },
+                "children": [
+                 "Withouten ony lenger tariyng "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.59",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.60",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "822"
+                },
+                "children": [
+                 "A morow whanne the day gan to springe "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.61",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.62",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "823"
+                },
+                "children": [
+                 "Vp roos oure oost and was oure alde cok "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.63",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.64",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "824"
+                },
+                "children": [
+                 "And gaderede us to gidr in a flok "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.65",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.66",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "825"
+                },
+                "children": [
+                 "And forth we riden a litil more than pas "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.67",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.68",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "826"
+                },
+                "children": [
+                 "Onto the watering of seynt Thomas "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.69",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.70",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "827"
+                },
+                "children": [
+                 "And there oure oost gan his hors areste "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.71",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.4.0.0.72",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "828"
+                },
+                "children": [
+                 "And seide lordis herkeneth if yow leste "
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         "\n    ",
+         {
+          "id": "ms-Sl1:0.1.0.5",
+          "element": "text",
+          "section": "7-struttura-documento",
+          "atts": {},
+          "children": [
+           {
+            "id": "ms-Sl1:0.1.0.5.0",
+            "element": "body",
+            "section": "1-struttura",
+            "atts": {},
+            "children": [
+             {
+              "id": "ms-Sl1:0.1.0.5.0.0",
+              "element": "div",
+              "section": "1-struttura",
+              "atts": {
+               "type": "G",
+               "n": "GP"
+              },
+              "children": [
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.0",
+                "element": "pb",
+                "section": "1-milestone",
+                "atts": {
+                 "n": "12v",
+                 "facs": "Sl1BL005.Jpg",
+                 "rend": "0,0,50,100"
+                },
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.1",
+                "element": "fw",
+                "section": "1-milestone",
+                "atts": {
+                 "type": "header",
+                 "place": "tm"
+                },
+                "children": [
+                 "¶ Prologus"
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.2",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.3",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "829"
+                },
+                "children": [
+                 "Ye wote youre forward and I it yow recorde "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.4",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.5",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "830"
+                },
+                "children": [
+                 "If euensong and morowe song accorde "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.6",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.7",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "831"
+                },
+                "children": [
+                 "Let se now who shal telle the firste tale "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.8",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.9",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "832"
+                },
+                "children": [
+                 "As euere mote I drynke wyn or ale "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.10",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.11",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "833"
+                },
+                "children": [
+                 "Who so rebelle to my Iuggement "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.12",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.13",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "834"
+                },
+                "children": [
+                 "Shal paye for all that by the weye is spent "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.14",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.15",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "835"
+                },
+                "children": [
+                 "Now drawith Cutt er that ye ferther /twynne "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.16",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.17",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "836"
+                },
+                "children": [
+                 "Which that hath the shortest shal bigynne "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.18",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.19",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "837"
+                },
+                "children": [
+                 "¶ Sir knyght ",
+                 {
+                  "id": "ms-Sl1:0.1.0.5.0.0.19.0",
+                  "element": "am",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "qd"
+                  ]
+                 },
+                 {
+                  "id": "ms-Sl1:0.1.0.5.0.0.19.1",
+                  "element": "ex",
+                  "section": "3-editoriale",
+                  "atts": {},
+                  "children": [
+                   "quod"
+                  ]
+                 },
+                 " he my maister / and my lord "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.20",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.21",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "838"
+                },
+                "children": [
+                 "Now drawith Cutt for that is accord "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.22",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.23",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "839"
+                },
+                "children": [
+                 "Cometh nere qd he my lady prioresse "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.24",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.25",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "840"
+                },
+                "children": [
+                 "And ye sir clerk lat be youre shamfastnesse "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.26",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.27",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "841"
+                },
+                "children": [
+                 "Ne studieth noght leye hond to euery man "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.28",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.29",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "842"
+                },
+                "children": [
+                 "Anoon to drawe euery wight bigan . "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.30",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.31",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "843"
+                },
+                "children": [
+                 "And shortly forto tellen as it was "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.32",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.33",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "844"
+                },
+                "children": [
+                 "Were it by auenture or by sort or cas "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.34",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.35",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "845"
+                },
+                "children": [
+                 "The sothe is the Cutt fel to the knyght "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.36",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.37",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "846"
+                },
+                "children": [
+                 "Of which ful blythe and glad was euery wight "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.38",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.39",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "847"
+                },
+                "children": [
+                 "And tellen he most his tale as it was resoun "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.40",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.41",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "848"
+                },
+                "children": [
+                 "By forward and by composicioun "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.42",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.43",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "849"
+                },
+                "children": [
+                 "As ye han herd what nedith wordes moo "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.44",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.45",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "850"
+                },
+                "children": [
+                 "And whanne this gode man sawe that it was soo "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.46",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.47",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "851"
+                },
+                "children": [
+                 "As he that wys was and obedient "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.48",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.49",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "852"
+                },
+                "children": [
+                 "To kepen his forward by his fre assent "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.50",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.51",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "853"
+                },
+                "children": [
+                 "He seide sithen I shal bigynne the game "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.52",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.53",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "854"
+                },
+                "children": [
+                 "What welcome be the Cut a goddis name . "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.54",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.55",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "855"
+                },
+                "children": [
+                 "Now lat us ride and herkneth what I seie "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.56",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.57",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "856"
+                },
+                "children": [
+                 "And with that word  we riden forth oure weye "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.58",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.59",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "857"
+                },
+                "children": [
+                 "And he bigan  with riȝt a mery chere "
+                ]
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.60",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.0.61",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "858"
+                },
+                "children": [
+                 "His tale anoon and seide as ye may heere "
+                ]
+               },
+               " "
+              ]
+             },
+             {
+              "id": "ms-Sl1:0.1.0.5.0.1",
+              "element": "div",
+              "section": "1-struttura",
+              "atts": {
+               "n": "KT",
+               "type": "G"
+              },
+              "children": [
+               " ",
+               {
+                "id": "ms-Sl1:0.1.0.5.0.1.0",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.1.1",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "IRL"
+                },
+                "children": [
+                 {
+                  "id": "ms-Sl1:0.1.0.5.0.1.1.0",
+                  "element": "hi",
+                  "section": "1-inline",
+                  "atts": {
+                   "rend": "ul"
+                  },
+                  "children": [
+                   {
+                    "id": "ms-Sl1:0.1.0.5.0.1.1.0.0",
+                    "element": "hi",
+                    "section": "1-inline",
+                    "atts": {
+                     "rend": "other"
+                    },
+                    "children": [
+                     "Iamq",
+                     {
+                      "id": "ms-Sl1:0.1.0.5.0.1.1.0.0.0",
+                      "element": "am",
+                      "section": "3-editoriale",
+                      "atts": {},
+                      "children": [
+                       "ȝ"
+                      ]
+                     },
+                     {
+                      "id": "ms-Sl1:0.1.0.5.0.1.1.0.0.1",
+                      "element": "ex",
+                      "section": "3-editoriale",
+                      "atts": {},
+                      "children": [
+                       "ue"
+                      ]
+                     },
+                     " domos patrias scithie post p",
+                     {
+                      "id": "ms-Sl1:0.1.0.5.0.1.1.0.0.2",
+                      "element": "am",
+                      "section": "3-editoriale",
+                      "atts": {},
+                      "children": [
+                       "̉"
+                      ]
+                     },
+                     {
+                      "id": "ms-Sl1:0.1.0.5.0.1.1.0.0.3",
+                      "element": "ex",
+                      "section": "3-editoriale",
+                      "atts": {},
+                      "children": [
+                       "re"
+                      ]
+                     },
+                     "lia gentis ·",
+                     {
+                      "id": "ms-Sl1:0.1.0.5.0.1.1.0.0.4",
+                      "element": "lb",
+                      "section": "1-milestone",
+                      "atts": {},
+                      "children": []
+                     },
+                     " Prelia laurigero ",
+                     {
+                      "id": "ms-Sl1:0.1.0.5.0.1.1.0.0.5",
+                      "element": "am",
+                      "section": "3-editoriale",
+                      "atts": {},
+                      "children": [
+                       "⁊"
+                      ]
+                     },
+                     {
+                      "id": "ms-Sl1:0.1.0.5.0.1.1.0.0.6",
+                      "element": "ex",
+                      "section": "3-editoriale",
+                      "atts": {},
+                      "children": [
+                       "and"
+                      ]
+                     },
+                     " ce",
+                     {
+                      "id": "ms-Sl1:0.1.0.5.0.1.1.0.0.7",
+                      "element": "am",
+                      "section": "3-editoriale",
+                      "atts": {},
+                      "children": [
+                       "̉"
+                      ]
+                     },
+                     {
+                      "id": "ms-Sl1:0.1.0.5.0.1.1.0.0.8",
+                      "element": "ex",
+                      "section": "3-editoriale",
+                      "atts": {},
+                      "children": [
+                       "tera"
+                      ]
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               },
+               " "
+              ]
+             },
+             {
+              "id": "ms-Sl1:0.1.0.5.0.2",
+              "element": "div",
+              "section": "1-struttura",
+              "atts": {
+               "n": "GP",
+               "type": "G"
+              },
+              "children": [
+               " ",
+               {
+                "id": "ms-Sl1:0.1.0.5.0.2.0",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.2.1",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "FRE"
+                },
+                "children": [
+                 "¶ Heere endith the prolog of",
+                 {
+                  "id": "ms-Sl1:0.1.0.5.0.2.1.0",
+                  "element": "lb",
+                  "section": "1-milestone",
+                  "atts": {},
+                  "children": []
+                 },
+                 "this book  "
+                ]
+               },
+               " "
+              ]
+             },
+             {
+              "id": "ms-Sl1:0.1.0.5.0.3",
+              "element": "div",
+              "section": "1-struttura",
+              "atts": {
+               "type": "G",
+               "n": "KT"
+              },
+              "children": [
+               " ",
+               {
+                "id": "ms-Sl1:0.1.0.5.0.3.0",
+                "element": "lb",
+                "section": "1-milestone",
+                "atts": {},
+                "children": []
+               },
+               {
+                "id": "ms-Sl1:0.1.0.5.0.3.1",
+                "element": "l",
+                "section": "1-versi",
+                "atts": {
+                 "n": "IRE"
+                },
+                "children": [
+                 " and heere bigynneth the first tale which is the knygh",
+                 {
+                  "id": "ms-Sl1:0.1.0.5.0.3.1.0",
+                  "element": "lb",
+                  "section": "1-milestone",
+                  "atts": {},
+                  "children": []
+                 },
+                 "te tale"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         "\n"
+        ]
+       }
+      ]
+     },
+     "\n"
+    ]
+   },
+   "card": {
+    "id": "ms-Sl1",
+    "title": "Sl1 · London, British Library Sloane MS 1685",
+    "date": null,
+    "from": [],
+    "to": [],
+    "author": null,
+    "place": null,
+    "idno": null
+   }
+  }
+ ]
+}

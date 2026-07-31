@@ -6,10 +6,6 @@
     "href": "../",
     "label": "Home"
   },
-  "exports": {
-    "model": false,
-    "source": false
-  },
   "align": {
     "elements": [
       "l",

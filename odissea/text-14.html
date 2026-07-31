@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="grc">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,7 +77,14 @@ body.notes-off .t-note-mark{opacity:.25}
   .t-note.placed{font-size:.78em;line-height:1.4}
 }
 
-.t-app:has([data-el="lem"]) .t-rdg{display:none}
+.t-app.app-has-lem .t-rdg{display:none}
+/* an app without a lem privileges nothing: the first reading stands in the
+   text (the others are in the apparatus), never all of them concatenated */
+.t-app.app-no-lem>[data-el="rdg"]~[data-el="rdg"],
+.t-app.app-no-lem>[data-el="rdgGrp"]~[data-el="rdgGrp"]{display:none}
+/* an app that points to the text (double-end-point, location-referenced)
+   carries no text of its own: the passage is already in the base text */
+.t-app.app-pointing{display:none}
 .t-lem{border-bottom:1px dotted var(--accent-soft)}
 .t-app[data-type="lac"] [data-el="lem"]{font-family:var(--mono);font-size:.62em;
   font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);
@@ -366,7 +373,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 </style><details class="legend"><summary>Legend</summary><ul><li><span class="leg-sample"><sup>1</sup></span> note mark</li></ul></details><nav class="prevnext" aria-label="Contents"><a href="text-13.html">‹ previous</a><a href="text.html">Contents</a><a href="text-15.html">next ›</a></nav><div id="odissea:0.0" class="t-teiHeader s-7-header" data-el="teiHeader">
       <div id="odissea:0.0.0" class="t-fileDesc s-7-header" data-el="fileDesc">
          <span id="odissea:0.0.0.0" class="t-titleStmt s-7-header" data-el="titleStmt">
-            <span id="odissea:0.0.0.0.0" class="t-title s-1-inline" data-el="title">Ὀδύσσεια</span>
+            <span id="odissea:0.0.0.0.0" class="t-title s-1-inline" data-el="title" lang="grc">Ὀδύσσεια</span>
             <span id="odissea:0.0.0.0.1" class="t-author s-1-bibliografia" data-el="author">Homer</span>
             <span id="odissea:0.0.0.0.2" class="t-editor s-1-bibliografia" data-el="editor">Augustus Taber Murray</span>
             <span id="odissea:0.0.0.0.3" class="t-sponsor s-1-bibliografia" data-el="sponsor">Perseus Project, Tufts University</span>
@@ -404,7 +411,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                      <span id="odissea:0.0.0.4.0.0.4.3" class="t-publisher s-1-bibliografia" data-el="publisher">G.P. Putnam&#39;s Sons</span>
                      <span id="odissea:0.0.0.4.0.0.4.4" class="t-date s-2-date" data-el="date">1919</span>
                   </span>
-                  <span id="odissea:0.0.0.4.0.0.5" class="t-biblScope s-1-bibliografia" data-el="biblScope">1-2</span>
+                  <span id="odissea:0.0.0.4.0.0.5" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">1-2</span>
                </span>
                <span id="odissea:0.0.0.4.0.1" class="t-series s-1-bibliografia" data-el="series">
                   <span id="odissea:0.0.0.4.0.1.0" class="t-title s-1-inline" data-el="title">Loeb Classical Library</span>                        
@@ -424,12 +431,12 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
             </span>
          </span>
          <span id="odissea:0.0.1.1" class="t-refsDecl s-7-header" data-el="refsDecl">
-            <span id="odissea:0.0.1.1.0" class="t-refState s-7-header" data-el="refState"></span>
-            <span id="odissea:0.0.1.1.1" class="t-refState s-7-header" data-el="refState"></span>
+            <span id="odissea:0.0.1.1.0" class="t-refState s-7-header" data-el="refState" data-unit="book"></span>
+            <span id="odissea:0.0.1.1.1" class="t-refState s-7-header" data-el="refState" data-unit="card"></span>
          </span>
          <span id="odissea:0.0.1.2" class="t-refsDecl s-7-header" data-el="refsDecl">
-            <span id="odissea:0.0.1.2.0" class="t-refState s-7-header" data-el="refState"></span>
-            <span id="odissea:0.0.1.2.1" class="t-refState s-7-header" data-el="refState"></span>
+            <span id="odissea:0.0.1.2.0" class="t-refState s-7-header" data-el="refState" data-unit="book"></span>
+            <span id="odissea:0.0.1.2.1" class="t-refState s-7-header" data-el="refState" data-unit="line"></span>
          </span>
       </span>
       <span id="odissea:0.0.2" class="t-profileDesc s-7-header" data-el="profileDesc">
@@ -445,14 +452,14 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
          <div id="odissea:0.0.3.3" class="t-change s-7-header" data-el="change" data-when="20151216">Bumped URN</div>
          <div id="odissea:0.0.3.4" class="t-change s-7-header" data-el="change" data-when="2016-02-10">numerous typos</div>
       </span>
-   </div><div id="odissea:0.1.0.0.13" class="t-div s-1-struttura" data-el="div" data-type="textpart" data-n="14">
-               <span id="odissea:0.1.0.0.13.0" class="t-milestone s-1-milestone" data-el="milestone" data-n="1"></span>
+   </div><div id="odissea:0.1.0.0.13" class="t-div s-1-struttura" data-el="div" data-type="textpart" data-n="14" data-subtype="book">
+               <span id="odissea:0.1.0.0.13.0" class="t-milestone s-1-milestone" data-el="milestone" data-n="1" data-unit="card"></span>
                <div id="odissea:0.1.0.0.13.1" class="t-l s-1-versi" data-el="l" data-n="1">αὐτὰρ ὁ ἐκ λιμένος προσέβη τρηχεῖαν ἀταρπὸν</div>
                <div id="odissea:0.1.0.0.13.2" class="t-l s-1-versi" data-el="l" data-n="2">χῶρον ἀνʼ ὑλήεντα διʼ ἄκριας, ᾗ οἱ Ἀθήνη</div>
                <div id="odissea:0.1.0.0.13.3" class="t-l s-1-versi" data-el="l" data-n="3">πέφραδε δῖον ὑφορβόν, ὅ οἱ βιότοιο μάλιστα</div>
                <div id="odissea:0.1.0.0.13.4" class="t-l s-1-versi" data-el="l" data-n="4">κήδετο οἰκήων, οὓς κτήσατο δῖος Ὀδυσσεύς.</div>
                <div id="odissea:0.1.0.0.13.5" class="t-l s-1-versi ln5" data-el="l" data-n="5">
-                  <span id="odissea:0.1.0.0.13.5.0" class="t-milestone s-1-milestone" data-el="milestone"></span>τὸν δʼ ἄρʼ ἐνὶ προδόμῳ εὗρʼ ἥμενον, ἔνθα οἱ
+                  <span id="odissea:0.1.0.0.13.5.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>τὸν δʼ ἄρʼ ἐνὶ προδόμῳ εὗρʼ ἥμενον, ἔνθα οἱ
                   αὐλὴ</div>
                <div id="odissea:0.1.0.0.13.6" class="t-l s-1-versi" data-el="l" data-n="6">ὑψηλὴ δέδμητο, περισκέπτῳ ἐνὶ χώρῳ,</div>
                <div id="odissea:0.1.0.0.13.7" class="t-l s-1-versi" data-el="l" data-n="7">καλή τε μεγάλη τε, περίδρομος· ἥν ῥα συβώτης</div>
@@ -478,7 +485,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                <div id="odissea:0.1.0.0.13.27" class="t-l s-1-versi" data-el="l" data-n="27">σῦν ἀγέμεν μνηστῆρσιν ὑπερφιάλοισιν ἀνάγκῃ,</div>
                <div id="odissea:0.1.0.0.13.28" class="t-l s-1-versi" data-el="l" data-n="28">ὄφρʼ ἱερεύσαντες κρειῶν κορεσαίατο θυμόν.</div>
                <div id="odissea:0.1.0.0.13.29" class="t-l s-1-versi" data-el="l" data-n="29">
-                  <span id="odissea:0.1.0.0.13.29.0" class="t-milestone s-1-milestone" data-el="milestone"></span>ἐξαπίνης δʼ Ὀδυσῆα ἴδον κύνες ὑλακόμωροι.</div>
+                  <span id="odissea:0.1.0.0.13.29.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>ἐξαπίνης δʼ Ὀδυσῆα ἴδον κύνες ὑλακόμωροι.</div>
                <div id="odissea:0.1.0.0.13.30" class="t-l s-1-versi ln5" data-el="l" data-n="30">οἱ μὲν κεκλήγοντες ἐπέδραμον· αὐτὰρ Ὀδυσσεὺς</div>
                <div id="odissea:0.1.0.0.13.31" class="t-l s-1-versi" data-el="l" data-n="31">ἕζετο κερδοσύνη, σκῆπτρον δέ οἱ ἔκπεσε χειρός.</div>
                <div id="odissea:0.1.0.0.13.32" class="t-l s-1-versi" data-el="l" data-n="32">ἔνθα κεν ᾧ πὰρ σταθμῷ ἀεικέλιον πάθεν ἄλγος·</div>
@@ -488,7 +495,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                <div id="odissea:0.1.0.0.13.36" class="t-l s-1-versi" data-el="l" data-n="36">πυκνῇσιν λιθάδεσσιν· ὁ δὲ προσέειπεν ἄνακτα·</div>
                <span id="odissea:0.1.0.0.13.37" class="t-q s-1-inline" data-el="q" data-type="unspecified">
                   <div id="odissea:0.1.0.0.13.37.0" class="t-l s-1-versi" data-el="l" data-n="37">
-                     <span id="odissea:0.1.0.0.13.37.0.0" class="t-milestone s-1-milestone" data-el="milestone"></span>ὦ γέρον, ἦ ὀλίγου σε κύνες διεδηλήσαντο</div>
+                     <span id="odissea:0.1.0.0.13.37.0.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>ὦ γέρον, ἦ ὀλίγου σε κύνες διεδηλήσαντο</div>
                   <div id="odissea:0.1.0.0.13.37.1" class="t-l s-1-versi" data-el="l" data-n="38">ἐξαπίνης, καί κέν μοι ἐλεγχείην κατέχευας.</div>
                   <div id="odissea:0.1.0.0.13.37.2" class="t-l s-1-versi" data-el="l" data-n="39">καὶ δέ μοι ἄλλα θεοὶ δόσαν ἄλγεά τε στοναχάς τε·</div>
                   <div id="odissea:0.1.0.0.13.37.3" class="t-l s-1-versi ln5" data-el="l" data-n="40">ἀντιθέου γὰρ ἄνακτος ὀδυρόμενος καὶ ἀχεύων</div>
@@ -500,16 +507,16 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="odissea:0.1.0.0.13.37.9" class="t-l s-1-versi" data-el="l" data-n="46">σίτου καὶ οἴνοιο κορεσσάμενος κατὰ θυμόν,</div>
                   <div id="odissea:0.1.0.0.13.37.10" class="t-l s-1-versi" data-el="l" data-n="47">εἴπῃς ὁππόθεν ἐσσὶ καὶ ὁππόσα κήδεʼ ἀνέτλης.</div>
                </span>
-               <span id="odissea:0.1.0.0.13.38" class="t-milestone s-1-milestone" data-el="milestone" data-n="48"></span>
+               <span id="odissea:0.1.0.0.13.38" class="t-milestone s-1-milestone" data-el="milestone" data-n="48" data-unit="card"></span>
                <div id="odissea:0.1.0.0.13.39" class="t-l s-1-versi" data-el="l" data-n="48">
-                  <span id="odissea:0.1.0.0.13.39.0" class="t-milestone s-1-milestone" data-el="milestone"></span>ὣς εἰπὼν κλισίηνδʼ ἡγήσατο δῖος ὑφορβός,</div>
+                  <span id="odissea:0.1.0.0.13.39.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>ὣς εἰπὼν κλισίηνδʼ ἡγήσατο δῖος ὑφορβός,</div>
                <div id="odissea:0.1.0.0.13.40" class="t-l s-1-versi" data-el="l" data-n="49">εἷσεν δʼ εἰσαγαγών, ῥῶπας δʼ ὑπέχευε δασείας,</div>
                <div id="odissea:0.1.0.0.13.41" class="t-l s-1-versi ln5" data-el="l" data-n="50">ἐστόρεσεν δʼ ἐπὶ δέρμα ἰονθάδος ἀγρίου αἰγός,</div>
                <div id="odissea:0.1.0.0.13.42" class="t-l s-1-versi" data-el="l" data-n="51">αὐτοῦ ἐνεύναιον, μέγα καὶ δασύ. χαῖρε δʼ Ὀδυσσεὺς</div>
                <div id="odissea:0.1.0.0.13.43" class="t-l s-1-versi" data-el="l" data-n="52">ὅττι μιν ὣς ὑπέδεκτο, ἔπος τʼ ἔφατʼ ἔκ τʼ ὀνόμαζεν·</div>
                <span id="odissea:0.1.0.0.13.44" class="t-q s-1-inline" data-el="q" data-type="unspecified">
                   <div id="odissea:0.1.0.0.13.44.0" class="t-l s-1-versi" data-el="l" data-n="53">
-                     <span id="odissea:0.1.0.0.13.44.0.0" class="t-milestone s-1-milestone" data-el="milestone"></span>Ζεύς τοι δοίη, ξεῖνε, καὶ ἀθάνατοι θεοὶ
+                     <span id="odissea:0.1.0.0.13.44.0.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>Ζεύς τοι δοίη, ξεῖνε, καὶ ἀθάνατοι θεοὶ
                      ἄλλοι</div>
                   <div id="odissea:0.1.0.0.13.44.1" class="t-l s-1-versi" data-el="l" data-n="54">ὅττι μάλιστʼ ἐθέλεις, ὅτι με πρόφρων ὑπέδεξο.</div>
                </span>
@@ -532,9 +539,9 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="odissea:0.1.0.0.13.46.14" class="t-l s-1-versi ln5" data-el="l" data-n="70">καὶ γὰρ κεῖνος ἔβη Ἀγαμέμνονος εἵνεκα τιμῆς</div>
                   <div id="odissea:0.1.0.0.13.46.15" class="t-l s-1-versi" data-el="l" data-n="71">Ἴλιον εἰς εὔπωλον, ἵνα Τρώεσσι μάχοιτο.</div>
                </span>
-               <span id="odissea:0.1.0.0.13.47" class="t-milestone s-1-milestone" data-el="milestone" data-n="72"></span>
+               <span id="odissea:0.1.0.0.13.47" class="t-milestone s-1-milestone" data-el="milestone" data-n="72" data-unit="card"></span>
                <div id="odissea:0.1.0.0.13.48" class="t-l s-1-versi" data-el="l" data-n="72">
-                  <span id="odissea:0.1.0.0.13.48.0" class="t-milestone s-1-milestone" data-el="milestone"></span>ὣς εἰπὼν ζωστῆρι θοῶς συνέεργε χιτῶνα,</div>
+                  <span id="odissea:0.1.0.0.13.48.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>ὣς εἰπὼν ζωστῆρι θοῶς συνέεργε χιτῶνα,</div>
                <div id="odissea:0.1.0.0.13.49" class="t-l s-1-versi" data-el="l" data-n="73">βῆ δʼ ἴμεν ἐς συφεούς, ὅθι ἔθνεα ἔρχατο χοίρων.</div>
                <div id="odissea:0.1.0.0.13.50" class="t-l s-1-versi" data-el="l" data-n="74">ἔνθεν ἑλὼν δύʼ ἔνεικε καὶ ἀμφοτέρους ἱέρευσεν,</div>
                <div id="odissea:0.1.0.0.13.51" class="t-l s-1-versi ln5" data-el="l" data-n="75">εὗσέ τε μίστυλλέν τε καὶ ἀμφʼ ὀβελοῖσιν ἔπειρεν.</div>
@@ -544,7 +551,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                <div id="odissea:0.1.0.0.13.55" class="t-l s-1-versi" data-el="l" data-n="79">αὐτὸς δʼ ἀντίον ἷζεν, ἐποτρύνων δὲ προσηύδα·</div>
                <span id="odissea:0.1.0.0.13.56" class="t-q s-1-inline" data-el="q" data-type="unspecified">
                   <div id="odissea:0.1.0.0.13.56.0" class="t-l s-1-versi ln5" data-el="l" data-n="80">
-                     <span id="odissea:0.1.0.0.13.56.0.0" class="t-milestone s-1-milestone" data-el="milestone"></span>ἔσθιε νῦν, ὦ ξεῖνε, τά τε δμώεσσι πάρεστι,</div>
+                     <span id="odissea:0.1.0.0.13.56.0.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>ἔσθιε νῦν, ὦ ξεῖνε, τά τε δμώεσσι πάρεστι,</div>
                   <div id="odissea:0.1.0.0.13.56.1" class="t-l s-1-versi" data-el="l" data-n="81">χοίρεʼ· ἀτὰρ σιάλους γε σύας μνηστῆρες ἔδουσιν,</div>
                   <div id="odissea:0.1.0.0.13.56.2" class="t-l s-1-versi" data-el="l" data-n="82">οὐκ ὄπιδα φρονέοντες ἐνὶ φρεσὶν οὐδʼ ἐλεητύν.</div>
                   <div id="odissea:0.1.0.0.13.56.3" class="t-l s-1-versi" data-el="l" data-n="83">οὐ μὲν σχέτλια ἔργα θεοὶ μάκαρες φιλέουσιν,</div>
@@ -574,9 +581,9 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="odissea:0.1.0.0.13.56.27" class="t-l s-1-versi" data-el="l" data-n="107">αὐτὰρ ἐγὼ σῦς τάσδε φυλάσσω τε ῥύομαί τε,</div>
                   <div id="odissea:0.1.0.0.13.56.28" class="t-l s-1-versi" data-el="l" data-n="108">καί σφι συῶν τὸν ἄριστον ἐῢ κρίνας ἀποπέμπω.</div>
                </span>
-               <span id="odissea:0.1.0.0.13.57" class="t-milestone s-1-milestone" data-el="milestone" data-n="109"></span>
+               <span id="odissea:0.1.0.0.13.57" class="t-milestone s-1-milestone" data-el="milestone" data-n="109" data-unit="card"></span>
                <div id="odissea:0.1.0.0.13.58" class="t-l s-1-versi" data-el="l" data-n="109">
-                  <span id="odissea:0.1.0.0.13.58.0" class="t-milestone s-1-milestone" data-el="milestone"></span>ὣς φάθʼ, ὁ δʼ ἐνδυκέως κρέα τʼ ἤσθιε πῖνέ τε
+                  <span id="odissea:0.1.0.0.13.58.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>ὣς φάθʼ, ὁ δʼ ἐνδυκέως κρέα τʼ ἤσθιε πῖνέ τε
                   οἶνον</div>
                <div id="odissea:0.1.0.0.13.59" class="t-l s-1-versi ln5" data-el="l" data-n="110">ἁρπαλέως ἀκέων, κακὰ δὲ μνηστῆρσι φύτευεν.</div>
                <div id="odissea:0.1.0.0.13.60" class="t-l s-1-versi" data-el="l" data-n="111">αὐτὰρ ἐπεὶ δείπνησε καὶ ἤραρε θυμὸν ἐδωδῇ,</div>
@@ -585,7 +592,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                <div id="odissea:0.1.0.0.13.63" class="t-l s-1-versi" data-el="l" data-n="114">καί μιν φωνήσας ἔπεα πτερόεντα προσηύδα·</div>
                <span id="odissea:0.1.0.0.13.64" class="t-q s-1-inline" data-el="q" data-type="unspecified">
                   <div id="odissea:0.1.0.0.13.64.0" class="t-l s-1-versi ln5" data-el="l" data-n="115">
-                     <span id="odissea:0.1.0.0.13.64.0.0" class="t-milestone s-1-milestone" data-el="milestone"></span>ὦ φίλε, τίς γάρ σε πρίατο κτεάτεσσιν ἑοῖσιν,</div>
+                     <span id="odissea:0.1.0.0.13.64.0.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>ὦ φίλε, τίς γάρ σε πρίατο κτεάτεσσιν ἑοῖσιν,</div>
                   <div id="odissea:0.1.0.0.13.64.1" class="t-l s-1-versi" data-el="l" data-n="116">ὧδε μάλʼ ἀφνειὸς καὶ καρτερὸς ὡς ἀγορεύεις;</div>
                   <div id="odissea:0.1.0.0.13.64.2" class="t-l s-1-versi" data-el="l" data-n="117">φῆς δʼ αὐτὸν φθίσθαι Ἀγαμέμνονος εἵνεκα τιμῆς.</div>
                   <div id="odissea:0.1.0.0.13.64.3" class="t-l s-1-versi" data-el="l" data-n="118">εἰπέ μοι, αἴ κέ ποθι γνώω τοιοῦτον ἐόντα.</div>
@@ -593,7 +600,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="odissea:0.1.0.0.13.64.5" class="t-l s-1-versi ln5" data-el="l" data-n="120">εἴ κέ μιν ἀγγείλαιμι ἰδών· ἐπὶ πολλὰ δʼ ἀλήθην.</div>
                </span>
                <div id="odissea:0.1.0.0.13.65" class="t-l s-1-versi" data-el="l" data-n="121">
-                  <span id="odissea:0.1.0.0.13.65.0" class="t-milestone s-1-milestone" data-el="milestone"></span>τὸν δʼ ἠμείβετʼ ἔπειτα συβώτης, ὄρχαμος ἀνδρῶν·</div>
+                  <span id="odissea:0.1.0.0.13.65.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>τὸν δʼ ἠμείβετʼ ἔπειτα συβώτης, ὄρχαμος ἀνδρῶν·</div>
                <span id="odissea:0.1.0.0.13.66" class="t-q s-1-inline" data-el="q" data-type="unspecified">
                   <div id="odissea:0.1.0.0.13.66.0" class="t-l s-1-versi" data-el="l" data-n="122">ὦ γέρον, οὔ τις κεῖνον ἀνὴρ ἀλαλήμενος ἐλθὼν</div>
                   <div id="odissea:0.1.0.0.13.66.1" class="t-l s-1-versi" data-el="l" data-n="123">ἀγγέλλων πείσειε γυναῖκά τε καὶ φίλον υἱόν,</div>
@@ -622,9 +629,9 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="odissea:0.1.0.0.13.66.24" class="t-l s-1-versi" data-el="l" data-n="146">αἰδέομαι· πέρι γάρ μʼ ἐφίλει καὶ κήδετο θυμῷ·</div>
                   <div id="odissea:0.1.0.0.13.66.25" class="t-l s-1-versi" data-el="l" data-n="147">ἀλλά μιν ἠθεῖον καλέω καὶ νόσφιν ἐόντα.</div>
                </span>
-               <span id="odissea:0.1.0.0.13.67" class="t-milestone s-1-milestone" data-el="milestone" data-n="148"></span>
+               <span id="odissea:0.1.0.0.13.67" class="t-milestone s-1-milestone" data-el="milestone" data-n="148" data-unit="card"></span>
                <div id="odissea:0.1.0.0.13.68" class="t-l s-1-versi" data-el="l" data-n="148">
-                  <span id="odissea:0.1.0.0.13.68.0" class="t-milestone s-1-milestone" data-el="milestone"></span>τὸν δʼ αὖτε προσέειπε πολύτλας δῖος Ὀδυσσεύς·</div>
+                  <span id="odissea:0.1.0.0.13.68.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>τὸν δʼ αὖτε προσέειπε πολύτλας δῖος Ὀδυσσεύς·</div>
                <span id="odissea:0.1.0.0.13.69" class="t-q s-1-inline" data-el="q" data-type="unspecified">
                   <div id="odissea:0.1.0.0.13.69.0" class="t-l s-1-versi" data-el="l" data-n="149">ὦ φίλʼ, ἐπειδὴ πάμπαν ἀναίνεαι, οὐδʼ ἔτι φῇσθα</div>
                   <div id="odissea:0.1.0.0.13.69.1" class="t-l s-1-versi ln5" data-el="l" data-n="150">κεῖνον ἐλεύσεσθαι, θυμὸς δέ τοι αἰὲν ἄπιστος·</div>
@@ -644,7 +651,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="odissea:0.1.0.0.13.69.15" class="t-l s-1-versi" data-el="l" data-n="164">ἐνθάδʼ ἀτιμάζει ἄλοχον καὶ φαίδιμον υἱόν.</div>
                </span>
                <div id="odissea:0.1.0.0.13.70" class="t-l s-1-versi ln5" data-el="l" data-n="165">
-                  <span id="odissea:0.1.0.0.13.70.0" class="t-milestone s-1-milestone" data-el="milestone"></span>τὸν δʼ ἀπαμειβόμενος προσέφης, Εὔμαιε συβῶτα·</div>
+                  <span id="odissea:0.1.0.0.13.70.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>τὸν δʼ ἀπαμειβόμενος προσέφης, Εὔμαιε συβῶτα·</div>
                <span id="odissea:0.1.0.0.13.71" class="t-q s-1-inline" data-el="q" data-type="unspecified">
                   <div id="odissea:0.1.0.0.13.71.0" class="t-l s-1-versi" data-el="l" data-n="166">ὦ γέρον, οὔτʼ ἄρʼ ἐγὼν εὐαγγέλιον τόδε τίσω,</div>
                   <div id="odissea:0.1.0.0.13.71.1" class="t-l s-1-versi" data-el="l" data-n="167">οὔτʼ Ὀδυσεὺς ἔτι οἶκον ἐλεύσεται· ἀλλὰ ἕκηλος</div>
@@ -672,9 +679,9 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="odissea:0.1.0.0.13.71.23" class="t-l s-1-versi" data-el="l" data-n="189">ἤγαγον εἰς Ἰθάκην; τίνες ἔμμεναι εὐχετόωντο;</div>
                   <div id="odissea:0.1.0.0.13.71.24" class="t-l s-1-versi ln5" data-el="l" data-n="190">οὐ μὲν γάρ τί σε πεζὸν ὀΐομαι ἐνθάδʼ ἱκέσθαι.</div>
                </span>
-               <span id="odissea:0.1.0.0.13.72" class="t-milestone s-1-milestone" data-el="milestone" data-n="191"></span>
+               <span id="odissea:0.1.0.0.13.72" class="t-milestone s-1-milestone" data-el="milestone" data-n="191" data-unit="card"></span>
                <div id="odissea:0.1.0.0.13.73" class="t-l s-1-versi" data-el="l" data-n="191">
-                  <span id="odissea:0.1.0.0.13.73.0" class="t-milestone s-1-milestone" data-el="milestone"></span>τὸν δʼ ἀπαμειβόμενος προσέφη πολύμητις Ὀδυσσεύς</div>
+                  <span id="odissea:0.1.0.0.13.73.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>τὸν δʼ ἀπαμειβόμενος προσέφη πολύμητις Ὀδυσσεύς</div>
                <span id="odissea:0.1.0.0.13.74" class="t-q s-1-inline" data-el="q" data-type="unspecified">
                   <div id="odissea:0.1.0.0.13.74.0" class="t-l s-1-versi" data-el="l" data-n="192">τοιγὰρ ἐγώ τοι ταῦτα μάλʼ ἀτρεκέως ἀγορεύσω.</div>
                   <div id="odissea:0.1.0.0.13.74.1" class="t-l s-1-versi" data-el="l" data-n="193">εἴη μὲν νῦν νῶϊν ἐπὶ χρόνον ἠμὲν ἐδωδὴ</div>
@@ -684,7 +691,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="odissea:0.1.0.0.13.74.5" class="t-l s-1-versi" data-el="l" data-n="197">οὔ τι διαπρήξαιμι λέγων ἐμὰ κήδεα θυμοῦ,</div>
                   <div id="odissea:0.1.0.0.13.74.6" class="t-l s-1-versi" data-el="l" data-n="198">ὅσσα γε δὴ ξύμπαντα θεῶν ἰότητι μόγησα.</div>
                   <div id="odissea:0.1.0.0.13.74.7" class="t-l s-1-versi" data-el="l" data-n="199">
-                     <span id="odissea:0.1.0.0.13.74.7.0" class="t-milestone s-1-milestone" data-el="milestone"></span>ἐκ μὲν Κρητάων γένος εὔχομαι εὐρειάων,</div>
+                     <span id="odissea:0.1.0.0.13.74.7.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>ἐκ μὲν Κρητάων γένος εὔχομαι εὐρειάων,</div>
                   <div id="odissea:0.1.0.0.13.74.8" class="t-l s-1-versi ln5" data-el="l" data-n="200">ἀνέρος ἀφνειοῖο πάϊς· πολλοὶ δὲ καὶ ἄλλοι</div>
                   <div id="odissea:0.1.0.0.13.74.9" class="t-l s-1-versi" data-el="l" data-n="201">υἱέες ἐν μεγάρῳ ἠμὲν τράφεν ἠδʼ ἐγένοντο</div>
                   <div id="odissea:0.1.0.0.13.74.10" class="t-l s-1-versi" data-el="l" data-n="202">γνήσιοι ἐξ ἀλόχου· ἐμὲ δʼ ὠνητὴ τέκε μήτηρ</div>
@@ -720,7 +727,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="odissea:0.1.0.0.13.74.40" class="t-l s-1-versi" data-el="l" data-n="232">τῶν ἐξαιρεύμην μενοεικέα, πολλὰ δʼ ὀπίσσω</div>
                   <div id="odissea:0.1.0.0.13.74.41" class="t-l s-1-versi" data-el="l" data-n="233">λάγχανον· αἶψα δὲ οἶκος ὀφέλλετο, καί ῥα ἔπειτα</div>
                   <div id="odissea:0.1.0.0.13.74.42" class="t-l s-1-versi" data-el="l" data-n="234">δεινός τʼ αἰδοῖός τε μετὰ Κρήτεσσι τετύγμην.</div>
-                  <span id="odissea:0.1.0.0.13.74.43" class="t-milestone s-1-milestone" data-el="milestone" data-n="235"></span>
+                  <span id="odissea:0.1.0.0.13.74.43" class="t-milestone s-1-milestone" data-el="milestone" data-n="235" data-unit="card"></span>
                   <div id="odissea:0.1.0.0.13.74.44" class="t-l s-1-versi ln5" data-el="l" data-n="235">ἀλλʼ ὅτε δὴ τήν γε στυγερὴν ὁδὸν εὐρύοπα Ζεὺς</div>
                   <div id="odissea:0.1.0.0.13.74.45" class="t-l s-1-versi" data-el="l" data-n="236">ἐφράσαθʼ, ἣ πολλῶν ἀνδρῶν ὑπὸ γούνατʼ ἔλυσε,</div>
                   <div id="odissea:0.1.0.0.13.74.46" class="t-l s-1-versi" data-el="l" data-n="237">δὴ τότʼ ἔμʼ ἤνωγον καὶ ἀγακλυτὸν Ἰδομενῆα</div>
@@ -744,7 +751,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="odissea:0.1.0.0.13.74.64" class="t-l s-1-versi ln5" data-el="l" data-n="255">νηῶν πημάνθη, ἀλλʼ ἀσκηθέες καὶ ἄνουσοι</div>
                   <div id="odissea:0.1.0.0.13.74.65" class="t-l s-1-versi" data-el="l" data-n="256">ἥμεθα, τὰς δʼ ἄνεμός τε κυβερνῆταί τʼ ἴθυνον.</div>
                   <div id="odissea:0.1.0.0.13.74.66" class="t-l s-1-versi" data-el="l" data-n="257">
-                     <span id="odissea:0.1.0.0.13.74.66.0" class="t-milestone s-1-milestone" data-el="milestone"></span>πεμπταῖοι δʼ Αἴγυπτον ἐϋρρείτην ἱκόμεσθα,</div>
+                     <span id="odissea:0.1.0.0.13.74.66.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>πεμπταῖοι δʼ Αἴγυπτον ἐϋρρείτην ἱκόμεσθα,</div>
                   <div id="odissea:0.1.0.0.13.74.67" class="t-l s-1-versi" data-el="l" data-n="258">στῆσα δʼ ἐν Αἰγύπτῳ ποταμῷ νέας ἀμφιελίσσας.</div>
                   <div id="odissea:0.1.0.0.13.74.68" class="t-l s-1-versi" data-el="l" data-n="259">ἔνθʼ ἦ τοι μὲν ἐγὼ κελόμην ἐρίηρας ἑταίρους</div>
                   <div id="odissea:0.1.0.0.13.74.69" class="t-l s-1-versi ln5" data-el="l" data-n="260">αὐτοῦ πὰρ νήεσσι μένειν καὶ νῆας ἔρυσθαι,</div>
@@ -772,9 +779,9 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="odissea:0.1.0.0.13.74.91" class="t-l s-1-versi" data-el="l" data-n="282">ἱέμενοι κτεῖναι—δὴ γὰρ κεχολώατο λίην—</div>
                   <div id="odissea:0.1.0.0.13.74.92" class="t-l s-1-versi" data-el="l" data-n="283">ἀλλʼ ἀπὸ κεῖνος ἔρυκε, Διὸς δʼ ὠπίζετο μῆνιν</div>
                   <div id="odissea:0.1.0.0.13.74.93" class="t-l s-1-versi" data-el="l" data-n="284">ξεινίου, ὅς τε μάλιστα νεμεσσᾶται κακὰ ἔργα.</div>
-                  <span id="odissea:0.1.0.0.13.74.94" class="t-milestone s-1-milestone" data-el="milestone" data-n="285"></span>
+                  <span id="odissea:0.1.0.0.13.74.94" class="t-milestone s-1-milestone" data-el="milestone" data-n="285" data-unit="card"></span>
                   <div id="odissea:0.1.0.0.13.74.95" class="t-l s-1-versi ln5" data-el="l" data-n="285">
-                     <span id="odissea:0.1.0.0.13.74.95.0" class="t-milestone s-1-milestone" data-el="milestone"></span>ἔνθα μὲν ἑπτάετες μένον αὐτόθι, πολλὰ δʼ
+                     <span id="odissea:0.1.0.0.13.74.95.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>ἔνθα μὲν ἑπτάετες μένον αὐτόθι, πολλὰ δʼ
                      ἄγειρα</div>
                   <div id="odissea:0.1.0.0.13.74.96" class="t-l s-1-versi" data-el="l" data-n="286">χρήματʼ ἀνʼ Αἰγυπτίους ἄνδρας· δίδοσαν γὰρ ἅπαντες.</div>
                   <div id="odissea:0.1.0.0.13.74.97" class="t-l s-1-versi" data-el="l" data-n="287">ἀλλʼ ὅτε δὴ ὄγδοόν μοι ἐπιπλόμενον ἔτος ἦλθεν,</div>
@@ -811,9 +818,9 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="odissea:0.1.0.0.13.74.128" class="t-l s-1-versi" data-el="l" data-n="318">αἴθρῳ καὶ καμάτῳ δεδμημένον ἦγεν ἐς οἶκον,</div>
                   <div id="odissea:0.1.0.0.13.74.129" class="t-l s-1-versi" data-el="l" data-n="319">χειρὸς ἀναστήσας, ὄφρʼ ἵκετο δώματα πατρός·</div>
                   <div id="odissea:0.1.0.0.13.74.130" class="t-l s-1-versi ln5" data-el="l" data-n="320">ἀμφὶ δέ με χλαῖνάν τε χιτῶνά τε εἵματα ἕσσεν.</div>
-                  <span id="odissea:0.1.0.0.13.74.131" class="t-milestone s-1-milestone" data-el="milestone" data-n="321"></span>
+                  <span id="odissea:0.1.0.0.13.74.131" class="t-milestone s-1-milestone" data-el="milestone" data-n="321" data-unit="card"></span>
                   <div id="odissea:0.1.0.0.13.74.132" class="t-l s-1-versi" data-el="l" data-n="321">
-                     <span id="odissea:0.1.0.0.13.74.132.0" class="t-milestone s-1-milestone" data-el="milestone"></span>ἔνθʼ Ὀδυσῆος ἐγὼ πυθόμην· κεῖνος γὰρ ἔφασκε</div>
+                     <span id="odissea:0.1.0.0.13.74.132.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>ἔνθʼ Ὀδυσῆος ἐγὼ πυθόμην· κεῖνος γὰρ ἔφασκε</div>
                   <div id="odissea:0.1.0.0.13.74.133" class="t-l s-1-versi" data-el="l" data-n="322">ξεινίσαι ἠδὲ φιλῆσαι ἰόντʼ ἐς πατρίδα γαῖαν,</div>
                   <div id="odissea:0.1.0.0.13.74.134" class="t-l s-1-versi" data-el="l" data-n="323">καί μοι κτήματʼ ἔδειξεν ὅσα ξυναγείρατʼ Ὀδυσσεύς,</div>
                   <div id="odissea:0.1.0.0.13.74.135" class="t-l s-1-versi" data-el="l" data-n="324">χαλκόν τε χρυσόν τε πολύκμητόν τε σίδηρον.</div>
@@ -853,9 +860,9 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="odissea:0.1.0.0.13.74.169" class="t-l s-1-versi" data-el="l" data-n="358">ῥηϊδίως, καί με σταθμῷ ἐπέλασσαν ἄγοντες</div>
                   <div id="odissea:0.1.0.0.13.74.170" class="t-l s-1-versi" data-el="l" data-n="359">ἀνδρὸς ἐπισταμένου· ἔτι γάρ νύ μοι αἶσα βιῶναι.</div>
                </span>
-               <span id="odissea:0.1.0.0.13.75" class="t-milestone s-1-milestone" data-el="milestone" data-n="360"></span>
+               <span id="odissea:0.1.0.0.13.75" class="t-milestone s-1-milestone" data-el="milestone" data-n="360" data-unit="card"></span>
                <div id="odissea:0.1.0.0.13.76" class="t-l s-1-versi ln5" data-el="l" data-n="360">
-                  <span id="odissea:0.1.0.0.13.76.0" class="t-milestone s-1-milestone" data-el="milestone"></span>τὸν δʼ ἀπαμειβόμενος προσέφης, Εὔμαιε συβῶτα·</div>
+                  <span id="odissea:0.1.0.0.13.76.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>τὸν δʼ ἀπαμειβόμενος προσέφης, Εὔμαιε συβῶτα·</div>
                <span id="odissea:0.1.0.0.13.77" class="t-q s-1-inline" data-el="q" data-type="unspecified">
                   <div id="odissea:0.1.0.0.13.77.0" class="t-l s-1-versi" data-el="l" data-n="361">ἆ δειλὲ ξείνων, ἦ μοι μάλα θυμὸν ὄρινας</div>
                   <div id="odissea:0.1.0.0.13.77.1" class="t-l s-1-versi" data-el="l" data-n="362">ταῦτα ἕκαστα λέγων, ὅσα δὴ πάθες ἠδʼ ὅσʼ ἀλήθης.</div>
@@ -888,7 +895,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="odissea:0.1.0.0.13.77.28" class="t-l s-1-versi" data-el="l" data-n="389">ἀλλὰ Δία ξένιον δείσας αὐτόν τʼ ἐλεαίρων.</div>
                </span>
                <div id="odissea:0.1.0.0.13.78" class="t-l s-1-versi ln5" data-el="l" data-n="390">
-                  <span id="odissea:0.1.0.0.13.78.0" class="t-milestone s-1-milestone" data-el="milestone"></span>τὸν δʼ ἀπαμειβόμενος προσέφη πολύμητις Ὀδυσσεύς</div>
+                  <span id="odissea:0.1.0.0.13.78.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>τὸν δʼ ἀπαμειβόμενος προσέφη πολύμητις Ὀδυσσεύς</div>
                <span id="odissea:0.1.0.0.13.79" class="t-q s-1-inline" data-el="q" data-type="unspecified">
                   <div id="odissea:0.1.0.0.13.79.0" class="t-l s-1-versi" data-el="l" data-n="391">ἦ μάλα τίς τοι θυμὸς ἐνὶ στήθεσσιν ἄπιστος,</div>
                   <div id="odissea:0.1.0.0.13.79.1" class="t-l s-1-versi" data-el="l" data-n="392">οἷόν σʼ οὐδʼ ὀμόσας περ ἐπήγαγον οὐδέ σε πείθω.</div>
@@ -901,9 +908,9 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="odissea:0.1.0.0.13.79.8" class="t-l s-1-versi" data-el="l" data-n="399">δμῶας ἐπισσεύας βαλέειν μεγάλης κατὰ πέτρης,</div>
                   <div id="odissea:0.1.0.0.13.79.9" class="t-l s-1-versi ln5" data-el="l" data-n="400">ὄφρα καὶ ἄλλος πτωχὸς ἀλεύεται ἠπεροπεύειν.</div>
                </span>
-               <span id="odissea:0.1.0.0.13.80" class="t-milestone s-1-milestone" data-el="milestone" data-n="401"></span>
+               <span id="odissea:0.1.0.0.13.80" class="t-milestone s-1-milestone" data-el="milestone" data-n="401" data-unit="card"></span>
                <div id="odissea:0.1.0.0.13.81" class="t-l s-1-versi" data-el="l" data-n="401">
-                  <span id="odissea:0.1.0.0.13.81.0" class="t-milestone s-1-milestone" data-el="milestone"></span>τὸν δʼ ἀπαμειβόμενος προσεφώνεε δῖος ὑφορβός·</div>
+                  <span id="odissea:0.1.0.0.13.81.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>τὸν δʼ ἀπαμειβόμενος προσεφώνεε δῖος ὑφορβός·</div>
                <span id="odissea:0.1.0.0.13.82" class="t-q s-1-inline" data-el="q" data-type="unspecified">
                   <div id="odissea:0.1.0.0.13.82.0" class="t-l s-1-versi" data-el="l" data-n="402">ξεῖνʼ, οὕτω γάρ κέν μοι ἐϋκλείη τʼ ἀρετή τε</div>
                   <div id="odissea:0.1.0.0.13.82.1" class="t-l s-1-versi" data-el="l" data-n="403">εἴη ἐπʼ ἀνθρώπους ἅμα τʼ αὐτίκα καὶ μετέπειτα,</div>
@@ -914,20 +921,20 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="odissea:0.1.0.0.13.82.6" class="t-l s-1-versi" data-el="l" data-n="408">εἶεν, ἵνʼ ἐν κλισίῃ λαρὸν τετυκοίμεθα δόρπον.</div>
                </span>
                <div id="odissea:0.1.0.0.13.83" class="t-l s-1-versi" data-el="l" data-n="409">
-                  <span id="odissea:0.1.0.0.13.83.0" class="t-milestone s-1-milestone" data-el="milestone"></span>ὣς οἱ μὲν τοιαῦτα πρὸς ἀλλήλους ἀγόρευον,</div>
+                  <span id="odissea:0.1.0.0.13.83.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>ὣς οἱ μὲν τοιαῦτα πρὸς ἀλλήλους ἀγόρευον,</div>
                <div id="odissea:0.1.0.0.13.84" class="t-l s-1-versi ln5" data-el="l" data-n="410">ἀγχίμολον δὲ σύες τε καὶ ἀνέρες ἦλθον ὑφορβοί.</div>
                <div id="odissea:0.1.0.0.13.85" class="t-l s-1-versi" data-el="l" data-n="411">τὰς μὲν ἄρα ἔρξαν κατὰ ἤθεα κοιμηθῆναι,</div>
                <div id="odissea:0.1.0.0.13.86" class="t-l s-1-versi" data-el="l" data-n="412">κλαγγὴ δʼ ἄσπετος ὦρτο συῶν αὐλιζομενάων</div>
                <div id="odissea:0.1.0.0.13.87" class="t-l s-1-versi" data-el="l" data-n="413">αὐτὰρ ὁ οἷς ἑτάροισιν ἐκέκλετο δῖος ὑφορβός·</div>
                <span id="odissea:0.1.0.0.13.88" class="t-q s-1-inline" data-el="q" data-type="unspecified">
                   <div id="odissea:0.1.0.0.13.88.0" class="t-l s-1-versi" data-el="l" data-n="414">
-                     <span id="odissea:0.1.0.0.13.88.0.0" class="t-milestone s-1-milestone" data-el="milestone"></span>ἄξεθʼ ὑῶν τὸν ἄριστον, ἵνα ξείνῳ ἱερεύσω</div>
+                     <span id="odissea:0.1.0.0.13.88.0.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>ἄξεθʼ ὑῶν τὸν ἄριστον, ἵνα ξείνῳ ἱερεύσω</div>
                   <div id="odissea:0.1.0.0.13.88.1" class="t-l s-1-versi ln5" data-el="l" data-n="415">τηλεδαπῷ· πρὸς δʼ αὐτοὶ ὀνησόμεθʼ, οἵ περ ὀϊζὺν</div>
                   <div id="odissea:0.1.0.0.13.88.2" class="t-l s-1-versi" data-el="l" data-n="416">δὴν ἔχομεν πάσχοντες ὑῶν ἕνεκʼ ἀργιοδόντων·</div>
                   <div id="odissea:0.1.0.0.13.88.3" class="t-l s-1-versi" data-el="l" data-n="417">ἄλλοι δʼ ἡμέτερον κάματον νήποινον ἔδουσιν.</div>
                </span>
                <div id="odissea:0.1.0.0.13.89" class="t-l s-1-versi" data-el="l" data-n="418">
-                  <span id="odissea:0.1.0.0.13.89.0" class="t-milestone s-1-milestone" data-el="milestone"></span>ὣς ἄρα φωνήσας κέασε ξύλα νηλέϊ χαλκῷ,</div>
+                  <span id="odissea:0.1.0.0.13.89.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>ὣς ἄρα φωνήσας κέασε ξύλα νηλέϊ χαλκῷ,</div>
                <div id="odissea:0.1.0.0.13.90" class="t-l s-1-versi" data-el="l" data-n="419">οἱ δʼ ὗν εἰσῆγον μάλα πίονα πενταέτηρον.</div>
                <div id="odissea:0.1.0.0.13.91" class="t-l s-1-versi ln5" data-el="l" data-n="420">τὸν μὲν ἔπειτʼ ἔστησαν ἐπʼ ἐσχάρῃ· οὐδὲ συβώτης</div>
                <div id="odissea:0.1.0.0.13.92" class="t-l s-1-versi" data-el="l" data-n="421">λήθετʼ ἄρʼ ἀθανάτων· φρεσὶ γὰρ κέχρητʼ ἀγαθῇσιν·</div>
@@ -951,19 +958,19 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                <div id="odissea:0.1.0.0.13.110" class="t-l s-1-versi" data-el="l" data-n="439">καί μιν φωνήσας προσέφη πολύμητις Ὀδυσσεύς·</div>
                <span id="odissea:0.1.0.0.13.111" class="t-q s-1-inline" data-el="q" data-type="unspecified">
                   <div id="odissea:0.1.0.0.13.111.0" class="t-l s-1-versi ln5" data-el="l" data-n="440">
-                     <span id="odissea:0.1.0.0.13.111.0.0" class="t-milestone s-1-milestone" data-el="milestone"></span>αἴθʼ οὕτως, Εὔμαιε, φίλος Διὶ πατρὶ γένοιο</div>
+                     <span id="odissea:0.1.0.0.13.111.0.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>αἴθʼ οὕτως, Εὔμαιε, φίλος Διὶ πατρὶ γένοιο</div>
                   <div id="odissea:0.1.0.0.13.111.1" class="t-l s-1-versi" data-el="l" data-n="441">ὡς ἐμοί, ὅττι τε τοῖον ἐόντʼ ἀγαθοῖσι γεραίρεις.</div>
                </span>
                <div id="odissea:0.1.0.0.13.112" class="t-l s-1-versi" data-el="l" data-n="442">
-                  <span id="odissea:0.1.0.0.13.112.0" class="t-milestone s-1-milestone" data-el="milestone"></span>τὸν δʼ ἀπαμειβόμενος προσέφης, Εὔμαιε συβῶτα·</div>
+                  <span id="odissea:0.1.0.0.13.112.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>τὸν δʼ ἀπαμειβόμενος προσέφης, Εὔμαιε συβῶτα·</div>
                <span id="odissea:0.1.0.0.13.113" class="t-q s-1-inline" data-el="q" data-type="unspecified">
                   <div id="odissea:0.1.0.0.13.113.0" class="t-l s-1-versi" data-el="l" data-n="443">ἔσθιε, δαιμόνιε ξείνων, καὶ τέρπεο τοῖσδε,</div>
                   <div id="odissea:0.1.0.0.13.113.1" class="t-l s-1-versi" data-el="l" data-n="444">οἷα πάρεστι· θεὸς δὲ τὸ μὲν δώσει, τὸ δʼ ἐάσει,</div>
                   <div id="odissea:0.1.0.0.13.113.2" class="t-l s-1-versi ln5" data-el="l" data-n="445">ὅττι κεν ᾧ θυμῷ ἐθέλῃ· δύναται γὰρ ἅπαντα.</div>
                </span>
-               <span id="odissea:0.1.0.0.13.114" class="t-milestone s-1-milestone" data-el="milestone" data-n="446"></span>
+               <span id="odissea:0.1.0.0.13.114" class="t-milestone s-1-milestone" data-el="milestone" data-n="446" data-unit="card"></span>
                <div id="odissea:0.1.0.0.13.115" class="t-l s-1-versi" data-el="l" data-n="446">
-                  <span id="odissea:0.1.0.0.13.115.0" class="t-milestone s-1-milestone" data-el="milestone"></span>ἦ ῥα καὶ ἄργματα θῦσε θεοῖς αἰειγενέτῃσι,</div>
+                  <span id="odissea:0.1.0.0.13.115.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>ἦ ῥα καὶ ἄργματα θῦσε θεοῖς αἰειγενέτῃσι,</div>
                <div id="odissea:0.1.0.0.13.116" class="t-l s-1-versi" data-el="l" data-n="447">σπείσας δʼ αἴθοπα οἶνον Ὀδυσσῆϊ πτολιπόρθῳ</div>
                <div id="odissea:0.1.0.0.13.117" class="t-l s-1-versi" data-el="l" data-n="448">ἐν χείρεσσιν ἔθηκεν· ὁ δʼ ἕζετο ᾗ παρὰ μοίρῃ.</div>
                <div id="odissea:0.1.0.0.13.118" class="t-l s-1-versi" data-el="l" data-n="449">σῖτον δέ σφιν ἔνειμε Μεσαύλιος, ὅν ῥα συβώτης</div>
@@ -975,7 +982,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                <div id="odissea:0.1.0.0.13.124" class="t-l s-1-versi ln5" data-el="l" data-n="455">σῖτον μέν σφιν ἀφεῖλε Μεσαύλιος, οἱ δʼ ἐπὶ κοῖτον</div>
                <div id="odissea:0.1.0.0.13.125" class="t-l s-1-versi" data-el="l" data-n="456">σίτου καὶ κρειῶν κεκορημένοι ἐσσεύοντο.</div>
                <div id="odissea:0.1.0.0.13.126" class="t-l s-1-versi" data-el="l" data-n="457">
-                  <span id="odissea:0.1.0.0.13.126.0" class="t-milestone s-1-milestone" data-el="milestone"></span>νὺξ δʼ ἄρʼ ἐπῆλθε κακὴ σκοτομήνιος, ὗε δʼ ἄρα
+                  <span id="odissea:0.1.0.0.13.126.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>νὺξ δʼ ἄρʼ ἐπῆλθε κακὴ σκοτομήνιος, ὗε δʼ ἄρα
                   Ζεὺς</div>
                <div id="odissea:0.1.0.0.13.127" class="t-l s-1-versi" data-el="l" data-n="458">πάννυχος, αὐτὰρ ἄη Ζέφυρος μέγας αἰὲν ἔφυδρος.</div>
                <div id="odissea:0.1.0.0.13.128" class="t-l s-1-versi" data-el="l" data-n="459">τοῖς δʼ Ὀδυσεὺς μετέειπε, συβώτεω πειρητίζων,</div>
@@ -983,7 +990,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                <div id="odissea:0.1.0.0.13.130" class="t-l s-1-versi" data-el="l" data-n="461">ἄλλον ἐποτρύνειεν, ἐπεί ἑο κήδετο λίην·</div>
                <span id="odissea:0.1.0.0.13.131" class="t-q s-1-inline" data-el="q" data-type="unspecified">
                   <div id="odissea:0.1.0.0.13.131.0" class="t-l s-1-versi" data-el="l" data-n="462">
-                     <span id="odissea:0.1.0.0.13.131.0.0" class="t-milestone s-1-milestone" data-el="milestone"></span>κέκλυθι νῦν, Εὔμαιε καὶ ἄλλοι πάντες
+                     <span id="odissea:0.1.0.0.13.131.0.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>κέκλυθι νῦν, Εὔμαιε καὶ ἄλλοι πάντες
                      ἑταῖροι,</div>
                   <div id="odissea:0.1.0.0.13.131.1" class="t-l s-1-versi" data-el="l" data-n="463">εὐξάμενός τι ἔπος ἐρέω· οἶνος γὰρ ἀνώγει</div>
                   <div id="odissea:0.1.0.0.13.131.2" class="t-l s-1-versi" data-el="l" data-n="464">ἠλεός, ὅς τʼ ἐφέηκε πολύφρονά περ μάλʼ ἀεῖσαι</div>
@@ -1010,22 +1017,22 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="odissea:0.1.0.0.13.131.23" class="t-l s-1-versi ln5" data-el="l" data-n="485">ἀγκῶνι νύξας· ὁ δʼ ἄρʼ ἐμμαπέως ὑπάκουσε·</div>
                   <span id="odissea:0.1.0.0.13.131.24" class="t-q s-1-inline" data-el="q" data-type="unspecified">
                      <div id="odissea:0.1.0.0.13.131.24.0" class="t-l s-1-versi" data-el="l" data-n="486">
-                        <span id="odissea:0.1.0.0.13.131.24.0.0" class="t-milestone s-1-milestone" data-el="milestone"></span>διογενὲς Λαερτιάδη, πολυμήχανʼ Ὀδυσσεῦ,</div>
+                        <span id="odissea:0.1.0.0.13.131.24.0.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>διογενὲς Λαερτιάδη, πολυμήχανʼ Ὀδυσσεῦ,</div>
                      <div id="odissea:0.1.0.0.13.131.24.1" class="t-l s-1-versi" data-el="l" data-n="487">οὔ τοι ἔτι ζωοῖσι μετέσσομαι, ἀλλά με χεῖμα</div>
                      <div id="odissea:0.1.0.0.13.131.24.2" class="t-l s-1-versi" data-el="l" data-n="488">δάμναται· οὐ γὰρ ἔχω χλαῖναν· παρά μʼ ἤπαφε δαίμων</div>
                      <div id="odissea:0.1.0.0.13.131.24.3" class="t-l s-1-versi" data-el="l" data-n="489">οἰοχίτωνʼ ἔμεναι· νῦν δʼ οὐκέτι φυκτὰ πέλονται.</div>
                   </span>
                   <div id="odissea:0.1.0.0.13.131.25" class="t-l s-1-versi ln5" data-el="l" data-n="490">
-                     <span id="odissea:0.1.0.0.13.131.25.0" class="t-milestone s-1-milestone" data-el="milestone"></span>ὣς ἐφάμην, ὁ δʼ ἔπειτα νόον σχέθε τόνδʼ ἐνὶ
+                     <span id="odissea:0.1.0.0.13.131.25.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>ὣς ἐφάμην, ὁ δʼ ἔπειτα νόον σχέθε τόνδʼ ἐνὶ
                      θυμῷ,</div>
                   <div id="odissea:0.1.0.0.13.131.26" class="t-l s-1-versi" data-el="l" data-n="491">οἷος κεῖνος ἔην βουλευέμεν ἠδὲ μάχεσθαι·</div>
                   <div id="odissea:0.1.0.0.13.131.27" class="t-l s-1-versi" data-el="l" data-n="492">φθεγξάμενος δʼ ὀλίγῃ ὀπί με πρὸς μῦθον ἔειπε·</div>
                   <span id="odissea:0.1.0.0.13.131.28" class="t-q s-1-inline" data-el="q" data-type="unspecified">
                      <div id="odissea:0.1.0.0.13.131.28.0" class="t-l s-1-versi" data-el="l" data-n="493">σίγα νῦν, μή τίς σευ Ἀχαιῶν ἄλλος ἀκούσῃ.</div>
                   </span>
-                  <span id="odissea:0.1.0.0.13.131.29" class="t-milestone s-1-milestone" data-el="milestone" data-n="494"></span>
+                  <span id="odissea:0.1.0.0.13.131.29" class="t-milestone s-1-milestone" data-el="milestone" data-n="494" data-unit="card"></span>
                   <div id="odissea:0.1.0.0.13.131.30" class="t-l s-1-versi" data-el="l" data-n="494">
-                     <span id="odissea:0.1.0.0.13.131.30.0" class="t-milestone s-1-milestone" data-el="milestone"></span>ἦ καὶ ἐπʼ ἀγκῶνος κεφαλὴν σχέθεν εἶπέ τε
+                     <span id="odissea:0.1.0.0.13.131.30.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>ἦ καὶ ἐπʼ ἀγκῶνος κεφαλὴν σχέθεν εἶπέ τε
                      μῦθον·</div>
                   <span id="odissea:0.1.0.0.13.131.31" class="t-q s-1-inline" data-el="q" data-type="unspecified">
                      <div id="odissea:0.1.0.0.13.131.31.0" class="t-l s-1-versi ln5" data-el="l" data-n="495">κλῦτε, φίλοι· θεῖός μοι ἐνύπνιον ἦλθεν ὄνειρος.</div>
@@ -1034,7 +1041,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                      <div id="odissea:0.1.0.0.13.131.31.3" class="t-l s-1-versi" data-el="l" data-n="498">εἰ πλέονας παρὰ ναῦφιν ἐποτρύνειε νέεσθαι.</div>
                   </span>
                   <div id="odissea:0.1.0.0.13.131.32" class="t-l s-1-versi" data-el="l" data-n="499">
-                     <span id="odissea:0.1.0.0.13.131.32.0" class="t-milestone s-1-milestone" data-el="milestone"></span>ὣς ἔφατʼ, ὦρτο δʼ ἔπειτα Θόας, Ἀνδραίμονος
+                     <span id="odissea:0.1.0.0.13.131.32.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>ὣς ἔφατʼ, ὦρτο δʼ ἔπειτα Θόας, Ἀνδραίμονος
                      υἱός,</div>
                   <div id="odissea:0.1.0.0.13.131.33" class="t-l s-1-versi ln5" data-el="l" data-n="500">καρπαλίμως, ἀπὸ δὲ χλαῖναν θέτο φοινικόεσσαν,</div>
                   <div id="odissea:0.1.0.0.13.131.34" class="t-l s-1-versi" data-el="l" data-n="501">βῆ δὲ θέειν ἐπὶ νῆας· ἐγὼ δʼ ἐνὶ εἵματι κείνου</div>
@@ -1045,7 +1052,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="odissea:0.1.0.0.13.131.39" class="t-l s-1-versi" data-el="l" data-n="506">νῦν δέ μʼ ἀτιμάζουσι κακὰ χροῒ εἵματʼ ἔχοντα.</div>
                </span>
                <div id="odissea:0.1.0.0.13.132" class="t-l s-1-versi" data-el="l" data-n="507">
-                  <span id="odissea:0.1.0.0.13.132.0" class="t-milestone s-1-milestone" data-el="milestone"></span>τὸν δʼ ἀπαμειβόμενος προσέφης, Εὔμαιε συβῶτα·</div>
+                  <span id="odissea:0.1.0.0.13.132.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>τὸν δʼ ἀπαμειβόμενος προσέφης, Εὔμαιε συβῶτα·</div>
                <span id="odissea:0.1.0.0.13.133" class="t-q s-1-inline" data-el="q" data-type="unspecified">
                   <div id="odissea:0.1.0.0.13.133.0" class="t-l s-1-versi" data-el="l" data-n="508">ὦ γέρον, αἶνος μέν τοι ἀμύμων, ὃν κατέλεξας,</div>
                   <div id="odissea:0.1.0.0.13.133.1" class="t-l s-1-versi" data-el="l" data-n="509">οὐδέ τί πω παρὰ μοῖραν ἔπος νηκερδὲς ἔειπες·</div>
@@ -1059,13 +1066,13 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="odissea:0.1.0.0.13.133.9" class="t-l s-1-versi" data-el="l" data-n="517">πέμψει δʼ ὅππῃ σε κραδίη θυμός τε κελεύει.</div>
                </span>
                <div id="odissea:0.1.0.0.13.134" class="t-l s-1-versi" data-el="l" data-n="518">
-                  <span id="odissea:0.1.0.0.13.134.0" class="t-milestone s-1-milestone" data-el="milestone"></span>ὣς εἰπὼν ἀνόρουσε, τίθει δʼ ἄρα οἱ πυρὸς ἐγγὺς</div>
+                  <span id="odissea:0.1.0.0.13.134.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>ὣς εἰπὼν ἀνόρουσε, τίθει δʼ ἄρα οἱ πυρὸς ἐγγὺς</div>
                <div id="odissea:0.1.0.0.13.135" class="t-l s-1-versi" data-el="l" data-n="519">εὐνήν, ἐν δʼ ὀΐων τε καὶ αἰγῶν δέρματʼ ἔβαλλεν.</div>
                <div id="odissea:0.1.0.0.13.136" class="t-l s-1-versi ln5" data-el="l" data-n="520">ἔνθʼ Ὀδυσεὺς κατέλεκτʼ· ἐπὶ δὲ χλαῖναν βάλεν αὐτῷ</div>
                <div id="odissea:0.1.0.0.13.137" class="t-l s-1-versi" data-el="l" data-n="521">πυκνὴν καὶ μεγάλην, ἥ οἱ παρεκέσκετʼ ἀμοιβάς,</div>
                <div id="odissea:0.1.0.0.13.138" class="t-l s-1-versi" data-el="l" data-n="522">ἕννυσθαι ὅτε τις χειμὼν ἔκπαγλος ὄροιτο.</div>
                <div id="odissea:0.1.0.0.13.139" class="t-l s-1-versi" data-el="l" data-n="523">
-                  <span id="odissea:0.1.0.0.13.139.0" class="t-milestone s-1-milestone" data-el="milestone"></span>ὣς ὁ μὲν ἔνθʼ Ὀδυσεὺς κοιμήσατο, τοὶ δὲ παρʼ
+                  <span id="odissea:0.1.0.0.13.139.0" class="t-milestone s-1-milestone" data-el="milestone" data-unit="para"></span>ὣς ὁ μὲν ἔνθʼ Ὀδυσεὺς κοιμήσατο, τοὶ δὲ παρʼ
                   αὐτὸν</div>
                <div id="odissea:0.1.0.0.13.140" class="t-l s-1-versi" data-el="l" data-n="524">ἄνδρες κοιμήσαντο νεηνίαι· οὐδὲ συβώτῃ</div>
                <div id="odissea:0.1.0.0.13.141" class="t-l s-1-versi ln5" data-el="l" data-n="525">ἥνδανεν αὐτόθι κοῖτος, ὑῶν ἄπο κοιμηθῆναι,</div>
@@ -1078,9 +1085,10 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                <div id="odissea:0.1.0.0.13.148" class="t-l s-1-versi" data-el="l" data-n="532">βῆ δʼ ἴμεναι κείων ὅθι περ σύες ἀργιόδοντες</div>
                <div id="odissea:0.1.0.0.13.149" class="t-l s-1-versi" data-el="l" data-n="533">πέτρῃ ὕπο γλαφυρῇ εὗδον, Βορέω ὑπʼ ἰωγῇ.</div>
             </div><nav class="prevnext" aria-label="Contents"><a href="text-13.html">‹ previous</a><a href="text.html">Contents</a><a href="text-15.html">next ›</a></nav></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · eb43eb4 · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · 8453b62 · 2026-07-31</footer>
 <script>
 (function(){
+  var T={"edition":"Edition","text":"Text","indices":"Indices","data":"Data","archive":"Archive","dsa":"digital archive","texts":"Texts","reading":"Reading","diplomatic":"Diplomatic","apparatus":"Apparatus","aboutFile":"About this file","notes":"Notes","dse":"digital scholarly edition","responsibility":"Responsibility","licence":"Licence","witnesses":"Witnesses","apparatusRegisters":"Apparatus","revisions":"Revision history","generator":"Generator","people":"People","places":"Places","orgs":"Organisations","occurrenceOne":"occurrence","occurrenceMany":"occurrences","entries":"entries","skip":"Skip to content","publishedWith":"Published with","map":"Map","mapAria":"Map of the places of the edition","mapNote":"Positional sketch. Filled dots: coordinates declared in the TEI or confirmed by the editor. Hollow dots: gazetteer suggestions awaiting review. Each place links to OpenStreetMap. Coastlines: Natural Earth (public domain).","front":"Front matter","back":"Back matter","lacking":"lacking in","editedText":"edited text","genesis":"Genesis","hand":"hand","version":"version","legend":"Legend","legWord":"word","legDel":"deleted by the writing hand","legAdd":"added above the line","legUnclear":"uncertain reading","legSupplied":"supplied by the editor","legGap":"lost or illegible","legPb":"page break of the source","legMetamark":"a mark of the hand about the text (^ = insert here; hover each mark to read what it does)","legApp":"variant readings: click for the apparatus","legNote":"note mark","legHands":"Hands","legAllHands":"all","legHand":"the hand of","idxSearch":"search a name…","backToTop":"back to top","apparatusCritical":"critical: variants between witnesses","apparatusGenetic":"genetic: the strata of one manuscript in time","apparatusBoth":"critical and genetic: witnesses to collate, strata within them","legMajor":"main hand","lexicon":"Lexicon","lexTokens":"running words","lexForms":"distinct forms","lexTTR":"type-token ratio","lexSearch":"search a word…","lexFrequencies":"Frequencies","lexConcordance":"Concordance","lexCloud":"Cloud","lexPick":"Pick a word to see it in context.","lexLanguage":"Language","lexAllLangs":"all","lexStoplist":"Stopwords","lexStopNone":"none","lexHideStop":"hide stopwords","lexWord":"word","lexLang":"lang","lexAbs":"count","lexRel":"per 1000","lexStats":"Lexical statistics","lexStopCol":"stop","lexStopNote":"Frequencies and cloud drop the stopwords you choose; the concordance keeps every word.","genesisNote":"The campaigns of correction the edition declares, in its own order, with the writing operations attributed to each. Every operation links to the place where it happened.","agreement":"Agreement between witnesses","agreementNote":"How often two witnesses carry the same reading. Evidence for a stemma, which remains the editor’s argument.","openPage":"open the page","sectionsN":"sections","sectionOne":"Section","contents":"Contents","bookLabel":"Book","register":"Register","documentsN":"documents","dateCol":"Date","fromCol":"From","toCol":"To","authorCol":"Author","placeCol":"Place","titleCol":"Title","idnoCol":"Ref.","filter":"Filter…","prev":"‹ previous","next":"next ›","fullHeader":"The full header (teiHeader)","fullHeaderNote":"Everything the file declares, rendered as it is.","reuse":"Reuse under the edition licence (see the Edition page).","appEntry":"apparatus entry","descrModel":"the edition model: documents, registries, apparatus (JSON)","descrEntities":"people, places and organisations with occurrence counts and coordinates","descrApparatus":"every apparatus reading with its witnesses, one row per reading","descrSource":"the unmodified TEI source file","lemmas":"Lemmas","lemmaCoverage":"Coverage","tokensWord":"tokens","languagesLabel":"Languages","yearsLabel":"Years","contributorsLabel":"Contributors","interventionsWord":"interventions","licenceVariesNote":"each document declares its own licence, shown on its page","lemmaFromMarkup":"from the markup (w/@lemma)","lemmaFromFile":"from lemmas.json","lemmaPending":"types awaiting the editor’s review","formsLabel":"forms","moreOccurrences":"more occurrences not shown here","descrLemmas":"every lemma with its forms and counts, one row per form","descrTokens":"the token stream of the reading text: position, language, form, lemma, anchor"};
   var body=document.body; body.classList.add('mode-read');
   if(document.querySelector('.app-band'))body.classList.add('has-band');
   if(window.TORCHIO_ALIGN)body.classList.add('has-align');
@@ -1222,7 +1230,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
         +'<span class="'+(r.dataset.el==='lem'?'is-lem':'')+'">'+esc(rr.textContent.trim()||'(om.)')+'</span></div>';
     });
     if(!rows)return false;
-    openPop('<span class="k">'+'Apparatus'.toLowerCase()+'</span>'+rows,el);
+    openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'+rows,el);
     return true;
   }
   if(document.readyState==='complete'){wireWords();wirePointing();}
@@ -1276,7 +1284,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
   }
   function showZone(n){clearZone();zoneOf(n).forEach(function(e){e.classList.add('note-hi');hiZone.push(e);});}
   document.querySelectorAll('.t-app [data-el="lem"]').forEach(function(el){
-    makeTrigger(el,'apparatus entry: '+el.textContent.trim());
+    makeTrigger(el,''+esc(T.appEntry)+': '+el.textContent.trim());
   });
   document.querySelectorAll('[data-ref],[data-key]').forEach(function(el){
     if(el.classList.contains('ent-ext'))return; /* external links stay links */
@@ -1327,7 +1335,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
               }
               openPop('<span class="k">'+esc(sig)+'</span>'
                 +'<div class="notebody">'+(txt?esc(txt):'…')+'</div>'
-                +'<div class="meta"><a href="'+tgt+'">open the page</a></div>',bw);
+                +'<div class="meta"><a href="'+tgt+'">'+esc(T.openPage)+'</a></div>',bw);
             })['catch'](function(){location.href=tgt;});
           }catch(e){location.href=tgt;}
         });
@@ -1353,12 +1361,12 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       app.querySelectorAll('.t-note').forEach(function(nn){
         extra+='<div class="meta">'+esc(nn.textContent.replace(/s+/g,' ').trim())+'</div>';
       });
-      openPop('<span class="k">apparatus'+(app.dataset.type?' · '+esc(app.dataset.type):'')+'</span>'+rows+extra,app);
+      openPop('<span class="k">'+esc(T.apparatus.toLowerCase())+''+(app.dataset.type?' · '+esc(app.dataset.type):'')+'</span>'+rows+extra,app);
       ev.stopPropagation();return;
     }
     var ch=ev.target.closest&&ev.target.closest('.t-choice');
     if(ch&&!ch.closest('.t-app')){
-      var kinds={abbr:'Diplomatic',orig:'Diplomatic',sic:'Diplomatic',expan:'Reading',reg:'Reading',corr:'Reading'};
+      var kinds={abbr:esc(T.diplomatic),orig:esc(T.diplomatic),sic:esc(T.diplomatic),expan:esc(T.reading),reg:esc(T.reading),corr:esc(T.reading)};
       var rows='';
       [].slice.call(ch.children).forEach(function(c){
         var k=c.dataset&&c.dataset.el; if(!kinds[k])return;
@@ -1379,7 +1387,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       var meta=[];
       if(key&&ent.textContent.trim()!==key)meta.push(esc(ent.textContent.trim()));
       if(ref)meta.push(esc(ref));
-      meta.push(all.length+' '+(all.length===1?'occurrence':'occurrences'));
+      meta.push(all.length+' '+(all.length===1?esc(T.occurrenceOne):esc(T.occurrenceMany)));
       openPop('<span class="k">'+esc(ent.dataset.el)+'</span>'
         +'<div>'+esc(head)+'</div>'
         +'<div class="meta">'+meta.join(' · ')+'</div>',ent);
@@ -1394,7 +1402,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       openPop('<span class="k">'+esc(op.dataset.el)+'</span>'
         +'<div class="notebody">'+esc(op.textContent.replace(/s+/g,' ').trim().slice(0,140))+'</div>'
         +'<div class="meta">'+(lab?esc(lab):'')+(hd?' · '+esc(hd):'')
-        +' <a href="genesis.html">Genesis</a></div>',op);
+        +' <a href="genesis.html">'+esc(T.genesis)+'</a></div>',op);
       ev.stopPropagation();return;
     }
     var anc=ev.target.closest&&ev.target.closest('[data-appref]');
@@ -1402,7 +1410,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     var wv=ev.target.closest&&ev.target.closest('.wv');
     if(wv&&wv._be&&!body.classList.contains('app-off')){
       var wband=wv._be.closest('.app-band');
-      openPop('<span class="k">'+'Apparatus'.toLowerCase()+'</span>'
+      openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'
         +'<div class="popband" data-ent="'+((wband&&wband.getAttribute('data-ent'))||'')+'">'+wv._be.outerHTML+'</div>',wv);
       ev.stopPropagation();return;
     }
@@ -1410,7 +1418,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     if(npFirst){
       var nnF=document.querySelector('.t-note[data-npi="'+npFirst.getAttribute('data-notepop')+'"]');
       if(nnF&&!body.classList.contains('notes-off')){
-        openPop('<span class="k">'+'Notes'.toLowerCase()+'</span><div class="notebody">'+nnF.innerHTML+'</div>',npFirst);
+        openPop('<span class="k">'+esc(T.notes).toLowerCase()+'</span><div class="notebody">'+nnF.innerHTML+'</div>',npFirst);
         showZone(nnF);
         ev.stopPropagation();return;
       }
@@ -1433,9 +1441,9 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
           var el=doc.getElementById(id);
           var sec=el&&el.closest?el.closest('.vmap')||el:el;
           if(!sec)return;
-          openPop('<span class="k">'+'Apparatus'.toLowerCase()+'</span>'
+          openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'
             +'<div class="popband" data-ent="'+esc(key)+'">'+sec.innerHTML+'</div>'
-            +'<div class="meta"><a href="'+tgt+'">open the page</a></div>',lw);
+            +'<div class="meta"><a href="'+tgt+'">'+esc(T.openPage)+'</a></div>',lw);
         })['catch'](function(){});
       });
       ev.stopPropagation();return;
@@ -1444,7 +1452,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     if(lv&&lv.nextElementSibling&&lv.nextElementSibling.classList
        &&lv.nextElementSibling.classList.contains('app-band')){
       var bd=lv.nextElementSibling;
-      openPop('<span class="k">'+'Apparatus'.toLowerCase()+'</span>'
+      openPop('<span class="k">'+esc(T.apparatus).toLowerCase()+'</span>'
         +'<div class="popband" data-ent="'+(bd.getAttribute('data-ent')||'')+'">'+bd.innerHTML+'</div>',lv);
       ev.stopPropagation();return;
     }
@@ -1452,7 +1460,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     if(np&&!body.classList.contains('notes-off')){
       var nn=document.querySelector('.t-note[data-npi="'+np.getAttribute('data-notepop')+'"]');
       if(nn){
-        openPop('<span class="k">'+'Notes'.toLowerCase()+'</span><div class="notebody">'+nn.innerHTML+'</div>',np);
+        openPop('<span class="k">'+esc(T.notes).toLowerCase()+'</span><div class="notebody">'+nn.innerHTML+'</div>',np);
         showZone(nn);
         ev.stopPropagation();return;
       }

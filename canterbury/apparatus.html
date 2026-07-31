@@ -77,7 +77,14 @@ body.notes-off .t-note-mark{opacity:.25}
   .t-note.placed{font-size:.78em;line-height:1.4}
 }
 
-.t-app:has([data-el="lem"]) .t-rdg{display:none}
+.t-app.app-has-lem .t-rdg{display:none}
+/* an app without a lem privileges nothing: the first reading stands in the
+   text (the others are in the apparatus), never all of them concatenated */
+.t-app.app-no-lem>[data-el="rdg"]~[data-el="rdg"],
+.t-app.app-no-lem>[data-el="rdgGrp"]~[data-el="rdgGrp"]{display:none}
+/* an app that points to the text (double-end-point, location-referenced)
+   carries no text of its own: the passage is already in the base text */
+.t-app.app-pointing{display:none}
 .t-lem{border-bottom:1px dotted var(--accent-soft)}
 .t-app[data-type="lac"] [data-el="lem"]{font-family:var(--mono);font-size:.62em;
   font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);
@@ -143,7 +150,7 @@ body.app-off.has-band [data-el="l"]{cursor:inherit}
 /* dense notes: marks only, notes open on click */
 body.notes-dense main.torchio .t-note{display:none!important}
 body.notes-dense .t-note-mark{color:var(--accent);cursor:pointer;font-size:.85em;font-weight:700;line-height:0;padding:.3em .3em;margin:-.3em -.1em}
-body.notes-dense [data-notepop]{cursor:pointer}
+[data-notepop]{cursor:pointer}
 body.notes-dense.notes-off .t-note-mark{cursor:default}
 
 /* transcription levels: reading is the default */
@@ -353,7 +360,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Edition</a><a href="text.html">Texts</a><a href="apparatus.html" class="on">Apparatus</a><a href="data.html">Data</a></nav>
 </header>
 <main id="main" class="torchio"><table class="wit-table"><tr><td><a href="doc-collazione-01.html">The collation, IRE-a to 46</a></td></tr><tr><td><a href="doc-collazione-02.html">The collation, 47 to 96</a></td></tr><tr><td><a href="doc-collazione-03.html">The collation, 97 to 145</a></td></tr><tr><td><a href="doc-collazione-04.html">The collation, 146 to 192</a></td></tr><tr><td><a href="doc-collazione-05.html">The collation, 193 to 240</a></td></tr><tr><td><a href="doc-collazione-06.html">The collation, 241 to 290</a></td></tr><tr><td><a href="doc-collazione-07.html">The collation, 291 to 336</a></td></tr><tr><td><a href="doc-collazione-08.html">The collation, 337 to 384</a></td></tr><tr><td><a href="doc-collazione-09.html">The collation, 385 to 431</a></td></tr><tr><td><a href="doc-collazione-10.html">The collation, 432 to 481</a></td></tr><tr><td><a href="doc-collazione-11.html">The collation, 482 to 528</a></td></tr><tr><td><a href="doc-collazione-12.html">The collation, 529 to 578</a></td></tr><tr><td><a href="doc-collazione-13.html">The collation, 579 to 627</a></td></tr><tr><td><a href="doc-collazione-14.html">The collation, 628 to 674</a></td></tr><tr><td><a href="doc-collazione-15.html">The collation, 675 to 722</a></td></tr><tr><td><a href="doc-collazione-16.html">The collation, 723 to 772</a></td></tr><tr><td><a href="doc-collazione-17.html">The collation, 773 to 819</a></td></tr><tr><td><a href="doc-collazione-18.html">The collation, 820 to Prohemye</a></td></tr></table></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · eb43eb4 · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.1.0 · ca99129 · 2026-07-31</footer>
 
 </body>
 </html>
