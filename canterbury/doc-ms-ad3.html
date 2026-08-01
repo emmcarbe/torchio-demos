@@ -61,6 +61,11 @@ body.show-header .t-teiHeader{display:block;border:1px solid var(--hair);
 .t-note{font-size:.85em;color:var(--soft);border-left:2px solid var(--hair);
   padding-left:.7em;margin:.5em 0}
 .t-note-mark{color:var(--faint);font-size:.55em;vertical-align:super;user-select:none}
+/* an apparatus entry in running prose is part of the sentence: it holds a
+   note, so the HTML element must be a div (a span may not contain one), but
+   it reads inline. Its note is either placed in a margin (absolute) or
+   collapsed to its mark, so it never breaks the line either */
+.t-app{display:inline}
 .t-teiHeader .t-note-mark,.header-full .t-note-mark,.t-app .t-note-mark{display:none}
 .t-app .t-note{display:none}
 @media(min-width:1180px){.t-app .t-note{display:block}}
@@ -147,8 +152,9 @@ body.app-off.has-band [data-el="l"]{cursor:inherit}
 .torchio-pop .popband .bw{color:var(--accent);cursor:pointer}
 .torchio-pop .popband .bw:hover{text-decoration:underline}
 
-/* dense notes: marks only, notes open on click */
-body.notes-dense main.torchio .t-note{display:none!important}
+/* dense notes: those the margins cannot hold collapse to their marks and open
+   on click; the ones placed in a margin (.placed) stay visible */
+body.notes-dense main.torchio .t-note:not(.placed){display:none!important}
 body.notes-dense .t-note-mark{color:var(--accent);cursor:pointer;font-size:.85em;font-weight:700;line-height:0;padding:.3em .3em;margin:-.3em -.1em}
 [data-notepop]{cursor:pointer}
 body.notes-dense.notes-off .t-note-mark{cursor:default}
@@ -199,6 +205,11 @@ header.torchio .tt{min-width:14rem}
 .occ{font-family:var(--mono);font-size:10.5px;color:var(--soft)}
 .occ a{color:var(--accent);margin-right:.5em}
 h2.sec{font-size:20px;font-weight:600;margin:1.6em 0 .4em}
+.md-code{background:var(--wash,#f6f5f2);border:1px solid var(--hair);border-radius:3px;
+  padding:.7em 1em;overflow-x:auto;font-family:var(--mono);font-size:12.5px;line-height:1.5}
+.md-code code{background:none;padding:0}
+main img{max-width:100%;height:auto}
+main hr{border:0;border-top:1px solid var(--hair);margin:1.8em 0}
 .skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
   padding:8px 14px;font-family:var(--mono);font-size:11px;z-index:100}
 .skip:focus{left:0}
@@ -381,7 +392,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     <div id="ms-Ad3:0.1.0.12" class="t-text s-7-struttura-documento" data-el="text"><div id="ms-Ad3:0.1.0.12.0" class="t-body s-1-struttura" data-el="body"><div id="ms-Ad3:0.1.0.12.0.0" class="t-div s-1-struttura" data-el="div" data-type="G" data-n="GP"><span id="ms-Ad3:0.1.0.12.0.0.0" class="t-pb" role="separator" title="page break">[11r]</span><span id="ms-Ad3:0.1.0.12.0.0.1" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.2" class="t-l s-1-versi" data-el="l" data-n="796">And which of yow that bereth him best of alle. </div><span id="ms-Ad3:0.1.0.12.0.0.3" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.4" class="t-l s-1-versi" data-el="l" data-n="797">That is to seyen that telleth in this cas. </div><span id="ms-Ad3:0.1.0.12.0.0.5" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.6" class="t-l s-1-versi" data-el="l" data-n="798">Tales of best sentence and moost solas </div><span id="ms-Ad3:0.1.0.12.0.0.7" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.8" class="t-l s-1-versi" data-el="l" data-n="799">Shall have a Soper<span id="ms-Ad3:0.1.0.12.0.0.8.0" class="t-am s-3-editoriale" data-el="am">͗</span><span id="ms-Ad3:0.1.0.12.0.0.8.1" class="t-ex s-3-editoriale" data-el="ex">e</span> at oure aller cost </div><span id="ms-Ad3:0.1.0.12.0.0.9" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.10" class="t-l s-1-versi ln5" data-el="l" data-n="800">Here in this place sittyng by this post </div><span id="ms-Ad3:0.1.0.12.0.0.11" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.12" class="t-l s-1-versi" data-el="l" data-n="801">Whan that we come a gayn fro Caunturbury </div><span id="ms-Ad3:0.1.0.12.0.0.13" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.14" class="t-l s-1-versi" data-el="l" data-n="802">And for to make yow the more mury. </div><span id="ms-Ad3:0.1.0.12.0.0.15" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.16" class="t-l s-1-versi" data-el="l" data-n="803">I wol my self goodly w<span id="ms-Ad3:0.1.0.12.0.0.16.0" class="t-am s-3-editoriale" data-el="am">ᵗ</span><span id="ms-Ad3:0.1.0.12.0.0.16.1" class="t-ex s-3-editoriale" data-el="ex">ith</span> ȝow ryde </div><span id="ms-Ad3:0.1.0.12.0.0.17" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.18" class="t-l s-1-versi" data-el="l" data-n="804">Ryght at myn awne coste and be youre gide. </div><span id="ms-Ad3:0.1.0.12.0.0.19" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.20" class="t-l s-1-versi ln5" data-el="l" data-n="805">And who so wol my Iuggement wyth seye </div><span id="ms-Ad3:0.1.0.12.0.0.21" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.22" class="t-l s-1-versi" data-el="l" data-n="806">Shal pay al that we spende by the weye </div><span id="ms-Ad3:0.1.0.12.0.0.23" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.24" class="t-l s-1-versi" data-el="l" data-n="807">And if ye vouche safe that yt be so </div><span id="ms-Ad3:0.1.0.12.0.0.25" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.26" class="t-l s-1-versi" data-el="l" data-n="808">Telle me anoon wyth owten wordes moo </div><span id="ms-Ad3:0.1.0.12.0.0.27" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.28" class="t-l s-1-versi" data-el="l" data-n="809">And I wol erly shape me ther fore </div><span id="ms-Ad3:0.1.0.12.0.0.29" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.30" class="t-l s-1-versi ln5" data-el="l" data-n="810">¶ This thyng was graunted and oure othes swore </div><span id="ms-Ad3:0.1.0.12.0.0.31" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.32" class="t-l s-1-versi" data-el="l" data-n="811">Wyth ful glad herte and preyden him also </div><span id="ms-Ad3:0.1.0.12.0.0.33" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.34" class="t-l s-1-versi" data-el="l" data-n="812">That he wolde vouchesafe for to do  so </div><span id="ms-Ad3:0.1.0.12.0.0.35" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.36" class="t-l s-1-versi" data-el="l" data-n="813">And that he wolde be oure gou<span id="ms-Ad3:0.1.0.12.0.0.36.0" class="t-am s-3-editoriale" data-el="am">̉</span><span id="ms-Ad3:0.1.0.12.0.0.36.1" class="t-ex s-3-editoriale" data-el="ex">er</span>nour<span id="ms-Ad3:0.1.0.12.0.0.36.2" class="t-am s-3-editoriale" data-el="am">͗</span><span id="ms-Ad3:0.1.0.12.0.0.36.3" class="t-ex s-3-editoriale" data-el="ex">e</span> </div><span id="ms-Ad3:0.1.0.12.0.0.37" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.38" class="t-l s-1-versi" data-el="l" data-n="814">And of oure tale Iuge and reportour<span id="ms-Ad3:0.1.0.12.0.0.38.0" class="t-am s-3-editoriale" data-el="am">͗</span><span id="ms-Ad3:0.1.0.12.0.0.38.1" class="t-ex s-3-editoriale" data-el="ex">e</span> </div><span id="ms-Ad3:0.1.0.12.0.0.39" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.40" class="t-l s-1-versi ln5" data-el="l" data-n="815">And sette a souper at a certeyn pris </div><span id="ms-Ad3:0.1.0.12.0.0.41" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.42" class="t-l s-1-versi" data-el="l" data-n="816">And we wol ruled ben at his deuys </div><span id="ms-Ad3:0.1.0.12.0.0.43" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.44" class="t-l s-1-versi" data-el="l" data-n="817">¶ In heigh and lough and thus by on assent </div><span id="ms-Ad3:0.1.0.12.0.0.45" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.46" class="t-l s-1-versi" data-el="l" data-n="818">We ben acorded to his Iuggement. </div><span id="ms-Ad3:0.1.0.12.0.0.47" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.48" class="t-l s-1-versi" data-el="l" data-n="819">And ther vpon the wyne was fet anon </div><span id="ms-Ad3:0.1.0.12.0.0.49" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.50" class="t-l s-1-versi ln5" data-el="l" data-n="820">We dronken and to rest went echon </div><span id="ms-Ad3:0.1.0.12.0.0.51" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.52" class="t-l s-1-versi" data-el="l" data-n="821">Wyth outen eny lenger taryinge </div><span id="ms-Ad3:0.1.0.12.0.0.53" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.54" class="t-l s-1-versi" data-el="l" data-n="822">A morwe whan that day bygan to springe </div><span id="ms-Ad3:0.1.0.12.0.0.55" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.56" class="t-l s-1-versi" data-el="l" data-n="823">Vp roos oure hoost and oure aller cok </div><span id="ms-Ad3:0.1.0.12.0.0.57" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.58" class="t-l s-1-versi" data-el="l" data-n="824">And gedred vs to gyder in a flok </div><span id="ms-Ad3:0.1.0.12.0.0.59" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.60" class="t-l s-1-versi ln5" data-el="l" data-n="825">And forth we ryden a lytel more than pas </div><span id="ms-Ad3:0.1.0.12.0.0.61" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.62" class="t-l s-1-versi" data-el="l" data-n="826">Vnto the wateryng of seint Thomas </div><span id="ms-Ad3:0.1.0.12.0.0.63" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.64" class="t-l s-1-versi" data-el="l" data-n="827">And ther oure hoost by gan his hors areste </div><span id="ms-Ad3:0.1.0.12.0.0.65" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.66" class="t-l s-1-versi" data-el="l" data-n="828">And seide lordynges herkeneth if ȝow leste </div><span id="ms-Ad3:0.1.0.12.0.0.67" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.68" class="t-l s-1-versi" data-el="l" data-n="829">¶ Ye woot youre forward and it yow recorde </div><span id="ms-Ad3:0.1.0.12.0.0.69" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.70" class="t-l s-1-versi ln5" data-el="l" data-n="830">If evensong and morowsonge accorde </div><span id="ms-Ad3:0.1.0.12.0.0.71" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.72" class="t-l s-1-versi" data-el="l" data-n="831">Lat se now who shal telle the first tale </div><span id="ms-Ad3:0.1.0.12.0.0.73" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.74" class="t-l s-1-versi" data-el="l" data-n="832">As eu<span id="ms-Ad3:0.1.0.12.0.0.74.0" class="t-am s-3-editoriale" data-el="am">̉</span><span id="ms-Ad3:0.1.0.12.0.0.74.1" class="t-ex s-3-editoriale" data-el="ex">er</span> mote y drynke wyne or ale </div><span id="ms-Ad3:0.1.0.12.0.0.75" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.76" class="t-l s-1-versi" data-el="l" data-n="833">Who so be rebel to my Iuggement </div><span id="ms-Ad3:0.1.0.12.0.0.77" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.78" class="t-l s-1-versi" data-el="l" data-n="834">Shal pay for al that by the wey is spent </div><span id="ms-Ad3:0.1.0.12.0.0.79" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.12.0.0.80" class="t-l s-1-versi ln5" data-el="l" data-n="835">Now draweth cut or that we ferther twynne</div></div></div></div>
     <div id="ms-Ad3:0.1.0.13" class="t-text s-7-struttura-documento" data-el="text"><div id="ms-Ad3:0.1.0.13.0" class="t-body s-1-struttura" data-el="body"><div id="ms-Ad3:0.1.0.13.0.0" class="t-div s-1-struttura" data-el="div" data-type="G" data-n="GP"><span id="ms-Ad3:0.1.0.13.0.0.0" class="t-pb" role="separator" title="page break">[11v]</span><span id="ms-Ad3:0.1.0.13.0.0.1" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.2" class="t-l s-1-versi" data-el="l" data-n="836">He which that hath the shortest shal by gynne </div><span id="ms-Ad3:0.1.0.13.0.0.3" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.4" class="t-l s-1-versi" data-el="l" data-n="837">Sir knyght quod he my mastyr and my lord </div><span id="ms-Ad3:0.1.0.13.0.0.5" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.6" class="t-l s-1-versi" data-el="l" data-n="838">Now drawyth cut for that is myn accord </div><span id="ms-Ad3:0.1.0.13.0.0.7" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.8" class="t-l s-1-versi" data-el="l" data-n="839">Cometh ner quod he my lady Prioresse </div><span id="ms-Ad3:0.1.0.13.0.0.9" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.10" class="t-l s-1-versi ln5" data-el="l" data-n="840">And ye syr Clerke lat be youre shamefastnesse </div><span id="ms-Ad3:0.1.0.13.0.0.11" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.12" class="t-l s-1-versi" data-el="l" data-n="841">Ne studyeth noght ley hond to eu<span id="ms-Ad3:0.1.0.13.0.0.12.0" class="t-am s-3-editoriale" data-el="am">̉</span><span id="ms-Ad3:0.1.0.13.0.0.12.1" class="t-ex s-3-editoriale" data-el="ex">er</span>y man </div><span id="ms-Ad3:0.1.0.13.0.0.13" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.14" class="t-l s-1-versi" data-el="l" data-n="842">Anon to drawen eu<span id="ms-Ad3:0.1.0.13.0.0.14.0" class="t-am s-3-editoriale" data-el="am">̉</span><span id="ms-Ad3:0.1.0.13.0.0.14.1" class="t-ex s-3-editoriale" data-el="ex">er</span>y wyght by gan </div><span id="ms-Ad3:0.1.0.13.0.0.15" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.16" class="t-l s-1-versi" data-el="l" data-n="843">And shortly for to tellen as hit was </div><span id="ms-Ad3:0.1.0.13.0.0.17" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.18" class="t-l s-1-versi" data-el="l" data-n="844">Were it by auenture or sort or cas </div><span id="ms-Ad3:0.1.0.13.0.0.19" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.20" class="t-l s-1-versi ln5" data-el="l" data-n="845">The sothe is this the cut fel to the knyght </div><span id="ms-Ad3:0.1.0.13.0.0.21" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.22" class="t-l s-1-versi" data-el="l" data-n="846">Of which ful blithe was eu<span id="ms-Ad3:0.1.0.13.0.0.22.0" class="t-am s-3-editoriale" data-el="am">̉</span><span id="ms-Ad3:0.1.0.13.0.0.22.1" class="t-ex s-3-editoriale" data-el="ex">er</span>y wyght. </div><span id="ms-Ad3:0.1.0.13.0.0.23" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.24" class="t-l s-1-versi" data-el="l" data-n="847">And telle he moste his tale as was reson </div><span id="ms-Ad3:0.1.0.13.0.0.25" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.26" class="t-l s-1-versi" data-el="l" data-n="848">By forward and by composicio<span id="ms-Ad3:0.1.0.13.0.0.26.0" class="t-am s-3-editoriale" data-el="am" data-rend="n̄">ıı̄</span><span id="ms-Ad3:0.1.0.13.0.0.26.1" class="t-ex s-3-editoriale" data-el="ex">un</span>. </div><span id="ms-Ad3:0.1.0.13.0.0.27" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.28" class="t-l s-1-versi" data-el="l" data-n="849">As ye han herd what nedeth wordes mo </div><span id="ms-Ad3:0.1.0.13.0.0.29" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.30" class="t-l s-1-versi ln5" data-el="l" data-n="850">And whanne this good man saw that it was so </div><span id="ms-Ad3:0.1.0.13.0.0.31" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.32" class="t-l s-1-versi" data-el="l" data-n="851">As he that wys was and obedyent </div><span id="ms-Ad3:0.1.0.13.0.0.33" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.34" class="t-l s-1-versi" data-el="l" data-n="852">To kepe his forward by his free assent </div><span id="ms-Ad3:0.1.0.13.0.0.35" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.36" class="t-l s-1-versi" data-el="l" data-n="853">He seyde syn I· shal begynne the game </div><span id="ms-Ad3:0.1.0.13.0.0.37" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.38" class="t-l s-1-versi" data-el="l" data-n="854">What welcome be the cut in goddes name. </div><span id="ms-Ad3:0.1.0.13.0.0.39" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.40" class="t-l s-1-versi ln5" data-el="l" data-n="855">Now lat vs ryde and herkeneth what I seye </div><span id="ms-Ad3:0.1.0.13.0.0.41" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.42" class="t-l s-1-versi" data-el="l" data-n="856">And wyth that worde we ryden forthe oure weye </div><span id="ms-Ad3:0.1.0.13.0.0.43" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.44" class="t-l s-1-versi" data-el="l" data-n="857">And he by ganne ryght wyth a mury cheere </div><span id="ms-Ad3:0.1.0.13.0.0.45" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.0.46" class="t-l s-1-versi" data-el="l" data-n="858">His tale anon and seyde as ye may heere. </div> </div><div id="ms-Ad3:0.1.0.13.0.1" class="t-div s-1-struttura" data-el="div" data-type="G" data-n="KT"> <div id="ms-Ad3:0.1.0.13.0.1.0" class="t-l s-1-versi" data-el="l" data-n="IRL"><span class="t-note-mark" aria-hidden="true">°</span><div id="ms-Ad3:0.1.0.13.0.1.0.0" class="t-note s-1-note" data-el="note" data-place="margin-left">¶ Iamq<span id="ms-Ad3:0.1.0.13.0.1.0.0.0" class="t-am s-3-editoriale" data-el="am">ꝫ</span><span id="ms-Ad3:0.1.0.13.0.1.0.0.1" class="t-ex s-3-editoriale" data-el="ex">ue</span> domos pat<span id="ms-Ad3:0.1.0.13.0.1.0.0.2" class="t-am s-3-editoriale" data-el="am">ⁱ</span><span id="ms-Ad3:0.1.0.13.0.1.0.0.3" class="t-ex s-3-editoriale" data-el="ex">ri</span>as scithice post<span id="ms-Ad3:0.1.0.13.0.1.0.0.4" class="t-lb"><br/></span>as<span id="ms-Ad3:0.1.0.13.0.1.0.0.5" class="t-am s-3-editoriale" data-el="am">ꝑ</span><span id="ms-Ad3:0.1.0.13.0.1.0.0.6" class="t-ex s-3-editoriale" data-el="ex">per</span>a gentis ·/ prelia laurigero <span id="ms-Ad3:0.1.0.13.0.1.0.0.7" class="t-am s-3-editoriale" data-el="am">+</span><span id="ms-Ad3:0.1.0.13.0.1.0.0.8" class="t-ex s-3-editoriale" data-el="ex">et</span> c<span id="ms-Ad3:0.1.0.13.0.1.0.0.9" class="t-am s-3-editoriale" data-el="am">̉</span><span id="ms-Ad3:0.1.0.13.0.1.0.0.10" class="t-ex s-3-editoriale" data-el="ex">etera</span></div></div><span id="ms-Ad3:0.1.0.13.0.1.1" class="t-lb"><br/></span><span id="ms-Ad3:0.1.0.13.0.1.2" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.1.3" class="t-l s-1-versi" data-el="l" data-n="IRE">¶ Here begynneth the prologe of the knyghtes tale. </div><span id="ms-Ad3:0.1.0.13.0.1.4" class="t-lb"><br/></span><span id="ms-Ad3:0.1.0.13.0.1.5" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.1.6" class="t-l s-1-versi" data-el="l" data-n="1"><span id="ms-Ad3:0.1.0.13.0.1.6.0" class="t-hi s-1-inline" data-el="hi" data-rend="orncp4">W</span>hilom as olde stories tellen vs </div><span id="ms-Ad3:0.1.0.13.0.1.7" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.1.8" class="t-l s-1-versi" data-el="l" data-n="2">Ther was a duke that hight Theseus </div><span id="ms-Ad3:0.1.0.13.0.1.9" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.1.10" class="t-l s-1-versi" data-el="l" data-n="3">Of Athenes he was lord and gou<span id="ms-Ad3:0.1.0.13.0.1.10.0" class="t-am s-3-editoriale" data-el="am">̉</span><span id="ms-Ad3:0.1.0.13.0.1.10.1" class="t-ex s-3-editoriale" data-el="ex">er</span>nour<span id="ms-Ad3:0.1.0.13.0.1.10.2" class="t-am s-3-editoriale" data-el="am">͗</span><span id="ms-Ad3:0.1.0.13.0.1.10.3" class="t-ex s-3-editoriale" data-el="ex">e</span> </div><span id="ms-Ad3:0.1.0.13.0.1.11" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.1.12" class="t-l s-1-versi" data-el="l" data-n="4">And in his tyme swych a conquerour<span id="ms-Ad3:0.1.0.13.0.1.12.0" class="t-am s-3-editoriale" data-el="am">͗</span><span id="ms-Ad3:0.1.0.13.0.1.12.1" class="t-ex s-3-editoriale" data-el="ex">e</span> </div><span id="ms-Ad3:0.1.0.13.0.1.13" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.1.14" class="t-l s-1-versi ln5" data-el="l" data-n="5">That gretter was ther noon vndir the Sonne </div><span id="ms-Ad3:0.1.0.13.0.1.15" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.1.16" class="t-l s-1-versi" data-el="l" data-n="6">Ful many a ryche contre had he wonne. </div><span id="ms-Ad3:0.1.0.13.0.1.17" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.1.18" class="t-l s-1-versi" data-el="l" data-n="7">What wyth his wisdom and his chiualrye </div><span id="ms-Ad3:0.1.0.13.0.1.19" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.1.20" class="t-l s-1-versi" data-el="l" data-n="8">He conquered al the regne of femenye </div><span id="ms-Ad3:0.1.0.13.0.1.21" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.1.22" class="t-l s-1-versi" data-el="l" data-n="9">That whilom was cleped cithia </div><span id="ms-Ad3:0.1.0.13.0.1.23" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.1.24" class="t-l s-1-versi ln5" data-el="l" data-n="10">And wedded the quene ypolita </div><span id="ms-Ad3:0.1.0.13.0.1.25" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.1.26" class="t-l s-1-versi" data-el="l" data-n="11">And brought hir hoom wyth him in his contre </div><span id="ms-Ad3:0.1.0.13.0.1.27" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.1.28" class="t-l s-1-versi" data-el="l" data-n="12">Wyth mochel glorye and gret solempnyte. </div><span id="ms-Ad3:0.1.0.13.0.1.29" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.1.30" class="t-l s-1-versi" data-el="l" data-n="13">And eke hir yonge suster Emelye </div><span id="ms-Ad3:0.1.0.13.0.1.31" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.1.32" class="t-l s-1-versi" data-el="l" data-n="14">And thus wyth victorie and wyth melodye </div><span id="ms-Ad3:0.1.0.13.0.1.33" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.1.34" class="t-l s-1-versi ln5" data-el="l" data-n="15">Lat I this noble duke to Athenes ryde </div><span id="ms-Ad3:0.1.0.13.0.1.35" class="t-lb"><br/></span><div id="ms-Ad3:0.1.0.13.0.1.36" class="t-l s-1-versi" data-el="l" data-n="16">And al his hoost in armes him byside.</div></div></div></div>
 </div></div><nav class="prevnext" aria-label="Register"><a href="doc-ms-ad1.html">‹ previous</a><a href="text.html">Register</a><a href="doc-ms-ad4.html">next ›</a></nav></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.1 · 370db8e · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.2 · 370db8e · 2026-08-01</footer>
 <script>window.TORCHIO_ALIGN={"strip":"^.*line=","suffix":"-APP$","apps":["collazione-01","collazione-02","collazione-03","collazione-04","collazione-05","collazione-06","collazione-07","collazione-08","collazione-09","collazione-10","collazione-11","collazione-12","collazione-13","collazione-14","collazione-15","collazione-16","collazione-17","collazione-18"]};
 (function(){
   var T={"edition":"Edition","text":"Text","indices":"Indices","data":"Data","archive":"Archive","dsa":"digital archive","texts":"Texts","reading":"Reading","diplomatic":"Diplomatic","apparatus":"Apparatus","aboutFile":"About this file","notes":"Notes","dse":"digital scholarly edition","responsibility":"Responsibility","licence":"Licence","witnesses":"Witnesses","apparatusRegisters":"Apparatus","revisions":"Revision history","generator":"Generator","people":"People","places":"Places","orgs":"Organisations","occurrenceOne":"occurrence","occurrenceMany":"occurrences","entries":"entries","skip":"Skip to content","publishedWith":"Published with","map":"Map","lab":"Lab","labAnalyses":"Analyses","labIntro":"The analytical layer, kept apart from the edition: the indices, the quantitative analysis, the lemmas, the map — derived from the text, not attested by it. Choose one above.","labLexDesc":"Frequencies, concordance (KWIC) and the token / type / TTR count.","labMapDesc":"The places that carry coordinates.","mapAria":"Map of the places of the edition","mapNote":"Positional sketch. Filled dots: coordinates declared in the TEI or confirmed by the editor. Hollow dots: gazetteer suggestions awaiting review. Each place links to OpenStreetMap. Coastlines: Natural Earth (public domain).","front":"Front matter","back":"Back matter","lacking":"lacking in","editedText":"edited text","genesis":"Genesis","hand":"hand","version":"version","legend":"Legend","legWord":"word","legDel":"deleted by the writing hand","legAdd":"added above the line","legUnclear":"uncertain reading","legSupplied":"supplied by the editor","legGap":"lost or illegible","legPb":"page break of the source","legMetamark":"a mark of the hand about the text (^ = insert here; hover each mark to read what it does)","legApp":"variant readings: click for the apparatus","legNote":"note mark","legHands":"Hands","legAllHands":"all","legHand":"the hand of","idxSearch":"search a name…","backToTop":"back to top","apparatusCritical":"critical: variants between witnesses","apparatusGenetic":"genetic: the strata of one manuscript in time","apparatusBoth":"critical and genetic: witnesses to collate, strata within them","legMajor":"main hand","lexicon":"Lexicon","lexTokens":"running words","lexForms":"distinct forms","lexTTR":"type-token ratio","lexSearch":"search a word…","lexFrequencies":"Frequencies","lexConcordance":"Concordance","lexPick":"Pick a word to see it in context.","lexLanguage":"Language","lexAllLangs":"all","lexStoplist":"Stopwords","lexDocument":"Document","lexWholeEdition":"all documents","lexStopNone":"none","lexHideStop":"hide stopwords","lexWord":"word","lexLang":"lang","descrFrequencies":"Every attested form with its count, its share per thousand and whether the stopword list you chose covers it.","descrConcordance":"Every occurrence of every form, with the words around it and the anchor back into the text.","descrLemmaConcordance":"The same evidence grouped under the dictionary form, where the edition has lemmas.","lexAbs":"count","lexRel":"per 1000","lexStats":"Lexical statistics","lexStopCol":"stop","lexStopNote":"Frequencies drop the stopwords you choose; the concordance keeps every word.","genesisNote":"The campaigns of correction the edition declares, in its own order, with the writing operations attributed to each. Every operation links to the place where it happened.","agreement":"Agreement between witnesses","agreementNote":"How often two witnesses carry the same reading. Evidence for a stemma, which remains the editor’s argument.","openPage":"open the page","sectionsN":"sections","sectionOne":"Section","contents":"Contents","bookLabel":"Book","register":"Register","documentsN":"documents","dateCol":"Date","fromCol":"From","toCol":"To","authorCol":"Author","placeCol":"Place","titleCol":"Title","idnoCol":"Ref.","filter":"Filter…","prev":"‹ previous","next":"next ›","fullHeader":"The full header (teiHeader)","fullHeaderNote":"Everything the file declares, rendered as it is.","reuse":"Reuse under the edition licence (see the Edition page).","appEntry":"apparatus entry","descrModel":"the edition model: documents, registries, apparatus (JSON)","descrEntities":"people, places and organisations with occurrence counts and coordinates","descrApparatus":"every apparatus reading with its witnesses, one row per reading","descrSource":"the unmodified TEI source file","lemmas":"Lemmas","lemmaCoverage":"Coverage","tokensWord":"tokens","languagesLabel":"Languages","yearsLabel":"Years","contributorsLabel":"Contributors","interventionsWord":"interventions","licenceVariesNote":"each document declares its own licence, shown on its page","lemmaFromMarkup":"from the markup (w/@lemma)","lemmaFromFile":"from lemmas.json","lemmaPending":"types awaiting the editor’s review","formsLabel":"forms","moreOccurrences":"more occurrences not shown here","descrLemmas":"every lemma with its forms and counts, one row per form","descrTokens":"the token stream of the reading text: position, language, form, lemma, anchor"};
@@ -566,7 +577,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     if(app)return [app];
     var t=n.dataset.target;
     if(t){
-      var els=t.split(/s+/).map(function(x){return document.getElementById(x.replace(/^#/,''));}).filter(Boolean);
+      var els=t.split(/\s+/).map(function(x){return document.getElementById(x.replace(/^#/,''));}).filter(Boolean);
       if(els.length)return els;
     }
     var m=n.previousElementSibling;
@@ -627,7 +638,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
               if(el){
                 var cl=el.cloneNode(true);
                 cl.querySelectorAll('[data-el="abbr"],[data-el="orig"],[data-el="sic"],[data-el="am"],.t-note,.t-note-mark,.app-band').forEach(function(x){x.remove();});
-                txt=cl.textContent.replace(/s+/g,' ').trim();
+                txt=cl.textContent.replace(/\s+/g,' ').trim();
               }
               openPop('<span class="k">'+esc(sig)+'</span>'
                 +'<div class="notebody">'+(txt?esc(txt):'…')+'</div>'
@@ -655,7 +666,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       });
       var extra='';
       app.querySelectorAll('.t-note').forEach(function(nn){
-        extra+='<div class="meta">'+esc(nn.textContent.replace(/s+/g,' ').trim())+'</div>';
+        extra+='<div class="meta">'+esc(nn.textContent.replace(/\s+/g,' ').trim())+'</div>';
       });
       openPop('<span class="k">'+esc(T.apparatus.toLowerCase())+''+(app.dataset.type?' · '+esc(app.dataset.type):'')+'</span>'+rows+extra,app);
       ev.stopPropagation();return;
@@ -696,7 +707,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       var lab=(op.dataset.change||'').replace(/^#/,''), hd=(op.dataset.hand||'').replace(/^#/,'');
       var strat=lab?document.querySelector('[data-el="change"][id$="'+lab+'"]'):null;
       openPop('<span class="k">'+esc(op.dataset.el)+'</span>'
-        +'<div class="notebody">'+esc(op.textContent.replace(/s+/g,' ').trim().slice(0,140))+'</div>'
+        +'<div class="notebody">'+esc(op.textContent.replace(/\s+/g,' ').trim().slice(0,140))+'</div>'
         +'<div class="meta">'+(lab?esc(lab):'')+(hd?' · '+esc(hd):'')
         +' <a href="genesis.html">'+esc(T.genesis)+'</a></div>',op);
       ev.stopPropagation();return;
@@ -781,7 +792,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       if(app){return {el:app.querySelector('[data-el="lem"]')||app,kind:'app'};}
       var t=n.dataset.target;
       if(t){
-        var id=t.split(/s+/)[0].replace(/^#/,'');
+        var id=t.split(/\s+/)[0].replace(/^#/,'');
         var el=document.getElementById(id);
         if(el)return {el:el,kind:'target'};
       }
@@ -817,7 +828,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
            its mark goes to the passage, not to the place it was written */
         var tg=n.dataset.target;
         if(tg&&mk){
-          var id=tg.split(/s+/)[0].replace(/^#/,'');
+          var id=tg.split(/\s+/)[0].replace(/^#/,'');
           var dest=document.getElementById(id);
           if(dest&&!dest.contains(mk)){
             if(dest.nextSibling)dest.parentNode.insertBefore(mk,dest.nextSibling);
@@ -831,17 +842,32 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
         if(el&&el!==mk){el.setAttribute('data-notepop',String(i));makeTrigger(el,null);}
       });
     }
-    if(window.innerWidth<1180||body.classList.contains('notes-off')||dense){
+    var old=document.getElementById('note-leaders'); if(old)old.remove();
+    /* the notes go into BOTH margins: each takes the side that carries it
+       closest to its mark, so a long text with many notes fills the two
+       gutters instead of collapsing to popups. The economy rule is applied
+       per note, not to the whole page: only a note that neither side can hold
+       near its anchor (its stack would push it past MAXDRIFT) collapses to its
+       mark and opens on click. The two columns keep their own running bottom */
+    main.style.position='relative';
+    var mr=main.getBoundingClientRect();
+    var remPx=parseFloat(getComputedStyle(document.documentElement).fontSize)||16;
+    var noteW=14*remPx;
+    /* margins carry the notes only when a gutter can actually hold one. The
+       page is centred, so both gutters are the same width; too narrow, or
+       notes off, and every note collapses to its mark. This is the real cause
+       of notes landing on the text: a margin too thin for what it was asked to
+       hold. Measured, not guessed at a fixed breakpoint */
+    if(mr.left<noteW+26||body.classList.contains('notes-off')){
       notes.forEach(function(n){n.classList.remove('placed');n.style.cssText='';});
       return;
     }
-    main.style.position='relative';
-    var mr=main.getBoundingClientRect();
-    var colLeft=main.clientWidth+26;
+    var colR=main.clientWidth+26;   // right column: the note extends into the right gutter
+    var colL=-(noteW+26);           // left column: the note sits in the left gutter
+    var GAP=10, MAXDRIFT=340;
     var svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
     svg.id='note-leaders';
     svg.style.cssText='position:absolute;left:0;top:0;width:1px;height:1px;pointer-events:none;overflow:visible;z-index:1';
-    var lastBottom=0;
     var items=notes.map(function(n){
       var flowY=n.getBoundingClientRect().top-mr.top;
       var res=anchorOf(n);
@@ -850,28 +876,45 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       if(a){
         var r=a.getBoundingClientRect();
         var ay=(r.width||r.height)?r.top-mr.top:null;
-        if(ay!==null&&(kind!=='mark'||ay<flowY-40)){y=ay;}
-        else if(kind==='mark'){/* adjacent: keep flow position, no line */}
+        // the anchor's own position is the truth: the note is hidden inline
+        // when dense, so its flow position is meaningless. Align to the mark
+        // (or the standoff target) wherever it sits on the page
+        if(ay!==null){y=ay;}
         else{a=null;}
       }
       return {n:n,a:a,kind:kind,y:y};
     });
     items.sort(function(p,q){return p.y-q.y;});
+    var botL=0, botR=0, maxBottom=0;
     items.forEach(function(it){
       var n=it.n;
+      var topR=Math.max(it.y,botR+GAP), topL=Math.max(it.y,botL+GAP);
+      // the right margin is primary; the left takes the overflow only when the
+      // right is backed up (it would push the note more than a line below its
+      // mark) and the left carries it closer. So a lightly annotated text keeps
+      // one margin, and a dense one like this grammar spreads over both
+      var side=(topR-it.y<=26)?'R':(topL<topR?'L':'R');
+      var top=side==='L'?topL:topR;
+      if(top-it.y>MAXDRIFT){ n.classList.remove('placed'); n.style.cssText=''; return; }
       n.classList.add('placed');
-      var top=Math.max(it.y,lastBottom+10);
-      n.style.cssText='position:absolute;float:none;width:14rem;margin:0;left:'+colLeft+'px;top:'+top+'px;border-left:0;padding-left:0';
-      lastBottom=top+n.offsetHeight;
+      var left=side==='L'?colL:colR;
+      n.style.cssText='position:absolute;float:none;width:14rem;margin:0;left:'+left+'px;top:'+top+'px;border-left:0;padding-left:0';
+      var h=n.offsetHeight;
+      if(side==='L')botL=top+h; else botR=top+h;
+      if(top+h>maxBottom)maxBottom=top+h;
       if(it.a){
         var ar=it.a.getBoundingClientRect();
         if(ar.width||ar.height){
-          var x1=ar.right-mr.left+2, y1=ar.top-mr.top+ar.height*0.5;
-          var x2=colLeft-8, y2=top+8;
-          // a thread only when short and meaningful; never across the page
-          if((it.kind==='app'||it.kind==='target')&&Math.abs(y2-y1)<160){
+          var y1=ar.top-mr.top+ar.height*0.5, y2=top+8, x1,x2,cx1,cx2;
+          if(side==='L'){ x1=ar.left-mr.left-2; x2=left+noteW+8; cx1=x1-24; cx2=x2+24; }
+          else { x1=ar.right-mr.left+2; x2=left-8; cx1=x1+24; cx2=x2-24; }
+          // a thread where the eye needs it: the note is pushed below its mark
+          // by the stack, so a short faint curve reconnects them. Where the
+          // note sits at its mark's height (drift near zero) the alignment is
+          // the connection and a line would only clutter; never across the page
+          if(Math.abs(y2-y1)>14&&Math.abs(y2-y1)<200){
             var p=document.createElementNS('http://www.w3.org/2000/svg','path');
-            p.setAttribute('d','M'+x1+' '+y1+' C '+(x1+24)+' '+y1+', '+(x2-24)+' '+y2+', '+x2+' '+y2);
+            p.setAttribute('d','M'+x1+' '+y1+' C '+cx1+' '+y1+', '+cx2+' '+y2+', '+x2+' '+y2);
             p.setAttribute('fill','none');
             p.setAttribute('stroke','var(--faint)');
             p.setAttribute('stroke-width','1');
@@ -889,7 +932,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
         }
       }
     });
-    if(items.length){main.style.minHeight=(lastBottom+32)+'px';}
+    if(maxBottom)main.style.minHeight=(maxBottom+32)+'px';
     main.appendChild(svg);
   }
   if(document.readyState==='complete')leaders();

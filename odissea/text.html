@@ -61,6 +61,11 @@ body.show-header .t-teiHeader{display:block;border:1px solid var(--hair);
 .t-note{font-size:.85em;color:var(--soft);border-left:2px solid var(--hair);
   padding-left:.7em;margin:.5em 0}
 .t-note-mark{color:var(--faint);font-size:.55em;vertical-align:super;user-select:none}
+/* an apparatus entry in running prose is part of the sentence: it holds a
+   note, so the HTML element must be a div (a span may not contain one), but
+   it reads inline. Its note is either placed in a margin (absolute) or
+   collapsed to its mark, so it never breaks the line either */
+.t-app{display:inline}
 .t-teiHeader .t-note-mark,.header-full .t-note-mark,.t-app .t-note-mark{display:none}
 .t-app .t-note{display:none}
 @media(min-width:1180px){.t-app .t-note{display:block}}
@@ -147,8 +152,9 @@ body.app-off.has-band [data-el="l"]{cursor:inherit}
 .torchio-pop .popband .bw{color:var(--accent);cursor:pointer}
 .torchio-pop .popband .bw:hover{text-decoration:underline}
 
-/* dense notes: marks only, notes open on click */
-body.notes-dense main.torchio .t-note{display:none!important}
+/* dense notes: those the margins cannot hold collapse to their marks and open
+   on click; the ones placed in a margin (.placed) stay visible */
+body.notes-dense main.torchio .t-note:not(.placed){display:none!important}
 body.notes-dense .t-note-mark{color:var(--accent);cursor:pointer;font-size:.85em;font-weight:700;line-height:0;padding:.3em .3em;margin:-.3em -.1em}
 [data-notepop]{cursor:pointer}
 body.notes-dense.notes-off .t-note-mark{cursor:default}
@@ -199,6 +205,11 @@ header.torchio .tt{min-width:14rem}
 .occ{font-family:var(--mono);font-size:10.5px;color:var(--soft)}
 .occ a{color:var(--accent);margin-right:.5em}
 h2.sec{font-size:20px;font-weight:600;margin:1.6em 0 .4em}
+.md-code{background:var(--wash,#f6f5f2);border:1px solid var(--hair);border-radius:3px;
+  padding:.7em 1em;overflow-x:auto;font-family:var(--mono);font-size:12.5px;line-height:1.5}
+.md-code code{background:none;padding:0}
+main img{max-width:100%;height:auto}
+main hr{border:0;border-top:1px solid var(--hair);margin:1.8em 0}
 .skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
   padding:8px 14px;font-family:var(--mono);font-size:11px;z-index:100}
 .skip:focus{left:0}
@@ -366,7 +377,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 </header>
 
 <main id="main" class="torchio"><ol class="toc"><li><a href="text-1.html">Book 1</a></li><li><a href="text-2.html">Book 2</a></li><li><a href="text-3.html">Book 3</a></li><li><a href="text-4.html">Book 4</a></li><li><a href="text-5.html">Book 5</a></li><li><a href="text-6.html">Book 6</a></li><li><a href="text-7.html">Book 7</a></li><li><a href="text-8.html">Book 8</a></li><li><a href="text-9.html">Book 9</a></li><li><a href="text-10.html">Book 10</a></li><li><a href="text-11.html">Book 11</a></li><li><a href="text-12.html">Book 12</a></li><li><a href="text-13.html">Book 13</a></li><li><a href="text-14.html">Book 14</a></li><li><a href="text-15.html">Book 15</a></li><li><a href="text-16.html">Book 16</a></li><li><a href="text-17.html">Book 17</a></li><li><a href="text-18.html">Book 18</a></li><li><a href="text-19.html">Book 19</a></li><li><a href="text-20.html">Book 20</a></li><li><a href="text-21.html">Book 21</a></li><li><a href="text-22.html">Book 22</a></li><li><a href="text-23.html">Book 23</a></li><li><a href="text-24.html">Book 24</a></li></ol></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.1 · 370db8e · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.2 · 370db8e · 2026-08-01</footer>
 
 </body>
 </html>

@@ -1,0 +1,5 @@
+{
+ "source": "GeoNames cities1000 (CC BY 4.0) + Pleiades (CC BY), via torchio",
+ "howto": "every coordinate is a SUGGESTION, and the machine can pick the wrong place (a Troia in Egypt, not Homer's): review each, set status to \"confirmed\" (correcting lat/lon), or \"rejected\"; fill in coordinates for \"missing\". Each carries its source (geonames / pleiades). Your edits survive re-runs.",
+ "places": {}
+}

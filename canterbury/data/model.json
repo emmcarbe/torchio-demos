@@ -2,6 +2,518 @@
  "split": true,
  "reason": "the whole model exceeds what a repository can carry",
  "bytes": 135360257,
+ "meta": {
+  "title": "The Canterbury Tales: The General Prologue",
+  "responsibility": [
+   {
+    "role": "edited by",
+    "name": "Barbara Bordalejo, Peter Robinson"
+   },
+   {
+    "role": "transcripts",
+    "name": "the Canterbury Tales Project"
+   }
+  ]
+ },
+ "generator": {
+  "name": "torchio",
+  "tei": "P5 Version 4.12.0. Last updated on\n        28th July 2026, revision 113e933e2"
+ },
+ "registries": {
+  "people": [],
+  "places": [],
+  "orgs": [],
+  "witnesses": [
+   {
+    "id": "Edition",
+    "label": "Edited text",
+    "atts": {
+     "xml:id": "Edition"
+    },
+    "occurrences": [],
+    "full": "Edited text"
+   },
+   {
+    "id": "Ad1",
+    "label": "London, British Library, Additional MS 5140",
+    "atts": {
+     "xml:id": "Ad1"
+    },
+    "occurrences": [],
+    "full": "London, British Library, Additional MS 5140"
+   },
+   {
+    "id": "Ad3",
+    "label": "London, British Library, Additional MS 35286",
+    "atts": {
+     "xml:id": "Ad3"
+    },
+    "occurrences": [],
+    "full": "London, British Library, Additional MS 35286"
+   },
+   {
+    "id": "Ad4",
+    "label": "London, British Library, Additional MS 10340",
+    "atts": {
+     "xml:id": "Ad4"
+    },
+    "occurrences": [],
+    "full": "London, British Library, Additional MS 10340"
+   },
+   {
+    "id": "Bo1",
+    "label": "Oxford, Bodleian Library, MS. Bodl. 414",
+    "atts": {
+     "xml:id": "Bo1"
+    },
+    "occurrences": [],
+    "full": "Oxford, Bodleian Library, MS. Bodl. 414"
+   },
+   {
+    "id": "Bo2",
+    "label": "Oxford, Bodleian Library, MS. Bodl. 686",
+    "atts": {
+     "xml:id": "Bo2"
+    },
+    "occurrences": [],
+    "full": "Oxford, Bodleian Library, MS. Bodl. 686"
+   },
+   {
+    "id": "Bw",
+    "label": "Oxford, Bodleian Library, MS. Barlow 20",
+    "atts": {
+     "xml:id": "Bw"
+    },
+    "occurrences": [],
+    "full": "Oxford, Bodleian Library, MS. Barlow 20"
+   },
+   {
+    "id": "Ch",
+    "label": "Oxford, Christ Church MS. 152",
+    "atts": {
+     "xml:id": "Ch"
+    },
+    "occurrences": [],
+    "full": "Oxford, Christ Church MS. 152"
+   },
+   {
+    "id": "Cn",
+    "label": "Austin, University of Texas, Harry Ransom Humanities Research Center HRC Pre-1700 MS 143",
+    "atts": {
+     "xml:id": "Cn"
+    },
+    "occurrences": [],
+    "full": "Austin, University of Texas, Harry Ransom Humanities Research Center HRC Pre-1700 MS 143"
+   },
+   {
+    "id": "Cp",
+    "label": "Oxford, Corpus Christi College MS 198",
+    "atts": {
+     "xml:id": "Cp"
+    },
+    "occurrences": [],
+    "full": "Oxford, Corpus Christi College MS 198"
+   },
+   {
+    "id": "Cx1",
+    "label": "London, British Library 167.c.26, IB. 55009 (the Royal Copy)",
+    "atts": {
+     "xml:id": "Cx1"
+    },
+    "occurrences": [],
+    "full": "London, British Library 167.c.26, IB. 55009 (the Royal Copy)"
+   },
+   {
+    "id": "Cx2",
+    "label": "London, British Library G.11586, IB. 55094 (the Grenville Copy)",
+    "atts": {
+     "xml:id": "Cx2"
+    },
+    "occurrences": [],
+    "full": "London, British Library G.11586, IB. 55094 (the Grenville Copy)"
+   },
+   {
+    "id": "Dd",
+    "label": "Cambridge, Cambridge University Library MS Dd.4.24",
+    "atts": {
+     "xml:id": "Dd"
+    },
+    "occurrences": [],
+    "full": "Cambridge, Cambridge University Library MS Dd.4.24"
+   },
+   {
+    "id": "Dl",
+    "label": "New Haven, Beinecke Library Takamiya Deposit, MS 32",
+    "atts": {
+     "xml:id": "Dl"
+    },
+    "occurrences": [],
+    "full": "New Haven, Beinecke Library Takamiya Deposit, MS 32"
+   },
+   {
+    "id": "Do",
+    "label": "Oxford, Bodleian Library, MS. Douce d.4",
+    "atts": {
+     "xml:id": "Do"
+    },
+    "occurrences": [],
+    "full": "Oxford, Bodleian Library, MS. Douce d.4"
+   },
+   {
+    "id": "Ds1",
+    "label": "New Haven, Beinecke Library Takamiya Deposit, MS 24",
+    "atts": {
+     "xml:id": "Ds1"
+    },
+    "occurrences": [],
+    "full": "New Haven, Beinecke Library Takamiya Deposit, MS 24"
+   },
+   {
+    "id": "El",
+    "label": "San Marino, Huntington Library El 26 C 9",
+    "atts": {
+     "xml:id": "El"
+    },
+    "occurrences": [],
+    "full": "San Marino, Huntington Library El 26 C 9"
+   },
+   {
+    "id": "En1",
+    "label": "London, British Library Egerton MS 2726",
+    "atts": {
+     "xml:id": "En1"
+    },
+    "occurrences": [],
+    "full": "London, British Library Egerton MS 2726"
+   },
+   {
+    "id": "En3",
+    "label": "London, British Library Egerton MS 2864",
+    "atts": {
+     "xml:id": "En3"
+    },
+    "occurrences": [],
+    "full": "London, British Library Egerton MS 2864"
+   },
+   {
+    "id": "Fi",
+    "label": "Cambridge, Fitzwilliam Museum McLean MS 181",
+    "atts": {
+     "xml:id": "Fi"
+    },
+    "occurrences": [],
+    "full": "Cambridge, Fitzwilliam Museum McLean MS 181"
+   },
+   {
+    "id": "Gg",
+    "label": "Cambridge, Cambridge University Library MS Gg.4.27",
+    "atts": {
+     "xml:id": "Gg"
+    },
+    "occurrences": [],
+    "full": "Cambridge, Cambridge University Library MS Gg.4.27"
+   },
+   {
+    "id": "Gl",
+    "label": "Glasgow, University of Glasgow, Hunterian Library MS 197",
+    "atts": {
+     "xml:id": "Gl"
+    },
+    "occurrences": [],
+    "full": "Glasgow, University of Glasgow, Hunterian Library MS 197"
+   },
+   {
+    "id": "Ha2",
+    "label": "London, British Library Harley MS 1758",
+    "atts": {
+     "xml:id": "Ha2"
+    },
+    "occurrences": [],
+    "full": "London, British Library Harley MS 1758"
+   },
+   {
+    "id": "Ha3",
+    "label": "London, British Library Harley MS 7333",
+    "atts": {
+     "xml:id": "Ha3"
+    },
+    "occurrences": [],
+    "full": "London, British Library Harley MS 7333"
+   },
+   {
+    "id": "Ha4",
+    "label": "London, British Library Harley MS 7344",
+    "atts": {
+     "xml:id": "Ha4"
+    },
+    "occurrences": [],
+    "full": "London, British Library Harley MS 7344"
+   },
+   {
+    "id": "Hg",
+    "label": "Aberystwyth, National Library of Wales Peniarth 392 D",
+    "atts": {
+     "xml:id": "Hg"
+    },
+    "occurrences": [],
+    "full": "Aberystwyth, National Library of Wales Peniarth 392 D"
+   },
+   {
+    "id": "Ht",
+    "label": "Oxford, Bodleian Library, Hatton donat. 1",
+    "atts": {
+     "xml:id": "Ht"
+    },
+    "occurrences": [],
+    "full": "Oxford, Bodleian Library, Hatton donat. 1"
+   },
+   {
+    "id": "Ii",
+    "label": "Cambridge, Cambridge University Library MS Ii.3.26",
+    "atts": {
+     "xml:id": "Ii"
+    },
+    "occurrences": [],
+    "full": "Cambridge, Cambridge University Library MS Ii.3.26"
+   },
+   {
+    "id": "La",
+    "label": "London, British Library Lansdowne MS 851",
+    "atts": {
+     "xml:id": "La"
+    },
+    "occurrences": [],
+    "full": "London, British Library Lansdowne MS 851"
+   },
+   {
+    "id": "Lc",
+    "label": "Staffordshire, Lichfield Cathedral Library MS 29 (olim MS 2)",
+    "atts": {
+     "xml:id": "Lc"
+    },
+    "occurrences": [],
+    "full": "Staffordshire, Lichfield Cathedral Library MS 29 (olim MS 2)"
+   },
+   {
+    "id": "Ld1",
+    "label": "Oxford, Bodleian Library, MS. Laud Misc. 600",
+    "atts": {
+     "xml:id": "Ld1"
+    },
+    "occurrences": [],
+    "full": "Oxford, Bodleian Library, MS. Laud Misc. 600"
+   },
+   {
+    "id": "Ld2",
+    "label": "Oxford, Bodleian Library, MS. Laud Misc. 739",
+    "atts": {
+     "xml:id": "Ld2"
+    },
+    "occurrences": [],
+    "full": "Oxford, Bodleian Library, MS. Laud Misc. 739"
+   },
+   {
+    "id": "Ln",
+    "label": "Lincoln, Cathedral Library MS 110=A.4.18",
+    "atts": {
+     "xml:id": "Ln"
+    },
+    "occurrences": [],
+    "full": "Lincoln, Cathedral Library MS 110=A.4.18"
+   },
+   {
+    "id": "Ma",
+    "label": "Manchester, John Rylands Library English MS 113",
+    "atts": {
+     "xml:id": "Ma"
+    },
+    "occurrences": [],
+    "full": "Manchester, John Rylands Library English MS 113"
+   },
+   {
+    "id": "Mg",
+    "label": "New York, Pierpont Morgan Library MS 249",
+    "atts": {
+     "xml:id": "Mg"
+    },
+    "occurrences": [],
+    "full": "New York, Pierpont Morgan Library MS 249"
+   },
+   {
+    "id": "Mm",
+    "label": "Cambridge, Cambridge University Library MS Mm.2.5",
+    "atts": {
+     "xml:id": "Mm"
+    },
+    "occurrences": [],
+    "full": "Cambridge, Cambridge University Library MS Mm.2.5"
+   },
+   {
+    "id": "Ne",
+    "label": "Oxford, Bodleian Library, New College MS 314",
+    "atts": {
+     "xml:id": "Ne"
+    },
+    "occurrences": [],
+    "full": "Oxford, Bodleian Library, New College MS 314"
+   },
+   {
+    "id": "Nl",
+    "label": "Alnwick, Northumberland, Alnwick Castle, Duke of Northumberland MS 455",
+    "atts": {
+     "xml:id": "Nl"
+    },
+    "occurrences": [],
+    "full": "Alnwick, Northumberland, Alnwick Castle, Duke of Northumberland MS 455"
+   },
+   {
+    "id": "Ph2",
+    "label": "Geneva (Coligny), Foundation Martin Bodmer Cod. Bodmer 48",
+    "atts": {
+     "xml:id": "Ph2"
+    },
+    "occurrences": [],
+    "full": "Geneva (Coligny), Foundation Martin Bodmer Cod. Bodmer 48"
+   },
+   {
+    "id": "Pn",
+    "label": "Oxford, Bodleian Library, Douce 218 (Richard Pynson)",
+    "atts": {
+     "xml:id": "Pn"
+    },
+    "occurrences": [],
+    "full": "Oxford, Bodleian Library, Douce 218 (Richard Pynson)"
+   },
+   {
+    "id": "Ps",
+    "label": "Paris, Bibliothèque Nationale Fonds anglais MS 39",
+    "atts": {
+     "xml:id": "Ps"
+    },
+    "occurrences": [],
+    "full": "Paris, Bibliothèque Nationale Fonds anglais MS 39"
+   },
+   {
+    "id": "Pw",
+    "label": "Sussex, Petworth House Leconfield MS 7",
+    "atts": {
+     "xml:id": "Pw"
+    },
+    "occurrences": [],
+    "full": "Sussex, Petworth House Leconfield MS 7"
+   },
+   {
+    "id": "Py",
+    "label": "London, Royal College of Physicians MS 388",
+    "atts": {
+     "xml:id": "Py"
+    },
+    "occurrences": [],
+    "full": "London, Royal College of Physicians MS 388"
+   },
+   {
+    "id": "Ra2",
+    "label": "Oxford, Bodleian Library MS. Rawlinson poet. 149",
+    "atts": {
+     "xml:id": "Ra2"
+    },
+    "occurrences": [],
+    "full": "Oxford, Bodleian Library MS. Rawlinson poet. 149"
+   },
+   {
+    "id": "Ra3",
+    "label": "Oxford, Bodleian Library MS. Rawlinson poet. 223",
+    "atts": {
+     "xml:id": "Ra3"
+    },
+    "occurrences": [],
+    "full": "Oxford, Bodleian Library MS. Rawlinson poet. 223"
+   },
+   {
+    "id": "Ry1",
+    "label": "London, British Library Royal MS 17.d.xv",
+    "atts": {
+     "xml:id": "Ry1"
+    },
+    "occurrences": [],
+    "full": "London, British Library Royal MS 17.d.xv"
+   },
+   {
+    "id": "Ry2",
+    "label": "London, British Library Royal MS 18.c.ii",
+    "atts": {
+     "xml:id": "Ry2"
+    },
+    "occurrences": [],
+    "full": "London, British Library Royal MS 18.c.ii"
+   },
+   {
+    "id": "Se",
+    "label": "Oxford, Bodleian Library MS. Arch. Selden. B. 14",
+    "atts": {
+     "xml:id": "Se"
+    },
+    "occurrences": [],
+    "full": "Oxford, Bodleian Library MS. Arch. Selden. B. 14"
+   },
+   {
+    "id": "Sl1",
+    "label": "London, British Library Sloane MS 1685",
+    "atts": {
+     "xml:id": "Sl1"
+    },
+    "occurrences": [],
+    "full": "London, British Library Sloane MS 1685"
+   },
+   {
+    "id": "Sl2",
+    "label": "London, British Library Sloane MS 1686",
+    "atts": {
+     "xml:id": "Sl2"
+    },
+    "occurrences": [],
+    "full": "London, British Library Sloane MS 1686"
+   },
+   {
+    "id": "Tc1",
+    "label": "Cambridge, Trinity College MS R.3.3",
+    "atts": {
+     "xml:id": "Tc1"
+    },
+    "occurrences": [],
+    "full": "Cambridge, Trinity College MS R.3.3"
+   },
+   {
+    "id": "Tc2",
+    "label": "Cambridge, Trinity College MS R.3.15e",
+    "atts": {
+     "xml:id": "Tc2"
+    },
+    "occurrences": [],
+    "full": "Cambridge, Trinity College MS R.3.15e"
+   },
+   {
+    "id": "To1",
+    "label": "Oxford, Bodleian Library, Trinity College MS 49",
+    "atts": {
+     "xml:id": "To1"
+    },
+    "occurrences": [],
+    "full": "Oxford, Bodleian Library, Trinity College MS 49"
+   },
+   {
+    "id": "Wy",
+    "label": "London, British Library G.11587 (1)=IB.55210 (Wynkyn de Worde)",
+    "atts": {
+     "xml:id": "Wy"
+    },
+    "occurrences": [],
+    "full": "London, British Library G.11587 (1)=IB.55210 (Wynkyn de Worde)"
+   }
+  ],
+  "hands": [],
+  "layers": []
+ },
  "documents": [
   {
    "id": "ms-Edition",

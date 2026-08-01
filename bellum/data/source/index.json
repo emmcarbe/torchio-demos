@@ -1,7 +1,8 @@
 {
  "files": [
+  "georef.json",
   "ldlt-balex.xml",
   "torchio.json"
  ],
- "count": 2
+ "count": 3
 }

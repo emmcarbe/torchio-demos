@@ -61,6 +61,11 @@ body.show-header .t-teiHeader{display:block;border:1px solid var(--hair);
 .t-note{font-size:.85em;color:var(--soft);border-left:2px solid var(--hair);
   padding-left:.7em;margin:.5em 0}
 .t-note-mark{color:var(--faint);font-size:.55em;vertical-align:super;user-select:none}
+/* an apparatus entry in running prose is part of the sentence: it holds a
+   note, so the HTML element must be a div (a span may not contain one), but
+   it reads inline. Its note is either placed in a margin (absolute) or
+   collapsed to its mark, so it never breaks the line either */
+.t-app{display:inline}
 .t-teiHeader .t-note-mark,.header-full .t-note-mark,.t-app .t-note-mark{display:none}
 .t-app .t-note{display:none}
 @media(min-width:1180px){.t-app .t-note{display:block}}
@@ -147,8 +152,9 @@ body.app-off.has-band [data-el="l"]{cursor:inherit}
 .torchio-pop .popband .bw{color:var(--accent);cursor:pointer}
 .torchio-pop .popband .bw:hover{text-decoration:underline}
 
-/* dense notes: marks only, notes open on click */
-body.notes-dense main.torchio .t-note{display:none!important}
+/* dense notes: those the margins cannot hold collapse to their marks and open
+   on click; the ones placed in a margin (.placed) stay visible */
+body.notes-dense main.torchio .t-note:not(.placed){display:none!important}
 body.notes-dense .t-note-mark{color:var(--accent);cursor:pointer;font-size:.85em;font-weight:700;line-height:0;padding:.3em .3em;margin:-.3em -.1em}
 [data-notepop]{cursor:pointer}
 body.notes-dense.notes-off .t-note-mark{cursor:default}
@@ -199,6 +205,11 @@ header.torchio .tt{min-width:14rem}
 .occ{font-family:var(--mono);font-size:10.5px;color:var(--soft)}
 .occ a{color:var(--accent);margin-right:.5em}
 h2.sec{font-size:20px;font-weight:600;margin:1.6em 0 .4em}
+.md-code{background:var(--wash,#f6f5f2);border:1px solid var(--hair);border-radius:3px;
+  padding:.7em 1em;overflow-x:auto;font-family:var(--mono);font-size:12.5px;line-height:1.5}
+.md-code code{background:none;padding:0}
+main img{max-width:100%;height:auto}
+main hr{border:0;border-top:1px solid var(--hair);margin:1.8em 0}
 .skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
   padding:8px 14px;font-family:var(--mono);font-size:11px;z-index:100}
 .skip:focus{left:0}
@@ -399,7 +410,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   discoveries that underpin Damon&#39;s recent critical edition of Caesar’s <span id="ldlt-balex:0.1.0.1.2.1.0" class="t-title s-1-inline" data-el="title">Civil
                    War</span> (Oxford, 2015) should also be used to reassess the text of the
                   <span id="ldlt-balex:0.1.0.1.2.1.1" class="t-title s-1-inline" data-el="title">Bellum Alexandrinum</span>, which rests on the same manuscript
-                  witnesses.<span class="t-note-mark" aria-hidden="true">°</span><div id="ftn3" class="t-note s-1-note" data-el="note" data-n="3" data-place="foot"><p id="ldlt-balex:0.1.0.1.2.1.2.0" class="t-p s-1-struttura" data-el="p">OUP site: <span id="ldlt-balex:0.1.0.1.2.1.2.0.0" class="t-ref s-2-corrispondenza" data-el="ref" data-target="https://global.oup.com/academic/product/c-iuli-caesaris-commentarii-de-bello-civili-bellum-civile-or-civil-war-9780199659746?cc=us&amp;lang=en&amp;">https://global.oup.com/academic/product/c-iuli-caesaris-commentarii-de-bello-civili-bellum-civile-or-civil-war-9780199659746?cc=us&amp;lang=en&amp;</span>.</p></div>
+                  witnesses.<span class="t-note-mark" aria-hidden="true">°</span><div id="ftn3" class="t-note s-1-note" data-el="note" data-n="3" data-place="foot"><p id="ldlt-balex:0.1.0.1.2.1.2.0" class="t-p s-1-struttura" data-el="p">OUP site: <a id="ldlt-balex:0.1.0.1.2.1.2.0.0" class="t-ref s-2-corrispondenza ent-ext" href="https://global.oup.com/academic/product/c-iuli-caesaris-commentarii-de-bello-civili-bellum-civile-or-civil-war-9780199659746?cc=us&amp;lang=en&amp;" target="_blank" rel="noopener" data-el="ref" data-target="https://global.oup.com/academic/product/c-iuli-caesaris-commentarii-de-bello-civili-bellum-civile-or-civil-war-9780199659746?cc=us&amp;lang=en&amp;">https://global.oup.com/academic/product/c-iuli-caesaris-commentarii-de-bello-civili-bellum-civile-or-civil-war-9780199659746?cc=us&amp;lang=en&amp;</a>.</p></div>
                   But the real answer is that in the digital era we urgently need new editors, and
                   that creating an edition such as this is an excellent way to expose students to
                   the editing process. The next generation of critical editions, <span id="ldlt-balex:0.1.0.1.2.1.3" class="t-hi s-1-inline" data-el="hi" data-rend="italic">digital</span> critical editions, can improve significantly on past editions,
@@ -813,7 +824,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                         <h2 id="ldlt-balex:0.1.0.1.4.2.3.2.0" class="t-head s-1-struttura" data-el="head">a. M</h2>
 
                         <div id="ldlt-balex:0.1.0.1.4.2.3.2.1" class="t-p s-1-struttura" data-el="p"><span id="ldlt-balex:0.1.0.1.4.2.3.2.1.0" class="t-hi s-1-inline" data-el="hi" data-rend="bold">M</span> is a manuscript in the Biblioteca Medicea
-                           Laurenziana in Florence, shelf mark Plut. lat. 68.8.<span class="t-note-mark" aria-hidden="true">°</span><div id="ftn18" class="t-note s-1-note" data-el="note" data-n="18" data-place="foot"><p id="ldlt-balex:0.1.0.1.4.2.3.2.1.1.0" class="t-p s-1-struttura" data-el="p">High quality page images of <span id="ldlt-balex:0.1.0.1.4.2.3.2.1.1.0.0" class="t-hi s-1-inline" data-el="hi" data-rend="bold">M</span> can be viewed at <span id="ldlt-balex:0.1.0.1.4.2.3.2.1.1.0.1" class="t-ref s-2-corrispondenza" data-el="ref" data-target="http://mss.bmlonline.it/s.aspx?Id=AWOIs_iEI1A4r7GxML1h&amp;c=Caesaris%20Commentaria#/oro/13">https://bit.ly/3HCkcSG</span>. </p></div> The <span id="ldlt-balex:0.1.0.1.4.2.3.2.1.2" class="t-hi s-1-inline" data-el="hi" data-rend="italic">Bellum Alexandrinum </span>occupies ff. 133v-143r. <span id="ldlt-balex:0.1.0.1.4.2.3.2.1.3" class="t-hi s-1-inline" data-el="hi" data-rend="bold">M</span> offers some uniquely successful or meritorious innovations
+                           Laurenziana in Florence, shelf mark Plut. lat. 68.8.<span class="t-note-mark" aria-hidden="true">°</span><div id="ftn18" class="t-note s-1-note" data-el="note" data-n="18" data-place="foot"><p id="ldlt-balex:0.1.0.1.4.2.3.2.1.1.0" class="t-p s-1-struttura" data-el="p">High quality page images of <span id="ldlt-balex:0.1.0.1.4.2.3.2.1.1.0.0" class="t-hi s-1-inline" data-el="hi" data-rend="bold">M</span> can be viewed at <a id="ldlt-balex:0.1.0.1.4.2.3.2.1.1.0.1" class="t-ref s-2-corrispondenza ent-ext" href="http://mss.bmlonline.it/s.aspx?Id=AWOIs_iEI1A4r7GxML1h&amp;c=Caesaris%20Commentaria#/oro/13" target="_blank" rel="noopener" data-el="ref" data-target="http://mss.bmlonline.it/s.aspx?Id=AWOIs_iEI1A4r7GxML1h&amp;c=Caesaris%20Commentaria#/oro/13">https://bit.ly/3HCkcSG</a>. </p></div> The <span id="ldlt-balex:0.1.0.1.4.2.3.2.1.2" class="t-hi s-1-inline" data-el="hi" data-rend="italic">Bellum Alexandrinum </span>occupies ff. 133v-143r. <span id="ldlt-balex:0.1.0.1.4.2.3.2.1.3" class="t-hi s-1-inline" data-el="hi" data-rend="bold">M</span> offers some uniquely successful or meritorious innovations
                            (those marked with an asterisk are particularly impressive<span class="t-note-mark" aria-hidden="true">°</span><div id="ftn19" class="t-note s-1-note" data-el="note" data-n="19" data-place="foot"><p id="ldlt-balex:0.1.0.1.4.2.3.2.1.4.0" class="t-p s-1-struttura" data-el="p">Also noteworthy in <span id="ldlt-balex:0.1.0.1.4.2.3.2.1.4.0.0" class="t-hi s-1-inline" data-el="hi" data-rend="bold">M</span>: 11.2 conspectu ⟨suorum⟩ <span id="ldlt-balex:0.1.0.1.4.2.3.2.1.4.0.1" class="t-hi s-1-inline" data-el="hi" data-rend="italic">Khan</span> : conspectu hostium <span id="ldlt-balex:0.1.0.1.4.2.3.2.1.4.0.2" class="t-hi s-1-inline" data-el="hi" data-rend="italic">M </span>:
                                  conspectu <span id="ldlt-balex:0.1.0.1.4.2.3.2.1.4.0.3" class="t-hi s-1-inline" data-el="hi" data-rend="italic">USTV</span> :<span id="ldlt-balex:0.1.0.1.4.2.3.2.1.4.0.4" class="t-hi s-1-inline" data-el="hi" data-rend="italic"> an</span>
                                  conspectu ⟨omnium⟩<span id="ldlt-balex:0.1.0.1.4.2.3.2.1.4.0.5" class="t-hi s-1-inline" data-el="hi" data-rend="italic">?</span>; 48.1 multis <span id="ldlt-balex:0.1.0.1.4.2.3.2.1.4.0.6" class="t-hi s-1-inline" data-el="hi" data-rend="italic">UTV</span> : mutis <span id="ldlt-balex:0.1.0.1.4.2.3.2.1.4.0.7" class="t-hi s-1-inline" data-el="hi" data-rend="italic">M</span> : mutus
@@ -850,7 +861,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 
                         <div id="ldlt-balex:0.1.0.1.4.2.3.3.1" class="t-p s-1-struttura" data-el="p"><span id="ldlt-balex:0.1.0.1.4.2.3.3.1.0" class="t-hi s-1-inline" data-el="hi" data-rend="bold">U</span> is a manuscript in the Biblioteca Apostolica
                            Vaticana in the Vatican, shelf mark Vaticanus lat. 3324.<span class="t-note-mark" aria-hidden="true">°</span><div id="ftn20" class="t-note s-1-note" data-el="note" data-n="20" data-place="foot"><p id="ldlt-balex:0.1.0.1.4.2.3.3.1.1.0" class="t-p s-1-struttura" data-el="p">Microfilm images are available
-                                 online: <span id="ldlt-balex:0.1.0.1.4.2.3.3.1.1.0.0" class="t-ref s-2-corrispondenza" data-el="ref" data-target="https://digi.vatlib.it/view/MSS_Vat.lat.3324">https://digi.vatlib.it/view/MSS_Vat.lat.3324</span>. </p></div>
+                                 online: <a id="ldlt-balex:0.1.0.1.4.2.3.3.1.1.0.0" class="t-ref s-2-corrispondenza ent-ext" href="https://digi.vatlib.it/view/MSS_Vat.lat.3324" target="_blank" rel="noopener" data-el="ref" data-target="https://digi.vatlib.it/view/MSS_Vat.lat.3324">https://digi.vatlib.it/view/MSS_Vat.lat.3324</a>. </p></div>
                            The <span id="ldlt-balex:0.1.0.1.4.2.3.3.1.2" class="t-hi s-1-inline" data-el="hi" data-rend="italic">Bellum Alexandrinum </span>occupies ff. 85r-95r.
                            These folios contain, besides the text, a small number of brief marginal
                            comments on content, either factual (e.g., “situs Alexandrie” 85v,
@@ -953,7 +964,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 
                         <div id="ldlt-balex:0.1.0.1.4.2.3.5.1" class="t-p s-1-struttura" data-el="p"><span id="ldlt-balex:0.1.0.1.4.2.3.5.1.0" class="t-hi s-1-inline" data-el="hi" data-rend="bold">T</span> is a manuscript preserved in the Bibliothèque
                            Nationale in Paris, shelf mark lat. 5764.<span class="t-note-mark" aria-hidden="true">°</span><div id="ftn25" class="t-note s-1-note" data-el="note" data-n="25" data-place="foot"><p id="ldlt-balex:0.1.0.1.4.2.3.5.1.1.0" class="t-p s-1-struttura" data-el="p">Page images of <span id="ldlt-balex:0.1.0.1.4.2.3.5.1.1.0.0" class="t-hi s-1-inline" data-el="hi" data-rend="bold">T</span> may be
-                                 viewed at <span id="ldlt-balex:0.1.0.1.4.2.3.5.1.1.0.1" class="t-ref s-2-corrispondenza" data-el="ref" data-target="http://gallica.bnf.fr/ark:/12148/btv1b90668596">http://gallica.bnf.fr/ark:/12148/btv1b90668596</span>.
+                                 viewed at <a id="ldlt-balex:0.1.0.1.4.2.3.5.1.1.0.1" class="t-ref s-2-corrispondenza ent-ext" href="http://gallica.bnf.fr/ark:/12148/btv1b90668596" target="_blank" rel="noopener" data-el="ref" data-target="http://gallica.bnf.fr/ark:/12148/btv1b90668596">http://gallica.bnf.fr/ark:/12148/btv1b90668596</a>.
                               </p></div> The <span id="ldlt-balex:0.1.0.1.4.2.3.5.1.2" class="t-hi s-1-inline" data-el="hi" data-rend="italic">Bellum Alexandrinum </span>occupies
                            ff. 122va-136ra. For the <span id="ldlt-balex:0.1.0.1.4.2.3.5.1.3" class="t-hi s-1-inline" data-el="hi" data-rend="italic">Bellum Alexandrinum</span> T
                            only offers one successful innovation<span class="t-note-mark" aria-hidden="true">°</span><div id="ftn26" class="t-note s-1-note" data-el="note" data-n="26" data-place="foot"><p id="ldlt-balex:0.1.0.1.4.2.3.5.1.4.0" class="t-p s-1-struttura" data-el="p">Another noteworthy correction in <span id="ldlt-balex:0.1.0.1.4.2.3.5.1.4.0.0" class="t-hi s-1-inline" data-el="hi" data-rend="bold">T</span>:
@@ -1087,7 +1098,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="ldlt-balex:0.1.0.1.5.2.7" class="t-p s-1-struttura" data-el="p">The features of the text described so far are available in both online and
                      print versions of the LDLT edition.<span class="t-note-mark" aria-hidden="true">°</span><div id="ftn29" class="t-note s-1-note" data-el="note" data-n="29" data-place="foot">Since the edition itself is an XML file, it is important to note that
                         “online and print versions” refer to visualizations of the data in that
-                        file. The LDLT&#39;s official online reading application is based on the <span id="ldlt-balex:0.1.0.1.5.2.7.0.0" class="t-ref s-2-corrispondenza" data-el="ref" data-target="https://github.com/TEIC/CETEIcean">CETEIcean</span> application
+                        file. The LDLT&#39;s official online reading application is based on the <a id="ldlt-balex:0.1.0.1.5.2.7.0.0" class="t-ref s-2-corrispondenza ent-ext" href="https://github.com/TEIC/CETEIcean" target="_blank" rel="noopener" data-el="ref" data-target="https://github.com/TEIC/CETEIcean">CETEIcean</a> application
                         developed by Hugh Cayless and Raffaele Viglianti. This edition can be viewed
                         in the LDLT&#39;s online reading application at 
                         The print version is available as a PDF in the code repository for this
@@ -1363,8 +1374,8 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   grateful to all who kept us company along the way, even on the “paths not (or not
                   yet) taken” that are an inevitable part of a project as complex as this one proved
                   to be. Information on the collaborations and support that resulted in the platform
-                  and protocols that host and govern this edition can be found at the <span id="ldlt-balex:0.1.0.1.7.1.0" class="t-ref s-2-corrispondenza" data-el="ref" data-target="https://digitallatin.org/">Digital Latin Library</span> and the <span id="ldlt-balex:0.1.0.1.7.1.1" class="t-ref s-2-corrispondenza" data-el="ref" data-target="https://ldlt.digitallatin.org/">Library of Digital Latin
-                  Texts</span>.</p>
+                  and protocols that host and govern this edition can be found at the <a id="ldlt-balex:0.1.0.1.7.1.0" class="t-ref s-2-corrispondenza ent-ext" href="https://digitallatin.org/" target="_blank" rel="noopener" data-el="ref" data-target="https://digitallatin.org/">Digital Latin Library</a> and the <a id="ldlt-balex:0.1.0.1.7.1.1" class="t-ref s-2-corrispondenza ent-ext" href="https://ldlt.digitallatin.org/" target="_blank" rel="noopener" data-el="ref" data-target="https://ldlt.digitallatin.org/">Library of Digital Latin
+                  Texts</a>.</p>
 
                <p id="ldlt-balex:0.1.0.1.7.2" class="t-p s-1-struttura" data-el="p">Students at the University of Pennsylvania transcribed and collated the manuscript
                   witnesses and produced the text, critical apparatus, appendix critica, and
@@ -1392,8 +1403,8 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   Lewis, who helped edit the apparatus notes and appendix critica; and Zachary
                   Elliott, who along with his wife Molly Cowan tested approaches to automating the
                   conversion of traditional apparatus notes into spreadsheet form. Support both
-                  financial and technical was provided by Penn’s <span id="ldlt-balex:0.1.0.1.7.2.0" class="t-ref s-2-corrispondenza" data-el="ref" data-target="https://pricelab.sas.upenn.edu/fellows/damon-cynthia">Price Lab for
-                     Digital Humanities</span>.</p>
+                  financial and technical was provided by Penn’s <a id="ldlt-balex:0.1.0.1.7.2.0" class="t-ref s-2-corrispondenza ent-ext" href="https://pricelab.sas.upenn.edu/fellows/damon-cynthia" target="_blank" rel="noopener" data-el="ref" data-target="https://pricelab.sas.upenn.edu/fellows/damon-cynthia">Price Lab for
+                     Digital Humanities</a>.</p>
 
                <p id="ldlt-balex:0.1.0.1.7.3" class="t-p s-1-struttura" data-el="p">We owe a debt of gratitude to many people at the University of Oklahoma. Virginia
                   K. Felkner perfected the scripts used to reduce the amount of manual encoding we
@@ -1407,8 +1418,8 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 
                <p id="ldlt-balex:0.1.0.1.7.4" class="t-p s-1-struttura" data-el="p">Several people beyond the walls of the University of Pennsylvania and the
                   University of Oklahoma deserve special mention. Hugh Cayless (Duke University),
-                  co-author of the &quot;<span id="ldlt-balex:0.1.0.1.7.4.0" class="t-ref s-2-corrispondenza" data-el="ref" data-target="https://digitallatin.github.io/guidelines/LDLT-Guidelines.html">Guidelines for Encoding Critical Editions for the Library of Digital Latin
-                     Texts</span>&quot; and architect of the application for reading this edition online,
+                  co-author of the &quot;<a id="ldlt-balex:0.1.0.1.7.4.0" class="t-ref s-2-corrispondenza ent-ext" href="https://digitallatin.github.io/guidelines/LDLT-Guidelines.html" target="_blank" rel="noopener" data-el="ref" data-target="https://digitallatin.github.io/guidelines/LDLT-Guidelines.html">Guidelines for Encoding Critical Editions for the Library of Digital Latin
+                     Texts</a>&quot; and architect of the application for reading this edition online,
                   has been instrumental in all aspects of this project. Tom Elliott (New York
                   University) and Alex Ward provided advice on scholarly and technical matters.
                   Finally, this project could not have come to fruition without the support of the
@@ -1436,7 +1447,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <h2 id="ldlt-balex:0.1.0.2.1.2.0" class="t-head s-1-struttura" data-el="head">Descendants of μ</h2>
                   
                   <div id="M" class="t-witness s-4-apparato" data-el="witness"><span id="ldlt-balex:0.1.0.2.1.2.1.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">M</span> Florence, BML Plut. lat 68.8 (s.
-                        xii<span id="ldlt-balex:0.1.0.2.1.2.1.1" class="t-hi s-1-inline" data-el="hi" data-rend="superscript">4</span> or xiii<span id="ldlt-balex:0.1.0.2.1.2.1.2" class="t-hi s-1-inline" data-el="hi" data-rend="superscript">1</span>) <span id="ldlt-balex:0.1.0.2.1.2.1.3" class="t-ptr s-2-corrispondenza" data-el="ptr" data-type="url" data-target="http://teca.bmlonline.it/ImageViewer/servlet/ImageViewer?idr=TECA0000807118#page/1/mode/1up"></span>
+                        xii<span id="ldlt-balex:0.1.0.2.1.2.1.1" class="t-hi s-1-inline" data-el="hi" data-rend="superscript">4</span> or xiii<span id="ldlt-balex:0.1.0.2.1.2.1.2" class="t-hi s-1-inline" data-el="hi" data-rend="superscript">1</span>) <a id="ldlt-balex:0.1.0.2.1.2.1.3" class="t-ptr s-2-corrispondenza ent-ext" href="http://teca.bmlonline.it/ImageViewer/servlet/ImageViewer?idr=TECA0000807118#page/1/mode/1up" target="_blank" rel="noopener" data-el="ptr" data-type="url" data-target="http://teca.bmlonline.it/ImageViewer/servlet/ImageViewer?idr=TECA0000807118#page/1/mode/1up">teca.bmlonline.it/ImageViewer/servlet/ImageViewer?idr=TECA0000807118#page/1/mode/1up</a>
                      <div id="ldlt-balex:0.1.0.2.1.2.1.4" class="t-listWit s-1-liste" data-el="listWit">
                         <h2 id="ldlt-balex:0.1.0.2.1.2.1.4.0" class="t-head s-1-struttura" data-el="head">Hands in M</h2>
                         <div id="Mac" class="t-witness s-4-apparato" data-el="witness"><span id="ldlt-balex:0.1.0.2.1.2.1.4.1.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">M<span id="ldlt-balex:0.1.0.2.1.2.1.4.1.0.0" class="t-hi s-1-inline" data-el="hi" data-rend="superscript">ac</span></span> The uncorrected reading in M. Equivalent to
@@ -1483,7 +1494,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="π" class="t-witness s-4-apparato" data-el="witness"><span id="ldlt-balex:0.1.0.2.1.3.2.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">π</span> Common source of <span id="ldlt-balex:0.1.0.2.1.3.2.1" class="t-ref s-2-corrispondenza" data-el="ref" data-target="#T">T</span> and <span id="ldlt-balex:0.1.0.2.1.3.2.2" class="t-ref s-2-corrispondenza" data-el="ref" data-target="V">V</span>. <div id="ldlt-balex:0.1.0.2.1.3.2.3" class="t-listWit s-1-liste" data-el="listWit">
                         
                         <div id="T" class="t-witness s-4-apparato" data-el="witness"><span id="ldlt-balex:0.1.0.2.1.3.2.3.0.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">T</span> Paris, BNF lat. 5764 (s.
-                              xi<span id="ldlt-balex:0.1.0.2.1.3.2.3.0.1" class="t-hi s-1-inline" data-el="hi" data-rend="superscript">3–4</span>). <span id="ldlt-balex:0.1.0.2.1.3.2.3.0.2" class="t-ptr s-2-corrispondenza" data-el="ptr" data-type="url" data-target="http://gallica.bnf.fr/ark:/12148/btv1b10542010c"></span><div id="ldlt-balex:0.1.0.2.1.3.2.3.0.3" class="t-listWit s-1-liste" data-el="listWit">
+                              xi<span id="ldlt-balex:0.1.0.2.1.3.2.3.0.1" class="t-hi s-1-inline" data-el="hi" data-rend="superscript">3–4</span>). <a id="ldlt-balex:0.1.0.2.1.3.2.3.0.2" class="t-ptr s-2-corrispondenza ent-ext" href="http://gallica.bnf.fr/ark:/12148/btv1b10542010c" target="_blank" rel="noopener" data-el="ptr" data-type="url" data-target="http://gallica.bnf.fr/ark:/12148/btv1b10542010c">gallica.bnf.fr/ark:/12148/btv1b10542010c</a><div id="ldlt-balex:0.1.0.2.1.3.2.3.0.3" class="t-listWit s-1-liste" data-el="listWit">
                               <h2 id="ldlt-balex:0.1.0.2.1.3.2.3.0.3.0" class="t-head s-1-struttura" data-el="head">Hands in T</h2>
                               <div id="Tac" class="t-witness s-4-apparato" data-el="witness"><span id="ldlt-balex:0.1.0.2.1.3.2.3.0.3.1.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">T<span id="ldlt-balex:0.1.0.2.1.3.2.3.0.3.1.0.0" class="t-hi s-1-inline" data-el="hi" data-rend="superscript">ac</span></span> The uncorrected reading in T, Equivalent to
                                  T.</div>
@@ -1526,16 +1537,16 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="edprin" class="t-witness s-4-apparato" data-el="witness"><span id="ldlt-balex:0.1.0.2.2.1.0.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">ed. pr.</span> <div id="ldlt-balex:0.1.0.2.2.1.0.1" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.2.1.0.1.0" class="t-editor s-1-bibliografia" data-el="editor">G.
                            Bussi</span>, ed. <span id="ldlt-balex:0.1.0.2.2.1.0.1.1" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Romae</span><span id="ldlt-balex:0.1.0.2.2.1.0.1.2" class="t-publisher s-1-bibliografia" data-el="publisher">: In domo Petri
                            de Maximis [= Sweynheym and Pannartz]</span>. <span id="ldlt-balex:0.1.0.2.2.1.0.1.3" class="t-date s-2-date" data-el="date">12 May
-                           1469</span>. URL: <span id="ldlt-balex:0.1.0.2.2.1.0.1.4" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="http://daten.digitale-sammlungen.de/~db/0006/bsb00064880/images/"></span></div></div>
+                           1469</span>. URL: <a id="ldlt-balex:0.1.0.2.2.1.0.1.4" class="t-ptr s-2-corrispondenza ent-ext" href="http://daten.digitale-sammlungen.de/~db/0006/bsb00064880/images/" target="_blank" rel="noopener" data-el="ptr" data-target="http://daten.digitale-sammlungen.de/~db/0006/bsb00064880/images/">daten.digitale-sammlungen.de/~db/0006/bsb00064880/images/</a></div></div>
 
                   <div id="Aldus" class="t-witness s-4-apparato" data-el="witness"><span id="ldlt-balex:0.1.0.2.2.1.1.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Aldus</span> <div id="ldlt-balex:0.1.0.2.2.1.1.1" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.2.1.1.1.0" class="t-editor s-1-bibliografia" data-el="editor">G.
                            Giocondo</span>, ed. <span id="ldlt-balex:0.1.0.2.2.1.1.1.1" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Venice</span>. <span id="ldlt-balex:0.1.0.2.2.1.1.1.2" class="t-date s-2-date" data-el="date">1513</span>.
-                        URL: <span id="ldlt-balex:0.1.0.2.2.1.1.1.3" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="http://digital.onb.ac.at/OnbViewer/viewer.faces?doc=ABO_%2BZ221957000"></span></div></div>
+                        URL: <a id="ldlt-balex:0.1.0.2.2.1.1.1.3" class="t-ptr s-2-corrispondenza ent-ext" href="http://digital.onb.ac.at/OnbViewer/viewer.faces?doc=ABO_%2BZ221957000" target="_blank" rel="noopener" data-el="ptr" data-target="http://digital.onb.ac.at/OnbViewer/viewer.faces?doc=ABO_%2BZ221957000">digital.onb.ac.at/OnbViewer/viewer.faces?doc=ABO_%2BZ221957000</a></div></div>
 
                   <div id="Beroaldus" class="t-witness s-4-apparato" data-el="witness"><span id="ldlt-balex:0.1.0.2.2.1.2.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Beroaldus</span> <div id="ldlt-balex:0.1.0.2.2.1.2.1" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.2.1.2.1.0" class="t-editor s-1-bibliografia" data-el="editor">P.
                            Beroaldus</span>, ed. <span id="ldlt-balex:0.1.0.2.2.1.2.1.1" class="t-title s-1-inline" data-el="title">Caii Iulii Caesaris commentarios Belli
                            Gallici, Ciuilis Pompeiani, Alexandrini, Africi, ac Hispaniensis</span>.
-                           <span id="ldlt-balex:0.1.0.2.2.1.2.1.2" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Bologna</span>. <span id="ldlt-balex:0.1.0.2.2.1.2.1.3" class="t-date s-2-date" data-el="date">1504</span>. URL: <span id="ldlt-balex:0.1.0.2.2.1.2.1.4" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="http://reader.digitale-sammlungen.de/de/fs1/object/display/bsb10140427_00001.html"></span></div></div>
+                           <span id="ldlt-balex:0.1.0.2.2.1.2.1.2" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Bologna</span>. <span id="ldlt-balex:0.1.0.2.2.1.2.1.3" class="t-date s-2-date" data-el="date">1504</span>. URL: <a id="ldlt-balex:0.1.0.2.2.1.2.1.4" class="t-ptr s-2-corrispondenza ent-ext" href="http://reader.digitale-sammlungen.de/de/fs1/object/display/bsb10140427_00001.html" target="_blank" rel="noopener" data-el="ptr" data-target="http://reader.digitale-sammlungen.de/de/fs1/object/display/bsb10140427_00001.html">reader.digitale-sammlungen.de/de/fs1/object/display/bsb10140427_00001.html</a></div></div>
                </div>
                
             </div>
@@ -1569,7 +1580,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                         Davies</span>, ed. <span id="ldlt-balex:0.1.0.2.3.1.4.2" class="t-title s-1-inline" data-el="title">C. Julii Caesaris quae exstant omnia ... cum
                         eiusdem animadversionibus ac notis Pet. Ciacconii, Fr. Hotomanni, Joan.
                         Brantii, Dionys. Vossii et aliorum</span>. <span id="ldlt-balex:0.1.0.2.3.1.4.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Cambridge</span>.
-                        <span id="ldlt-balex:0.1.0.2.3.1.4.4" class="t-date s-2-date" data-el="date">1706</span>. URL: <span id="ldlt-balex:0.1.0.2.3.1.4.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="http://reader.digitale-sammlungen.de/de/fs1/object/display/bsb10217527_00001.html"></span></div>
+                        <span id="ldlt-balex:0.1.0.2.3.1.4.4" class="t-date s-2-date" data-el="date">1706</span>. URL: <a id="ldlt-balex:0.1.0.2.3.1.4.5" class="t-ptr s-2-corrispondenza ent-ext" href="http://reader.digitale-sammlungen.de/de/fs1/object/display/bsb10217527_00001.html" target="_blank" rel="noopener" data-el="ptr" data-target="http://reader.digitale-sammlungen.de/de/fs1/object/display/bsb10217527_00001.html">reader.digitale-sammlungen.de/de/fs1/object/display/bsb10217527_00001.html</a></div>
 
                   <div id="Dauisius1727" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.3.1.5.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Dauisius 1727</span> <span id="ldlt-balex:0.1.0.2.3.1.5.1" class="t-editor s-1-bibliografia" data-el="editor">J.
                         Davies</span>, ed. <span id="ldlt-balex:0.1.0.2.3.1.5.2" class="t-title s-1-inline" data-el="title">C. Julii Caesaris et Auli Hirtii quae exstant
@@ -1582,12 +1593,12 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                      ed. <span id="ldlt-balex:0.1.0.2.3.1.6.2" class="t-title s-1-inline" data-el="title">C. Iuli Caesaris commentarii cum A. Hirti aliorumque supplementis .
                         III: C. Iuli Caesaris commentarii commentarii de bello Alexandrino,
                         Africano, Hispaniensi. Caesaris Hirtiique fragmenta</span>.
-                        <span id="ldlt-balex:0.1.0.2.3.1.6.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Leipzig</span>. <span id="ldlt-balex:0.1.0.2.3.1.6.4" class="t-date s-2-date" data-el="date">1887</span>. URL: <span id="ldlt-balex:0.1.0.2.3.1.6.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://books.google.com/books?id=luswAQAAMAAJ&amp;pg=PP1#v=onepage&amp;q&amp;f=false"></span></div>
+                        <span id="ldlt-balex:0.1.0.2.3.1.6.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Leipzig</span>. <span id="ldlt-balex:0.1.0.2.3.1.6.4" class="t-date s-2-date" data-el="date">1887</span>. URL: <a id="ldlt-balex:0.1.0.2.3.1.6.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://books.google.com/books?id=luswAQAAMAAJ&amp;pg=PP1#v=onepage&amp;q&amp;f=false" target="_blank" rel="noopener" data-el="ptr" data-target="https://books.google.com/books?id=luswAQAAMAAJ&amp;pg=PP1#v=onepage&amp;q&amp;f=false">books.google.com/books?id=luswAQAAMAAJ&amp;pg=PP1#v=onepage&amp;q&amp;f=false</a></div>
 
                   <div id="Dübner" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.3.1.7.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Dübner</span> <span id="ldlt-balex:0.1.0.2.3.1.7.1" class="t-editor s-1-bibliografia" data-el="editor">F. Dübner</span>,
                      ed. <span id="ldlt-balex:0.1.0.2.3.1.7.2" class="t-title s-1-inline" data-el="title">C. Julii Caesaris commentarii de bellis Gallico et civili, aliorum,
                         de bellis Alexandrino, Africano et Hispaniensi. Tomus secundus</span>.
-                        <span id="ldlt-balex:0.1.0.2.3.1.7.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Paris</span>. <span id="ldlt-balex:0.1.0.2.3.1.7.4" class="t-date s-2-date" data-el="date">1867</span>. URL: <span id="ldlt-balex:0.1.0.2.3.1.7.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/uiug.30112023932624"></span></div>
+                        <span id="ldlt-balex:0.1.0.2.3.1.7.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Paris</span>. <span id="ldlt-balex:0.1.0.2.3.1.7.4" class="t-date s-2-date" data-el="date">1867</span>. URL: <a id="ldlt-balex:0.1.0.2.3.1.7.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/uiug.30112023932624" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/uiug.30112023932624">hdl.handle.net/2027/uiug.30112023932624</a></div>
 
                   <div id="Du-Pontet" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.3.1.8.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Du Pontet</span> <span id="ldlt-balex:0.1.0.2.3.1.8.1" class="t-editor s-1-bibliografia" data-el="editor">R. Du
                         Pontet</span>, ed. <span id="ldlt-balex:0.1.0.2.3.1.8.2" class="t-title s-1-inline" data-el="title">C. Iuli Caesaris Commentariorum. Pars 2</span>.
@@ -1603,14 +1614,14 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                         Hoffmann</span>, ed. <span id="ldlt-balex:0.1.0.2.3.1.10.2" class="t-title s-1-inline" data-el="title">C. Iulii Caesaris commentarii cum supplementis
                         A. Hirtii et aliorum. Vol. II: Commentarii de bello ciuili. Accedunt
                         commentarii de bello Alexandrino, Africano, Hispaniensi</span>. New
-                     edition. <span id="ldlt-balex:0.1.0.2.3.1.10.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Vienna</span>. <span id="ldlt-balex:0.1.0.2.3.1.10.4" class="t-date s-2-date" data-el="date">1890</span>. URL: <span id="ldlt-balex:0.1.0.2.3.1.10.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/uiug.30112099806678"></span>.</div>
+                     edition. <span id="ldlt-balex:0.1.0.2.3.1.10.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Vienna</span>. <span id="ldlt-balex:0.1.0.2.3.1.10.4" class="t-date s-2-date" data-el="date">1890</span>. URL: <a id="ldlt-balex:0.1.0.2.3.1.10.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/uiug.30112099806678" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/uiug.30112099806678">hdl.handle.net/2027/uiug.30112099806678</a>.</div>
 
                   <div id="Jungermann" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.3.1.11.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Jungermann</span> <span id="ldlt-balex:0.1.0.2.3.1.11.1" class="t-editor s-1-bibliografia" data-el="editor">G.
                         Jungermann</span>, ed. <span id="ldlt-balex:0.1.0.2.3.1.11.2" class="t-title s-1-inline" data-el="title">C. Iulii Caesaris quae exstant ... praeterea
                         ... notae, adnotationes, commentarii Rhellicani, Glareani, Glandorpii,
                         Camerarii, Bruti, Manutii, Sambuci, Vrsini, Ciacconii, Hotmani,
                         Brantii</span>. <span id="ldlt-balex:0.1.0.2.3.1.11.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Frankfurt</span>. <span id="ldlt-balex:0.1.0.2.3.1.11.4" class="t-date s-2-date" data-el="date">1606</span>. URL:
-                        <span id="ldlt-balex:0.1.0.2.3.1.11.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/uc1.31822038197299"></span>.</div>
+                        <a id="ldlt-balex:0.1.0.2.3.1.11.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/uc1.31822038197299" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/uc1.31822038197299">hdl.handle.net/2027/uc1.31822038197299</a>.</div>
 
                   <div id="Klotz" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.3.1.12.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Klotz</span> <span id="ldlt-balex:0.1.0.2.3.1.12.1" class="t-editor s-1-bibliografia" data-el="editor">A. Klotz</span>,
                      ed. <span id="ldlt-balex:0.1.0.2.3.1.12.2" class="t-title s-1-inline" data-el="title">C. Iulii Caesaris commentarii. Vol. III: Bellum Alexandrinum, Bellum
@@ -1620,38 +1631,38 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="Kraner" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.3.1.13.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Kraner</span> <span id="ldlt-balex:0.1.0.2.3.1.13.1" class="t-editor s-1-bibliografia" data-el="editor">F. Kraner</span>,
                      ed.  <span id="ldlt-balex:0.1.0.2.3.1.13.2" class="t-title s-1-inline" data-el="title">C. Iulii Caesaris commentarii cum supplementis A. Hirtii et
                         aliorum</span>.  Editio stereotypa. <span id="ldlt-balex:0.1.0.2.3.1.13.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Leipzig</span>.
-                        <span id="ldlt-balex:0.1.0.2.3.1.13.4" class="t-date s-2-date" data-el="date">1861</span>. URL: <span id="ldlt-balex:0.1.0.2.3.1.13.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/uc1.c070407321"></span>. </div>
+                        <span id="ldlt-balex:0.1.0.2.3.1.13.4" class="t-date s-2-date" data-el="date">1861</span>. URL: <a id="ldlt-balex:0.1.0.2.3.1.13.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/uc1.c070407321" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/uc1.c070407321">hdl.handle.net/2027/uc1.c070407321</a>. </div>
 
                   <div id="Kübler1896a" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.3.1.14.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Kübler 1896a</span> <span id="ldlt-balex:0.1.0.2.3.1.14.1" class="t-editor s-1-bibliografia" data-el="editor">B.
                         Kübler</span>, ed. <span id="ldlt-balex:0.1.0.2.3.1.14.2" class="t-title s-1-inline" data-el="title">C Iulii Caesaris commentarii. Vol. III, pars
                         prior, commentarius de bello Alexandrino</span>. Editio maior.
                         <span id="ldlt-balex:0.1.0.2.3.1.14.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Leipzig</span>: <span id="ldlt-balex:0.1.0.2.3.1.14.4" class="t-publisher s-1-bibliografia" data-el="publisher">Teubner</span>,
-                        <span id="ldlt-balex:0.1.0.2.3.1.14.5" class="t-date s-2-date" data-el="date">1896</span>.<span id="ldlt-balex:0.1.0.2.3.1.14.6" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/osu.32435027192681"></span></div>
+                        <span id="ldlt-balex:0.1.0.2.3.1.14.5" class="t-date s-2-date" data-el="date">1896</span>.<a id="ldlt-balex:0.1.0.2.3.1.14.6" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/osu.32435027192681" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/osu.32435027192681">hdl.handle.net/2027/osu.32435027192681</a></div>
 
                   <div id="Lipsius" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.3.1.15.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Lipsius</span> <span id="ldlt-balex:0.1.0.2.3.1.15.1" class="t-editor s-1-bibliografia" data-el="editor">J.
                         Lipsius</span>, ed. <span id="ldlt-balex:0.1.0.2.3.1.15.2" class="t-title s-1-inline" data-el="title">C. Iulii Caesaris commentarii ... eiusdem ...
                         fragmenta</span>. <span id="ldlt-balex:0.1.0.2.3.1.15.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Antwerp</span>. <span id="ldlt-balex:0.1.0.2.3.1.15.4" class="t-date s-2-date" data-el="date">1586</span>. URL:
-                        <span id="ldlt-balex:0.1.0.2.3.1.15.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://books.google.com/books?id=6BYsAQAAMAAJ&amp;pg=PP1#v=onepage&amp;q&amp;f=false"></span>. See also <span id="ldlt-balex:0.1.0.2.3.1.15.6" class="t-ref s-2-corrispondenza" data-el="ref" data-target="#Oudendorp">Oudendorp</span>.</div>
+                        <a id="ldlt-balex:0.1.0.2.3.1.15.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://books.google.com/books?id=6BYsAQAAMAAJ&amp;pg=PP1#v=onepage&amp;q&amp;f=false" target="_blank" rel="noopener" data-el="ptr" data-target="https://books.google.com/books?id=6BYsAQAAMAAJ&amp;pg=PP1#v=onepage&amp;q&amp;f=false">books.google.com/books?id=6BYsAQAAMAAJ&amp;pg=PP1#v=onepage&amp;q&amp;f=false</a>. See also <span id="ldlt-balex:0.1.0.2.3.1.15.6" class="t-ref s-2-corrispondenza" data-el="ref" data-target="#Oudendorp">Oudendorp</span>.</div>
 
                   <div id="Manutius" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.3.1.16.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Manutius</span> <span id="ldlt-balex:0.1.0.2.3.1.16.1" class="t-editor s-1-bibliografia" data-el="editor">Aldus
                         Manutius</span>, ed. <span id="ldlt-balex:0.1.0.2.3.1.16.2" class="t-title s-1-inline" data-el="title">C. Iulii Caesaris commentarii ab Aldo Manutio
                         Paulli filio Aldi nepote emendati et scholiis illustrati</span>.
                         <span id="ldlt-balex:0.1.0.2.3.1.16.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Venice</span>. <span id="ldlt-balex:0.1.0.2.3.1.16.4" class="t-date s-2-date" data-el="date">1597</span>. (First edition 1571.) URL:
-                        <span id="ldlt-balex:0.1.0.2.3.1.16.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10171445-1"></span>.</div>
+                        <a id="ldlt-balex:0.1.0.2.3.1.16.5" class="t-ptr s-2-corrispondenza ent-ext" href="http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10171445-1" target="_blank" rel="noopener" data-el="ptr" data-target="http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10171445-1">mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10171445-1</a>.</div>
 
                   <div id="Morus" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.3.1.17.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Morus</span> <span id="ldlt-balex:0.1.0.2.3.1.17.1" class="t-editor s-1-bibliografia" data-el="editor">S. F. N.
                         Morus</span>, ed. <span id="ldlt-balex:0.1.0.2.3.1.17.2" class="t-title s-1-inline" data-el="title">C. Iulii Caesaris commentarii de bello Gallico et
                         civili; accedunt libri de bello Alexandrino Africano et Hispaniensi e
                         recensione Francisci Oudendorpii; curavit editionem Sam. Fr. Nathan.
-                        Morus</span>. <span id="ldlt-balex:0.1.0.2.3.1.17.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Leipzig</span>. <span id="ldlt-balex:0.1.0.2.3.1.17.4" class="t-date s-2-date" data-el="date">1780</span>. URL: <span id="ldlt-balex:0.1.0.2.3.1.17.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/mdp.39015022638830"></span>.</div>
+                        Morus</span>. <span id="ldlt-balex:0.1.0.2.3.1.17.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Leipzig</span>. <span id="ldlt-balex:0.1.0.2.3.1.17.4" class="t-date s-2-date" data-el="date">1780</span>. URL: <a id="ldlt-balex:0.1.0.2.3.1.17.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/mdp.39015022638830" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/mdp.39015022638830">hdl.handle.net/2027/mdp.39015022638830</a>.</div>
 
                   <div id="Nipperdey" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.3.1.18.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Nipperdey</span> <span id="ldlt-balex:0.1.0.2.3.1.18.1" class="t-editor s-1-bibliografia" data-el="editor">K.
                         Nipperdey</span>, ed. <span id="ldlt-balex:0.1.0.2.3.1.18.2" class="t-title s-1-inline" data-el="title">C. Iulii Caesaris commentarii</span>.
-                        <span id="ldlt-balex:0.1.0.2.3.1.18.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Leipzig</span>. <span id="ldlt-balex:0.1.0.2.3.1.18.4" class="t-date s-2-date" data-el="date">1847</span>. URL: <span id="ldlt-balex:0.1.0.2.3.1.18.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/mdp.39015063012838"></span>.</div>
+                        <span id="ldlt-balex:0.1.0.2.3.1.18.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Leipzig</span>. <span id="ldlt-balex:0.1.0.2.3.1.18.4" class="t-date s-2-date" data-el="date">1847</span>. URL: <a id="ldlt-balex:0.1.0.2.3.1.18.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/mdp.39015063012838" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/mdp.39015063012838">hdl.handle.net/2027/mdp.39015063012838</a>.</div>
 
                   <div id="Oehler" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.3.1.19.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Oehler</span> <span id="ldlt-balex:0.1.0.2.3.1.19.1" class="t-editor s-1-bibliografia" data-el="editor">F. Oehler</span>,
                      ed. <span id="ldlt-balex:0.1.0.2.3.1.19.2" class="t-title s-1-inline" data-el="title">C. Iulii Caesaris commentarii cum supplementis A. Hirtii et
-                        aliorum</span>. <span id="ldlt-balex:0.1.0.2.3.1.19.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Leipzig</span>. <span id="ldlt-balex:0.1.0.2.3.1.19.4" class="t-date s-2-date" data-el="date">1852</span>. URL: <span id="ldlt-balex:0.1.0.2.3.1.19.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/mdp.39015007036885"></span>.</div>
+                        aliorum</span>. <span id="ldlt-balex:0.1.0.2.3.1.19.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Leipzig</span>. <span id="ldlt-balex:0.1.0.2.3.1.19.4" class="t-date s-2-date" data-el="date">1852</span>. URL: <a id="ldlt-balex:0.1.0.2.3.1.19.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/mdp.39015007036885" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/mdp.39015007036885">hdl.handle.net/2027/mdp.39015007036885</a>.</div>
 
                   <div id="Oudendorp" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.3.1.20.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Oudendorp</span> <span id="ldlt-balex:0.1.0.2.3.1.20.1" class="t-editor s-1-bibliografia" data-el="editor">F.
                         Oudendorp</span>, ed., <span id="ldlt-balex:0.1.0.2.3.1.20.2" class="t-title s-1-inline" data-el="title">C. Julii Caesaris De bellis gallico et
@@ -1659,29 +1670,29 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                         Africano et Hispaniensi commentarii ad MSStorum fidem expressi, cum integris
                         notis Dionysii Vossii, Joannis Davisii et Samuelis Clarkii cura et studio
                         Francisci Oudendorpii qui suas animadversiones ac varias lectiones
-                        adjecit</span>. <span id="ldlt-balex:0.1.0.2.3.1.20.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Leiden</span>. <span id="ldlt-balex:0.1.0.2.3.1.20.4" class="t-date s-2-date" data-el="date">1737</span>. URL: <span id="ldlt-balex:0.1.0.2.3.1.20.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/njp.32101066876309"></span>.</div>
+                        adjecit</span>. <span id="ldlt-balex:0.1.0.2.3.1.20.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Leiden</span>. <span id="ldlt-balex:0.1.0.2.3.1.20.4" class="t-date s-2-date" data-el="date">1737</span>. URL: <a id="ldlt-balex:0.1.0.2.3.1.20.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/njp.32101066876309" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/njp.32101066876309">hdl.handle.net/2027/njp.32101066876309</a>.</div>
 
                   <div id="Scaliger" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.3.1.21.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Scaliger</span> <span id="ldlt-balex:0.1.0.2.3.1.21.1" class="t-editor s-1-bibliografia" data-el="editor">J.
                         Scaliger</span>, ed. <span id="ldlt-balex:0.1.0.2.3.1.21.2" class="t-title s-1-inline" data-el="title">C. Iulii Caesaris quae extant</span>.
                         <span id="ldlt-balex:0.1.0.2.3.1.21.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Amsterdam</span>. <span id="ldlt-balex:0.1.0.2.3.1.21.4" class="t-date s-2-date" data-el="date">1661</span>. (First edition 1635.)
-                     URL: <span id="ldlt-balex:0.1.0.2.3.1.21.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/uc1.31175035195554"></span>.</div>
+                     URL: <a id="ldlt-balex:0.1.0.2.3.1.21.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/uc1.31175035195554" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/uc1.31175035195554">hdl.handle.net/2027/uc1.31175035195554</a>.</div>
 
                   <div id="Schneider" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.3.1.22.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Schneider</span> <span id="ldlt-balex:0.1.0.2.3.1.22.1" class="t-editor s-1-bibliografia" data-el="editor">R.
                         Schneider</span>, ed. <span id="ldlt-balex:0.1.0.2.3.1.22.2" class="t-title s-1-inline" data-el="title">Bellum Alexandrinum</span>.
-                        <span id="ldlt-balex:0.1.0.2.3.1.22.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Berlin</span>. <span id="ldlt-balex:0.1.0.2.3.1.22.4" class="t-date s-2-date" data-el="date">1888</span>. URL: <span id="ldlt-balex:0.1.0.2.3.1.22.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/mdp.39015039572113"></span>.</div>
+                        <span id="ldlt-balex:0.1.0.2.3.1.22.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Berlin</span>. <span id="ldlt-balex:0.1.0.2.3.1.22.4" class="t-date s-2-date" data-el="date">1888</span>. URL: <a id="ldlt-balex:0.1.0.2.3.1.22.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/mdp.39015039572113" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/mdp.39015039572113">hdl.handle.net/2027/mdp.39015039572113</a>.</div>
 
                   <div id="Stephanus" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.3.1.23.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Stephanus</span> <span id="ldlt-balex:0.1.0.2.3.1.23.1" class="t-editor s-1-bibliografia" data-el="editor">R.
                         Estienne</span>, ed. <span id="ldlt-balex:0.1.0.2.3.1.23.2" class="t-title s-1-inline" data-el="title">C. Iulii Caesaris rerum ab se gestarum
-                        comentarii</span>. <span id="ldlt-balex:0.1.0.2.3.1.23.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Paris</span>. <span id="ldlt-balex:0.1.0.2.3.1.23.4" class="t-date s-2-date" data-el="date">1544</span>. URL: <span id="ldlt-balex:0.1.0.2.3.1.23.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://books.google.com/books?id=CtcPAAAAQAAJ"></span>.</div>
+                        comentarii</span>. <span id="ldlt-balex:0.1.0.2.3.1.23.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Paris</span>. <span id="ldlt-balex:0.1.0.2.3.1.23.4" class="t-date s-2-date" data-el="date">1544</span>. URL: <a id="ldlt-balex:0.1.0.2.3.1.23.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://books.google.com/books?id=CtcPAAAAQAAJ" target="_blank" rel="noopener" data-el="ptr" data-target="https://books.google.com/books?id=CtcPAAAAQAAJ">books.google.com/books?id=CtcPAAAAQAAJ</a>.</div>
 
                   <div id="Strada" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.3.1.24.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Strada</span> <span id="ldlt-balex:0.1.0.2.3.1.24.1" class="t-editor s-1-bibliografia" data-el="editor">J. Strada</span>,
                      ed. <span id="ldlt-balex:0.1.0.2.3.1.24.2" class="t-title s-1-inline" data-el="title">C. Iulii Caesaris rerum gestarum commentarii XIV</span>.
-                        <span id="ldlt-balex:0.1.0.2.3.1.24.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Frankfurt</span>. <span id="ldlt-balex:0.1.0.2.3.1.24.4" class="t-date s-2-date" data-el="date">1575</span>. URL: <span id="ldlt-balex:0.1.0.2.3.1.24.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://books.google.com/books?id=ZSqXfrpOspMC"></span></div>
+                        <span id="ldlt-balex:0.1.0.2.3.1.24.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Frankfurt</span>. <span id="ldlt-balex:0.1.0.2.3.1.24.4" class="t-date s-2-date" data-el="date">1575</span>. URL: <a id="ldlt-balex:0.1.0.2.3.1.24.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://books.google.com/books?id=ZSqXfrpOspMC" target="_blank" rel="noopener" data-el="ptr" data-target="https://books.google.com/books?id=ZSqXfrpOspMC">books.google.com/books?id=ZSqXfrpOspMC</a></div>
 
                   <div id="Ursinus" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.3.1.25.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Ursinus</span> <span id="ldlt-balex:0.1.0.2.3.1.25.1" class="t-editor s-1-bibliografia" data-el="editor">F.
                         Orsini</span>, ed. <span id="ldlt-balex:0.1.0.2.3.1.25.2" class="t-title s-1-inline" data-el="title">C. Iulii Caesaris commentarii novis
                         emendationibus illustrati ... ejusdem fragmenta ... ex bibliotheca Fulvii
-                        Ursini</span>. <span id="ldlt-balex:0.1.0.2.3.1.25.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Antwerp</span>. <span id="ldlt-balex:0.1.0.2.3.1.25.4" class="t-date s-2-date" data-el="date">1595</span>. URL: <span id="ldlt-balex:0.1.0.2.3.1.25.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/ucm.5327351141"></span>.</div>
+                        Ursini</span>. <span id="ldlt-balex:0.1.0.2.3.1.25.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Antwerp</span>. <span id="ldlt-balex:0.1.0.2.3.1.25.4" class="t-date s-2-date" data-el="date">1595</span>. URL: <a id="ldlt-balex:0.1.0.2.3.1.25.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/ucm.5327351141" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/ucm.5327351141">hdl.handle.net/2027/ucm.5327351141</a>.</div>
 
                   <div id="Vascosanus" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.3.1.26.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Vascosanus</span> <span id="ldlt-balex:0.1.0.2.3.1.26.1" class="t-editor s-1-bibliografia" data-el="editor">M.
                         Vascosanus</span>, ed. <span id="ldlt-balex:0.1.0.2.3.1.26.2" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Paris</span>.
@@ -1756,18 +1767,18 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="Fischer" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.12.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Fischer</span> <span id="ldlt-balex:0.1.0.2.4.1.12.1" class="t-author s-1-bibliografia" data-el="author">Fischer,
                         Eduard</span>. <span id="ldlt-balex:0.1.0.2.4.1.12.2" class="t-title s-1-inline" data-el="title">Das achte Buch vom Gallischem Kriege und das Bellum
                         Alexandrinum: Eine Studie</span>. <span id="ldlt-balex:0.1.0.2.4.1.12.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Passau</span>.
-                        <span id="ldlt-balex:0.1.0.2.4.1.12.4" class="t-date s-2-date" data-el="date">1880</span>. URL: <span id="ldlt-balex:0.1.0.2.4.1.12.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/uc1.$b62477"></span></div>
+                        <span id="ldlt-balex:0.1.0.2.4.1.12.4" class="t-date s-2-date" data-el="date">1880</span>. URL: <a id="ldlt-balex:0.1.0.2.4.1.12.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/uc1.$b62477" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/uc1.$b62477">hdl.handle.net/2027/uc1.$b62477</a></div>
 
                   <div id="Fleischer" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.13.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Fleischer</span> <span id="ldlt-balex:0.1.0.2.4.1.13.1" class="t-author s-1-bibliografia" data-el="author">Fleischer,
                         Curt</span>. <span id="ldlt-balex:0.1.0.2.4.1.13.2" class="t-title s-1-inline" data-el="title">Zu Caesar und seinen Fortsetzern</span>.
                         <span id="ldlt-balex:0.1.0.2.4.1.13.3" class="t-title s-1-inline" data-el="title">Neue Jahrbücher für Philologie und Pädagogik</span>
-                     <span id="ldlt-balex:0.1.0.2.4.1.13.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">119</span> (<span id="ldlt-balex:0.1.0.2.4.1.13.5" class="t-date s-2-date" data-el="date">1879</span>): <span id="ldlt-balex:0.1.0.2.4.1.13.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">849–67</span>. URL: <span id="ldlt-balex:0.1.0.2.4.1.13.7" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/uc1.b3013858?urlappend=%3Bseq=899"></span>.</div>
+                     <span id="ldlt-balex:0.1.0.2.4.1.13.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">119</span> (<span id="ldlt-balex:0.1.0.2.4.1.13.5" class="t-date s-2-date" data-el="date">1879</span>): <span id="ldlt-balex:0.1.0.2.4.1.13.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">849–67</span>. URL: <a id="ldlt-balex:0.1.0.2.4.1.13.7" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/uc1.b3013858?urlappend=%3Bseq=899" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/uc1.b3013858?urlappend=%3Bseq=899">hdl.handle.net/2027/uc1.b3013858?urlappend=%3Bseq=899</a>.</div>
 
                   <div id="Forchhammer" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.14.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Forchhammer</span>
                      <span id="ldlt-balex:0.1.0.2.4.1.14.1" class="t-author s-1-bibliografia" data-el="author">Forchhammer, J. N. G.</span>
                      <span id="ldlt-balex:0.1.0.2.4.1.14.2" class="t-title s-1-inline" data-el="title">Quaestiones criticae de vera commentarios de bellis civili,
                         Alexandrino, Africano, Hispaniensi emendandi ratione</span>.
-                        <span id="ldlt-balex:0.1.0.2.4.1.14.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Copenhagen</span>. <span id="ldlt-balex:0.1.0.2.4.1.14.4" class="t-date s-2-date" data-el="date">1852</span>. URL: <span id="ldlt-balex:0.1.0.2.4.1.14.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/njp.32101065205849"></span>.</div>
+                        <span id="ldlt-balex:0.1.0.2.4.1.14.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Copenhagen</span>. <span id="ldlt-balex:0.1.0.2.4.1.14.4" class="t-date s-2-date" data-el="date">1852</span>. URL: <a id="ldlt-balex:0.1.0.2.4.1.14.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/njp.32101065205849" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/njp.32101065205849">hdl.handle.net/2027/njp.32101065205849</a>.</div>
 
                   <div id="Gaertner-Hausburg" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.15.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Gaertner-Hausburg</span> <span id="ldlt-balex:0.1.0.2.4.1.15.1" class="t-author s-1-bibliografia" data-el="author">Gaertner, J. F.</span>, and <span id="ldlt-balex:0.1.0.2.4.1.15.2" class="t-author s-1-bibliografia" data-el="author">B.
                         Hausburg</span>. <span id="ldlt-balex:0.1.0.2.4.1.15.3" class="t-title s-1-inline" data-el="title">Caesar and the Bellum Alexandrinum: An
@@ -1778,7 +1789,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 
                   <div id="Gemoll" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.16.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Gemoll</span> <span id="ldlt-balex:0.1.0.2.4.1.16.1" class="t-author s-1-bibliografia" data-el="author">Gemoll, W.</span>
                      <span id="ldlt-balex:0.1.0.2.4.1.16.2" class="t-title s-1-inline" data-el="title">Zu Caesar und seinen Fortsetzern</span>. <span id="ldlt-balex:0.1.0.2.4.1.16.3" class="t-title s-1-inline" data-el="title">Jahrbücher für klassische Philologie</span>
-                     <span id="ldlt-balex:0.1.0.2.4.1.16.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">119</span> (<span id="ldlt-balex:0.1.0.2.4.1.16.5" class="t-date s-2-date" data-el="date">1879</span>): <span id="ldlt-balex:0.1.0.2.4.1.16.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">267–70</span>. URL: <span id="ldlt-balex:0.1.0.2.4.1.16.7" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/uc1.b3013858?urlappend=%3Bseq=317"></span>.</div>
+                     <span id="ldlt-balex:0.1.0.2.4.1.16.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">119</span> (<span id="ldlt-balex:0.1.0.2.4.1.16.5" class="t-date s-2-date" data-el="date">1879</span>): <span id="ldlt-balex:0.1.0.2.4.1.16.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">267–70</span>. URL: <a id="ldlt-balex:0.1.0.2.4.1.16.7" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/uc1.b3013858?urlappend=%3Bseq=317" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/uc1.b3013858?urlappend=%3Bseq=317">hdl.handle.net/2027/uc1.b3013858?urlappend=%3Bseq=317</a>.</div>
 
                   <div id="Graindor" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.17.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Graindor</span> <span id="ldlt-balex:0.1.0.2.4.1.17.1" class="t-author s-1-bibliografia" data-el="author">Graindor,
                         P</span>. <span id="ldlt-balex:0.1.0.2.4.1.17.2" class="t-title s-1-inline" data-el="title">La guerre d’Alexandrie</span>.
@@ -1796,7 +1807,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="Hübner" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.20.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Hübner</span> <span id="ldlt-balex:0.1.0.2.4.1.20.1" class="t-editor s-1-bibliografia" data-el="editor">Emil
                         Hübner</span>, ed. <span id="ldlt-balex:0.1.0.2.4.1.20.2" class="t-title s-1-inline" data-el="title">Inscriptiones Hispanie Latinae. Corpus
                         Inscriptionum Latinarum. Vol. II</span>. <span id="ldlt-balex:0.1.0.2.4.1.20.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Berlin</span>:
-                        <span id="ldlt-balex:0.1.0.2.4.1.20.4" class="t-publisher s-1-bibliografia" data-el="publisher">G. Reimerum</span>. <span id="ldlt-balex:0.1.0.2.4.1.20.5" class="t-date s-2-date" data-el="date">1869–92</span>. URL: <span id="ldlt-balex:0.1.0.2.4.1.20.6" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="http://arachne.uni-koeln.de/books/CILvII1869"></span>.</div>
+                        <span id="ldlt-balex:0.1.0.2.4.1.20.4" class="t-publisher s-1-bibliografia" data-el="publisher">G. Reimerum</span>. <span id="ldlt-balex:0.1.0.2.4.1.20.5" class="t-date s-2-date" data-el="date">1869–92</span>. URL: <a id="ldlt-balex:0.1.0.2.4.1.20.6" class="t-ptr s-2-corrispondenza ent-ext" href="http://arachne.uni-koeln.de/books/CILvII1869" target="_blank" rel="noopener" data-el="ptr" data-target="http://arachne.uni-koeln.de/books/CILvII1869">arachne.uni-koeln.de/books/CILvII1869</a>.</div>
 
                   <div id="Kraffert" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.21.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Kraffert</span> <span id="ldlt-balex:0.1.0.2.4.1.21.1" class="t-author s-1-bibliografia" data-el="author">Kraffert,
                         Hermann</span>. <span id="ldlt-balex:0.1.0.2.4.1.21.2" class="t-title s-1-inline" data-el="title">Beiträge zur Kritik und Erklärung
@@ -1805,25 +1816,25 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 
                   <div id="Kübler1896b" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.22.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Kübler 1896b</span> <span id="ldlt-balex:0.1.0.2.4.1.22.1" class="t-author s-1-bibliografia" data-el="author">Kübler,
                         B.</span>. <span id="ldlt-balex:0.1.0.2.4.1.22.2" class="t-title s-1-inline" data-el="title">Recisamenta critica</span>. <span id="ldlt-balex:0.1.0.2.4.1.22.3" class="t-title s-1-inline" data-el="title">Philologus</span>
-                     <span id="ldlt-balex:0.1.0.2.4.1.22.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">55</span> (<span id="ldlt-balex:0.1.0.2.4.1.22.5" class="t-date s-2-date" data-el="date">1896</span>): <span id="ldlt-balex:0.1.0.2.4.1.22.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">154–59</span>. URL: <span id="ldlt-balex:0.1.0.2.4.1.22.7" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/mdp.39015029918151?urlappend=%3Bseq=214"></span>.</div>
+                     <span id="ldlt-balex:0.1.0.2.4.1.22.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">55</span> (<span id="ldlt-balex:0.1.0.2.4.1.22.5" class="t-date s-2-date" data-el="date">1896</span>): <span id="ldlt-balex:0.1.0.2.4.1.22.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">154–59</span>. URL: <a id="ldlt-balex:0.1.0.2.4.1.22.7" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/mdp.39015029918151?urlappend=%3Bseq=214" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/mdp.39015029918151?urlappend=%3Bseq=214">hdl.handle.net/2027/mdp.39015029918151?urlappend=%3Bseq=214</a>.</div>
 
                   <div id="Landgraf1888" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.23.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Landgraf
                         1888</span> <span id="ldlt-balex:0.1.0.2.4.1.23.1" class="t-author s-1-bibliografia" data-el="author">Landgraf, G</span>. <span id="ldlt-balex:0.1.0.2.4.1.23.2" class="t-title s-1-inline" data-el="title">Untersuchungen zu Caesar und
                         seinen Fortsetzern insbesondere über Autorschaft und Komposition des Bellum
                         Alexandrinum und Africanum</span>. <span id="ldlt-balex:0.1.0.2.4.1.23.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Erlangen</span>.
-                        <span id="ldlt-balex:0.1.0.2.4.1.23.4" class="t-date s-2-date" data-el="date">1888</span>. URL: <span id="ldlt-balex:0.1.0.2.4.1.23.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://archive.org/details/untersuchungenzu00landuoft"></span>.</div>
+                        <span id="ldlt-balex:0.1.0.2.4.1.23.4" class="t-date s-2-date" data-el="date">1888</span>. URL: <a id="ldlt-balex:0.1.0.2.4.1.23.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://archive.org/details/untersuchungenzu00landuoft" target="_blank" rel="noopener" data-el="ptr" data-target="https://archive.org/details/untersuchungenzu00landuoft">archive.org/details/untersuchungenzu00landuoft</a>.</div>
 
                   <div id="Landgraf1889" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.24.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Landgraf
                         1889</span> <span id="ldlt-balex:0.1.0.2.4.1.24.1" class="t-author s-1-bibliografia" data-el="author">Landgraf, G.</span>
                      <span id="ldlt-balex:0.1.0.2.4.1.24.2" class="t-title s-1-inline" data-el="title">Der Bericht des C. Asinius Pollio über die spanischen Unruhen des Jahres
                         48 v. Chr. (Bellum Alexandrinum 48–64) auf Grund des codex
                         Ashburnhamensis</span>. <span id="ldlt-balex:0.1.0.2.4.1.24.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Erlangen et Leipzig</span>.
-                        <span id="ldlt-balex:0.1.0.2.4.1.24.4" class="t-date s-2-date" data-el="date">1889</span>. URL: <span id="ldlt-balex:0.1.0.2.4.1.24.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/hvd.32044085186245"></span>.</div>
+                        <span id="ldlt-balex:0.1.0.2.4.1.24.4" class="t-date s-2-date" data-el="date">1889</span>. URL: <a id="ldlt-balex:0.1.0.2.4.1.24.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/hvd.32044085186245" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/hvd.32044085186245">hdl.handle.net/2027/hvd.32044085186245</a>.</div>
 
                   <div id="Landgraf1891a" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.25.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Landgraf
                         1891a</span> <span id="ldlt-balex:0.1.0.2.4.1.25.1" class="t-author s-1-bibliografia" data-el="author">Landgraf, G.</span>
                      <span id="ldlt-balex:0.1.0.2.4.1.25.2" class="t-title s-1-inline" data-el="title">Zum Bellum Alexandrinum</span>. In <span id="ldlt-balex:0.1.0.2.4.1.25.3" class="t-title s-1-inline" data-el="title">Commentationes Woelfflinianae</span>. <span id="ldlt-balex:0.1.0.2.4.1.25.4" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Leipzig</span>.
-                        <span id="ldlt-balex:0.1.0.2.4.1.25.5" class="t-date s-2-date" data-el="date">1891</span>. <span id="ldlt-balex:0.1.0.2.4.1.25.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">15–21</span>. URL: <span id="ldlt-balex:0.1.0.2.4.1.25.7" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/mdp.39015022622206?urlappend=%3Bseq=25"></span>.</div>
+                        <span id="ldlt-balex:0.1.0.2.4.1.25.5" class="t-date s-2-date" data-el="date">1891</span>. <span id="ldlt-balex:0.1.0.2.4.1.25.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">15–21</span>. URL: <a id="ldlt-balex:0.1.0.2.4.1.25.7" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/mdp.39015022622206?urlappend=%3Bseq=25" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/mdp.39015022622206?urlappend=%3Bseq=25">hdl.handle.net/2027/mdp.39015022622206?urlappend=%3Bseq=25</a>.</div>
 
                   <div id="Landgraf1891b" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.26.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Landgraf
                         1891b</span> <span id="ldlt-balex:0.1.0.2.4.1.26.1" class="t-author s-1-bibliografia" data-el="author">Landgraf, G</span>. <span id="ldlt-balex:0.1.0.2.4.1.26.2" class="t-title s-1-inline" data-el="title">Das Bellum
@@ -1834,14 +1845,14 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                         C.</span>
                      <span id="ldlt-balex:0.1.0.2.4.1.27.2" class="t-title s-1-inline" data-el="title">Studia in libellum incerti auctoris de bello
                         Alexandrino</span>. <span id="ldlt-balex:0.1.0.2.4.1.27.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Copenhagen</span>. <span id="ldlt-balex:0.1.0.2.4.1.27.4" class="t-date s-2-date" data-el="date">1886</span>.
-                     URL: <span id="ldlt-balex:0.1.0.2.4.1.27.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/nnc2.ark:/13960/t3cz4fm0n"></span>.</div>
+                     URL: <a id="ldlt-balex:0.1.0.2.4.1.27.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/nnc2.ark:/13960/t3cz4fm0n" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/nnc2.ark:/13960/t3cz4fm0n">hdl.handle.net/2027/nnc2.ark:/13960/t3cz4fm0n</a>.</div>
 
                   <div id="Latinius" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.28.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Latinius</span> <span id="ldlt-balex:0.1.0.2.4.1.28.1" class="t-author s-1-bibliografia" data-el="author">Latinius,
                         Latinus</span>. <span id="ldlt-balex:0.1.0.2.4.1.28.2" class="t-title s-1-inline" data-el="title">Bibliotheca sacra et profana: Sive, Observationes,
                         correctiones, coniecturae, &amp; variae lectiones in sacros et profanos
                         scriptores, e marginalibus notis codicum eiusdem a Dominico Macro ...
                         collectae et nunc primum ... editae</span>. 2 vols.
-                        <span id="ldlt-balex:0.1.0.2.4.1.28.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Rome</span>. <span id="ldlt-balex:0.1.0.2.4.1.28.4" class="t-date s-2-date" data-el="date">1677</span>. URL: <span id="ldlt-balex:0.1.0.2.4.1.28.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/njp.32101076454485"></span>.</div>
+                        <span id="ldlt-balex:0.1.0.2.4.1.28.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Rome</span>. <span id="ldlt-balex:0.1.0.2.4.1.28.4" class="t-date s-2-date" data-el="date">1677</span>. URL: <a id="ldlt-balex:0.1.0.2.4.1.28.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/njp.32101076454485" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/njp.32101076454485">hdl.handle.net/2027/njp.32101076454485</a>.</div>
 
                   <div id="Leumann-Hofmann-Szantyr" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.29.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Leumann-Hofmann-Szantyr</span> <span id="ldlt-balex:0.1.0.2.4.1.29.1" class="t-author s-1-bibliografia" data-el="author">Leumann, Manu et al</span>.
                         <span id="ldlt-balex:0.1.0.2.4.1.29.2" class="t-title s-1-inline" data-el="title">Lateinische Grammatik</span>. 3 vols. <span id="ldlt-balex:0.1.0.2.4.1.29.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Munich</span>.
@@ -1856,17 +1867,17 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                         N.</span> “<span id="ldlt-balex:0.1.0.2.4.1.31.2" class="t-title s-1-inline" data-el="title">Capitulum III: Caesar, Sallustius.</span>” In
                         <span id="ldlt-balex:0.1.0.2.4.1.31.3" class="t-title s-1-inline" data-el="title">Adversaria critica ad scriptores graecos et
                      latinos</span>. Vol. <span id="ldlt-balex:0.1.0.2.4.1.31.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">2</span>: <span id="ldlt-balex:0.1.0.2.4.1.31.5" class="t-title s-1-inline" data-el="title">Emendationes latinae</span>. <span id="ldlt-balex:0.1.0.2.4.1.31.6" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Copenhagen</span>.
-                        <span id="ldlt-balex:0.1.0.2.4.1.31.7" class="t-date s-2-date" data-el="date">1873</span>. <span id="ldlt-balex:0.1.0.2.4.1.31.8" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">281–85</span>. <span id="ldlt-balex:0.1.0.2.4.1.31.9" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/coo.31924021596675"></span>.</div>
+                        <span id="ldlt-balex:0.1.0.2.4.1.31.7" class="t-date s-2-date" data-el="date">1873</span>. <span id="ldlt-balex:0.1.0.2.4.1.31.8" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">281–85</span>. <a id="ldlt-balex:0.1.0.2.4.1.31.9" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/coo.31924021596675" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/coo.31924021596675">hdl.handle.net/2027/coo.31924021596675</a>.</div>
 
                   <div id="Markland" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.32.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Markland</span> <span id="ldlt-balex:0.1.0.2.4.1.32.1" class="t-author s-1-bibliografia" data-el="author">Markland,
                         Jeremiah</span>. <span id="ldlt-balex:0.1.0.2.4.1.32.2" class="t-title s-1-inline" data-el="title">Epistola critica ad eruditissimum virum
                         Franciscum Hare ... in qua Horatii loca aliquot et aliorum veterum
-                        emendantur</span>. <span id="ldlt-balex:0.1.0.2.4.1.32.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Cambridge</span>. <span id="ldlt-balex:0.1.0.2.4.1.32.4" class="t-date s-2-date" data-el="date">1723</span>. <span id="ldlt-balex:0.1.0.2.4.1.32.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://books.google.com/books?id=7_JWAAAAcAAJ&amp;pg=PP3#v=onepage&amp;q&amp;f=false"></span>.</div>
+                        emendantur</span>. <span id="ldlt-balex:0.1.0.2.4.1.32.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Cambridge</span>. <span id="ldlt-balex:0.1.0.2.4.1.32.4" class="t-date s-2-date" data-el="date">1723</span>. <a id="ldlt-balex:0.1.0.2.4.1.32.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://books.google.com/books?id=7_JWAAAAcAAJ&amp;pg=PP3#v=onepage&amp;q&amp;f=false" target="_blank" rel="noopener" data-el="ptr" data-target="https://books.google.com/books?id=7_JWAAAAcAAJ&amp;pg=PP3#v=onepage&amp;q&amp;f=false">books.google.com/books?id=7_JWAAAAcAAJ&amp;pg=PP3#v=onepage&amp;q&amp;f=false</a>.</div>
 
                   <div id="Menge" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.33.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Menge</span> <span id="ldlt-balex:0.1.0.2.4.1.33.1" class="t-author s-1-bibliografia" data-el="author">Menge, R</span>.
                         <span id="ldlt-balex:0.1.0.2.4.1.33.2" class="t-title s-1-inline" data-el="title">Bellum Alexandrinum: Erklärt von Rud. Schneider</span>.
                         <span id="ldlt-balex:0.1.0.2.4.1.33.3" class="t-title s-1-inline" data-el="title">Neue philologische Rundschau</span>
-                     <span id="ldlt-balex:0.1.0.2.4.1.33.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">8</span>. <span id="ldlt-balex:0.1.0.2.4.1.33.5" class="t-date s-2-date" data-el="date">1889</span>. <span id="ldlt-balex:0.1.0.2.4.1.33.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">120–27</span>. <span id="ldlt-balex:0.1.0.2.4.1.33.7" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/hvd.32044098630197?urlappend=%3Bseq=154"></span>.</div>
+                     <span id="ldlt-balex:0.1.0.2.4.1.33.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">8</span>. <span id="ldlt-balex:0.1.0.2.4.1.33.5" class="t-date s-2-date" data-el="date">1889</span>. <span id="ldlt-balex:0.1.0.2.4.1.33.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">120–27</span>. <a id="ldlt-balex:0.1.0.2.4.1.33.7" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/hvd.32044098630197?urlappend=%3Bseq=154" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/hvd.32044098630197?urlappend=%3Bseq=154">hdl.handle.net/2027/hvd.32044098630197?urlappend=%3Bseq=154</a>.</div>
 
                   <div id="Mitchell" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.34.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Mitchell</span> <span id="ldlt-balex:0.1.0.2.4.1.34.1" class="t-author s-1-bibliografia" data-el="author">Mitchell,
                         S.</span> “<span id="ldlt-balex:0.1.0.2.4.1.34.2" class="t-title s-1-inline" data-el="title">The treaty between Rome and Lycia of 46 BC
@@ -1877,7 +1888,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="Müller" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.35.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Müller</span> <span id="ldlt-balex:0.1.0.2.4.1.35.1" class="t-author s-1-bibliografia" data-el="author">Müller, H.
                         J.</span> Footnote to a Nachtrag on <span id="ldlt-balex:0.1.0.2.4.1.35.2" class="t-ref s-2-corrispondenza" data-el="ref" data-target="#Schneider">Schneider</span> (1888). <span id="ldlt-balex:0.1.0.2.4.1.35.3" class="t-title s-1-inline" data-el="title">Jahresberichte des philologischen
                         Vereins zu Berlin</span>
-                     <span id="ldlt-balex:0.1.0.2.4.1.35.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">14</span> (<span id="ldlt-balex:0.1.0.2.4.1.35.5" class="t-date s-2-date" data-el="date">1888</span>): <span id="ldlt-balex:0.1.0.2.4.1.35.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">348</span>. <span id="ldlt-balex:0.1.0.2.4.1.35.7" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://books.google.com/books?id=9uToXfcovpwC&amp;pg=PA348#v=onepage&amp;q&amp;f=false"></span>.</div>
+                     <span id="ldlt-balex:0.1.0.2.4.1.35.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">14</span> (<span id="ldlt-balex:0.1.0.2.4.1.35.5" class="t-date s-2-date" data-el="date">1888</span>): <span id="ldlt-balex:0.1.0.2.4.1.35.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">348</span>. <a id="ldlt-balex:0.1.0.2.4.1.35.7" class="t-ptr s-2-corrispondenza ent-ext" href="https://books.google.com/books?id=9uToXfcovpwC&amp;pg=PA348#v=onepage&amp;q&amp;f=false" target="_blank" rel="noopener" data-el="ptr" data-target="https://books.google.com/books?id=9uToXfcovpwC&amp;pg=PA348#v=onepage&amp;q&amp;f=false">books.google.com/books?id=9uToXfcovpwC&amp;pg=PA348#v=onepage&amp;q&amp;f=false</a>.</div>
 
                   <div id="Pinkster" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.36.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Pinkster</span> <span id="ldlt-balex:0.1.0.2.4.1.36.1" class="t-author s-1-bibliografia" data-el="author">Pinkster,
                         Harm</span>. <span id="ldlt-balex:0.1.0.2.4.1.36.2" class="t-title s-1-inline" data-el="title">The Oxford Latin Syntax. Volume 1, The Simple
@@ -1886,7 +1897,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="Preuss" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.37.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Preuss</span> <span id="ldlt-balex:0.1.0.2.4.1.37.1" class="t-author s-1-bibliografia" data-el="author">Preuss,
                         Siegmund</span>. <span id="ldlt-balex:0.1.0.2.4.1.37.2" class="t-title s-1-inline" data-el="title">Vollstandiges Lexicon zu den
                         pseudo-casarianischen Schriftwerken</span>. <span id="ldlt-balex:0.1.0.2.4.1.37.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Erlangen</span>.
-                        <span id="ldlt-balex:0.1.0.2.4.1.37.4" class="t-date s-2-date" data-el="date">1884</span>. <span id="ldlt-balex:0.1.0.2.4.1.37.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://books.google.com/books?id=QlEIAAAAQAAJ&amp;newbks=1&amp;newbks_redir=0&amp;pg=PA1#v=onepage&amp;q&amp;f=false"></span>.</div>
+                        <span id="ldlt-balex:0.1.0.2.4.1.37.4" class="t-date s-2-date" data-el="date">1884</span>. <a id="ldlt-balex:0.1.0.2.4.1.37.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://books.google.com/books?id=QlEIAAAAQAAJ&amp;newbks=1&amp;newbks_redir=0&amp;pg=PA1#v=onepage&amp;q&amp;f=false" target="_blank" rel="noopener" data-el="ptr" data-target="https://books.google.com/books?id=QlEIAAAAQAAJ&amp;newbks=1&amp;newbks_redir=0&amp;pg=PA1#v=onepage&amp;q&amp;f=false">books.google.com/books?id=QlEIAAAAQAAJ&amp;newbks=1&amp;newbks_redir=0&amp;pg=PA1#v=onepage&amp;q&amp;f=false</a>.</div>
 
                   <div id="Raaflaub" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.38.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Raaflaub</span> <span id="ldlt-balex:0.1.0.2.4.1.38.1" class="t-editor s-1-bibliografia" data-el="editor">Raaflaub, Kurt
                         A., ed</span>. <span id="ldlt-balex:0.1.0.2.4.1.38.2" class="t-title s-1-inline" data-el="title">The Landmark Julius Caesar. The complete
@@ -1902,38 +1913,38 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                         Caesar und seinen Fortsetzern</span>. <span id="ldlt-balex:0.1.0.2.4.1.40.3" class="t-title s-1-inline" data-el="title">Jahrbücher für
                         klassische Philologie</span>
                      <span id="ldlt-balex:0.1.0.2.4.1.40.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">119</span> (<span id="ldlt-balex:0.1.0.2.4.1.40.5" class="t-date s-2-date" data-el="date">1879</span>): <span id="ldlt-balex:0.1.0.2.4.1.40.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">867–70</span>
-                     <span id="ldlt-balex:0.1.0.2.4.1.40.7" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/iau.31858020803346?urlappend=%3Bseq=883"></span> and <span id="ldlt-balex:0.1.0.2.4.1.40.8" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">125</span> (<span id="ldlt-balex:0.1.0.2.4.1.40.9" class="t-date s-2-date" data-el="date">1882</span>): <span id="ldlt-balex:0.1.0.2.4.1.40.10" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">215–24</span>
-                     <span id="ldlt-balex:0.1.0.2.4.1.40.11" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/iau.31858020803403?urlappend=%3Bseq=233"></span>.</div>
+                     <a id="ldlt-balex:0.1.0.2.4.1.40.7" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/iau.31858020803346?urlappend=%3Bseq=883" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/iau.31858020803346?urlappend=%3Bseq=883">hdl.handle.net/2027/iau.31858020803346?urlappend=%3Bseq=883</a> and <span id="ldlt-balex:0.1.0.2.4.1.40.8" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">125</span> (<span id="ldlt-balex:0.1.0.2.4.1.40.9" class="t-date s-2-date" data-el="date">1882</span>): <span id="ldlt-balex:0.1.0.2.4.1.40.10" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">215–24</span>
+                     <a id="ldlt-balex:0.1.0.2.4.1.40.11" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/iau.31858020803403?urlappend=%3Bseq=233" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/iau.31858020803403?urlappend=%3Bseq=233">hdl.handle.net/2027/iau.31858020803403?urlappend=%3Bseq=233</a>.</div>
 
                   <div id="Schambach1881" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.41.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Schambach
                         1881</span> <span id="ldlt-balex:0.1.0.2.4.1.41.1" class="t-author s-1-bibliografia" data-el="author">Schambach, Otfried</span>. <span id="ldlt-balex:0.1.0.2.4.1.41.2" class="t-title s-1-inline" data-el="title">Die
                         Reiterei bei Caesar</span>. <span id="ldlt-balex:0.1.0.2.4.1.41.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Mühlhausen in Thüringen</span>.
-                        <span id="ldlt-balex:0.1.0.2.4.1.41.4" class="t-date s-2-date" data-el="date">1881</span>. <span id="ldlt-balex:0.1.0.2.4.1.41.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/hvd.32044080867435"></span>.</div>
+                        <span id="ldlt-balex:0.1.0.2.4.1.41.4" class="t-date s-2-date" data-el="date">1881</span>. <a id="ldlt-balex:0.1.0.2.4.1.41.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/hvd.32044080867435" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/hvd.32044080867435">hdl.handle.net/2027/hvd.32044080867435</a>.</div>
 
                   <div id="Schiller1883" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.42.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Schiller
                         1883</span> <span id="ldlt-balex:0.1.0.2.4.1.42.1" class="t-author s-1-bibliografia" data-el="author">Schiller, Heinrich</span>. <span id="ldlt-balex:0.1.0.2.4.1.42.2" class="t-title s-1-inline" data-el="title">Zu Caesar
                         Bell. Civ. III, 112, 2 und Hirtius Bell. Alex. 8, 2</span>. <span id="ldlt-balex:0.1.0.2.4.1.42.3" class="t-title s-1-inline" data-el="title">Philologus</span>
-                     <span id="ldlt-balex:0.1.0.2.4.1.42.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">42</span> (<span id="ldlt-balex:0.1.0.2.4.1.42.5" class="t-date s-2-date" data-el="date">1883</span>): <span id="ldlt-balex:0.1.0.2.4.1.42.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">773–77</span>. <span id="ldlt-balex:0.1.0.2.4.1.42.7" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/njp.32101076472131?urlappend=%3Bseq=785"></span>.</div>
+                     <span id="ldlt-balex:0.1.0.2.4.1.42.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">42</span> (<span id="ldlt-balex:0.1.0.2.4.1.42.5" class="t-date s-2-date" data-el="date">1883</span>): <span id="ldlt-balex:0.1.0.2.4.1.42.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">773–77</span>. <a id="ldlt-balex:0.1.0.2.4.1.42.7" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/njp.32101076472131?urlappend=%3Bseq=785" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/njp.32101076472131?urlappend=%3Bseq=785">hdl.handle.net/2027/njp.32101076472131?urlappend=%3Bseq=785</a>.</div>
 
                   <div id="Schiller1889" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.43.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Schiller
                         1889</span> <span id="ldlt-balex:0.1.0.2.4.1.43.1" class="t-author s-1-bibliografia" data-el="author">Schiller, Heinrich</span>. Review of <span id="ldlt-balex:0.1.0.2.4.1.43.2" class="t-ref s-2-corrispondenza" data-el="ref" data-target="#Schneider">Schneider (1888)</span>. <span id="ldlt-balex:0.1.0.2.4.1.43.3" class="t-title s-1-inline" data-el="title">Berliner
                         philologische Wochenschrift</span>
-                     <span id="ldlt-balex:0.1.0.2.4.1.43.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">9</span> (<span id="ldlt-balex:0.1.0.2.4.1.43.5" class="t-date s-2-date" data-el="date">1889</span>): <span id="ldlt-balex:0.1.0.2.4.1.43.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">306–10</span>. <span id="ldlt-balex:0.1.0.2.4.1.43.7" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/inu.30000006512101?urlappend=%3Bseq=169"></span>.</div>
+                     <span id="ldlt-balex:0.1.0.2.4.1.43.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">9</span> (<span id="ldlt-balex:0.1.0.2.4.1.43.5" class="t-date s-2-date" data-el="date">1889</span>): <span id="ldlt-balex:0.1.0.2.4.1.43.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">306–10</span>. <a id="ldlt-balex:0.1.0.2.4.1.43.7" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/inu.30000006512101?urlappend=%3Bseq=169" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/inu.30000006512101?urlappend=%3Bseq=169">hdl.handle.net/2027/inu.30000006512101?urlappend=%3Bseq=169</a>.</div>
 
                   <div id="Schiller1890a" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.44.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Schiller
                         1890a</span> <span id="ldlt-balex:0.1.0.2.4.1.44.1" class="t-author s-1-bibliografia" data-el="author">Schiller, Heinrich</span>. <span id="ldlt-balex:0.1.0.2.4.1.44.2" class="t-title s-1-inline" data-el="title">Vom
                         Ursprung des Bellum Alexandrinum</span>. <span id="ldlt-balex:0.1.0.2.4.1.44.3" class="t-title s-1-inline" data-el="title">Blätter für das
                         Bayerische Gymnasialschulwesen</span>
-                     <span id="ldlt-balex:0.1.0.2.4.1.44.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">26</span> (<span id="ldlt-balex:0.1.0.2.4.1.44.5" class="t-date s-2-date" data-el="date">1890</span>): <span id="ldlt-balex:0.1.0.2.4.1.44.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">242–51, 393–400, 511–23</span>. <span id="ldlt-balex:0.1.0.2.4.1.44.7" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/njp.32101073027086?urlappend=%3Bseq=256"></span>.</div>
+                     <span id="ldlt-balex:0.1.0.2.4.1.44.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">26</span> (<span id="ldlt-balex:0.1.0.2.4.1.44.5" class="t-date s-2-date" data-el="date">1890</span>): <span id="ldlt-balex:0.1.0.2.4.1.44.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">242–51, 393–400, 511–23</span>. <a id="ldlt-balex:0.1.0.2.4.1.44.7" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/njp.32101073027086?urlappend=%3Bseq=256" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/njp.32101073027086?urlappend=%3Bseq=256">hdl.handle.net/2027/njp.32101073027086?urlappend=%3Bseq=256</a>.</div>
 
                   <div id="Schiller1890b" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.45.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Schiller
                         1890b</span> <span id="ldlt-balex:0.1.0.2.4.1.45.1" class="t-author s-1-bibliografia" data-el="author">Schiller, Heinrich</span>. Review of <span id="ldlt-balex:0.1.0.2.4.1.45.2" class="t-ref s-2-corrispondenza" data-el="ref" data-target="#Hoffmann1890">Hoffmann (1890)</span>. <span id="ldlt-balex:0.1.0.2.4.1.45.3" class="t-title s-1-inline" data-el="title">Blätter für
                         das Bayerische Gymnasialschulwesen</span>
-                     <span id="ldlt-balex:0.1.0.2.4.1.45.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">26</span> (<span id="ldlt-balex:0.1.0.2.4.1.45.5" class="t-date s-2-date" data-el="date">1890</span>): <span id="ldlt-balex:0.1.0.2.4.1.45.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">535–43</span>. <span id="ldlt-balex:0.1.0.2.4.1.45.7" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/njp.32101073027086?urlappend=%3Bseq=549"></span>.</div>
+                     <span id="ldlt-balex:0.1.0.2.4.1.45.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">26</span> (<span id="ldlt-balex:0.1.0.2.4.1.45.5" class="t-date s-2-date" data-el="date">1890</span>): <span id="ldlt-balex:0.1.0.2.4.1.45.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">535–43</span>. <a id="ldlt-balex:0.1.0.2.4.1.45.7" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/njp.32101073027086?urlappend=%3Bseq=549" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/njp.32101073027086?urlappend=%3Bseq=549">hdl.handle.net/2027/njp.32101073027086?urlappend=%3Bseq=549</a>.</div>
 
                   <div id="Stadler" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.46.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Stadler</span> <span id="ldlt-balex:0.1.0.2.4.1.46.1" class="t-author s-1-bibliografia" data-el="author">Stadler,
                         O</span>. <span id="ldlt-balex:0.1.0.2.4.1.46.2" class="t-title s-1-inline" data-el="title">Zu lateinischen Schriftstellern</span>. <span id="ldlt-balex:0.1.0.2.4.1.46.3" class="t-title s-1-inline" data-el="title">Berliner philologische Wochenschrift</span>
-                     <span id="ldlt-balex:0.1.0.2.4.1.46.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">27.35</span> (<span id="ldlt-balex:0.1.0.2.4.1.46.5" class="t-date s-2-date" data-el="date">1907</span>): <span id="ldlt-balex:0.1.0.2.4.1.46.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">1119</span>. <span id="ldlt-balex:0.1.0.2.4.1.46.7" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/uiug.30112023962035?urlappend=%3Bseq=578"></span>.</div>
+                     <span id="ldlt-balex:0.1.0.2.4.1.46.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">27.35</span> (<span id="ldlt-balex:0.1.0.2.4.1.46.5" class="t-date s-2-date" data-el="date">1907</span>): <span id="ldlt-balex:0.1.0.2.4.1.46.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">1119</span>. <a id="ldlt-balex:0.1.0.2.4.1.46.7" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/uiug.30112023962035?urlappend=%3Bseq=578" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/uiug.30112023962035?urlappend=%3Bseq=578">hdl.handle.net/2027/uiug.30112023962035?urlappend=%3Bseq=578</a>.</div>
 
                   <div id="Stark" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.47.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Stark</span> <span id="ldlt-balex:0.1.0.2.4.1.47.1" class="t-author s-1-bibliografia" data-el="author">Stark,
                         Rudolf</span>. <span id="ldlt-balex:0.1.0.2.4.1.47.2" class="t-title s-1-inline" data-el="title"><span id="ldlt-balex:0.1.0.2.4.1.47.2.0" class="t-foreign s-1-inline" data-el="foreign" lang="la">Bellum
@@ -1942,7 +1953,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 
                   <div id="Stoffel" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.48.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Stoffel</span> <span id="ldlt-balex:0.1.0.2.4.1.48.1" class="t-author s-1-bibliografia" data-el="author">Stoffel,
                         E</span>. <span id="ldlt-balex:0.1.0.2.4.1.48.2" class="t-title s-1-inline" data-el="title">Histoire de Jules César, Guerre civile</span>.
-                     2 vols. <span id="ldlt-balex:0.1.0.2.4.1.48.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Paris</span>. <span id="ldlt-balex:0.1.0.2.4.1.48.4" class="t-date s-2-date" data-el="date">1887</span>. <span id="ldlt-balex:0.1.0.2.4.1.48.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://catalog.hathitrust.org/Record/001193303"></span>.</div>
+                     2 vols. <span id="ldlt-balex:0.1.0.2.4.1.48.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Paris</span>. <span id="ldlt-balex:0.1.0.2.4.1.48.4" class="t-date s-2-date" data-el="date">1887</span>. <a id="ldlt-balex:0.1.0.2.4.1.48.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://catalog.hathitrust.org/Record/001193303" target="_blank" rel="noopener" data-el="ptr" data-target="https://catalog.hathitrust.org/Record/001193303">catalog.hathitrust.org/Record/001193303</a>.</div>
 
                   <div id="Talbert" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.49.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Talbert</span> <span id="ldlt-balex:0.1.0.2.4.1.49.1" class="t-editor s-1-bibliografia" data-el="editor">Talbert, R.J.A.,
                         ed.</span>
@@ -1956,7 +1967,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="Turnebus" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.51.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Turnebus</span> <span id="ldlt-balex:0.1.0.2.4.1.51.1" class="t-author s-1-bibliografia" data-el="author">Turnèbe,
                         Adrien</span>. <span id="ldlt-balex:0.1.0.2.4.1.51.2" class="t-title s-1-inline" data-el="title">Adriani Turnebi adversariorum tomus
                         secundus duodecim libros continens</span>. <span id="ldlt-balex:0.1.0.2.4.1.51.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Paris</span>.
-                        <span id="ldlt-balex:0.1.0.2.4.1.51.4" class="t-date s-2-date" data-el="date">1565</span>. 36. <span id="ldlt-balex:0.1.0.2.4.1.51.5" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/ucm.5317950051?urlappend=%3Bseq=87"></span>.</div>
+                        <span id="ldlt-balex:0.1.0.2.4.1.51.4" class="t-date s-2-date" data-el="date">1565</span>. 36. <a id="ldlt-balex:0.1.0.2.4.1.51.5" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/ucm.5317950051?urlappend=%3Bseq=87" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/ucm.5317950051?urlappend=%3Bseq=87">hdl.handle.net/2027/ucm.5317950051?urlappend=%3Bseq=87</a>.</div>
 
                   <div id="Vielhaber1864" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.52.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Vielhaber
                         1864</span> <span id="ldlt-balex:0.1.0.2.4.1.52.1" class="t-author s-1-bibliografia" data-el="author">Vielhaber, Leopold</span>. <span id="ldlt-balex:0.1.0.2.4.1.52.2" class="t-title s-1-inline" data-el="title">Beiträge zur Kritik
@@ -1966,7 +1977,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <div id="Vielhaber1869" class="t-bibl s-1-bibliografia" data-el="bibl"><span id="ldlt-balex:0.1.0.2.4.1.53.0" class="t-abbr s-3-editoriale" data-el="abbr" data-type="siglum">Vielhaber
                         1869</span> <span id="ldlt-balex:0.1.0.2.4.1.53.1" class="t-author s-1-bibliografia" data-el="author">Vielhaber, Leopold</span>. Review of <span id="ldlt-balex:0.1.0.2.4.1.53.2" class="t-ref s-2-corrispondenza" data-el="ref" data-target="#Dübner">Dübner (1867)</span>. <span id="ldlt-balex:0.1.0.2.4.1.53.3" class="t-title s-1-inline" data-el="title">Zeitschrift für die
                         österreichischen Gymnasien</span>
-                     <span id="ldlt-balex:0.1.0.2.4.1.53.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">20</span> (<span id="ldlt-balex:0.1.0.2.4.1.53.5" class="t-date s-2-date" data-el="date">1869</span>): <span id="ldlt-balex:0.1.0.2.4.1.53.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">541–76</span>. <span id="ldlt-balex:0.1.0.2.4.1.53.7" class="t-ptr s-2-corrispondenza" data-el="ptr" data-target="https://hdl.handle.net/2027/hvd.32044098632391?urlappend=%3Bseq=649"></span>.</div>
+                     <span id="ldlt-balex:0.1.0.2.4.1.53.4" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">20</span> (<span id="ldlt-balex:0.1.0.2.4.1.53.5" class="t-date s-2-date" data-el="date">1869</span>): <span id="ldlt-balex:0.1.0.2.4.1.53.6" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="page">541–76</span>. <a id="ldlt-balex:0.1.0.2.4.1.53.7" class="t-ptr s-2-corrispondenza ent-ext" href="https://hdl.handle.net/2027/hvd.32044098632391?urlappend=%3Bseq=649" target="_blank" rel="noopener" data-el="ptr" data-target="https://hdl.handle.net/2027/hvd.32044098632391?urlappend=%3Bseq=649">hdl.handle.net/2027/hvd.32044098632391?urlappend=%3Bseq=649</a>.</div>
                </div>
             </div>
 
@@ -2614,7 +2625,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
          </div>
          
       </div></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.1 · 370db8e · 2026-07-31</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.2 · 370db8e · 2026-08-01</footer>
 <script>
 (function(){
   var T={"edition":"Edition","text":"Text","indices":"Indices","data":"Data","archive":"Archive","dsa":"digital archive","texts":"Texts","reading":"Reading","diplomatic":"Diplomatic","apparatus":"Apparatus","aboutFile":"About this file","notes":"Notes","dse":"digital scholarly edition","responsibility":"Responsibility","licence":"Licence","witnesses":"Witnesses","apparatusRegisters":"Apparatus","revisions":"Revision history","generator":"Generator","people":"People","places":"Places","orgs":"Organisations","occurrenceOne":"occurrence","occurrenceMany":"occurrences","entries":"entries","skip":"Skip to content","publishedWith":"Published with","map":"Map","lab":"Lab","labAnalyses":"Analyses","labIntro":"The analytical layer, kept apart from the edition: the indices, the quantitative analysis, the lemmas, the map — derived from the text, not attested by it. Choose one above.","labLexDesc":"Frequencies, concordance (KWIC) and the token / type / TTR count.","labMapDesc":"The places that carry coordinates.","mapAria":"Map of the places of the edition","mapNote":"Positional sketch. Filled dots: coordinates declared in the TEI or confirmed by the editor. Hollow dots: gazetteer suggestions awaiting review. Each place links to OpenStreetMap. Coastlines: Natural Earth (public domain).","front":"Front matter","back":"Back matter","lacking":"lacking in","editedText":"edited text","genesis":"Genesis","hand":"hand","version":"version","legend":"Legend","legWord":"word","legDel":"deleted by the writing hand","legAdd":"added above the line","legUnclear":"uncertain reading","legSupplied":"supplied by the editor","legGap":"lost or illegible","legPb":"page break of the source","legMetamark":"a mark of the hand about the text (^ = insert here; hover each mark to read what it does)","legApp":"variant readings: click for the apparatus","legNote":"note mark","legHands":"Hands","legAllHands":"all","legHand":"the hand of","idxSearch":"search a name…","backToTop":"back to top","apparatusCritical":"critical: variants between witnesses","apparatusGenetic":"genetic: the strata of one manuscript in time","apparatusBoth":"critical and genetic: witnesses to collate, strata within them","legMajor":"main hand","lexicon":"Lexicon","lexTokens":"running words","lexForms":"distinct forms","lexTTR":"type-token ratio","lexSearch":"search a word…","lexFrequencies":"Frequencies","lexConcordance":"Concordance","lexPick":"Pick a word to see it in context.","lexLanguage":"Language","lexAllLangs":"all","lexStoplist":"Stopwords","lexDocument":"Document","lexWholeEdition":"all documents","lexStopNone":"none","lexHideStop":"hide stopwords","lexWord":"word","lexLang":"lang","descrFrequencies":"Every attested form with its count, its share per thousand and whether the stopword list you chose covers it.","descrConcordance":"Every occurrence of every form, with the words around it and the anchor back into the text.","descrLemmaConcordance":"The same evidence grouped under the dictionary form, where the edition has lemmas.","lexAbs":"count","lexRel":"per 1000","lexStats":"Lexical statistics","lexStopCol":"stop","lexStopNote":"Frequencies drop the stopwords you choose; the concordance keeps every word.","genesisNote":"The campaigns of correction the edition declares, in its own order, with the writing operations attributed to each. Every operation links to the place where it happened.","agreement":"Agreement between witnesses","agreementNote":"How often two witnesses carry the same reading. Evidence for a stemma, which remains the editor’s argument.","openPage":"open the page","sectionsN":"sections","sectionOne":"Section","contents":"Contents","bookLabel":"Book","register":"Register","documentsN":"documents","dateCol":"Date","fromCol":"From","toCol":"To","authorCol":"Author","placeCol":"Place","titleCol":"Title","idnoCol":"Ref.","filter":"Filter…","prev":"‹ previous","next":"next ›","fullHeader":"The full header (teiHeader)","fullHeaderNote":"Everything the file declares, rendered as it is.","reuse":"Reuse under the edition licence (see the Edition page).","appEntry":"apparatus entry","descrModel":"the edition model: documents, registries, apparatus (JSON)","descrEntities":"people, places and organisations with occurrence counts and coordinates","descrApparatus":"every apparatus reading with its witnesses, one row per reading","descrSource":"the unmodified TEI source file","lemmas":"Lemmas","lemmaCoverage":"Coverage","tokensWord":"tokens","languagesLabel":"Languages","yearsLabel":"Years","contributorsLabel":"Contributors","interventionsWord":"interventions","licenceVariesNote":"each document declares its own licence, shown on its page","lemmaFromMarkup":"from the markup (w/@lemma)","lemmaFromFile":"from lemmas.json","lemmaPending":"types awaiting the editor’s review","formsLabel":"forms","moreOccurrences":"more occurrences not shown here","descrLemmas":"every lemma with its forms and counts, one row per form","descrTokens":"the token stream of the reading text: position, language, form, lemma, anchor"};
@@ -2799,7 +2810,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
     if(app)return [app];
     var t=n.dataset.target;
     if(t){
-      var els=t.split(/s+/).map(function(x){return document.getElementById(x.replace(/^#/,''));}).filter(Boolean);
+      var els=t.split(/\s+/).map(function(x){return document.getElementById(x.replace(/^#/,''));}).filter(Boolean);
       if(els.length)return els;
     }
     var m=n.previousElementSibling;
@@ -2860,7 +2871,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
               if(el){
                 var cl=el.cloneNode(true);
                 cl.querySelectorAll('[data-el="abbr"],[data-el="orig"],[data-el="sic"],[data-el="am"],.t-note,.t-note-mark,.app-band').forEach(function(x){x.remove();});
-                txt=cl.textContent.replace(/s+/g,' ').trim();
+                txt=cl.textContent.replace(/\s+/g,' ').trim();
               }
               openPop('<span class="k">'+esc(sig)+'</span>'
                 +'<div class="notebody">'+(txt?esc(txt):'…')+'</div>'
@@ -2888,7 +2899,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       });
       var extra='';
       app.querySelectorAll('.t-note').forEach(function(nn){
-        extra+='<div class="meta">'+esc(nn.textContent.replace(/s+/g,' ').trim())+'</div>';
+        extra+='<div class="meta">'+esc(nn.textContent.replace(/\s+/g,' ').trim())+'</div>';
       });
       openPop('<span class="k">'+esc(T.apparatus.toLowerCase())+''+(app.dataset.type?' · '+esc(app.dataset.type):'')+'</span>'+rows+extra,app);
       ev.stopPropagation();return;
@@ -2929,7 +2940,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       var lab=(op.dataset.change||'').replace(/^#/,''), hd=(op.dataset.hand||'').replace(/^#/,'');
       var strat=lab?document.querySelector('[data-el="change"][id$="'+lab+'"]'):null;
       openPop('<span class="k">'+esc(op.dataset.el)+'</span>'
-        +'<div class="notebody">'+esc(op.textContent.replace(/s+/g,' ').trim().slice(0,140))+'</div>'
+        +'<div class="notebody">'+esc(op.textContent.replace(/\s+/g,' ').trim().slice(0,140))+'</div>'
         +'<div class="meta">'+(lab?esc(lab):'')+(hd?' · '+esc(hd):'')
         +' <a href="genesis.html">'+esc(T.genesis)+'</a></div>',op);
       ev.stopPropagation();return;
@@ -3014,7 +3025,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       if(app){return {el:app.querySelector('[data-el="lem"]')||app,kind:'app'};}
       var t=n.dataset.target;
       if(t){
-        var id=t.split(/s+/)[0].replace(/^#/,'');
+        var id=t.split(/\s+/)[0].replace(/^#/,'');
         var el=document.getElementById(id);
         if(el)return {el:el,kind:'target'};
       }
@@ -3050,7 +3061,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
            its mark goes to the passage, not to the place it was written */
         var tg=n.dataset.target;
         if(tg&&mk){
-          var id=tg.split(/s+/)[0].replace(/^#/,'');
+          var id=tg.split(/\s+/)[0].replace(/^#/,'');
           var dest=document.getElementById(id);
           if(dest&&!dest.contains(mk)){
             if(dest.nextSibling)dest.parentNode.insertBefore(mk,dest.nextSibling);
@@ -3064,17 +3075,32 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
         if(el&&el!==mk){el.setAttribute('data-notepop',String(i));makeTrigger(el,null);}
       });
     }
-    if(window.innerWidth<1180||body.classList.contains('notes-off')||dense){
+    var old=document.getElementById('note-leaders'); if(old)old.remove();
+    /* the notes go into BOTH margins: each takes the side that carries it
+       closest to its mark, so a long text with many notes fills the two
+       gutters instead of collapsing to popups. The economy rule is applied
+       per note, not to the whole page: only a note that neither side can hold
+       near its anchor (its stack would push it past MAXDRIFT) collapses to its
+       mark and opens on click. The two columns keep their own running bottom */
+    main.style.position='relative';
+    var mr=main.getBoundingClientRect();
+    var remPx=parseFloat(getComputedStyle(document.documentElement).fontSize)||16;
+    var noteW=14*remPx;
+    /* margins carry the notes only when a gutter can actually hold one. The
+       page is centred, so both gutters are the same width; too narrow, or
+       notes off, and every note collapses to its mark. This is the real cause
+       of notes landing on the text: a margin too thin for what it was asked to
+       hold. Measured, not guessed at a fixed breakpoint */
+    if(mr.left<noteW+26||body.classList.contains('notes-off')){
       notes.forEach(function(n){n.classList.remove('placed');n.style.cssText='';});
       return;
     }
-    main.style.position='relative';
-    var mr=main.getBoundingClientRect();
-    var colLeft=main.clientWidth+26;
+    var colR=main.clientWidth+26;   // right column: the note extends into the right gutter
+    var colL=-(noteW+26);           // left column: the note sits in the left gutter
+    var GAP=10, MAXDRIFT=340;
     var svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
     svg.id='note-leaders';
     svg.style.cssText='position:absolute;left:0;top:0;width:1px;height:1px;pointer-events:none;overflow:visible;z-index:1';
-    var lastBottom=0;
     var items=notes.map(function(n){
       var flowY=n.getBoundingClientRect().top-mr.top;
       var res=anchorOf(n);
@@ -3083,28 +3109,45 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       if(a){
         var r=a.getBoundingClientRect();
         var ay=(r.width||r.height)?r.top-mr.top:null;
-        if(ay!==null&&(kind!=='mark'||ay<flowY-40)){y=ay;}
-        else if(kind==='mark'){/* adjacent: keep flow position, no line */}
+        // the anchor's own position is the truth: the note is hidden inline
+        // when dense, so its flow position is meaningless. Align to the mark
+        // (or the standoff target) wherever it sits on the page
+        if(ay!==null){y=ay;}
         else{a=null;}
       }
       return {n:n,a:a,kind:kind,y:y};
     });
     items.sort(function(p,q){return p.y-q.y;});
+    var botL=0, botR=0, maxBottom=0;
     items.forEach(function(it){
       var n=it.n;
+      var topR=Math.max(it.y,botR+GAP), topL=Math.max(it.y,botL+GAP);
+      // the right margin is primary; the left takes the overflow only when the
+      // right is backed up (it would push the note more than a line below its
+      // mark) and the left carries it closer. So a lightly annotated text keeps
+      // one margin, and a dense one like this grammar spreads over both
+      var side=(topR-it.y<=26)?'R':(topL<topR?'L':'R');
+      var top=side==='L'?topL:topR;
+      if(top-it.y>MAXDRIFT){ n.classList.remove('placed'); n.style.cssText=''; return; }
       n.classList.add('placed');
-      var top=Math.max(it.y,lastBottom+10);
-      n.style.cssText='position:absolute;float:none;width:14rem;margin:0;left:'+colLeft+'px;top:'+top+'px;border-left:0;padding-left:0';
-      lastBottom=top+n.offsetHeight;
+      var left=side==='L'?colL:colR;
+      n.style.cssText='position:absolute;float:none;width:14rem;margin:0;left:'+left+'px;top:'+top+'px;border-left:0;padding-left:0';
+      var h=n.offsetHeight;
+      if(side==='L')botL=top+h; else botR=top+h;
+      if(top+h>maxBottom)maxBottom=top+h;
       if(it.a){
         var ar=it.a.getBoundingClientRect();
         if(ar.width||ar.height){
-          var x1=ar.right-mr.left+2, y1=ar.top-mr.top+ar.height*0.5;
-          var x2=colLeft-8, y2=top+8;
-          // a thread only when short and meaningful; never across the page
-          if((it.kind==='app'||it.kind==='target')&&Math.abs(y2-y1)<160){
+          var y1=ar.top-mr.top+ar.height*0.5, y2=top+8, x1,x2,cx1,cx2;
+          if(side==='L'){ x1=ar.left-mr.left-2; x2=left+noteW+8; cx1=x1-24; cx2=x2+24; }
+          else { x1=ar.right-mr.left+2; x2=left-8; cx1=x1+24; cx2=x2-24; }
+          // a thread where the eye needs it: the note is pushed below its mark
+          // by the stack, so a short faint curve reconnects them. Where the
+          // note sits at its mark's height (drift near zero) the alignment is
+          // the connection and a line would only clutter; never across the page
+          if(Math.abs(y2-y1)>14&&Math.abs(y2-y1)<200){
             var p=document.createElementNS('http://www.w3.org/2000/svg','path');
-            p.setAttribute('d','M'+x1+' '+y1+' C '+(x1+24)+' '+y1+', '+(x2-24)+' '+y2+', '+x2+' '+y2);
+            p.setAttribute('d','M'+x1+' '+y1+' C '+cx1+' '+y1+', '+cx2+' '+y2+', '+x2+' '+y2);
             p.setAttribute('fill','none');
             p.setAttribute('stroke','var(--faint)');
             p.setAttribute('stroke-width','1');
@@ -3122,7 +3165,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
         }
       }
     });
-    if(items.length){main.style.minHeight=(lastBottom+32)+'px';}
+    if(maxBottom)main.style.minHeight=(maxBottom+32)+'px';
     main.appendChild(svg);
   }
   if(document.readyState==='complete')leaders();
