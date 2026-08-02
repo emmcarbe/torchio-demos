@@ -175,7 +175,7 @@ body.mode-read .t-lb::after{content:" "}
 body.mode-read .t-lb[data-break="no"]::after{content:none}
 body.mode-read .t-add{vertical-align:baseline;font-size:inherit}
 
-.torchio-nav{display:flex;gap:22px;margin-left:auto}
+.torchio-nav{display:flex;flex-wrap:wrap;gap:22px;margin-left:auto;min-width:0}
 .torchio-nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;
   color:var(--soft);text-transform:uppercase}
 .torchio-nav a.on{color:var(--accent)}
@@ -187,6 +187,13 @@ body.mode-read .t-add{vertical-align:baseline;font-size:inherit}
 .torchio-nav a:hover{color:var(--ink);text-decoration:none}
 header.torchio{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:baseline}
 header.torchio .tt{min-width:14rem}
+@media(max-width:540px){
+  header.torchio{align-items:flex-start}
+  header.torchio .tt{min-width:0;width:100%}
+  .torchio-nav{width:100%;margin-left:0;gap:8px 20px}
+  .torchio-subnav{gap:8px 18px}
+  ol.toc{columns:1}
+}
 .about dt{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.14em;
   text-transform:uppercase;color:var(--soft);margin-top:1.2em}
 .about dd{margin:0.3em 0 0}
@@ -369,62 +376,62 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 .kwic .ka{color:var(--soft);width:40%}
 </style>
 </head>
-<body>
+<body id="top">
 <a class="skip" href="#main">Skip to content</a>
 <header class="torchio">
 <div class="tt"><h1>Bellum Alexandrinum</h1><p class="sub">ed. Cynthia Damon et al. · Digital Latin Library · CC BY-SA 4.0 · beta pending SCS peer review</p></div>
-<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html" class="on">Edition</a><a href="front.html">Front matter</a><a href="text.html">Text</a><a href="back.html">Back matter</a><a href="data.html">Data</a></nav>
+<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html" class="on">Edition</a><a href="front.html">Front matter</a><a href="text.html">Text</a><a href="apparatus.html">Apparatus</a><a href="back.html">Back matter</a><a href="data.html">Data</a></nav>
 </header>
 
 <main id="main" class="torchio about"><dl><dt>Edition</dt><dd>First Edition</dd><dt>Responsibility</dt><dd>Cynthia Damon, et al. · Samuel J. Huskey · Virgina K. Felkner · Dallas Simons · Tom Vozar · Marcie Persyn · Maria Kovalchuk · Tim Warnock · Isabella Reinhardt · Brian Credo · Amelia Bensch-Schaus · Wes Hanson</dd><dt>Licence</dt><dd><a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">Creative Commons Attribution-ShareAlike 4.0 International Licence (CC BY-SA 4.0)</a></dd><dt>Witnesses</dt><dd><table class="wit-table"><tr><td class="sigla">ω</td><td>ω Common source of μ Common source of M and U ν Common source of S and π</td></tr><tr><td class="sigla">μ</td><td>μ Common source of M and U</td></tr><tr><td class="sigla">ν</td><td>ν Common source of S and π</td></tr><tr><td class="sigla">M</td><td>M Florence, BML Plut. lat 68.8 (s. xii4 or xiii1) <a href="http://teca.bmlonline.it/ImageViewer/servlet/ImageViewer?idr=TECA0000807118#page/1/mode/1up">http://teca.bmlonline.it/ImageViewer/servlet/ImageViewer?idr=TECA0000807118#page/1/mode/1up</a> Hands in M Mac The uncorrected reading in M. Equivalent to M. Mc Corrections by the original scribe, who usually recovers the reading of the exemplar. Mmr Corrections by one or more later hands (manus recentior), sometimes recovering the exemplar, sometimes not. M* An asterisk marks readings in M that prompted a correction—not necessarily a successful one—by Mmr.</td></tr><tr><td class="sigla">Mac</td><td>Mac The uncorrected reading in M. Equivalent to M.</td></tr><tr><td class="sigla">Mc</td><td>Mc Corrections by the original scribe, who usually recovers the reading of the exemplar.</td></tr><tr><td class="sigla">Mmr</td><td>Mmr Corrections by one or more later hands (manus recentior), sometimes recovering the exemplar, sometimes not.</td></tr><tr><td class="sigla">M8</td><td>M* An asterisk marks readings in M that prompted a correction—not necessarily a successful one—by Mmr.</td></tr><tr><td class="sigla">U</td><td>U Vatican, BAV Vat. lat. 3324 (s. xi4 or xii1) Hands in U Uac The uncorrected reading in U. Equivalent to U. Uc Corrections by the original scribe or a close contemporary.</td></tr><tr><td class="sigla">Uac</td><td>Uac The uncorrected reading in U. Equivalent to U.</td></tr><tr><td class="sigla">Uc</td><td>Uc Corrections by the original scribe or a close contemporary.</td></tr><tr><td class="sigla">S</td><td>S Florence, BML Ashburnham 33 (s. x2–3) Hands in S Sac The uncorrected reading in S, Equivalent to S. Sc Corrections made by the original scribe or a close contemporary.</td></tr><tr><td class="sigla">Sac</td><td>Sac The uncorrected reading in S, Equivalent to S.</td></tr><tr><td class="sigla">Sc</td><td>Sc Corrections made by the original scribe or a close contemporary.</td></tr><tr><td class="sigla">π</td><td>π Common source of T and V. T Paris, BNF lat. 5764 (s. xi3–4). <a href="http://gallica.bnf.fr/ark:/12148/btv1b10542010c">http://gallica.bnf.fr/ark:/12148/btv1b10542010c</a> Hands in T Tac The uncorrected reading in T, Equivalent to T. Tc Corrections made by the original scribe or a close contemporary. V Vienna, ÖN 95 (s. xii) Hands in V Vac The uncorrected reading in V. Equivalent to V. Vc Corrections made by the original scribe or a close contemporary.</td></tr><tr><td class="sigla">T</td><td>T Paris, BNF lat. 5764 (s. xi3–4). <a href="http://gallica.bnf.fr/ark:/12148/btv1b10542010c">http://gallica.bnf.fr/ark:/12148/btv1b10542010c</a> Hands in T Tac The uncorrected reading in T, Equivalent to T. Tc Corrections made by the original scribe or a close contemporary.</td></tr><tr><td class="sigla">Tac</td><td>Tac The uncorrected reading in T, Equivalent to T.</td></tr><tr><td class="sigla">Tc</td><td>Tc Corrections made by the original scribe or a close contemporary.</td></tr><tr><td class="sigla">V</td><td>V Vienna, ÖN 95 (s. xii) Hands in V Vac The uncorrected reading in V. Equivalent to V. Vc Corrections made by the original scribe or a close contemporary.</td></tr><tr><td class="sigla">Vac</td><td>Vac The uncorrected reading in V. Equivalent to V.</td></tr><tr><td class="sigla">Vc</td><td>Vc Corrections made by the original scribe or a close contemporary.</td></tr><tr><td class="sigla">N</td><td>N Naples, BN IV.C.11 (s. xi), cited where S is lacunose.</td></tr><tr><td class="sigla">stigma</td><td>ϛ A reading found in one or more later manuscripts.</td></tr><tr><td class="sigla">edprin</td><td>ed. pr. G. Bussi, ed. Romae: In domo Petri de Maximis [= Sweynheym and Pannartz]. 12 May 1469. URL: <a href="http://daten.digitale-sammlungen.de/~db/0006/bsb00064880/images/">http://daten.digitale-sammlungen.de/~db/0006/bsb00064880/images/</a></td></tr><tr><td class="sigla">Aldus</td><td>Aldus G. Giocondo, ed. Venice. 1513. URL: <a href="http://digital.onb.ac.at/OnbViewer/viewer.faces?doc=ABO_%2BZ221957000">http://digital.onb.ac.at/OnbViewer/viewer.faces?doc=ABO_%2BZ221957000</a></td></tr><tr><td class="sigla">Beroaldus</td><td>Beroaldus P. Beroaldus, ed. Caii Iulii Caesaris commentarios Belli Gallici, Ciuilis Pompeiani, Alexandrini, Africi, ac Hispaniensis. Bologna. 1504. URL: <a href="http://reader.digitale-sammlungen.de/de/fs1/object/display/bsb10140427_00001.html">http://reader.digitale-sammlungen.de/de/fs1/object/display/bsb10140427_00001.html</a></td></tr></table></dd><dt>Agreement between witnesses</dt><dd><table class="wit-table"><tr><td class="sigla">T · V</td><td><span class="agree-bar" style="width:100%"></span></td><td class="occ">456</td></tr><tr><td class="sigla">M · U</td><td><span class="agree-bar" style="width:99%"></span></td><td class="occ">453</td></tr><tr><td class="sigla">T · U</td><td><span class="agree-bar" style="width:82%"></span></td><td class="occ">372</td></tr><tr><td class="sigla">S · T</td><td><span class="agree-bar" style="width:80%"></span></td><td class="occ">367</td></tr><tr><td class="sigla">U · V</td><td><span class="agree-bar" style="width:79%"></span></td><td class="occ">358</td></tr><tr><td class="sigla">S · U</td><td><span class="agree-bar" style="width:78%"></span></td><td class="occ">356</td></tr><tr><td class="sigla">S · V</td><td><span class="agree-bar" style="width:77%"></span></td><td class="occ">350</td></tr><tr><td class="sigla">M · V</td><td><span class="agree-bar" style="width:74%"></span></td><td class="occ">338</td></tr><tr><td class="sigla">M · T</td><td><span class="agree-bar" style="width:73%"></span></td><td class="occ">332</td></tr><tr><td class="sigla">M · S</td><td><span class="agree-bar" style="width:71%"></span></td><td class="occ">323</td></tr><tr><td class="sigla">M · Tc</td><td><span class="agree-bar" style="width:2%"></span></td><td class="occ">10</td></tr><tr><td class="sigla">M · Uc</td><td><span class="agree-bar" style="width:2%"></span></td><td class="occ">9</td></tr></table><p class="occ">How often two witnesses carry the same reading. Evidence for a stemma, which remains the editor’s argument.</p></dd><dt>Apparatus</dt><dd>critical (563 entries) · split-entry (3 entries) · transposition (1 entries)</dd><dt>Generator</dt><dd class="occ">Torchio v0 · TEI P5 Version 4.12</dd></dl><h2 class="sec">The full header (teiHeader)</h2><p class="occ">Everything the file declares, rendered as it is.</p><div class="header-full"><div id="ldlt-balex:0.0" class="t-teiHeader s-7-header" data-el="teiHeader">
       <div id="ldlt-balex:0.0.0" class="t-fileDesc s-7-header" data-el="fileDesc">
          <span id="ldlt-balex:0.0.0.0" class="t-titleStmt s-7-header" data-el="titleStmt">
-            <span id="ldlt-balex:0.0.0.0.0" class="t-title s-1-inline" data-el="title">Bellum Alexandrinum</span>
+            <span id="ldlt-balex:0.0.0.0.0" class="t-title s-1-inline" data-el="title" data-behaviour="inline" data-behaviour-source="tei-all">Bellum Alexandrinum</span>
             <span id="ldlt-balex:0.0.0.0.1" class="t-editor s-1-bibliografia" data-el="editor" data-ref="http://viaf.org/viaf/116523553">Cynthia Damon, et al.</span>
             <span id="ldlt-balex:0.0.0.0.2" class="t-sponsor s-1-bibliografia" data-el="sponsor">Society for Classical Studies</span>
             <span id="ldlt-balex:0.0.0.0.3" class="t-respStmt s-1-bibliografia" data-el="respStmt">
                <span id="ldlt-balex:0.0.0.0.3.0" class="t-resp s-1-struttura" data-el="resp">TEI XML encoding:</span>
-               <a id="ldlt-balex:0.0.0.0.3.1" class="t-name s-2-entita ent-ext" href="https://orcid.org/0000-0002-8192-9385" target="_blank" rel="noopener" title="ref: https://orcid.org/0000-0002-8192-9385" data-el="name" data-ref="https://orcid.org/0000-0002-8192-9385">Samuel J. Huskey</a>
+               <a id="ldlt-balex:0.0.0.0.3.1" class="t-name s-2-entita ent-ext" href="https://orcid.org/0000-0002-8192-9385" target="_blank" rel="noopener" title="ref: https://orcid.org/0000-0002-8192-9385" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all" data-ref="https://orcid.org/0000-0002-8192-9385">Samuel J. Huskey</a>
             </span>
             <span id="ldlt-balex:0.0.0.0.4" class="t-respStmt s-1-bibliografia" data-el="respStmt">
                <span id="ldlt-balex:0.0.0.0.4.0" class="t-resp s-1-struttura" data-el="resp">Programming for automatic generation of TEI XML:</span>
-               <span id="ldlt-balex:0.0.0.0.4.1" class="t-name s-2-entita" data-el="name">Virgina K. Felkner</span>
+               <span id="ldlt-balex:0.0.0.0.4.1" class="t-name s-2-entita" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all">Virgina K. Felkner</span>
             </span>
             <span id="ldlt-balex:0.0.0.0.5" class="t-respStmt s-1-bibliografia" data-el="respStmt">
                <span id="ldlt-balex:0.0.0.0.5.0" class="t-resp s-1-struttura" data-el="resp">Coauthor of content related to section 2.5:</span>
-               <span id="ldlt-balex:0.0.0.0.5.1" class="t-name s-2-entita" data-el="name">Dallas Simons</span>
+               <span id="ldlt-balex:0.0.0.0.5.1" class="t-name s-2-entita" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all">Dallas Simons</span>
             </span>
             <span id="ldlt-balex:0.0.0.0.6" class="t-respStmt s-1-bibliografia" data-el="respStmt">
                <span id="ldlt-balex:0.0.0.0.6.0" class="t-resp s-1-struttura" data-el="resp">Coauthor of content related to sections 12.1–2 and 13.5:</span>
-               <span id="ldlt-balex:0.0.0.0.6.1" class="t-name s-2-entita" data-el="name">Tom Vozar</span>
+               <span id="ldlt-balex:0.0.0.0.6.1" class="t-name s-2-entita" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all">Tom Vozar</span>
             </span>
             <span id="ldlt-balex:0.0.0.0.7" class="t-respStmt s-1-bibliografia" data-el="respStmt">
                <span id="ldlt-balex:0.0.0.0.7.0" class="t-resp s-1-struttura" data-el="resp">Coauthor of content related to section 26.1–2:</span>
-               <span id="ldlt-balex:0.0.0.0.7.1" class="t-name s-2-entita" data-el="name">Marcie Persyn</span>
+               <span id="ldlt-balex:0.0.0.0.7.1" class="t-name s-2-entita" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all">Marcie Persyn</span>
             </span>
             <span id="ldlt-balex:0.0.0.0.8" class="t-respStmt s-1-bibliografia" data-el="respStmt">
                <span id="ldlt-balex:0.0.0.0.8.0" class="t-resp s-1-struttura" data-el="resp">Coauthor of content related to sections 35.3 and 36.4–5:</span>
-               <span id="ldlt-balex:0.0.0.0.8.1" class="t-name s-2-entita" data-el="name">Maria Kovalchuk</span>
+               <span id="ldlt-balex:0.0.0.0.8.1" class="t-name s-2-entita" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all">Maria Kovalchuk</span>
             </span>
             <span id="ldlt-balex:0.0.0.0.9" class="t-respStmt s-1-bibliografia" data-el="respStmt">
                <span id="ldlt-balex:0.0.0.0.9.0" class="t-resp s-1-struttura" data-el="resp">Coauthor of content related to sections 47.2, 49.1, and 49.2–3:</span>
-               <span id="ldlt-balex:0.0.0.0.9.1" class="t-name s-2-entita" data-el="name">Tim Warnock</span>
+               <span id="ldlt-balex:0.0.0.0.9.1" class="t-name s-2-entita" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all">Tim Warnock</span>
             </span>
             <span id="ldlt-balex:0.0.0.0.10" class="t-respStmt s-1-bibliografia" data-el="respStmt">
                <span id="ldlt-balex:0.0.0.0.10.0" class="t-resp s-1-struttura" data-el="resp">Coauthor of content related to section 60.2:</span>
-               <span id="ldlt-balex:0.0.0.0.10.1" class="t-name s-2-entita" data-el="name">Isabella Reinhardt</span>
+               <span id="ldlt-balex:0.0.0.0.10.1" class="t-name s-2-entita" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all">Isabella Reinhardt</span>
             </span>
             <span id="ldlt-balex:0.0.0.0.11" class="t-respStmt s-1-bibliografia" data-el="respStmt">
                <span id="ldlt-balex:0.0.0.0.11.0" class="t-resp s-1-struttura" data-el="resp">Coauthor of content related to sections 63.5 and 66.3–4:</span>
-               <span id="ldlt-balex:0.0.0.0.11.1" class="t-name s-2-entita" data-el="name">Brian Credo</span>
+               <span id="ldlt-balex:0.0.0.0.11.1" class="t-name s-2-entita" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all">Brian Credo</span>
             </span>
             <span id="ldlt-balex:0.0.0.0.12" class="t-respStmt s-1-bibliografia" data-el="respStmt">
                <span id="ldlt-balex:0.0.0.0.12.0" class="t-resp s-1-struttura" data-el="resp">Coauthor of content related to sections 67.1 and 68.1:</span>
-               <span id="ldlt-balex:0.0.0.0.12.1" class="t-name s-2-entita" data-el="name">Amelia Bensch-Schaus</span>
+               <span id="ldlt-balex:0.0.0.0.12.1" class="t-name s-2-entita" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all">Amelia Bensch-Schaus</span>
             </span>
             <span id="ldlt-balex:0.0.0.0.13" class="t-respStmt s-1-bibliografia" data-el="respStmt">
                <span id="ldlt-balex:0.0.0.0.13.0" class="t-resp s-1-struttura" data-el="resp">Coauthor of content related to sections 72.2–3 and 74.4:</span>
-               <span id="ldlt-balex:0.0.0.0.13.1" class="t-name s-2-entita" data-el="name">Wes Hanson</span>
+               <span id="ldlt-balex:0.0.0.0.13.1" class="t-name s-2-entita" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all">Wes Hanson</span>
             </span>
          </span>
          <span id="ldlt-balex:0.0.0.1" class="t-editionStmt s-7-header" data-el="editionStmt">
@@ -432,14 +439,14 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
          </span>
          <span id="ldlt-balex:0.0.0.2" class="t-publicationStmt s-7-header" data-el="publicationStmt">
             <span id="ldlt-balex:0.0.0.2.0" class="t-publisher s-1-bibliografia" data-el="publisher">The Digital Latin Library</span>
-            <span id="ldlt-balex:0.0.0.2.1" class="t-address s-1-struttura" data-el="address">
+            <section id="ldlt-balex:0.0.0.2.1" class="t-address s-1-struttura" data-el="address" data-behaviour="section" data-behaviour-source="tei-all">
                <span id="ldlt-balex:0.0.0.2.1.0" class="t-street s-2-entita" data-el="street">650 Parrington Oval</span>
                <span id="ldlt-balex:0.0.0.2.1.1" class="t-addrLine s-2-entita" data-el="addrLine">Carnegie Building 101</span>
-               <span id="ldlt-balex:0.0.0.2.1.2" class="t-settlement s-2-entita" data-el="settlement">Norman</span>
-               <span id="ldlt-balex:0.0.0.2.1.3" class="t-name s-2-entita" data-el="name">OK</span>
+               <span id="ldlt-balex:0.0.0.2.1.2" class="t-settlement s-2-entita" data-el="settlement" data-behaviour="inline" data-behaviour-source="tei-all">Norman</span>
+               <span id="ldlt-balex:0.0.0.2.1.3" class="t-name s-2-entita" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all">OK</span>
                <span id="ldlt-balex:0.0.0.2.1.4" class="t-postCode s-2-entita" data-el="postCode">73071</span>
-               <span id="ldlt-balex:0.0.0.2.1.5" class="t-country s-2-entita" data-el="country">USA</span>
-            </span>
+               <span id="ldlt-balex:0.0.0.2.1.5" class="t-country s-2-entita" data-el="country" data-behaviour="inline" data-behaviour-source="tei-all">USA</span>
+            </section>
             <span id="ldlt-balex:0.0.0.2.2" class="t-authority s-7-header" data-el="authority">The University of Oklahoma</span>
             <span id="ldlt-balex:0.0.0.2.3" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Norman, OK</span>
             <span id="ldlt-balex:0.0.0.2.4" class="t-date s-2-date" data-el="date">2022</span>
@@ -449,16 +456,16 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
             </span>
          </span>
          <span id="ldlt-balex:0.0.0.3" class="t-seriesStmt s-7-header" data-el="seriesStmt">
-            <span id="ldlt-balex:0.0.0.3.0" class="t-title s-1-inline" data-el="title">Library of Digital Latin Texts</span>
+            <span id="ldlt-balex:0.0.0.3.0" class="t-title s-1-inline" data-el="title" data-behaviour="inline" data-behaviour-source="tei-all">Library of Digital Latin Texts</span>
             <span id="ldlt-balex:0.0.0.3.1" class="t-respStmt s-1-bibliografia" data-el="respStmt">
                <span id="ldlt-balex:0.0.0.3.1.0" class="t-resp s-1-struttura" data-el="resp">Edited by</span>
-               <a id="ldlt-balex:0.0.0.3.1.1" class="t-name s-2-entita ent-ext" href="https://orcid.org/0000-0002-8192-9385" target="_blank" rel="noopener" title="ref: https://orcid.org/0000-0002-8192-9385" data-el="name" data-ref="https://orcid.org/0000-0002-8192-9385">Samuel J. Huskey</a>
+               <a id="ldlt-balex:0.0.0.3.1.1" class="t-name s-2-entita ent-ext" href="https://orcid.org/0000-0002-8192-9385" target="_blank" rel="noopener" title="ref: https://orcid.org/0000-0002-8192-9385" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all" data-ref="https://orcid.org/0000-0002-8192-9385">Samuel J. Huskey</a>
             </span>
             <span id="ldlt-balex:0.0.0.3.2" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">1</span>
-            <span id="ldlt-balex:0.0.0.3.3" class="t-idno s-2-entita" data-el="idno" data-type="DOI"></span>
+            <span id="ldlt-balex:0.0.0.3.3" class="t-idno s-2-entita" data-el="idno" data-behaviour="inline" data-behaviour-source="tei-all" data-type="DOI"></span>
          </span>
          <div id="ldlt-balex:0.0.0.4" class="t-sourceDesc s-7-header" data-el="sourceDesc">
-            <p id="ldlt-balex:0.0.0.4.0" class="t-p s-1-struttura" data-el="p">Born digital.</p>
+            <p id="ldlt-balex:0.0.0.4.0" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">Born digital.</p>
          </div>
       </div>
      <span id="ldlt-balex:0.0.1" class="t-encodingDesc s-7-header" data-el="encodingDesc">
@@ -534,7 +541,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
        </span>
      </span>
    </div></div></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.2 · 370db8e · 2026-08-01</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.2 · 2026-08-02</footer>
 
 </body>
 </html>

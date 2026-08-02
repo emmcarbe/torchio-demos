@@ -53,7 +53,13 @@
             "atts": {},
             "children": [
              "Do · Oxford, Bodleian Library, MS. Douce d.4"
-            ]
+            ],
+            "processing": {
+             "behaviour": "inline",
+             "source": "tei-all",
+             "via": "class:model.emphLike",
+             "params": {}
+            }
            }
           ]
          },
@@ -70,7 +76,13 @@
             "atts": {},
             "children": [
              "Canterbury Tales Project."
-            ]
+            ],
+            "processing": {
+             "behaviour": "paragraph",
+             "source": "tei-all",
+             "via": "element",
+             "params": {}
+            }
            }
           ]
          },
@@ -87,7 +99,13 @@
             "atts": {},
             "children": [
              "talesofcanterbury.org/GP/xml/transcripts/Do/"
-            ]
+            ],
+            "processing": {
+             "behaviour": "paragraph",
+             "source": "tei-all",
+             "via": "element",
+             "params": {}
+            }
            }
           ]
          }
@@ -165,7 +183,13 @@
                   },
                   "children": [
                    "t"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.0.0.1.1.1",
@@ -174,10 +198,22 @@
                   "atts": {},
                   "children": [
                    "at"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  " had bot lytell golde in coffre "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.2",
@@ -204,7 +240,13 @@
                   },
                   "children": [
                    "t"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.0.0.1.3.1",
@@ -213,10 +255,22 @@
                   "atts": {},
                   "children": [
                    "at"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  " he myght of his frendys hente "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.4",
@@ -234,7 +288,13 @@
                 },
                 "children": [
                  "On bokys and on lernynge he it spente "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.6",
@@ -252,7 +312,13 @@
                 },
                 "children": [
                  "And bysely kan for the soulys prey "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.8",
@@ -279,7 +345,13 @@
                   },
                   "children": [
                    "t"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.0.0.1.9.1",
@@ -288,10 +360,22 @@
                   "atts": {},
                   "children": [
                    "at"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  " gaff hym ought for his scole to peye "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.10",
@@ -309,7 +393,13 @@
                 },
                 "children": [
                  "Off studye toke he most kepe and most hede "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.12",
@@ -327,7 +417,13 @@
                 },
                 "children": [
                  "Not a worde spake he more than̄ was nede "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.14",
@@ -352,7 +448,13 @@
                   "atts": {},
                   "children": [
                    "̉"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.0.0.1.15.1",
@@ -361,10 +463,22 @@
                   "atts": {},
                   "children": [
                    "er"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  "ence "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.16",
@@ -382,7 +496,13 @@
                 },
                 "children": [
                  "And short and quyk / and full of sentence "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.18",
@@ -400,7 +520,13 @@
                 },
                 "children": [
                  "Sounyng in morall Vertue was his speche "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.20",
@@ -418,7 +544,13 @@
                 },
                 "children": [
                  "And gladly wolde he lerne and gladly teche "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.22",
@@ -436,7 +568,13 @@
                 },
                 "children": [
                  "A Sergeaunt of the lawe bothe war and wyse  "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.24",
@@ -463,7 +601,13 @@
                   },
                   "children": [
                    "t"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.0.0.1.25.1",
@@ -472,10 +616,22 @@
                   "atts": {},
                   "children": [
                    "at"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  " oftyn̄ had been at the paruyce "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.26",
@@ -493,7 +649,13 @@
                 },
                 "children": [
                  "He was also riche of excellence "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.28",
@@ -518,7 +680,13 @@
                   "atts": {},
                   "children": [
                    "̉"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.0.0.1.29.1",
@@ -527,10 +695,22 @@
                   "atts": {},
                   "children": [
                    "er"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  "ence "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.30",
@@ -548,7 +728,13 @@
                 },
                 "children": [
                  "He semed suche / his wordes were so wyse "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.32",
@@ -566,7 +752,13 @@
                 },
                 "children": [
                  "Iustice he was full oftyn in Assise "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.34",
@@ -584,7 +776,13 @@
                 },
                 "children": [
                  "By patent and by playne commissioun̄ "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.36",
@@ -602,7 +800,13 @@
                 },
                 "children": [
                  "For his science / and for his high renoun̄ "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.38",
@@ -620,7 +824,13 @@
                 },
                 "children": [
                  "Off Feis and robys / had he many oon̄ "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.40",
@@ -645,7 +855,13 @@
                   "atts": {},
                   "children": [
                    "̉"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.0.0.1.41.1",
@@ -654,10 +870,22 @@
                   "atts": {},
                   "children": [
                    "er"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  "e noon̄ "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.42",
@@ -675,7 +903,13 @@
                 },
                 "children": [
                  "All was fe simple to hym in effecte "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.44",
@@ -693,7 +927,13 @@
                 },
                 "children": [
                  "His purchace myght not been enfecte "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.46",
@@ -718,7 +958,13 @@
                   "atts": {},
                   "children": [
                    "̉"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.0.0.1.47.1",
@@ -727,10 +973,22 @@
                   "atts": {},
                   "children": [
                    "er"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  " so bysy a man as he ther nas "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.48",
@@ -748,7 +1006,13 @@
                 },
                 "children": [
                  "And yet he semed bysyer than he was "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.50",
@@ -766,7 +1030,13 @@
                 },
                 "children": [
                  "In termys had he cases and domys alle "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.52",
@@ -793,7 +1063,13 @@
                   },
                   "children": [
                    "t"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.0.0.1.53.1",
@@ -802,10 +1078,22 @@
                   "atts": {},
                   "children": [
                    "at"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  " from the tyme of kynge William were falle "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.54",
@@ -823,7 +1111,13 @@
                 },
                 "children": [
                  "Therto he coude endite and make a thynge "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.56",
@@ -841,7 +1135,13 @@
                 },
                 "children": [
                  "Ther couthe no man pynche at his wrytynge "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.58",
@@ -866,7 +1166,13 @@
                   "atts": {},
                   "children": [
                    "̉"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.0.0.1.59.1",
@@ -875,10 +1181,22 @@
                   "atts": {},
                   "children": [
                    "er"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  "y statute couthe he pleyne by roote "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.60",
@@ -896,7 +1214,13 @@
                 },
                 "children": [
                  "He rode bot homely in a medly cote "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.62",
@@ -914,7 +1238,13 @@
                 },
                 "children": [
                  "Girt with a seint of silk with barrys smale "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.64",
@@ -932,7 +1262,13 @@
                 },
                 "children": [
                  "Of his aray tell y no lenger tale "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.66",
@@ -960,7 +1296,13 @@
                   "children": []
                  },
                  " Frankeleyn̄ was in his companye "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.68",
@@ -988,7 +1330,13 @@
                   "children": []
                  },
                  "ite was his berde as is the daysye "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.0.0.1.70",
@@ -1023,7 +1371,13 @@
                   "atts": {},
                   "children": [
                    "ıı̄"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.0.0.1.71.2",
@@ -1032,12 +1386,30 @@
                   "atts": {},
                   "children": [
                    "un"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  " he was sangwyne"
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                }
-              ]
+              ],
+              "processing": {
+               "behaviour": "section",
+               "source": "tei-all",
+               "via": "element",
+               "params": {}
+              }
              }
             ]
            }
@@ -1091,7 +1463,13 @@
                 },
                 "children": [
                  "Well loued by the morowe a soppe in wyne "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.3",
@@ -1116,7 +1494,13 @@
                   "atts": {},
                   "children": [
                    "̉"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.1.0.0.4.1",
@@ -1125,10 +1509,22 @@
                   "atts": {},
                   "children": [
                    "er"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  "> his wone "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.5",
@@ -1146,7 +1542,13 @@
                 },
                 "children": [
                  "For he was Epicures owne sone "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.7",
@@ -1173,7 +1575,13 @@
                   },
                   "children": [
                    "t"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.1.0.0.8.1",
@@ -1182,7 +1590,13 @@
                   "atts": {},
                   "children": [
                    "at"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  " hild opimyon / þ",
                  {
@@ -1194,7 +1608,13 @@
                   },
                   "children": [
                    "t"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.1.0.0.8.3",
@@ -1203,10 +1623,22 @@
                   "atts": {},
                   "children": [
                    "at"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  " pleyne delite "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.9",
@@ -1231,7 +1663,13 @@
                   "atts": {},
                   "children": [
                    "ꝑ"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.1.0.0.10.1",
@@ -1240,10 +1678,22 @@
                   "atts": {},
                   "children": [
                    "per"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  "fite "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.11",
@@ -1270,7 +1720,13 @@
                   },
                   "children": [
                    "t"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.1.0.0.12.1",
@@ -1279,10 +1735,22 @@
                   "atts": {},
                   "children": [
                    "at"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  " a grete was he "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.13",
@@ -1300,7 +1768,13 @@
                 },
                 "children": [
                  "Seint Iulyan he was in that Cuntre "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.15",
@@ -1318,7 +1792,13 @@
                 },
                 "children": [
                  "His brede his ale was alway after oon̄ "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.17",
@@ -1336,7 +1816,13 @@
                 },
                 "children": [
                  "A better enuyned man was nowher noon̄ "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.19",
@@ -1361,7 +1847,13 @@
                   "atts": {},
                   "children": [
                    "̉"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.1.0.0.20.1",
@@ -1370,10 +1862,22 @@
                   "atts": {},
                   "children": [
                    "er"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  " his hous "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.21",
@@ -1391,7 +1895,13 @@
                 },
                 "children": [
                  "Of fyssh and flessh and that so plentevous "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.23",
@@ -1409,7 +1919,13 @@
                 },
                 "children": [
                  "It snowed in his mouthe of mete and drynke "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.25",
@@ -1436,7 +1952,13 @@
                   },
                   "children": [
                    "t"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.1.0.0.26.1",
@@ -1445,10 +1967,22 @@
                   "atts": {},
                   "children": [
                    "at"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  " men couthe thynke "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.27",
@@ -1466,7 +2000,13 @@
                 },
                 "children": [
                  "After the sundery sesons of the yere "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.29",
@@ -1484,7 +2024,13 @@
                 },
                 "children": [
                  "So chaunged he his mete and his sopere "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.31",
@@ -1509,7 +2055,13 @@
                   "atts": {},
                   "children": [
                    "ꝑ"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.1.0.0.32.1",
@@ -1518,10 +2070,22 @@
                   "atts": {},
                   "children": [
                    "per"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  "trich had he in mwe "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.33",
@@ -1539,7 +2103,13 @@
                 },
                 "children": [
                  "And many a breme / and many a luce in stewe "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.35",
@@ -1557,7 +2127,13 @@
                 },
                 "children": [
                  "Wo was his cooke / bot if his sawse were "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.37",
@@ -1575,7 +2151,13 @@
                 },
                 "children": [
                  "Poynanaunt and redy all his geere "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.39",
@@ -1593,7 +2175,13 @@
                 },
                 "children": [
                  "His table dormount in his halle alway "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.41",
@@ -1618,7 +2206,13 @@
                   "atts": {},
                   "children": [
                    "̉"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.1.0.0.42.1",
@@ -1627,10 +2221,22 @@
                   "atts": {},
                   "children": [
                    "er"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  "ed alle the longe day "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.43",
@@ -1648,7 +2254,13 @@
                 },
                 "children": [
                  "At Sessions there was he lorde and sire "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.45",
@@ -1675,10 +2287,22 @@
                   },
                   "children": [
                    "e"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.hiLike",
+                   "params": {}
+                  }
                  },
                  " shire "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.47",
@@ -1696,7 +2320,13 @@
                 },
                 "children": [
                  "An anlase and a gipser all of silk "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.49",
@@ -1714,7 +2344,13 @@
                 },
                 "children": [
                  "Heng at his girdell white as morowen mylke "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.51",
@@ -1732,7 +2368,13 @@
                 },
                 "children": [
                  "A Shirefe had he been and countour "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.53",
@@ -1750,7 +2392,13 @@
                 },
                 "children": [
                  "Was nowher such a vauasoure "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.55",
@@ -1768,7 +2416,13 @@
                 },
                 "children": [
                  "An haberdassher and a Carpenter "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.57",
@@ -1786,7 +2440,13 @@
                 },
                 "children": [
                  "A webster / a dyer and a Tapicere "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.59",
@@ -1811,7 +2471,13 @@
                   "atts": {},
                   "children": [
                    "̉"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.1.0.0.60.1",
@@ -1820,10 +2486,22 @@
                   "atts": {},
                   "children": [
                    "er"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  "ere "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.61",
@@ -1848,7 +2526,13 @@
                   "atts": {},
                   "children": [
                    "̉"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.1.0.0.62.1",
@@ -1857,10 +2541,22 @@
                   "atts": {},
                   "children": [
                    "er"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  "nyte "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.63",
@@ -1878,7 +2574,13 @@
                 },
                 "children": [
                  "Fressh and newe theire gere a piked was "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.65",
@@ -1896,7 +2598,13 @@
                 },
                 "children": [
                  "Theire knyves were chapid not with brasse "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.67",
@@ -1914,7 +2622,13 @@
                 },
                 "children": [
                  "But alle with siluer wrought full clene and well "
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                },
                {
                 "id": "ms-Do:0.1.0.1.0.0.69",
@@ -1939,7 +2653,13 @@
                   "atts": {},
                   "children": [
                    "̉"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  {
                   "id": "ms-Do:0.1.0.1.0.0.70.1",
@@ -1948,12 +2668,30 @@
                   "atts": {},
                   "children": [
                    "er"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.choicePart",
+                   "params": {}
+                  }
                  },
                  "ydeell"
-                ]
+                ],
+                "processing": {
+                 "behaviour": "block",
+                 "source": "tei-all",
+                 "via": "class:model.lLike",
+                 "params": {}
+                }
                }
-              ]
+              ],
+              "processing": {
+               "behaviour": "section",
+               "source": "tei-all",
+               "via": "element",
+               "params": {}
+              }
              }
             ]
            }

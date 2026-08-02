@@ -1,4 +1,5 @@
 {
+ "note": "the files this impression was made from, and only those",
  "files": [
   "let001.xml",
   "let001a.xml",
@@ -33,5 +34,6 @@
   "reconcile.json",
   "torchio.json"
  ],
- "count": 32
+ "count": 32,
+ "readFromOutsideTheEdition": []
 }

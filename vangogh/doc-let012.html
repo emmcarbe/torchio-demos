@@ -175,7 +175,7 @@ body.mode-read .t-lb::after{content:" "}
 body.mode-read .t-lb[data-break="no"]::after{content:none}
 body.mode-read .t-add{vertical-align:baseline;font-size:inherit}
 
-.torchio-nav{display:flex;gap:22px;margin-left:auto}
+.torchio-nav{display:flex;flex-wrap:wrap;gap:22px;margin-left:auto;min-width:0}
 .torchio-nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;
   color:var(--soft);text-transform:uppercase}
 .torchio-nav a.on{color:var(--accent)}
@@ -187,6 +187,13 @@ body.mode-read .t-add{vertical-align:baseline;font-size:inherit}
 .torchio-nav a:hover{color:var(--ink);text-decoration:none}
 header.torchio{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:baseline}
 header.torchio .tt{min-width:14rem}
+@media(max-width:540px){
+  header.torchio{align-items:flex-start}
+  header.torchio .tt{min-width:0;width:100%}
+  .torchio-nav{width:100%;margin-left:0;gap:8px 20px}
+  .torchio-subnav{gap:8px 18px}
+  ol.toc{columns:1}
+}
 .about dt{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.14em;
   text-transform:uppercase;color:var(--soft);margin-top:1.2em}
 .about dd{margin:0.3em 0 0}
@@ -369,24 +376,24 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 .kwic .ka{color:var(--soft);width:40%}
 </style>
 </head>
-<body>
+<body id="top">
 <a class="skip" href="#main">Skip to content</a>
 <header class="torchio">
 <div class="tt"><h1>To Willem and Caroline van Stockum-Haanebeek. London, Thursday, 7 August 1873.</h1><p class="sub">Vincent van Gogh, the letters</p></div>
-<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Archive</a><a href="text.html" class="on">Texts</a><a href="indices.html">Lab</a><a href="data.html">Data</a></nav>
+<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Archive</a><a href="text.html" class="on">Texts</a><a href="facsimile.html">Facsimiles</a><a href="indices.html">Lab</a><a href="data.html">Data</a></nav>
 </header>
 
 <div class="torchio-bar"><div class="inner"><button class="sw" data-sw="notes" aria-pressed="true">Notes</button><button class="sw off" data-sw="header" aria-pressed="false">About this file</button></div></div><main id="main" class="torchio"><nav class="prevnext" aria-label="Register"><a href="doc-let011.html">‹ previous</a><a href="text.html">Register</a><a href="doc-let013.html">next ›</a></nav><div id="let012:0.0" class="t-teiHeader s-7-header" data-el="teiHeader">
         <div id="let012:0.0.0" class="t-fileDesc s-7-header" data-el="fileDesc">
 <span id="let012:0.0.0.0" class="t-titleStmt s-7-header" data-el="titleStmt">
-<span id="let012:0.0.0.0.0" class="t-title s-1-inline" data-el="title">To Willem and Caroline van Stockum-Haanebeek. London, Thursday, 7 August 1873.</span>
+<span id="let012:0.0.0.0.0" class="t-title s-1-inline" data-el="title" data-behaviour="inline" data-behaviour-source="tei-all">To Willem and Caroline van Stockum-Haanebeek. London, Thursday, 7 August 1873.</span>
 <span id="let012:0.0.0.0.1" class="t-editor s-1-bibliografia" data-el="editor">Leo Jansen</span>
 <span id="let012:0.0.0.0.2" class="t-editor s-1-bibliografia" data-el="editor">Hans Luijten</span>
 <span id="let012:0.0.0.0.3" class="t-editor s-1-bibliografia" data-el="editor">Nienke Bakker</span>
             </span>
 <div id="let012:0.0.0.1" class="t-publicationStmt s-7-header" data-el="publicationStmt">
 <span id="let012:0.0.0.1.0" class="t-publisher s-1-bibliografia" data-el="publisher">
-                    <span id="let012:0.0.0.1.0.0" class="t-name s-2-entita" data-el="name">Huygens Instituut voor Nederlandse Geschiedenis (KNAW)</span>
+                    <span id="let012:0.0.0.1.0.0" class="t-name s-2-entita" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all">Huygens Instituut voor Nederlandse Geschiedenis (KNAW)</span>
                     <span id="let012:0.0.0.1.0.1" class="t-email s-2-entita" data-el="email">info@huygens.knaw.nl</span>
                 </span>
 <span id="let012:0.0.0.1.1" class="t-publisher s-1-bibliografia" data-el="publisher">Van Gogh Museum</span>
@@ -394,7 +401,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <span id="let012:0.0.0.1.3" class="t-date s-2-date" data-el="date" data-type="first" data-when="2009">2009</span>
 <div id="let012:0.0.0.1.4" class="t-availability s-1-bibliografia" data-el="availability">
 <div id="let012:0.0.0.1.4.0" class="t-licence s-7-licenza" data-el="licence" data-target="http://creativecommons.org/licenses/by-nc-sa/4.0/ https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode">
-<p id="let012:0.0.0.1.4.0.0" class="t-p s-1-struttura" data-el="p">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) </p>
+<p id="let012:0.0.0.1.4.0.0" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) </p>
                     </div>
                 </div>
 <a id="let012:0.0.0.1.5" class="t-ptr s-2-corrispondenza ent-ext" href="http://vangoghletters.org/orig/let012" target="_blank" rel="noopener" data-el="ptr" data-target="http://vangoghletters.org/orig/let012">vangoghletters.org/orig/let012</a>
@@ -402,9 +409,9 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
             <div id="let012:0.0.0.2" class="t-sourceDesc s-7-header" data-el="sourceDesc">
                 <div id="let012:0.0.0.2.0" class="tei-foreign" data-name="vg:letDesc" data-ns="http://www.vangoghletters.org/ns/">
                     <div id="let012:0.0.0.2.0.0" class="tei-foreign" data-name="vg:letIdentifier" data-ns="http://www.vangoghletters.org/ns/">
-<span id="let012:0.0.0.2.0.0.0" class="t-idno s-2-entita" data-el="idno" data-type="jlb">012</span>
-<span id="let012:0.0.0.2.0.0.1" class="t-idno s-2-entita" data-el="idno" data-type="collectedletters">10a</span>
-<span id="let012:0.0.0.2.0.0.2" class="t-idno s-2-entita" data-el="idno" data-type="brieven1990">012</span>
+<span id="let012:0.0.0.2.0.0.0" class="t-idno s-2-entita" data-el="idno" data-behaviour="inline" data-behaviour-source="tei-all" data-type="jlb">012</span>
+<span id="let012:0.0.0.2.0.0.1" class="t-idno s-2-entita" data-el="idno" data-behaviour="inline" data-behaviour-source="tei-all" data-type="collectedletters">10a</span>
+<span id="let012:0.0.0.2.0.0.2" class="t-idno s-2-entita" data-el="idno" data-behaviour="inline" data-behaviour-source="tei-all" data-type="brieven1990">012</span>
                     </div>
                     <div id="let012:0.0.0.2.0.1" class="tei-foreign" data-name="vg:letHeading" data-ns="http://www.vangoghletters.org/ns/">
                         <span id="let012:0.0.0.2.0.1.0" class="t-author s-1-bibliografia" data-el="author">Vincent van Gogh</span>
@@ -413,584 +420,584 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                         <span id="let012:0.0.0.2.0.1.3" class="tei-foreign" data-name="vg:dateLet" data-ns="http://www.vangoghletters.org/ns/">Thursday, 7 August 1873</span>
                     </div>
                     <div id="let012:0.0.0.2.0.2" class="tei-foreign" data-name="vg:letContents" data-ns="http://www.vangoghletters.org/ns/">
-<p id="let012:0.0.0.2.0.2.0" class="t-p s-1-struttura" data-el="p">To Willem and Caroline van Stockum-Haanebeek. London, Thursday, 7 August 1873.</p>
+<p id="let012:0.0.0.2.0.2.0" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">To Willem and Caroline van Stockum-Haanebeek. London, Thursday, 7 August 1873.</p>
                     </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="sourceStatus" class="t-note s-1-note" data-el="note" data-type="sourceStatus">
-<p id="let012:0.0.0.2.0.3.0" class="t-p s-1-struttura" data-el="p">Original manuscript</p>
+<p id="let012:0.0.0.2.0.3.0" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">Original manuscript</p>
                     </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="location" class="t-note s-1-note" data-el="note" data-type="location">
-<p id="let012:0.0.0.2.0.4.0" class="t-p s-1-struttura" data-el="p">Amsterdam, Van Gogh Museum, inv. nos. b29 V/1962 (sheet 1) and b30 V/1962 (sheet 2)</p>
+<p id="let012:0.0.0.2.0.4.0" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">Amsterdam, Van Gogh Museum, inv. nos. b29 V/1962 (sheet 1) and b30 V/1962 (sheet 2)</p>
                     </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="date" class="t-note s-1-note" data-el="note" data-type="date">
-<p id="let012:0.0.0.2.0.5.0" class="t-p s-1-struttura" data-el="p">Letter headed: ‘Londen 7 Augustus 1873’.</p>
+<p id="let012:0.0.0.2.0.5.0" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">Letter headed: ‘Londen 7 Augustus 1873’.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div><div id="let012:0.2" class="t-text s-7-struttura-documento" data-el="text">
         <div id="let012:0.2.0" class="t-body s-1-struttura" data-el="body">
-<div id="let012:0.2.0.0" class="t-div s-1-struttura" data-el="div" lang="nl" data-type="original">
+<section id="let012:0.2.0.0" class="t-div s-1-struttura" data-el="div" data-behaviour="section" data-behaviour-source="tei-all" lang="nl" data-type="original">
 <span id="pb-orig-1r-1" class="t-pb" role="separator" title="page break">[1]</span>
                 <span id="l-1" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.2" class="t-ab s-1-struttura" data-el="ab">Londen 7 Augustus 1873</p>
+<div id="let012:0.2.0.0.2" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Londen 7 Augustus 1873</div>
 <span id="let012:0.2.0.0.3" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
                 <span id="l-2" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.5" class="t-ab s-1-struttura" data-el="ab">Waarde vrienden,</p>
+<div id="let012:0.2.0.0.5" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Waarde vrienden,</div>
                 <span id="l-3" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.7" class="t-ab s-1-struttura" data-el="ab">het was eene <span id="l-4" class="t-lb"><br/></span>zeer aangename verrassing <span id="l-5" class="t-lb"><br/></span>voor mij toen ik Caroliens brief <span id="l-6" class="t-lb"><br/></span>ontving. Dank er voor.─</p>
+<div id="let012:0.2.0.0.7" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">het was eene <span id="l-4" class="t-lb"><br/></span>zeer aangename verrassing <span id="l-5" class="t-lb"><br/></span>voor mij toen ik Caroliens brief <span id="l-6" class="t-lb"><br/></span>ontving. Dank er voor.─</div>
                 <span id="l-7" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.9" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Van harte hoop ik zij nu geheel <span id="l-8" class="t-lb"><br/></span>beter is; gelukkig het voorbij <span id="l-9" class="t-lb"><br/></span>is.─ Als ge weer eens schrijft <span id="l-10" class="t-lb"><br/></span>moet ik nog wat meer hooren <span id="l-11" class="t-lb"><br/></span>van dat laatste stuk dat je <span id="l-12" class="t-lb"><br/></span>gemaakt hebt. Ik stond er waar<span id="let012:0.2.0.0.9.5" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
+<div id="let012:0.2.0.0.9" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">Van harte hoop ik zij nu geheel <span id="l-8" class="t-lb"><br/></span>beter is; gelukkig het voorbij <span id="l-9" class="t-lb"><br/></span>is.─ Als ge weer eens schrijft <span id="l-10" class="t-lb"><br/></span>moet ik nog wat meer hooren <span id="l-11" class="t-lb"><br/></span>van dat laatste stuk dat je <span id="l-12" class="t-lb"><br/></span>gemaakt hebt. Ik stond er waar<span id="let012:0.2.0.0.9.5" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
                     <span id="l-13" class="t-lb"><br/></span>lijk versteld van; voor 10 perso<span id="let012:0.2.0.0.9.7" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
                     <span id="l-14" class="t-lb"><br/></span>nen, dat is wel het grootste dat <span id="l-15" class="t-lb"><br/></span>je gemaakt hebt.─<span id="note-o-1" class="t-anchor s-1-milestone" data-el="anchor" data-n="1"></span>
-                </p>
+                </div>
                 <span id="l-16" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.11" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Deze laatste dagen heb ik genoten <span id="l-17" class="t-lb"><br/></span>in het lezen van de gedichten <span id="l-18" class="t-lb"><br/></span>van John Keats; dat is een dichter <span id="l-19" class="t-lb"><br/></span>die geloof ik in Holland niet <span id="l-20" class="t-lb"><br/></span>heel bekend is.─ Hij is den 
+<div id="let012:0.2.0.0.11" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">Deze laatste dagen heb ik genoten <span id="l-17" class="t-lb"><br/></span>in het lezen van de gedichten <span id="l-18" class="t-lb"><br/></span>van John Keats; dat is een dichter <span id="l-19" class="t-lb"><br/></span>die geloof ik in Holland niet <span id="l-20" class="t-lb"><br/></span>heel bekend is.─ Hij is den 
 <span id="pb-orig-1v-2" class="t-pb" role="separator" title="page break">[2]</span>
                     <span id="l-21" class="t-lb"><br/></span>lieveling van de schilders hier &amp; <span id="l-22" class="t-lb"><br/></span>daardoor kwam ik er toe om <span id="l-23" class="t-lb"><br/></span>hem te lezen.<span id="note-o-2" class="t-anchor s-1-milestone" data-el="anchor" data-n="2"></span> Hierbij iets van <span id="l-24" class="t-lb"><br/></span>hem.─<span id="note-o-3" class="t-anchor s-1-milestone" data-el="anchor" data-n="3"></span> Zijn meest bekende <span id="l-25" class="t-lb"><br/></span>stuk is “St Agnes eve” maar <span id="l-26" class="t-lb"><br/></span>dat is wat te lang om het te <span id="l-27" class="t-lb"><br/></span>copieeren.─<span id="note-o-4" class="t-anchor s-1-milestone" data-el="anchor" data-n="4"></span>
-                </p>
+                </div>
                 <span id="l-28" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.13" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">In Cristal Palace &amp; den Tower ben <span id="l-29" class="t-lb"><br/></span>ik nog niet geweest<span id="let012:0.2.0.0.13.1" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span> ook niet <span id="l-30" class="t-lb"><br/></span>bij Tussod;<span id="note-o-5" class="t-anchor s-1-milestone" data-el="anchor" data-n="5"></span> ik haast mij volstrekt <span id="l-31" class="t-lb"><br/></span>niet om alles te gaan zien. <span id="l-32" class="t-lb"><br/></span>Voorloopig heb ik nog genoeg <span id="l-33" class="t-lb"><br/></span>aan de museums, parken &amp;c. die <span id="l-34" class="t-lb"><br/></span>mij meer aantrekken.─</p>
+<div id="let012:0.2.0.0.13" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">In Cristal Palace &amp; den Tower ben <span id="l-29" class="t-lb"><br/></span>ik nog niet geweest<span id="let012:0.2.0.0.13.1" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span> ook niet <span id="l-30" class="t-lb"><br/></span>bij Tussod;<span id="note-o-5" class="t-anchor s-1-milestone" data-el="anchor" data-n="5"></span> ik haast mij volstrekt <span id="l-31" class="t-lb"><br/></span>niet om alles te gaan zien. <span id="l-32" class="t-lb"><br/></span>Voorloopig heb ik nog genoeg <span id="l-33" class="t-lb"><br/></span>aan de museums, parken &amp;c. die <span id="l-34" class="t-lb"><br/></span>mij meer aantrekken.─</div>
                 <span id="l-35" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.15" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Verleden maandag had ik een pret<span id="let012:0.2.0.0.15.0" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
-                    <span id="l-36" class="t-lb"><br/></span>tigen dag.</p>
+<div id="let012:0.2.0.0.15" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">Verleden maandag had ik een pret<span id="let012:0.2.0.0.15.0" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
+                    <span id="l-36" class="t-lb"><br/></span>tigen dag.</div>
                 <span id="l-36a" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.17" class="t-ab s-1-struttura" data-el="ab">De eerste maandag in Aug. is hier een holy day<span id="let012:0.2.0.0.17.0" class="t-c s-5-documentario" data-el="c" data-type="kp">_</span>
+<div id="let012:0.2.0.0.17" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">De eerste maandag in Aug. is hier een holy day<span id="let012:0.2.0.0.17.0" class="t-c s-5-documentario" data-el="c" data-type="kp">_</span>
                     <span id="note-o-6" class="t-anchor s-1-milestone" data-el="anchor" data-n="6"></span> <span id="let012:0.2.0.0.17.2" class="t-lb"><br/></span>Toen ben ik met een <span id="l-37" class="t-lb"><br/></span>van de Duitschers naar Dulwich <span id="l-37a" class="t-lb"><br/></span>anderhalf uur buiten L. <span id="l-38" class="t-lb"><br/></span>geweest om het museum daar te <span id="l-39" class="t-lb"><br/></span>gaan zien,<span id="note-o-7" class="t-anchor s-1-milestone" data-el="anchor" data-n="7"></span> &amp; daarna zijn wij nog <span id="l-40" class="t-lb"><br/></span>naar een dorp zoowat een uur <span id="l-41" class="t-lb"><br/></span>verder gewandeld.─ Het land is <span id="l-42" class="t-lb"><br/></span>hier zoo mooi; vele menschen <span id="l-43" class="t-lb"><br/></span>die in L. hunne zaken hebben, <span id="l-44" class="t-lb"><br/></span>wonen in een of ander dorp <span id="l-45" class="t-lb"><br/></span>buiten L; <span id="l-45a" class="t-lb"><br/></span>&amp; komen iederen dag per spoor naar de <span id="l-45b" class="t-lb"><br/></span>stad. <span id="let012:0.2.0.0.17.16" class="t-lb"><br/></span>misschien doe ik dat 
 <span id="pb-orig-1v-3" class="t-pb" role="separator" title="page break">[3]</span>
                     <span id="l-46" class="t-lb"><br/></span>spoedig ook, als ik ergens goed<span id="let012:0.2.0.0.17.19" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
-                    <span id="l-47" class="t-lb"><br/></span>koop eene kamer vinden kan. <span id="l-48" class="t-lb"><br/></span>Maar verhuizen vind ik zoo <span id="l-49" class="t-lb"><br/></span>iets vreesselijks, dat ik zoo lang <span id="l-50" class="t-lb"><br/></span>mogelijk hier blijf, hoewel alles <span id="l-51" class="t-lb"><br/></span>hier niet zoo mooi is als ’t mij <span id="l-52" class="t-lb"><br/></span>aanvankelijk toescheen. Misschien <span id="l-53" class="t-lb"><br/></span>ligt het aan mij &amp; ik zie het <span id="l-54" class="t-lb"><br/></span>dus nog maar eenigen tijd <span id="l-55" class="t-lb"><br/></span>aan.─</p>
+                    <span id="l-47" class="t-lb"><br/></span>koop eene kamer vinden kan. <span id="l-48" class="t-lb"><br/></span>Maar verhuizen vind ik zoo <span id="l-49" class="t-lb"><br/></span>iets vreesselijks, dat ik zoo lang <span id="l-50" class="t-lb"><br/></span>mogelijk hier blijf, hoewel alles <span id="l-51" class="t-lb"><br/></span>hier niet zoo mooi is als ’t mij <span id="l-52" class="t-lb"><br/></span>aanvankelijk toescheen. Misschien <span id="l-53" class="t-lb"><br/></span>ligt het aan mij &amp; ik zie het <span id="l-54" class="t-lb"><br/></span>dus nog maar eenigen tijd <span id="l-55" class="t-lb"><br/></span>aan.─</div>
                 <span id="l-56" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.19" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Neem mij niet kwalijk dat <span id="l-57" class="t-lb"><br/></span>mijn brief niet is zooals <span id="l-58" class="t-lb"><br/></span>ik hem zou wenschen, ik <span id="l-59" class="t-lb"><br/></span>schrijf in haast. Maar ik <span id="l-60" class="t-lb"><br/></span>wilde je feliciteeren met <span id="l-61" class="t-lb"><br/></span>Willems verjaardag<span id="note-o-8" class="t-anchor s-1-milestone" data-el="anchor" data-n="8"></span> &amp; je <span id="l-62" class="t-lb"><br/></span>many happy returns toe<span id="let012:0.2.0.0.19.7" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
-                    <span id="l-63" class="t-lb"><br/></span>wenschen.─</p>
+<div id="let012:0.2.0.0.19" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">Neem mij niet kwalijk dat <span id="l-57" class="t-lb"><br/></span>mijn brief niet is zooals <span id="l-58" class="t-lb"><br/></span>ik hem zou wenschen, ik <span id="l-59" class="t-lb"><br/></span>schrijf in haast. Maar ik <span id="l-60" class="t-lb"><br/></span>wilde je feliciteeren met <span id="l-61" class="t-lb"><br/></span>Willems verjaardag<span id="note-o-8" class="t-anchor s-1-milestone" data-el="anchor" data-n="8"></span> &amp; je <span id="l-62" class="t-lb"><br/></span>many happy returns toe<span id="let012:0.2.0.0.19.7" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
+                    <span id="l-63" class="t-lb"><br/></span>wenschen.─</div>
                 <span id="l-64" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.21" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Zeer veel genoegen deed het mij <span id="l-65" class="t-lb"><br/></span>te vernemen dat jelui zoo de <span id="l-66" class="t-lb"><br/></span>kennis met de familie Tersteeg <span id="l-67" class="t-lb"><br/></span>vernieuwd hebt. Ik had je dat <span id="l-68" class="t-lb"><br/></span>al lang toegewenscht.</p>
+<div id="let012:0.2.0.0.21" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">Zeer veel genoegen deed het mij <span id="l-65" class="t-lb"><br/></span>te vernemen dat jelui zoo de <span id="l-66" class="t-lb"><br/></span>kennis met de familie Tersteeg <span id="l-67" class="t-lb"><br/></span>vernieuwd hebt. Ik had je dat <span id="l-68" class="t-lb"><br/></span>al lang toegewenscht.</div>
                 <span id="l-69" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.23" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Schrijf mij bij gelegenheid ook eens <span id="l-70" class="t-lb"><br/></span>welke photographien je gekregen <span id="l-71" class="t-lb"><br/></span>hebt, daar ben ik nieuwsgierig naar.</p>
+<div id="let012:0.2.0.0.23" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">Schrijf mij bij gelegenheid ook eens <span id="l-70" class="t-lb"><br/></span>welke photographien je gekregen <span id="l-71" class="t-lb"><br/></span>hebt, daar ben ik nieuwsgierig naar.</div>
 <span id="pb-orig-1r-4" class="t-pb" role="separator" title="page break">[4]</span>
                 <span id="l-72" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.26" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Ik heb een brief van Marinus<span id="note-o-9" class="t-anchor s-1-milestone" data-el="anchor" data-n="9"></span> <span id="l-73" class="t-lb"><br/></span>gehad, &amp; daaruit gezien dat <span id="l-74" class="t-lb"><br/></span>hij naar Amsterdam gaat; <span id="l-75" class="t-lb"><br/></span>Dat is eene groote verandering <span id="l-76" class="t-lb"><br/></span>voor hem, ik hoop het hem <span id="l-77" class="t-lb"><br/></span>goed zal gaan. Het deed mij <span id="l-78" class="t-lb"><br/></span>genoegen hij mij schreef.</p>
+<div id="let012:0.2.0.0.26" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">Ik heb een brief van Marinus<span id="note-o-9" class="t-anchor s-1-milestone" data-el="anchor" data-n="9"></span> <span id="l-73" class="t-lb"><br/></span>gehad, &amp; daaruit gezien dat <span id="l-74" class="t-lb"><br/></span>hij naar Amsterdam gaat; <span id="l-75" class="t-lb"><br/></span>Dat is eene groote verandering <span id="l-76" class="t-lb"><br/></span>voor hem, ik hoop het hem <span id="l-77" class="t-lb"><br/></span>goed zal gaan. Het deed mij <span id="l-78" class="t-lb"><br/></span>genoegen hij mij schreef.</div>
                 <span id="l-79" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.28" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Een dag of wat geleden kreeg ik <span id="l-80" class="t-lb"><br/></span>een bezoek van een broer van Iterson <span id="l-81" class="t-lb"><br/></span>die hier woont<span id="note-o-10" class="t-anchor s-1-milestone" data-el="anchor" data-n="10"></span> &amp; had dus voor ’t eerst <span id="l-82" class="t-lb"><br/></span>sedert Mei gelegenheid Hollandsch <span id="l-83" class="t-lb"><br/></span>te spreken.─ Wij wonen zeer ver <span id="l-84" class="t-lb"><br/></span>van elkaar af, wat mij zeer spijt.─ <span id="l-85" class="t-lb"><br/></span>En nu zeg ik U goeden dag<span id="let012:0.2.0.0.28.7" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span> <span id="l-86" class="t-lb"><br/></span>heb het goed. Veel groeten aan <span id="l-87" class="t-lb"><br/></span>allen in de Poten.<span id="note-o-11" class="t-anchor s-1-milestone" data-el="anchor" data-n="11"></span> Heb het goed<span id="let012:0.2.0.0.28.11" class="t-c s-5-documentario" data-el="c" data-type="kp">_</span>
-                </p>
+<div id="let012:0.2.0.0.28" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">Een dag of wat geleden kreeg ik <span id="l-80" class="t-lb"><br/></span>een bezoek van een broer van Iterson <span id="l-81" class="t-lb"><br/></span>die hier woont<span id="note-o-10" class="t-anchor s-1-milestone" data-el="anchor" data-n="10"></span> &amp; had dus voor ’t eerst <span id="l-82" class="t-lb"><br/></span>sedert Mei gelegenheid Hollandsch <span id="l-83" class="t-lb"><br/></span>te spreken.─ Wij wonen zeer ver <span id="l-84" class="t-lb"><br/></span>van elkaar af, wat mij zeer spijt.─ <span id="l-85" class="t-lb"><br/></span>En nu zeg ik U goeden dag<span id="let012:0.2.0.0.28.7" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span> <span id="l-86" class="t-lb"><br/></span>heb het goed. Veel groeten aan <span id="l-87" class="t-lb"><br/></span>allen in de Poten.<span id="note-o-11" class="t-anchor s-1-milestone" data-el="anchor" data-n="11"></span> Heb het goed<span id="let012:0.2.0.0.28.11" class="t-c s-5-documentario" data-el="c" data-type="kp">_</span>
+                </div>
 <span id="let012:0.2.0.0.29" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
                 <span id="l-88" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.31" class="t-ab s-1-struttura" data-el="ab">Yours truly</p>
+<div id="let012:0.2.0.0.31" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Yours truly</div>
                 <span id="l-89" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.33" class="t-ab s-1-struttura" data-el="ab">Vincent</p>
+<div id="let012:0.2.0.0.33" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Vincent</div>
 <span id="let012:0.2.0.0.34" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
                 <span id="l-90" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.36" class="t-ab s-1-struttura" data-el="ab">Verblijd mij spoedig met een <span id="l-91" class="t-lb"><br/></span>brief als ge tijd kunt vinden.</p>
+<div id="let012:0.2.0.0.36" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Verblijd mij spoedig met een <span id="l-91" class="t-lb"><br/></span>brief als ge tijd kunt vinden.</div>
 <span id="let012:0.2.0.0.37" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
 <span id="pb-orig-2r-5" class="t-pb" role="separator" title="page break">[5]</span>
                 <span id="l-92" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.40" class="t-ab s-1-struttura" data-el="ab">The eve of Saint Mark<span id="note-o-12" class="t-anchor s-1-milestone" data-el="anchor" data-n="12"></span>
-                </p>
+<div id="let012:0.2.0.0.40" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The eve of Saint Mark<span id="note-o-12" class="t-anchor s-1-milestone" data-el="anchor" data-n="12"></span>
+                </div>
                 <span id="l-93" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.42" class="t-ab s-1-struttura" data-el="ab">(Unfinished)</p>
+<div id="let012:0.2.0.0.42" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">(Unfinished)</div>
 <span id="let012:0.2.0.0.43" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
                 <span id="l-94" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.45" class="t-ab s-1-struttura" data-el="ab">Upon a Sabbath day it fell;</p>
+<div id="let012:0.2.0.0.45" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Upon a Sabbath day it fell;</div>
                 <span id="l-95" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.47" class="t-ab s-1-struttura" data-el="ab">Twice holy was the Sabbath bell,</p>
+<div id="let012:0.2.0.0.47" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Twice holy was the Sabbath bell,</div>
                 <span id="l-96" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.49" class="t-ab s-1-struttura" data-el="ab">That called the folk to evening prayer;</p>
+<div id="let012:0.2.0.0.49" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">That called the folk to evening prayer;</div>
                 <span id="l-97" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.51" class="t-ab s-1-struttura" data-el="ab">The city streets were clear &amp; fair</p>
+<div id="let012:0.2.0.0.51" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The city streets were clear &amp; fair</div>
                 <span id="l-98" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.53" class="t-ab s-1-struttura" data-el="ab">From wholesome drench of April rains;</p>
+<div id="let012:0.2.0.0.53" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">From wholesome drench of April rains;</div>
                 <span id="l-99" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.55" class="t-ab s-1-struttura" data-el="ab">And, on the western window panes,</p>
+<div id="let012:0.2.0.0.55" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And, on the western window panes,</div>
                 <span id="l-100" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.57" class="t-ab s-1-struttura" data-el="ab">The chilly sunset faintly told</p>
+<div id="let012:0.2.0.0.57" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The chilly sunset faintly told</div>
                 <span id="l-101" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.59" class="t-ab s-1-struttura" data-el="ab">Of unmatured green, vallies cold,</p>
+<div id="let012:0.2.0.0.59" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Of unmatured green, vallies cold,</div>
                 <span id="l-102" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.61" class="t-ab s-1-struttura" data-el="ab">Of the green thorny bloomless hedge,</p>
+<div id="let012:0.2.0.0.61" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Of the green thorny bloomless hedge,</div>
                 <span id="l-103" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.63" class="t-ab s-1-struttura" data-el="ab">Of rivers new with spring-tide sedge,</p>
+<div id="let012:0.2.0.0.63" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Of rivers new with spring-tide sedge,</div>
                 <span id="l-104" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.65" class="t-ab s-1-struttura" data-el="ab">Of primroses by shelter’d rills,</p>
+<div id="let012:0.2.0.0.65" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Of primroses by shelter’d rills,</div>
                 <span id="l-105" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.67" class="t-ab s-1-struttura" data-el="ab">Of daisies on the aguish hills.─</p>
+<div id="let012:0.2.0.0.67" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Of daisies on the aguish hills.─</div>
                 <span id="l-106" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.69" class="t-ab s-1-struttura" data-el="ab">Twice holy was the Sabbath-bell:</p>
+<div id="let012:0.2.0.0.69" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Twice holy was the Sabbath-bell:</div>
                 <span id="l-107" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.71" class="t-ab s-1-struttura" data-el="ab">The silent streets were crowded well</p>
+<div id="let012:0.2.0.0.71" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The silent streets were crowded well</div>
                 <span id="l-108" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.73" class="t-ab s-1-struttura" data-el="ab">With staid &amp; pious companies,</p>
+<div id="let012:0.2.0.0.73" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">With staid &amp; pious companies,</div>
                 <span id="l-109" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.75" class="t-ab s-1-struttura" data-el="ab">Warm from their fire-side orat’ries;</p>
+<div id="let012:0.2.0.0.75" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Warm from their fire-side orat’ries;</div>
                 <span id="l-110" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.77" class="t-ab s-1-struttura" data-el="ab">And moving, with demurest air</p>
+<div id="let012:0.2.0.0.77" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And moving, with demurest air</div>
                 <span id="l-111" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.79" class="t-ab s-1-struttura" data-el="ab">To even-song, &amp; vesper prayer.─</p>
+<div id="let012:0.2.0.0.79" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">To even-song, &amp; vesper prayer.─</div>
                 <span id="l-112" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.81" class="t-ab s-1-struttura" data-el="ab">Each arched porch, &amp; entry low,</p>
+<div id="let012:0.2.0.0.81" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Each arched porch, &amp; entry low,</div>
                 <span id="l-113" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.83" class="t-ab s-1-struttura" data-el="ab">Was fill’d with patient folk &amp; slow,</p>
+<div id="let012:0.2.0.0.83" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Was fill’d with patient folk &amp; slow,</div>
                 <span id="l-114" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.85" class="t-ab s-1-struttura" data-el="ab">With whispers hush &amp; shuffling feet,</p>
+<div id="let012:0.2.0.0.85" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">With whispers hush &amp; shuffling feet,</div>
                 <span id="l-115" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.87" class="t-ab s-1-struttura" data-el="ab">While played the organ, loud &amp; sweet.─</p>
+<div id="let012:0.2.0.0.87" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">While played the organ, loud &amp; sweet.─</div>
                 <span id="l-116" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.89" class="t-ab s-1-struttura" data-el="ab">The bells had ceased, the prayers begun,</p>
+<div id="let012:0.2.0.0.89" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The bells had ceased, the prayers begun,</div>
                 <span id="l-117" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.91" class="t-ab s-1-struttura" data-el="ab">And Bertha had not yet half done</p>
+<div id="let012:0.2.0.0.91" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And Bertha had not yet half done</div>
                 <span id="l-118" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.93" class="t-ab s-1-struttura" data-el="ab">A curious volume, patch’d &amp; torn,</p>
+<div id="let012:0.2.0.0.93" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">A curious volume, patch’d &amp; torn,</div>
                 <span id="l-119" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.95" class="t-ab s-1-struttura" data-el="ab">That all day long, from earliest morn,</p>
+<div id="let012:0.2.0.0.95" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">That all day long, from earliest morn,</div>
                 <span id="l-120" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.97" class="t-ab s-1-struttura" data-el="ab">Had taken captive her two eyes,</p>
+<div id="let012:0.2.0.0.97" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Had taken captive her two eyes,</div>
                 <span id="l-121" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.99" class="t-ab s-1-struttura" data-el="ab">Among its golden broideries;</p>
+<div id="let012:0.2.0.0.99" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Among its golden broideries;</div>
                 <span id="l-122" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.101" class="t-ab s-1-struttura" data-el="ab">Perplexed her with a thousand things,</p>
+<div id="let012:0.2.0.0.101" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Perplexed her with a thousand things,</div>
                 <span id="l-123" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.103" class="t-ab s-1-struttura" data-el="ab">The stars of Heaven, &amp; angels’ wings,</p>
+<div id="let012:0.2.0.0.103" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The stars of Heaven, &amp; angels’ wings,</div>
                 <span id="l-124" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.105" class="t-ab s-1-struttura" data-el="ab">Martyrs in a fiery blaze,</p>
+<div id="let012:0.2.0.0.105" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Martyrs in a fiery blaze,</div>
                 <span id="l-125" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.107" class="t-ab s-1-struttura" data-el="ab">Azure saints &amp; silver rays</p>
+<div id="let012:0.2.0.0.107" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Azure saints &amp; silver rays</div>
                 <span id="l-126" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.109" class="t-ab s-1-struttura" data-el="ab">Moses’ breastplate, &amp; the seven</p>
+<div id="let012:0.2.0.0.109" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Moses’ breastplate, &amp; the seven</div>
                 <span id="l-127" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.111" class="t-ab s-1-struttura" data-el="ab">Candlesticks John saw in Heaven,</p>
+<div id="let012:0.2.0.0.111" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Candlesticks John saw in Heaven,</div>
                 <span id="l-128" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.113" class="t-ab s-1-struttura" data-el="ab">The winged lion of Saint Mark,</p>
+<div id="let012:0.2.0.0.113" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The winged lion of Saint Mark,</div>
                 <span id="l-129" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.115" class="t-ab s-1-struttura" data-el="ab">And the covenantal Ark,</p>
+<div id="let012:0.2.0.0.115" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And the covenantal Ark,</div>
                 <span id="l-130" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.117" class="t-ab s-1-struttura" data-el="ab">With its many mysteries</p>
+<div id="let012:0.2.0.0.117" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">With its many mysteries</div>
                 <span id="l-131" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.119" class="t-ab s-1-struttura" data-el="ab">Cherubim &amp; golden mice.─</p>
+<div id="let012:0.2.0.0.119" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Cherubim &amp; golden mice.─</div>
 <span id="pb-orig-2v-6" class="t-pb" role="separator" title="page break">[6]</span>
                 <span id="l-132" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.122" class="t-ab s-1-struttura" data-el="ab">Bertha was a maiden fair,</p>
+<div id="let012:0.2.0.0.122" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Bertha was a maiden fair,</div>
                 <span id="l-133" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.124" class="t-ab s-1-struttura" data-el="ab">Dwelling in th’old minster-square;</p>
+<div id="let012:0.2.0.0.124" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Dwelling in th’old minster-square;</div>
                 <span id="l-134" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.126" class="t-ab s-1-struttura" data-el="ab">From her fireside she could see,</p>
+<div id="let012:0.2.0.0.126" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">From her fireside she could see,</div>
                 <span id="l-135" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.128" class="t-ab s-1-struttura" data-el="ab">Sidelong, its rich antiquity,</p>
+<div id="let012:0.2.0.0.128" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Sidelong, its rich antiquity,</div>
                 <span id="l-136" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.130" class="t-ab s-1-struttura" data-el="ab">Far as the Bishops gardenwall;</p>
+<div id="let012:0.2.0.0.130" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Far as the Bishops gardenwall;</div>
                 <span id="l-137" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.132" class="t-ab s-1-struttura" data-el="ab">Where sycamores &amp; elm trees tall,</p>
+<div id="let012:0.2.0.0.132" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Where sycamores &amp; elm trees tall,</div>
                 <span id="l-138" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.134" class="t-ab s-1-struttura" data-el="ab">Full leaved, the forest had outstript,</p>
+<div id="let012:0.2.0.0.134" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Full leaved, the forest had outstript,</div>
                 <span id="l-139" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.136" class="t-ab s-1-struttura" data-el="ab">By no sharp north wind ever nipt,</p>
+<div id="let012:0.2.0.0.136" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">By no sharp north wind ever nipt,</div>
                 <span id="l-140" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.138" class="t-ab s-1-struttura" data-el="ab">So shelter’d by the mighty pile,</p>
+<div id="let012:0.2.0.0.138" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">So shelter’d by the mighty pile,</div>
                 <span id="l-141" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.140" class="t-ab s-1-struttura" data-el="ab">Bertha arose &amp; read awhile,</p>
+<div id="let012:0.2.0.0.140" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Bertha arose &amp; read awhile,</div>
                 <span id="l-142" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.142" class="t-ab s-1-struttura" data-el="ab">With forehead ’gainst the window pane.</p>
+<div id="let012:0.2.0.0.142" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">With forehead ’gainst the window pane.</div>
                 <span id="l-143" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.144" class="t-ab s-1-struttura" data-el="ab">Again she tried &amp; tried again,</p>
+<div id="let012:0.2.0.0.144" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Again she tried &amp; tried again,</div>
                 <span id="l-144" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.146" class="t-ab s-1-struttura" data-el="ab">Until the dusk eve left her dark</p>
+<div id="let012:0.2.0.0.146" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Until the dusk eve left her dark</div>
                 <span id="l-145" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.148" class="t-ab s-1-struttura" data-el="ab">Upon the legend of St Mark.</p>
+<div id="let012:0.2.0.0.148" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Upon the legend of St Mark.</div>
                 <span id="l-146" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.150" class="t-ab s-1-struttura" data-el="ab">From plaited lawn-frill, fine &amp; thin<span id="let012:0.2.0.0.150.0" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span>
-                </p>
+<div id="let012:0.2.0.0.150" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">From plaited lawn-frill, fine &amp; thin<span id="let012:0.2.0.0.150.0" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span>
+                </div>
                 <span id="l-147" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.152" class="t-ab s-1-struttura" data-el="ab">She lifted up her soft warm chin,</p>
+<div id="let012:0.2.0.0.152" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">She lifted up her soft warm chin,</div>
                 <span id="l-148" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.154" class="t-ab s-1-struttura" data-el="ab">With aching neck &amp; swimming eyes</p>
+<div id="let012:0.2.0.0.154" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">With aching neck &amp; swimming eyes</div>
                 <span id="l-149" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.156" class="t-ab s-1-struttura" data-el="ab">And dazed with saintly imag’ries.</p>
+<div id="let012:0.2.0.0.156" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And dazed with saintly imag’ries.</div>
 <span id="let012:0.2.0.0.157" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
                 <span id="l-150" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.159" class="t-ab s-1-struttura" data-el="ab">All was gloom, &amp; silent all</p>
+<div id="let012:0.2.0.0.159" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">All was gloom, &amp; silent all</div>
                 <span id="l-151" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.161" class="t-ab s-1-struttura" data-el="ab">Save now &amp; then the still foot-fall</p>
+<div id="let012:0.2.0.0.161" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Save now &amp; then the still foot-fall</div>
                 <span id="l-152" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.163" class="t-ab s-1-struttura" data-el="ab">Of one returning homewards late,</p>
+<div id="let012:0.2.0.0.163" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Of one returning homewards late,</div>
                 <span id="l-153" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.165" class="t-ab s-1-struttura" data-el="ab">Past the echoing minster-gate.</p>
+<div id="let012:0.2.0.0.165" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Past the echoing minster-gate.</div>
                 <span id="l-154" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.167" class="t-ab s-1-struttura" data-el="ab">The clamorous daws, that all the day</p>
+<div id="let012:0.2.0.0.167" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The clamorous daws, that all the day</div>
                 <span id="l-155" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.169" class="t-ab s-1-struttura" data-el="ab">Above tree tops &amp; towers play,</p>
+<div id="let012:0.2.0.0.169" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Above tree tops &amp; towers play,</div>
                 <span id="l-156" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.171" class="t-ab s-1-struttura" data-el="ab">Pair by pair had gone to rest,</p>
+<div id="let012:0.2.0.0.171" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Pair by pair had gone to rest,</div>
                 <span id="l-157" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.173" class="t-ab s-1-struttura" data-el="ab">Each in its ancient belfry-nest,</p>
+<div id="let012:0.2.0.0.173" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Each in its ancient belfry-nest,</div>
                 <span id="l-158" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.175" class="t-ab s-1-struttura" data-el="ab">Where asleep they fall betimes</p>
+<div id="let012:0.2.0.0.175" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Where asleep they fall betimes</div>
                 <span id="l-159" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.177" class="t-ab s-1-struttura" data-el="ab">To music &amp; the drowsy chimes.</p>
+<div id="let012:0.2.0.0.177" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">To music &amp; the drowsy chimes.</div>
 <span id="let012:0.2.0.0.178" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
                 <span id="l-160" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.180" class="t-ab s-1-struttura" data-el="ab">All was silent, all was gloom,</p>
+<div id="let012:0.2.0.0.180" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">All was silent, all was gloom,</div>
                 <span id="l-161" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.182" class="t-ab s-1-struttura" data-el="ab">Abroad &amp; in the homely room:</p>
+<div id="let012:0.2.0.0.182" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Abroad &amp; in the homely room:</div>
                 <span id="l-162" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.184" class="t-ab s-1-struttura" data-el="ab">Down she sat, poor cheated soul!</p>
+<div id="let012:0.2.0.0.184" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Down she sat, poor cheated soul!</div>
                 <span id="l-163" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.186" class="t-ab s-1-struttura" data-el="ab">And struck a lamp from the dismal coal;</p>
+<div id="let012:0.2.0.0.186" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And struck a lamp from the dismal coal;</div>
                 <span id="l-164" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.188" class="t-ab s-1-struttura" data-el="ab">Leaned forward, with bright drooping hair<span id="let012:0.2.0.0.188.0" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span>
-                </p>
+<div id="let012:0.2.0.0.188" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Leaned forward, with bright drooping hair<span id="let012:0.2.0.0.188.0" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span>
+                </div>
                 <span id="l-165" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.190" class="t-ab s-1-struttura" data-el="ab">And slant book, full against the glare.</p>
+<div id="let012:0.2.0.0.190" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And slant book, full against the glare.</div>
                 <span id="l-166" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.192" class="t-ab s-1-struttura" data-el="ab">Her shadow, in uneasy guise,</p>
+<div id="let012:0.2.0.0.192" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Her shadow, in uneasy guise,</div>
                 <span id="l-167" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.194" class="t-ab s-1-struttura" data-el="ab">Hover’d about, a giant size,</p>
+<div id="let012:0.2.0.0.194" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Hover’d about, a giant size,</div>
                 <span id="l-168" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.196" class="t-ab s-1-struttura" data-el="ab">On ceiling beam &amp; old oak chair,</p>
+<div id="let012:0.2.0.0.196" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">On ceiling beam &amp; old oak chair,</div>
                 <span id="l-169" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.198" class="t-ab s-1-struttura" data-el="ab">The parrot’s cage, &amp; panel square;</p>
+<div id="let012:0.2.0.0.198" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The parrot’s cage, &amp; panel square;</div>
                 <span id="l-170" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.200" class="t-ab s-1-struttura" data-el="ab">And the warm angled winter-screen,</p>
+<div id="let012:0.2.0.0.200" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And the warm angled winter-screen,</div>
                 <span id="l-171" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.202" class="t-ab s-1-struttura" data-el="ab">On which were many monsters seen,</p>
+<div id="let012:0.2.0.0.202" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">On which were many monsters seen,</div>
                 <span id="l-172" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.204" class="t-ab s-1-struttura" data-el="ab">Call’d doves of Siam, Lima mice,</p>
+<div id="let012:0.2.0.0.204" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Call’d doves of Siam, Lima mice,</div>
                 <span id="l-173" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.206" class="t-ab s-1-struttura" data-el="ab">And legless birds of Paradise<span id="let012:0.2.0.0.206.0" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span>
-                </p>
+<div id="let012:0.2.0.0.206" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And legless birds of Paradise<span id="let012:0.2.0.0.206.0" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span>
+                </div>
                 <span id="l-174" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.208" class="t-ab s-1-struttura" data-el="ab">Macaw, &amp; tender Av’davat,</p>
+<div id="let012:0.2.0.0.208" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Macaw, &amp; tender Av’davat,</div>
                 <span id="l-175" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.210" class="t-ab s-1-struttura" data-el="ab">And silken-furr’d Angora cat.</p>
+<div id="let012:0.2.0.0.210" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And silken-furr’d Angora cat.</div>
 <span id="pb-orig-2v-7" class="t-pb" role="separator" title="page break">[7]</span>
                 <span id="l-176" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.213" class="t-ab s-1-struttura" data-el="ab">Untired she read, her shadow still</p>
+<div id="let012:0.2.0.0.213" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Untired she read, her shadow still</div>
                 <span id="l-177" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.215" class="t-ab s-1-struttura" data-el="ab">Glower’d about, as it would fill</p>
+<div id="let012:0.2.0.0.215" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Glower’d about, as it would fill</div>
                 <span id="l-178" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.217" class="t-ab s-1-struttura" data-el="ab">The room with wildest forms &amp; shades,</p>
+<div id="let012:0.2.0.0.217" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The room with wildest forms &amp; shades,</div>
                 <span id="l-179" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.219" class="t-ab s-1-struttura" data-el="ab">As though some ghostly queen of spades</p>
+<div id="let012:0.2.0.0.219" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">As though some ghostly queen of spades</div>
                 <span id="l-180" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.221" class="t-ab s-1-struttura" data-el="ab">Had come to mock behind her back</p>
+<div id="let012:0.2.0.0.221" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Had come to mock behind her back</div>
                 <span id="l-181" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.223" class="t-ab s-1-struttura" data-el="ab">And dance, &amp; ruffle her garments black.</p>
+<div id="let012:0.2.0.0.223" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And dance, &amp; ruffle her garments black.</div>
                 <span id="l-182" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.225" class="t-ab s-1-struttura" data-el="ab">Untired she read the legend page,</p>
+<div id="let012:0.2.0.0.225" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Untired she read the legend page,</div>
                 <span id="l-183" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.227" class="t-ab s-1-struttura" data-el="ab">Of holy Mark, from youth to age,</p>
+<div id="let012:0.2.0.0.227" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Of holy Mark, from youth to age,</div>
                 <span id="l-184" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.229" class="t-ab s-1-struttura" data-el="ab">On land, on sea, in pagan chains,</p>
+<div id="let012:0.2.0.0.229" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">On land, on sea, in pagan chains,</div>
                 <span id="l-185" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.231" class="t-ab s-1-struttura" data-el="ab">Rejoicing for his many pains.</p>
+<div id="let012:0.2.0.0.231" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Rejoicing for his many pains.</div>
                 <span id="l-186" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.233" class="t-ab s-1-struttura" data-el="ab">Sometimes the learned eremite,</p>
+<div id="let012:0.2.0.0.233" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Sometimes the learned eremite,</div>
                 <span id="l-187" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.235" class="t-ab s-1-struttura" data-el="ab">With golden star, or dagger bright,</p>
+<div id="let012:0.2.0.0.235" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">With golden star, or dagger bright,</div>
                 <span id="l-188" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.237" class="t-ab s-1-struttura" data-el="ab">Referr’d to pious poesies</p>
+<div id="let012:0.2.0.0.237" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Referr’d to pious poesies</div>
                 <span id="l-189" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.239" class="t-ab s-1-struttura" data-el="ab">Written in smallest crow-quill size</p>
+<div id="let012:0.2.0.0.239" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Written in smallest crow-quill size</div>
                 <span id="l-190" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.241" class="t-ab s-1-struttura" data-el="ab">Beneath the text; &amp; thus the rhyme</p>
+<div id="let012:0.2.0.0.241" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Beneath the text; &amp; thus the rhyme</div>
                 <span id="l-191" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.243" class="t-ab s-1-struttura" data-el="ab">Was parcell’d out from time to time:</p>
+<div id="let012:0.2.0.0.243" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Was parcell’d out from time to time:</div>
                 <span id="l-192" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.245" class="t-ab s-1-struttura" data-el="ab">....................................</p>
+<div id="let012:0.2.0.0.245" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">....................................</div>
                 <span id="l-193" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.247" class="t-ab s-1-struttura" data-el="ab">....................................</p>
+<div id="let012:0.2.0.0.247" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">....................................</div>
                 <span id="l-194" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.249" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">John Keats (1818)</p>
+<div id="let012:0.2.0.0.249" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">John Keats (1818)</div>
 <span id="let012:0.2.0.0.250" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
                 <span id="l-195" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.252" class="t-ab s-1-struttura" data-el="ab">The imagination may be<span id="l-196" class="t-lb"><br/></span>
+<div id="let012:0.2.0.0.252" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The imagination may be<span id="l-196" class="t-lb"><br/></span>
 compared to Adam’s dream;<span id="l-197" class="t-lb"><br/></span>
 “he awoke &amp; found it truth.”─<span id="note-o-13" class="t-anchor s-1-milestone" data-el="anchor" data-n="13"></span>
-                </p>
+                </div>
 <span id="let012:0.2.0.0.253" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
 <span id="pb-orig-2r-8" class="t-pb" role="separator" title="page break">[8]</span>
                 <span id="l-198" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.256" class="t-ab s-1-struttura" data-el="ab">
-                    <span id="let012:0.2.0.0.256.0" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Autumn</span>
+<div id="let012:0.2.0.0.256" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">
+                    <span id="let012:0.2.0.0.256.0" class="t-hi s-1-inline" data-el="hi" data-behaviour="inline" data-behaviour-source="tei-all" data-rend="ital">Autumn</span>
                     <span id="note-o-14" class="t-anchor s-1-milestone" data-el="anchor" data-n="14"></span>
-                </p>
+                </div>
                 <span id="let012:0.2.0.0.257" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span> <span id="l-199" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.259" class="t-ab s-1-struttura" data-el="ab">Season of mist, &amp; mellow fruitfulness!</p>
+<div id="let012:0.2.0.0.259" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Season of mist, &amp; mellow fruitfulness!</div>
                 <span id="l-200" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.261" class="t-ab s-1-struttura" data-el="ab">Close bosom-friend to the maturing sun;</p>
+<div id="let012:0.2.0.0.261" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Close bosom-friend to the maturing sun;</div>
                 <span id="l-201" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.263" class="t-ab s-1-struttura" data-el="ab">Conspiring with him how to load &amp; bless</p>
+<div id="let012:0.2.0.0.263" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Conspiring with him how to load &amp; bless</div>
                 <span id="l-202" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.265" class="t-ab s-1-struttura" data-el="ab">With fruit the vines that round the thatch-eaves run;</p>
+<div id="let012:0.2.0.0.265" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">With fruit the vines that round the thatch-eaves run;</div>
                 <span id="l-203" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.267" class="t-ab s-1-struttura" data-el="ab">To bend with apples the moss’d cottage trees,</p>
+<div id="let012:0.2.0.0.267" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">To bend with apples the moss’d cottage trees,</div>
                 <span id="l-204" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.269" class="t-ab s-1-struttura" data-el="ab">And fill all fruit with ripeness to the core;</p>
+<div id="let012:0.2.0.0.269" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And fill all fruit with ripeness to the core;</div>
                 <span id="l-205" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.271" class="t-ab s-1-struttura" data-el="ab">To swell the gourd, &amp; plump the hazel shells</p>
+<div id="let012:0.2.0.0.271" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">To swell the gourd, &amp; plump the hazel shells</div>
                 <span id="l-206" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.273" class="t-ab s-1-struttura" data-el="ab">With a sweet kernel; to set budding more,</p>
+<div id="let012:0.2.0.0.273" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">With a sweet kernel; to set budding more,</div>
                 <span id="l-207" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.275" class="t-ab s-1-struttura" data-el="ab">And still more, later flowers for the bees,</p>
+<div id="let012:0.2.0.0.275" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And still more, later flowers for the bees,</div>
                 <span id="l-208" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.277" class="t-ab s-1-struttura" data-el="ab">Until they think warm days will never cease,─</p>
+<div id="let012:0.2.0.0.277" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Until they think warm days will never cease,─</div>
                 <span id="l-209" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.279" class="t-ab s-1-struttura" data-el="ab">For summer has o’erbrimm’d their clammy cells.─</p>
+<div id="let012:0.2.0.0.279" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">For summer has o’erbrimm’d their clammy cells.─</div>
 <span id="let012:0.2.0.0.280" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
                 <span id="l-210" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.282" class="t-ab s-1-struttura" data-el="ab">Where are the songs of spring? Ay, where are they?</p>
+<div id="let012:0.2.0.0.282" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Where are the songs of spring? Ay, where are they?</div>
                 <span id="l-211" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.284" class="t-ab s-1-struttura" data-el="ab">Think not of them, thou hast thy music too,</p>
+<div id="let012:0.2.0.0.284" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Think not of them, thou hast thy music too,</div>
                 <span id="l-212" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.286" class="t-ab s-1-struttura" data-el="ab">While barred clouds bloom the soft-dying day,</p>
+<div id="let012:0.2.0.0.286" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">While barred clouds bloom the soft-dying day,</div>
                 <span id="l-213" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.288" class="t-ab s-1-struttura" data-el="ab">And touch the stubble-plains with rosy hue;</p>
+<div id="let012:0.2.0.0.288" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And touch the stubble-plains with rosy hue;</div>
                 <span id="l-214" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.290" class="t-ab s-1-struttura" data-el="ab">Then in a wailful choir the small gnats mourn</p>
+<div id="let012:0.2.0.0.290" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Then in a wailful choir the small gnats mourn</div>
                 <span id="l-215" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.292" class="t-ab s-1-struttura" data-el="ab">Among the river sallows, borne aloft.</p>
+<div id="let012:0.2.0.0.292" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Among the river sallows, borne aloft.</div>
                 <span id="l-216" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.294" class="t-ab s-1-struttura" data-el="ab">Or sinking as the light wind lives or dies;</p>
+<div id="let012:0.2.0.0.294" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Or sinking as the light wind lives or dies;</div>
                 <span id="l-217" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.296" class="t-ab s-1-struttura" data-el="ab">And full-grown lambs loud bleat from hilly bourn;</p>
+<div id="let012:0.2.0.0.296" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And full-grown lambs loud bleat from hilly bourn;</div>
                 <span id="l-218" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.298" class="t-ab s-1-struttura" data-el="ab">Hedge-crickets sing; &amp; now with treble soft</p>
+<div id="let012:0.2.0.0.298" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Hedge-crickets sing; &amp; now with treble soft</div>
                 <span id="l-219" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.300" class="t-ab s-1-struttura" data-el="ab">The redbreast whistles from a garden croft,</p>
+<div id="let012:0.2.0.0.300" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The redbreast whistles from a garden croft,</div>
                 <span id="l-220" class="t-lb"><br/></span>
-<p id="let012:0.2.0.0.302" class="t-ab s-1-struttura" data-el="ab">And gathering swallows twitter in the skies.─</p>
+<div id="let012:0.2.0.0.302" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And gathering swallows twitter in the skies.─</div>
 <span id="let012:0.2.0.0.303" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
-<div id="let012:0.2.0.0.304" class="t-div s-1-struttura" data-el="div" data-type="textualNotes">
+<section id="let012:0.2.0.0.304" class="t-div s-1-struttura" data-el="div" data-behaviour="section" data-behaviour-source="tei-all" data-type="textualNotes">
 <span class="t-note-mark" aria-hidden="true">°</span><div id="let012:0.2.0.0.304.0" class="t-note s-1-note" data-el="note" data-n="50" data-target="l-50">hoewel &lt; hoe wel</div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="let012:0.2.0.0.304.1" class="t-note s-1-note" data-el="note" data-n="121" data-target="l-121">broideries; &lt; broderies;</div>
-                </div>
-            </div>
-<div id="let012:0.2.0.1" class="t-div s-1-struttura" data-el="div" data-type="translation">
+                </section>
+            </section>
+<section id="let012:0.2.0.1" class="t-div s-1-struttura" data-el="div" data-behaviour="section" data-behaviour-source="tei-all" data-type="translation">
 <span id="pb-trans-1r-1" class="t-pb" role="separator" title="page break">[1]</span>
-<p id="let012:0.2.0.1.1" class="t-ab s-1-struttura" data-el="ab">London, 7 August 1873</p>
+<div id="let012:0.2.0.1.1" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">London, 7 August 1873</div>
 <span id="let012:0.2.0.1.2" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
-<p id="let012:0.2.0.1.3" class="t-ab s-1-struttura" data-el="ab">My dear friends,</p>
-<p id="let012:0.2.0.1.4" class="t-ab s-1-struttura" data-el="ab">It was a very pleasant surprise for me to receive <span id="let012:0.2.0.1.4.0" class="t-rs s-2-entita" title="type: pers · key: 761" data-el="rs" data-key="761" data-type="pers">Caroline</span>’s letter. Thank you.</p>
-<p id="let012:0.2.0.1.5" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">I sincerely hope that she’s now completely better; fortunately, it’s past. When you write again sometime I must hear more about that last piece you made.<span id="note-t-1" class="t-anchor s-1-milestone" data-el="anchor" data-n="1"></span> I was truly astounded by it; for 10 people, that’s surely the biggest you’ve done.</p>
-<p id="let012:0.2.0.1.6" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">The last few days I’ve enjoyed reading the poems of <span id="let012:0.2.0.1.6.0" class="t-rs s-2-entita" title="type: pers · key: 680" data-el="rs" data-key="680" data-type="pers">John Keats</span>; he’s a poet who isn’t very well known in Holland, I believe. He’s the 
+<div id="let012:0.2.0.1.3" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">My dear friends,</div>
+<div id="let012:0.2.0.1.4" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">It was a very pleasant surprise for me to receive <span id="let012:0.2.0.1.4.0" class="t-rs s-2-entita" title="type: pers · key: 761" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="761" data-type="pers">Caroline</span>’s letter. Thank you.</div>
+<div id="let012:0.2.0.1.5" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">I sincerely hope that she’s now completely better; fortunately, it’s past. When you write again sometime I must hear more about that last piece you made.<span id="note-t-1" class="t-anchor s-1-milestone" data-el="anchor" data-n="1"></span> I was truly astounded by it; for 10 people, that’s surely the biggest you’ve done.</div>
+<div id="let012:0.2.0.1.6" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">The last few days I’ve enjoyed reading the poems of <span id="let012:0.2.0.1.6.0" class="t-rs s-2-entita" title="type: pers · key: 680" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="680" data-type="pers">John Keats</span>; he’s a poet who isn’t very well known in Holland, I believe. He’s the 
 <span id="pb-trans-1v-2" class="t-pb" role="separator" title="page break">[2]</span> favourite of the painters here, and that’s how I came to be reading him.<span id="note-t-2" class="t-anchor s-1-milestone" data-el="anchor" data-n="2"></span> Herewith something by him.<span id="note-t-3" class="t-anchor s-1-milestone" data-el="anchor" data-n="3"></span> His most famous piece is ‘St Agnes’ eve’, but it’s rather too long to copy out.<span id="note-t-4" class="t-anchor s-1-milestone" data-el="anchor" data-n="4"></span>
-                </p>
-<p id="let012:0.2.0.1.7" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">I haven’t yet been to the Crystal Palace and the Tower, nor to Tussaud’s;<span id="note-t-5" class="t-anchor s-1-milestone" data-el="anchor" data-n="5"></span> I’m not at all in a hurry to go and see everything. For the time being I have enough with the museums, parks, &amp;c., which attract me more.</p>
-<p id="let012:0.2.0.1.8" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">I had a nice day last Monday. The first Monday in Aug. is a holiday here.<span id="note-t-6" class="t-anchor s-1-milestone" data-el="anchor" data-n="6"></span> I went with one of the Germans to Dulwich, an hour and a half outside L., to see the museum there,<span id="note-t-7" class="t-anchor s-1-milestone" data-el="anchor" data-n="7"></span> and afterwards we walked to a village about an hour further on. The countryside here is so beautiful; many people who have their business in L. live in some village or other outside L. and come to the city every day by train. Perhaps I’ll 
-<span id="pb-trans-1v-3" class="t-pb" role="separator" title="page break">[3]</span> soon be doing that as well, if I can find a cheap room somewhere. But I find moving so terrible that I’ll stay here as long as possible, though things aren’t as nice here as they seemed at first. Perhaps this is my fault, so I’ll wait a little longer.</p>
-<p id="let012:0.2.0.1.9" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">I’m sorry that my letter isn’t as I’d wish it to be, I’m writing in haste. But I wanted to congratulate you on <span id="let012:0.2.0.1.9.0" class="t-rs s-2-entita" title="type: pers · key: 760" data-el="rs" data-key="760" data-type="pers">Willem</span>’s birthday<span id="note-t-8" class="t-anchor s-1-milestone" data-el="anchor" data-n="8"></span> and wish you many happy returns.</p>
-<p id="let012:0.2.0.1.10" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">It gave me a great deal of pleasure to hear that you had renewed your acquaintance with the <span id="let012:0.2.0.1.10.0" class="t-rs s-2-entita" title="type: pers · key: 787 788" data-el="rs" data-key="787 788" data-type="pers">Tersteeg family</span>. I had long been hoping that you would, for your sake.</p>
-<p id="let012:0.2.0.1.11" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Write to me when you get the chance and tell me which photographs you’ve received, I’m curious to know. 
+                </div>
+<div id="let012:0.2.0.1.7" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">I haven’t yet been to the Crystal Palace and the Tower, nor to Tussaud’s;<span id="note-t-5" class="t-anchor s-1-milestone" data-el="anchor" data-n="5"></span> I’m not at all in a hurry to go and see everything. For the time being I have enough with the museums, parks, &amp;c., which attract me more.</div>
+<div id="let012:0.2.0.1.8" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">I had a nice day last Monday. The first Monday in Aug. is a holiday here.<span id="note-t-6" class="t-anchor s-1-milestone" data-el="anchor" data-n="6"></span> I went with one of the Germans to Dulwich, an hour and a half outside L., to see the museum there,<span id="note-t-7" class="t-anchor s-1-milestone" data-el="anchor" data-n="7"></span> and afterwards we walked to a village about an hour further on. The countryside here is so beautiful; many people who have their business in L. live in some village or other outside L. and come to the city every day by train. Perhaps I’ll 
+<span id="pb-trans-1v-3" class="t-pb" role="separator" title="page break">[3]</span> soon be doing that as well, if I can find a cheap room somewhere. But I find moving so terrible that I’ll stay here as long as possible, though things aren’t as nice here as they seemed at first. Perhaps this is my fault, so I’ll wait a little longer.</div>
+<div id="let012:0.2.0.1.9" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">I’m sorry that my letter isn’t as I’d wish it to be, I’m writing in haste. But I wanted to congratulate you on <span id="let012:0.2.0.1.9.0" class="t-rs s-2-entita" title="type: pers · key: 760" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="760" data-type="pers">Willem</span>’s birthday<span id="note-t-8" class="t-anchor s-1-milestone" data-el="anchor" data-n="8"></span> and wish you many happy returns.</div>
+<div id="let012:0.2.0.1.10" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">It gave me a great deal of pleasure to hear that you had renewed your acquaintance with the <span id="let012:0.2.0.1.10.0" class="t-rs s-2-entita" title="type: pers · key: 787 788" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="787 788" data-type="pers">Tersteeg family</span>. I had long been hoping that you would, for your sake.</div>
+<div id="let012:0.2.0.1.11" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">Write to me when you get the chance and tell me which photographs you’ve received, I’m curious to know. 
 <span id="pb-trans-1r-4" class="t-pb" role="separator" title="page break">[4]</span>
-                </p>
-<p id="let012:0.2.0.1.12" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">I’ve had a letter from <span id="let012:0.2.0.1.12.0" class="t-rs s-2-entita" title="type: pers · key: 767" data-el="rs" data-key="767" data-type="pers">Marinus</span>,<span id="note-t-9" class="t-anchor s-1-milestone" data-el="anchor" data-n="9"></span> and have understood from it that he’s going to Amsterdam. That will be a big change for him, I hope he’ll do well. I was glad he wrote to me.</p>
-<p id="let012:0.2.0.1.13" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">A day or two ago I had a visit from a <span id="let012:0.2.0.1.13.0" class="t-rs s-2-entita" title="type: pers · key: 112" data-el="rs" data-key="112" data-type="pers">brother of Iterson</span> who lives here,<span id="note-t-10" class="t-anchor s-1-milestone" data-el="anchor" data-n="10"></span> and so had the first opportunity of speaking Dutch since May. We live a long way from each other, which I very much regret. And now I bid you good-day, I wish you well. Many regards to everyone in the Poten.<span id="note-t-11" class="t-anchor s-1-milestone" data-el="anchor" data-n="11"></span> I wish you well,</p>
+                </div>
+<div id="let012:0.2.0.1.12" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">I’ve had a letter from <span id="let012:0.2.0.1.12.0" class="t-rs s-2-entita" title="type: pers · key: 767" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="767" data-type="pers">Marinus</span>,<span id="note-t-9" class="t-anchor s-1-milestone" data-el="anchor" data-n="9"></span> and have understood from it that he’s going to Amsterdam. That will be a big change for him, I hope he’ll do well. I was glad he wrote to me.</div>
+<div id="let012:0.2.0.1.13" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">A day or two ago I had a visit from a <span id="let012:0.2.0.1.13.0" class="t-rs s-2-entita" title="type: pers · key: 112" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="112" data-type="pers">brother of Iterson</span> who lives here,<span id="note-t-10" class="t-anchor s-1-milestone" data-el="anchor" data-n="10"></span> and so had the first opportunity of speaking Dutch since May. We live a long way from each other, which I very much regret. And now I bid you good-day, I wish you well. Many regards to everyone in the Poten.<span id="note-t-11" class="t-anchor s-1-milestone" data-el="anchor" data-n="11"></span> I wish you well,</div>
 <span id="let012:0.2.0.1.14" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
-<p id="let012:0.2.0.1.15" class="t-ab s-1-struttura" data-el="ab">Yours truly,</p>
-<p id="let012:0.2.0.1.16" class="t-ab s-1-struttura" data-el="ab">Vincent</p>
+<div id="let012:0.2.0.1.15" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Yours truly,</div>
+<div id="let012:0.2.0.1.16" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Vincent</div>
 <span id="let012:0.2.0.1.17" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
-<p id="let012:0.2.0.1.18" class="t-ab s-1-struttura" data-el="ab">Cheer me up soon with a letter if you can find the time.</p>
+<div id="let012:0.2.0.1.18" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Cheer me up soon with a letter if you can find the time.</div>
 <span id="let012:0.2.0.1.19" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
-<p id="let012:0.2.0.1.20" class="t-ab s-1-struttura" data-el="ab">
+<div id="let012:0.2.0.1.20" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">
 <span id="pb-trans-2r-5" class="t-pb" role="separator" title="page break">[5]</span>
-                </p>
-<p id="let012:0.2.0.1.21" class="t-ab s-1-struttura" data-el="ab">The eve of Saint Mark<span id="note-t-12" class="t-anchor s-1-milestone" data-el="anchor" data-n="12"></span>
-                </p>
-<p id="let012:0.2.0.1.22" class="t-ab s-1-struttura" data-el="ab">(Unfinished)</p>
+                </div>
+<div id="let012:0.2.0.1.21" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The eve of Saint Mark<span id="note-t-12" class="t-anchor s-1-milestone" data-el="anchor" data-n="12"></span>
+                </div>
+<div id="let012:0.2.0.1.22" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">(Unfinished)</div>
 <span id="let012:0.2.0.1.23" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
-<p id="let012:0.2.0.1.24" class="t-ab s-1-struttura" data-el="ab">Upon a Sabbath day it fell;</p>
-<p id="let012:0.2.0.1.25" class="t-ab s-1-struttura" data-el="ab">Twice holy was the Sabbath bell,</p>
-<p id="let012:0.2.0.1.26" class="t-ab s-1-struttura" data-el="ab">That called the folk to evening prayer;</p>
-<p id="let012:0.2.0.1.27" class="t-ab s-1-struttura" data-el="ab">The city streets were clear and fair</p>
-<p id="let012:0.2.0.1.28" class="t-ab s-1-struttura" data-el="ab">From wholesome drench of April rains;</p>
-<p id="let012:0.2.0.1.29" class="t-ab s-1-struttura" data-el="ab">And, on the western window panes,</p>
-<p id="let012:0.2.0.1.30" class="t-ab s-1-struttura" data-el="ab">The chilly sunset faintly told</p>
-<p id="let012:0.2.0.1.31" class="t-ab s-1-struttura" data-el="ab">Of unmatured green, vallies cold,</p>
-<p id="let012:0.2.0.1.32" class="t-ab s-1-struttura" data-el="ab">Of the green thorny bloomless hedge,</p>
-<p id="let012:0.2.0.1.33" class="t-ab s-1-struttura" data-el="ab">Of rivers new with spring-tide sedge,</p>
-<p id="let012:0.2.0.1.34" class="t-ab s-1-struttura" data-el="ab">Of primroses by shelter’d rills,</p>
-<p id="let012:0.2.0.1.35" class="t-ab s-1-struttura" data-el="ab">Of daisies on the aguish hills.</p>
-<p id="let012:0.2.0.1.36" class="t-ab s-1-struttura" data-el="ab">Twice holy was the Sabbath-bell:</p>
-<p id="let012:0.2.0.1.37" class="t-ab s-1-struttura" data-el="ab">The silent streets were crowded well</p>
-<p id="let012:0.2.0.1.38" class="t-ab s-1-struttura" data-el="ab">With staid and pious companies,</p>
-<p id="let012:0.2.0.1.39" class="t-ab s-1-struttura" data-el="ab">Warm from their fire-side orat’ries;</p>
-<p id="let012:0.2.0.1.40" class="t-ab s-1-struttura" data-el="ab">And moving, with demurest air</p>
-<p id="let012:0.2.0.1.41" class="t-ab s-1-struttura" data-el="ab">To even-song, and vesper prayer.</p>
-<p id="let012:0.2.0.1.42" class="t-ab s-1-struttura" data-el="ab">Each arched porch, and entry low,</p>
-<p id="let012:0.2.0.1.43" class="t-ab s-1-struttura" data-el="ab">Was fill’d with patient folk and slow,</p>
-<p id="let012:0.2.0.1.44" class="t-ab s-1-struttura" data-el="ab">With whispers hush and shuffling feet,</p>
-<p id="let012:0.2.0.1.45" class="t-ab s-1-struttura" data-el="ab">While played the organ, loud and sweet.</p>
-<p id="let012:0.2.0.1.46" class="t-ab s-1-struttura" data-el="ab">The bells had ceased, the prayers begun,</p>
-<p id="let012:0.2.0.1.47" class="t-ab s-1-struttura" data-el="ab">And Bertha had not yet half done</p>
-<p id="let012:0.2.0.1.48" class="t-ab s-1-struttura" data-el="ab">A curious volume, patch’d and torn,</p>
-<p id="let012:0.2.0.1.49" class="t-ab s-1-struttura" data-el="ab">That all day long, from earliest morn,</p>
-<p id="let012:0.2.0.1.50" class="t-ab s-1-struttura" data-el="ab">Had taken captive her two eyes,</p>
-<p id="let012:0.2.0.1.51" class="t-ab s-1-struttura" data-el="ab">Among its golden broideries;</p>
-<p id="let012:0.2.0.1.52" class="t-ab s-1-struttura" data-el="ab">Perplexed her with a thousand things,</p>
-<p id="let012:0.2.0.1.53" class="t-ab s-1-struttura" data-el="ab">The stars of Heaven, and angels’ wings,</p>
-<p id="let012:0.2.0.1.54" class="t-ab s-1-struttura" data-el="ab">Martyrs in a fiery blaze,</p>
-<p id="let012:0.2.0.1.55" class="t-ab s-1-struttura" data-el="ab">Azure saints and silver rays</p>
-<p id="let012:0.2.0.1.56" class="t-ab s-1-struttura" data-el="ab">Moses’ breastplate, and the seven</p>
-<p id="let012:0.2.0.1.57" class="t-ab s-1-struttura" data-el="ab">Candlesticks John saw in Heaven,</p>
-<p id="let012:0.2.0.1.58" class="t-ab s-1-struttura" data-el="ab">The winged lion of Saint Mark,</p>
-<p id="let012:0.2.0.1.59" class="t-ab s-1-struttura" data-el="ab">And the covenantal Ark,</p>
-<p id="let012:0.2.0.1.60" class="t-ab s-1-struttura" data-el="ab">With its many mysteries</p>
-<p id="let012:0.2.0.1.61" class="t-ab s-1-struttura" data-el="ab">Cherubim and golden mice. 
+<div id="let012:0.2.0.1.24" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Upon a Sabbath day it fell;</div>
+<div id="let012:0.2.0.1.25" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Twice holy was the Sabbath bell,</div>
+<div id="let012:0.2.0.1.26" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">That called the folk to evening prayer;</div>
+<div id="let012:0.2.0.1.27" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The city streets were clear and fair</div>
+<div id="let012:0.2.0.1.28" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">From wholesome drench of April rains;</div>
+<div id="let012:0.2.0.1.29" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And, on the western window panes,</div>
+<div id="let012:0.2.0.1.30" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The chilly sunset faintly told</div>
+<div id="let012:0.2.0.1.31" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Of unmatured green, vallies cold,</div>
+<div id="let012:0.2.0.1.32" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Of the green thorny bloomless hedge,</div>
+<div id="let012:0.2.0.1.33" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Of rivers new with spring-tide sedge,</div>
+<div id="let012:0.2.0.1.34" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Of primroses by shelter’d rills,</div>
+<div id="let012:0.2.0.1.35" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Of daisies on the aguish hills.</div>
+<div id="let012:0.2.0.1.36" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Twice holy was the Sabbath-bell:</div>
+<div id="let012:0.2.0.1.37" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The silent streets were crowded well</div>
+<div id="let012:0.2.0.1.38" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">With staid and pious companies,</div>
+<div id="let012:0.2.0.1.39" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Warm from their fire-side orat’ries;</div>
+<div id="let012:0.2.0.1.40" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And moving, with demurest air</div>
+<div id="let012:0.2.0.1.41" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">To even-song, and vesper prayer.</div>
+<div id="let012:0.2.0.1.42" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Each arched porch, and entry low,</div>
+<div id="let012:0.2.0.1.43" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Was fill’d with patient folk and slow,</div>
+<div id="let012:0.2.0.1.44" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">With whispers hush and shuffling feet,</div>
+<div id="let012:0.2.0.1.45" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">While played the organ, loud and sweet.</div>
+<div id="let012:0.2.0.1.46" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The bells had ceased, the prayers begun,</div>
+<div id="let012:0.2.0.1.47" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And Bertha had not yet half done</div>
+<div id="let012:0.2.0.1.48" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">A curious volume, patch’d and torn,</div>
+<div id="let012:0.2.0.1.49" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">That all day long, from earliest morn,</div>
+<div id="let012:0.2.0.1.50" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Had taken captive her two eyes,</div>
+<div id="let012:0.2.0.1.51" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Among its golden broideries;</div>
+<div id="let012:0.2.0.1.52" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Perplexed her with a thousand things,</div>
+<div id="let012:0.2.0.1.53" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The stars of Heaven, and angels’ wings,</div>
+<div id="let012:0.2.0.1.54" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Martyrs in a fiery blaze,</div>
+<div id="let012:0.2.0.1.55" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Azure saints and silver rays</div>
+<div id="let012:0.2.0.1.56" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Moses’ breastplate, and the seven</div>
+<div id="let012:0.2.0.1.57" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Candlesticks John saw in Heaven,</div>
+<div id="let012:0.2.0.1.58" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The winged lion of Saint Mark,</div>
+<div id="let012:0.2.0.1.59" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And the covenantal Ark,</div>
+<div id="let012:0.2.0.1.60" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">With its many mysteries</div>
+<div id="let012:0.2.0.1.61" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Cherubim and golden mice. 
 <span id="pb-trans-2v-6" class="t-pb" role="separator" title="page break">[6]</span>
-                </p>
-<p id="let012:0.2.0.1.62" class="t-ab s-1-struttura" data-el="ab">Bertha was a maiden fair,</p>
-<p id="let012:0.2.0.1.63" class="t-ab s-1-struttura" data-el="ab">Dwelling in th’old minster-square;</p>
-<p id="let012:0.2.0.1.64" class="t-ab s-1-struttura" data-el="ab">From her fireside she could see,</p>
-<p id="let012:0.2.0.1.65" class="t-ab s-1-struttura" data-el="ab">Sidelong, its rich antiquity,</p>
-<p id="let012:0.2.0.1.66" class="t-ab s-1-struttura" data-el="ab">Far as the Bishops gardenwall;</p>
-<p id="let012:0.2.0.1.67" class="t-ab s-1-struttura" data-el="ab">Where sycamores and elm trees tall,</p>
-<p id="let012:0.2.0.1.68" class="t-ab s-1-struttura" data-el="ab">Full leaved, the forest had outstript,</p>
-<p id="let012:0.2.0.1.69" class="t-ab s-1-struttura" data-el="ab">By no sharp north wind ever nipt,</p>
-<p id="let012:0.2.0.1.70" class="t-ab s-1-struttura" data-el="ab">So shelter’d by the mighty pile,</p>
-<p id="let012:0.2.0.1.71" class="t-ab s-1-struttura" data-el="ab">Bertha arose and read awhile,</p>
-<p id="let012:0.2.0.1.72" class="t-ab s-1-struttura" data-el="ab">With forehead ’gainst the window pane.</p>
-<p id="let012:0.2.0.1.73" class="t-ab s-1-struttura" data-el="ab">Again she tried and tried again,</p>
-<p id="let012:0.2.0.1.74" class="t-ab s-1-struttura" data-el="ab">Until the dusk eve left her dark</p>
-<p id="let012:0.2.0.1.75" class="t-ab s-1-struttura" data-el="ab">Upon the legend of St Mark.</p>
-<p id="let012:0.2.0.1.76" class="t-ab s-1-struttura" data-el="ab">From plaited lawn-frill, fine and thin,</p>
-<p id="let012:0.2.0.1.77" class="t-ab s-1-struttura" data-el="ab">She lifted up her soft warm chin,</p>
-<p id="let012:0.2.0.1.78" class="t-ab s-1-struttura" data-el="ab">With aching neck and swimming eyes</p>
-<p id="let012:0.2.0.1.79" class="t-ab s-1-struttura" data-el="ab">And dazed with saintly imag’ries.</p>
+                </div>
+<div id="let012:0.2.0.1.62" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Bertha was a maiden fair,</div>
+<div id="let012:0.2.0.1.63" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Dwelling in th’old minster-square;</div>
+<div id="let012:0.2.0.1.64" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">From her fireside she could see,</div>
+<div id="let012:0.2.0.1.65" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Sidelong, its rich antiquity,</div>
+<div id="let012:0.2.0.1.66" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Far as the Bishops gardenwall;</div>
+<div id="let012:0.2.0.1.67" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Where sycamores and elm trees tall,</div>
+<div id="let012:0.2.0.1.68" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Full leaved, the forest had outstript,</div>
+<div id="let012:0.2.0.1.69" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">By no sharp north wind ever nipt,</div>
+<div id="let012:0.2.0.1.70" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">So shelter’d by the mighty pile,</div>
+<div id="let012:0.2.0.1.71" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Bertha arose and read awhile,</div>
+<div id="let012:0.2.0.1.72" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">With forehead ’gainst the window pane.</div>
+<div id="let012:0.2.0.1.73" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Again she tried and tried again,</div>
+<div id="let012:0.2.0.1.74" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Until the dusk eve left her dark</div>
+<div id="let012:0.2.0.1.75" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Upon the legend of St Mark.</div>
+<div id="let012:0.2.0.1.76" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">From plaited lawn-frill, fine and thin,</div>
+<div id="let012:0.2.0.1.77" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">She lifted up her soft warm chin,</div>
+<div id="let012:0.2.0.1.78" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">With aching neck and swimming eyes</div>
+<div id="let012:0.2.0.1.79" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And dazed with saintly imag’ries.</div>
 <span id="let012:0.2.0.1.80" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
-<p id="let012:0.2.0.1.81" class="t-ab s-1-struttura" data-el="ab">All was gloom, and silent all</p>
-<p id="let012:0.2.0.1.82" class="t-ab s-1-struttura" data-el="ab">Save now and then the still foot-fall</p>
-<p id="let012:0.2.0.1.83" class="t-ab s-1-struttura" data-el="ab">Of one returning homewards late,</p>
-<p id="let012:0.2.0.1.84" class="t-ab s-1-struttura" data-el="ab">Past the echoing minster-gate.</p>
-<p id="let012:0.2.0.1.85" class="t-ab s-1-struttura" data-el="ab">The clamorous daws, that all the day</p>
-<p id="let012:0.2.0.1.86" class="t-ab s-1-struttura" data-el="ab">Above tree tops and towers play,</p>
-<p id="let012:0.2.0.1.87" class="t-ab s-1-struttura" data-el="ab">Pair by pair had gone to rest,</p>
-<p id="let012:0.2.0.1.88" class="t-ab s-1-struttura" data-el="ab">Each in its ancient belfry-nest,</p>
-<p id="let012:0.2.0.1.89" class="t-ab s-1-struttura" data-el="ab">Where asleep they fall betimes</p>
-<p id="let012:0.2.0.1.90" class="t-ab s-1-struttura" data-el="ab">To music and the drowsy chimes.</p>
+<div id="let012:0.2.0.1.81" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">All was gloom, and silent all</div>
+<div id="let012:0.2.0.1.82" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Save now and then the still foot-fall</div>
+<div id="let012:0.2.0.1.83" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Of one returning homewards late,</div>
+<div id="let012:0.2.0.1.84" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Past the echoing minster-gate.</div>
+<div id="let012:0.2.0.1.85" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The clamorous daws, that all the day</div>
+<div id="let012:0.2.0.1.86" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Above tree tops and towers play,</div>
+<div id="let012:0.2.0.1.87" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Pair by pair had gone to rest,</div>
+<div id="let012:0.2.0.1.88" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Each in its ancient belfry-nest,</div>
+<div id="let012:0.2.0.1.89" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Where asleep they fall betimes</div>
+<div id="let012:0.2.0.1.90" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">To music and the drowsy chimes.</div>
 <span id="let012:0.2.0.1.91" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
-<p id="let012:0.2.0.1.92" class="t-ab s-1-struttura" data-el="ab">All was silent, all was gloom,</p>
-<p id="let012:0.2.0.1.93" class="t-ab s-1-struttura" data-el="ab">Abroad and in the homely room:</p>
-<p id="let012:0.2.0.1.94" class="t-ab s-1-struttura" data-el="ab">Down she sat, poor cheated soul!</p>
-<p id="let012:0.2.0.1.95" class="t-ab s-1-struttura" data-el="ab">And struck a lamp from the dismal coal;</p>
-<p id="let012:0.2.0.1.96" class="t-ab s-1-struttura" data-el="ab">Leaned forward, with bright drooping hair,</p>
-<p id="let012:0.2.0.1.97" class="t-ab s-1-struttura" data-el="ab">And slant book, full against the glare.</p>
-<p id="let012:0.2.0.1.98" class="t-ab s-1-struttura" data-el="ab">Her shadow, in uneasy guise,</p>
-<p id="let012:0.2.0.1.99" class="t-ab s-1-struttura" data-el="ab">Hover’d about, a giant size,</p>
-<p id="let012:0.2.0.1.100" class="t-ab s-1-struttura" data-el="ab">On ceiling beam and old oak chair,</p>
-<p id="let012:0.2.0.1.101" class="t-ab s-1-struttura" data-el="ab">The parrot’s cage, and panel square;</p>
-<p id="let012:0.2.0.1.102" class="t-ab s-1-struttura" data-el="ab">And the warm angled winter-screen,</p>
-<p id="let012:0.2.0.1.103" class="t-ab s-1-struttura" data-el="ab">On which were many monsters seen,</p>
-<p id="let012:0.2.0.1.104" class="t-ab s-1-struttura" data-el="ab">Call’d doves of Siam, Lima mice,</p>
-<p id="let012:0.2.0.1.105" class="t-ab s-1-struttura" data-el="ab">And legless birds of Paradise,</p>
-<p id="let012:0.2.0.1.106" class="t-ab s-1-struttura" data-el="ab">Macaw, and tender Av’davat,</p>
-<p id="let012:0.2.0.1.107" class="t-ab s-1-struttura" data-el="ab">And silken-furr’d Angora cat. 
+<div id="let012:0.2.0.1.92" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">All was silent, all was gloom,</div>
+<div id="let012:0.2.0.1.93" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Abroad and in the homely room:</div>
+<div id="let012:0.2.0.1.94" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Down she sat, poor cheated soul!</div>
+<div id="let012:0.2.0.1.95" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And struck a lamp from the dismal coal;</div>
+<div id="let012:0.2.0.1.96" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Leaned forward, with bright drooping hair,</div>
+<div id="let012:0.2.0.1.97" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And slant book, full against the glare.</div>
+<div id="let012:0.2.0.1.98" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Her shadow, in uneasy guise,</div>
+<div id="let012:0.2.0.1.99" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Hover’d about, a giant size,</div>
+<div id="let012:0.2.0.1.100" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">On ceiling beam and old oak chair,</div>
+<div id="let012:0.2.0.1.101" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The parrot’s cage, and panel square;</div>
+<div id="let012:0.2.0.1.102" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And the warm angled winter-screen,</div>
+<div id="let012:0.2.0.1.103" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">On which were many monsters seen,</div>
+<div id="let012:0.2.0.1.104" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Call’d doves of Siam, Lima mice,</div>
+<div id="let012:0.2.0.1.105" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And legless birds of Paradise,</div>
+<div id="let012:0.2.0.1.106" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Macaw, and tender Av’davat,</div>
+<div id="let012:0.2.0.1.107" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And silken-furr’d Angora cat. 
 <span id="pb-trans-2v-7" class="t-pb" role="separator" title="page break">[7]</span>
-                </p>
-<p id="let012:0.2.0.1.108" class="t-ab s-1-struttura" data-el="ab">Untired she read, her shadow still</p>
-<p id="let012:0.2.0.1.109" class="t-ab s-1-struttura" data-el="ab">Glower’d about, as it would fill</p>
-<p id="let012:0.2.0.1.110" class="t-ab s-1-struttura" data-el="ab">The room with wildest forms and shades,</p>
-<p id="let012:0.2.0.1.111" class="t-ab s-1-struttura" data-el="ab">As though some ghostly queen of spades</p>
-<p id="let012:0.2.0.1.112" class="t-ab s-1-struttura" data-el="ab">Had come to mock behind her back</p>
-<p id="let012:0.2.0.1.113" class="t-ab s-1-struttura" data-el="ab">And dance, and ruffle her garments black.</p>
-<p id="let012:0.2.0.1.114" class="t-ab s-1-struttura" data-el="ab">Untired she read the legend page,</p>
-<p id="let012:0.2.0.1.115" class="t-ab s-1-struttura" data-el="ab">Of holy Mark, from youth to age,</p>
-<p id="let012:0.2.0.1.116" class="t-ab s-1-struttura" data-el="ab">On land, on sea, in pagan chains,</p>
-<p id="let012:0.2.0.1.117" class="t-ab s-1-struttura" data-el="ab">Rejoicing for his many pains.</p>
-<p id="let012:0.2.0.1.118" class="t-ab s-1-struttura" data-el="ab">Sometimes the learned eremite,</p>
-<p id="let012:0.2.0.1.119" class="t-ab s-1-struttura" data-el="ab">With golden star, or dagger bright,</p>
-<p id="let012:0.2.0.1.120" class="t-ab s-1-struttura" data-el="ab">Referr’d to pious poesies</p>
-<p id="let012:0.2.0.1.121" class="t-ab s-1-struttura" data-el="ab">Written in smallest crow-quill size</p>
-<p id="let012:0.2.0.1.122" class="t-ab s-1-struttura" data-el="ab">Beneath the text; and thus the rhyme</p>
-<p id="let012:0.2.0.1.123" class="t-ab s-1-struttura" data-el="ab">Was parcell’d out from time to time:</p>
-<p id="let012:0.2.0.1.124" class="t-ab s-1-struttura" data-el="ab">................................................................</p>
-<p id="let012:0.2.0.1.125" class="t-ab s-1-struttura" data-el="ab">................................................................</p>
-<p id="let012:0.2.0.1.126" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">  John Keats (1818)</p>
+                </div>
+<div id="let012:0.2.0.1.108" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Untired she read, her shadow still</div>
+<div id="let012:0.2.0.1.109" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Glower’d about, as it would fill</div>
+<div id="let012:0.2.0.1.110" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The room with wildest forms and shades,</div>
+<div id="let012:0.2.0.1.111" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">As though some ghostly queen of spades</div>
+<div id="let012:0.2.0.1.112" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Had come to mock behind her back</div>
+<div id="let012:0.2.0.1.113" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And dance, and ruffle her garments black.</div>
+<div id="let012:0.2.0.1.114" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Untired she read the legend page,</div>
+<div id="let012:0.2.0.1.115" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Of holy Mark, from youth to age,</div>
+<div id="let012:0.2.0.1.116" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">On land, on sea, in pagan chains,</div>
+<div id="let012:0.2.0.1.117" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Rejoicing for his many pains.</div>
+<div id="let012:0.2.0.1.118" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Sometimes the learned eremite,</div>
+<div id="let012:0.2.0.1.119" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">With golden star, or dagger bright,</div>
+<div id="let012:0.2.0.1.120" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Referr’d to pious poesies</div>
+<div id="let012:0.2.0.1.121" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Written in smallest crow-quill size</div>
+<div id="let012:0.2.0.1.122" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Beneath the text; and thus the rhyme</div>
+<div id="let012:0.2.0.1.123" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Was parcell’d out from time to time:</div>
+<div id="let012:0.2.0.1.124" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">................................................................</div>
+<div id="let012:0.2.0.1.125" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">................................................................</div>
+<div id="let012:0.2.0.1.126" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">  John Keats (1818)</div>
 <span id="let012:0.2.0.1.127" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
-    <p id="let012:0.2.0.1.128" class="t-ab s-1-struttura" data-el="ab">The imagination may be compared to Adam’s dream; ‘he awoke and found it truth’.<span id="note-t-13" class="t-anchor s-1-milestone" data-el="anchor" data-n="13"></span>
-                </p> 
+    <div id="let012:0.2.0.1.128" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The imagination may be compared to Adam’s dream; ‘he awoke and found it truth’.<span id="note-t-13" class="t-anchor s-1-milestone" data-el="anchor" data-n="13"></span>
+                </div> 
 <span id="let012:0.2.0.1.129" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span> 
 <span id="pb-trans-2r-8" class="t-pb" role="separator" title="page break">[8]</span>
-<p id="let012:0.2.0.1.131" class="t-ab s-1-struttura" data-el="ab">
-                    <span id="let012:0.2.0.1.131.0" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Autumn</span>
+<div id="let012:0.2.0.1.131" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">
+                    <span id="let012:0.2.0.1.131.0" class="t-hi s-1-inline" data-el="hi" data-behaviour="inline" data-behaviour-source="tei-all" data-rend="ital">Autumn</span>
                     <span id="note-t-14" class="t-anchor s-1-milestone" data-el="anchor" data-n="14"></span>
-                </p>
+                </div>
 <span id="let012:0.2.0.1.132" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
-<p id="let012:0.2.0.1.133" class="t-ab s-1-struttura" data-el="ab">Season of mist, and mellow fruitfulness!</p>
-<p id="let012:0.2.0.1.134" class="t-ab s-1-struttura" data-el="ab">Close bosom-friend to the maturing sun;</p>
-<p id="let012:0.2.0.1.135" class="t-ab s-1-struttura" data-el="ab">Conspiring with him how to load and bless</p>
-<p id="let012:0.2.0.1.136" class="t-ab s-1-struttura" data-el="ab">With fruit the vines that round the thatch-eaves run;</p>
-<p id="let012:0.2.0.1.137" class="t-ab s-1-struttura" data-el="ab">To bend with apples the moss’d cottage trees,</p>
-<p id="let012:0.2.0.1.138" class="t-ab s-1-struttura" data-el="ab">And fill all fruit with ripeness to the core;</p>
-<p id="let012:0.2.0.1.139" class="t-ab s-1-struttura" data-el="ab">To swell the gourd, and plump the hazel shells</p>
-<p id="let012:0.2.0.1.140" class="t-ab s-1-struttura" data-el="ab">With a sweet kernel; to set budding more,</p>
-<p id="let012:0.2.0.1.141" class="t-ab s-1-struttura" data-el="ab">And still more, later flowers for the bees,</p>
-<p id="let012:0.2.0.1.142" class="t-ab s-1-struttura" data-el="ab">Until they think warm days will never cease,</p>
-<p id="let012:0.2.0.1.143" class="t-ab s-1-struttura" data-el="ab">For summer has o’erbrimm’d their clammy cells.</p>
+<div id="let012:0.2.0.1.133" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Season of mist, and mellow fruitfulness!</div>
+<div id="let012:0.2.0.1.134" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Close bosom-friend to the maturing sun;</div>
+<div id="let012:0.2.0.1.135" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Conspiring with him how to load and bless</div>
+<div id="let012:0.2.0.1.136" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">With fruit the vines that round the thatch-eaves run;</div>
+<div id="let012:0.2.0.1.137" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">To bend with apples the moss’d cottage trees,</div>
+<div id="let012:0.2.0.1.138" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And fill all fruit with ripeness to the core;</div>
+<div id="let012:0.2.0.1.139" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">To swell the gourd, and plump the hazel shells</div>
+<div id="let012:0.2.0.1.140" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">With a sweet kernel; to set budding more,</div>
+<div id="let012:0.2.0.1.141" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And still more, later flowers for the bees,</div>
+<div id="let012:0.2.0.1.142" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Until they think warm days will never cease,</div>
+<div id="let012:0.2.0.1.143" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">For summer has o’erbrimm’d their clammy cells.</div>
 <span id="let012:0.2.0.1.144" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
-<p id="let012:0.2.0.1.145" class="t-ab s-1-struttura" data-el="ab">Where are the songs of spring? Ay, where are they?</p>
-<p id="let012:0.2.0.1.146" class="t-ab s-1-struttura" data-el="ab">Think not of them, thou hast thy music too,</p>
-<p id="let012:0.2.0.1.147" class="t-ab s-1-struttura" data-el="ab">While barred clouds bloom the soft-dying day,</p>
-<p id="let012:0.2.0.1.148" class="t-ab s-1-struttura" data-el="ab">And touch the stubble-plains with rosy hue;</p>
-<p id="let012:0.2.0.1.149" class="t-ab s-1-struttura" data-el="ab">Then in a wailful choir the small gnats mourn</p>
-<p id="let012:0.2.0.1.150" class="t-ab s-1-struttura" data-el="ab">Among the river sallows, borne aloft.</p>
-<p id="let012:0.2.0.1.151" class="t-ab s-1-struttura" data-el="ab">Or sinking as the light wind lives or dies;</p>
-<p id="let012:0.2.0.1.152" class="t-ab s-1-struttura" data-el="ab">And full-grown lambs loud bleat from hilly bourn;</p>
-<p id="let012:0.2.0.1.153" class="t-ab s-1-struttura" data-el="ab">Hedge-crickets sing; and now with treble soft</p>
-<p id="let012:0.2.0.1.154" class="t-ab s-1-struttura" data-el="ab">The redbreast whistles from a garden croft,</p>
-<p id="let012:0.2.0.1.155" class="t-ab s-1-struttura" data-el="ab">And gathering swallows twitter in the skies.</p>
-            </div>
-<div id="let012:0.2.0.2" class="t-div s-1-struttura" data-el="div" data-type="notes">
+<div id="let012:0.2.0.1.145" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Where are the songs of spring? Ay, where are they?</div>
+<div id="let012:0.2.0.1.146" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Think not of them, thou hast thy music too,</div>
+<div id="let012:0.2.0.1.147" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">While barred clouds bloom the soft-dying day,</div>
+<div id="let012:0.2.0.1.148" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And touch the stubble-plains with rosy hue;</div>
+<div id="let012:0.2.0.1.149" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Then in a wailful choir the small gnats mourn</div>
+<div id="let012:0.2.0.1.150" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Among the river sallows, borne aloft.</div>
+<div id="let012:0.2.0.1.151" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Or sinking as the light wind lives or dies;</div>
+<div id="let012:0.2.0.1.152" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And full-grown lambs loud bleat from hilly bourn;</div>
+<div id="let012:0.2.0.1.153" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Hedge-crickets sing; and now with treble soft</div>
+<div id="let012:0.2.0.1.154" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The redbreast whistles from a garden croft,</div>
+<div id="let012:0.2.0.1.155" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">And gathering swallows twitter in the skies.</div>
+            </section>
+<section id="let012:0.2.0.2" class="t-div s-1-struttura" data-el="div" data-behaviour="section" data-behaviour-source="tei-all" data-type="notes">
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-1" class="t-note s-1-note" data-el="note" data-n="1" data-target="#note-t-1">
-<p id="let012:0.2.0.2.0.0" class="t-ab s-1-struttura" data-el="ab">It is not entirely clear what ‘piece’ refers to; presumably it was a <span id="let012:0.2.0.2.0.0.0" class="t-hi s-1-inline" data-el="hi" data-rend="ital">tableau vivant</span> or short play.</p>
+<div id="let012:0.2.0.2.0.0" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">It is not entirely clear what ‘piece’ refers to; presumably it was a <span id="let012:0.2.0.2.0.0.0" class="t-hi s-1-inline" data-el="hi" data-behaviour="inline" data-behaviour-source="tei-all" data-rend="ital">tableau vivant</span> or short play.</div>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-2" class="t-note s-1-note" data-el="note" data-n="2" data-target="#note-t-2">
-<p id="let012:0.2.0.2.1.0" class="t-ab s-1-struttura" data-el="ab">The poetry of <span id="let012:0.2.0.2.1.0.0" class="t-rs s-2-entita" title="type: pers · key: 680" data-el="rs" data-key="680" data-type="pers">John Keats</span> had become increasingly popular in England from the 1840s on. English painters – especially the Pre-Raphaelites – regularly depicted themes from his work. In the Netherlands no great interest was taken in Keats’s work until the 1880s, at which time the country was gripped by a new literary movement of its own. In 1879 Keats’s ‘Hyperion’ was translated into Dutch by W.W. van Lennep. See G.H. Ford, <span id="let012:0.2.0.2.1.0.1" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Keats and the Victorians. A study of his influence and rise to fame 1821-1895</span>. Hamden 1962; G. Dekker, <span id="let012:0.2.0.2.1.0.2" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Die invloed van Keats en Shelley in Nederland gedurende die negentiende eeu</span>. Groningen 1926, p. 33, and <span id="let012:0.2.0.2.1.0.3" class="t-hi s-1-inline" data-el="hi" data-rend="ital">John Keats. Gedichten</span>. Ed. Léon Stapper. Baarn 1991, pp. 18-23.</p>
+<div id="let012:0.2.0.2.1.0" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The poetry of <span id="let012:0.2.0.2.1.0.0" class="t-rs s-2-entita" title="type: pers · key: 680" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="680" data-type="pers">John Keats</span> had become increasingly popular in England from the 1840s on. English painters – especially the Pre-Raphaelites – regularly depicted themes from his work. In the Netherlands no great interest was taken in Keats’s work until the 1880s, at which time the country was gripped by a new literary movement of its own. In 1879 Keats’s ‘Hyperion’ was translated into Dutch by W.W. van Lennep. See G.H. Ford, <span id="let012:0.2.0.2.1.0.1" class="t-hi s-1-inline" data-el="hi" data-behaviour="inline" data-behaviour-source="tei-all" data-rend="ital">Keats and the Victorians. A study of his influence and rise to fame 1821-1895</span>. Hamden 1962; G. Dekker, <span id="let012:0.2.0.2.1.0.2" class="t-hi s-1-inline" data-el="hi" data-behaviour="inline" data-behaviour-source="tei-all" data-rend="ital">Die invloed van Keats en Shelley in Nederland gedurende die negentiende eeu</span>. Groningen 1926, p. 33, and <span id="let012:0.2.0.2.1.0.3" class="t-hi s-1-inline" data-el="hi" data-behaviour="inline" data-behaviour-source="tei-all" data-rend="ital">John Keats. Gedichten</span>. Ed. Léon Stapper. Baarn 1991, pp. 18-23.</div>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-3" class="t-note s-1-note" data-el="note" data-n="3" data-target="#note-t-3">
-<p id="let012:0.2.0.2.2.0" class="t-ab s-1-struttura" data-el="ab">See the poems appended to this letter.</p>
+<div id="let012:0.2.0.2.2.0" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">See the poems appended to this letter.</div>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-4" class="t-note s-1-note" data-el="note" data-n="4" data-target="#note-t-4">
-<p id="let012:0.2.0.2.3.0" class="t-ab s-1-struttura" data-el="ab">‘<span id="let012:0.2.0.2.3.0.0" class="t-rs s-2-entita" title="type: lit · key: 4" data-el="rs" data-key="4" data-type="lit">The eve of St Agnes</span>’ was published in 1820 in <span id="let012:0.2.0.2.3.0.1" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Lamia, Isabella, The eve of St Agnes and other poems</span>. The poem, which consists of 378 lines of verse, treats of the forbidden love of Porphyro and Madeline, ending with the lovers’ taking flight. See Keats 1978, pp. 299-318.</p>
+<div id="let012:0.2.0.2.3.0" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">‘<span id="let012:0.2.0.2.3.0.0" class="t-rs s-2-entita" title="type: lit · key: 4" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="4" data-type="lit">The eve of St Agnes</span>’ was published in 1820 in <span id="let012:0.2.0.2.3.0.1" class="t-hi s-1-inline" data-el="hi" data-behaviour="inline" data-behaviour-source="tei-all" data-rend="ital">Lamia, Isabella, The eve of St Agnes and other poems</span>. The poem, which consists of 378 lines of verse, treats of the forbidden love of Porphyro and Madeline, ending with the lovers’ taking flight. See Keats 1978, pp. 299-318.</div>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-5" class="t-note s-1-note" data-el="note" data-n="5" data-target="#note-t-5">
-<p id="let012:0.2.0.2.4.0" class="t-ab s-1-struttura" data-el="ab">Here Van Gogh names popular tourist attractions: Crystal Palace, the principal structure of the 1851 Great Exhibition, re-erected on Sydenham Hill in South London; the medieval Tower of London; and Madame Tussaud’s waxworks museum in Baker Street.</p>
+<div id="let012:0.2.0.2.4.0" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Here Van Gogh names popular tourist attractions: Crystal Palace, the principal structure of the 1851 Great Exhibition, re-erected on Sydenham Hill in South London; the medieval Tower of London; and Madame Tussaud’s waxworks museum in Baker Street.</div>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-6" class="t-note s-1-note" data-el="note" data-n="6" data-target="#note-t-6">
-<p id="let012:0.2.0.2.5.0" class="t-ab s-1-struttura" data-el="ab">Summer Bank Holiday.</p>
+<div id="let012:0.2.0.2.5.0" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Summer Bank Holiday.</div>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-7" class="t-note s-1-note" data-el="note" data-n="7" data-target="#note-t-7">
-    <p id="let012:0.2.0.2.6.0" class="t-ab s-1-struttura" data-el="ab">Dulwich Picture Gallery, Britain’s oldest public gallery with a famous collection of seventeenth-century paintings. On Monday, 4 August, Van Gogh wrote his signature ‘VWvanGogh the Hague’ in the visitor’s book (Documentation Dulwich Picture Gallery). <span id="let012:0.2.0.2.6.0.0" class="t-rs s-2-entita" title="type: ill · key: 3104" data-el="rs" data-key="3104" data-type="ill">Ill. 3104.</span>
-                    </p>
+    <div id="let012:0.2.0.2.6.0" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Dulwich Picture Gallery, Britain’s oldest public gallery with a famous collection of seventeenth-century paintings. On Monday, 4 August, Van Gogh wrote his signature ‘VWvanGogh the Hague’ in the visitor’s book (Documentation Dulwich Picture Gallery). <span id="let012:0.2.0.2.6.0.0" class="t-rs s-2-entita" title="type: ill · key: 3104" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="3104" data-type="ill">Ill. 3104.</span>
+                    </div>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-8" class="t-note s-1-note" data-el="note" data-n="8" data-target="#note-t-8">
-<p id="let012:0.2.0.2.7.0" class="t-ab s-1-struttura" data-el="ab">
-                        <span id="let012:0.2.0.2.7.0.0" class="t-rs s-2-entita" title="type: pers · key: 760" data-el="rs" data-key="760" data-type="pers">Willem van Stockum</span>’s birthday was 8 August.</p>
+<div id="let012:0.2.0.2.7.0" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">
+                        <span id="let012:0.2.0.2.7.0.0" class="t-rs s-2-entita" title="type: pers · key: 760" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="760" data-type="pers">Willem van Stockum</span>’s birthday was 8 August.</div>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-9" class="t-note s-1-note" data-el="note" data-n="9" data-target="#note-t-9">
-<p id="let012:0.2.0.2.8.0" class="t-ab s-1-struttura" data-el="ab">
-                        <span id="let012:0.2.0.2.8.0.0" class="t-rs s-2-entita" title="type: pers · key: 767" data-el="rs" data-key="767" data-type="pers">Casparus Marinus van Stockum</span>, Willem’s brother.</p>
+<div id="let012:0.2.0.2.8.0" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">
+                        <span id="let012:0.2.0.2.8.0.0" class="t-rs s-2-entita" title="type: pers · key: 767" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="767" data-type="pers">Casparus Marinus van Stockum</span>, Willem’s brother.</div>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-10" class="t-note s-1-note" data-el="note" data-n="10" data-target="#note-t-10">
-<p id="let012:0.2.0.2.9.0" class="t-ab s-1-struttura" data-el="ab">Van Gogh might be referring to <span id="let012:0.2.0.2.9.0.0" class="t-rs s-2-entita" title="type: pers · key: 461" data-el="rs" data-key="461" data-type="pers">Teunis van Iterson</span>’s eldest brother, 24-year-old <span id="let012:0.2.0.2.9.0.1" class="t-rs s-2-entita" title="type: pers · key: 112" data-el="rs" data-key="112" data-type="pers">Franciscus van Iterson</span>.</p>
+<div id="let012:0.2.0.2.9.0" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Van Gogh might be referring to <span id="let012:0.2.0.2.9.0.0" class="t-rs s-2-entita" title="type: pers · key: 461" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="461" data-type="pers">Teunis van Iterson</span>’s eldest brother, 24-year-old <span id="let012:0.2.0.2.9.0.1" class="t-rs s-2-entita" title="type: pers · key: 112" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="112" data-type="pers">Franciscus van Iterson</span>.</div>
                 </div>
     <span class="t-note-mark" aria-hidden="true">°</span><div id="n-11" class="t-note s-1-note" data-el="note" data-n="11" data-target="#note-t-11">
-<p id="let012:0.2.0.2.10.0" class="t-ab s-1-struttura" data-el="ab">Lange Poten 10 in The Hague, <span id="let012:0.2.0.2.10.0.0" class="t-rs s-2-entita" title="type: pers · key: 761" data-el="rs" data-key="761" data-type="pers">Caroline</span>’s parental home.</p>
+<div id="let012:0.2.0.2.10.0" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Lange Poten 10 in The Hague, <span id="let012:0.2.0.2.10.0.0" class="t-rs s-2-entita" title="type: pers · key: 761" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="761" data-type="pers">Caroline</span>’s parental home.</div>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-12" class="t-note s-1-note" data-el="note" data-n="12" data-target="#note-t-12">
-<p id="let012:0.2.0.2.11.0" class="t-ab s-1-struttura" data-el="ab">A publication containing the poems Van Gogh mentions, including the ‘Imagination’ quotation <span id="let012:0.2.0.2.11.0.0" class="t-ref s-2-corrispondenza" data-el="ref" data-target="#l-195">(ll. 195-197)</span>, is <span id="let012:0.2.0.2.11.0.1" class="t-hi s-1-inline" data-el="hi" data-rend="ital">The poetical works of John Keats.</span> Edited, with a critical memoir by William Michael Rossetti. Illustrated by Thomas Seccombe. London [1871], pp. 180-194; 237-240; 231 and preface, p. <span id="let012:0.2.0.2.11.0.2" class="t-hi s-1-inline" data-el="hi" data-rend="ital">xxii</span>.</p>
-<p id="let012:0.2.0.2.11.1" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Van Gogh’s copy largely corresponds to this edition. For example, ‘Unfinished’ has been added below the title in the same way, and the name ‘Moses’ – instead of ‘Aaron’, as in other editions – also occurs here (in <span id="let012:0.2.0.2.11.1.0" class="t-ref s-2-corrispondenza" data-el="ref" data-target="#l-35">l. 35</span>). By contrast, Van Gogh’s transcription differs in details in several places from this edition, corresponding instead to other versions, so that Rossetti’s edition cannot be said with certainty to be the source. Cf. the editions in Keats 1978, and <span id="let012:0.2.0.2.11.1.1" class="t-hi s-1-inline" data-el="hi" data-rend="ital">The poems of John Keats</span>. Ed. Miriam Allott. 6th ed. London 1986.</p>
-<p id="let012:0.2.0.2.11.2" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">
-                        <span id="let012:0.2.0.2.11.2.0" class="t-rs s-2-entita" title="type: pers · key: 680" data-el="rs" data-key="680" data-type="pers">Keats</span>’s ‘<span id="let012:0.2.0.2.11.2.1" class="t-rs s-2-entita" title="type: lit · key: 5" data-el="rs" data-key="5" data-type="lit">The eve of Saint Mark</span>’, which was never completed, was published posthumously in 1848. Van Gogh did not copy out the whole poem; he omitted more than twenty lines at the end. The date ‘1818’ does not agree with the Rossetti edition, which gives the date correctly as 1819.</p>
+<div id="let012:0.2.0.2.11.0" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">A publication containing the poems Van Gogh mentions, including the ‘Imagination’ quotation <span id="let012:0.2.0.2.11.0.0" class="t-ref s-2-corrispondenza" data-el="ref" data-target="#l-195">(ll. 195-197)</span>, is <span id="let012:0.2.0.2.11.0.1" class="t-hi s-1-inline" data-el="hi" data-behaviour="inline" data-behaviour-source="tei-all" data-rend="ital">The poetical works of John Keats.</span> Edited, with a critical memoir by William Michael Rossetti. Illustrated by Thomas Seccombe. London [1871], pp. 180-194; 237-240; 231 and preface, p. <span id="let012:0.2.0.2.11.0.2" class="t-hi s-1-inline" data-el="hi" data-behaviour="inline" data-behaviour-source="tei-all" data-rend="ital">xxii</span>.</div>
+<div id="let012:0.2.0.2.11.1" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">Van Gogh’s copy largely corresponds to this edition. For example, ‘Unfinished’ has been added below the title in the same way, and the name ‘Moses’ – instead of ‘Aaron’, as in other editions – also occurs here (in <span id="let012:0.2.0.2.11.1.0" class="t-ref s-2-corrispondenza" data-el="ref" data-target="#l-35">l. 35</span>). By contrast, Van Gogh’s transcription differs in details in several places from this edition, corresponding instead to other versions, so that Rossetti’s edition cannot be said with certainty to be the source. Cf. the editions in Keats 1978, and <span id="let012:0.2.0.2.11.1.1" class="t-hi s-1-inline" data-el="hi" data-behaviour="inline" data-behaviour-source="tei-all" data-rend="ital">The poems of John Keats</span>. Ed. Miriam Allott. 6th ed. London 1986.</div>
+<div id="let012:0.2.0.2.11.2" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">
+                        <span id="let012:0.2.0.2.11.2.0" class="t-rs s-2-entita" title="type: pers · key: 680" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="680" data-type="pers">Keats</span>’s ‘<span id="let012:0.2.0.2.11.2.1" class="t-rs s-2-entita" title="type: lit · key: 5" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="5" data-type="lit">The eve of Saint Mark</span>’, which was never completed, was published posthumously in 1848. Van Gogh did not copy out the whole poem; he omitted more than twenty lines at the end. The date ‘1818’ does not agree with the Rossetti edition, which gives the date correctly as 1819.</div>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-13" class="t-note s-1-note" data-el="note" data-n="13" data-target="#note-t-13">
-<p id="let012:0.2.0.2.12.0" class="t-ab s-1-struttura" data-el="ab">The quotation originally came from a letter written by <span id="let012:0.2.0.2.12.0.0" class="t-rs s-2-entita" title="type: pers · key: 680" data-el="rs" data-key="680" data-type="pers">Keats</span> to Benjamin Bailey. See <span id="let012:0.2.0.2.12.0.1" class="t-hi s-1-inline" data-el="hi" data-rend="ital">The letters of John Keats 1814-1821</span>. Ed. H.E. Rollins. Cambridge, Massachusetts 1958, vol. 1, pp. 184-185. Van Gogh could have taken it from the foreword to the Rossetti edition (see <span id="let012:0.2.0.2.12.0.2" class="t-ref s-2-corrispondenza" data-el="ref" data-target="#n-12">note 12</span>).</p>
+<div id="let012:0.2.0.2.12.0" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">The quotation originally came from a letter written by <span id="let012:0.2.0.2.12.0.0" class="t-rs s-2-entita" title="type: pers · key: 680" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="680" data-type="pers">Keats</span> to Benjamin Bailey. See <span id="let012:0.2.0.2.12.0.1" class="t-hi s-1-inline" data-el="hi" data-behaviour="inline" data-behaviour-source="tei-all" data-rend="ital">The letters of John Keats 1814-1821</span>. Ed. H.E. Rollins. Cambridge, Massachusetts 1958, vol. 1, pp. 184-185. Van Gogh could have taken it from the foreword to the Rossetti edition (see <span id="let012:0.2.0.2.12.0.2" class="t-ref s-2-corrispondenza" data-el="ref" data-target="#n-12">note 12</span>).</div>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-14" class="t-note s-1-note" data-el="note" data-n="14" data-target="#note-t-14">
-    <p id="let012:0.2.0.2.13.0" class="t-ab s-1-struttura" data-el="ab">Like ‘<span id="let012:0.2.0.2.13.0.0" class="t-rs s-2-entita" title="type: lit · key: 4" data-el="rs" data-key="4" data-type="lit">The eve of St Agnes</span>’, ‘<span id="let012:0.2.0.2.13.0.1" class="t-rs s-2-entita" title="type: lit · key: 6" data-el="rs" data-key="6" data-type="lit">To autumn</span>’ was published in <span id="let012:0.2.0.2.13.0.2" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Lamia, Isabella, The eve of St Agnes and other poems</span> (1820). Van Gogh omitted the middle stanza of the original (11 lines of verse, a personification of Autumn).</p>
+    <div id="let012:0.2.0.2.13.0" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Like ‘<span id="let012:0.2.0.2.13.0.0" class="t-rs s-2-entita" title="type: lit · key: 4" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="4" data-type="lit">The eve of St Agnes</span>’, ‘<span id="let012:0.2.0.2.13.0.1" class="t-rs s-2-entita" title="type: lit · key: 6" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="6" data-type="lit">To autumn</span>’ was published in <span id="let012:0.2.0.2.13.0.2" class="t-hi s-1-inline" data-el="hi" data-behaviour="inline" data-behaviour-source="tei-all" data-rend="ital">Lamia, Isabella, The eve of St Agnes and other poems</span> (1820). Van Gogh omitted the middle stanza of the original (11 lines of verse, a personification of Autumn).</div>
                 </div>
-            </div>
+            </section>
         </div>
     </div><nav class="prevnext" aria-label="Register"><a href="doc-let011.html">‹ previous</a><a href="text.html">Register</a><a href="doc-let013.html">next ›</a></nav></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.2 · 370db8e · 2026-08-01</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.2 · 2026-08-02</footer>
 <script>
 (function(){
-  var T={"edition":"Edition","text":"Text","indices":"Indices","data":"Data","archive":"Archive","dsa":"digital archive","texts":"Texts","reading":"Reading","diplomatic":"Diplomatic","apparatus":"Apparatus","aboutFile":"About this file","notes":"Notes","dse":"digital scholarly edition","responsibility":"Responsibility","licence":"Licence","witnesses":"Witnesses","apparatusRegisters":"Apparatus","revisions":"Revision history","generator":"Generator","people":"People","places":"Places","orgs":"Organisations","occurrenceOne":"occurrence","occurrenceMany":"occurrences","entries":"entries","skip":"Skip to content","publishedWith":"Published with","map":"Map","lab":"Lab","labAnalyses":"Analyses","labIntro":"The analytical layer, kept apart from the edition: the indices, the quantitative analysis, the lemmas, the map — derived from the text, not attested by it. Choose one above.","labLexDesc":"Frequencies, concordance (KWIC) and the token / type / TTR count.","labMapDesc":"The places that carry coordinates.","mapAria":"Map of the places of the edition","mapNote":"Positional sketch. Filled dots: coordinates declared in the TEI or confirmed by the editor. Hollow dots: gazetteer suggestions awaiting review. Each place links to OpenStreetMap. Coastlines: Natural Earth (public domain).","front":"Front matter","back":"Back matter","lacking":"lacking in","editedText":"edited text","genesis":"Genesis","hand":"hand","version":"version","legend":"Legend","legWord":"word","legDel":"deleted by the writing hand","legAdd":"added above the line","legUnclear":"uncertain reading","legSupplied":"supplied by the editor","legGap":"lost or illegible","legPb":"page break of the source","legMetamark":"a mark of the hand about the text (^ = insert here; hover each mark to read what it does)","legApp":"variant readings: click for the apparatus","legNote":"note mark","legHands":"Hands","legAllHands":"all","legHand":"the hand of","idxSearch":"search a name…","backToTop":"back to top","apparatusCritical":"critical: variants between witnesses","apparatusGenetic":"genetic: the strata of one manuscript in time","apparatusBoth":"critical and genetic: witnesses to collate, strata within them","legMajor":"main hand","lexicon":"Lexicon","lexTokens":"running words","lexForms":"distinct forms","lexTTR":"type-token ratio","lexSearch":"search a word…","lexFrequencies":"Frequencies","lexConcordance":"Concordance","lexPick":"Pick a word to see it in context.","lexLanguage":"Language","lexAllLangs":"all","lexStoplist":"Stopwords","lexDocument":"Document","lexWholeEdition":"all documents","lexStopNone":"none","lexHideStop":"hide stopwords","lexWord":"word","lexLang":"lang","descrFrequencies":"Every attested form with its count, its share per thousand and whether the stopword list you chose covers it.","descrConcordance":"Every occurrence of every form, with the words around it and the anchor back into the text.","descrLemmaConcordance":"The same evidence grouped under the dictionary form, where the edition has lemmas.","lexAbs":"count","lexRel":"per 1000","lexStats":"Lexical statistics","lexStopCol":"stop","lexStopNote":"Frequencies drop the stopwords you choose; the concordance keeps every word.","genesisNote":"The campaigns of correction the edition declares, in its own order, with the writing operations attributed to each. Every operation links to the place where it happened.","agreement":"Agreement between witnesses","agreementNote":"How often two witnesses carry the same reading. Evidence for a stemma, which remains the editor’s argument.","openPage":"open the page","sectionsN":"sections","sectionOne":"Section","contents":"Contents","bookLabel":"Book","register":"Register","documentsN":"documents","dateCol":"Date","fromCol":"From","toCol":"To","authorCol":"Author","placeCol":"Place","titleCol":"Title","idnoCol":"Ref.","filter":"Filter…","prev":"‹ previous","next":"next ›","fullHeader":"The full header (teiHeader)","fullHeaderNote":"Everything the file declares, rendered as it is.","reuse":"Reuse under the edition licence (see the Edition page).","appEntry":"apparatus entry","descrModel":"the edition model: documents, registries, apparatus (JSON)","descrEntities":"people, places and organisations with occurrence counts and coordinates","descrApparatus":"every apparatus reading with its witnesses, one row per reading","descrSource":"the unmodified TEI source file","lemmas":"Lemmas","lemmaCoverage":"Coverage","tokensWord":"tokens","languagesLabel":"Languages","yearsLabel":"Years","contributorsLabel":"Contributors","interventionsWord":"interventions","licenceVariesNote":"each document declares its own licence, shown on its page","lemmaFromMarkup":"from the markup (w/@lemma)","lemmaFromFile":"from lemmas.json","lemmaPending":"types awaiting the editor’s review","formsLabel":"forms","moreOccurrences":"more occurrences not shown here","descrLemmas":"every lemma with its forms and counts, one row per form","descrTokens":"the token stream of the reading text: position, language, form, lemma, anchor"};
+  var T={"edition":"Edition","text":"Text","indices":"Indices","data":"Data","archive":"Archive","dsa":"digital archive","texts":"Texts","reading":"Reading","diplomatic":"Diplomatic","apparatus":"Apparatus","aboutFile":"About this file","notes":"Notes","dse":"digital scholarly edition","responsibility":"Responsibility","licence":"Licence","witnesses":"Witnesses","apparatusRegisters":"Apparatus","revisions":"Revision history","generator":"Generator","people":"People","places":"Places","orgs":"Organisations","occurrenceOne":"occurrence","occurrenceMany":"occurrences","entries":"entries","skip":"Skip to content","publishedWith":"Published with","map":"Map","lab":"Lab","labAnalyses":"Analyses","labIntro":"The analytical layer, kept apart from the edition: the indices, the quantitative analysis, the lemmas, the map — derived from the text, not attested by it. Choose one above.","labLexDesc":"Frequencies, concordance (KWIC) and the token / type / TTR count.","labMapDesc":"The places that carry coordinates.","mapAria":"Map of the places of the edition","mapNote":"Positional sketch. Filled dots: coordinates declared in the TEI or confirmed by the editor. Hollow dots: gazetteer suggestions awaiting review. Each place links to OpenStreetMap. Coastlines: Natural Earth (public domain).","front":"Front matter","back":"Back matter","lacking":"lacking in","editedText":"edited text","genesis":"Genesis","hand":"hand","operations":"operations","version":"version","legend":"Legend","legWord":"word","legDel":"deleted by the writing hand","legAdd":"added above the line","legUnclear":"uncertain reading","legSupplied":"supplied by the editor","legGap":"lost or illegible","legPb":"page break of the source","legMetamark":"a mark of the hand about the text (^ = insert here; hover each mark to read what it does)","legApp":"variant readings: click for the apparatus","legNote":"note mark","legHands":"Hands","legAllHands":"all","legHand":"the hand of","idxSearch":"search a name…","backToTop":"back to top","apparatusCritical":"critical: variants between witnesses","apparatusGenetic":"genetic: the strata of one manuscript in time","apparatusBoth":"critical and genetic: witnesses to collate, strata within them","legMajor":"main hand","lexicon":"Lexicon","lexTokens":"running words","lexForms":"distinct forms","lexTTR":"type-token ratio","lexSearch":"search a word…","lexFrequencies":"Frequencies","lexConcordance":"Concordance","lexPick":"Pick a word to see it in context.","lexLanguage":"Language","lexAllLangs":"all","lexStoplist":"Stopwords","lexDocument":"Document","lexWholeEdition":"all documents","lexStopNone":"none","lexHideStop":"hide stopwords","lexWord":"word","lexLang":"lang","descrFrequencies":"Every attested form with its count, its share per thousand and whether the stopword list you chose covers it.","descrConcordance":"Every occurrence of every form, with the words around it and the anchor back into the text.","descrLemmaConcordance":"The same evidence grouped under the dictionary form, where the edition has lemmas.","lexAbs":"count","lexRel":"per 1000","lexStats":"Lexical statistics","lexStopCol":"stop","lexStopNote":"Frequencies drop the stopwords you choose; the concordance keeps every word.","genesisNote":"The campaigns of correction the edition declares, in its own order, with the writing operations attributed to each. Every operation links to the place where it happened.","genesisHandsNote":"Writing operations grouped by the hands the edition declares or identifies. A hand is not presented as a chronological layer unless the source declares that relation. Every operation links to its place in the text.","genesisMixedNote":"Declared correction campaigns and hands to which writing operations are attributed. Hands and chronological layers remain distinct. Every operation links to its place in the text.","genesisUnassignedNote":"Writing operations for which the edition declares neither a correction campaign nor a hand. Every operation links to its place in the text.","agreement":"Agreement between witnesses","agreementNote":"How often two witnesses carry the same reading. Evidence for a stemma, which remains the editor’s argument.","openPage":"open the page","sectionsN":"sections","sectionOne":"Section","contents":"Contents","bookLabel":"Book","register":"Register","documentsN":"documents","dateCol":"Date","fromCol":"From","toCol":"To","authorCol":"Author","placeCol":"Place","titleCol":"Title","idnoCol":"Ref.","filter":"Filter…","prev":"‹ previous","next":"next ›","fullHeader":"The full header (teiHeader)","fullHeaderNote":"Everything the file declares, rendered as it is.","reuse":"Reuse under the edition licence (see the Edition page).","appEntry":"apparatus entry","descrModel":"the edition model: documents, registries, apparatus (JSON)","descrEntities":"people, places and organisations with occurrence counts and coordinates","descrApparatus":"every apparatus reading with its witnesses, one row per reading","descrSource":"the unmodified TEI source file","lemmas":"Lemmas","lemmaCoverage":"Coverage","tokensWord":"tokens","languagesLabel":"Languages","yearsLabel":"Years","contributorsLabel":"Contributors","interventionsWord":"interventions","licenceVariesNote":"each document declares its own licence, shown on its page","lemmaFromMarkup":"from the markup (w/@lemma)","lemmaFromFile":"from lemmas.json","lemmaPending":"types awaiting the editor’s review","formsLabel":"forms","moreOccurrences":"more occurrences not shown here","descrLemmas":"every lemma with its forms and counts, one row per form","descrTokens":"the token stream of the reading text: position, language, form, lemma, anchor"};
   var body=document.body; body.classList.add('mode-read');
   if(document.querySelector('.app-band'))body.classList.add('has-band');
   if(window.TORCHIO_ALIGN)body.classList.add('has-align');
@@ -1304,7 +1311,7 @@ compared to Adam’s dream;<span id="l-197" class="t-lb"><br/></span>
       openPop('<span class="k">'+esc(op.dataset.el)+'</span>'
         +'<div class="notebody">'+esc(op.textContent.replace(/\s+/g,' ').trim().slice(0,140))+'</div>'
         +'<div class="meta">'+(lab?esc(lab):'')+(hd?' · '+esc(hd):'')
-        +' <a href="genesis.html">'+esc(T.genesis)+'</a></div>',op);
+        +(document.querySelector('a[href="genesis.html"]') ? ' <a href="genesis.html">'+esc(T.genesis)+'</a>' : '')+'</div>',op);
       ev.stopPropagation();return;
     }
     var anc=ev.target.closest&&ev.target.closest('[data-appref]');

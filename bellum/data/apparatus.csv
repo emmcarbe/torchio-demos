@@ -225,22 +225,14 @@ critical,ldlt-balex:0.1.1.0.11.5.0,suis nauibus,suis nauibus,M U T V,,,,,true
 critical,ldlt-balex:0.1.1.0.11.5.0,suis nauibus,suis,S,,,,,false
 critical,ldlt-balex:0.1.1.0.12.0.1,classiariorum,classiariorum,U S T V,,,,,true
 critical,ldlt-balex:0.1.1.0.12.0.1,classiariorum,nauigatorum,M,,,,,false
-critical,ldlt-balex:0.1.1.0.12.0.2,"quibusa quibus(sc. classiariis; cf. Hirt. 8.9.4)qui (sc. Alexandrini), qui Manutium infra
-                                 sequitur
-                           et etlacunam post uiderent Dauisius 1706, post
-                                    quibus Nipperdey superioribus locistemporibusdubitanter (cf. BG 7.14.3) subleuabantur, ut exuix(u. 18.1 et cf. BHisp 12.5)uix ex(cf. 17.4 et u. infra) aedificiis defendi possent","quibusa quibus(sc. classiariis; cf. Hirt. 8.9.4)qui (sc. Alexandrini), qui Manutium infra
-                                 sequitur
-                           et etlacunam post uiderent Dauisius 1706, post
-                                    quibus Nipperdey superioribus locistemporibusdubitanter (cf. BG 7.14.3) subleuabantur, ut exuix(u. 18.1 et cf. BHisp 12.5)uix ex(cf. 17.4 et u. infra) aedificiis defendi possent",,scripsimus,,,,true
-critical,ldlt-balex:0.1.1.0.12.0.2,"quibusa quibus(sc. classiariis; cf. Hirt. 8.9.4)qui (sc. Alexandrini), qui Manutium infra
-                                 sequitur
-                           et etlacunam post uiderent Dauisius 1706, post
-                                    quibus Nipperdey superioribus locistemporibusdubitanter (cf. BG 7.14.3) subleuabantur, ut exuix(u. 18.1 et cf. BHisp 12.5)uix ex(cf. 17.4 et u. infra) aedificiis defendi possent","quibus et superioribus
+critical,ldlt-balex:0.1.1.0.12.0.2,"quibus
+                           et  superioribus locis subleuabantur, ut ex aedificiis defendi possent","quibus
+                           et  superioribus locis subleuabantur, ut ex aedificiis defendi possent",,scripsimus,,,,true
+critical,ldlt-balex:0.1.1.0.12.0.2,"quibus
+                           et  superioribus locis subleuabantur, ut ex aedificiis defendi possent","quibus et superioribus
                            locis subleuabantur, ut ex aedificiis defendi possent",M U S T V,,,,,false
-critical,ldlt-balex:0.1.1.0.12.0.2,"quibusa quibus(sc. classiariis; cf. Hirt. 8.9.4)qui (sc. Alexandrini), qui Manutium infra
-                                 sequitur
-                           et etlacunam post uiderent Dauisius 1706, post
-                                    quibus Nipperdey superioribus locistemporibusdubitanter (cf. BG 7.14.3) subleuabantur, ut exuix(u. 18.1 et cf. BHisp 12.5)uix ex(cf. 17.4 et u. infra) aedificiis defendi possent","ut uix ex aedificiis defendi
+critical,ldlt-balex:0.1.1.0.12.0.2,"quibus
+                           et  superioribus locis subleuabantur, ut ex aedificiis defendi possent","ut uix ex aedificiis defendi
                            posse se confiderent, quibus et superioribus locis subleuabantur",,Dinter,,,,false
 critical,ldlt-balex:0.1.1.0.12.0.2.0.0,quibus,quibus,M U S T V,,,,,true
 critical,ldlt-balex:0.1.1.0.12.0.2.0.0,quibus,a quibus,,Rhellicanus,,,,false
@@ -379,13 +371,10 @@ critical,ldlt-balex:0.1.1.0.15.7.1,"in
                            occupatum animum haberent",,Landgraf1891a,,,,false
 critical,ldlt-balex:0.1.1.0.15.7.2,quin,quin,M U T,,,,,true
 critical,ldlt-balex:0.1.1.0.15.7.2,quin,qui in,S V,,,,,false
-critical,ldlt-balex:0.1.1.0.15.7.3,"peteret atque ex omni prospectu locum spectaculo(u. TLL
-                                 10.2.2206.27–41 et cf. Liu. 23.47.3)prospectu locum spectaculoqueprospectaculo cum spectaculo(deest S)prospectaculo spectaculumprospectu illorum (sc. pugnantium) spectaculacoll. Ou. Met. 7.780 etc. caperet precibusque et uotis uictoriam suis ab dis immortalibus
-                           exposceret","peteret atque ex omni prospectu locum spectaculo(u. TLL
-                                 10.2.2206.27–41 et cf. Liu. 23.47.3)prospectu locum spectaculoqueprospectaculo cum spectaculo(deest S)prospectaculo spectaculumprospectu illorum (sc. pugnantium) spectaculacoll. Ou. Met. 7.780 etc. caperet precibusque et uotis uictoriam suis ab dis immortalibus
+critical,ldlt-balex:0.1.1.0.15.7.3,"peteret atque ex omni prospectu locum spectaculo caperet precibusque et uotis uictoriam suis ab dis immortalibus
+                           exposceret","peteret atque ex omni prospectu locum spectaculo caperet precibusque et uotis uictoriam suis ab dis immortalibus
                            exposceret",M U T V,,,,,true
-critical,ldlt-balex:0.1.1.0.15.7.3,"peteret atque ex omni prospectu locum spectaculo(u. TLL
-                                 10.2.2206.27–41 et cf. Liu. 23.47.3)prospectu locum spectaculoqueprospectaculo cum spectaculo(deest S)prospectaculo spectaculumprospectu illorum (sc. pugnantium) spectaculacoll. Ou. Met. 7.780 etc. caperet precibusque et uotis uictoriam suis ab dis immortalibus
+critical,ldlt-balex:0.1.1.0.15.7.3,"peteret atque ex omni prospectu locum spectaculo caperet precibusque et uotis uictoriam suis ab dis immortalibus
                            exposceret",peteret,S,,,,,false
 critical,ldlt-balex:0.1.1.0.15.7.3.0.0,prospectu locum spectaculo,prospectu locum spectaculo,U Tc V,,,,,true
 critical,ldlt-balex:0.1.1.0.15.7.3.0.0,prospectu locum spectaculo,prospectu locum spectaculoque,Tac,,,,,false
@@ -469,8 +458,8 @@ critical,ldlt-balex:0.1.1.0.17.3.2,V,V,M U S T V,,,,,true
 critical,ldlt-balex:0.1.1.0.17.3.2,V,V,,Vielhaber1869,,,,false
 critical,ldlt-balex:0.1.1.0.17.3.2,V,utrinque,,Fleischer,,,,false
 critical,ldlt-balex:0.1.1.0.17.3.2,V,Alexandrini,,,,low,conjecture,false
-critical,ldlt-balex:0.1.1.0.17.4.0,litore constiterunt atque hos sunt alii subsecuti constanterqueteste Klotz (cf. 36.2)constantemque(deest S) in eos qui in litore,litore constiterunt atque hos sunt alii subsecuti constanterqueteste Klotz (cf. 36.2)constantemque(deest S) in eos qui in litore,M U T V,,,,,true
-critical,ldlt-balex:0.1.1.0.17.4.0,litore constiterunt atque hos sunt alii subsecuti constanterqueteste Klotz (cf. 36.2)constantemque(deest S) in eos qui in litore,litore,S,,,,,false
+critical,ldlt-balex:0.1.1.0.17.4.0,litore constiterunt atque hos sunt alii subsecuti constanterque in eos qui in litore,litore constiterunt atque hos sunt alii subsecuti constanterque in eos qui in litore,M U T V,,,,,true
+critical,ldlt-balex:0.1.1.0.17.4.0,litore constiterunt atque hos sunt alii subsecuti constanterque in eos qui in litore,litore,S,,,,,false
 critical,ldlt-balex:0.1.1.0.17.4.0.0.0,constanterque,constanterque,stigma,,,,,true
 critical,ldlt-balex:0.1.1.0.17.4.0.0.0,constanterque,constantemque,M U T V,,,,,false
 critical,ldlt-balex:0.1.1.0.17.5.0,His pulsis,His pulsis,,Schneider,,,,true
@@ -557,23 +546,11 @@ critical,ldlt-balex:0.1.1.0.20.3.0,"acrius
 critical,ldlt-balex:0.1.1.0.20.4.0,ponte,ponte,stigma,,,,,true
 critical,ldlt-balex:0.1.1.0.20.4.0,ponte,pontem,M U T V,,,,,false
 critical,ldlt-balex:0.1.1.0.20.5.0,multitudine hominum atque onere,multitudine hominum atque onere,M U T V,,,,,true
-critical,ldlt-balex:0.1.1.0.20.5.1,"alleuatisalleuati, quod defendit Madvig ‘alleuati
-                                 ipsi scutis ligneis homines’; u. Amm. 24.6.7, cf. Curt. 9.9.22 et,
-                                 de uerborum ordine, BC 1.45.2) scutis et animo
-                                 ad conandum nisi(cf. Quint. Decl. min.
-                                 266.9)ananimo ad
-                                 conandum incumbentes(cf. 12.4)?","alleuatisalleuati, quod defendit Madvig ‘alleuati
-                                 ipsi scutis ligneis homines’; u. Amm. 24.6.7, cf. Curt. 9.9.22 et,
-                                 de uerborum ordine, BC 1.45.2) scutis et animo
-                                 ad conandum nisi(cf. Quint. Decl. min.
-                                 266.9)ananimo ad
-                                 conandum incumbentes(cf. 12.4)?",M U T V,,,,,true
-critical,ldlt-balex:0.1.1.0.20.5.1,"alleuatisalleuati, quod defendit Madvig ‘alleuati
-                                 ipsi scutis ligneis homines’; u. Amm. 24.6.7, cf. Curt. 9.9.22 et,
-                                 de uerborum ordine, BC 1.45.2) scutis et animo
-                                 ad conandum nisi(cf. Quint. Decl. min.
-                                 266.9)ananimo ad
-                                 conandum incumbentes(cf. 12.4)?",alleuatis scutis et animo ad conandum nisi,,Fleischer,,,,false
+critical,ldlt-balex:0.1.1.0.20.5.1,"alleuatis scutis et animo
+                                 ad conandum nisi","alleuatis scutis et animo
+                                 ad conandum nisi",M U T V,,,,,true
+critical,ldlt-balex:0.1.1.0.20.5.1,"alleuatis scutis et animo
+                                 ad conandum nisi",alleuatis scutis et animo ad conandum nisi,,Fleischer,,,,false
 critical,ldlt-balex:0.1.1.0.20.5.1.0.0,alleuatis,alleuatis,U T V,,,,,true
 critical,ldlt-balex:0.1.1.0.20.5.1.0.0,alleuatis,alleuati,M,,,,,false
 critical,ldlt-balex:0.1.1.0.20.5.1.0.1,"animo
@@ -1315,11 +1292,8 @@ critical,ldlt-balex:0.1.1.0.51.1.0,uoluntate,uoluntate,M U S T V,,,,,true
 critical,ldlt-balex:0.1.1.0.51.1.0,uoluntate,uoluptate,,Manutius,,,,false
 critical,ldlt-balex:0.1.1.0.51.2.0,Lusitaniam,Lusitaniam,stigma,,,,,true
 critical,ldlt-balex:0.1.1.0.51.2.0,Lusitaniam,lusitania,M U S T V,,,,,false
-critical,ldlt-balex:0.1.1.0.51.2.1,"pecuniaeque describerentur(deest V; de orthographia u.
-                                 TLL 5.1.663.39–46)discriberenturteste Dübner atque imperarentur, ne","pecuniaeque describerentur(deest V; de orthographia u.
-                                 TLL 5.1.663.39–46)discriberenturteste Dübner atque imperarentur, ne",M U S T,,,,,true
-critical,ldlt-balex:0.1.1.0.51.2.1,"pecuniaeque describerentur(deest V; de orthographia u.
-                                 TLL 5.1.663.39–46)discriberenturteste Dübner atque imperarentur, ne",ne,V,,,,,false
+critical,ldlt-balex:0.1.1.0.51.2.1,"pecuniaeque describerentur atque imperarentur, ne","pecuniaeque describerentur atque imperarentur, ne",M U S T,,,,,true
+critical,ldlt-balex:0.1.1.0.51.2.1,"pecuniaeque describerentur atque imperarentur, ne",ne,V,,,,,false
 critical,ldlt-balex:0.1.1.0.51.2.1.0.0,describerentur,describerentur,M U S T,,,,,true
 critical,ldlt-balex:0.1.1.0.51.2.1.0.0,describerentur,discriberentur,stigma,,,,,false
 critical,ldlt-balex:0.1.1.0.51.3.0,deerat,deerat,M U,,,,,true
@@ -1522,9 +1496,9 @@ critical,ldlt-balex:0.1.1.0.58.0.1,ueteres,ueterem,S T V,,,,,false
 critical,ldlt-balex:0.1.1.0.58.0.1,ueteres,ueteranas,,JSimons,,,,false
 critical,ldlt-balex:0.1.1.0.58.1.0,"Et forsitan etiam hoc fecerit odio Caesaris
                            et amore Pompei, cuius nomen multum poterat apud eas legiones quas M.
-                           Varro obtinuerat, sed id qua mente communis erateritcoll. Liu. 4.20.8estcoll. Liu. 23.47.8alii alia coniectura. Certe hoc prae se Toriusteste Andrieu thorius ferebat","Et forsitan etiam hoc fecerit odio Caesaris
+                           Varro obtinuerat, sed id qua mente communis erat coniectura. Certe hoc prae se Torius ferebat","Et forsitan etiam hoc fecerit odio Caesaris
                            et amore Pompei, cuius nomen multum poterat apud eas legiones quas M.
-                           Varro obtinuerat, sed id qua mente communis erateritcoll. Liu. 4.20.8estcoll. Liu. 23.47.8alii alia coniectura. Certe hoc prae se Toriusteste Andrieu thorius ferebat",M U S T V,,,,,true
+                           Varro obtinuerat, sed id qua mente communis erat coniectura. Certe hoc prae se Torius ferebat",M U S T V,,,,,true
 critical,ldlt-balex:0.1.1.0.58.1.0.0.0,erat,erat,M U S T V,,,,,true
 critical,ldlt-balex:0.1.1.0.58.1.0.0.0,erat,erit,,Madvig,,,,false
 critical,ldlt-balex:0.1.1.0.58.1.0.0.0,erat,est,,Schneider,,,,false
@@ -1533,10 +1507,10 @@ critical,ldlt-balex:0.1.1.0.58.1.0.0.1,Torius,thorius,M U S T V,,,,,false
 critical,ldlt-balex:0.1.1.0.58.2.0,inscriptum,inscriptum,U S T,,,,,true
 critical,ldlt-balex:0.1.1.0.58.2.0,inscriptum,scriptum,M V,,,,,false
 critical,ldlt-balex:0.1.1.0.58.3.0,"Frequens legionibus
-                           conuentus obuiam prodit—neque tantum uirorum sed etiam matrum familias ac praetextatorum—deprecaturquedeprecatur quae(deest V, u. supra)deprecatur ne hostili aduentu Cordubam diriperent: nam","Frequens legionibus
-                           conuentus obuiam prodit—neque tantum uirorum sed etiam matrum familias ac praetextatorum—deprecaturquedeprecatur quae(deest V, u. supra)deprecatur ne hostili aduentu Cordubam diriperent: nam",M U S T,,,,,true
+                           conuentus obuiam prodit—neque tantum uirorum sed etiam matrum familias ac praetextatorum—deprecaturque ne hostili aduentu Cordubam diriperent: nam","Frequens legionibus
+                           conuentus obuiam prodit—neque tantum uirorum sed etiam matrum familias ac praetextatorum—deprecaturque ne hostili aduentu Cordubam diriperent: nam",M U S T,,,,,true
 critical,ldlt-balex:0.1.1.0.58.3.0,"Frequens legionibus
-                           conuentus obuiam prodit—neque tantum uirorum sed etiam matrum familias ac praetextatorum—deprecaturquedeprecatur quae(deest V, u. supra)deprecatur ne hostili aduentu Cordubam diriperent: nam",nam,V,,,,,false
+                           conuentus obuiam prodit—neque tantum uirorum sed etiam matrum familias ac praetextatorum—deprecaturque ne hostili aduentu Cordubam diriperent: nam",nam,V,,,,,false
 critical,ldlt-balex:0.1.1.0.58.3.0.0.0,deprecaturque,deprecaturque,M U,,,,,true
 critical,ldlt-balex:0.1.1.0.58.3.0.0.0,deprecaturque,deprecatur quae,T,,,,,false
 critical,ldlt-balex:0.1.1.0.58.3.0.0.0,deprecaturque,deprecatur,S,,,,,false
@@ -1544,14 +1518,8 @@ critical,ldlt-balex:0.1.1.0.59.0.0,esse,esse,V,,,,,true
 critical,ldlt-balex:0.1.1.0.59.0.0,esse,esset,M U S T,,,,,false
 critical,ldlt-balex:0.1.1.0.59.0.1,tamque,tamque,M U,,,,,true
 critical,ldlt-balex:0.1.1.0.59.0.1,tamque,ta(m/n)quam,S T V,,,,,false
-critical,ldlt-balex:0.1.1.0.59.0.2,"posse perducere, nomen Pompei ex scutis detraxerunt(deest V), quod defendit Kübler
-                                 coll. Dig. 3.2.2.2deterseruntcoll. D.C. 42.15.5
-                                 ἀπήλειψεν, Marcellum, qui se Caesaris causam defensurum","posse perducere, nomen Pompei ex scutis detraxerunt(deest V), quod defendit Kübler
-                                 coll. Dig. 3.2.2.2deterseruntcoll. D.C. 42.15.5
-                                 ἀπήλειψεν, Marcellum, qui se Caesaris causam defensurum",M U S T,,,,,true
-critical,ldlt-balex:0.1.1.0.59.0.2,"posse perducere, nomen Pompei ex scutis detraxerunt(deest V), quod defendit Kübler
-                                 coll. Dig. 3.2.2.2deterseruntcoll. D.C. 42.15.5
-                                 ἀπήλειψεν, Marcellum, qui se Caesaris causam defensurum",defensurum,V,,,,,false
+critical,ldlt-balex:0.1.1.0.59.0.2,"posse perducere, nomen Pompei ex scutis detraxerunt, Marcellum, qui se Caesaris causam defensurum","posse perducere, nomen Pompei ex scutis detraxerunt, Marcellum, qui se Caesaris causam defensurum",M U S T,,,,,true
+critical,ldlt-balex:0.1.1.0.59.0.2,"posse perducere, nomen Pompei ex scutis detraxerunt, Marcellum, qui se Caesaris causam defensurum",defensurum,V,,,,,false
 critical,ldlt-balex:0.1.1.0.59.0.2.0.0,detraxerunt,detraxerunt,M U S T,,,,,true
 critical,ldlt-balex:0.1.1.0.59.0.2.0.0,detraxerunt,deterserunt,,Menge,,,,false
 critical,ldlt-balex:0.1.1.0.59.1.0,prouinciaeque,prouinciaeque,M U,,,,,true
@@ -1609,13 +1577,13 @@ critical,ldlt-balex:0.1.1.0.61.1.0,"castris
 critical,ldlt-balex:0.1.1.0.61.1.1,Vliam,Vliam,,Ciacconius,,,,true
 critical,ldlt-balex:0.1.1.0.61.1.1,Vliam,ullam,M U S T V,,,,,false
 critical,ldlt-balex:0.1.1.0.61.2.0,"ut et loci
-                           natura—namque Vlia(u. supra)ulla in edito monte posita est","ut et loci
-                           natura—namque Vlia(u. supra)ulla in edito monte posita est",,Manutius,,,,true
+                           natura—namque Vlia in edito monte posita est","ut et loci
+                           natura—namque Vlia in edito monte posita est",,Manutius,,,,true
 critical,ldlt-balex:0.1.1.0.61.2.0,"ut et loci
-                           natura—namque Vlia(u. supra)ulla in edito monte posita est","ut est loci natura
+                           natura—namque Vlia in edito monte posita est","ut est loci natura
                            namque ulla in edito monte posita est ut",M U S T,,,,,false
 critical,ldlt-balex:0.1.1.0.61.2.0,"ut et loci
-                           natura—namque Vlia(u. supra)ulla in edito monte posita est","ut loci est natura namque ulla
+                           natura—namque Vlia in edito monte posita est","ut loci est natura namque ulla
                            in edito monte posita est ut",V,,,,,false
 critical,ldlt-balex:0.1.1.0.61.2.0.0.0,Vlia,Vlia,,Ciacconius,,,,true
 critical,ldlt-balex:0.1.1.0.61.2.0.0.0,Vlia,ulla,M U S T V,,,,,false
@@ -1814,10 +1782,10 @@ critical,ldlt-balex:0.1.1.0.68.0.2,posse,"posse
                               se",,Dauisius1727,,,,false
 critical,ldlt-balex:0.1.1.0.68.0.3,eius,eius,M U S T V,,,,,true
 critical,ldlt-balex:0.1.1.0.68.0.3,eius,eius,,Clarke,,,,false
-critical,ldlt-balex:0.1.1.0.68.0.4,quis deindedenique(cf. BC 1.72.2) post L. Lentulum C. Marcellum consul esset,quis deindedenique(cf. BC 1.72.2) post L. Lentulum C. Marcellum consul esset,Mc,,,,,true
-critical,ldlt-balex:0.1.1.0.68.0.4,quis deindedenique(cf. BC 1.72.2) post L. Lentulum C. Marcellum consul esset,quis deinde post l lentulum c marcellum consules sed,Mac,,,,,false
-critical,ldlt-balex:0.1.1.0.68.0.4,quis deindedenique(cf. BC 1.72.2) post L. Lentulum C. Marcellum consul esset,quis deinde post l lentulum c marcellum consules se,S,,,,,false
-critical,ldlt-balex:0.1.1.0.68.0.4,quis deindedenique(cf. BC 1.72.2) post L. Lentulum C. Marcellum consul esset,"qui
+critical,ldlt-balex:0.1.1.0.68.0.4,quis deinde post L. Lentulum C. Marcellum consul esset,quis deinde post L. Lentulum C. Marcellum consul esset,Mc,,,,,true
+critical,ldlt-balex:0.1.1.0.68.0.4,quis deinde post L. Lentulum C. Marcellum consul esset,quis deinde post l lentulum c marcellum consules sed,Mac,,,,,false
+critical,ldlt-balex:0.1.1.0.68.0.4,quis deinde post L. Lentulum C. Marcellum consul esset,quis deinde post l lentulum c marcellum consules se,S,,,,,false
+critical,ldlt-balex:0.1.1.0.68.0.4,quis deinde post L. Lentulum C. Marcellum consul esset,"qui
                            deinde post l lentulum c marcellum consules",T V,,,,,false
 critical,ldlt-balex:0.1.1.0.68.0.4.0.0,deinde,deinde,M U S T V,,,,,true
 critical,ldlt-balex:0.1.1.0.68.0.4.0.0,deinde,denique,,Nipperdey,,,,false
@@ -1894,15 +1862,11 @@ critical,ldlt-balex:0.1.1.0.72.1.3,"unus, qui","unus
                               qui",,,,low,conjecture,false
 critical,ldlt-balex:0.1.1.0.72.1.3,"unus, qui","unus
                               est qui",,,,low,conjecture,false
-critical,ldlt-balex:0.1.1.0.72.1.4,"superioribus locis atque itineribuscommodis itineribus(cf. BC
-                                 3.97.3) paene coniunctusconiunctus estMorum secutusconiunctis, qui Madvig secutus est oppido","superioribus locis atque itineribuscommodis itineribus(cf. BC
-                                 3.97.3) paene coniunctusconiunctus estMorum secutusconiunctis, qui Madvig secutus est oppido",M U S T V,,,,,true
-critical,ldlt-balex:0.1.1.0.72.1.4,"superioribus locis atque itineribuscommodis itineribus(cf. BC
-                                 3.97.3) paene coniunctusconiunctus estMorum secutusconiunctis, qui Madvig secutus est oppido","transposuerunt
+critical,ldlt-balex:0.1.1.0.72.1.4,superioribus locis atque itineribus paene coniunctus oppido,superioribus locis atque itineribus paene coniunctus oppido,M U S T V,,,,,true
+critical,ldlt-balex:0.1.1.0.72.1.4,superioribus locis atque itineribus paene coniunctus oppido,"transposuerunt
                               post unus Klotz dubitanter, post
                            nobilitatem Morus dubitanter, post Zela Madvig 1.48–49",,,,,,false
-critical,ldlt-balex:0.1.1.0.72.1.4,"superioribus locis atque itineribuscommodis itineribus(cf. BC
-                                 3.97.3) paene coniunctusconiunctus estMorum secutusconiunctis, qui Madvig secutus est oppido",seclusit ut glossema,,Vielhaber1869,,,,false
+critical,ldlt-balex:0.1.1.0.72.1.4,superioribus locis atque itineribus paene coniunctus oppido,seclusit ut glossema,,Vielhaber1869,,,,false
 critical,ldlt-balex:0.1.1.0.72.1.4.0.0,itineribus,itineribus,M U S T V,,,,,true
 critical,ldlt-balex:0.1.1.0.72.1.4.0.0,itineribus,commodis itineribus,,Klotz,,,,false
 critical,ldlt-balex:0.1.1.0.72.1.4.0.1,coniunctus,coniunctus,M U S T V,,,,,true

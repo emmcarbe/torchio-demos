@@ -1,0 +1,1699 @@
+{
+ "meta": {
+  "title": "ODD as a rendering contract",
+  "responsibility": [
+   {
+    "role": "demonstration encoding",
+    "name": "Emmanuela Carbé"
+   }
+  ]
+ },
+ "documents": [
+  {
+   "id": "edition",
+   "tree": {
+    "id": "edition:0",
+    "element": "TEI",
+    "section": "1-struttura",
+    "atts": {
+     "xmlns": "http://www.tei-c.org/ns/1.0",
+     "xmlns:x": "https://example.org/torchio/odd-contract"
+    },
+    "children": [
+     "\n  ",
+     {
+      "id": "edition:0.0",
+      "element": "teiHeader",
+      "section": "7-header",
+      "atts": {},
+      "children": [
+       "\n    ",
+       {
+        "id": "edition:0.0.0",
+        "element": "fileDesc",
+        "section": "7-header",
+        "atts": {},
+        "children": [
+         "\n      ",
+         {
+          "id": "edition:0.0.0.0",
+          "element": "titleStmt",
+          "section": "7-header",
+          "atts": {},
+          "children": [
+           "\n        ",
+           {
+            "id": "edition:0.0.0.0.0",
+            "element": "title",
+            "section": "1-inline",
+            "atts": {},
+            "children": [
+             "ODD as a rendering contract"
+            ],
+            "processing": {
+             "behaviour": "inline",
+             "source": "tei-all",
+             "via": "class:model.emphLike",
+             "params": {}
+            }
+           },
+           "\n        ",
+           {
+            "id": "edition:0.0.0.0.1",
+            "element": "respStmt",
+            "section": "1-bibliografia",
+            "atts": {},
+            "children": [
+             "\n          ",
+             {
+              "id": "edition:0.0.0.0.1.0",
+              "element": "resp",
+              "section": "1-struttura",
+              "atts": {},
+              "children": [
+               "demonstration encoding"
+              ]
+             },
+             "\n          ",
+             {
+              "id": "edition:0.0.0.0.1.1",
+              "element": "name",
+              "section": "2-entita",
+              "atts": {},
+              "children": [
+               "Emmanuela Carbé"
+              ],
+              "processing": {
+               "behaviour": "inline",
+               "source": "tei-all",
+               "via": "class:model.nameLike",
+               "params": {}
+              }
+             },
+             "\n        "
+            ]
+           },
+           "\n      "
+          ]
+         },
+         "\n      ",
+         {
+          "id": "edition:0.0.0.1",
+          "element": "publicationStmt",
+          "section": "7-header",
+          "atts": {},
+          "children": [
+           "\n        ",
+           {
+            "id": "edition:0.0.0.1.0",
+            "element": "p",
+            "section": "1-struttura",
+            "atts": {},
+            "children": [
+             "Born-digital demonstration, CC0."
+            ],
+            "processing": {
+             "behaviour": "paragraph",
+             "source": "tei-all",
+             "via": "element",
+             "params": {}
+            }
+           },
+           "\n      "
+          ]
+         },
+         "\n      ",
+         {
+          "id": "edition:0.0.0.2",
+          "element": "sourceDesc",
+          "section": "7-header",
+          "atts": {},
+          "children": [
+           "\n        ",
+           {
+            "id": "edition:0.0.0.2.0",
+            "element": "p",
+            "section": "1-struttura",
+            "atts": {},
+            "children": [
+             "A synthetic test document. It is not a scholarly edition of a historical source."
+            ],
+            "processing": {
+             "behaviour": "paragraph",
+             "source": "tei-all",
+             "via": "element",
+             "params": {}
+            }
+           },
+           "\n      "
+          ]
+         },
+         "\n    "
+        ]
+       },
+       "\n    ",
+       {
+        "id": "edition:0.0.1",
+        "element": "encodingDesc",
+        "section": "7-header",
+        "atts": {},
+        "children": [
+         "\n      ",
+         {
+          "id": "edition:0.0.1.0",
+          "element": "projectDesc",
+          "section": "7-header",
+          "atts": {},
+          "children": [
+           "\n        ",
+           {
+            "id": "edition:0.0.1.0.0",
+            "element": "p",
+            "section": "1-struttura",
+            "atts": {},
+            "children": [
+             "This document makes the processing cascade inspectable. The edition ODD\n        controls its two custom elements; ordinary TEI elements fall through to\n        conservative TEI All class contracts."
+            ],
+            "processing": {
+             "behaviour": "paragraph",
+             "source": "tei-all",
+             "via": "element",
+             "params": {}
+            }
+           },
+           "\n      "
+          ]
+         },
+         "\n    "
+        ]
+       },
+       "\n  "
+      ]
+     },
+     "\n  ",
+     {
+      "id": "edition:0.1",
+      "element": "text",
+      "section": "7-struttura-documento",
+      "atts": {},
+      "children": [
+       "\n    ",
+       {
+        "id": "edition:0.1.0",
+        "element": "body",
+        "section": "1-struttura",
+        "atts": {},
+        "children": [
+         "\n      ",
+         {
+          "id": "edition:0.1.0.0",
+          "element": "head",
+          "section": "1-struttura",
+          "atts": {},
+          "children": [
+           "Three decisions, with their provenance"
+          ],
+          "processing": {
+           "behaviour": "heading",
+           "source": "tei-all",
+           "via": "element",
+           "params": {}
+          }
+         },
+         "\n      ",
+         {
+          "id": "edition:0.1.0.1",
+          "element": "p",
+          "section": "1-struttura",
+          "atts": {},
+          "children": [
+           "This paragraph is ordinary TEI. Its paragraph behaviour comes from the\n      TEI All fallback contract, not from a rule in this edition’s ODD."
+          ],
+          "processing": {
+           "behaviour": "paragraph",
+           "source": "tei-all",
+           "via": "element",
+           "params": {}
+          }
+         },
+         "\n      ",
+         {
+          "id": "edition:0.1.0.2",
+          "element": "p",
+          "section": "1-struttura",
+          "atts": {},
+          "children": [
+           "At ",
+           {
+            "id": "edition:0.1.0.2.0",
+            "element": "salvataggio",
+            "section": "3-trascrizionale",
+            "atts": {
+             "when": "2026-08-02T14:35:00"
+            },
+            "children": [
+             "autosave 17"
+            ],
+            "processing": {
+             "behaviour": "inline",
+             "predicate": "@when",
+             "output": null,
+             "cssClass": "autosave-event",
+             "useSourceRendition": false,
+             "params": {},
+             "outputRendition": "font-style: italic; font-weight: bold;",
+             "source": "odd"
+            }
+           },
+           ",\n      the born-digital writing environment recorded a save event. This italic,\n      bold treatment is explicitly declared by the edition ODD."
+          ],
+          "processing": {
+           "behaviour": "paragraph",
+           "source": "tei-all",
+           "via": "element",
+           "params": {}
+          }
+         },
+         "\n      ",
+         {
+          "id": "edition:0.1.0.3",
+          "element": "p",
+          "section": "1-struttura",
+          "atts": {},
+          "children": [
+           "The event was produced by\n      ",
+           {
+            "id": "edition:0.1.0.3.0",
+            "element": "softwareName",
+            "section": "2-entita",
+            "atts": {
+             "ref": "https://github.com/emmcarbe/torchio"
+            },
+            "children": [
+             "Torchio"
+            ],
+            "processing": {
+             "behaviour": "link",
+             "predicate": "@ref",
+             "output": "web",
+             "cssClass": null,
+             "useSourceRendition": false,
+             "params": {
+              "uri": "@ref",
+              "content": "."
+             },
+             "outputRendition": "",
+             "source": "odd"
+            }
+           },
+           ".\n      The ODD’s web processing model turns the declared reference into a link."
+          ],
+          "processing": {
+           "behaviour": "paragraph",
+           "source": "tei-all",
+           "via": "element",
+           "params": {}
+          }
+         },
+         "\n      ",
+         {
+          "id": "edition:0.1.0.4",
+          "element": "p",
+          "section": "1-struttura",
+          "atts": {},
+          "children": [
+           {
+            "id": "edition:0.1.0.4.0",
+            "element": "salvataggio",
+            "section": "3-trascrizionale",
+            "atts": {},
+            "children": [
+             "Undated save event"
+            ],
+            "processing": {
+             "behaviour": "block",
+             "predicate": null,
+             "output": null,
+             "cssClass": "autosave-undated",
+             "useSourceRendition": false,
+             "params": {},
+             "outputRendition": "",
+             "source": "odd"
+            }
+           },
+           " has no @when:\n      the first ODD predicate does not match, so the second ODD model renders it\n      as a block. No element-name switch is involved."
+          ],
+          "processing": {
+           "behaviour": "paragraph",
+           "source": "tei-all",
+           "via": "element",
+           "params": {}
+          }
+         },
+         "\n    "
+        ]
+       },
+       "\n  "
+      ]
+     },
+     "\n"
+    ]
+   },
+   "card": {
+    "id": "edition",
+    "title": "ODD as a rendering contract",
+    "date": null,
+    "from": [],
+    "to": [],
+    "author": null,
+    "place": null,
+    "idno": null
+   }
+  }
+ ],
+ "registries": {
+  "people": [],
+  "places": [],
+  "orgs": [],
+  "witnesses": [],
+  "hands": [],
+  "layers": []
+ },
+ "apparatus": [],
+ "facsimiles": [],
+ "generator": {
+  "name": "torchio",
+  "tei": "P5 Version 4.12.0. Last updated on\n        28th July 2026, revision 113e933e2"
+ },
+ "lemmas": null,
+ "lexicon": {
+  "total": 97,
+  "distinct": 69,
+  "ttr": 0.7113,
+  "frequencies": [
+   {
+    "form": "the",
+    "count": 8,
+    "lang": "",
+    "rel": 82.474,
+    "stop": false
+   },
+   {
+    "form": "a",
+    "count": 4,
+    "lang": "",
+    "rel": 41.237,
+    "stop": false
+   },
+   {
+    "form": "odd",
+    "count": 4,
+    "lang": "",
+    "rel": 41.237,
+    "stop": false
+   },
+   {
+    "form": "event",
+    "count": 3,
+    "lang": "",
+    "rel": 30.928,
+    "stop": false
+   },
+   {
+    "form": "is",
+    "count": 3,
+    "lang": "",
+    "rel": 30.928,
+    "stop": false
+   },
+   {
+    "form": "this",
+    "count": 3,
+    "lang": "",
+    "rel": 30.928,
+    "stop": false
+   },
+   {
+    "form": "by",
+    "count": 2,
+    "lang": "",
+    "rel": 20.619,
+    "stop": false
+   },
+   {
+    "form": "declared",
+    "count": 2,
+    "lang": "",
+    "rel": 20.619,
+    "stop": false
+   },
+   {
+    "form": "from",
+    "count": 2,
+    "lang": "",
+    "rel": 20.619,
+    "stop": false
+   },
+   {
+    "form": "model",
+    "count": 2,
+    "lang": "",
+    "rel": 20.619,
+    "stop": false
+   },
+   {
+    "form": "no",
+    "count": 2,
+    "lang": "",
+    "rel": 20.619,
+    "stop": false
+   },
+   {
+    "form": "not",
+    "count": 2,
+    "lang": "",
+    "rel": 20.619,
+    "stop": false
+   },
+   {
+    "form": "paragraph",
+    "count": 2,
+    "lang": "",
+    "rel": 20.619,
+    "stop": false
+   },
+   {
+    "form": "save",
+    "count": 2,
+    "lang": "",
+    "rel": 20.619,
+    "stop": false
+   },
+   {
+    "form": "tei",
+    "count": 2,
+    "lang": "",
+    "rel": 20.619,
+    "stop": false
+   },
+   {
+    "form": "all",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "as",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "at",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "autosave",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "behaviour",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "block",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "bold",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "born",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "comes",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "contract",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "decisions",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "digital",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "does",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "edition",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "edition’s",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "element",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "environment",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "explicitly",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "fallback",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "first",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "has",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "in",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "into",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "involved",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "it",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "italic",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "its",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "link",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "match",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "name",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "odd’s",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "ordinary",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "predicate",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "processing",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "produced",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "provenance",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "recorded",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "reference",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "renders",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "rule",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "second",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "so",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "switch",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "their",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "three",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "torchio",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "treatment",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "turns",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "undated",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "was",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "web",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "when",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "with",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   },
+   {
+    "form": "writing",
+    "count": 1,
+    "lang": "",
+    "rel": 10.309,
+    "stop": false
+   }
+  ],
+  "concordance": {
+   "three": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.0",
+     "before": "",
+     "after": "decisions with their provenance This paragraph",
+     "form": "Three"
+    }
+   ],
+   "decisions": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.0",
+     "before": "Three",
+     "after": "with their provenance This paragraph is",
+     "form": "decisions"
+    }
+   ],
+   "with": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.0",
+     "before": "Three decisions",
+     "after": "their provenance This paragraph is ordinary",
+     "form": "with"
+    }
+   ],
+   "their": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.0",
+     "before": "Three decisions with",
+     "after": "provenance This paragraph is ordinary TEI",
+     "form": "their"
+    }
+   ],
+   "provenance": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.0",
+     "before": "Three decisions with their",
+     "after": "This paragraph is ordinary TEI Its",
+     "form": "provenance"
+    }
+   ],
+   "this": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "Three decisions with their provenance",
+     "after": "paragraph is ordinary TEI Its paragraph",
+     "form": "This"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "contract not from a rule in",
+     "after": "edition’s ODD At autosave the born",
+     "form": "this"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "writing environment recorded a save event",
+     "after": "italic bold treatment is explicitly declared",
+     "form": "This"
+    }
+   ],
+   "paragraph": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "Three decisions with their provenance This",
+     "after": "is ordinary TEI Its paragraph behaviour",
+     "form": "paragraph"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "This paragraph is ordinary TEI Its",
+     "after": "behaviour comes from the TEI All",
+     "form": "paragraph"
+    }
+   ],
+   "is": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "decisions with their provenance This paragraph",
+     "after": "ordinary TEI Its paragraph behaviour comes",
+     "form": "is"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "save event This italic bold treatment",
+     "after": "explicitly declared by the edition ODD",
+     "form": "is"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "a block No element name switch",
+     "after": "involved",
+     "form": "is"
+    }
+   ],
+   "ordinary": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "with their provenance This paragraph is",
+     "after": "TEI Its paragraph behaviour comes from",
+     "form": "ordinary"
+    }
+   ],
+   "tei": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "their provenance This paragraph is ordinary",
+     "after": "Its paragraph behaviour comes from the",
+     "form": "TEI"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "Its paragraph behaviour comes from the",
+     "after": "All fallback contract not from a",
+     "form": "TEI"
+    }
+   ],
+   "its": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "provenance This paragraph is ordinary TEI",
+     "after": "paragraph behaviour comes from the TEI",
+     "form": "Its"
+    }
+   ],
+   "behaviour": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "paragraph is ordinary TEI Its paragraph",
+     "after": "comes from the TEI All fallback",
+     "form": "behaviour"
+    }
+   ],
+   "comes": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "is ordinary TEI Its paragraph behaviour",
+     "after": "from the TEI All fallback contract",
+     "form": "comes"
+    }
+   ],
+   "from": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "ordinary TEI Its paragraph behaviour comes",
+     "after": "the TEI All fallback contract not",
+     "form": "from"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "the TEI All fallback contract not",
+     "after": "a rule in this edition’s ODD",
+     "form": "from"
+    }
+   ],
+   "the": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "TEI Its paragraph behaviour comes from",
+     "after": "TEI All fallback contract not from",
+     "form": "the"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "in this edition’s ODD At autosave",
+     "after": "born digital writing environment recorded a",
+     "form": "the"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "bold treatment is explicitly declared by",
+     "after": "edition ODD The event was produced",
+     "form": "the"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.3",
+     "before": "explicitly declared by the edition ODD",
+     "after": "event was produced by Torchio The",
+     "form": "The"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.3",
+     "before": "The event was produced by Torchio",
+     "after": "ODD’s web processing model turns the",
+     "form": "The"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.3",
+     "before": "The ODD’s web processing model turns",
+     "after": "declared reference into a link Undated",
+     "form": "the"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "Undated save event has no when",
+     "after": "first ODD predicate does not match",
+     "form": "the"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "ODD predicate does not match so",
+     "after": "second ODD model renders it as",
+     "form": "the"
+    }
+   ],
+   "all": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "paragraph behaviour comes from the TEI",
+     "after": "fallback contract not from a rule",
+     "form": "All"
+    }
+   ],
+   "fallback": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "behaviour comes from the TEI All",
+     "after": "contract not from a rule in",
+     "form": "fallback"
+    }
+   ],
+   "contract": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "comes from the TEI All fallback",
+     "after": "not from a rule in this",
+     "form": "contract"
+    }
+   ],
+   "not": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "from the TEI All fallback contract",
+     "after": "from a rule in this edition’s",
+     "form": "not"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "when the first ODD predicate does",
+     "after": "match so the second ODD model",
+     "form": "not"
+    }
+   ],
+   "a": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "TEI All fallback contract not from",
+     "after": "rule in this edition’s ODD At",
+     "form": "a"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "the born digital writing environment recorded",
+     "after": "save event This italic bold treatment",
+     "form": "a"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.3",
+     "before": "model turns the declared reference into",
+     "after": "link Undated save event has no",
+     "form": "a"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "second ODD model renders it as",
+     "after": "block No element name switch is",
+     "form": "a"
+    }
+   ],
+   "rule": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "All fallback contract not from a",
+     "after": "in this edition’s ODD At autosave",
+     "form": "rule"
+    }
+   ],
+   "in": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "fallback contract not from a rule",
+     "after": "this edition’s ODD At autosave the",
+     "form": "in"
+    }
+   ],
+   "edition’s": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "not from a rule in this",
+     "after": "ODD At autosave the born digital",
+     "form": "edition’s"
+    }
+   ],
+   "odd": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.1",
+     "before": "from a rule in this edition’s",
+     "after": "At autosave the born digital writing",
+     "form": "ODD"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "is explicitly declared by the edition",
+     "after": "The event was produced by Torchio",
+     "form": "ODD"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "event has no when the first",
+     "after": "predicate does not match so the",
+     "form": "ODD"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "does not match so the second",
+     "after": "model renders it as a block",
+     "form": "ODD"
+    }
+   ],
+   "at": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "a rule in this edition’s ODD",
+     "after": "autosave the born digital writing environment",
+     "form": "At"
+    }
+   ],
+   "autosave": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2.0",
+     "before": "rule in this edition’s ODD At",
+     "after": "the born digital writing environment recorded",
+     "form": "autosave"
+    }
+   ],
+   "born": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "this edition’s ODD At autosave the",
+     "after": "digital writing environment recorded a save",
+     "form": "born"
+    }
+   ],
+   "digital": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "edition’s ODD At autosave the born",
+     "after": "writing environment recorded a save event",
+     "form": "digital"
+    }
+   ],
+   "writing": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "ODD At autosave the born digital",
+     "after": "environment recorded a save event This",
+     "form": "writing"
+    }
+   ],
+   "environment": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "At autosave the born digital writing",
+     "after": "recorded a save event This italic",
+     "form": "environment"
+    }
+   ],
+   "recorded": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "autosave the born digital writing environment",
+     "after": "a save event This italic bold",
+     "form": "recorded"
+    }
+   ],
+   "save": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "born digital writing environment recorded a",
+     "after": "event This italic bold treatment is",
+     "form": "save"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4.0",
+     "before": "declared reference into a link Undated",
+     "after": "event has no when the first",
+     "form": "save"
+    }
+   ],
+   "event": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "digital writing environment recorded a save",
+     "after": "This italic bold treatment is explicitly",
+     "form": "event"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.3",
+     "before": "declared by the edition ODD The",
+     "after": "was produced by Torchio The ODD’s",
+     "form": "event"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4.0",
+     "before": "reference into a link Undated save",
+     "after": "has no when the first ODD",
+     "form": "event"
+    }
+   ],
+   "italic": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "environment recorded a save event This",
+     "after": "bold treatment is explicitly declared by",
+     "form": "italic"
+    }
+   ],
+   "bold": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "recorded a save event This italic",
+     "after": "treatment is explicitly declared by the",
+     "form": "bold"
+    }
+   ],
+   "treatment": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "a save event This italic bold",
+     "after": "is explicitly declared by the edition",
+     "form": "treatment"
+    }
+   ],
+   "explicitly": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "event This italic bold treatment is",
+     "after": "declared by the edition ODD The",
+     "form": "explicitly"
+    }
+   ],
+   "declared": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "This italic bold treatment is explicitly",
+     "after": "by the edition ODD The event",
+     "form": "declared"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.3",
+     "before": "ODD’s web processing model turns the",
+     "after": "reference into a link Undated save",
+     "form": "declared"
+    }
+   ],
+   "by": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "italic bold treatment is explicitly declared",
+     "after": "the edition ODD The event was",
+     "form": "by"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.3",
+     "before": "edition ODD The event was produced",
+     "after": "Torchio The ODD’s web processing model",
+     "form": "by"
+    }
+   ],
+   "edition": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.2",
+     "before": "treatment is explicitly declared by the",
+     "after": "ODD The event was produced by",
+     "form": "edition"
+    }
+   ],
+   "was": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.3",
+     "before": "by the edition ODD The event",
+     "after": "produced by Torchio The ODD’s web",
+     "form": "was"
+    }
+   ],
+   "produced": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.3",
+     "before": "the edition ODD The event was",
+     "after": "by Torchio The ODD’s web processing",
+     "form": "produced"
+    }
+   ],
+   "torchio": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.3.0",
+     "before": "ODD The event was produced by",
+     "after": "The ODD’s web processing model turns",
+     "form": "Torchio"
+    }
+   ],
+   "odd’s": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.3",
+     "before": "event was produced by Torchio The",
+     "after": "web processing model turns the declared",
+     "form": "ODD’s"
+    }
+   ],
+   "web": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.3",
+     "before": "was produced by Torchio The ODD’s",
+     "after": "processing model turns the declared reference",
+     "form": "web"
+    }
+   ],
+   "processing": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.3",
+     "before": "produced by Torchio The ODD’s web",
+     "after": "model turns the declared reference into",
+     "form": "processing"
+    }
+   ],
+   "model": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.3",
+     "before": "by Torchio The ODD’s web processing",
+     "after": "turns the declared reference into a",
+     "form": "model"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "not match so the second ODD",
+     "after": "renders it as a block No",
+     "form": "model"
+    }
+   ],
+   "turns": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.3",
+     "before": "Torchio The ODD’s web processing model",
+     "after": "the declared reference into a link",
+     "form": "turns"
+    }
+   ],
+   "reference": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.3",
+     "before": "web processing model turns the declared",
+     "after": "into a link Undated save event",
+     "form": "reference"
+    }
+   ],
+   "into": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.3",
+     "before": "processing model turns the declared reference",
+     "after": "a link Undated save event has",
+     "form": "into"
+    }
+   ],
+   "link": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.3",
+     "before": "turns the declared reference into a",
+     "after": "Undated save event has no when",
+     "form": "link"
+    }
+   ],
+   "undated": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4.0",
+     "before": "the declared reference into a link",
+     "after": "save event has no when the",
+     "form": "Undated"
+    }
+   ],
+   "has": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "into a link Undated save event",
+     "after": "no when the first ODD predicate",
+     "form": "has"
+    }
+   ],
+   "no": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "a link Undated save event has",
+     "after": "when the first ODD predicate does",
+     "form": "no"
+    },
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "model renders it as a block",
+     "after": "element name switch is involved",
+     "form": "No"
+    }
+   ],
+   "when": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "link Undated save event has no",
+     "after": "the first ODD predicate does not",
+     "form": "when"
+    }
+   ],
+   "first": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "save event has no when the",
+     "after": "ODD predicate does not match so",
+     "form": "first"
+    }
+   ],
+   "predicate": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "has no when the first ODD",
+     "after": "does not match so the second",
+     "form": "predicate"
+    }
+   ],
+   "does": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "no when the first ODD predicate",
+     "after": "not match so the second ODD",
+     "form": "does"
+    }
+   ],
+   "match": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "the first ODD predicate does not",
+     "after": "so the second ODD model renders",
+     "form": "match"
+    }
+   ],
+   "so": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "first ODD predicate does not match",
+     "after": "the second ODD model renders it",
+     "form": "so"
+    }
+   ],
+   "second": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "predicate does not match so the",
+     "after": "ODD model renders it as a",
+     "form": "second"
+    }
+   ],
+   "renders": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "match so the second ODD model",
+     "after": "it as a block No element",
+     "form": "renders"
+    }
+   ],
+   "it": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "so the second ODD model renders",
+     "after": "as a block No element name",
+     "form": "it"
+    }
+   ],
+   "as": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "the second ODD model renders it",
+     "after": "a block No element name switch",
+     "form": "as"
+    }
+   ],
+   "block": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "ODD model renders it as a",
+     "after": "No element name switch is involved",
+     "form": "block"
+    }
+   ],
+   "element": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "renders it as a block No",
+     "after": "name switch is involved",
+     "form": "element"
+    }
+   ],
+   "name": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "it as a block No element",
+     "after": "switch is involved",
+     "form": "name"
+    }
+   ],
+   "switch": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "as a block No element name",
+     "after": "is involved",
+     "form": "switch"
+    }
+   ],
+   "involved": [
+    {
+     "docId": "edition",
+     "anchor": "edition:0.1.0.4",
+     "before": "block No element name switch is",
+     "after": "",
+     "form": "involved"
+    }
+   ]
+  },
+  "languages": []
+ }
+}

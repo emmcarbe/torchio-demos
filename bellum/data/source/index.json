@@ -1,8 +1,10 @@
 {
+ "note": "the files this impression was made from, and only those",
  "files": [
   "georef.json",
   "ldlt-balex.xml",
   "torchio.json"
  ],
- "count": 3
+ "count": 3,
+ "readFromOutsideTheEdition": []
 }

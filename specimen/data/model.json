@@ -62,7 +62,13 @@
             "atts": {},
             "children": [
              "Specimen"
-            ]
+            ],
+            "processing": {
+             "behaviour": "inline",
+             "source": "tei-all",
+             "via": "class:model.emphLike",
+             "params": {}
+            }
            },
            "\n        ",
            {
@@ -124,7 +130,13 @@
             "atts": {},
             "children": [
              "Esempio costruito per mostrare i pezzi di Torchio. Il testo base è\n        l'incipit dell'Odissea nella traduzione di Ippolito Pindemonte\n        (pubblico dominio). I testimoni A, B e C sono immaginari e le\n        varianti sono didattiche: nessuna pretesa filologica."
-            ]
+            ],
+            "processing": {
+             "behaviour": "paragraph",
+             "source": "tei-all",
+             "via": "element",
+             "params": {}
+            }
            },
            "\n        ",
            {
@@ -235,7 +247,13 @@
                 "atts": {},
                 "children": [
                  "Odisseo"
-                ]
+                ],
+                "processing": {
+                 "behaviour": "inline",
+                 "source": "tei-all",
+                 "via": "class:model.nameLike",
+                 "params": {}
+                }
                }
               ]
              },
@@ -255,7 +273,13 @@
                 "atts": {},
                 "children": [
                  "La Musa"
-                ]
+                ],
+                "processing": {
+                 "behaviour": "inline",
+                 "source": "tei-all",
+                 "via": "class:model.nameLike",
+                 "params": {}
+                }
                }
               ]
              },
@@ -295,7 +319,13 @@
                 "atts": {},
                 "children": [
                  "Troia"
-                ]
+                ],
+                "processing": {
+                 "behaviour": "inline",
+                 "source": "tei-all",
+                 "via": "class:model.nameLike",
+                 "params": {}
+                }
                },
                {
                 "id": "specimen:0.0.1.2.0.0.1",
@@ -312,7 +342,13 @@
                    "39.9570 26.2390"
                   ]
                  }
-                ]
+                ],
+                "processing": {
+                 "behaviour": "inline",
+                 "source": "tei-all",
+                 "via": "class:model.nameLike",
+                 "params": {}
+                }
                }
               ]
              },
@@ -332,7 +368,13 @@
                 "atts": {},
                 "children": [
                  "Itaca"
-                ]
+                ],
+                "processing": {
+                 "behaviour": "inline",
+                 "source": "tei-all",
+                 "via": "class:model.nameLike",
+                 "params": {}
+                }
                },
                {
                 "id": "specimen:0.0.1.2.0.1.1",
@@ -349,7 +391,13 @@
                    "38.4381 20.6903"
                   ]
                  }
-                ]
+                ],
+                "processing": {
+                 "behaviour": "inline",
+                 "source": "tei-all",
+                 "via": "class:model.nameLike",
+                 "params": {}
+                }
                }
               ]
              },
@@ -415,7 +463,8 @@
           },
           "children": [
            "Specimen creato per la pubblicazione di Torchio."
-          ]
+          ],
+          "context": "revision"
          },
          "\n    "
         ]
@@ -486,7 +535,8 @@
             },
             "children": [
              "prima stesura"
-            ]
+            ],
+            "context": "revision"
            },
            "\n",
            {
@@ -499,7 +549,8 @@
             },
             "children": [
              "campagna correttoria, prima della stampa"
-            ]
+            ],
+            "context": "revision"
            },
            "\n"
           ]
@@ -540,7 +591,13 @@
             "atts": {},
             "children": [
              "L'incipit, con apparato dimostrativo"
-            ]
+            ],
+            "processing": {
+             "behaviour": "heading",
+             "source": "tei-all",
+             "via": "element",
+             "params": {}
+            }
            },
            "\n        ",
            {
@@ -565,7 +622,13 @@
                 },
                 "children": [
                  "Musa"
-                ]
+                ],
+                "processing": {
+                 "behaviour": "inline",
+                 "source": "tei-all",
+                 "via": "class:model.nameLike",
+                 "params": {}
+                }
                },
                ", quell'uom di\n            ",
                {
@@ -594,12 +657,24 @@
                   },
                   "children": [
                    "moltiforme"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.rdgLike",
+                   "params": {}
+                  }
                  }
                 ]
                },
                "\n            ingegno"
-              ]
+              ],
+              "processing": {
+               "behaviour": "block",
+               "source": "tei-all",
+               "via": "class:model.lLike",
+               "params": {}
+              }
              },
              "\n          ",
              {
@@ -609,7 +684,13 @@
               "atts": {},
               "children": [
                "dimmi, che molto errò, poich'ebbe a terra"
-              ]
+              ],
+              "processing": {
+               "behaviour": "block",
+               "source": "tei-all",
+               "via": "class:model.lLike",
+               "params": {}
+              }
              },
              "\n          ",
              {
@@ -628,10 +709,22 @@
                 },
                 "children": [
                  "Ilïòn"
-                ]
+                ],
+                "processing": {
+                 "behaviour": "inline",
+                 "source": "tei-all",
+                 "via": "class:model.nameLike",
+                 "params": {}
+                }
                },
                " le sacre torri;"
-              ]
+              ],
+              "processing": {
+               "behaviour": "block",
+               "source": "tei-all",
+               "via": "class:model.lLike",
+               "params": {}
+              }
              },
              "\n          ",
              {
@@ -641,7 +734,13 @@
               "atts": {},
               "children": [
                "che città vide molte, e delle genti"
-              ]
+              ],
+              "processing": {
+               "behaviour": "block",
+               "source": "tei-all",
+               "via": "class:model.lLike",
+               "params": {}
+              }
              },
              "\n          ",
              {
@@ -678,12 +777,24 @@
                   },
                   "children": [
                    "indole"
-                  ]
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.rdgLike",
+                   "params": {}
+                  }
                  }
                 ]
                },
                " conobbe; che sovr'esso il mare"
-              ]
+              ],
+              "processing": {
+               "behaviour": "block",
+               "source": "tei-all",
+               "via": "class:model.lLike",
+               "params": {}
+              }
              },
              "\n          ",
              {
@@ -693,7 +804,13 @@
               "atts": {},
               "children": [
                "molti dentro del cor sofferse affanni,"
-              ]
+              ],
+              "processing": {
+               "behaviour": "block",
+               "source": "tei-all",
+               "via": "class:model.lLike",
+               "params": {}
+              }
              },
              "\n          ",
              {
@@ -712,7 +829,13 @@
                 },
                 "children": [
                  "salvar"
-                ]
+                ],
+                "processing": {
+                 "behaviour": "inline",
+                 "source": "tei-all",
+                 "via": "class:model.pPart.transcriptional",
+                 "params": {}
+                }
                },
                {
                 "id": "specimen:0.1.0.0.1.6.1",
@@ -724,10 +847,22 @@
                 },
                 "children": [
                  "redimer"
-                ]
+                ],
+                "processing": {
+                 "behaviour": "inline",
+                 "source": "tei-all",
+                 "via": "class:model.pPart.transcriptional",
+                 "params": {}
+                }
                },
                " cercava a sé la vita,"
-              ]
+              ],
+              "processing": {
+               "behaviour": "block",
+               "source": "tei-all",
+               "via": "class:model.lLike",
+               "params": {}
+              }
              },
              "\n          ",
              {
@@ -737,7 +872,13 @@
               "atts": {},
               "children": [
                "e il ritorno a' compagni."
-              ]
+              ],
+              "processing": {
+               "behaviour": "block",
+               "source": "tei-all",
+               "via": "class:model.lLike",
+               "params": {}
+              }
              },
              "\n        "
             ]
@@ -766,7 +907,13 @@
                 "atts": {},
                 "children": [
                  "cadeva"
-                ]
+                ],
+                "processing": {
+                 "behaviour": "inline",
+                 "source": "tei-all",
+                 "via": "class:model.pPart.transcriptional",
+                 "params": {}
+                }
                },
                {
                 "id": "specimen:0.1.0.0.2.0.1",
@@ -775,9 +922,21 @@
                 "atts": {},
                 "children": [
                  "scendeva"
-                ]
+                ],
+                "processing": {
+                 "behaviour": "inline",
+                 "source": "tei-all",
+                 "via": "class:model.pPart.transcriptional",
+                 "params": {}
+                }
                }
-              ]
+              ],
+              "processing": {
+               "behaviour": "inline",
+               "source": "tei-all",
+               "via": "class:model.pPart.editorial",
+               "params": {}
+              }
              },
              "\nsul paese, e ",
              {
@@ -791,7 +950,13 @@
               },
               "children": [
                "lentamente"
-              ]
+              ],
+              "processing": {
+               "behaviour": "inline",
+               "source": "tei-all",
+               "via": "class:model.pPart.transcriptional",
+               "params": {}
+              }
              },
              "\nil vento ",
              {
@@ -804,10 +969,22 @@
               },
               "children": [
                "forte"
-              ]
+              ],
+              "processing": {
+               "behaviour": "inline",
+               "source": "tei-all",
+               "via": "class:model.pPart.transcriptional",
+               "params": {}
+              }
              },
              " si placava."
-            ]
+            ],
+            "processing": {
+             "behaviour": "paragraph",
+             "source": "tei-all",
+             "via": "element",
+             "params": {}
+            }
            },
            "\n",
            {
@@ -830,7 +1007,13 @@
                 "atts": {},
                 "children": [
                  "sig.ra"
-                ]
+                ],
+                "processing": {
+                 "behaviour": "inline",
+                 "source": "tei-all",
+                 "via": "class:model.choicePart",
+                 "params": {}
+                }
                },
                {
                 "id": "specimen:0.1.0.0.3.0.1",
@@ -839,9 +1022,21 @@
                 "atts": {},
                 "children": [
                  "signora"
-                ]
+                ],
+                "processing": {
+                 "behaviour": "inline",
+                 "source": "tei-all",
+                 "via": "class:model.choicePart",
+                 "params": {}
+                }
                }
-              ]
+              ],
+              "processing": {
+               "behaviour": "inline",
+               "source": "tei-all",
+               "via": "class:model.pPart.editorial",
+               "params": {}
+              }
              },
              " abbreviazione\n          col suo scioglimento, un passo\n          ",
              {
@@ -851,7 +1046,13 @@
               "atts": {},
               "children": [
                "di lettura incerta"
-              ]
+              ],
+              "processing": {
+               "behaviour": "inline",
+               "source": "tei-all",
+               "via": "class:model.choicePart",
+               "params": {}
+              }
              },
              ", una parola\n          ",
              {
@@ -863,7 +1064,13 @@
               },
               "children": [
                "integrata"
-              ]
+              ],
+              "processing": {
+               "behaviour": "inline",
+               "source": "tei-all",
+               "via": "class:model.choicePart",
+               "params": {}
+              }
              },
              ", e il nome di\n          ",
              {
@@ -875,7 +1082,13 @@
               },
               "children": [
                "Odisseo"
-              ]
+              ],
+              "processing": {
+               "behaviour": "inline",
+               "source": "tei-all",
+               "via": "class:model.nameLike",
+               "params": {}
+              }
              },
              " che punta al registro,\n          come ",
              {
@@ -887,7 +1100,13 @@
               },
               "children": [
                "Itaca"
-              ]
+              ],
+              "processing": {
+               "behaviour": "inline",
+               "source": "tei-all",
+               "via": "class:model.nameLike",
+               "params": {}
+              }
              },
              " alla mappa.\n          ",
              {
@@ -899,12 +1118,30 @@
               },
               "children": [
                "Le note editoriali si mostrano così."
-              ]
+              ],
+              "processing": {
+               "behaviour": "note",
+               "source": "tei-all",
+               "via": "class:model.noteLike",
+               "params": {}
+              }
              }
-            ]
+            ],
+            "processing": {
+             "behaviour": "paragraph",
+             "source": "tei-all",
+             "via": "element",
+             "params": {}
+            }
            },
            "\n      "
-          ]
+          ],
+          "processing": {
+           "behaviour": "section",
+           "source": "tei-all",
+           "via": "element",
+           "params": {}
+          }
          },
          "\n    "
         ]
@@ -1052,15 +1289,6 @@
   ],
   "layers": [
    {
-    "id": "specimen:0.0.2.0",
-    "label": "Specimen creato per la pubblicazione di Torchio.",
-    "atts": {
-     "when": "2026-07-30"
-    },
-    "occurrences": [],
-    "order": 0
-   },
-   {
     "id": "stesura",
     "label": "prima stesura",
     "atts": {
@@ -1068,6 +1296,7 @@
      "when": "1826"
     },
     "occurrences": [],
+    "context": "revision",
     "order": 1
    },
    {
@@ -1078,6 +1307,7 @@
      "when": "1828"
     },
     "occurrences": [],
+    "context": "revision",
     "order": 2
    }
   ]
@@ -1101,7 +1331,8 @@
        "resp": [],
        "cert": null,
        "type": null,
-       "isLemma": true
+       "isLemma": true,
+       "lacuna": false
       },
       {
        "text": "moltiforme",
@@ -1112,7 +1343,8 @@
        "resp": [],
        "cert": null,
        "type": null,
-       "isLemma": false
+       "isLemma": false,
+       "lacuna": false
       }
      ],
      "method": "parallel-segmentation",
@@ -1135,7 +1367,8 @@
        "resp": [],
        "cert": null,
        "type": null,
-       "isLemma": true
+       "isLemma": true,
+       "lacuna": false
       },
       {
        "text": "indole",
@@ -1147,7 +1380,8 @@
        "resp": [],
        "cert": null,
        "type": "ortografica",
-       "isLemma": false
+       "isLemma": false,
+       "lacuna": false
       }
      ],
      "method": "parallel-segmentation",
@@ -1159,6 +1393,7 @@
    ]
   }
  ],
+ "facsimiles": [],
  "generator": {
   "name": "torchio",
   "tei": "P5 Version 4.12.0. Last updated on\n        28th July 2026, revision 113e933e2"
@@ -1182,28 +1417,28 @@
    {
     "id": "m1",
     "label": "Mano principale, immaginaria.",
-    "order": 3,
+    "order": 2,
     "hand": true,
     "operations": 1
    },
    {
     "id": "m2",
     "label": "Mano di revisione, immaginaria.",
-    "order": 4,
+    "order": 3,
     "hand": true,
     "operations": 1
    },
    {
     "id": "mano-prima",
     "label": "la prima stesura, a penna",
-    "order": 5,
+    "order": 4,
     "hand": true,
     "operations": 1
    },
    {
     "id": "mano-seconda",
     "label": "le correzioni, a matita",
-    "order": 6,
+    "order": 5,
     "hand": true,
     "operations": 2
    }
@@ -1263,6 +1498,19 @@
     "place": null,
     "seq": null,
     "text": "forte"
+   }
+  ],
+  "substitutions": [
+   {
+    "id": "specimen:0.1.0.0.2.0",
+    "doc": "specimen",
+    "deleted": "specimen:0.1.0.0.2.0.0",
+    "added": "specimen:0.1.0.0.2.0.1",
+    "hand": "mano-prima",
+    "hands": [
+     "mano-prima"
+    ],
+    "handConflict": false
    }
   ]
  },

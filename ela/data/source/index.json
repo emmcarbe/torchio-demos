@@ -1,4 +1,5 @@
 {
+ "note": "the files this impression was made from, and only those",
  "files": [
   "DLT_3_1_ignotus_expositio_totius_mundi_et_gentium.xml",
   "ELA_2_0_de_ledesma_catalogus_16190220.xml",
@@ -67,5 +68,6 @@
   "reconcile.json",
   "torchio.json"
  ],
- "count": 66
+ "count": 66,
+ "readFromOutsideTheEdition": []
 }

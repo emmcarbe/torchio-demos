@@ -175,7 +175,7 @@ body.mode-read .t-lb::after{content:" "}
 body.mode-read .t-lb[data-break="no"]::after{content:none}
 body.mode-read .t-add{vertical-align:baseline;font-size:inherit}
 
-.torchio-nav{display:flex;gap:22px;margin-left:auto}
+.torchio-nav{display:flex;flex-wrap:wrap;gap:22px;margin-left:auto;min-width:0}
 .torchio-nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;
   color:var(--soft);text-transform:uppercase}
 .torchio-nav a.on{color:var(--accent)}
@@ -187,6 +187,13 @@ body.mode-read .t-add{vertical-align:baseline;font-size:inherit}
 .torchio-nav a:hover{color:var(--ink);text-decoration:none}
 header.torchio{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:baseline}
 header.torchio .tt{min-width:14rem}
+@media(max-width:540px){
+  header.torchio{align-items:flex-start}
+  header.torchio .tt{min-width:0;width:100%}
+  .torchio-nav{width:100%;margin-left:0;gap:8px 20px}
+  .torchio-subnav{gap:8px 18px}
+  ol.toc{columns:1}
+}
 .about dt{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.14em;
   text-transform:uppercase;color:var(--soft);margin-top:1.2em}
 .about dd{margin:0.3em 0 0}
@@ -369,15 +376,15 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 .kwic .ka{color:var(--soft);width:40%}
 </style>
 </head>
-<body>
+<body id="top">
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="torchio">
 <div class="tt"><h1>Specimen</h1><p class="sub">dati</p></div>
-<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Edizione</a><a href="text.html">Testo</a><a href="genesis.html">Genesi</a><a href="indices.html">Lab</a><a href="data.html" class="on">Dati</a></nav>
+<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Edizione</a><a href="text.html">Testo</a><a href="apparatus.html">Apparato</a><a href="genesis.html">Genesi</a><a href="indices.html">Lab</a><a href="data.html" class="on">Dati</a></nav>
 </header>
 
-<main id="main" class="torchio"><table class="idx-table"><tr><td class="sigla"><a href="data/model.json">model.json</a></td><td>il modello dell&#39;edizione: documenti, registri, apparati (JSON)</td><td class="occ">62.6 KB</td></tr><tr><td class="sigla"><a href="data/entities.csv">entities.csv</a></td><td>persone, luoghi e organizzazioni con conteggio delle occorrenze e coordinate</td><td class="occ">0.2 KB</td></tr><tr><td class="sigla"><a href="data/apparatus.csv">apparatus.csv</a></td><td>ogni lezione di apparato con i suoi testimoni, una riga per lezione</td><td class="occ">0.3 KB</td></tr><tr><td class="sigla"><a href="data/frequencies.csv">frequencies.csv</a></td><td>Ogni forma attestata con il suo conteggio, la quota per mille e se la lista di stopword scelta la copre.</td><td class="occ">1.9 KB</td></tr><tr><td class="sigla"><a href="data/concordance.csv">concordance.csv</a></td><td>Ogni occorrenza di ogni forma, con le parole intorno e il rimando al punto del testo.</td><td class="occ">11.5 KB</td></tr><tr><td class="sigla"><a href="data/tokens.csv">tokens.csv</a></td><td>il flusso dei token del testo di lettura: posizione, lingua, forma, lemma, ancora</td><td class="occ">4.5 KB</td></tr></table><p class="occ">Riuso secondo la licenza dell'edizione (vedi la pagina Edizione).</p></main>
-<footer class="torchio">Pubblicato con <span class="press">Torchio</span> v0.2.0-beta.2 · 370db8e · 2026-08-01</footer>
+<main id="main" class="torchio"><table class="idx-table"><tr><td class="sigla"><a href="data/model.json">model.json</a></td><td>il modello dell&amp;#39;edizione: documenti, registri, apparati (JSON)</td><td class="occ">70.5 KB</td></tr><tr><td class="sigla"><a href="data/entities.csv">entities.csv</a></td><td>persone, luoghi e organizzazioni con conteggio delle occorrenze e coordinate</td><td class="occ">0.2 KB</td></tr><tr><td class="sigla"><a href="data/apparatus.csv">apparatus.csv</a></td><td>ogni lezione di apparato con i suoi testimoni, una riga per lezione</td><td class="occ">0.3 KB</td></tr><tr><td class="sigla"><a href="data/frequencies.csv">frequencies.csv</a></td><td>Ogni forma attestata con il suo conteggio, la quota per mille e se la lista di stopword scelta la copre.</td><td class="occ">1.9 KB</td></tr><tr><td class="sigla"><a href="data/concordance.csv">concordance.csv</a></td><td>Ogni occorrenza di ogni forma, con le parole intorno e il rimando al punto del testo.</td><td class="occ">11.5 KB</td></tr><tr><td class="sigla"><a href="data/tokens.csv">tokens.csv</a></td><td>il flusso dei token del testo di lettura: posizione, lingua, forma, lemma, ancora</td><td class="occ">4.5 KB</td></tr></table><p class="occ">Riuso secondo la licenza dell&#39;edizione (vedi la pagina Edizione).</p></main>
+<footer class="torchio">Pubblicato con <span class="press">Torchio</span> v0.2.0-beta.2 · 2026-08-02</footer>
 
 </body>
 </html>

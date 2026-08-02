@@ -1,7 +1,9 @@
 {
+ "note": "the files this impression was made from, and only those",
  "files": [
   "specimen.xml",
   "torchio.json"
  ],
- "count": 2
+ "count": 2,
+ "readFromOutsideTheEdition": []
 }

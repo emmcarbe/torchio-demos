@@ -175,7 +175,7 @@ body.mode-read .t-lb::after{content:" "}
 body.mode-read .t-lb[data-break="no"]::after{content:none}
 body.mode-read .t-add{vertical-align:baseline;font-size:inherit}
 
-.torchio-nav{display:flex;gap:22px;margin-left:auto}
+.torchio-nav{display:flex;flex-wrap:wrap;gap:22px;margin-left:auto;min-width:0}
 .torchio-nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;
   color:var(--soft);text-transform:uppercase}
 .torchio-nav a.on{color:var(--accent)}
@@ -187,6 +187,13 @@ body.mode-read .t-add{vertical-align:baseline;font-size:inherit}
 .torchio-nav a:hover{color:var(--ink);text-decoration:none}
 header.torchio{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:baseline}
 header.torchio .tt{min-width:14rem}
+@media(max-width:540px){
+  header.torchio{align-items:flex-start}
+  header.torchio .tt{min-width:0;width:100%}
+  .torchio-nav{width:100%;margin-left:0;gap:8px 20px}
+  .torchio-subnav{gap:8px 18px}
+  ol.toc{columns:1}
+}
 .about dt{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.14em;
   text-transform:uppercase;color:var(--soft);margin-top:1.2em}
 .about dd{margin:0.3em 0 0}
@@ -369,7 +376,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 .kwic .ka{color:var(--soft);width:40%}
 </style>
 </head>
-<body>
+<body id="top">
 <a class="skip" href="#main">Skip to content</a>
 <header class="torchio">
 <div class="tt"><h1>Odyssey</h1><p class="sub">Homer · Greek text · Perseus Digital Library (CC BY-SA 4.0)</p></div>
@@ -379,17 +386,17 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <main id="main" class="torchio about"><dl><dt>Responsibility</dt><dd>Homer · Augustus Taber Murray · Lisa Cerrato, William Merrill, Elli Mylonas, David Smith</dd><dt>Revision history</dt><dd><table class="wit-table"><tr><td class="sigla">19901001</td><td>Put in card breaks.</td></tr><tr><td class="sigla">19910801</td><td>Revise DTDs and recheck texts.</td></tr><tr><td class="sigla">20151216</td><td>Converted to EpiDoc</td></tr><tr><td class="sigla">20151216</td><td>Bumped URN</td></tr><tr><td class="sigla">2016-02-10</td><td>numerous typos</td></tr></table></dd><dt>Generator</dt><dd class="occ">Torchio v0 · TEI P5 Version 4.12</dd></dl><h2 class="sec">The full header (teiHeader)</h2><p class="occ">Everything the file declares, rendered as it is.</p><div class="header-full"><div id="odissea:0.0" class="t-teiHeader s-7-header" data-el="teiHeader">
       <div id="odissea:0.0.0" class="t-fileDesc s-7-header" data-el="fileDesc">
          <span id="odissea:0.0.0.0" class="t-titleStmt s-7-header" data-el="titleStmt">
-            <span id="odissea:0.0.0.0.0" class="t-title s-1-inline" data-el="title" lang="grc">Ὀδύσσεια</span>
+            <span id="odissea:0.0.0.0.0" class="t-title s-1-inline" data-el="title" data-behaviour="inline" data-behaviour-source="tei-all" lang="grc">Ὀδύσσεια</span>
             <span id="odissea:0.0.0.0.1" class="t-author s-1-bibliografia" data-el="author">Homer</span>
             <span id="odissea:0.0.0.0.2" class="t-editor s-1-bibliografia" data-el="editor">Augustus Taber Murray</span>
             <span id="odissea:0.0.0.0.3" class="t-sponsor s-1-bibliografia" data-el="sponsor">Perseus Project, Tufts University</span>
             <span id="odissea:0.0.0.0.4" class="t-principal s-1-bibliografia" data-el="principal">Gregory Crane</span>
             <span id="odissea:0.0.0.0.5" class="t-respStmt s-1-bibliografia" data-el="respStmt">
                <span id="odissea:0.0.0.0.5.0" class="t-resp s-1-struttura" data-el="resp">Prepared under the supervision of</span>
-               <span id="odissea:0.0.0.0.5.1" class="t-name s-2-entita" data-el="name">Lisa Cerrato</span>
-               <span id="odissea:0.0.0.0.5.2" class="t-name s-2-entita" data-el="name">William Merrill</span>
-               <span id="odissea:0.0.0.0.5.3" class="t-name s-2-entita" data-el="name">Elli Mylonas</span>
-               <span id="odissea:0.0.0.0.5.4" class="t-name s-2-entita" data-el="name">David Smith</span>
+               <span id="odissea:0.0.0.0.5.1" class="t-name s-2-entita" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all">Lisa Cerrato</span>
+               <span id="odissea:0.0.0.0.5.2" class="t-name s-2-entita" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all">William Merrill</span>
+               <span id="odissea:0.0.0.0.5.3" class="t-name s-2-entita" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all">Elli Mylonas</span>
+               <span id="odissea:0.0.0.0.5.4" class="t-name s-2-entita" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all">David Smith</span>
             </span>
             <span id="odissea:0.0.0.0.6" class="t-funder s-1-bibliografia" data-el="funder" data-n="org:AnnCPB">The Annenberg CPB/Project</span>
          </span>
@@ -404,11 +411,11 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                tagging by Lauren Burka and Chiara Thayer.</div>
          </div>
          <div id="odissea:0.0.0.4" class="t-sourceDesc s-7-header" data-el="sourceDesc">
-            <span id="odissea:0.0.0.4.0" class="t-biblStruct s-1-bibliografia" data-el="biblStruct">
+            <div id="odissea:0.0.0.4.0" class="t-biblStruct s-1-bibliografia" data-el="biblStruct" data-behaviour="block" data-behaviour-source="tei-all">
                <span id="odissea:0.0.0.4.0.0" class="t-monogr s-1-struttura" data-el="monogr">
                   <span id="odissea:0.0.0.4.0.0.0" class="t-author s-1-bibliografia" data-el="author">Homer</span>
-                  <span id="odissea:0.0.0.4.0.0.1" class="t-title s-1-inline" data-el="title">The Odyssey</span>
-                  <span id="odissea:0.0.0.4.0.0.2" class="t-title s-1-inline" data-el="title" data-type="sub">with an English Translation</span>
+                  <span id="odissea:0.0.0.4.0.0.1" class="t-title s-1-inline" data-el="title" data-behaviour="inline" data-behaviour-source="tei-all">The Odyssey</span>
+                  <span id="odissea:0.0.0.4.0.0.2" class="t-title s-1-inline" data-el="title" data-behaviour="inline" data-behaviour-source="tei-all" data-type="sub">with an English Translation</span>
                   <span id="odissea:0.0.0.4.0.0.3" class="t-editor s-1-bibliografia" data-el="editor">A. T. Murray</span>
                   <span id="odissea:0.0.0.4.0.0.4" class="t-imprint s-1-struttura" data-el="imprint">
                      <span id="odissea:0.0.0.4.0.0.4.0" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">London</span>
@@ -420,20 +427,20 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                   <span id="odissea:0.0.0.4.0.0.5" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">1-2</span>
                </span>
                <span id="odissea:0.0.0.4.0.1" class="t-series s-1-bibliografia" data-el="series">
-                  <span id="odissea:0.0.0.4.0.1.0" class="t-title s-1-inline" data-el="title">Loeb Classical Library</span>                        
+                  <span id="odissea:0.0.0.4.0.1.0" class="t-title s-1-inline" data-el="title" data-behaviour="inline" data-behaviour-source="tei-all">Loeb Classical Library</span>                        
                </span>
                <a id="odissea:0.0.0.4.0.2" class="t-ref s-2-corrispondenza ent-ext" href="http://www.archive.org/details/odysseymurray01homeuoft" target="_blank" rel="noopener" data-el="ref" data-target="http://www.archive.org/details/odysseymurray01homeuoft">Internet Archive</a>
                <a id="odissea:0.0.0.4.0.3" class="t-ref s-2-corrispondenza ent-ext" href="http://hdl.handle.net/2027/uc1.$b318748" target="_blank" rel="noopener" data-el="ref" data-target="http://hdl.handle.net/2027/uc1.$b318748">HathiTrust</a>
-            </span>           
+            </div>           
          </div>
       </div>
       <div id="odissea:0.0.1" class="t-encodingDesc s-7-header" data-el="encodingDesc">
          <div id="odissea:0.0.1.0" class="t-refsDecl s-7-header" data-el="refsDecl" data-n="CTS">
             <div id="odissea:0.0.1.0.0" class="t-cRefPattern s-7-header" data-el="cRefPattern" data-n="line">
-               <p id="odissea:0.0.1.0.0.0" class="t-p s-1-struttura" data-el="p">This pointer pattern extracts Book and Line</p>
+               <p id="odissea:0.0.1.0.0.0" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">This pointer pattern extracts Book and Line</p>
             </div>
             <div id="odissea:0.0.1.0.1" class="t-cRefPattern s-7-header" data-el="cRefPattern" data-n="book">
-               <p id="odissea:0.0.1.0.1.0" class="t-p s-1-struttura" data-el="p">This pointer pattern extracts Book</p>
+               <p id="odissea:0.0.1.0.1.0" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">This pointer pattern extracts Book</p>
             </div>
          </div>
          <span id="odissea:0.0.1.1" class="t-refsDecl s-7-header" data-el="refsDecl">
@@ -459,7 +466,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
          <div id="odissea:0.0.3.4" class="t-change s-7-header" data-el="change" data-when="2016-02-10">numerous typos</div>
       </div>
    </div></div></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.2 · 370db8e · 2026-08-01</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.2 · 2026-08-02</footer>
 
 </body>
 </html>

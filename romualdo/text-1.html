@@ -175,7 +175,7 @@ body.mode-read .t-lb::after{content:" "}
 body.mode-read .t-lb[data-break="no"]::after{content:none}
 body.mode-read .t-add{vertical-align:baseline;font-size:inherit}
 
-.torchio-nav{display:flex;gap:22px;margin-left:auto}
+.torchio-nav{display:flex;flex-wrap:wrap;gap:22px;margin-left:auto;min-width:0}
 .torchio-nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;
   color:var(--soft);text-transform:uppercase}
 .torchio-nav a.on{color:var(--accent)}
@@ -187,6 +187,13 @@ body.mode-read .t-add{vertical-align:baseline;font-size:inherit}
 .torchio-nav a:hover{color:var(--ink);text-decoration:none}
 header.torchio{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:baseline}
 header.torchio .tt{min-width:14rem}
+@media(max-width:540px){
+  header.torchio{align-items:flex-start}
+  header.torchio .tt{min-width:0;width:100%}
+  .torchio-nav{width:100%;margin-left:0;gap:8px 20px}
+  .torchio-subnav{gap:8px 18px}
+  ol.toc{columns:1}
+}
 .about dt{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.14em;
   text-transform:uppercase;color:var(--soft);margin-top:1.2em}
 .about dd{margin:0.3em 0 0}
@@ -369,11 +376,11 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 .kwic .ka{color:var(--soft);width:40%}
 </style>
 </head>
-<body>
+<body id="top">
 <a class="skip" href="#main">Skip to content</a>
 <header class="torchio">
 <div class="tt"><h1>Historia universalis, prima etas · Romualdus Salernitanus, Chronicon</h1><p class="sub">Romualdus Salernitanus, Chronicon</p></div>
-<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Edition</a><a href="front.html">Introduction</a><a href="text.html" class="on">Text</a><a href="lemmas.html">Lab</a><a href="data.html">Data</a></nav>
+<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Edition</a><a href="front.html">Introduction</a><a href="text.html" class="on">Text</a><a href="apparatus.html">Apparatus</a><a href="lemmas.html">Lab</a><a href="data.html">Data</a></nav>
 </header>
 
 <div class="torchio-bar"><div class="inner"><button class="sw" data-sw="app" aria-pressed="true">Apparatus</button><button class="sw" data-sw="notes" aria-pressed="true">Notes</button><button class="sw off" data-sw="header" aria-pressed="false">About this file</button></div></div><main id="main" class="torchio"><style>
@@ -390,19 +397,19 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 </style><details class="legend"><summary>Legend</summary><ul><li><span class="leg-sample">[12]</span> page break of the source</li><li><span class="leg-sample"><span class="leg-app">word</span></span> variant readings: click for the apparatus</li><li><span class="leg-sample"><sup>1</sup></span> note mark</li></ul></details><nav class="prevnext" aria-label="Contents"><a href="text-0.html">‹ previous</a><a href="text.html">Contents</a><a href="text-2.html">next ›</a></nav><div id="chronicon:0.0" class="t-teiHeader s-7-header" data-el="teiHeader">
         <div id="chronicon:0.0.0" class="t-fileDesc s-7-header" data-el="fileDesc">
             <span id="chronicon:0.0.0.0" class="t-titleStmt s-7-header" data-el="titleStmt">
-                <span id="chronicon:0.0.0.0.0" class="t-title s-1-inline" data-el="title">Chronicon</span>
+                <span id="chronicon:0.0.0.0.0" class="t-title s-1-inline" data-el="title" data-behaviour="inline" data-behaviour-source="tei-all">Chronicon</span>
                 <span id="chronicon:0.0.0.0.1" class="t-author s-1-bibliografia" data-el="author">Romualdus Salernitanus</span>
                 <span id="chronicon:0.0.0.0.2" class="t-respStmt s-1-bibliografia" data-el="respStmt">
                     <span id="chronicon:0.0.0.0.2.0" class="t-resp s-1-struttura" data-el="resp" data-key="print_editor">Print edition</span>
-                    <span id="chronicon:0.0.0.0.2.1" class="t-name s-2-entita" data-el="name">Born-digital critical edition. See source description for the collation exemplars</span>
+                    <span id="chronicon:0.0.0.0.2.1" class="t-name s-2-entita" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all">Born-digital critical edition. See source description for the collation exemplars</span>
                 </span>
                 <span id="chronicon:0.0.0.0.3" class="t-respStmt s-1-bibliografia" data-el="respStmt">
                     <span id="chronicon:0.0.0.0.3.0" class="t-resp s-1-struttura" data-el="resp" data-key="ALIM2_3">Born-digital TEI XML digital scholarly edition by</span>
-                    <span id="pm" class="t-name s-2-entita" title="key: PM" data-el="name" data-key="PM">Paolo Monella</span>
+                    <span id="pm" class="t-name s-2-entita" title="key: PM" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all" data-key="PM">Paolo Monella</span>
                 </span>
                 <span id="chronicon:0.0.0.0.4" class="t-respStmt s-1-bibliografia" data-el="respStmt">
                     <span id="chronicon:0.0.0.0.4.0" class="t-resp s-1-struttura" data-el="resp" data-key="collation">Conversion from Juxta comparison set to TEI-conformant markup</span>
-                    <span id="chronicon:0.0.0.0.4.1" class="t-name s-2-entita" data-el="name">Generated by Juxta Commons, reviewed manually</span>
+                    <span id="chronicon:0.0.0.0.4.1" class="t-name s-2-entita" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all">Generated by Juxta Commons, reviewed manually</span>
                 </span>
             </span>
             <span id="chronicon:0.0.0.1" class="t-extent s-1-bibliografia" data-el="extent">
@@ -415,41 +422,41 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                 </span>
                 <span id="chronicon:0.0.0.2.1" class="t-date s-2-date" data-el="date" data-when="2020-02-03">03/02/2020</span>
                 <div id="chronicon:0.0.0.2.2" class="t-availability s-1-bibliografia" data-el="availability">
-                    <p id="chronicon:0.0.0.2.2.0" class="t-p s-1-struttura" data-el="p">Copyright 2006- progetto ALIM</p>
+                    <p id="chronicon:0.0.0.2.2.0" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">Copyright 2006- progetto ALIM</p>
                 </div>
             </div>
             <div id="chronicon:0.0.0.3" class="t-sourceDesc s-7-header" data-el="sourceDesc">
                 <div id="chronicon:0.0.0.3.0" class="t-listWit s-1-liste" data-el="listWit">
                     <div id="a" class="t-witness s-4-apparato" data-el="witness" data-facs="https://digi.vatlib.it/iiif/MSS_Vat.lat.3973/manifest.json">
-                        <div id="chronicon:0.0.0.3.0.0.0" class="t-msDesc s-1-bibliografia" data-el="msDesc">
+                        <div id="chronicon:0.0.0.3.0.0.0" class="t-msDesc s-1-bibliografia" data-el="msDesc" data-behaviour="block" data-behaviour-source="tei-all">
                             <span id="chronicon:0.0.0.3.0.0.0.0" class="t-msIdentifier s-1-bibliografia" data-el="msIdentifier">
-                                <span id="chronicon:0.0.0.3.0.0.0.0.0" class="t-settlement s-2-entita" data-el="settlement">Biblioteca Apostolica Vaticana</span>
-                                <span id="chronicon:0.0.0.3.0.0.0.0.1" class="t-idno s-2-entita" data-el="idno">Vat. lat. 3973</span>
+                                <span id="chronicon:0.0.0.3.0.0.0.0.0" class="t-settlement s-2-entita" data-el="settlement" data-behaviour="inline" data-behaviour-source="tei-all">Biblioteca Apostolica Vaticana</span>
+                                <span id="chronicon:0.0.0.3.0.0.0.0.1" class="t-idno s-2-entita" data-el="idno" data-behaviour="inline" data-behaviour-source="tei-all">Vat. lat. 3973</span>
                             </span>
                         </div>
                     </div>
                     <div id="a2" class="t-witness s-4-apparato" data-el="witness" data-facs="https://digi.vatlib.it/iiif/MSS_Vat.lat.3973/manifest.json">
-                        <div id="chronicon:0.0.0.3.0.1.0" class="t-msDesc s-1-bibliografia" data-el="msDesc">
+                        <div id="chronicon:0.0.0.3.0.1.0" class="t-msDesc s-1-bibliografia" data-el="msDesc" data-behaviour="block" data-behaviour-source="tei-all">
                             <span id="chronicon:0.0.0.3.0.1.0.0" class="t-msIdentifier s-1-bibliografia" data-el="msIdentifier">
-                                <span id="chronicon:0.0.0.3.0.1.0.0.0" class="t-settlement s-2-entita" data-el="settlement">Biblioteca Apostolica Vaticana</span>
-                                <span id="chronicon:0.0.0.3.0.1.0.0.1" class="t-idno s-2-entita" data-el="idno">Vat. lat. 3973</span>
+                                <span id="chronicon:0.0.0.3.0.1.0.0.0" class="t-settlement s-2-entita" data-el="settlement" data-behaviour="inline" data-behaviour-source="tei-all">Biblioteca Apostolica Vaticana</span>
+                                <span id="chronicon:0.0.0.3.0.1.0.0.1" class="t-idno s-2-entita" data-el="idno" data-behaviour="inline" data-behaviour-source="tei-all">Vat. lat. 3973</span>
                             </span>
-                            <p id="chronicon:0.0.0.3.0.1.0.1" class="t-ab s-1-struttura" data-el="ab">This siglum represents a later hand, probably of the XVII century, in this manuscript</p>
+                            <div id="chronicon:0.0.0.3.0.1.0.1" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">This siglum represents a later hand, probably of the XVII century, in this manuscript</div>
                         </div>
                     </div>
                     <div id="o" class="t-witness s-4-apparato" data-el="witness" data-facs="https://digi.vatlib.it/iiif/MSS_Ott.lat.2940/manifest.json">
-                        <div id="chronicon:0.0.0.3.0.2.0" class="t-msDesc s-1-bibliografia" data-el="msDesc">
+                        <div id="chronicon:0.0.0.3.0.2.0" class="t-msDesc s-1-bibliografia" data-el="msDesc" data-behaviour="block" data-behaviour-source="tei-all">
                             <span id="chronicon:0.0.0.3.0.2.0.0" class="t-msIdentifier s-1-bibliografia" data-el="msIdentifier">
-                                <span id="chronicon:0.0.0.3.0.2.0.0.0" class="t-settlement s-2-entita" data-el="settlement">Ottobonianus</span>
-                                <span id="chronicon:0.0.0.3.0.2.0.0.1" class="t-idno s-2-entita" data-el="idno">Latinus 2940, 1st fragment, folios 16r-18v</span>
+                                <span id="chronicon:0.0.0.3.0.2.0.0.0" class="t-settlement s-2-entita" data-el="settlement" data-behaviour="inline" data-behaviour-source="tei-all">Ottobonianus</span>
+                                <span id="chronicon:0.0.0.3.0.2.0.0.1" class="t-idno s-2-entita" data-el="idno" data-behaviour="inline" data-behaviour-source="tei-all">Latinus 2940, 1st fragment, folios 16r-18v</span>
                             </span>
                         </div>
                     </div>
                     <div id="g" class="t-witness s-4-apparato" data-el="witness" data-facs="https://archive.org/details/p1rerumitalicarums07card/">
-                        <div id="chronicon:0.0.0.3.0.3.0" class="t-biblStruct s-1-bibliografia" data-el="biblStruct">
+                        <div id="chronicon:0.0.0.3.0.3.0" class="t-biblStruct s-1-bibliografia" data-el="biblStruct" data-behaviour="block" data-behaviour-source="tei-all">
                             <span id="chronicon:0.0.0.3.0.3.0.0" class="t-monogr s-1-struttura" data-el="monogr">
                                 <span id="chronicon:0.0.0.3.0.3.0.0.0" class="t-author s-1-bibliografia" data-el="author">Guarna, Romualdus</span>
-                                <span id="chronicon:0.0.0.3.0.3.0.0.1" class="t-title s-1-inline" data-el="title">Romualdi Salernitani Chronicon (A.m. 130-A.C. 1178)</span>
+                                <span id="chronicon:0.0.0.3.0.3.0.0.1" class="t-title s-1-inline" data-el="title" data-behaviour="inline" data-behaviour-source="tei-all">Romualdi Salernitani Chronicon (A.m. 130-A.C. 1178)</span>
                                 <span id="chronicon:0.0.0.3.0.3.0.0.2" class="t-editor s-1-bibliografia" data-el="editor">Garufi, Carlo Alberto</span>
                                 <span id="chronicon:0.0.0.3.0.3.0.0.3" class="t-imprint s-1-struttura" data-el="imprint">
                                     <span id="chronicon:0.0.0.3.0.3.0.0.3.0" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Città di Castello</span>
@@ -458,7 +465,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                                 </span>
                             </span>
                             <span id="chronicon:0.0.0.3.0.3.0.1" class="t-series s-1-bibliografia" data-el="series">
-                                <span id="chronicon:0.0.0.3.0.3.0.1.0" class="t-title s-1-inline" data-el="title">Rerum italicarum scriptores: Nuova edizione</span>
+                                <span id="chronicon:0.0.0.3.0.3.0.1.0" class="t-title s-1-inline" data-el="title" data-behaviour="inline" data-behaviour-source="tei-all">Rerum italicarum scriptores: Nuova edizione</span>
                                 <span id="chronicon:0.0.0.3.0.3.0.1.1" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">7</span>
                                 <span id="chronicon:0.0.0.3.0.3.0.1.2" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="part">1</span>
                             </span>
@@ -467,11 +474,11 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                         </div>
                     </div>
                     <div id="b" class="t-witness s-4-apparato" data-el="witness">
-                        <div id="chronicon:0.0.0.3.0.4.0" class="t-biblStruct s-1-bibliografia" data-el="biblStruct">
+                        <div id="chronicon:0.0.0.3.0.4.0" class="t-biblStruct s-1-bibliografia" data-el="biblStruct" data-behaviour="block" data-behaviour-source="tei-all">
                             <span id="chronicon:0.0.0.3.0.4.0.0" class="t-monogr s-1-struttura" data-el="monogr">
                                 <span id="chronicon:0.0.0.3.0.4.0.0.0" class="t-author s-1-bibliografia" data-el="author">Guarna, Romualdus</span>
-                                <span id="chronicon:0.0.0.3.0.4.0.0.1" class="t-title s-1-inline" data-el="title">Romualdo II Guarna, Chronicon</span>
-                                <span id="chronicon:0.0.0.3.0.4.0.0.2" class="t-idno s-2-entita" data-el="idno" data-type="ISBN">9788883090561</span>
+                                <span id="chronicon:0.0.0.3.0.4.0.0.1" class="t-title s-1-inline" data-el="title" data-behaviour="inline" data-behaviour-source="tei-all">Romualdo II Guarna, Chronicon</span>
+                                <span id="chronicon:0.0.0.3.0.4.0.0.2" class="t-idno s-2-entita" data-el="idno" data-behaviour="inline" data-behaviour-source="tei-all" data-type="ISBN">9788883090561</span>
                                 <span id="chronicon:0.0.0.3.0.4.0.0.3" class="t-editor s-1-bibliografia" data-el="editor">Bonetti, Cinzia</span>
                                 <span id="chronicon:0.0.0.3.0.4.0.0.4" class="t-imprint s-1-struttura" data-el="imprint">
                                     <span id="chronicon:0.0.0.3.0.4.0.0.4.0" class="t-pubPlace s-1-bibliografia" data-el="pubPlace">Salerno</span>
@@ -480,7 +487,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                                 </span>
                             </span>
                             <span id="chronicon:0.0.0.3.0.4.0.1" class="t-series s-1-bibliografia" data-el="series">
-                                <span id="chronicon:0.0.0.3.0.4.0.1.0" class="t-title s-1-inline" data-el="title">Schola Salernitana. Studi e testi</span>
+                                <span id="chronicon:0.0.0.3.0.4.0.1.0" class="t-title s-1-inline" data-el="title" data-behaviour="inline" data-behaviour-source="tei-all">Schola Salernitana. Studi e testi</span>
                                 <span id="chronicon:0.0.0.3.0.4.0.1.1" class="t-biblScope s-1-bibliografia" data-el="biblScope" data-unit="volume">6</span>
                             </span>
                             <span class="t-note-mark" aria-hidden="true">°</span><div id="chronicon:0.0.0.3.0.4.0.2" class="t-note s-1-note" data-el="note">Bonetti&#39;s edition was the collation exemplar for the collation
@@ -493,17 +500,17 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
         </div>
         <div id="chronicon:0.0.1" class="t-encodingDesc s-7-header" data-el="encodingDesc">
             <div id="chronicon:0.0.1.0" class="t-projectDesc s-7-header" data-el="projectDesc">
-                <p id="chronicon:0.0.1.0.0" class="t-p s-1-struttura" data-el="p">Testo codificato nel formato TEI XML, versione P5, per essere incluso fra i testi che compongono il progetto
+                <p id="chronicon:0.0.1.0.0" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">Testo codificato nel formato TEI XML, versione P5, per essere incluso fra i testi che compongono il progetto
           ALIM - Archivio della Latinità Italiana del Medioevo.</p>
             </div>
             <div id="chronicon:0.0.1.1" class="t-editorialDecl s-7-header" data-el="editorialDecl">
-                <p id="chronicon:0.0.1.1.0" class="t-ab s-1-struttura" data-el="ab" data-type="level">ALIM2_3</p>
-		<p id="chronicon:0.0.1.1.1" class="t-ab s-1-struttura" data-el="ab" data-type="specific">Born-digital scholarly edition.
-			See the introduction in the &#39;front&#39; element for editorial details</p>
+                <div id="chronicon:0.0.1.1.0" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-type="level">ALIM2_3</div>
+		<div id="chronicon:0.0.1.1.1" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-type="specific">Born-digital scholarly edition.
+			See the introduction in the &#39;front&#39; element for editorial details</div>
             </div>
       	    <div id="longversion" class="t-editorialDecl s-7-header" data-el="editorialDecl">
-		<p id="chronicon:0.0.1.2.0" class="t-ab s-1-struttura" data-el="ab" data-type="specific">Paragraph including one of the additions
-			distinguishing the &#39;short&#39; from the &#39;long&#39; version of the work</p>
+		<div id="chronicon:0.0.1.2.0" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-type="specific">Paragraph including one of the additions
+			distinguishing the &#39;short&#39; from the &#39;long&#39; version of the work</div>
             </div>
             <span id="chronicon:0.0.1.3" class="t-variantEncoding s-7-header" data-el="variantEncoding"></span>
         </div>
@@ -513,9 +520,9 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
             </span>
             <span id="chronicon:0.0.2.1" class="t-textClass s-7-header" data-el="textClass">
                 <span id="chronicon:0.0.2.1.0" class="t-keywords s-7-header" data-el="keywords">
-                    <span id="chronicon:0.0.2.1.0.0" class="t-term s-1-inline" title="type: form" data-el="term" data-type="form">Prosa</span>
-                    <span id="chronicon:0.0.2.1.0.1" class="t-term s-1-inline" title="type: source" data-el="term" data-type="source">Letteraria</span>
-                    <span id="chronicon:0.0.2.1.0.2" class="t-term s-1-inline" title="type: genre" data-el="term" data-type="genre">Storiografia</span>
+                    <span id="chronicon:0.0.2.1.0.0" class="t-term s-1-inline" title="type: form" data-el="term" data-behaviour="inline" data-behaviour-source="tei-all" data-type="form">Prosa</span>
+                    <span id="chronicon:0.0.2.1.0.1" class="t-term s-1-inline" title="type: source" data-el="term" data-behaviour="inline" data-behaviour-source="tei-all" data-type="source">Letteraria</span>
+                    <span id="chronicon:0.0.2.1.0.2" class="t-term s-1-inline" title="type: genre" data-el="term" data-behaviour="inline" data-behaviour-source="tei-all" data-type="genre">Storiografia</span>
                 </span>
             </span>
             <span id="chronicon:0.0.2.2" class="t-creation s-7-header" data-el="creation">
@@ -525,102 +532,102 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
         <div id="chronicon:0.0.3" class="t-revisionDesc s-7-header" data-el="revisionDesc">
             <div id="chronicon:0.0.3.0" class="t-change s-7-header" data-el="change" data-when="2020-02">Prima edizione nel formato TEI P5 [livello ALIM2_3]</div>
         </div>
-    </div><div id="universal-history-1" class="t-div s-1-struttura" data-el="div" data-n="1">
-    <h2 id="chronicon:0.1.1.1.0" class="t-head s-1-struttura" data-el="head">Historia universalis, prima etas</h2>
+    </div><section id="universal-history-1" class="t-div s-1-struttura" data-el="div" data-behaviour="section" data-behaviour-source="tei-all" data-n="1">
+    <h2 id="chronicon:0.1.1.1.0" class="t-head s-1-struttura" data-el="head" data-behaviour="heading" data-behaviour-source="tei-all">Historia universalis, prima etas</h2>
 
-<p id="g5.19-5.19" class="t-p s-1-struttura" data-el="p">
+<p id="g5.19-5.19" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">
 Incipit prima etas. 
 </p>
  
-<p id="g5.20-5.25" class="t-p s-1-struttura" data-el="p">
+<p id="g5.20-5.25" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">
 Primo igitur anno, postquam de paradiso Adam ligni uetiti culpa proiectus est, cognouit uxorem suam genuitque 
-<span id="chronicon:0.1.1.1.2.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="y"><span id="chronicon:0.1.1.1.2.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Cain</span><span id="chronicon:0.1.1.1.2.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">Cayn</span></span>, deinde Abel, quorum unus, uidelicet Abel, iustus simplex ac innocens fuit et Deo placens, ideoque iustus. Cain uero superbus, inuidus, ac nocens, et Deo displicens, ideoque iniustus, qui sola inuidia fratrem occidit. Unde et fratricide Deus iratus, maledictionem intulit, 
+<span id="chronicon:0.1.1.1.2.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="y"><span id="chronicon:0.1.1.1.2.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Cain</span><span id="chronicon:0.1.1.1.2.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#a">Cayn</span></span>, deinde Abel, quorum unus, uidelicet Abel, iustus simplex ac innocens fuit et Deo placens, ideoque iustus. Cain uero superbus, inuidus, ac nocens, et Deo displicens, ideoque iniustus, qui sola inuidia fratrem occidit. Unde et fratricide Deus iratus, maledictionem intulit, 
 <span id="chronicon:0.1.1.1.2.1" class="t-pb" role="separator" title="page break">[17v]</span> 
 eiusque progeniem execratus est, atque ex eo filii hominum dicti sunt. 
 </p>
  
-<p id="g5.26-5.32" class="t-p s-1-struttura" data-el="p">
+<p id="g5.26-5.32" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">
 Adam uero cum CXXX esset annorum, genuit filium, nomine Seth. Hic fuit uir bonus, et iustus, de cuius prosapia homines exorti, filii Dei dicti sunt. Superuixit autem Adam, postquam genuit Seth, annis DCCC secundum hebraicam ueritatem, usque ad quinquagesimum sextum annum natiuitatis Lamech. Uerum Septuaginta interpretes ante natum Seth posuere annos CCCXXX, postea DCC. Seth interpretatur resurrectio, significans resurrectionem Christi a mortuis, cuius mortem illatam a Iudeis significat Abel, qui dicitur iustus, a fratre Cain occisus, secundum Septuaginta, 
-<span id="chronicon:0.1.1.1.3.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.3.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">annos</span><span id="chronicon:0.1.1.1.3.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">annum</span></span> CCCXXXV, secundum Hebreos CCXXXV. 
+<span id="chronicon:0.1.1.1.3.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.3.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">annos</span><span id="chronicon:0.1.1.1.3.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#a">annum</span></span> CCCXXXV, secundum Hebreos CCXXXV. 
 </p>
  
-<p id="g6.1-6.6" class="t-p s-1-struttura" data-el="p">
+<p id="g6.1-6.6" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">
 Seth habens annos CV genuit Enos, cui superuixit annos DCCCXVI usque ad CLXVII annum 
-<span id="chronicon:0.1.1.1.4.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.4.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#a">natiuitatis</span><span id="chronicon:0.1.1.1.4.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#g">natiuitates</span></span> Lamech, porro Septuaginta interpretes ante natum Enos annos CCV postea posuere annos DCCVII. Enos interpretatur homo, de quo Deus benedicitur, iste cepit inuocare nomen Domini, quia hominum est proprium, ut 
-<span id="chronicon:0.1.1.1.4.1" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="ae"><span id="chronicon:0.1.1.1.4.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">sue</span><span id="chronicon:0.1.1.1.4.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">suae</span></span> fragilitatis memores, inuocent conditoris auxilium, eorum dumtaxat, qui in fide Christi 
+<span id="chronicon:0.1.1.1.4.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.4.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#a">natiuitatis</span><span id="chronicon:0.1.1.1.4.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#g">natiuitates</span></span> Lamech, porro Septuaginta interpretes ante natum Enos annos CCV postea posuere annos DCCVII. Enos interpretatur homo, de quo Deus benedicitur, iste cepit inuocare nomen Domini, quia hominum est proprium, ut 
+<span id="chronicon:0.1.1.1.4.1" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="ae"><span id="chronicon:0.1.1.1.4.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">sue</span><span id="chronicon:0.1.1.1.4.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#a">suae</span></span> fragilitatis memores, inuocent conditoris auxilium, eorum dumtaxat, qui in fide Christi 
 <span id="chronicon:0.1.1.1.4.2" class="t-pb" role="separator" title="page break">[18r]</span> 
 uiuentes, filii resurrectionis sic esse letantur, secundum Septuaginta, annum DCXXV, Hebrei CCCXXV. 
 </p>
  
-<p id="g6.7-6.10" class="t-p s-1-struttura" data-el="p">
+<p id="g6.7-6.10" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">
 Enos habens annos XC genuit Cainan, cui superuixit annos DCCCXV secundum Hebreos, idest usque ad LXXXIV annum natiuitatis Noe, sed Septuaginta interpretes ante natum 
-<span id="chronicon:0.1.1.1.5.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="case"><span id="chronicon:0.1.1.1.5.0.0" class="t-lem s-4-apparato" data-el="lem" data-resp="#pm">Cainan</span><span id="chronicon:0.1.1.1.5.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#g #a">cainan</span></span> CXC annos, postea DCCXV posuere, secundum LXX annum DCCXXV iuxta Hebreos CCCXCV. 
+<span id="chronicon:0.1.1.1.5.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="case"><span id="chronicon:0.1.1.1.5.0.0" class="t-lem s-4-apparato" data-el="lem" data-resp="#pm">Cainan</span><span id="chronicon:0.1.1.1.5.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#g #a">cainan</span></span> CXC annos, postea DCCXV posuere, secundum LXX annum DCCXXV iuxta Hebreos CCCXCV. 
 </p>
  
-<p id="g6.11-6.13" class="t-p s-1-struttura" data-el="p">
+<p id="g6.11-6.13" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">
 Cainan habens annos LXX genuit 
-<span id="chronicon:0.1.1.1.6.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.6.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#a">Malalehel</span><span id="chronicon:0.1.1.1.6.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#g">Malahelel</span></span>, post cuius ortum uixit annos DCCCXL 
-<span id="chronicon:0.1.1.1.6.1" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="word-segmentation"><span id="chronicon:0.1.1.1.6.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">idest</span><span id="chronicon:0.1.1.1.6.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">id est</span></span> usque ad CLXXIX annum natiuitatis Noe; Septuaginta interpretes ante natum Malalehel CLXX postea dixere DCCXL, secundum 
-<span id="chronicon:0.1.1.1.6.2" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="case"><span id="chronicon:0.1.1.1.6.2.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#a">septuaginta</span><span id="chronicon:0.1.1.1.6.2.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#g">Septuaginta</span></span> annum CMXCV iuxta Hebreos CDLX. 
+<span id="chronicon:0.1.1.1.6.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.6.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#a">Malalehel</span><span id="chronicon:0.1.1.1.6.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#g">Malahelel</span></span>, post cuius ortum uixit annos DCCCXL 
+<span id="chronicon:0.1.1.1.6.1" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="word-segmentation"><span id="chronicon:0.1.1.1.6.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">idest</span><span id="chronicon:0.1.1.1.6.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#a">id est</span></span> usque ad CLXXIX annum natiuitatis Noe; Septuaginta interpretes ante natum Malalehel CLXX postea dixere DCCXL, secundum 
+<span id="chronicon:0.1.1.1.6.2" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="case"><span id="chronicon:0.1.1.1.6.2.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#a">septuaginta</span><span id="chronicon:0.1.1.1.6.2.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#g">Septuaginta</span></span> annum CMXCV iuxta Hebreos CDLX. 
 </p>
  
-<p id="g6.14-1.16" class="t-p s-1-struttura" data-el="p">
+<p id="g6.14-1.16" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">
 Malalehel annorum LXV genuit Iareth, cui superuixit annos DCCCXXX usque ad CCXXXIV annum natiuitatis Noe; Septuaginta uero ante natum Iareth CLXV postea posuere DCCXXX. 
-<span id="chronicon:0.1.1.1.7.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="case"><span id="chronicon:0.1.1.1.7.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#a">septuaginta</span><span id="chronicon:0.1.1.1.7.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#g">Septuaginta</span></span> annos MCXXII, Hebreos DCXXII. 
+<span id="chronicon:0.1.1.1.7.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="case"><span id="chronicon:0.1.1.1.7.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#a">septuaginta</span><span id="chronicon:0.1.1.1.7.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#g">Septuaginta</span></span> annos MCXXII, Hebreos DCXXII. 
 </p>
  
-<p id="g6.17-6.25" class="t-p s-1-struttura" data-el="p">
+<p id="g6.17-6.25" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">
 Iareth annorum CLXII genuit Enoch, cui superuixit annis DCCC usque ad CCCLXVI annum natiuitatis Noe. In hac generatione nusquam 
 <span id="chronicon:0.1.1.1.8.0" class="t-pb" role="separator" title="page break">[18v]</span> 
 codices discrepant. Hunc Enoch 
-<span id="chronicon:0.1.1.1.8.1" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="word-segmentation"><span id="chronicon:0.1.1.1.8.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">nonnulla</span><span id="chronicon:0.1.1.1.8.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">non nulla</span></span> diuina scripsisse Iuda apostolo attestante comperimus. Sed ut beatus 
-<span id="chronicon:0.1.1.1.8.2" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.8.2.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Augustinus</span><span id="chronicon:0.1.1.1.8.2.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">Agustinus</span></span> dicit: non frustra non sunt in eo canones scripturarum, qui seruabantur in templo hebrei populi succedentium diligentia sacerdotum, nisi quia ob antiquitatem suspecte fidei iudicata sunt, nec uerum esse, 
-<span id="chronicon:0.1.1.1.8.3" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="ae"><span id="chronicon:0.1.1.1.8.3.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">que</span><span id="chronicon:0.1.1.1.8.3.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">quae</span></span> ille scripsisse poterat inuenire, unde illa, 
-<span id="chronicon:0.1.1.1.8.4" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="ae"><span id="chronicon:0.1.1.1.8.4.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">que</span><span id="chronicon:0.1.1.1.8.4.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">quae</span></span> sub eius nomine proferunt, et 
-<span id="chronicon:0.1.1.1.8.5" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.8.5.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">continent</span><span id="chronicon:0.1.1.1.8.5.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">comtinet</span></span> illas de gigantibus fabulas, quod non habuerint homines patres, recte a prudentibus iudicantur non ipsius esse credenda. Septuaginta MDCCLXXXVII, Hebrei DCLXXXVII. 
+<span id="chronicon:0.1.1.1.8.1" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="word-segmentation"><span id="chronicon:0.1.1.1.8.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">nonnulla</span><span id="chronicon:0.1.1.1.8.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#a">non nulla</span></span> diuina scripsisse Iuda apostolo attestante comperimus. Sed ut beatus 
+<span id="chronicon:0.1.1.1.8.2" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.8.2.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Augustinus</span><span id="chronicon:0.1.1.1.8.2.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#a">Agustinus</span></span> dicit: non frustra non sunt in eo canones scripturarum, qui seruabantur in templo hebrei populi succedentium diligentia sacerdotum, nisi quia ob antiquitatem suspecte fidei iudicata sunt, nec uerum esse, 
+<span id="chronicon:0.1.1.1.8.3" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="ae"><span id="chronicon:0.1.1.1.8.3.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">que</span><span id="chronicon:0.1.1.1.8.3.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#a">quae</span></span> ille scripsisse poterat inuenire, unde illa, 
+<span id="chronicon:0.1.1.1.8.4" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="ae"><span id="chronicon:0.1.1.1.8.4.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">que</span><span id="chronicon:0.1.1.1.8.4.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#a">quae</span></span> sub eius nomine proferunt, et 
+<span id="chronicon:0.1.1.1.8.5" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.8.5.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">continent</span><span id="chronicon:0.1.1.1.8.5.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#a">comtinet</span></span> illas de gigantibus fabulas, quod non habuerint homines patres, recte a prudentibus iudicantur non ipsius esse credenda. Septuaginta MDCCLXXXVII, Hebrei DCLXXXVII. 
 </p>
  
-<p id="g6.26-6.34" class="t-p s-1-struttura" data-el="p">
+<p id="g6.26-6.34" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">
 Enoch annos LXV genuit Mathusalam post eius ortum ambulauit cum Deo CCC annis, idest usque ad CXIII annum natiuitatis Lamech secundum Hebreos. Septuaginta interpretes ante natum Mathusalam posuere CLXV annos, postea CC. Iste quidem non apparuit mortalibus, quia tulit illum Deus ab eis. Bene autem in septima generatione 
-<span id="chronicon:0.1.1.1.9.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="h"><span id="chronicon:0.1.1.1.9.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Enoch</span><span id="chronicon:0.1.1.1.9.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">Enoc</span></span>, qui interpretatur dedicatio, tulit a mortalibus Deus, quia ciuitas electorum in sex huius seculi pro Deo laborans etatibus, in septima 
-<span id="chronicon:0.1.1.1.9.1" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.9.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">sabbatii</span><span id="chronicon:0.1.1.1.9.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">sabbati</span></span> futuri gloriam dedi<span id="chronicon:0.1.1.1.9.2" class="t-pb" role="separator" title="page break">[19r]</span>cationis expectat, atque reprobi sola presenti sunt felicitate contenti. Cain uero ciuitatem, quam statuit non in septima 
-<span id="chronicon:0.1.1.1.9.3" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.9.3.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">generatione</span><span id="chronicon:0.1.1.1.9.3.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">generationes</span></span>, sed in primogenito Enoch filio 
-<span id="chronicon:0.1.1.1.9.4" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.9.4.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">consecrata</span><span id="chronicon:0.1.1.1.9.4.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">consecrat</span></span>. Septuaginta MCCCLIV, Hebrei DCCCLXXIV. 
+<span id="chronicon:0.1.1.1.9.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="h"><span id="chronicon:0.1.1.1.9.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Enoch</span><span id="chronicon:0.1.1.1.9.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#a">Enoc</span></span>, qui interpretatur dedicatio, tulit a mortalibus Deus, quia ciuitas electorum in sex huius seculi pro Deo laborans etatibus, in septima 
+<span id="chronicon:0.1.1.1.9.1" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.9.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">sabbatii</span><span id="chronicon:0.1.1.1.9.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#a">sabbati</span></span> futuri gloriam dedi<span id="chronicon:0.1.1.1.9.2" class="t-pb" role="separator" title="page break">[19r]</span>cationis expectat, atque reprobi sola presenti sunt felicitate contenti. Cain uero ciuitatem, quam statuit non in septima 
+<span id="chronicon:0.1.1.1.9.3" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.9.3.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">generatione</span><span id="chronicon:0.1.1.1.9.3.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#a">generationes</span></span>, sed in primogenito Enoch filio 
+<span id="chronicon:0.1.1.1.9.4" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.9.4.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">consecrata</span><span id="chronicon:0.1.1.1.9.4.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#a">consecrat</span></span>. Septuaginta MCCCLIV, Hebrei DCCCLXXIV. 
 </p>
  
-<p id="g7.1-7.7" class="t-p s-1-struttura" data-el="p">
+<p id="g7.1-7.7" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">
 Mathusalam annos CLXXXVII genuit Lamech, cui superuixit annos DCCLXXXII idest usque ad diluuium. Septuaginta interpretes ante natum Lamech CLXVII, ponunt annos, postea DCCCII qui numerus, ut lector facillime uidebit, iuxta hebraicam ueritatem XX annos; iuxta ipsorum uero auctoritatem XIV annis diluuii tempora transiit. De qua famosissima questione doctissimi patres Ieronimus in libro questionum hebraicarum, Augustinus in libro de ciuitate Dei quinto decimo plenissime disputant. Septuaginta MDCXLVI, Hebrei 
-<span id="chronicon:0.1.1.1.10.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.10.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">milia</span><span id="chronicon:0.1.1.1.10.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">mille</span></span> LVI. 
+<span id="chronicon:0.1.1.1.10.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.10.0.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">milia</span><span id="chronicon:0.1.1.1.10.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#a">mille</span></span> LVI. 
 </p>
  
-<p id="g7.8-7.12" class="t-p s-1-struttura" data-el="p">
+<p id="g7.8-7.12" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">
 Lamech annos CLXXXII genuit Noe, cui superuixit annos DXCV usque ad sextum annum ante diluuium. Septuaginta ante natum Noe ponunt annos CLXXXVIII et postea DLXV. in hac sola generatione summa uniuersitatis discrepat, quia XXIV annis plus 
 <span id="chronicon:0.1.1.1.11.0" class="t-pb" role="separator" title="page break">[19v]</span> 
 uixisse Lamech in Hebreis, quam in Septuaginta translatorum codicibus inuenitur. Septuaginta duo millia CCXLII. Hebrei MDCLVI. 
 </p>
  
-<p id="g7.13-7.27" class="t-p s-1-struttura" data-el="p">
+<p id="g7.13-7.27" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">
 Noe anno DC diluuium factum est, mense secundo septima decima die mensis. Hic perficitur prima etas continens secundum hebraicam ueritatem annos mille DCLVI 
-<span id="chronicon:0.1.1.1.12.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="punctuation" data-subtype="add-punctuation"><span id="chronicon:0.1.1.1.12.0.0" class="t-lem s-4-apparato" data-el="lem" data-resp="#pm">;</span><span id="chronicon:0.1.1.1.12.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#g"> </span></span> iuxta septuaginta uero annos duo 
-<span id="chronicon:0.1.1.1.12.1" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="double"><span id="chronicon:0.1.1.1.12.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">millia</span><span id="chronicon:0.1.1.1.12.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">milia</span></span> CCXLII 
-<span id="chronicon:0.1.1.1.12.2" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.12.2.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">sane</span><span id="chronicon:0.1.1.1.12.2.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">. Sane</span></span> de differentia annorum inter hebream, et LXX interpretum auctoritatem ne quis nos laceret, nouas mouisse questiones, legat 
-<span id="chronicon:0.1.1.1.12.3" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="ph"><span id="chronicon:0.1.1.1.12.3.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">prefatorum</span><span id="chronicon:0.1.1.1.12.3.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">prephatorum</span></span> patrum memorata opuscula, et intelliget hanc iam olim notissimam fuisse 
-<span id="chronicon:0.1.1.1.12.4" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.12.4.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">distantiam</span><span id="chronicon:0.1.1.1.12.4.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">distantia</span></span> cuius originis distantiam cum beatus Augustinus 
-<span id="chronicon:0.1.1.1.12.5" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.12.5.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">solertissime</span><span id="chronicon:0.1.1.1.12.5.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">sollertissime</span></span> quesisset, dixit in libro suprascripto, capitulo tertio decimo inter alia sic: credibilis ergo quis dixerit cum primo de bibliotheca ptolomei describi ista ceperunt tunc aliquid tale fieri potuisse in codice uno, sed primitus inde scripto, unde iam lacius emanaret, ubi potuit quidem accidere etiam scriptoris error. sed hoc in illa questione de uita Mathusalem, non absurdum est suspicari: quamuis de eo quidam dicant, quod tempore diluuii 
-<span id="chronicon:0.1.1.1.12.6" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.12.6.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Mathusalem</span><span id="chronicon:0.1.1.1.12.6.1" class="t-rdg s-4-apparato" data-el="rdg" data-wit="#a">Mathusalam</span></span>,
+<span id="chronicon:0.1.1.1.12.0" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="punctuation" data-subtype="add-punctuation"><span id="chronicon:0.1.1.1.12.0.0" class="t-lem s-4-apparato" data-el="lem" data-resp="#pm">;</span><span id="chronicon:0.1.1.1.12.0.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#g"> </span></span> iuxta septuaginta uero annos duo 
+<span id="chronicon:0.1.1.1.12.1" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="double"><span id="chronicon:0.1.1.1.12.1.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">millia</span><span id="chronicon:0.1.1.1.12.1.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#a">milia</span></span> CCXLII 
+<span id="chronicon:0.1.1.1.12.2" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.12.2.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">sane</span><span id="chronicon:0.1.1.1.12.2.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#a">. Sane</span></span> de differentia annorum inter hebream, et LXX interpretum auctoritatem ne quis nos laceret, nouas mouisse questiones, legat 
+<span id="chronicon:0.1.1.1.12.3" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="orthographic" data-subtype="ph"><span id="chronicon:0.1.1.1.12.3.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">prefatorum</span><span id="chronicon:0.1.1.1.12.3.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#a">prephatorum</span></span> patrum memorata opuscula, et intelliget hanc iam olim notissimam fuisse 
+<span id="chronicon:0.1.1.1.12.4" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.12.4.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">distantiam</span><span id="chronicon:0.1.1.1.12.4.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#a">distantia</span></span> cuius originis distantiam cum beatus Augustinus 
+<span id="chronicon:0.1.1.1.12.5" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.12.5.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">solertissime</span><span id="chronicon:0.1.1.1.12.5.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#a">sollertissime</span></span> quesisset, dixit in libro suprascripto, capitulo tertio decimo inter alia sic: credibilis ergo quis dixerit cum primo de bibliotheca ptolomei describi ista ceperunt tunc aliquid tale fieri potuisse in codice uno, sed primitus inde scripto, unde iam lacius emanaret, ubi potuit quidem accidere etiam scriptoris error. sed hoc in illa questione de uita Mathusalem, non absurdum est suspicari: quamuis de eo quidam dicant, quod tempore diluuii 
+<span id="chronicon:0.1.1.1.12.6" class="t-app s-4-apparato app-has-lem" data-el="app" data-cert="high" data-type="substantive"><span id="chronicon:0.1.1.1.12.6.0" class="t-lem s-4-apparato" data-el="lem" data-wit="#g">Mathusalem</span><span id="chronicon:0.1.1.1.12.6.1" class="t-rdg s-4-apparato" data-el="rdg" data-behaviour="inline" data-behaviour-source="tei-all" data-wit="#a">Mathusalam</span></span>,
 <span id="chronicon:0.1.1.1.12.7" class="t-pb" role="separator" title="page break">[20r]</span> 
 ubi pater eius Enoch Deo uolente seruatus fuerit, posteaque in hoc mundo XX annis uixerit. Et post aliquanta beatus idem Augustinus in eodem: recte inquid fieri nullo modo dubitauerim, ut cum diuersum aliquid in utrisque codicibus inuenitur, quandoquidem ad fidem rerum gestarum utrumque esse non potest, uerum ei lingue potius credatur unde est in aliam per interpretes facta translatio. 
 </p>
  
-<p id="g7.28-7.28" class="t-p s-1-struttura" data-el="p">
+<p id="g7.28-7.28" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">
 Explicit prima etas. 
 </p>
  
-</div><nav class="prevnext" aria-label="Contents"><a href="text-0.html">‹ previous</a><a href="text.html">Contents</a><a href="text-2.html">next ›</a></nav></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.2 · 370db8e · 2026-08-01</footer>
+</section><nav class="prevnext" aria-label="Contents"><a href="text-0.html">‹ previous</a><a href="text.html">Contents</a><a href="text-2.html">next ›</a></nav></main>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.2 · 2026-08-02</footer>
 <script>
 (function(){
-  var T={"edition":"Edition","text":"Text","indices":"Indices","data":"Data","archive":"Archive","dsa":"digital archive","texts":"Texts","reading":"Reading","diplomatic":"Diplomatic","apparatus":"Apparatus","aboutFile":"About this file","notes":"Notes","dse":"digital scholarly edition","responsibility":"Responsibility","licence":"Licence","witnesses":"Witnesses","apparatusRegisters":"Apparatus","revisions":"Revision history","generator":"Generator","people":"People","places":"Places","orgs":"Organisations","occurrenceOne":"occurrence","occurrenceMany":"occurrences","entries":"entries","skip":"Skip to content","publishedWith":"Published with","map":"Map","lab":"Lab","labAnalyses":"Analyses","labIntro":"The analytical layer, kept apart from the edition: the indices, the quantitative analysis, the lemmas, the map — derived from the text, not attested by it. Choose one above.","labLexDesc":"Frequencies, concordance (KWIC) and the token / type / TTR count.","labMapDesc":"The places that carry coordinates.","mapAria":"Map of the places of the edition","mapNote":"Positional sketch. Filled dots: coordinates declared in the TEI or confirmed by the editor. Hollow dots: gazetteer suggestions awaiting review. Each place links to OpenStreetMap. Coastlines: Natural Earth (public domain).","front":"Front matter","back":"Back matter","lacking":"lacking in","editedText":"edited text","genesis":"Genesis","hand":"hand","version":"version","legend":"Legend","legWord":"word","legDel":"deleted by the writing hand","legAdd":"added above the line","legUnclear":"uncertain reading","legSupplied":"supplied by the editor","legGap":"lost or illegible","legPb":"page break of the source","legMetamark":"a mark of the hand about the text (^ = insert here; hover each mark to read what it does)","legApp":"variant readings: click for the apparatus","legNote":"note mark","legHands":"Hands","legAllHands":"all","legHand":"the hand of","idxSearch":"search a name…","backToTop":"back to top","apparatusCritical":"critical: variants between witnesses","apparatusGenetic":"genetic: the strata of one manuscript in time","apparatusBoth":"critical and genetic: witnesses to collate, strata within them","legMajor":"main hand","lexicon":"Lexicon","lexTokens":"running words","lexForms":"distinct forms","lexTTR":"type-token ratio","lexSearch":"search a word…","lexFrequencies":"Frequencies","lexConcordance":"Concordance","lexPick":"Pick a word to see it in context.","lexLanguage":"Language","lexAllLangs":"all","lexStoplist":"Stopwords","lexDocument":"Document","lexWholeEdition":"all documents","lexStopNone":"none","lexHideStop":"hide stopwords","lexWord":"word","lexLang":"lang","descrFrequencies":"Every attested form with its count, its share per thousand and whether the stopword list you chose covers it.","descrConcordance":"Every occurrence of every form, with the words around it and the anchor back into the text.","descrLemmaConcordance":"The same evidence grouped under the dictionary form, where the edition has lemmas.","lexAbs":"count","lexRel":"per 1000","lexStats":"Lexical statistics","lexStopCol":"stop","lexStopNote":"Frequencies drop the stopwords you choose; the concordance keeps every word.","genesisNote":"The campaigns of correction the edition declares, in its own order, with the writing operations attributed to each. Every operation links to the place where it happened.","agreement":"Agreement between witnesses","agreementNote":"How often two witnesses carry the same reading. Evidence for a stemma, which remains the editor’s argument.","openPage":"open the page","sectionsN":"sections","sectionOne":"Section","contents":"Contents","bookLabel":"Book","register":"Register","documentsN":"documents","dateCol":"Date","fromCol":"From","toCol":"To","authorCol":"Author","placeCol":"Place","titleCol":"Title","idnoCol":"Ref.","filter":"Filter…","prev":"‹ previous","next":"next ›","fullHeader":"The full header (teiHeader)","fullHeaderNote":"Everything the file declares, rendered as it is.","reuse":"Reuse under the edition licence (see the Edition page).","appEntry":"apparatus entry","descrModel":"the edition model: documents, registries, apparatus (JSON)","descrEntities":"people, places and organisations with occurrence counts and coordinates","descrApparatus":"every apparatus reading with its witnesses, one row per reading","descrSource":"the unmodified TEI source file","lemmas":"Lemmas","lemmaCoverage":"Coverage","tokensWord":"tokens","languagesLabel":"Languages","yearsLabel":"Years","contributorsLabel":"Contributors","interventionsWord":"interventions","licenceVariesNote":"each document declares its own licence, shown on its page","lemmaFromMarkup":"from the markup (w/@lemma)","lemmaFromFile":"from lemmas.json","lemmaPending":"types awaiting the editor’s review","formsLabel":"forms","moreOccurrences":"more occurrences not shown here","descrLemmas":"every lemma with its forms and counts, one row per form","descrTokens":"the token stream of the reading text: position, language, form, lemma, anchor"};
+  var T={"edition":"Edition","text":"Text","indices":"Indices","data":"Data","archive":"Archive","dsa":"digital archive","texts":"Texts","reading":"Reading","diplomatic":"Diplomatic","apparatus":"Apparatus","aboutFile":"About this file","notes":"Notes","dse":"digital scholarly edition","responsibility":"Responsibility","licence":"Licence","witnesses":"Witnesses","apparatusRegisters":"Apparatus","revisions":"Revision history","generator":"Generator","people":"People","places":"Places","orgs":"Organisations","occurrenceOne":"occurrence","occurrenceMany":"occurrences","entries":"entries","skip":"Skip to content","publishedWith":"Published with","map":"Map","lab":"Lab","labAnalyses":"Analyses","labIntro":"The analytical layer, kept apart from the edition: the indices, the quantitative analysis, the lemmas, the map — derived from the text, not attested by it. Choose one above.","labLexDesc":"Frequencies, concordance (KWIC) and the token / type / TTR count.","labMapDesc":"The places that carry coordinates.","mapAria":"Map of the places of the edition","mapNote":"Positional sketch. Filled dots: coordinates declared in the TEI or confirmed by the editor. Hollow dots: gazetteer suggestions awaiting review. Each place links to OpenStreetMap. Coastlines: Natural Earth (public domain).","front":"Front matter","back":"Back matter","lacking":"lacking in","editedText":"edited text","genesis":"Genesis","hand":"hand","operations":"operations","version":"version","legend":"Legend","legWord":"word","legDel":"deleted by the writing hand","legAdd":"added above the line","legUnclear":"uncertain reading","legSupplied":"supplied by the editor","legGap":"lost or illegible","legPb":"page break of the source","legMetamark":"a mark of the hand about the text (^ = insert here; hover each mark to read what it does)","legApp":"variant readings: click for the apparatus","legNote":"note mark","legHands":"Hands","legAllHands":"all","legHand":"the hand of","idxSearch":"search a name…","backToTop":"back to top","apparatusCritical":"critical: variants between witnesses","apparatusGenetic":"genetic: the strata of one manuscript in time","apparatusBoth":"critical and genetic: witnesses to collate, strata within them","legMajor":"main hand","lexicon":"Lexicon","lexTokens":"running words","lexForms":"distinct forms","lexTTR":"type-token ratio","lexSearch":"search a word…","lexFrequencies":"Frequencies","lexConcordance":"Concordance","lexPick":"Pick a word to see it in context.","lexLanguage":"Language","lexAllLangs":"all","lexStoplist":"Stopwords","lexDocument":"Document","lexWholeEdition":"all documents","lexStopNone":"none","lexHideStop":"hide stopwords","lexWord":"word","lexLang":"lang","descrFrequencies":"Every attested form with its count, its share per thousand and whether the stopword list you chose covers it.","descrConcordance":"Every occurrence of every form, with the words around it and the anchor back into the text.","descrLemmaConcordance":"The same evidence grouped under the dictionary form, where the edition has lemmas.","lexAbs":"count","lexRel":"per 1000","lexStats":"Lexical statistics","lexStopCol":"stop","lexStopNote":"Frequencies drop the stopwords you choose; the concordance keeps every word.","genesisNote":"The campaigns of correction the edition declares, in its own order, with the writing operations attributed to each. Every operation links to the place where it happened.","genesisHandsNote":"Writing operations grouped by the hands the edition declares or identifies. A hand is not presented as a chronological layer unless the source declares that relation. Every operation links to its place in the text.","genesisMixedNote":"Declared correction campaigns and hands to which writing operations are attributed. Hands and chronological layers remain distinct. Every operation links to its place in the text.","genesisUnassignedNote":"Writing operations for which the edition declares neither a correction campaign nor a hand. Every operation links to its place in the text.","agreement":"Agreement between witnesses","agreementNote":"How often two witnesses carry the same reading. Evidence for a stemma, which remains the editor’s argument.","openPage":"open the page","sectionsN":"sections","sectionOne":"Section","contents":"Contents","bookLabel":"Book","register":"Register","documentsN":"documents","dateCol":"Date","fromCol":"From","toCol":"To","authorCol":"Author","placeCol":"Place","titleCol":"Title","idnoCol":"Ref.","filter":"Filter…","prev":"‹ previous","next":"next ›","fullHeader":"The full header (teiHeader)","fullHeaderNote":"Everything the file declares, rendered as it is.","reuse":"Reuse under the edition licence (see the Edition page).","appEntry":"apparatus entry","descrModel":"the edition model: documents, registries, apparatus (JSON)","descrEntities":"people, places and organisations with occurrence counts and coordinates","descrApparatus":"every apparatus reading with its witnesses, one row per reading","descrSource":"the unmodified TEI source file","lemmas":"Lemmas","lemmaCoverage":"Coverage","tokensWord":"tokens","languagesLabel":"Languages","yearsLabel":"Years","contributorsLabel":"Contributors","interventionsWord":"interventions","licenceVariesNote":"each document declares its own licence, shown on its page","lemmaFromMarkup":"from the markup (w/@lemma)","lemmaFromFile":"from lemmas.json","lemmaPending":"types awaiting the editor’s review","formsLabel":"forms","moreOccurrences":"more occurrences not shown here","descrLemmas":"every lemma with its forms and counts, one row per form","descrTokens":"the token stream of the reading text: position, language, form, lemma, anchor"};
   var body=document.body; body.classList.add('mode-read');
   if(document.querySelector('.app-band'))body.classList.add('has-band');
   if(window.TORCHIO_ALIGN)body.classList.add('has-align');
@@ -934,7 +941,7 @@ Explicit prima etas.
       openPop('<span class="k">'+esc(op.dataset.el)+'</span>'
         +'<div class="notebody">'+esc(op.textContent.replace(/\s+/g,' ').trim().slice(0,140))+'</div>'
         +'<div class="meta">'+(lab?esc(lab):'')+(hd?' · '+esc(hd):'')
-        +' <a href="genesis.html">'+esc(T.genesis)+'</a></div>',op);
+        +(document.querySelector('a[href="genesis.html"]') ? ' <a href="genesis.html">'+esc(T.genesis)+'</a>' : '')+'</div>',op);
       ev.stopPropagation();return;
     }
     var anc=ev.target.closest&&ev.target.closest('[data-appref]');

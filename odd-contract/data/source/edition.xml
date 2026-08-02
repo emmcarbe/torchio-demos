@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:x="https://example.org/torchio/odd-contract">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>ODD as a rendering contract</title>
+        <respStmt>
+          <resp>demonstration encoding</resp>
+          <name>Emmanuela Carbé</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Born-digital demonstration, CC0.</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>A synthetic test document. It is not a scholarly edition of a historical source.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>This document makes the processing cascade inspectable. The edition ODD
+        controls its two custom elements; ordinary TEI elements fall through to
+        conservative TEI All class contracts.</p>
+      </projectDesc>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <head>Three decisions, with their provenance</head>
+      <p>This paragraph is ordinary TEI. Its paragraph behaviour comes from the
+      TEI All fallback contract, not from a rule in this edition’s ODD.</p>
+      <p>At <x:salvataggio when="2026-08-02T14:35:00">autosave 17</x:salvataggio>,
+      the born-digital writing environment recorded a save event. This italic,
+      bold treatment is explicitly declared by the edition ODD.</p>
+      <p>The event was produced by
+      <x:softwareName ref="https://github.com/emmcarbe/torchio">Torchio</x:softwareName>.
+      The ODD’s web processing model turns the declared reference into a link.</p>
+      <p><x:salvataggio>Undated save event</x:salvataggio> has no @when:
+      the first ODD predicate does not match, so the second ODD model renders it
+      as a block. No element-name switch is involved.</p>
+    </body>
+  </text>
+</TEI>

@@ -6,10 +6,24 @@ added and removed without touching it.
 
 Demonstration editions generated with Torchio from the sources in
 `sources/`. To regenerate, for example:
-`node tools/press.js --site demo-src/odissea/odissea.xml docs/odissea`
-and `node tools/press.js --site demo-src/vangogh docs/vangogh`.
+
+```sh
+node ../torchio/tools/press.js --site sources/odissea odissea
+node ../torchio/tools/press.js --site sources/vangogh vangogh
+node ../torchio/tools/press.js --site sources/odd-contract odd-contract
+```
+
+Run the commands from this repository with the `torchio` repository checked
+out beside it. Directory input is intentional: it includes the manifest and
+only the source files and sidecars actually consumed by the press.
 
 ## Materials and rights
+
+- **ODD contract** (`sources/odd-contract/`): a synthetic CC0 document and
+  customization that make the processing cascade inspectable. Custom elements
+  receive exact processing from the edition ODD; ordinary TEI elements use the
+  conservative TEI All fallback contracts. It is a test, not an edition of a
+  historical source.
 
 - **Odyssey** (`sources/odissea/`): Homer, *Odyssey*, Greek text from the
   [Perseus Digital Library](https://github.com/PerseusDL/canonical-greekLit)

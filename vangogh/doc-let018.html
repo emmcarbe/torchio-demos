@@ -175,7 +175,7 @@ body.mode-read .t-lb::after{content:" "}
 body.mode-read .t-lb[data-break="no"]::after{content:none}
 body.mode-read .t-add{vertical-align:baseline;font-size:inherit}
 
-.torchio-nav{display:flex;gap:22px;margin-left:auto}
+.torchio-nav{display:flex;flex-wrap:wrap;gap:22px;margin-left:auto;min-width:0}
 .torchio-nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;
   color:var(--soft);text-transform:uppercase}
 .torchio-nav a.on{color:var(--accent)}
@@ -187,6 +187,13 @@ body.mode-read .t-add{vertical-align:baseline;font-size:inherit}
 .torchio-nav a:hover{color:var(--ink);text-decoration:none}
 header.torchio{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:baseline}
 header.torchio .tt{min-width:14rem}
+@media(max-width:540px){
+  header.torchio{align-items:flex-start}
+  header.torchio .tt{min-width:0;width:100%}
+  .torchio-nav{width:100%;margin-left:0;gap:8px 20px}
+  .torchio-subnav{gap:8px 18px}
+  ol.toc{columns:1}
+}
 .about dt{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.14em;
   text-transform:uppercase;color:var(--soft);margin-top:1.2em}
 .about dd{margin:0.3em 0 0}
@@ -369,24 +376,24 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 .kwic .ka{color:var(--soft);width:40%}
 </style>
 </head>
-<body>
+<body id="top">
 <a class="skip" href="#main">Skip to content</a>
 <header class="torchio">
 <div class="tt"><h1>To Caroline van Stockum-Haanebeek. London, Monday, 9 February 1874.</h1><p class="sub">Vincent van Gogh, the letters</p></div>
-<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Archive</a><a href="text.html" class="on">Texts</a><a href="indices.html">Lab</a><a href="data.html">Data</a></nav>
+<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Archive</a><a href="text.html" class="on">Texts</a><a href="facsimile.html">Facsimiles</a><a href="indices.html">Lab</a><a href="data.html">Data</a></nav>
 </header>
 
 <div class="torchio-bar"><div class="inner"><button class="sw" data-sw="notes" aria-pressed="true">Notes</button><button class="sw off" data-sw="header" aria-pressed="false">About this file</button></div></div><main id="main" class="torchio"><nav class="prevnext" aria-label="Register"><a href="doc-let017.html">‹ previous</a><a href="text.html">Register</a><a href="doc-let019.html">next ›</a></nav><div id="let018:0.0" class="t-teiHeader s-7-header" data-el="teiHeader">
         <div id="let018:0.0.0" class="t-fileDesc s-7-header" data-el="fileDesc">
 <span id="let018:0.0.0.0" class="t-titleStmt s-7-header" data-el="titleStmt">
-<span id="let018:0.0.0.0.0" class="t-title s-1-inline" data-el="title">To Caroline van Stockum-Haanebeek. London, Monday, 9 February 1874.</span>
+<span id="let018:0.0.0.0.0" class="t-title s-1-inline" data-el="title" data-behaviour="inline" data-behaviour-source="tei-all">To Caroline van Stockum-Haanebeek. London, Monday, 9 February 1874.</span>
 <span id="let018:0.0.0.0.1" class="t-editor s-1-bibliografia" data-el="editor">Leo Jansen</span>
 <span id="let018:0.0.0.0.2" class="t-editor s-1-bibliografia" data-el="editor">Hans Luijten</span>
 <span id="let018:0.0.0.0.3" class="t-editor s-1-bibliografia" data-el="editor">Nienke Bakker</span>
             </span>
 <div id="let018:0.0.0.1" class="t-publicationStmt s-7-header" data-el="publicationStmt">
 <span id="let018:0.0.0.1.0" class="t-publisher s-1-bibliografia" data-el="publisher">
-                    <span id="let018:0.0.0.1.0.0" class="t-name s-2-entita" data-el="name">Huygens Instituut voor Nederlandse Geschiedenis (KNAW)</span>
+                    <span id="let018:0.0.0.1.0.0" class="t-name s-2-entita" data-el="name" data-behaviour="inline" data-behaviour-source="tei-all">Huygens Instituut voor Nederlandse Geschiedenis (KNAW)</span>
                     <span id="let018:0.0.0.1.0.1" class="t-email s-2-entita" data-el="email">info@huygens.knaw.nl</span>
                 </span>
 <span id="let018:0.0.0.1.1" class="t-publisher s-1-bibliografia" data-el="publisher">Van Gogh Museum</span>
@@ -394,7 +401,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <span id="let018:0.0.0.1.3" class="t-date s-2-date" data-el="date" data-type="first" data-when="2009">2009</span>
 <div id="let018:0.0.0.1.4" class="t-availability s-1-bibliografia" data-el="availability">
 <div id="let018:0.0.0.1.4.0" class="t-licence s-7-licenza" data-el="licence" data-target="http://creativecommons.org/licenses/by-nc-sa/4.0/ https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode">
-<p id="let018:0.0.0.1.4.0.0" class="t-p s-1-struttura" data-el="p">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) </p>
+<p id="let018:0.0.0.1.4.0.0" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) </p>
                     </div>
                 </div>
 <a id="let018:0.0.0.1.5" class="t-ptr s-2-corrispondenza ent-ext" href="http://vangoghletters.org/orig/let018" target="_blank" rel="noopener" data-el="ptr" data-target="http://vangoghletters.org/orig/let018">vangoghletters.org/orig/let018</a>
@@ -402,9 +409,9 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
             <div id="let018:0.0.0.2" class="t-sourceDesc s-7-header" data-el="sourceDesc">
                 <div id="let018:0.0.0.2.0" class="tei-foreign" data-name="vg:letDesc" data-ns="http://www.vangoghletters.org/ns/">
                     <div id="let018:0.0.0.2.0.0" class="tei-foreign" data-name="vg:letIdentifier" data-ns="http://www.vangoghletters.org/ns/">
-<span id="let018:0.0.0.2.0.0.0" class="t-idno s-2-entita" data-el="idno" data-type="jlb">018</span>
-<span id="let018:0.0.0.2.0.0.1" class="t-idno s-2-entita" data-el="idno" data-type="collectedletters">13a</span>
-<span id="let018:0.0.0.2.0.0.2" class="t-idno s-2-entita" data-el="idno" data-type="brieven1990">018</span>
+<span id="let018:0.0.0.2.0.0.0" class="t-idno s-2-entita" data-el="idno" data-behaviour="inline" data-behaviour-source="tei-all" data-type="jlb">018</span>
+<span id="let018:0.0.0.2.0.0.1" class="t-idno s-2-entita" data-el="idno" data-behaviour="inline" data-behaviour-source="tei-all" data-type="collectedletters">13a</span>
+<span id="let018:0.0.0.2.0.0.2" class="t-idno s-2-entita" data-el="idno" data-behaviour="inline" data-behaviour-source="tei-all" data-type="brieven1990">018</span>
                     </div>
                     <div id="let018:0.0.0.2.0.1" class="tei-foreign" data-name="vg:letHeading" data-ns="http://www.vangoghletters.org/ns/">
                         <span id="let018:0.0.0.2.0.1.0" class="t-author s-1-bibliografia" data-el="author">Vincent van Gogh</span>
@@ -413,98 +420,98 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
                         <span id="let018:0.0.0.2.0.1.3" class="tei-foreign" data-name="vg:dateLet" data-ns="http://www.vangoghletters.org/ns/">Monday, 9 February 1874</span>
                     </div>
                     <div id="let018:0.0.0.2.0.2" class="tei-foreign" data-name="vg:letContents" data-ns="http://www.vangoghletters.org/ns/">
-<p id="let018:0.0.0.2.0.2.0" class="t-p s-1-struttura" data-el="p">To Caroline van Stockum-Haanebeek. London, Monday, 9 February 1874.</p>
+<p id="let018:0.0.0.2.0.2.0" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">To Caroline van Stockum-Haanebeek. London, Monday, 9 February 1874.</p>
                     </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="sourceStatus" class="t-note s-1-note" data-el="note" data-type="sourceStatus">
-<p id="let018:0.0.0.2.0.3.0" class="t-p s-1-struttura" data-el="p">Original manuscript</p>
+<p id="let018:0.0.0.2.0.3.0" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">Original manuscript</p>
                     </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="location" class="t-note s-1-note" data-el="note" data-type="location">
-<p id="let018:0.0.0.2.0.4.0" class="t-p s-1-struttura" data-el="p">Amsterdam, Van Gogh Museum, inv. no. b34 V/1962</p>
+<p id="let018:0.0.0.2.0.4.0" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">Amsterdam, Van Gogh Museum, inv. no. b34 V/1962</p>
                     </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="date" class="t-note s-1-note" data-el="note" data-type="date">
-<p id="let018:0.0.0.2.0.5.0" class="t-p s-1-struttura" data-el="p">Letter headed: ‘Londen 9 Februarij 1874’.</p>
+<p id="let018:0.0.0.2.0.5.0" class="t-p s-1-struttura" data-el="p" data-behaviour="paragraph" data-behaviour-source="tei-all">Letter headed: ‘Londen 9 Februarij 1874’.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div><div id="let018:0.2" class="t-text s-7-struttura-documento" data-el="text">
         <div id="let018:0.2.0" class="t-body s-1-struttura" data-el="body">
-<div id="let018:0.2.0.0" class="t-div s-1-struttura" data-el="div" lang="nl" data-type="original">
+<section id="let018:0.2.0.0" class="t-div s-1-struttura" data-el="div" data-behaviour="section" data-behaviour-source="tei-all" lang="nl" data-type="original">
 <span id="pb-orig-1r-1" class="t-pb" role="separator" title="page break">[1]</span>
                 <span id="l-1" class="t-lb"><br/></span>
-<p id="let018:0.2.0.0.2" class="t-ab s-1-struttura" data-el="ab">Londen 9 Februarij 1874</p>
+<div id="let018:0.2.0.0.2" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Londen 9 Februarij 1874</div>
 <span id="let018:0.2.0.0.3" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
                 <span id="l-2" class="t-lb"><br/></span>
-<p id="let018:0.2.0.0.5" class="t-ab s-1-struttura" data-el="ab">Mijn beste Carolien,</p>
+<div id="let018:0.2.0.0.5" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Mijn beste Carolien,</div>
                 <span id="l-3" class="t-lb"><br/></span>
-<p id="let018:0.2.0.0.7" class="t-ab s-1-struttura" data-el="ab">’t Is mij behoefte je eens een <span id="l-4" class="t-lb"><br/></span>woordje te schrijven.─</p>
+<div id="let018:0.2.0.0.7" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">’t Is mij behoefte je eens een <span id="l-4" class="t-lb"><br/></span>woordje te schrijven.─</div>
                 <span id="l-5" class="t-lb"><br/></span>
-<p id="let018:0.2.0.0.9" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Wat zijn het goede dagen geweest <span id="l-6" class="t-lb"><br/></span>“wenn wir beisammen waren”;<span id="note-o-1" class="t-anchor s-1-milestone" data-el="anchor" data-n="1"></span> <span id="l-7" class="t-lb"><br/></span>weet het toch goed dat ik je <span id="l-8" class="t-lb"><br/></span>niet vergeet, maar het schrij<span id="let018:0.2.0.0.9.4" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
-                    <span id="l-9" class="t-lb"><br/></span>ven gaat mij zoo goed niet van <span id="l-10" class="t-lb"><br/></span>de hand als ik zou willen.─</p>
+<div id="let018:0.2.0.0.9" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">Wat zijn het goede dagen geweest <span id="l-6" class="t-lb"><br/></span>“wenn wir beisammen waren”;<span id="note-o-1" class="t-anchor s-1-milestone" data-el="anchor" data-n="1"></span> <span id="l-7" class="t-lb"><br/></span>weet het toch goed dat ik je <span id="l-8" class="t-lb"><br/></span>niet vergeet, maar het schrij<span id="let018:0.2.0.0.9.4" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
+                    <span id="l-9" class="t-lb"><br/></span>ven gaat mij zoo goed niet van <span id="l-10" class="t-lb"><br/></span>de hand als ik zou willen.─</div>
                 <span id="l-11" class="t-lb"><br/></span>
-<p id="let018:0.2.0.0.11" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Ik heb een rijk leven hier, <span id="l-12" class="t-lb"><br/></span>“niets hebbende &amp; toch alles be<span id="let018:0.2.0.0.11.1" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
+<div id="let018:0.2.0.0.11" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">Ik heb een rijk leven hier, <span id="l-12" class="t-lb"><br/></span>“niets hebbende &amp; toch alles be<span id="let018:0.2.0.0.11.1" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
                     <span id="l-13" class="t-lb"><br/></span>zittende”,<span id="note-o-2" class="t-anchor s-1-milestone" data-el="anchor" data-n="2"></span> ik begin soms te <span id="l-14" class="t-lb"><br/></span>gelooven dat ik er langza<span id="let018:0.2.0.0.11.5" class="t-c s-5-documentario" data-el="c" data-type="shy">-</span>
-                    <span id="l-15" class="t-lb"><br/></span>merhand toe begin te komen <span id="l-16" class="t-lb"><br/></span>een waar cosmopoliet te <span id="l-17" class="t-lb"><br/></span>worden, dat is geen Dutch man<span id="let018:0.2.0.0.11.9" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span> <span id="l-18" class="t-lb"><br/></span>English man of French man <span id="l-19" class="t-lb"><br/></span>maar eenvoudig een <span id="let018:0.2.0.0.11.12" class="t-hi s-1-inline" data-el="hi" data-rend="ital">man</span>
+                    <span id="l-15" class="t-lb"><br/></span>merhand toe begin te komen <span id="l-16" class="t-lb"><br/></span>een waar cosmopoliet te <span id="l-17" class="t-lb"><br/></span>worden, dat is geen Dutch man<span id="let018:0.2.0.0.11.9" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span> <span id="l-18" class="t-lb"><br/></span>English man of French man <span id="l-19" class="t-lb"><br/></span>maar eenvoudig een <span id="let018:0.2.0.0.11.12" class="t-hi s-1-inline" data-el="hi" data-behaviour="inline" data-behaviour-source="tei-all" data-rend="ital">man</span>
                     <span id="let018:0.2.0.0.11.13" class="t-c s-5-documentario" data-el="c" data-type="kp">_</span> 
 <span id="pb-orig-1v-2" class="t-pb" role="separator" title="page break">[2]</span>
                     <span id="l-20" class="t-lb"><br/></span>En tot vaderland de wereld<span id="let018:0.2.0.0.11.16" class="t-c s-5-documentario" data-el="c" data-type="kk">/</span> <span id="l-21" class="t-lb"><br/></span>dat is ’t kleine plekje op de wereld <span id="l-22" class="t-lb"><br/></span>waar we neergezet worden.─ <span id="l-23" class="t-lb"><br/></span>Maar toch zijn we er nog niet, <span id="l-24" class="t-lb"><br/></span>maar ik jaag er naar of ik <span id="l-25" class="t-lb"><br/></span>’t ook grijpen mocht.─<span id="note-o-3" class="t-anchor s-1-milestone" data-el="anchor" data-n="3"></span>
-                </p>
+                </div>
                 <span id="l-26" class="t-lb"><br/></span>
-<p id="let018:0.2.0.0.13" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">En tot ideaal dat wat Mauve <span id="l-27" class="t-lb"><br/></span>noemt “dat is het”.─</p>
+<div id="let018:0.2.0.0.13" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">En tot ideaal dat wat Mauve <span id="l-27" class="t-lb"><br/></span>noemt “dat is het”.─</div>
                 <span id="l-28" class="t-lb"><br/></span>
-<p id="let018:0.2.0.0.15" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Old girl à Dieu<span id="let018:0.2.0.0.15.0" class="t-c s-5-documentario" data-el="c" data-type="kp">_</span>
-                </p>
+<div id="let018:0.2.0.0.15" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">Old girl à Dieu<span id="let018:0.2.0.0.15.0" class="t-c s-5-documentario" data-el="c" data-type="kp">_</span>
+                </div>
 <span id="let018:0.2.0.0.16" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
                 <span id="l-29" class="t-lb"><br/></span>
-<p id="let018:0.2.0.0.18" class="t-ab s-1-struttura" data-el="ab">Yours truly</p>
+<div id="let018:0.2.0.0.18" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Yours truly</div>
                 <span id="l-30" class="t-lb"><br/></span>
-<p id="let018:0.2.0.0.20" class="t-ab s-1-struttura" data-el="ab">Vincent</p>
+<div id="let018:0.2.0.0.20" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Vincent</div>
 <span id="let018:0.2.0.0.21" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
                 <span id="l-31" class="t-lb"><br/></span>
-<p id="let018:0.2.0.0.23" class="t-ab s-1-struttura" data-el="ab">Een handdruk voor jou &amp; Willem,<span id="note-o-4" class="t-anchor s-1-milestone" data-el="anchor" data-n="4"></span> <span id="l-32" class="t-lb"><br/></span>als van ouds, dat je vingers er <span id="l-33" class="t-lb"><br/></span>zeer van doen.</p>
+<div id="let018:0.2.0.0.23" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Een handdruk voor jou &amp; Willem,<span id="note-o-4" class="t-anchor s-1-milestone" data-el="anchor" data-n="4"></span> <span id="l-32" class="t-lb"><br/></span>als van ouds, dat je vingers er <span id="l-33" class="t-lb"><br/></span>zeer van doen.</div>
 <span id="let018:0.2.0.0.24" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
-            </div>
-<div id="let018:0.2.0.1" class="t-div s-1-struttura" data-el="div" data-type="translation">
+            </section>
+<section id="let018:0.2.0.1" class="t-div s-1-struttura" data-el="div" data-behaviour="section" data-behaviour-source="tei-all" data-type="translation">
 <span id="pb-trans-1r-1" class="t-pb" role="separator" title="page break">[1]</span>
-<p id="let018:0.2.0.1.1" class="t-ab s-1-struttura" data-el="ab">London, 9 February 1874</p>
+<div id="let018:0.2.0.1.1" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">London, 9 February 1874</div>
 <span id="let018:0.2.0.1.2" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
-<p id="let018:0.2.0.1.3" class="t-ab s-1-struttura" data-el="ab">My dear <span id="let018:0.2.0.1.3.0" class="t-rs s-2-entita" title="type: pers · key: 761" data-el="rs" data-key="761" data-type="pers">Caroline</span>,</p>
-  <p id="let018:0.2.0.1.4" class="t-ab s-1-struttura" data-el="ab">I feel the need to write a few words to you.</p>
-<p id="let018:0.2.0.1.5" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">What happy days those were ‘when we were together’.<span id="note-t-1" class="t-anchor s-1-milestone" data-el="anchor" data-n="1"></span> You must know that I haven’t forgotten you, but writing doesn’t come to me as easily as I’d like.</p>
-<p id="let018:0.2.0.1.6" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">I have a rich life here, ‘having nothing, yet possessing all things’.<span id="note-t-2" class="t-anchor s-1-milestone" data-el="anchor" data-n="2"></span> Sometimes I start to believe that I’m gradually beginning to turn into a true cosmopolitan, meaning not a Dutchman, Englishman or Frenchman, but simply a <span id="let018:0.2.0.1.6.1" class="t-hi s-1-inline" data-el="hi" data-rend="ital">man</span>. 
+<div id="let018:0.2.0.1.3" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">My dear <span id="let018:0.2.0.1.3.0" class="t-rs s-2-entita" title="type: pers · key: 761" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="761" data-type="pers">Caroline</span>,</div>
+  <div id="let018:0.2.0.1.4" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">I feel the need to write a few words to you.</div>
+<div id="let018:0.2.0.1.5" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">What happy days those were ‘when we were together’.<span id="note-t-1" class="t-anchor s-1-milestone" data-el="anchor" data-n="1"></span> You must know that I haven’t forgotten you, but writing doesn’t come to me as easily as I’d like.</div>
+<div id="let018:0.2.0.1.6" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">I have a rich life here, ‘having nothing, yet possessing all things’.<span id="note-t-2" class="t-anchor s-1-milestone" data-el="anchor" data-n="2"></span> Sometimes I start to believe that I’m gradually beginning to turn into a true cosmopolitan, meaning not a Dutchman, Englishman or Frenchman, but simply a <span id="let018:0.2.0.1.6.1" class="t-hi s-1-inline" data-el="hi" data-behaviour="inline" data-behaviour-source="tei-all" data-rend="ital">man</span>. 
 <span id="pb-trans-1v-2" class="t-pb" role="separator" title="page break">[2]</span> With the world as my mother country, meaning that tiny spot in the world where we’re set down. But we aren’t there yet, but I follow after, if that I may apprehend.<span id="note-t-3" class="t-anchor s-1-milestone" data-el="anchor" data-n="3"></span>
-                </p>
-<p id="let018:0.2.0.1.7" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">And as our ideal that which <span id="let018:0.2.0.1.7.0" class="t-rs s-2-entita" title="type: pers · key: 323" data-el="rs" data-key="323" data-type="pers">Mauve</span> calls ‘that’s it’.</p>
-<p id="let018:0.2.0.1.8" class="t-ab s-1-struttura" data-el="ab" data-rend="indent">Old girl, adieu.</p>
+                </div>
+<div id="let018:0.2.0.1.7" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">And as our ideal that which <span id="let018:0.2.0.1.7.0" class="t-rs s-2-entita" title="type: pers · key: 323" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="323" data-type="pers">Mauve</span> calls ‘that’s it’.</div>
+<div id="let018:0.2.0.1.8" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all" data-rend="indent">Old girl, adieu.</div>
 <span id="let018:0.2.0.1.9" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
-<p id="let018:0.2.0.1.10" class="t-ab s-1-struttura" data-el="ab">Yours truly,</p>
-<p id="let018:0.2.0.1.11" class="t-ab s-1-struttura" data-el="ab">Vincent</p>
+<div id="let018:0.2.0.1.10" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Yours truly,</div>
+<div id="let018:0.2.0.1.11" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Vincent</div>
 <span id="let018:0.2.0.1.12" class="tei-foreign" data-name="vg:whiteline" data-ns="http://www.vangoghletters.org/ns/"></span>
-<p id="let018:0.2.0.1.13" class="t-ab s-1-struttura" data-el="ab">A handshake for you and <span id="let018:0.2.0.1.13.0" class="t-rs s-2-entita" title="type: pers · key: 760" data-el="rs" data-key="760" data-type="pers">Willem</span>,<span id="note-t-4" class="t-anchor s-1-milestone" data-el="anchor" data-n="4"></span> like old times, so that it hurts your fingers.</p>
-            </div>
-<div id="let018:0.2.0.2" class="t-div s-1-struttura" data-el="div" data-type="notes">
+<div id="let018:0.2.0.1.13" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">A handshake for you and <span id="let018:0.2.0.1.13.0" class="t-rs s-2-entita" title="type: pers · key: 760" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="760" data-type="pers">Willem</span>,<span id="note-t-4" class="t-anchor s-1-milestone" data-el="anchor" data-n="4"></span> like old times, so that it hurts your fingers.</div>
+            </section>
+<section id="let018:0.2.0.2" class="t-div s-1-struttura" data-el="div" data-behaviour="section" data-behaviour-source="tei-all" data-type="notes">
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-1" class="t-note s-1-note" data-el="note" data-n="1" data-target="#note-t-1">
-<p id="let018:0.2.0.2.0.0" class="t-ab s-1-struttura" data-el="ab">Borrowed, consciously or otherwise, from ‘<span id="let018:0.2.0.2.0.0.0" class="t-rs s-2-entita" title="type: lit · key: 15" data-el="rs" data-key="15" data-type="lit">Der Spinnerin Nachtlied</span>’ (The spinner’s lullaby) by <span id="let018:0.2.0.2.0.0.1" class="t-rs s-2-entita" title="type: pers · key: 31" data-el="rs" data-key="31" data-type="pers">Clemens Brentano</span>, which contains the line ‘Da wir zusammen waren’ (For we were together), as well as the variations ‘Als wir zusammen waren’ (When we were together) and ‘Wie wir zusammen waren’ (How we were together). See Clemens Brentano, <span id="let018:0.2.0.2.0.0.2" class="t-hi s-1-inline" data-el="hi" data-rend="ital">Werke</span>. Ed. Wolfgang Frühwald <span id="let018:0.2.0.2.0.0.3" class="t-hi s-1-inline" data-el="hi" data-rend="ital">et al.</span> 2nd ed. Munich 1978, vol. 1, pp. 131 (quotation), 1058-1059. The poem, first published in 1818, was included in all kinds of collections and anthologies and even set to music.</p>
+<div id="let018:0.2.0.2.0.0" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">Borrowed, consciously or otherwise, from ‘<span id="let018:0.2.0.2.0.0.0" class="t-rs s-2-entita" title="type: lit · key: 15" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="15" data-type="lit">Der Spinnerin Nachtlied</span>’ (The spinner’s lullaby) by <span id="let018:0.2.0.2.0.0.1" class="t-rs s-2-entita" title="type: pers · key: 31" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="31" data-type="pers">Clemens Brentano</span>, which contains the line ‘Da wir zusammen waren’ (For we were together), as well as the variations ‘Als wir zusammen waren’ (When we were together) and ‘Wie wir zusammen waren’ (How we were together). See Clemens Brentano, <span id="let018:0.2.0.2.0.0.2" class="t-hi s-1-inline" data-el="hi" data-behaviour="inline" data-behaviour-source="tei-all" data-rend="ital">Werke</span>. Ed. Wolfgang Frühwald <span id="let018:0.2.0.2.0.0.3" class="t-hi s-1-inline" data-el="hi" data-behaviour="inline" data-behaviour-source="tei-all" data-rend="ital">et al.</span> 2nd ed. Munich 1978, vol. 1, pp. 131 (quotation), 1058-1059. The poem, first published in 1818, was included in all kinds of collections and anthologies and even set to music.</div>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-2" class="t-note s-1-note" data-el="note" data-n="2" data-target="#note-t-2">
-<p id="let018:0.2.0.2.1.0" class="t-ab s-1-struttura" data-el="ab">
-  <span id="let018:0.2.0.2.1.0.0" class="tei-foreign" data-name="bibleref" data-ns="http://www.vangoghletters.org/ns/" data-atts="xmlns=http://www.vangoghletters.org/ns/ book=2 Cor chap=6 v=10">2 Cor. 6:10</span>.</p>
+<div id="let018:0.2.0.2.1.0" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">
+  <span id="let018:0.2.0.2.1.0.0" class="tei-foreign" data-name="bibleref" data-ns="http://www.vangoghletters.org/ns/" data-atts="xmlns=http://www.vangoghletters.org/ns/ book=2 Cor chap=6 v=10">2 Cor. 6:10</span>.</div>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-3" class="t-note s-1-note" data-el="note" data-n="3" data-target="#note-t-3">
-<p id="let018:0.2.0.2.2.0" class="t-ab s-1-struttura" data-el="ab">
-  <span id="let018:0.2.0.2.2.0.0" class="tei-foreign" data-name="bibleref" data-ns="http://www.vangoghletters.org/ns/" data-atts="xmlns=http://www.vangoghletters.org/ns/ book=Phil chap=3 v=12">Phil. 3:12</span>.</p>
+<div id="let018:0.2.0.2.2.0" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">
+  <span id="let018:0.2.0.2.2.0.0" class="tei-foreign" data-name="bibleref" data-ns="http://www.vangoghletters.org/ns/" data-atts="xmlns=http://www.vangoghletters.org/ns/ book=Phil chap=3 v=12">Phil. 3:12</span>.</div>
                 </div>
 <span class="t-note-mark" aria-hidden="true">°</span><div id="n-4" class="t-note s-1-note" data-el="note" data-n="4" data-target="#note-t-4">
-<p id="let018:0.2.0.2.3.0" class="t-ab s-1-struttura" data-el="ab">
-                        <span id="let018:0.2.0.2.3.0.0" class="t-rs s-2-entita" title="type: pers · key: 760" data-el="rs" data-key="760" data-type="pers">Willem van Stockum</span>, Caroline’s husband.</p>
+<div id="let018:0.2.0.2.3.0" class="t-ab s-1-struttura" data-el="ab" data-behaviour="block" data-behaviour-source="tei-all">
+                        <span id="let018:0.2.0.2.3.0.0" class="t-rs s-2-entita" title="type: pers · key: 760" data-el="rs" data-behaviour="inline" data-behaviour-source="tei-all" data-key="760" data-type="pers">Willem van Stockum</span>, Caroline’s husband.</div>
                 </div>
-            </div>
+            </section>
         </div>
     </div><nav class="prevnext" aria-label="Register"><a href="doc-let017.html">‹ previous</a><a href="text.html">Register</a><a href="doc-let019.html">next ›</a></nav></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.2 · 370db8e · 2026-08-01</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.2 · 2026-08-02</footer>
 <script>
 (function(){
-  var T={"edition":"Edition","text":"Text","indices":"Indices","data":"Data","archive":"Archive","dsa":"digital archive","texts":"Texts","reading":"Reading","diplomatic":"Diplomatic","apparatus":"Apparatus","aboutFile":"About this file","notes":"Notes","dse":"digital scholarly edition","responsibility":"Responsibility","licence":"Licence","witnesses":"Witnesses","apparatusRegisters":"Apparatus","revisions":"Revision history","generator":"Generator","people":"People","places":"Places","orgs":"Organisations","occurrenceOne":"occurrence","occurrenceMany":"occurrences","entries":"entries","skip":"Skip to content","publishedWith":"Published with","map":"Map","lab":"Lab","labAnalyses":"Analyses","labIntro":"The analytical layer, kept apart from the edition: the indices, the quantitative analysis, the lemmas, the map — derived from the text, not attested by it. Choose one above.","labLexDesc":"Frequencies, concordance (KWIC) and the token / type / TTR count.","labMapDesc":"The places that carry coordinates.","mapAria":"Map of the places of the edition","mapNote":"Positional sketch. Filled dots: coordinates declared in the TEI or confirmed by the editor. Hollow dots: gazetteer suggestions awaiting review. Each place links to OpenStreetMap. Coastlines: Natural Earth (public domain).","front":"Front matter","back":"Back matter","lacking":"lacking in","editedText":"edited text","genesis":"Genesis","hand":"hand","version":"version","legend":"Legend","legWord":"word","legDel":"deleted by the writing hand","legAdd":"added above the line","legUnclear":"uncertain reading","legSupplied":"supplied by the editor","legGap":"lost or illegible","legPb":"page break of the source","legMetamark":"a mark of the hand about the text (^ = insert here; hover each mark to read what it does)","legApp":"variant readings: click for the apparatus","legNote":"note mark","legHands":"Hands","legAllHands":"all","legHand":"the hand of","idxSearch":"search a name…","backToTop":"back to top","apparatusCritical":"critical: variants between witnesses","apparatusGenetic":"genetic: the strata of one manuscript in time","apparatusBoth":"critical and genetic: witnesses to collate, strata within them","legMajor":"main hand","lexicon":"Lexicon","lexTokens":"running words","lexForms":"distinct forms","lexTTR":"type-token ratio","lexSearch":"search a word…","lexFrequencies":"Frequencies","lexConcordance":"Concordance","lexPick":"Pick a word to see it in context.","lexLanguage":"Language","lexAllLangs":"all","lexStoplist":"Stopwords","lexDocument":"Document","lexWholeEdition":"all documents","lexStopNone":"none","lexHideStop":"hide stopwords","lexWord":"word","lexLang":"lang","descrFrequencies":"Every attested form with its count, its share per thousand and whether the stopword list you chose covers it.","descrConcordance":"Every occurrence of every form, with the words around it and the anchor back into the text.","descrLemmaConcordance":"The same evidence grouped under the dictionary form, where the edition has lemmas.","lexAbs":"count","lexRel":"per 1000","lexStats":"Lexical statistics","lexStopCol":"stop","lexStopNote":"Frequencies drop the stopwords you choose; the concordance keeps every word.","genesisNote":"The campaigns of correction the edition declares, in its own order, with the writing operations attributed to each. Every operation links to the place where it happened.","agreement":"Agreement between witnesses","agreementNote":"How often two witnesses carry the same reading. Evidence for a stemma, which remains the editor’s argument.","openPage":"open the page","sectionsN":"sections","sectionOne":"Section","contents":"Contents","bookLabel":"Book","register":"Register","documentsN":"documents","dateCol":"Date","fromCol":"From","toCol":"To","authorCol":"Author","placeCol":"Place","titleCol":"Title","idnoCol":"Ref.","filter":"Filter…","prev":"‹ previous","next":"next ›","fullHeader":"The full header (teiHeader)","fullHeaderNote":"Everything the file declares, rendered as it is.","reuse":"Reuse under the edition licence (see the Edition page).","appEntry":"apparatus entry","descrModel":"the edition model: documents, registries, apparatus (JSON)","descrEntities":"people, places and organisations with occurrence counts and coordinates","descrApparatus":"every apparatus reading with its witnesses, one row per reading","descrSource":"the unmodified TEI source file","lemmas":"Lemmas","lemmaCoverage":"Coverage","tokensWord":"tokens","languagesLabel":"Languages","yearsLabel":"Years","contributorsLabel":"Contributors","interventionsWord":"interventions","licenceVariesNote":"each document declares its own licence, shown on its page","lemmaFromMarkup":"from the markup (w/@lemma)","lemmaFromFile":"from lemmas.json","lemmaPending":"types awaiting the editor’s review","formsLabel":"forms","moreOccurrences":"more occurrences not shown here","descrLemmas":"every lemma with its forms and counts, one row per form","descrTokens":"the token stream of the reading text: position, language, form, lemma, anchor"};
+  var T={"edition":"Edition","text":"Text","indices":"Indices","data":"Data","archive":"Archive","dsa":"digital archive","texts":"Texts","reading":"Reading","diplomatic":"Diplomatic","apparatus":"Apparatus","aboutFile":"About this file","notes":"Notes","dse":"digital scholarly edition","responsibility":"Responsibility","licence":"Licence","witnesses":"Witnesses","apparatusRegisters":"Apparatus","revisions":"Revision history","generator":"Generator","people":"People","places":"Places","orgs":"Organisations","occurrenceOne":"occurrence","occurrenceMany":"occurrences","entries":"entries","skip":"Skip to content","publishedWith":"Published with","map":"Map","lab":"Lab","labAnalyses":"Analyses","labIntro":"The analytical layer, kept apart from the edition: the indices, the quantitative analysis, the lemmas, the map — derived from the text, not attested by it. Choose one above.","labLexDesc":"Frequencies, concordance (KWIC) and the token / type / TTR count.","labMapDesc":"The places that carry coordinates.","mapAria":"Map of the places of the edition","mapNote":"Positional sketch. Filled dots: coordinates declared in the TEI or confirmed by the editor. Hollow dots: gazetteer suggestions awaiting review. Each place links to OpenStreetMap. Coastlines: Natural Earth (public domain).","front":"Front matter","back":"Back matter","lacking":"lacking in","editedText":"edited text","genesis":"Genesis","hand":"hand","operations":"operations","version":"version","legend":"Legend","legWord":"word","legDel":"deleted by the writing hand","legAdd":"added above the line","legUnclear":"uncertain reading","legSupplied":"supplied by the editor","legGap":"lost or illegible","legPb":"page break of the source","legMetamark":"a mark of the hand about the text (^ = insert here; hover each mark to read what it does)","legApp":"variant readings: click for the apparatus","legNote":"note mark","legHands":"Hands","legAllHands":"all","legHand":"the hand of","idxSearch":"search a name…","backToTop":"back to top","apparatusCritical":"critical: variants between witnesses","apparatusGenetic":"genetic: the strata of one manuscript in time","apparatusBoth":"critical and genetic: witnesses to collate, strata within them","legMajor":"main hand","lexicon":"Lexicon","lexTokens":"running words","lexForms":"distinct forms","lexTTR":"type-token ratio","lexSearch":"search a word…","lexFrequencies":"Frequencies","lexConcordance":"Concordance","lexPick":"Pick a word to see it in context.","lexLanguage":"Language","lexAllLangs":"all","lexStoplist":"Stopwords","lexDocument":"Document","lexWholeEdition":"all documents","lexStopNone":"none","lexHideStop":"hide stopwords","lexWord":"word","lexLang":"lang","descrFrequencies":"Every attested form with its count, its share per thousand and whether the stopword list you chose covers it.","descrConcordance":"Every occurrence of every form, with the words around it and the anchor back into the text.","descrLemmaConcordance":"The same evidence grouped under the dictionary form, where the edition has lemmas.","lexAbs":"count","lexRel":"per 1000","lexStats":"Lexical statistics","lexStopCol":"stop","lexStopNote":"Frequencies drop the stopwords you choose; the concordance keeps every word.","genesisNote":"The campaigns of correction the edition declares, in its own order, with the writing operations attributed to each. Every operation links to the place where it happened.","genesisHandsNote":"Writing operations grouped by the hands the edition declares or identifies. A hand is not presented as a chronological layer unless the source declares that relation. Every operation links to its place in the text.","genesisMixedNote":"Declared correction campaigns and hands to which writing operations are attributed. Hands and chronological layers remain distinct. Every operation links to its place in the text.","genesisUnassignedNote":"Writing operations for which the edition declares neither a correction campaign nor a hand. Every operation links to its place in the text.","agreement":"Agreement between witnesses","agreementNote":"How often two witnesses carry the same reading. Evidence for a stemma, which remains the editor’s argument.","openPage":"open the page","sectionsN":"sections","sectionOne":"Section","contents":"Contents","bookLabel":"Book","register":"Register","documentsN":"documents","dateCol":"Date","fromCol":"From","toCol":"To","authorCol":"Author","placeCol":"Place","titleCol":"Title","idnoCol":"Ref.","filter":"Filter…","prev":"‹ previous","next":"next ›","fullHeader":"The full header (teiHeader)","fullHeaderNote":"Everything the file declares, rendered as it is.","reuse":"Reuse under the edition licence (see the Edition page).","appEntry":"apparatus entry","descrModel":"the edition model: documents, registries, apparatus (JSON)","descrEntities":"people, places and organisations with occurrence counts and coordinates","descrApparatus":"every apparatus reading with its witnesses, one row per reading","descrSource":"the unmodified TEI source file","lemmas":"Lemmas","lemmaCoverage":"Coverage","tokensWord":"tokens","languagesLabel":"Languages","yearsLabel":"Years","contributorsLabel":"Contributors","interventionsWord":"interventions","licenceVariesNote":"each document declares its own licence, shown on its page","lemmaFromMarkup":"from the markup (w/@lemma)","lemmaFromFile":"from lemmas.json","lemmaPending":"types awaiting the editor’s review","formsLabel":"forms","moreOccurrences":"more occurrences not shown here","descrLemmas":"every lemma with its forms and counts, one row per form","descrTokens":"the token stream of the reading text: position, language, form, lemma, anchor"};
   var body=document.body; body.classList.add('mode-read');
   if(document.querySelector('.app-band'))body.classList.add('has-band');
   if(window.TORCHIO_ALIGN)body.classList.add('has-align');
@@ -818,7 +825,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
       openPop('<span class="k">'+esc(op.dataset.el)+'</span>'
         +'<div class="notebody">'+esc(op.textContent.replace(/\s+/g,' ').trim().slice(0,140))+'</div>'
         +'<div class="meta">'+(lab?esc(lab):'')+(hd?' · '+esc(hd):'')
-        +' <a href="genesis.html">'+esc(T.genesis)+'</a></div>',op);
+        +(document.querySelector('a[href="genesis.html"]') ? ' <a href="genesis.html">'+esc(T.genesis)+'</a>' : '')+'</div>',op);
       ev.stopPropagation();return;
     }
     var anc=ev.target.closest&&ev.target.closest('[data-appref]');

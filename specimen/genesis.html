@@ -175,7 +175,7 @@ body.mode-read .t-lb::after{content:" "}
 body.mode-read .t-lb[data-break="no"]::after{content:none}
 body.mode-read .t-add{vertical-align:baseline;font-size:inherit}
 
-.torchio-nav{display:flex;gap:22px;margin-left:auto}
+.torchio-nav{display:flex;flex-wrap:wrap;gap:22px;margin-left:auto;min-width:0}
 .torchio-nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;
   color:var(--soft);text-transform:uppercase}
 .torchio-nav a.on{color:var(--accent)}
@@ -187,6 +187,13 @@ body.mode-read .t-add{vertical-align:baseline;font-size:inherit}
 .torchio-nav a:hover{color:var(--ink);text-decoration:none}
 header.torchio{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:baseline}
 header.torchio .tt{min-width:14rem}
+@media(max-width:540px){
+  header.torchio{align-items:flex-start}
+  header.torchio .tt{min-width:0;width:100%}
+  .torchio-nav{width:100%;margin-left:0;gap:8px 20px}
+  .torchio-subnav{gap:8px 18px}
+  ol.toc{columns:1}
+}
 .about dt{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.14em;
   text-transform:uppercase;color:var(--soft);margin-top:1.2em}
 .about dd{margin:0.3em 0 0}
@@ -369,15 +376,15 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 .kwic .ka{color:var(--soft);width:40%}
 </style>
 </head>
-<body>
+<body id="top">
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="torchio">
 <div class="tt"><h1>Specimen</h1><p class="sub">genesi</p></div>
-<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Edizione</a><a href="text.html">Testo</a><a href="genesis.html" class="on">Genesi</a><a href="indices.html">Lab</a><a href="data.html">Dati</a></nav>
+<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Edizione</a><a href="text.html">Testo</a><a href="apparatus.html">Apparato</a><a href="genesis.html" class="on">Genesi</a><a href="indices.html">Lab</a><a href="data.html">Dati</a></nav>
 </header>
 
-<main id="main" class="torchio"><p class="occ">Le campagne correttorie dichiarate dall’edizione, nel suo ordine, con le operazioni di scrittura attribuite a ciascuna. Ogni operazione rimanda al punto in cui è avvenuta.</p><section class="stratum"><h2 class="sec">prima stesura <span class="occ">1826</span></h2><table class="wit-table"><tr><td class="sigla">subst</td><td><a href="text.html#specimen:0.1.0.0.2.0">cadevascendeva</a></td></tr></table></section><section class="stratum"><h2 class="sec">campagna correttoria, prima della stampa <span class="occ">1828</span></h2><table class="wit-table"><tr><td class="sigla">add above</td><td><a href="text.html#specimen:0.1.0.0.2.1">lentamente</a></td></tr><tr><td class="sigla">del</td><td><a href="text.html#specimen:0.1.0.0.2.2">forte</a></td></tr></table></section><section class="stratum"><h2 class="sec">Mano principale, immaginaria. <span class="occ">mano</span></h2><table class="wit-table"><tr><td class="sigla">del</td><td><a href="text.html#specimen:0.1.0.0.1.6.0">salvar</a></td></tr></table></section><section class="stratum"><h2 class="sec">Mano di revisione, immaginaria. <span class="occ">mano</span></h2><table class="wit-table"><tr><td class="sigla">add above</td><td><a href="text.html#specimen:0.1.0.0.1.6.1">redimer</a></td></tr></table></section><section class="stratum"><h2 class="sec">la prima stesura, a penna <span class="occ">mano</span></h2><table class="wit-table"><tr><td class="sigla">subst</td><td><a href="text.html#specimen:0.1.0.0.2.0">cadevascendeva</a></td></tr></table></section><section class="stratum"><h2 class="sec">le correzioni, a matita <span class="occ">mano</span></h2><table class="wit-table"><tr><td class="sigla">add above</td><td><a href="text.html#specimen:0.1.0.0.2.1">lentamente</a></td></tr><tr><td class="sigla">del</td><td><a href="text.html#specimen:0.1.0.0.2.2">forte</a></td></tr></table></section></main>
-<footer class="torchio">Pubblicato con <span class="press">Torchio</span> v0.2.0-beta.2 · 370db8e · 2026-08-01</footer>
+<main id="main" class="torchio"><p class="occ">Le campagne correttorie dichiarate e le mani cui sono attribuite operazioni di scrittura. Mani e strati cronologici restano distinti. Ogni operazione rimanda al punto del testo.</p><section class="stratum"><h2 class="sec">prima stesura <span class="occ">1826</span></h2><table class="wit-table"><tr><td class="sigla">subst</td><td><a href="text.html#specimen:0.1.0.0.2.0">cadevascendeva</a></td></tr></table></section><section class="stratum"><h2 class="sec">campagna correttoria, prima della stampa <span class="occ">1828</span></h2><table class="wit-table"><tr><td class="sigla">add above</td><td><a href="text.html#specimen:0.1.0.0.2.1">lentamente</a></td></tr><tr><td class="sigla">del</td><td><a href="text.html#specimen:0.1.0.0.2.2">forte</a></td></tr></table></section><section class="stratum"><h2 class="sec">Mano principale, immaginaria. <span class="occ">mano</span></h2><table class="wit-table"><tr><td class="sigla">del</td><td><a href="text.html#specimen:0.1.0.0.1.6.0">salvar</a></td></tr></table></section><section class="stratum"><h2 class="sec">Mano di revisione, immaginaria. <span class="occ">mano</span></h2><table class="wit-table"><tr><td class="sigla">add above</td><td><a href="text.html#specimen:0.1.0.0.1.6.1">redimer</a></td></tr></table></section><section class="stratum"><h2 class="sec">la prima stesura, a penna <span class="occ">mano</span></h2><table class="wit-table"><tr><td class="sigla">subst</td><td><a href="text.html#specimen:0.1.0.0.2.0">cadevascendeva</a></td></tr></table></section><section class="stratum"><h2 class="sec">le correzioni, a matita <span class="occ">mano</span></h2><table class="wit-table"><tr><td class="sigla">add above</td><td><a href="text.html#specimen:0.1.0.0.2.1">lentamente</a></td></tr><tr><td class="sigla">del</td><td><a href="text.html#specimen:0.1.0.0.2.2">forte</a></td></tr></table></section></main>
+<footer class="torchio">Pubblicato con <span class="press">Torchio</span> v0.2.0-beta.2 · 2026-08-02</footer>
 
 </body>
 </html>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt><title>ODD contract demonstration</title></titleStmt>
+      <publicationStmt><p>CC0 demonstration schema.</p></publicationStmt>
+      <sourceDesc><p>Born digital.</p></sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <schemaSpec ident="torchio-odd-contract" start="TEI">
+        <moduleRef key="tei"/>
+        <moduleRef key="core"/>
+        <moduleRef key="textstructure"/>
+        <moduleRef key="header"/>
+        <moduleRef key="namesdates"/>
+        <moduleRef key="transcr"/>
+        <elementSpec ident="salvataggio" mode="add"
+                     ns="https://example.org/torchio/odd-contract">
+          <desc>A software save event in the genesis of a born-digital document.</desc>
+          <classes>
+            <memberOf key="model.pPart.transcriptional"/>
+            <memberOf key="att.global"/>
+            <memberOf key="att.datable.w3c"/>
+          </classes>
+          <content><macroRef key="macro.phraseSeq"/></content>
+          <model predicate="@when" behaviour="inline" cssClass="autosave-event">
+            <outputRendition>font-style: italic; font-weight: bold;</outputRendition>
+          </model>
+          <model behaviour="block" cssClass="autosave-undated"/>
+        </elementSpec>
+        <elementSpec ident="softwareName" mode="add"
+                     ns="https://example.org/torchio/odd-contract">
+          <desc>The name of software treated as an identifiable entity.</desc>
+          <classes>
+            <memberOf key="model.nameLike"/>
+            <memberOf key="att.global"/>
+            <memberOf key="att.canonical"/>
+          </classes>
+          <content><macroRef key="macro.phraseSeq"/></content>
+          <modelGrp output="web">
+            <model predicate="@ref" behaviour="link">
+              <param name="uri" value="@ref"/>
+              <param name="content" value="."/>
+            </model>
+            <model behaviour="inline"/>
+          </modelGrp>
+        </elementSpec>
+      </schemaSpec>
+    </body>
+  </text>
+</TEI>

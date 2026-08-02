@@ -1,4 +1,5 @@
 {
+ "note": "the files this impression was made from, and only those",
  "files": [
   "ox-frankenstein-volume_iii.xml",
   "ox-ms_abinger_c58/ox-ms_abinger_c58-0001.xml",
@@ -65,5 +66,6 @@
   "ox-ms_abinger_c58/ox-ms_abinger_c58-0062.xml",
   "torchio.json"
  ],
- "count": 64
+ "count": 64,
+ "readFromOutsideTheEdition": []
 }

@@ -1,0 +1,98 @@
+form,doc,before,keyword,after,anchor
+three,edition,,Three,decisions with their provenance This paragraph,edition:0.1.0.0
+decisions,edition,Three,decisions,with their provenance This paragraph is,edition:0.1.0.0
+with,edition,Three decisions,with,their provenance This paragraph is ordinary,edition:0.1.0.0
+their,edition,Three decisions with,their,provenance This paragraph is ordinary TEI,edition:0.1.0.0
+provenance,edition,Three decisions with their,provenance,This paragraph is ordinary TEI Its,edition:0.1.0.0
+this,edition,Three decisions with their provenance,This,paragraph is ordinary TEI Its paragraph,edition:0.1.0.1
+this,edition,contract not from a rule in,this,edition’s ODD At autosave the born,edition:0.1.0.1
+this,edition,writing environment recorded a save event,This,italic bold treatment is explicitly declared,edition:0.1.0.2
+paragraph,edition,Three decisions with their provenance This,paragraph,is ordinary TEI Its paragraph behaviour,edition:0.1.0.1
+paragraph,edition,This paragraph is ordinary TEI Its,paragraph,behaviour comes from the TEI All,edition:0.1.0.1
+is,edition,decisions with their provenance This paragraph,is,ordinary TEI Its paragraph behaviour comes,edition:0.1.0.1
+is,edition,save event This italic bold treatment,is,explicitly declared by the edition ODD,edition:0.1.0.2
+is,edition,a block No element name switch,is,involved,edition:0.1.0.4
+ordinary,edition,with their provenance This paragraph is,ordinary,TEI Its paragraph behaviour comes from,edition:0.1.0.1
+tei,edition,their provenance This paragraph is ordinary,TEI,Its paragraph behaviour comes from the,edition:0.1.0.1
+tei,edition,Its paragraph behaviour comes from the,TEI,All fallback contract not from a,edition:0.1.0.1
+its,edition,provenance This paragraph is ordinary TEI,Its,paragraph behaviour comes from the TEI,edition:0.1.0.1
+behaviour,edition,paragraph is ordinary TEI Its paragraph,behaviour,comes from the TEI All fallback,edition:0.1.0.1
+comes,edition,is ordinary TEI Its paragraph behaviour,comes,from the TEI All fallback contract,edition:0.1.0.1
+from,edition,ordinary TEI Its paragraph behaviour comes,from,the TEI All fallback contract not,edition:0.1.0.1
+from,edition,the TEI All fallback contract not,from,a rule in this edition’s ODD,edition:0.1.0.1
+the,edition,TEI Its paragraph behaviour comes from,the,TEI All fallback contract not from,edition:0.1.0.1
+the,edition,in this edition’s ODD At autosave,the,born digital writing environment recorded a,edition:0.1.0.2
+the,edition,bold treatment is explicitly declared by,the,edition ODD The event was produced,edition:0.1.0.2
+the,edition,explicitly declared by the edition ODD,The,event was produced by Torchio The,edition:0.1.0.3
+the,edition,The event was produced by Torchio,The,ODD’s web processing model turns the,edition:0.1.0.3
+the,edition,The ODD’s web processing model turns,the,declared reference into a link Undated,edition:0.1.0.3
+the,edition,Undated save event has no when,the,first ODD predicate does not match,edition:0.1.0.4
+the,edition,ODD predicate does not match so,the,second ODD model renders it as,edition:0.1.0.4
+all,edition,paragraph behaviour comes from the TEI,All,fallback contract not from a rule,edition:0.1.0.1
+fallback,edition,behaviour comes from the TEI All,fallback,contract not from a rule in,edition:0.1.0.1
+contract,edition,comes from the TEI All fallback,contract,not from a rule in this,edition:0.1.0.1
+not,edition,from the TEI All fallback contract,not,from a rule in this edition’s,edition:0.1.0.1
+not,edition,when the first ODD predicate does,not,match so the second ODD model,edition:0.1.0.4
+a,edition,TEI All fallback contract not from,a,rule in this edition’s ODD At,edition:0.1.0.1
+a,edition,the born digital writing environment recorded,a,save event This italic bold treatment,edition:0.1.0.2
+a,edition,model turns the declared reference into,a,link Undated save event has no,edition:0.1.0.3
+a,edition,second ODD model renders it as,a,block No element name switch is,edition:0.1.0.4
+rule,edition,All fallback contract not from a,rule,in this edition’s ODD At autosave,edition:0.1.0.1
+in,edition,fallback contract not from a rule,in,this edition’s ODD At autosave the,edition:0.1.0.1
+edition’s,edition,not from a rule in this,edition’s,ODD At autosave the born digital,edition:0.1.0.1
+odd,edition,from a rule in this edition’s,ODD,At autosave the born digital writing,edition:0.1.0.1
+odd,edition,is explicitly declared by the edition,ODD,The event was produced by Torchio,edition:0.1.0.2
+odd,edition,event has no when the first,ODD,predicate does not match so the,edition:0.1.0.4
+odd,edition,does not match so the second,ODD,model renders it as a block,edition:0.1.0.4
+at,edition,a rule in this edition’s ODD,At,autosave the born digital writing environment,edition:0.1.0.2
+autosave,edition,rule in this edition’s ODD At,autosave,the born digital writing environment recorded,edition:0.1.0.2.0
+born,edition,this edition’s ODD At autosave the,born,digital writing environment recorded a save,edition:0.1.0.2
+digital,edition,edition’s ODD At autosave the born,digital,writing environment recorded a save event,edition:0.1.0.2
+writing,edition,ODD At autosave the born digital,writing,environment recorded a save event This,edition:0.1.0.2
+environment,edition,At autosave the born digital writing,environment,recorded a save event This italic,edition:0.1.0.2
+recorded,edition,autosave the born digital writing environment,recorded,a save event This italic bold,edition:0.1.0.2
+save,edition,born digital writing environment recorded a,save,event This italic bold treatment is,edition:0.1.0.2
+save,edition,declared reference into a link Undated,save,event has no when the first,edition:0.1.0.4.0
+event,edition,digital writing environment recorded a save,event,This italic bold treatment is explicitly,edition:0.1.0.2
+event,edition,declared by the edition ODD The,event,was produced by Torchio The ODD’s,edition:0.1.0.3
+event,edition,reference into a link Undated save,event,has no when the first ODD,edition:0.1.0.4.0
+italic,edition,environment recorded a save event This,italic,bold treatment is explicitly declared by,edition:0.1.0.2
+bold,edition,recorded a save event This italic,bold,treatment is explicitly declared by the,edition:0.1.0.2
+treatment,edition,a save event This italic bold,treatment,is explicitly declared by the edition,edition:0.1.0.2
+explicitly,edition,event This italic bold treatment is,explicitly,declared by the edition ODD The,edition:0.1.0.2
+declared,edition,This italic bold treatment is explicitly,declared,by the edition ODD The event,edition:0.1.0.2
+declared,edition,ODD’s web processing model turns the,declared,reference into a link Undated save,edition:0.1.0.3
+by,edition,italic bold treatment is explicitly declared,by,the edition ODD The event was,edition:0.1.0.2
+by,edition,edition ODD The event was produced,by,Torchio The ODD’s web processing model,edition:0.1.0.3
+edition,edition,treatment is explicitly declared by the,edition,ODD The event was produced by,edition:0.1.0.2
+was,edition,by the edition ODD The event,was,produced by Torchio The ODD’s web,edition:0.1.0.3
+produced,edition,the edition ODD The event was,produced,by Torchio The ODD’s web processing,edition:0.1.0.3
+torchio,edition,ODD The event was produced by,Torchio,The ODD’s web processing model turns,edition:0.1.0.3.0
+odd’s,edition,event was produced by Torchio The,ODD’s,web processing model turns the declared,edition:0.1.0.3
+web,edition,was produced by Torchio The ODD’s,web,processing model turns the declared reference,edition:0.1.0.3
+processing,edition,produced by Torchio The ODD’s web,processing,model turns the declared reference into,edition:0.1.0.3
+model,edition,by Torchio The ODD’s web processing,model,turns the declared reference into a,edition:0.1.0.3
+model,edition,not match so the second ODD,model,renders it as a block No,edition:0.1.0.4
+turns,edition,Torchio The ODD’s web processing model,turns,the declared reference into a link,edition:0.1.0.3
+reference,edition,web processing model turns the declared,reference,into a link Undated save event,edition:0.1.0.3
+into,edition,processing model turns the declared reference,into,a link Undated save event has,edition:0.1.0.3
+link,edition,turns the declared reference into a,link,Undated save event has no when,edition:0.1.0.3
+undated,edition,the declared reference into a link,Undated,save event has no when the,edition:0.1.0.4.0
+has,edition,into a link Undated save event,has,no when the first ODD predicate,edition:0.1.0.4
+no,edition,a link Undated save event has,no,when the first ODD predicate does,edition:0.1.0.4
+no,edition,model renders it as a block,No,element name switch is involved,edition:0.1.0.4
+when,edition,link Undated save event has no,when,the first ODD predicate does not,edition:0.1.0.4
+first,edition,save event has no when the,first,ODD predicate does not match so,edition:0.1.0.4
+predicate,edition,has no when the first ODD,predicate,does not match so the second,edition:0.1.0.4
+does,edition,no when the first ODD predicate,does,not match so the second ODD,edition:0.1.0.4
+match,edition,the first ODD predicate does not,match,so the second ODD model renders,edition:0.1.0.4
+so,edition,first ODD predicate does not match,so,the second ODD model renders it,edition:0.1.0.4
+second,edition,predicate does not match so the,second,ODD model renders it as a,edition:0.1.0.4
+renders,edition,match so the second ODD model,renders,it as a block No element,edition:0.1.0.4
+it,edition,so the second ODD model renders,it,as a block No element name,edition:0.1.0.4
+as,edition,the second ODD model renders it,as,a block No element name switch,edition:0.1.0.4
+block,edition,ODD model renders it as a,block,No element name switch is involved,edition:0.1.0.4
+element,edition,renders it as a block No,element,name switch is involved,edition:0.1.0.4
+name,edition,it as a block No element,name,switch is involved,edition:0.1.0.4
+switch,edition,as a block No element name,switch,is involved,edition:0.1.0.4
+involved,edition,block No element name switch is,involved,,edition:0.1.0.4

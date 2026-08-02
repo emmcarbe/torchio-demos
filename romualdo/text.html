@@ -175,7 +175,7 @@ body.mode-read .t-lb::after{content:" "}
 body.mode-read .t-lb[data-break="no"]::after{content:none}
 body.mode-read .t-add{vertical-align:baseline;font-size:inherit}
 
-.torchio-nav{display:flex;gap:22px;margin-left:auto}
+.torchio-nav{display:flex;flex-wrap:wrap;gap:22px;margin-left:auto;min-width:0}
 .torchio-nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;
   color:var(--soft);text-transform:uppercase}
 .torchio-nav a.on{color:var(--accent)}
@@ -187,6 +187,13 @@ body.mode-read .t-add{vertical-align:baseline;font-size:inherit}
 .torchio-nav a:hover{color:var(--ink);text-decoration:none}
 header.torchio{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:baseline}
 header.torchio .tt{min-width:14rem}
+@media(max-width:540px){
+  header.torchio{align-items:flex-start}
+  header.torchio .tt{min-width:0;width:100%}
+  .torchio-nav{width:100%;margin-left:0;gap:8px 20px}
+  .torchio-subnav{gap:8px 18px}
+  ol.toc{columns:1}
+}
 .about dt{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.14em;
   text-transform:uppercase;color:var(--soft);margin-top:1.2em}
 .about dd{margin:0.3em 0 0}
@@ -369,15 +376,15 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 .kwic .ka{color:var(--soft);width:40%}
 </style>
 </head>
-<body>
+<body id="top">
 <a class="skip" href="#main">Skip to content</a>
 <header class="torchio">
 <div class="tt"><h1>Romualdus Salernitanus, Chronicon</h1><p class="sub">11 sections</p></div>
-<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Edition</a><a href="front.html">Introduction</a><a href="text.html" class="on">Text</a><a href="lemmas.html">Lab</a><a href="data.html">Data</a></nav>
+<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Edition</a><a href="front.html">Introduction</a><a href="text.html" class="on">Text</a><a href="apparatus.html">Apparatus</a><a href="lemmas.html">Lab</a><a href="data.html">Data</a></nav>
 </header>
 
 <main id="main" class="torchio"><ol class="toc"><li><a href="text-0.html">Historia universalis, divisio etatum</a></li><li><a href="text-1.html">Historia universalis, prima etas</a></li><li><a href="text-2.html">Historia universalis, secunda etas</a></li><li><a href="text-3.html">Historia universalis, tertia etas</a></li><li><a href="text-4.html">Historia universalis, quarta etas</a></li><li><a href="text-5.html">Historia universalis, quinta etas</a></li><li><a href="text-6.html">Historia universalis, sexta etas</a></li><li><a href="text-7.html">Historia Langobardorum et Francorum</a></li><li><a href="text-8.html">Historia Normannorum, pars Italica</a></li><li><a href="text-9.html">Historia Normannorum, pars Sicula</a></li><li><a href="text-10.html">Pax Uenecie</a></li></ol></main>
-<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.2 · 370db8e · 2026-08-01</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.2 · 2026-08-02</footer>
 
 </body>
 </html>
