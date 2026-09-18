@@ -58,6 +58,24 @@ body.show-header .t-teiHeader{display:block;border:1px solid var(--hair);
 .t-pb{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.08em;
   color:var(--accent);vertical-align:super;margin:0 .18em;user-select:none}
 
+/* transcriptions of speech (TEI ch. 8): the spoken layer, distinct and never
+   merged into prose. An utterance is a block opened by its speaker; the
+   paralinguistic marks stand out from the words */
+.t-u{display:block;margin:.55em 0}
+.t-u .t-speaker{font-family:var(--mono);font-size:.7em;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--accent);user-select:none}
+.t-pause,.t-vocal,.t-incident,.t-kinesic{color:var(--soft)}
+.t-pause{font-family:var(--mono);font-size:.9em;margin:0 .1em}
+.t-vocal,.t-incident,.t-kinesic{font-style:italic;font-size:.85em;margin:0 .12em}
+.t-shift{display:inline-block;width:0;border-left:2px solid var(--accent-soft);
+  height:.72em;margin:0 .2em;vertical-align:-.04em}
+/* two reading notations, the reader chooses (toolbar): sober editorial signs
+   are the default; Jefferson conversation-analysis marks on demand. Both are
+   real text in the page; a body class shows one at a time */
+.spk-jeff{display:none}
+body.spk-jefferson .spk-sober{display:none}
+body.spk-jefferson .spk-jeff{display:inline}
+
 .t-note{font-size:.85em;color:var(--soft);border-left:2px solid var(--hair);
   padding-left:.7em;margin:.5em 0}
 .t-note-mark{color:var(--faint);font-size:.55em;vertical-align:super;user-select:none}
@@ -106,6 +124,30 @@ footer.torchio .press{color:var(--accent)}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
 
+/* Andamento — the derived tempo reading. Words fade in as they are "spoken";
+   a floating control bar plays, restarts or reveals all at once; the clock is
+   marked estimated (an approximate reconstruction, not the recording's time).
+   A word outside Andamento carries no styling: .beat only bites under the mode */
+body.spk-andamento .beat{opacity:.22;transition:opacity .22s ease}
+body.spk-andamento .beat.on{opacity:1}
+body.spk-andamento .beat.now{background:color-mix(in srgb,var(--accent) 22%,transparent);border-radius:3px}
+@media(prefers-reduced-motion:reduce){body.spk-andamento .beat{transition:none}}
+.andamento-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;z-index:60;
+  display:none;gap:6px;align-items:center;flex-wrap:wrap;justify-content:center;max-width:92vw;
+  background:var(--ink);color:var(--ground);
+  padding:7px 12px;border-radius:22px;font-family:var(--mono);font-size:12px;
+  box-shadow:0 6px 22px rgba(0,0,0,.28)}
+.andamento-bar button{background:none;border:0;color:var(--ground);font-size:13px;
+  cursor:pointer;padding:3px 8px;letter-spacing:.06em;text-transform:none}
+.andamento-bar button:hover{opacity:.75}
+.andamento-clock{margin:0 4px;opacity:.85;letter-spacing:.08em;font-variant-numeric:tabular-nums}
+.andamento-seek{-webkit-appearance:none;appearance:none;height:4px;width:min(42vw,240px);
+  background:rgba(255,255,255,.28);border-radius:3px;cursor:pointer;margin:0 6px}
+.andamento-seek::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:13px;height:13px;
+  border-radius:50%;background:var(--ground);border:2px solid var(--accent);cursor:pointer}
+.andamento-seek::-moz-range-thumb{width:13px;height:13px;border-radius:50%;background:var(--ground);
+  border:2px solid var(--accent);cursor:pointer}
+@media(prefers-reduced-motion:reduce){.andamento-bar{transition:none}}
 .torchio-bar{position:sticky;top:0;z-index:40;background:var(--ground);
   border-bottom:1px solid var(--hair);font-family:var(--mono)}
 .torchio-bar .inner{max-width:var(--measure);margin:0 auto;padding:8px 20px;
@@ -192,7 +234,7 @@ header.torchio .tt{min-width:14rem}
   header.torchio .tt{min-width:0;width:100%}
   .torchio-nav{width:100%;margin-left:0;gap:8px 20px}
   .torchio-subnav{gap:8px 18px}
-  ol.toc{columns:1}
+  ol.toc.toc-cols{columns:1}
 }
 .about dt{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.14em;
   text-transform:uppercase;color:var(--soft);margin-top:1.2em}
@@ -311,7 +353,8 @@ main hr{border:0;border-top:1px solid var(--hair);margin:1.8em 0}
 :target{background:rgba(176,30,40,.10);border-radius:2px}
 .prevnext{display:flex;justify-content:space-between;gap:1em;margin:1.2em 0;
   font-family:var(--mono);font-size:11px}
-ol.toc{columns:2;column-gap:2.5em;padding-left:1.4em;margin:1em 0}
+ol.toc{column-gap:2.5em;padding-left:1.4em;margin:1em 0}
+ol.toc.toc-cols{columns:2}
 .idx-search{font-family:var(--mono);font-size:13px;padding:7px 11px;border:1px solid var(--hair);
   border-radius:2px;background:var(--paper);color:var(--ink);min-width:16rem;margin:.6em 0 .2em}
 .alpha{font-family:var(--mono);font-size:11px;letter-spacing:.12em;margin:.3em 0 .6em}
@@ -377,13 +420,13 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 </style>
 </head>
 <body id="top">
-<a class="skip" href="#main">Vai al contenuto</a>
+<a class="skip" href="#main">Skip to content</a>
 <header class="torchio">
 <div class="tt"><h1>Specimen</h1><p class="sub">esempio costruito: testimoni immaginari, varianti didattiche</p></div>
-<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html" class="on">Edizione</a><a href="text.html">Testo</a><a href="apparatus.html">Apparato</a><a href="genesis.html">Genesi</a><a href="indices.html">Lab</a><a href="data.html">Dati</a></nav>
+<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html" class="on">Edition</a><a href="text.html">Text</a><a href="apparatus.html">Apparatus</a><a href="genesis.html">Genesis</a><a href="indices.html">Lab</a><a href="data.html">Data</a></nav>
 </header>
 
-<main id="main" class="torchio about"><dl><dt>Responsabilità</dt><dd>Omero, nella traduzione di Ippolito Pindemonte (1822)</dd><dt>Licenza</dt><dd><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0: nessun diritto riservato su questa codifica dimostrativa.</a></dd><dt>Testimoni</dt><dd><table class="wit-table"><tr><td class="sigla">A</td><td>Testimone A, immaginario: la stampa di riferimento.</td></tr><tr><td class="sigla">B</td><td>Testimone B, immaginario: una copia con lezioni proprie.</td></tr><tr><td class="sigla">C</td><td>Testimone C, immaginario: un apografo tardo.</td></tr></table></dd><dt>Accordi fra testimoni</dt><dd><table class="wit-table"><tr><td class="sigla">A · C</td><td><span class="agree-bar" style="width:100%"></span></td><td class="occ">1</td></tr><tr><td class="sigla">B · C</td><td><span class="agree-bar" style="width:100%"></span></td><td class="occ">1</td></tr></table><p class="occ">Quante volte due testimoni portano la stessa lezione. Materiale per lo stemma, che resta argomento dell’editore.</p></dd><dt>Apparati</dt><dd>critical (2 voci)</dd><dt>Storia delle revisioni</dt><dd><table class="wit-table"><tr><td class="sigla">2026-07-30</td><td>Specimen creato per la pubblicazione di Torchio.</td></tr></table></dd><dt>Generatore</dt><dd class="occ">Torchio v0 · TEI P5 Version 4.12</dd></dl><h2 class="sec">L&#39;intestazione completa (teiHeader)</h2><p class="occ">Tutto ciò che il file dichiara, reso così com&#39;è.</p><div class="header-full"><div id="specimen:0.0" class="t-teiHeader s-7-header" data-el="teiHeader">
+<main id="main" class="torchio about"><dl><dt>Responsibility</dt><dd>Omero · nella traduzione di Ippolito Pindemonte (1822)</dd><dt>Licence</dt><dd><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0: nessun diritto riservato su questa codifica dimostrativa.</a></dd><dt>Witnesses</dt><dd><table class="wit-table"><tr><td class="sigla">A</td><td>Testimone A, immaginario: la stampa di riferimento.</td></tr><tr><td class="sigla">B</td><td>Testimone B, immaginario: una copia con lezioni proprie.</td></tr><tr><td class="sigla">C</td><td>Testimone C, immaginario: un apografo tardo.</td></tr></table></dd><dt>Agreement between witnesses</dt><dd><table class="wit-table"><tr><td class="sigla">A · C</td><td><span class="agree-bar" style="width:100%"></span></td><td class="occ">1</td></tr><tr><td class="sigla">B · C</td><td><span class="agree-bar" style="width:100%"></span></td><td class="occ">1</td></tr></table><p class="occ">How often two witnesses carry the same reading. Evidence for a stemma, which remains the editor’s argument.</p></dd><dt>Apparatus</dt><dd>critical (2 entries)</dd><dt>Revision history</dt><dd><table class="wit-table"><tr><td class="sigla">2026-07-30</td><td>Specimen creato per la pubblicazione di Torchio.</td></tr></table></dd><dt>Generator</dt><dd class="occ">Torchio v0 · TEI P5 Version 4.12</dd></dl><h2 class="sec">The full header (teiHeader)</h2><p class="occ">Everything the file declares, rendered as it is.</p><div class="header-full"><div id="specimen:0.0" class="t-teiHeader s-7-header" data-el="teiHeader">
     <div id="specimen:0.0.0" class="t-fileDesc s-7-header" data-el="fileDesc">
       <span id="specimen:0.0.0.0" class="t-titleStmt s-7-header" data-el="titleStmt">
         <span id="specimen:0.0.0.0.0" class="t-title s-1-inline" data-el="title" data-behaviour="inline" data-behaviour-source="tei-all">Specimen</span>
@@ -437,7 +480,7 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 <div id="revisione" class="t-change s-7-header" data-el="change" data-when="1828">campagna correttoria, prima della stampa</div>
 </div></div>
 </div></div></main>
-<footer class="torchio">Pubblicato con <span class="press">Torchio</span> v0.2.0-beta.2 · 2026-08-02</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.2 · 721b152 · 2026-09-18</footer>
 
 </body>
 </html>

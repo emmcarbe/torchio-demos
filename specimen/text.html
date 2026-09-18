@@ -58,6 +58,24 @@ body.show-header .t-teiHeader{display:block;border:1px solid var(--hair);
 .t-pb{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.08em;
   color:var(--accent);vertical-align:super;margin:0 .18em;user-select:none}
 
+/* transcriptions of speech (TEI ch. 8): the spoken layer, distinct and never
+   merged into prose. An utterance is a block opened by its speaker; the
+   paralinguistic marks stand out from the words */
+.t-u{display:block;margin:.55em 0}
+.t-u .t-speaker{font-family:var(--mono);font-size:.7em;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--accent);user-select:none}
+.t-pause,.t-vocal,.t-incident,.t-kinesic{color:var(--soft)}
+.t-pause{font-family:var(--mono);font-size:.9em;margin:0 .1em}
+.t-vocal,.t-incident,.t-kinesic{font-style:italic;font-size:.85em;margin:0 .12em}
+.t-shift{display:inline-block;width:0;border-left:2px solid var(--accent-soft);
+  height:.72em;margin:0 .2em;vertical-align:-.04em}
+/* two reading notations, the reader chooses (toolbar): sober editorial signs
+   are the default; Jefferson conversation-analysis marks on demand. Both are
+   real text in the page; a body class shows one at a time */
+.spk-jeff{display:none}
+body.spk-jefferson .spk-sober{display:none}
+body.spk-jefferson .spk-jeff{display:inline}
+
 .t-note{font-size:.85em;color:var(--soft);border-left:2px solid var(--hair);
   padding-left:.7em;margin:.5em 0}
 .t-note-mark{color:var(--faint);font-size:.55em;vertical-align:super;user-select:none}
@@ -106,6 +124,30 @@ footer.torchio .press{color:var(--accent)}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
 
+/* Andamento — the derived tempo reading. Words fade in as they are "spoken";
+   a floating control bar plays, restarts or reveals all at once; the clock is
+   marked estimated (an approximate reconstruction, not the recording's time).
+   A word outside Andamento carries no styling: .beat only bites under the mode */
+body.spk-andamento .beat{opacity:.22;transition:opacity .22s ease}
+body.spk-andamento .beat.on{opacity:1}
+body.spk-andamento .beat.now{background:color-mix(in srgb,var(--accent) 22%,transparent);border-radius:3px}
+@media(prefers-reduced-motion:reduce){body.spk-andamento .beat{transition:none}}
+.andamento-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;z-index:60;
+  display:none;gap:6px;align-items:center;flex-wrap:wrap;justify-content:center;max-width:92vw;
+  background:var(--ink);color:var(--ground);
+  padding:7px 12px;border-radius:22px;font-family:var(--mono);font-size:12px;
+  box-shadow:0 6px 22px rgba(0,0,0,.28)}
+.andamento-bar button{background:none;border:0;color:var(--ground);font-size:13px;
+  cursor:pointer;padding:3px 8px;letter-spacing:.06em;text-transform:none}
+.andamento-bar button:hover{opacity:.75}
+.andamento-clock{margin:0 4px;opacity:.85;letter-spacing:.08em;font-variant-numeric:tabular-nums}
+.andamento-seek{-webkit-appearance:none;appearance:none;height:4px;width:min(42vw,240px);
+  background:rgba(255,255,255,.28);border-radius:3px;cursor:pointer;margin:0 6px}
+.andamento-seek::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:13px;height:13px;
+  border-radius:50%;background:var(--ground);border:2px solid var(--accent);cursor:pointer}
+.andamento-seek::-moz-range-thumb{width:13px;height:13px;border-radius:50%;background:var(--ground);
+  border:2px solid var(--accent);cursor:pointer}
+@media(prefers-reduced-motion:reduce){.andamento-bar{transition:none}}
 .torchio-bar{position:sticky;top:0;z-index:40;background:var(--ground);
   border-bottom:1px solid var(--hair);font-family:var(--mono)}
 .torchio-bar .inner{max-width:var(--measure);margin:0 auto;padding:8px 20px;
@@ -192,7 +234,7 @@ header.torchio .tt{min-width:14rem}
   header.torchio .tt{min-width:0;width:100%}
   .torchio-nav{width:100%;margin-left:0;gap:8px 20px}
   .torchio-subnav{gap:8px 18px}
-  ol.toc{columns:1}
+  ol.toc.toc-cols{columns:1}
 }
 .about dt{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.14em;
   text-transform:uppercase;color:var(--soft);margin-top:1.2em}
@@ -311,7 +353,8 @@ main hr{border:0;border-top:1px solid var(--hair);margin:1.8em 0}
 :target{background:rgba(176,30,40,.10);border-radius:2px}
 .prevnext{display:flex;justify-content:space-between;gap:1em;margin:1.2em 0;
   font-family:var(--mono);font-size:11px}
-ol.toc{columns:2;column-gap:2.5em;padding-left:1.4em;margin:1em 0}
+ol.toc{column-gap:2.5em;padding-left:1.4em;margin:1em 0}
+ol.toc.toc-cols{columns:2}
 .idx-search{font-family:var(--mono);font-size:13px;padding:7px 11px;border:1px solid var(--hair);
   border-radius:2px;background:var(--paper);color:var(--ink);min-width:16rem;margin:.6em 0 .2em}
 .alpha{font-family:var(--mono);font-size:11px;letter-spacing:.12em;margin:.3em 0 .6em}
@@ -377,13 +420,13 @@ details.lemma summary{cursor:pointer;list-style-position:outside}
 </style>
 </head>
 <body id="top">
-<a class="skip" href="#main">Vai al contenuto</a>
+<a class="skip" href="#main">Skip to content</a>
 <header class="torchio">
-<div class="tt"><h1>Specimen</h1><p class="sub">Omero, nella traduzione di Ippolito Pindemonte (1822)</p></div>
-<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Edizione</a><a href="text.html" class="on">Testo</a><a href="apparatus.html">Apparato</a><a href="genesis.html">Genesi</a><a href="indices.html">Lab</a><a href="data.html">Dati</a></nav>
+<div class="tt"><h1>Specimen</h1><p class="sub">Omero · nella traduzione di Ippolito Pindemonte (1822)</p></div>
+<nav class="torchio-nav"><a href="../" class="up">Home</a><a href="index.html">Edition</a><a href="text.html" class="on">Text</a><a href="apparatus.html">Apparatus</a><a href="genesis.html">Genesis</a><a href="indices.html">Lab</a><a href="data.html">Data</a></nav>
 </header>
 
-<div class="torchio-bar"><div class="inner"><span class="modes" role="group" aria-label="Testo"><button data-mode="read" class="active" aria-pressed="true">Interpretativa</button><button data-mode="dipl" aria-pressed="false">Diplomatica</button></span><button class="sw" data-sw="app" aria-pressed="true">Apparato</button><button class="sw" data-sw="notes" aria-pressed="true">Note</button><button class="sw off" data-sw="header" aria-pressed="false">Scheda del file</button></div></div><main id="main" class="torchio"><style>
+<div class="torchio-bar"><div class="inner"><span class="modes" role="group" aria-label="Text"><button data-mode="read" class="active" aria-pressed="true">Reading</button><button data-mode="dipl" aria-pressed="false">Diplomatic</button></span><button class="sw" data-sw="app" aria-pressed="true">Apparatus</button><button class="sw" data-sw="notes" aria-pressed="true">Notes</button><button class="sw off" data-sw="header" aria-pressed="false">About this file</button></div></div><main id="main" class="torchio"><style>
 .legend{margin:.8em 0;font-size:13px;color:var(--soft)}
 .legend summary{cursor:pointer;font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase}
 .legend ul{list-style:none;padding:.6em 0 0;margin:0;display:flex;flex-wrap:wrap;gap:.5em 1.8em}
@@ -405,7 +448,7 @@ body[data-hand-only="#m2"] #main [data-hand="#m2"],body[data-hand-only="#m2"] #m
 body[data-hand-only="#mano-prima"] #main [data-hand="#mano-prima"],body[data-hand-only="#mano-prima"] #main [data-hand="#mano-prima"] *{opacity:1;color:var(--ink)}
 [data-hand="#mano-seconda"]{background:#7a1f6e1f;box-shadow:inset 0 -2px #7a1f6e99}
 body[data-hand-only="#mano-seconda"] #main [data-hand="#mano-seconda"],body[data-hand-only="#mano-seconda"] #main [data-hand="#mano-seconda"] *{opacity:1;color:var(--ink)}
-</style><div class="hand-bar"><span class="hand-lab">Mani</span><button type="button" class="hand-btn" data-hand-pick="#m1"><span class="hand-dot" style="background:#1a5fb4"></span>Mano principale, immaginaria. <span class="occ">(mano principale)</span></button><button type="button" class="hand-btn" data-hand-pick="#m2"><span class="hand-dot" style="background:#26652c"></span>Mano di revisione, immaginaria.</button><button type="button" class="hand-btn" data-hand-pick="#mano-prima"><span class="hand-dot" style="background:#8a4f00"></span>la prima stesura, a penna</button><button type="button" class="hand-btn" data-hand-pick="#mano-seconda"><span class="hand-dot" style="background:#7a1f6e"></span>le correzioni, a matita</button><button type="button" class="hand-btn" data-hand-pick="">tutte</button></div><details class="legend"><summary>Legenda</summary><ul><li><span class="leg-sample"><span class="t-del">parola</span></span> cancellato dalla mano che scrive</li><li><span class="leg-sample"><span class="t-add">parola</span></span> aggiunto sopra la riga</li><li><span class="leg-sample"><span class="t-unclear">parola</span></span> lettura incerta</li><li><span class="leg-sample"><span class="t-sign">[</span>parola<span class="t-sign">]</span></span> integrazione dell&#39;editore</li><li><span class="leg-sample"><span class="leg-app">parola</span></span> varianti: clic per l&#39;apparato</li><li><span class="leg-sample"><sup>1</sup></span> richiamo di nota</li><li><span class="leg-sample"><span class="hand-dot" style="background:#1a5fb4"></span></span> la mano di Mano principale, immaginaria.</li><li><span class="leg-sample"><span class="hand-dot" style="background:#26652c"></span></span> la mano di Mano di revisione, immaginaria.</li><li><span class="leg-sample"><span class="hand-dot" style="background:#8a4f00"></span></span> la mano di la prima stesura, a penna</li><li><span class="leg-sample"><span class="hand-dot" style="background:#7a1f6e"></span></span> la mano di le correzioni, a matita</li></ul></details><div id="specimen:0.0" class="t-teiHeader s-7-header" data-el="teiHeader">
+</style><div class="hand-bar"><span class="hand-lab">Hands</span><button type="button" class="hand-btn" data-hand-pick="#m1"><span class="hand-dot" style="background:#1a5fb4"></span>Mano principale, immaginaria. <span class="occ">(main hand)</span></button><button type="button" class="hand-btn" data-hand-pick="#m2"><span class="hand-dot" style="background:#26652c"></span>Mano di revisione, immaginaria.</button><button type="button" class="hand-btn" data-hand-pick="#mano-prima"><span class="hand-dot" style="background:#8a4f00"></span>la prima stesura, a penna</button><button type="button" class="hand-btn" data-hand-pick="#mano-seconda"><span class="hand-dot" style="background:#7a1f6e"></span>le correzioni, a matita</button><button type="button" class="hand-btn" data-hand-pick="">all</button></div><details class="legend"><summary>Legend</summary><ul><li><span class="leg-sample"><span class="t-del">word</span></span> deleted by the writing hand</li><li><span class="leg-sample"><span class="t-add">word</span></span> added above the line</li><li><span class="leg-sample"><span class="t-unclear">word</span></span> uncertain reading</li><li><span class="leg-sample"><span class="t-sign">[</span>word<span class="t-sign">]</span></span> supplied by the editor</li><li><span class="leg-sample"><span class="leg-app">word</span></span> variant readings: click for the apparatus</li><li><span class="leg-sample"><sup>1</sup></span> note mark</li><li><span class="leg-sample"><span class="hand-dot" style="background:#1a5fb4"></span></span> the hand of Mano principale, immaginaria.</li><li><span class="leg-sample"><span class="hand-dot" style="background:#26652c"></span></span> the hand of Mano di revisione, immaginaria.</li><li><span class="leg-sample"><span class="hand-dot" style="background:#8a4f00"></span></span> the hand of la prima stesura, a penna</li><li><span class="leg-sample"><span class="hand-dot" style="background:#7a1f6e"></span></span> the hand of le correzioni, a matita</li></ul></details><div id="specimen:0.0" class="t-teiHeader s-7-header" data-el="teiHeader">
     <div id="specimen:0.0.0" class="t-fileDesc s-7-header" data-el="fileDesc">
       <span id="specimen:0.0.0.0" class="t-titleStmt s-7-header" data-el="titleStmt">
         <span id="specimen:0.0.0.0.0" class="t-title s-1-inline" data-el="title" data-behaviour="inline" data-behaviour-source="tei-all">Specimen</span>
@@ -487,10 +530,10 @@ il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-e
           <span class="t-note-mark" aria-hidden="true">°</span><div id="specimen:0.1.0.0.3.5" class="t-note s-1-note" data-el="note" data-type="editorial">Le note editoriali si mostrano così.</div></div>
       </section>
     </div></main>
-<footer class="torchio">Pubblicato con <span class="press">Torchio</span> v0.2.0-beta.2 · 2026-08-02</footer>
+<footer class="torchio">Published with <span class="press">Torchio</span> v0.2.0-beta.2 · 721b152 · 2026-09-18</footer>
 <script>
 (function(){
-  var T={"edition":"Edizione","text":"Testo","indices":"Indici","data":"Dati","archive":"Archivio","dsa":"archivio digitale","texts":"Testi","reading":"Interpretativa","diplomatic":"Diplomatica","apparatus":"Apparato","aboutFile":"Scheda del file","notes":"Note","dse":"edizione scientifica digitale","responsibility":"Responsabilità","licence":"Licenza","witnesses":"Testimoni","apparatusRegisters":"Apparati","revisions":"Storia delle revisioni","generator":"Generatore","people":"Persone","places":"Luoghi","orgs":"Organizzazioni","occurrenceOne":"occorrenza","occurrenceMany":"occorrenze","entries":"voci","skip":"Vai al contenuto","publishedWith":"Pubblicato con","map":"Mappa","lab":"Lab","labAnalyses":"Analisi","labIntro":"Lo strato analitico, tenuto distinto dall'edizione: gli indici, l'analisi quantitativa, i lemmi, la mappa — derivati dal testo, non attestati da esso. Scegli sopra.","labLexDesc":"Frequenze, concordanza (KWIC) e il conteggio di token / type / TTR.","labMapDesc":"I luoghi che portano coordinate.","mapAria":"Mappa dei luoghi dell'edizione","mapNote":"Schizzo posizionale. Punti pieni: coordinate dichiarate nel TEI o confermate dall’editore. Punti vuoti: suggerimenti del gazetteer in attesa di revisione. Ogni luogo rimanda a OpenStreetMap. Coste: Natural Earth (pubblico dominio).","front":"Pagine iniziali","back":"Pagine finali","lacking":"manca in","editedText":"testo critico","genesis":"Genesi","hand":"mano","operations":"operazioni","version":"versione","legend":"Legenda","legWord":"parola","legDel":"cancellato dalla mano che scrive","legAdd":"aggiunto sopra la riga","legUnclear":"lettura incerta","legSupplied":"integrazione dell'editore","legGap":"perduto o illeggibile","legPb":"cambio di pagina della fonte","legMetamark":"segno della mano sul testo (^ = inserire qui; passa il mouse su un segno per leggere cosa fa)","legApp":"varianti: clic per l'apparato","legNote":"richiamo di nota","legHands":"Mani","legAllHands":"tutte","legHand":"la mano di","idxSearch":"cerca un nome…","backToTop":"torna su","apparatusCritical":"critico: varianti tra testimoni","apparatusGenetic":"genetico: gli strati di un manoscritto nel tempo","apparatusBoth":"critico e genetico: testimoni da collazionare, strati al loro interno","legMajor":"mano principale","lexicon":"Lessico","lexTokens":"parole","lexForms":"forme distinte","lexTTR":"type-token ratio","lexSearch":"cerca una parola…","lexFrequencies":"Frequenze","lexConcordance":"Concordanza","lexPick":"Scegli una parola per vederla in contesto.","lexLanguage":"Lingua","lexAllLangs":"tutte","lexStoplist":"Stopword","lexDocument":"Documento","lexWholeEdition":"tutti i documenti","lexStopNone":"nessuna","lexHideStop":"nascondi le stopword","lexWord":"parola","lexLang":"lingua","descrFrequencies":"Ogni forma attestata con il suo conteggio, la quota per mille e se la lista di stopword scelta la copre.","descrConcordance":"Ogni occorrenza di ogni forma, con le parole intorno e il rimando al punto del testo.","descrLemmaConcordance":"Le stesse occorrenze raggruppate sotto la forma di dizionario, dove l'edizione ha i lemmi.","lexAbs":"assoluta","lexRel":"per 1000","lexStats":"Statistica lessicale","lexStopCol":"stop","lexStopNote":"Le frequenze tolgono le stopword scelte; la concordanza tiene ogni parola.","genesisNote":"Le campagne correttorie dichiarate dall’edizione, nel suo ordine, con le operazioni di scrittura attribuite a ciascuna. Ogni operazione rimanda al punto in cui è avvenuta.","genesisHandsNote":"Le operazioni di scrittura raggruppate secondo le mani dichiarate o identificate dall’edizione. Una mano non è presentata come strato cronologico se la fonte non dichiara tale relazione. Ogni operazione rimanda al punto del testo.","genesisMixedNote":"Le campagne correttorie dichiarate e le mani cui sono attribuite operazioni di scrittura. Mani e strati cronologici restano distinti. Ogni operazione rimanda al punto del testo.","genesisUnassignedNote":"Le operazioni di scrittura per le quali l’edizione non dichiara né una campagna correttoria né una mano. Ogni operazione rimanda al punto del testo.","agreement":"Accordi fra testimoni","agreementNote":"Quante volte due testimoni portano la stessa lezione. Materiale per lo stemma, che resta argomento dell’editore.","openPage":"apri la pagina","sectionsN":"sezioni","sectionOne":"Sezione","contents":"Indice delle sezioni","bookLabel":"Libro","register":"Registro","documentsN":"documenti","dateCol":"Data","fromCol":"Mittente","toCol":"Destinatario","authorCol":"Autore","placeCol":"Luogo","titleCol":"Titolo","idnoCol":"Segn.","filter":"Filtra…","prev":"‹ precedente","next":"successivo ›","fullHeader":"L'intestazione completa (teiHeader)","fullHeaderNote":"Tutto ciò che il file dichiara, reso così com'è.","reuse":"Riuso secondo la licenza dell'edizione (vedi la pagina Edizione).","appEntry":"voce di apparato","descrModel":"il modello dell'edizione: documenti, registri, apparati (JSON)","descrEntities":"persone, luoghi e organizzazioni con conteggio delle occorrenze e coordinate","descrApparatus":"ogni lezione di apparato con i suoi testimoni, una riga per lezione","descrSource":"il file TEI sorgente, senza modifiche","lemmas":"Lemmi","lemmaCoverage":"Copertura","tokensWord":"token","languagesLabel":"Lingue","yearsLabel":"Anni","contributorsLabel":"Contributori","interventionsWord":"interventi","licenceVariesNote":"ogni documento dichiara la propria licenza, mostrata sulla sua pagina","lemmaFromMarkup":"dal markup (w/@lemma)","lemmaFromFile":"da lemmas.json","lemmaPending":"voci in attesa di revisione dell'editore","formsLabel":"forme","moreOccurrences":"altre occorrenze non mostrate qui","descrLemmas":"ogni lemma con le sue forme e i conteggi, una riga per forma","descrTokens":"il flusso dei token del testo di lettura: posizione, lingua, forma, lemma, ancora"};
+  var T={"edition":"Edition","text":"Text","indices":"Indices","data":"Data","archive":"Archive","dsa":"digital archive","texts":"Texts","reading":"Reading","diplomatic":"Diplomatic","apparatus":"Apparatus","spoken":"Speech","spokenReading":"Reading","spokenJefferson":"Jefferson","spokenPace":"Pace","revealAll":"Show all","paceEstimated":"estimated time","aboutFile":"About this file","notes":"Notes","dse":"digital scholarly edition","responsibility":"Responsibility","licence":"Licence","witnesses":"Witnesses","apparatusRegisters":"Apparatus","revisions":"Revision history","generator":"Generator","people":"People","places":"Places","orgs":"Organisations","occurrenceOne":"occurrence","occurrenceMany":"occurrences","entries":"entries","skip":"Skip to content","publishedWith":"Published with","map":"Map","lab":"Lab","labAnalyses":"Analyses","labIntro":"The analytical layer, kept apart from the edition: the indices, the quantitative analysis, the lemmas, the map — derived from the text, not attested by it. Choose one above.","labLexDesc":"Frequencies, concordance (KWIC) and the token / type / TTR count.","labMapDesc":"The places that carry coordinates.","mapAria":"Map of the places of the edition","mapNote":"Positional sketch. Filled dots: coordinates declared in the TEI or confirmed by the editor. Hollow dots: gazetteer suggestions awaiting review. Each place links to OpenStreetMap. Coastlines: Natural Earth (public domain).","front":"Front matter","back":"Back matter","lacking":"lacking in","editedText":"edited text","genesis":"Genesis","hand":"hand","operations":"operations","version":"version","legend":"Legend","legWord":"word","legDel":"deleted by the writing hand","legAdd":"added above the line","legUnclear":"uncertain reading","legSupplied":"supplied by the editor","legGap":"lost or illegible","legPb":"page break of the source","legMetamark":"a mark of the hand about the text (^ = insert here; hover each mark to read what it does)","legApp":"variant readings: click for the apparatus","legNote":"note mark","legHands":"Hands","legAllHands":"all","legHand":"the hand of","idxSearch":"search a name…","backToTop":"back to top","apparatusCritical":"critical: variants between witnesses","apparatusGenetic":"genetic: the strata of one manuscript in time","apparatusBoth":"critical and genetic: witnesses to collate, strata within them","legMajor":"main hand","lexicon":"Lexicon","lexTokens":"running words","lexForms":"distinct forms","lexTTR":"type-token ratio","lexSearch":"search a word…","lexFrequencies":"Frequencies","lexConcordance":"Concordance","lexPick":"Pick a word to see it in context.","lexLanguage":"Language","lexAllLangs":"all","lexStoplist":"Stopwords","lexDocument":"Document","lexWholeEdition":"all documents","lexStopNone":"none","lexHideStop":"hide stopwords","lexWord":"word","lexLang":"lang","descrFrequencies":"Every attested form with its count, its share per thousand and whether the stopword list you chose covers it.","descrConcordance":"Every occurrence of every form, with the words around it and the anchor back into the text.","descrLemmaConcordance":"The same evidence grouped under the dictionary form, where the edition has lemmas.","lexAbs":"count","lexRel":"per 1000","lexStats":"Lexical statistics","lexStopCol":"stop","lexStopNote":"Frequencies drop the stopwords you choose; the concordance keeps every word.","genesisNote":"The campaigns of correction the edition declares, in its own order, with the writing operations attributed to each. Every operation links to the place where it happened.","genesisHandsNote":"Writing operations grouped by the hands the edition declares or identifies. A hand is not presented as a chronological layer unless the source declares that relation. Every operation links to its place in the text.","genesisMixedNote":"Declared correction campaigns and hands to which writing operations are attributed. Hands and chronological layers remain distinct. Every operation links to its place in the text.","genesisUnassignedNote":"Writing operations for which the edition declares neither a correction campaign nor a hand. Every operation links to its place in the text.","agreement":"Agreement between witnesses","agreementNote":"How often two witnesses carry the same reading. Evidence for a stemma, which remains the editor’s argument.","openPage":"open the page","sectionsN":"sections","sectionOne":"Section","contents":"Contents","bookLabel":"Book","register":"Register","documentsN":"documents","dateCol":"Date","fromCol":"From","toCol":"To","authorCol":"Author","placeCol":"Place","titleCol":"Title","idnoCol":"Ref.","filter":"Filter…","prev":"‹ previous","next":"next ›","fullHeader":"The full header (teiHeader)","fullHeaderNote":"Everything the file declares, rendered as it is.","reuse":"Reuse under the edition licence (see the Edition page).","appEntry":"apparatus entry","descrModel":"the edition model: documents, registries, apparatus (JSON)","descrEntities":"people, places and organisations with occurrence counts and coordinates","descrApparatus":"every apparatus reading with its witnesses, one row per reading","descrSource":"the unmodified TEI source file","lemmas":"Lemmas","lemmaCoverage":"Coverage","tokensWord":"tokens","languagesLabel":"Languages","yearsLabel":"Years","contributorsLabel":"Contributors","interventionsWord":"interventions","licenceVariesNote":"each document declares its own licence, shown on its page","lemmaFromMarkup":"from the markup (w/@lemma)","lemmaFromFile":"from lemmas.json","lemmaPending":"types awaiting the editor’s review","formsLabel":"forms","moreOccurrences":"more occurrences not shown here","descrLemmas":"every lemma with its forms and counts, one row per form","descrTokens":"the token stream of the reading text: position, language, form, lemma, anchor"};
   var body=document.body; body.classList.add('mode-read');
   if(document.querySelector('.app-band'))body.classList.add('has-band');
   if(window.TORCHIO_ALIGN)body.classList.add('has-align');
@@ -1036,6 +1079,135 @@ il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-e
 
   document.addEventListener('keydown',function(ev){if(ev.key==='Escape')closePop();});
 
+  /* Andamento: a derived reading of the tempo. The recording's real timing is
+     not encoded (no duration on the pauses, no timeline), so words are
+     revealed at an estimated pace and pauses held by their declared type; the
+     clock is marked estimated. Where a real duration is ever encoded on a
+     beat (data-dur, in seconds), it is preferred over the estimate. */
+  var andamento=(function(){
+    var main=document.getElementById('main');
+    var built=false, beats=[], idx=0, timer=null, playing=false, ctrl=null, clock=null;
+    // the clock is attested where the timeline gives a real time, estimated in
+    // between: attestedBase is the last real time (seconds), estMs the estimate
+    // accumulated since, lastAnchor the element that last set the real time
+    var attestedBase=null, estMs=0, lastAnchor=null;
+    var speed=1.5, nowEl=null; var SPEEDS=[1,1.5,2,3]; var seekBar=null, wasPlaying=false;
+    function build(){
+      if(built||!main)return; built=true;
+      var walker=document.createTreeWalker(main,NodeFilter.SHOW_TEXT,null);
+      var texts=[], n;
+      while(n=walker.nextNode()){
+        if(!n.nodeValue.trim())continue;
+        if(n.parentNode.closest('.torchio-bar,.t-note,.t-teiHeader,.t-pause,.t-vocal,.t-incident,.t-kinesic,.t-shift,.t-speaker'))continue;
+        texts.push(n);
+      }
+      texts.forEach(function(t){
+        var frag=document.createDocumentFragment();
+        t.nodeValue.split(/(\s+)/).forEach(function(part){
+          if(!part)return;
+          if(/^\s+$/.test(part)){frag.appendChild(document.createTextNode(part));return;}
+          var s=document.createElement('span'); s.className='beat beat-w'; s.textContent=part; frag.appendChild(s);
+        });
+        if(t.parentNode)t.parentNode.replaceChild(frag,t);
+      });
+      beats=[].slice.call(main.querySelectorAll('.beat-w,.t-pause,.t-vocal,.t-incident,.t-kinesic,.t-shift,.t-speaker,[data-t]'));
+      // a beat inherits the attested time of the nearest element that carries one
+      beats.forEach(function(b){
+        b.classList.add('beat');
+        var a=b.closest('[data-t]');
+        b.__anchor=a; b.__t=a?parseFloat(a.getAttribute('data-t')):NaN;
+      });
+    }
+    function dur(b){
+      var d=b.getAttribute&&b.getAttribute('data-dur');
+      if(d&&!isNaN(parseFloat(d)))return parseFloat(d)*1000;      // attested duration, preferred
+      if(!b.textContent&&b.hasAttribute&&b.hasAttribute('data-t'))return 0; // a bare timeline anchor
+      if(b.classList.contains('beat-w'))return Math.max(180,55*b.textContent.length);
+      if(b.classList.contains('t-pause')){var ty=b.getAttribute('data-type');return ty==='long'?1500:ty==='medium'?700:300;}
+      if(b.classList.contains('t-vocal')||b.classList.contains('t-incident')||b.classList.contains('t-kinesic'))return 600;
+      return 200;
+    }
+    function reduceMotion(){return window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;}
+    function clearNow(){if(nowEl){nowEl.classList.remove('now');nowEl=null;}}
+    function pad(x){x=String(x);return x.length<2?'0'+x:x;}
+    function fmt(ms,attested){var s=Math.max(0,Math.floor(ms/1000));return (attested?'':'≈ ')+pad(Math.floor(s/60))+':'+pad(s%60);}
+    function resetClock(){attestedBase=null;estMs=0;lastAnchor=null;if(clock)clock.textContent='≈ 00:00';}
+    function setPlay(){var pb=ctrl&&ctrl.querySelector('[data-a="play"]');if(pb)pb.textContent=playing?'❚❚':'▶';}
+    function ui(){
+      if(ctrl)return;
+      ctrl=document.createElement('div'); ctrl.className='andamento-bar'; ctrl.setAttribute('role','group');
+      ctrl.innerHTML='<button data-a="play" aria-label="play">▶</button>'
+        +'<button data-a="restart" aria-label="restart">↺</button>'
+        +'<button data-a="speed" aria-label="speed">'+speed+'×</button>'
+        +'<input class="andamento-seek" type="range" min="0" max="'+beats.length+'" value="0" step="1" aria-label="progress">'
+        +'<span class="andamento-clock" title="'+esc(T.paceEstimated||'estimated time')+'">≈ 00:00</span>'
+        +'<button data-a="all">'+esc(T.revealAll||'Show all')+'</button>';
+      document.body.appendChild(ctrl); clock=ctrl.querySelector('.andamento-clock');
+      seekBar=ctrl.querySelector('.andamento-seek');
+      ctrl.addEventListener('click',function(ev){var b=ev.target.closest('button');if(!b)return;
+        if(b.dataset.a==='play')toggle();
+        else if(b.dataset.a==='restart')restart();
+        else if(b.dataset.a==='speed'){speed=SPEEDS[(SPEEDS.indexOf(speed)+1)%SPEEDS.length];b.textContent=speed+'×';}
+        else if(b.dataset.a==='all')revealAll();});
+      // the scrubber: grab it to move the reading to any point, forward or back
+      seekBar.addEventListener('pointerdown',function(){wasPlaying=playing;playing=false;clearTimeout(timer);setPlay();});
+      seekBar.addEventListener('input',function(){seek(parseInt(seekBar.value,10)||0);});
+      seekBar.addEventListener('change',function(){if(wasPlaying){playing=true;setPlay();step();}});
+      seekBar.addEventListener('keydown',function(){wasPlaying=playing;});
+    }
+    // move the reading to beat n: reveal up to it, replay the clock (attested
+    // where declared, estimate elsewhere) and put the highlight there
+    function seek(n){
+      clearTimeout(timer);
+      n=Math.max(0,Math.min(beats.length,n));
+      attestedBase=null; estMs=0; lastAnchor=null; clearNow();
+      for(var i=0;i<beats.length;i++){
+        var b=beats[i];
+        if(i<n){
+          b.classList.add('on');
+          if(b.__anchor&&b.__anchor!==lastAnchor&&!isNaN(b.__t)){lastAnchor=b.__anchor;attestedBase=b.__t;estMs=0;}
+          else{estMs+=dur(b);}
+          if(i===n-1&&b.textContent){b.classList.add('now');nowEl=b;}
+        } else b.classList.remove('on');
+      }
+      idx=n;
+      if(clock){var base=attestedBase!=null?attestedBase*1000:0;clock.textContent=fmt(base+estMs,attestedBase!=null&&estMs===0);}
+      if(seekBar&&document.activeElement!==seekBar)seekBar.value=n;
+      if(nowEl){try{nowEl.scrollIntoView({block:'nearest',behavior:'auto'});}catch(e){}}
+    }
+    function step(){
+      if(idx>=beats.length){playing=false;setPlay();return;}
+      if(seekBar)seekBar.value=idx+1;
+      var b=beats[idx++]; b.classList.add('on');
+      // a moving highlight marks the word being "spoken" now: the clear signal
+      // that the reading is advancing, and where it is
+      if(nowEl)nowEl.classList.remove('now');
+      if(b.textContent){b.classList.add('now');nowEl=b;}
+      try{b.scrollIntoView({block:'nearest',behavior:reduceMotion()?'auto':'smooth'});}catch(e){}
+      // reaching a new element with an attested time snaps the clock to it (the
+      // real time of the recording); between two such points the clock advances
+      // by estimate and shows the ≈ sign
+      if(b.__anchor&&b.__anchor!==lastAnchor&&!isNaN(b.__t)){lastAnchor=b.__anchor;attestedBase=b.__t;estMs=0;}
+      else{estMs+=dur(b);}
+      if(clock){var base=attestedBase!=null?attestedBase*1000:0;clock.textContent=fmt(base+estMs,attestedBase!=null&&estMs===0);}
+      // the estimated content time drives the clock; playback speed only changes
+      // how fast it is replayed, not the timeline it reconstructs
+      timer=setTimeout(step,Math.max(45,dur(b)/speed));
+    }
+    function toggle(){if(playing){playing=false;clearTimeout(timer);}else{playing=true;step();}setPlay();}
+    function restart(){clearTimeout(timer);clearNow();beats.forEach(function(b){b.classList.remove('on');});idx=0;resetClock();if(seekBar)seekBar.value=0;playing=true;setPlay();step();}
+    function revealAll(){clearTimeout(timer);playing=false;clearNow();beats.forEach(function(b){b.classList.add('on');});idx=beats.length;if(seekBar)seekBar.value=beats.length;setPlay();}
+    function enter(){
+      build(); ui(); ctrl.style.display='flex';
+      clearNow(); beats.forEach(function(b){b.classList.remove('on');}); idx=0; resetClock(); if(seekBar)seekBar.value=0;
+      // reduced motion: do not start moving text on its own; reveal it all and
+      // let the reader press play if they choose
+      if(reduceMotion()){revealAll();}else{playing=true;setPlay();step();}
+    }
+    function leave(){clearTimeout(timer);playing=false;clearNow();if(ctrl)ctrl.style.display='none';if(built)beats.forEach(function(b){b.classList.add('on');});}
+    return {enter:enter,leave:leave};
+  })();
+
   var bar=document.querySelector('.torchio-bar');
   if(bar){
     bar.addEventListener('click',function(ev){
@@ -1044,6 +1216,13 @@ il vento <span id="specimen:0.1.0.0.2.2" class="t-del s-3-trascrizionale" data-e
         body.classList.toggle('mode-dipl',b.dataset.mode==='dipl');
         body.classList.toggle('mode-read',b.dataset.mode==='read');
         bar.querySelectorAll('[data-mode]').forEach(function(x){x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});
+      }
+      if(b.dataset.spk){
+        var mode=b.dataset.spk;
+        body.classList.toggle('spk-jefferson',mode==='jefferson');
+        body.classList.toggle('spk-andamento',mode==='pace');
+        bar.querySelectorAll('[data-spk]').forEach(function(x){x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});
+        if(mode==='pace')andamento.enter(); else andamento.leave();
       }
       if(b.dataset.sw==='app'){body.classList.toggle('app-off');b.classList.toggle('off');closePop();}
       if(b.dataset.sw==='header'){body.classList.toggle('show-header');b.classList.toggle('off');}
