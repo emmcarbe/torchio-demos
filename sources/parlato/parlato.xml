@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="la">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Lorem Ipsum in voce — a demonstration spoken edition</title>
+            <author><persName><forename>Ipsum</forename><surname>Dolor</surname></persName></author>
+            <respStmt xml:id="editor">
+               <resp>Encoding and demonstration</resp>
+               <persName>Torchio demo</persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Torchio</publisher>
+            <availability status="free"><licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0. Placeholder text (lorem ipsum); no real recording.</licence></availability>
+            <date when="2026">2026</date>
+         </publicationStmt>
+         <sourceDesc>
+            <recordingStmt>
+               <recording type="audio" xml:id="rec1" dur="PT1M">
+                  <p>Fictional recording, one minute of placeholder speech.</p>
+               </recording>
+            </recordingStmt>
+            <particDesc>
+               <listPerson>
+                  <person xml:id="ip" sex="F">
+                     <persName><forename>Ipsum</forename><surname>Dolor</surname></persName>
+                     <occupation>relatrice</occupation>
+                  </person>
+                  <person xml:id="lorem" sex="M">
+                     <persName>Lorem Amet</persName>
+                     <occupation>discussant</occupation>
+                  </person>
+                  <!-- an unidentified speaker, declared as good practice, not left dangling -->
+                  <person xml:id="aud1" sex="U">
+                     <persName>Uditore non identificato</persName>
+                  </person>
+                  <personGrp xml:id="publicum">
+                     <name>il pubblico</name>
+                  </personGrp>
+               </listPerson>
+               <listPlace>
+                  <place xml:id="venetiae">
+                     <placeName>Venetiae</placeName>
+                     <location><geo>45.4372 12.3346</geo></location>
+                  </place>
+               </listPlace>
+            </particDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <p>Transcription of speech (TEI ch. 8). Pauses are typed (short / medium / long); a few carry a measured duration. A timeline gives attested times, so the reading in tempo (Andamento) shows the real clock where declared and estimates elsewhere.</p>
+         </editorialDecl>
+      </encodingDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <!-- attested timeline: the utterances align to these points -->
+         <timeline unit="s" origin="#t0">
+            <when xml:id="t0" absolute="00:00:00"/>
+            <when xml:id="t1" absolute="00:00:09"/>
+            <when xml:id="t2" absolute="00:00:23"/>
+            <when xml:id="t3" absolute="00:00:38"/>
+            <when xml:id="t4" absolute="00:00:55"/>
+         </timeline>
+
+         <u who="#ip" start="#t0" xml:id="u1">Lorem ipsum dolor sit amet,<pause type="short"/>consectetur adipiscing elit.<pause type="medium"/>Sed do eiusmod tempor incididunt<vocal><desc>ride</desc></vocal>ut labore et dolore magna aliqua.</u>
+
+         <u who="#lorem" start="#t1" xml:id="u2">Ut enim ad minim veniam,<pause dur="PT0.6S"/>quis nostrud exercitation ullamco.<incident><desc>squilla un telefono</desc></incident><pause type="long"/>Duis aute irure dolor in <placeName ref="#venetiae">Venetiis</placeName>,<pause type="short"/>in reprehenderit in voluptate.</u>
+
+         <u who="#ip" start="#t2" xml:id="u3">Velit esse cillum dolore<shift new="allegro"/>eu fugiat nulla pariatur.<pause type="medium"/>Excepteur sint occaecat cupidatat non <unclear reason="overlap">proident</unclear>,<pause type="short"/>sunt in culpa qui officia deserunt.</u>
+
+         <u who="#aud1" start="#t3" xml:id="u4">Mollit anim id est laborum?<pause type="short"/>Nam libero tempore,<gap reason="inaudible"/>cum soluta nobis est eligendi.</u>
+
+         <u who="#ip" start="#t4" xml:id="u5">Optio cumque nihil impedit<pause dur="PT1.2S"/>quo minus id quod maxime placeat.<vocal><desc>colpo di tosse</desc></vocal><pause type="medium"/>Temporibus autem quibusdam et aut officiis debitis, ut et <persName ref="#lorem">Lorem</persName> saepe eveniet.</u>
+
+         <u who="#publicum" start="#t4" xml:id="u6"><incident><desc>applausi</desc></incident>Nam libero tempore, cum soluta.</u>
+      </body>
+   </text>
+</TEI>

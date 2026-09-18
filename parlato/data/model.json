@@ -1,0 +1,2605 @@
+{
+ "meta": {
+  "title": "Lorem Ipsum in voce — a demonstration spoken edition",
+  "licence": {
+   "target": "https://creativecommons.org/licenses/by/4.0/",
+   "text": "CC BY 4.0. Placeholder text (lorem ipsum); no real recording."
+  },
+  "responsibility": [
+   {
+    "role": "author",
+    "name": "Ipsum Dolor"
+   },
+   {
+    "role": "Encoding and demonstration",
+    "name": "Torchio demo"
+   }
+  ],
+  "languages": [
+   "la"
+  ]
+ },
+ "documents": [
+  {
+   "id": "parlato",
+   "tree": {
+    "id": "parlato:0",
+    "element": "TEI",
+    "section": "1-struttura",
+    "atts": {
+     "xmlns": "http://www.tei-c.org/ns/1.0",
+     "xml:lang": "la"
+    },
+    "children": [
+     "\n   ",
+     {
+      "id": "parlato:0.0",
+      "element": "teiHeader",
+      "section": "7-header",
+      "atts": {},
+      "children": [
+       "\n      ",
+       {
+        "id": "parlato:0.0.0",
+        "element": "fileDesc",
+        "section": "7-header",
+        "atts": {},
+        "children": [
+         "\n         ",
+         {
+          "id": "parlato:0.0.0.0",
+          "element": "titleStmt",
+          "section": "7-header",
+          "atts": {},
+          "children": [
+           "\n            ",
+           {
+            "id": "parlato:0.0.0.0.0",
+            "element": "title",
+            "section": "1-inline",
+            "atts": {},
+            "children": [
+             "Lorem Ipsum in voce — a demonstration spoken edition"
+            ],
+            "processing": {
+             "behaviour": "inline",
+             "source": "tei-all",
+             "via": "class:model.emphLike",
+             "params": {}
+            }
+           },
+           "\n            ",
+           {
+            "id": "parlato:0.0.0.0.1",
+            "element": "author",
+            "section": "1-bibliografia",
+            "atts": {},
+            "children": [
+             {
+              "id": "parlato:0.0.0.0.1.0",
+              "element": "persName",
+              "section": "2-entita",
+              "atts": {},
+              "children": [
+               {
+                "id": "parlato:0.0.0.0.1.0.0",
+                "element": "forename",
+                "section": "2-entita",
+                "atts": {},
+                "children": [
+                 "Ipsum"
+                ],
+                "processing": {
+                 "behaviour": "inline",
+                 "source": "tei-all",
+                 "via": "class:model.nameLike",
+                 "params": {}
+                }
+               },
+               {
+                "id": "parlato:0.0.0.0.1.0.1",
+                "element": "surname",
+                "section": "2-entita",
+                "atts": {},
+                "children": [
+                 "Dolor"
+                ],
+                "processing": {
+                 "behaviour": "inline",
+                 "source": "tei-all",
+                 "via": "class:model.nameLike",
+                 "params": {}
+                }
+               }
+              ],
+              "processing": {
+               "behaviour": "inline",
+               "source": "tei-all",
+               "via": "class:model.nameLike",
+               "params": {}
+              }
+             }
+            ]
+           },
+           "\n            ",
+           {
+            "id": "editor",
+            "element": "respStmt",
+            "section": "1-bibliografia",
+            "atts": {
+             "xml:id": "editor"
+            },
+            "children": [
+             "\n               ",
+             {
+              "id": "parlato:0.0.0.0.2.0",
+              "element": "resp",
+              "section": "1-struttura",
+              "atts": {},
+              "children": [
+               "Encoding and demonstration"
+              ]
+             },
+             "\n               ",
+             {
+              "id": "parlato:0.0.0.0.2.1",
+              "element": "persName",
+              "section": "2-entita",
+              "atts": {},
+              "children": [
+               "Torchio demo"
+              ],
+              "processing": {
+               "behaviour": "inline",
+               "source": "tei-all",
+               "via": "class:model.nameLike",
+               "params": {}
+              }
+             },
+             "\n            "
+            ]
+           },
+           "\n         "
+          ]
+         },
+         "\n         ",
+         {
+          "id": "parlato:0.0.0.1",
+          "element": "publicationStmt",
+          "section": "7-header",
+          "atts": {},
+          "children": [
+           "\n            ",
+           {
+            "id": "parlato:0.0.0.1.0",
+            "element": "publisher",
+            "section": "1-bibliografia",
+            "atts": {},
+            "children": [
+             "Torchio"
+            ]
+           },
+           "\n            ",
+           {
+            "id": "parlato:0.0.0.1.1",
+            "element": "availability",
+            "section": "1-bibliografia",
+            "atts": {
+             "status": "free"
+            },
+            "children": [
+             {
+              "id": "parlato:0.0.0.1.1.0",
+              "element": "licence",
+              "section": "7-licenza",
+              "atts": {
+               "target": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "children": [
+               "CC BY 4.0. Placeholder text (lorem ipsum); no real recording."
+              ]
+             }
+            ]
+           },
+           "\n            ",
+           {
+            "id": "parlato:0.0.0.1.2",
+            "element": "date",
+            "section": "2-date",
+            "atts": {
+             "when": "2026"
+            },
+            "children": [
+             "2026"
+            ]
+           },
+           "\n         "
+          ]
+         },
+         "\n         ",
+         {
+          "id": "parlato:0.0.0.2",
+          "element": "sourceDesc",
+          "section": "7-header",
+          "atts": {},
+          "children": [
+           "\n            ",
+           {
+            "id": "parlato:0.0.0.2.0",
+            "element": "recordingStmt",
+            "section": "8-parlato",
+            "atts": {},
+            "children": [
+             "\n               ",
+             {
+              "id": "rec1",
+              "element": "recording",
+              "section": "8-parlato",
+              "atts": {
+               "type": "audio",
+               "xml:id": "rec1",
+               "dur": "PT1M"
+              },
+              "children": [
+               "\n                  ",
+               {
+                "id": "parlato:0.0.0.2.0.0.0",
+                "element": "p",
+                "section": "1-struttura",
+                "atts": {},
+                "children": [
+                 "Fictional recording, one minute of placeholder speech."
+                ],
+                "processing": {
+                 "behaviour": "paragraph",
+                 "source": "tei-all",
+                 "via": "element",
+                 "params": {}
+                }
+               },
+               "\n               "
+              ]
+             },
+             "\n            "
+            ]
+           },
+           "\n            ",
+           {
+            "id": "parlato:0.0.0.2.1",
+            "element": "particDesc",
+            "section": "7-header",
+            "atts": {},
+            "children": [
+             "\n               ",
+             {
+              "id": "parlato:0.0.0.2.1.0",
+              "element": "listPerson",
+              "section": "1-liste",
+              "atts": {},
+              "children": [
+               "\n                  ",
+               {
+                "id": "ip",
+                "element": "person",
+                "section": "2-entita",
+                "atts": {
+                 "xml:id": "ip",
+                 "sex": "F"
+                },
+                "children": [
+                 "\n                     ",
+                 {
+                  "id": "parlato:0.0.0.2.1.0.0.0",
+                  "element": "persName",
+                  "section": "2-entita",
+                  "atts": {},
+                  "children": [
+                   {
+                    "id": "parlato:0.0.0.2.1.0.0.0.0",
+                    "element": "forename",
+                    "section": "2-entita",
+                    "atts": {},
+                    "children": [
+                     "Ipsum"
+                    ],
+                    "processing": {
+                     "behaviour": "inline",
+                     "source": "tei-all",
+                     "via": "class:model.nameLike",
+                     "params": {}
+                    }
+                   },
+                   {
+                    "id": "parlato:0.0.0.2.1.0.0.0.1",
+                    "element": "surname",
+                    "section": "2-entita",
+                    "atts": {},
+                    "children": [
+                     "Dolor"
+                    ],
+                    "processing": {
+                     "behaviour": "inline",
+                     "source": "tei-all",
+                     "via": "class:model.nameLike",
+                     "params": {}
+                    }
+                   }
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.nameLike",
+                   "params": {}
+                  }
+                 },
+                 "\n                     ",
+                 {
+                  "id": "parlato:0.0.0.2.1.0.0.1",
+                  "element": "occupation",
+                  "section": "2-entita",
+                  "atts": {},
+                  "children": [
+                   "relatrice"
+                  ]
+                 },
+                 "\n                  "
+                ]
+               },
+               "\n                  ",
+               {
+                "id": "lorem",
+                "element": "person",
+                "section": "2-entita",
+                "atts": {
+                 "xml:id": "lorem",
+                 "sex": "M"
+                },
+                "children": [
+                 "\n                     ",
+                 {
+                  "id": "parlato:0.0.0.2.1.0.1.0",
+                  "element": "persName",
+                  "section": "2-entita",
+                  "atts": {},
+                  "children": [
+                   "Lorem Amet"
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.nameLike",
+                   "params": {}
+                  }
+                 },
+                 "\n                     ",
+                 {
+                  "id": "parlato:0.0.0.2.1.0.1.1",
+                  "element": "occupation",
+                  "section": "2-entita",
+                  "atts": {},
+                  "children": [
+                   "discussant"
+                  ]
+                 },
+                 "\n                  "
+                ]
+               },
+               "\n                  ",
+               "\n                  ",
+               {
+                "id": "aud1",
+                "element": "person",
+                "section": "2-entita",
+                "atts": {
+                 "xml:id": "aud1",
+                 "sex": "U"
+                },
+                "children": [
+                 "\n                     ",
+                 {
+                  "id": "parlato:0.0.0.2.1.0.2.0",
+                  "element": "persName",
+                  "section": "2-entita",
+                  "atts": {},
+                  "children": [
+                   "Uditore non identificato"
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.nameLike",
+                   "params": {}
+                  }
+                 },
+                 "\n                  "
+                ]
+               },
+               "\n                  ",
+               {
+                "id": "publicum",
+                "element": "personGrp",
+                "section": "2-entita",
+                "atts": {
+                 "xml:id": "publicum"
+                },
+                "children": [
+                 "\n                     ",
+                 {
+                  "id": "parlato:0.0.0.2.1.0.3.0",
+                  "element": "name",
+                  "section": "2-entita",
+                  "atts": {},
+                  "children": [
+                   "il pubblico"
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.nameLike",
+                   "params": {}
+                  }
+                 },
+                 "\n                  "
+                ]
+               },
+               "\n               "
+              ]
+             },
+             "\n               ",
+             {
+              "id": "parlato:0.0.0.2.1.1",
+              "element": "listPlace",
+              "section": "1-liste",
+              "atts": {},
+              "children": [
+               "\n                  ",
+               {
+                "id": "venetiae",
+                "element": "place",
+                "section": "2-entita",
+                "atts": {
+                 "xml:id": "venetiae"
+                },
+                "children": [
+                 "\n                     ",
+                 {
+                  "id": "parlato:0.0.0.2.1.1.0.0",
+                  "element": "placeName",
+                  "section": "2-entita",
+                  "atts": {},
+                  "children": [
+                   "Venetiae"
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.nameLike",
+                   "params": {}
+                  }
+                 },
+                 "\n                     ",
+                 {
+                  "id": "parlato:0.0.0.2.1.1.0.1",
+                  "element": "location",
+                  "section": "2-entita",
+                  "atts": {},
+                  "children": [
+                   {
+                    "id": "parlato:0.0.0.2.1.1.0.1.0",
+                    "element": "geo",
+                    "section": "1-inline",
+                    "atts": {},
+                    "children": [
+                     "45.4372 12.3346"
+                    ]
+                   }
+                  ],
+                  "processing": {
+                   "behaviour": "inline",
+                   "source": "tei-all",
+                   "via": "class:model.nameLike",
+                   "params": {}
+                  }
+                 },
+                 "\n                  "
+                ]
+               },
+               "\n               "
+              ]
+             },
+             "\n            "
+            ]
+           },
+           "\n         "
+          ]
+         },
+         "\n      "
+        ]
+       },
+       "\n      ",
+       {
+        "id": "parlato:0.0.1",
+        "element": "encodingDesc",
+        "section": "7-header",
+        "atts": {},
+        "children": [
+         "\n         ",
+         {
+          "id": "parlato:0.0.1.0",
+          "element": "editorialDecl",
+          "section": "7-header",
+          "atts": {},
+          "children": [
+           "\n            ",
+           {
+            "id": "parlato:0.0.1.0.0",
+            "element": "p",
+            "section": "1-struttura",
+            "atts": {},
+            "children": [
+             "Transcription of speech (TEI ch. 8). Pauses are typed (short / medium / long); a few carry a measured duration. A timeline gives attested times, so the reading in tempo (Andamento) shows the real clock where declared and estimates elsewhere."
+            ],
+            "processing": {
+             "behaviour": "paragraph",
+             "source": "tei-all",
+             "via": "element",
+             "params": {}
+            }
+           },
+           "\n         "
+          ]
+         },
+         "\n      "
+        ]
+       },
+       "\n   "
+      ]
+     },
+     "\n   ",
+     {
+      "id": "parlato:0.1",
+      "element": "text",
+      "section": "7-struttura-documento",
+      "atts": {},
+      "children": [
+       "\n      ",
+       {
+        "id": "parlato:0.1.0",
+        "element": "body",
+        "section": "1-struttura",
+        "atts": {},
+        "children": [
+         "\n         ",
+         "\n         ",
+         {
+          "id": "parlato:0.1.0.0",
+          "element": "timeline",
+          "section": "2-standoff",
+          "atts": {
+           "unit": "s",
+           "origin": "#t0"
+          },
+          "children": [
+           "\n            ",
+           {
+            "id": "t0",
+            "element": "when",
+            "section": "0-linking",
+            "atts": {
+             "xml:id": "t0",
+             "absolute": "00:00:00"
+            },
+            "children": []
+           },
+           "\n            ",
+           {
+            "id": "t1",
+            "element": "when",
+            "section": "0-linking",
+            "atts": {
+             "xml:id": "t1",
+             "absolute": "00:00:09"
+            },
+            "children": []
+           },
+           "\n            ",
+           {
+            "id": "t2",
+            "element": "when",
+            "section": "0-linking",
+            "atts": {
+             "xml:id": "t2",
+             "absolute": "00:00:23"
+            },
+            "children": []
+           },
+           "\n            ",
+           {
+            "id": "t3",
+            "element": "when",
+            "section": "0-linking",
+            "atts": {
+             "xml:id": "t3",
+             "absolute": "00:00:38"
+            },
+            "children": []
+           },
+           "\n            ",
+           {
+            "id": "t4",
+            "element": "when",
+            "section": "0-linking",
+            "atts": {
+             "xml:id": "t4",
+             "absolute": "00:00:55"
+            },
+            "children": []
+           },
+           "\n         "
+          ]
+         },
+         "\n\n         ",
+         {
+          "id": "u1",
+          "element": "u",
+          "section": "8-parlato",
+          "atts": {
+           "who": "#ip",
+           "start": "#t0",
+           "xml:id": "u1"
+          },
+          "children": [
+           "Lorem ipsum dolor sit amet,",
+           {
+            "id": "parlato:0.1.0.1.0",
+            "element": "pause",
+            "section": "8-parlato",
+            "atts": {
+             "type": "short"
+            },
+            "children": []
+           },
+           "consectetur adipiscing elit.",
+           {
+            "id": "parlato:0.1.0.1.1",
+            "element": "pause",
+            "section": "8-parlato",
+            "atts": {
+             "type": "medium"
+            },
+            "children": []
+           },
+           "Sed do eiusmod tempor incididunt",
+           {
+            "id": "parlato:0.1.0.1.2",
+            "element": "vocal",
+            "section": "8-parlato",
+            "atts": {},
+            "children": [
+             {
+              "id": "parlato:0.1.0.1.2.0",
+              "element": "desc",
+              "section": "1-inline",
+              "atts": {},
+              "children": [
+               "ride"
+              ]
+             }
+            ]
+           },
+           "ut labore et dolore magna aliqua."
+          ]
+         },
+         "\n\n         ",
+         {
+          "id": "u2",
+          "element": "u",
+          "section": "8-parlato",
+          "atts": {
+           "who": "#lorem",
+           "start": "#t1",
+           "xml:id": "u2"
+          },
+          "children": [
+           "Ut enim ad minim veniam,",
+           {
+            "id": "parlato:0.1.0.2.0",
+            "element": "pause",
+            "section": "8-parlato",
+            "atts": {
+             "dur": "PT0.6S"
+            },
+            "children": []
+           },
+           "quis nostrud exercitation ullamco.",
+           {
+            "id": "parlato:0.1.0.2.1",
+            "element": "incident",
+            "section": "8-parlato",
+            "atts": {},
+            "children": [
+             {
+              "id": "parlato:0.1.0.2.1.0",
+              "element": "desc",
+              "section": "1-inline",
+              "atts": {},
+              "children": [
+               "squilla un telefono"
+              ]
+             }
+            ]
+           },
+           {
+            "id": "parlato:0.1.0.2.2",
+            "element": "pause",
+            "section": "8-parlato",
+            "atts": {
+             "type": "long"
+            },
+            "children": []
+           },
+           "Duis aute irure dolor in ",
+           {
+            "id": "parlato:0.1.0.2.3",
+            "element": "placeName",
+            "section": "2-entita",
+            "atts": {
+             "ref": "#venetiae"
+            },
+            "children": [
+             "Venetiis"
+            ],
+            "processing": {
+             "behaviour": "inline",
+             "source": "tei-all",
+             "via": "class:model.nameLike",
+             "params": {}
+            }
+           },
+           ",",
+           {
+            "id": "parlato:0.1.0.2.4",
+            "element": "pause",
+            "section": "8-parlato",
+            "atts": {
+             "type": "short"
+            },
+            "children": []
+           },
+           "in reprehenderit in voluptate."
+          ]
+         },
+         "\n\n         ",
+         {
+          "id": "u3",
+          "element": "u",
+          "section": "8-parlato",
+          "atts": {
+           "who": "#ip",
+           "start": "#t2",
+           "xml:id": "u3"
+          },
+          "children": [
+           "Velit esse cillum dolore",
+           {
+            "id": "parlato:0.1.0.3.0",
+            "element": "shift",
+            "section": "8-parlato",
+            "atts": {
+             "new": "allegro"
+            },
+            "children": []
+           },
+           "eu fugiat nulla pariatur.",
+           {
+            "id": "parlato:0.1.0.3.1",
+            "element": "pause",
+            "section": "8-parlato",
+            "atts": {
+             "type": "medium"
+            },
+            "children": []
+           },
+           "Excepteur sint occaecat cupidatat non ",
+           {
+            "id": "parlato:0.1.0.3.2",
+            "element": "unclear",
+            "section": "3-editoriale",
+            "atts": {
+             "reason": "overlap"
+            },
+            "children": [
+             "proident"
+            ],
+            "processing": {
+             "behaviour": "inline",
+             "source": "tei-all",
+             "via": "class:model.choicePart",
+             "params": {}
+            }
+           },
+           ",",
+           {
+            "id": "parlato:0.1.0.3.3",
+            "element": "pause",
+            "section": "8-parlato",
+            "atts": {
+             "type": "short"
+            },
+            "children": []
+           },
+           "sunt in culpa qui officia deserunt."
+          ]
+         },
+         "\n\n         ",
+         {
+          "id": "u4",
+          "element": "u",
+          "section": "8-parlato",
+          "atts": {
+           "who": "#aud1",
+           "start": "#t3",
+           "xml:id": "u4"
+          },
+          "children": [
+           "Mollit anim id est laborum?",
+           {
+            "id": "parlato:0.1.0.4.0",
+            "element": "pause",
+            "section": "8-parlato",
+            "atts": {
+             "type": "short"
+            },
+            "children": []
+           },
+           "Nam libero tempore,",
+           {
+            "id": "parlato:0.1.0.4.1",
+            "element": "gap",
+            "section": "3-trascrizionale",
+            "atts": {
+             "reason": "inaudible"
+            },
+            "children": []
+           },
+           "cum soluta nobis est eligendi."
+          ]
+         },
+         "\n\n         ",
+         {
+          "id": "u5",
+          "element": "u",
+          "section": "8-parlato",
+          "atts": {
+           "who": "#ip",
+           "start": "#t4",
+           "xml:id": "u5"
+          },
+          "children": [
+           "Optio cumque nihil impedit",
+           {
+            "id": "parlato:0.1.0.5.0",
+            "element": "pause",
+            "section": "8-parlato",
+            "atts": {
+             "dur": "PT1.2S"
+            },
+            "children": []
+           },
+           "quo minus id quod maxime placeat.",
+           {
+            "id": "parlato:0.1.0.5.1",
+            "element": "vocal",
+            "section": "8-parlato",
+            "atts": {},
+            "children": [
+             {
+              "id": "parlato:0.1.0.5.1.0",
+              "element": "desc",
+              "section": "1-inline",
+              "atts": {},
+              "children": [
+               "colpo di tosse"
+              ]
+             }
+            ]
+           },
+           {
+            "id": "parlato:0.1.0.5.2",
+            "element": "pause",
+            "section": "8-parlato",
+            "atts": {
+             "type": "medium"
+            },
+            "children": []
+           },
+           "Temporibus autem quibusdam et aut officiis debitis, ut et ",
+           {
+            "id": "parlato:0.1.0.5.3",
+            "element": "persName",
+            "section": "2-entita",
+            "atts": {
+             "ref": "#lorem"
+            },
+            "children": [
+             "Lorem"
+            ],
+            "processing": {
+             "behaviour": "inline",
+             "source": "tei-all",
+             "via": "class:model.nameLike",
+             "params": {}
+            }
+           },
+           " saepe eveniet."
+          ]
+         },
+         "\n\n         ",
+         {
+          "id": "u6",
+          "element": "u",
+          "section": "8-parlato",
+          "atts": {
+           "who": "#publicum",
+           "start": "#t4",
+           "xml:id": "u6"
+          },
+          "children": [
+           {
+            "id": "parlato:0.1.0.6.0",
+            "element": "incident",
+            "section": "8-parlato",
+            "atts": {},
+            "children": [
+             {
+              "id": "parlato:0.1.0.6.0.0",
+              "element": "desc",
+              "section": "1-inline",
+              "atts": {},
+              "children": [
+               "applausi"
+              ]
+             }
+            ]
+           },
+           "Nam libero tempore, cum soluta."
+          ]
+         },
+         "\n      "
+        ]
+       },
+       "\n   "
+      ]
+     },
+     "\n"
+    ]
+   },
+   "card": {
+    "id": "parlato",
+    "title": "Lorem Ipsum in voce — a demonstration spoken edition",
+    "date": null,
+    "from": [],
+    "to": [],
+    "author": "IpsumDolor",
+    "place": null,
+    "idno": null
+   }
+  }
+ ],
+ "registries": {
+  "people": [
+   {
+    "id": "ip",
+    "label": "Ipsum Dolor",
+    "atts": {
+     "xml:id": "ip",
+     "sex": "F"
+    },
+    "occurrences": []
+   },
+   {
+    "id": "lorem",
+    "label": "Lorem Amet",
+    "atts": {
+     "xml:id": "lorem",
+     "sex": "M"
+    },
+    "occurrences": [
+     "parlato:0.1.0.5.3"
+    ]
+   },
+   {
+    "id": "aud1",
+    "label": "Uditore non identificato",
+    "atts": {
+     "xml:id": "aud1",
+     "sex": "U"
+    },
+    "occurrences": []
+   }
+  ],
+  "places": [
+   {
+    "id": "venetiae",
+    "label": "Venetiae",
+    "atts": {
+     "xml:id": "venetiae"
+    },
+    "occurrences": [
+     "parlato:0.1.0.2.3"
+    ],
+    "geo": {
+     "lat": 45.4372,
+     "lon": 12.3346
+    }
+   }
+  ],
+  "orgs": [],
+  "witnesses": [],
+  "hands": [],
+  "layers": []
+ },
+ "apparatus": [],
+ "facsimiles": [],
+ "generator": {
+  "name": "torchio",
+  "tei": "P5 Version 4.12.0. Last updated on\n        28th July 2026, revision 113e933e2"
+ },
+ "timeline": {},
+ "lemmas": null,
+ "lexicon": {
+  "total": 106,
+  "distinct": 89,
+  "ttr": 0.8396,
+  "frequencies": [
+   {
+    "form": "in",
+    "count": 4,
+    "lang": "la",
+    "rel": 37.736,
+    "stop": true
+   },
+   {
+    "form": "et",
+    "count": 3,
+    "lang": "la",
+    "rel": 28.302,
+    "stop": true
+   },
+   {
+    "form": "ut",
+    "count": 3,
+    "lang": "la",
+    "rel": 28.302,
+    "stop": true
+   },
+   {
+    "form": "cum",
+    "count": 2,
+    "lang": "la",
+    "rel": 18.868,
+    "stop": true
+   },
+   {
+    "form": "dolor",
+    "count": 2,
+    "lang": "la",
+    "rel": 18.868,
+    "stop": false
+   },
+   {
+    "form": "dolore",
+    "count": 2,
+    "lang": "la",
+    "rel": 18.868,
+    "stop": false
+   },
+   {
+    "form": "est",
+    "count": 2,
+    "lang": "la",
+    "rel": 18.868,
+    "stop": true
+   },
+   {
+    "form": "id",
+    "count": 2,
+    "lang": "la",
+    "rel": 18.868,
+    "stop": true
+   },
+   {
+    "form": "libero",
+    "count": 2,
+    "lang": "la",
+    "rel": 18.868,
+    "stop": false
+   },
+   {
+    "form": "lorem",
+    "count": 2,
+    "lang": "la",
+    "rel": 18.868,
+    "stop": false
+   },
+   {
+    "form": "nam",
+    "count": 2,
+    "lang": "la",
+    "rel": 18.868,
+    "stop": false
+   },
+   {
+    "form": "soluta",
+    "count": 2,
+    "lang": "la",
+    "rel": 18.868,
+    "stop": false
+   },
+   {
+    "form": "tempore",
+    "count": 2,
+    "lang": "la",
+    "rel": 18.868,
+    "stop": false
+   },
+   {
+    "form": "ad",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": true
+   },
+   {
+    "form": "adipiscing",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "aliqua",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "amet",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "anim",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "applausi",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "aut",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": true
+   },
+   {
+    "form": "aute",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "autem",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": true
+   },
+   {
+    "form": "cillum",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "colpo",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "consectetur",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "culpa",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "cumque",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "cupidatat",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "debitis",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "deserunt",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "di",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "do",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "duis",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "eiusmod",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "eligendi",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "elit",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "enim",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": true
+   },
+   {
+    "form": "esse",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": true
+   },
+   {
+    "form": "eu",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "eveniet",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "excepteur",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "exercitation",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "fugiat",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "impedit",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "incididunt",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "ipsum",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "irure",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "labore",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "laborum",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "magna",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "maxime",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "minim",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "minus",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "mollit",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "nihil",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "nobis",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "non",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": true
+   },
+   {
+    "form": "nostrud",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "nulla",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "occaecat",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "officia",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "officiis",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "optio",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "pariatur",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "placeat",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "proident",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "qui",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": true
+   },
+   {
+    "form": "quibusdam",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "quis",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "quo",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "quod",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": true
+   },
+   {
+    "form": "reprehenderit",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "ride",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "saepe",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "sed",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": true
+   },
+   {
+    "form": "sint",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "sit",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "squilla",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "sunt",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": true
+   },
+   {
+    "form": "telefono",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "tempor",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "temporibus",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "tosse",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "ullamco",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "un",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "velit",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "venetiis",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "veniam",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   },
+   {
+    "form": "voluptate",
+    "count": 1,
+    "lang": "la",
+    "rel": 9.434,
+    "stop": false
+   }
+  ],
+  "concordance": {
+   "lorem": [
+    {
+     "docId": "parlato",
+     "anchor": "u1",
+     "before": "",
+     "after": "ipsum dolor sit amet consectetur adipiscing",
+     "form": "Lorem"
+    },
+    {
+     "docId": "parlato",
+     "anchor": "parlato:0.1.0.5.3",
+     "before": "et aut officiis debitis ut et",
+     "after": "saepe eveniet applausi Nam libero tempore",
+     "form": "Lorem"
+    }
+   ],
+   "ipsum": [
+    {
+     "docId": "parlato",
+     "anchor": "u1",
+     "before": "Lorem",
+     "after": "dolor sit amet consectetur adipiscing elit",
+     "form": "ipsum"
+    }
+   ],
+   "dolor": [
+    {
+     "docId": "parlato",
+     "anchor": "u1",
+     "before": "Lorem ipsum",
+     "after": "sit amet consectetur adipiscing elit Sed",
+     "form": "dolor"
+    },
+    {
+     "docId": "parlato",
+     "anchor": "u2",
+     "before": "squilla un telefono Duis aute irure",
+     "after": "in Venetiis in reprehenderit in voluptate",
+     "form": "dolor"
+    }
+   ],
+   "sit": [
+    {
+     "docId": "parlato",
+     "anchor": "u1",
+     "before": "Lorem ipsum dolor",
+     "after": "amet consectetur adipiscing elit Sed do",
+     "form": "sit"
+    }
+   ],
+   "amet": [
+    {
+     "docId": "parlato",
+     "anchor": "u1",
+     "before": "Lorem ipsum dolor sit",
+     "after": "consectetur adipiscing elit Sed do eiusmod",
+     "form": "amet"
+    }
+   ],
+   "consectetur": [
+    {
+     "docId": "parlato",
+     "anchor": "u1",
+     "before": "Lorem ipsum dolor sit amet",
+     "after": "adipiscing elit Sed do eiusmod tempor",
+     "form": "consectetur"
+    }
+   ],
+   "adipiscing": [
+    {
+     "docId": "parlato",
+     "anchor": "u1",
+     "before": "Lorem ipsum dolor sit amet consectetur",
+     "after": "elit Sed do eiusmod tempor incididunt",
+     "form": "adipiscing"
+    }
+   ],
+   "elit": [
+    {
+     "docId": "parlato",
+     "anchor": "u1",
+     "before": "ipsum dolor sit amet consectetur adipiscing",
+     "after": "Sed do eiusmod tempor incididunt ride",
+     "form": "elit"
+    }
+   ],
+   "sed": [
+    {
+     "docId": "parlato",
+     "anchor": "u1",
+     "before": "dolor sit amet consectetur adipiscing elit",
+     "after": "do eiusmod tempor incididunt ride ut",
+     "form": "Sed"
+    }
+   ],
+   "do": [
+    {
+     "docId": "parlato",
+     "anchor": "u1",
+     "before": "sit amet consectetur adipiscing elit Sed",
+     "after": "eiusmod tempor incididunt ride ut labore",
+     "form": "do"
+    }
+   ],
+   "eiusmod": [
+    {
+     "docId": "parlato",
+     "anchor": "u1",
+     "before": "amet consectetur adipiscing elit Sed do",
+     "after": "tempor incididunt ride ut labore et",
+     "form": "eiusmod"
+    }
+   ],
+   "tempor": [
+    {
+     "docId": "parlato",
+     "anchor": "u1",
+     "before": "consectetur adipiscing elit Sed do eiusmod",
+     "after": "incididunt ride ut labore et dolore",
+     "form": "tempor"
+    }
+   ],
+   "incididunt": [
+    {
+     "docId": "parlato",
+     "anchor": "u1",
+     "before": "adipiscing elit Sed do eiusmod tempor",
+     "after": "ride ut labore et dolore magna",
+     "form": "incididunt"
+    }
+   ],
+   "ride": [
+    {
+     "docId": "parlato",
+     "anchor": "parlato:0.1.0.1.2.0",
+     "before": "elit Sed do eiusmod tempor incididunt",
+     "after": "ut labore et dolore magna aliqua",
+     "form": "ride"
+    }
+   ],
+   "ut": [
+    {
+     "docId": "parlato",
+     "anchor": "u1",
+     "before": "Sed do eiusmod tempor incididunt ride",
+     "after": "labore et dolore magna aliqua Ut",
+     "form": "ut"
+    },
+    {
+     "docId": "parlato",
+     "anchor": "u2",
+     "before": "ut labore et dolore magna aliqua",
+     "after": "enim ad minim veniam quis nostrud",
+     "form": "Ut"
+    },
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "autem quibusdam et aut officiis debitis",
+     "after": "et Lorem saepe eveniet applausi Nam",
+     "form": "ut"
+    }
+   ],
+   "labore": [
+    {
+     "docId": "parlato",
+     "anchor": "u1",
+     "before": "do eiusmod tempor incididunt ride ut",
+     "after": "et dolore magna aliqua Ut enim",
+     "form": "labore"
+    }
+   ],
+   "et": [
+    {
+     "docId": "parlato",
+     "anchor": "u1",
+     "before": "eiusmod tempor incididunt ride ut labore",
+     "after": "dolore magna aliqua Ut enim ad",
+     "form": "et"
+    },
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "colpo di tosse Temporibus autem quibusdam",
+     "after": "aut officiis debitis ut et Lorem",
+     "form": "et"
+    },
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "quibusdam et aut officiis debitis ut",
+     "after": "Lorem saepe eveniet applausi Nam libero",
+     "form": "et"
+    }
+   ],
+   "dolore": [
+    {
+     "docId": "parlato",
+     "anchor": "u1",
+     "before": "tempor incididunt ride ut labore et",
+     "after": "magna aliqua Ut enim ad minim",
+     "form": "dolore"
+    },
+    {
+     "docId": "parlato",
+     "anchor": "u3",
+     "before": "reprehenderit in voluptate Velit esse cillum",
+     "after": "eu fugiat nulla pariatur Excepteur sint",
+     "form": "dolore"
+    }
+   ],
+   "magna": [
+    {
+     "docId": "parlato",
+     "anchor": "u1",
+     "before": "incididunt ride ut labore et dolore",
+     "after": "aliqua Ut enim ad minim veniam",
+     "form": "magna"
+    }
+   ],
+   "aliqua": [
+    {
+     "docId": "parlato",
+     "anchor": "u1",
+     "before": "ride ut labore et dolore magna",
+     "after": "Ut enim ad minim veniam quis",
+     "form": "aliqua"
+    }
+   ],
+   "enim": [
+    {
+     "docId": "parlato",
+     "anchor": "u2",
+     "before": "labore et dolore magna aliqua Ut",
+     "after": "ad minim veniam quis nostrud exercitation",
+     "form": "enim"
+    }
+   ],
+   "ad": [
+    {
+     "docId": "parlato",
+     "anchor": "u2",
+     "before": "et dolore magna aliqua Ut enim",
+     "after": "minim veniam quis nostrud exercitation ullamco",
+     "form": "ad"
+    }
+   ],
+   "minim": [
+    {
+     "docId": "parlato",
+     "anchor": "u2",
+     "before": "dolore magna aliqua Ut enim ad",
+     "after": "veniam quis nostrud exercitation ullamco squilla",
+     "form": "minim"
+    }
+   ],
+   "veniam": [
+    {
+     "docId": "parlato",
+     "anchor": "u2",
+     "before": "magna aliqua Ut enim ad minim",
+     "after": "quis nostrud exercitation ullamco squilla un",
+     "form": "veniam"
+    }
+   ],
+   "quis": [
+    {
+     "docId": "parlato",
+     "anchor": "u2",
+     "before": "aliqua Ut enim ad minim veniam",
+     "after": "nostrud exercitation ullamco squilla un telefono",
+     "form": "quis"
+    }
+   ],
+   "nostrud": [
+    {
+     "docId": "parlato",
+     "anchor": "u2",
+     "before": "Ut enim ad minim veniam quis",
+     "after": "exercitation ullamco squilla un telefono Duis",
+     "form": "nostrud"
+    }
+   ],
+   "exercitation": [
+    {
+     "docId": "parlato",
+     "anchor": "u2",
+     "before": "enim ad minim veniam quis nostrud",
+     "after": "ullamco squilla un telefono Duis aute",
+     "form": "exercitation"
+    }
+   ],
+   "ullamco": [
+    {
+     "docId": "parlato",
+     "anchor": "u2",
+     "before": "ad minim veniam quis nostrud exercitation",
+     "after": "squilla un telefono Duis aute irure",
+     "form": "ullamco"
+    }
+   ],
+   "squilla": [
+    {
+     "docId": "parlato",
+     "anchor": "parlato:0.1.0.2.1.0",
+     "before": "minim veniam quis nostrud exercitation ullamco",
+     "after": "un telefono Duis aute irure dolor",
+     "form": "squilla"
+    }
+   ],
+   "un": [
+    {
+     "docId": "parlato",
+     "anchor": "parlato:0.1.0.2.1.0",
+     "before": "veniam quis nostrud exercitation ullamco squilla",
+     "after": "telefono Duis aute irure dolor in",
+     "form": "un"
+    }
+   ],
+   "telefono": [
+    {
+     "docId": "parlato",
+     "anchor": "parlato:0.1.0.2.1.0",
+     "before": "quis nostrud exercitation ullamco squilla un",
+     "after": "Duis aute irure dolor in Venetiis",
+     "form": "telefono"
+    }
+   ],
+   "duis": [
+    {
+     "docId": "parlato",
+     "anchor": "u2",
+     "before": "nostrud exercitation ullamco squilla un telefono",
+     "after": "aute irure dolor in Venetiis in",
+     "form": "Duis"
+    }
+   ],
+   "aute": [
+    {
+     "docId": "parlato",
+     "anchor": "u2",
+     "before": "exercitation ullamco squilla un telefono Duis",
+     "after": "irure dolor in Venetiis in reprehenderit",
+     "form": "aute"
+    }
+   ],
+   "irure": [
+    {
+     "docId": "parlato",
+     "anchor": "u2",
+     "before": "ullamco squilla un telefono Duis aute",
+     "after": "dolor in Venetiis in reprehenderit in",
+     "form": "irure"
+    }
+   ],
+   "in": [
+    {
+     "docId": "parlato",
+     "anchor": "u2",
+     "before": "un telefono Duis aute irure dolor",
+     "after": "Venetiis in reprehenderit in voluptate Velit",
+     "form": "in"
+    },
+    {
+     "docId": "parlato",
+     "anchor": "u2",
+     "before": "Duis aute irure dolor in Venetiis",
+     "after": "reprehenderit in voluptate Velit esse cillum",
+     "form": "in"
+    },
+    {
+     "docId": "parlato",
+     "anchor": "u2",
+     "before": "irure dolor in Venetiis in reprehenderit",
+     "after": "voluptate Velit esse cillum dolore eu",
+     "form": "in"
+    },
+    {
+     "docId": "parlato",
+     "anchor": "u3",
+     "before": "sint occaecat cupidatat non proident sunt",
+     "after": "culpa qui officia deserunt Mollit anim",
+     "form": "in"
+    }
+   ],
+   "venetiis": [
+    {
+     "docId": "parlato",
+     "anchor": "parlato:0.1.0.2.3",
+     "before": "telefono Duis aute irure dolor in",
+     "after": "in reprehenderit in voluptate Velit esse",
+     "form": "Venetiis"
+    }
+   ],
+   "reprehenderit": [
+    {
+     "docId": "parlato",
+     "anchor": "u2",
+     "before": "aute irure dolor in Venetiis in",
+     "after": "in voluptate Velit esse cillum dolore",
+     "form": "reprehenderit"
+    }
+   ],
+   "voluptate": [
+    {
+     "docId": "parlato",
+     "anchor": "u2",
+     "before": "dolor in Venetiis in reprehenderit in",
+     "after": "Velit esse cillum dolore eu fugiat",
+     "form": "voluptate"
+    }
+   ],
+   "velit": [
+    {
+     "docId": "parlato",
+     "anchor": "u3",
+     "before": "in Venetiis in reprehenderit in voluptate",
+     "after": "esse cillum dolore eu fugiat nulla",
+     "form": "Velit"
+    }
+   ],
+   "esse": [
+    {
+     "docId": "parlato",
+     "anchor": "u3",
+     "before": "Venetiis in reprehenderit in voluptate Velit",
+     "after": "cillum dolore eu fugiat nulla pariatur",
+     "form": "esse"
+    }
+   ],
+   "cillum": [
+    {
+     "docId": "parlato",
+     "anchor": "u3",
+     "before": "in reprehenderit in voluptate Velit esse",
+     "after": "dolore eu fugiat nulla pariatur Excepteur",
+     "form": "cillum"
+    }
+   ],
+   "eu": [
+    {
+     "docId": "parlato",
+     "anchor": "u3",
+     "before": "in voluptate Velit esse cillum dolore",
+     "after": "fugiat nulla pariatur Excepteur sint occaecat",
+     "form": "eu"
+    }
+   ],
+   "fugiat": [
+    {
+     "docId": "parlato",
+     "anchor": "u3",
+     "before": "voluptate Velit esse cillum dolore eu",
+     "after": "nulla pariatur Excepteur sint occaecat cupidatat",
+     "form": "fugiat"
+    }
+   ],
+   "nulla": [
+    {
+     "docId": "parlato",
+     "anchor": "u3",
+     "before": "Velit esse cillum dolore eu fugiat",
+     "after": "pariatur Excepteur sint occaecat cupidatat non",
+     "form": "nulla"
+    }
+   ],
+   "pariatur": [
+    {
+     "docId": "parlato",
+     "anchor": "u3",
+     "before": "esse cillum dolore eu fugiat nulla",
+     "after": "Excepteur sint occaecat cupidatat non proident",
+     "form": "pariatur"
+    }
+   ],
+   "excepteur": [
+    {
+     "docId": "parlato",
+     "anchor": "u3",
+     "before": "cillum dolore eu fugiat nulla pariatur",
+     "after": "sint occaecat cupidatat non proident sunt",
+     "form": "Excepteur"
+    }
+   ],
+   "sint": [
+    {
+     "docId": "parlato",
+     "anchor": "u3",
+     "before": "dolore eu fugiat nulla pariatur Excepteur",
+     "after": "occaecat cupidatat non proident sunt in",
+     "form": "sint"
+    }
+   ],
+   "occaecat": [
+    {
+     "docId": "parlato",
+     "anchor": "u3",
+     "before": "eu fugiat nulla pariatur Excepteur sint",
+     "after": "cupidatat non proident sunt in culpa",
+     "form": "occaecat"
+    }
+   ],
+   "cupidatat": [
+    {
+     "docId": "parlato",
+     "anchor": "u3",
+     "before": "fugiat nulla pariatur Excepteur sint occaecat",
+     "after": "non proident sunt in culpa qui",
+     "form": "cupidatat"
+    }
+   ],
+   "non": [
+    {
+     "docId": "parlato",
+     "anchor": "u3",
+     "before": "nulla pariatur Excepteur sint occaecat cupidatat",
+     "after": "proident sunt in culpa qui officia",
+     "form": "non"
+    }
+   ],
+   "proident": [
+    {
+     "docId": "parlato",
+     "anchor": "parlato:0.1.0.3.2",
+     "before": "pariatur Excepteur sint occaecat cupidatat non",
+     "after": "sunt in culpa qui officia deserunt",
+     "form": "proident"
+    }
+   ],
+   "sunt": [
+    {
+     "docId": "parlato",
+     "anchor": "u3",
+     "before": "Excepteur sint occaecat cupidatat non proident",
+     "after": "in culpa qui officia deserunt Mollit",
+     "form": "sunt"
+    }
+   ],
+   "culpa": [
+    {
+     "docId": "parlato",
+     "anchor": "u3",
+     "before": "occaecat cupidatat non proident sunt in",
+     "after": "qui officia deserunt Mollit anim id",
+     "form": "culpa"
+    }
+   ],
+   "qui": [
+    {
+     "docId": "parlato",
+     "anchor": "u3",
+     "before": "cupidatat non proident sunt in culpa",
+     "after": "officia deserunt Mollit anim id est",
+     "form": "qui"
+    }
+   ],
+   "officia": [
+    {
+     "docId": "parlato",
+     "anchor": "u3",
+     "before": "non proident sunt in culpa qui",
+     "after": "deserunt Mollit anim id est laborum",
+     "form": "officia"
+    }
+   ],
+   "deserunt": [
+    {
+     "docId": "parlato",
+     "anchor": "u3",
+     "before": "proident sunt in culpa qui officia",
+     "after": "Mollit anim id est laborum Nam",
+     "form": "deserunt"
+    }
+   ],
+   "mollit": [
+    {
+     "docId": "parlato",
+     "anchor": "u4",
+     "before": "sunt in culpa qui officia deserunt",
+     "after": "anim id est laborum Nam libero",
+     "form": "Mollit"
+    }
+   ],
+   "anim": [
+    {
+     "docId": "parlato",
+     "anchor": "u4",
+     "before": "in culpa qui officia deserunt Mollit",
+     "after": "id est laborum Nam libero tempore",
+     "form": "anim"
+    }
+   ],
+   "id": [
+    {
+     "docId": "parlato",
+     "anchor": "u4",
+     "before": "culpa qui officia deserunt Mollit anim",
+     "after": "est laborum Nam libero tempore cum",
+     "form": "id"
+    },
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "Optio cumque nihil impedit quo minus",
+     "after": "quod maxime placeat colpo di tosse",
+     "form": "id"
+    }
+   ],
+   "est": [
+    {
+     "docId": "parlato",
+     "anchor": "u4",
+     "before": "qui officia deserunt Mollit anim id",
+     "after": "laborum Nam libero tempore cum soluta",
+     "form": "est"
+    },
+    {
+     "docId": "parlato",
+     "anchor": "u4",
+     "before": "Nam libero tempore cum soluta nobis",
+     "after": "eligendi Optio cumque nihil impedit quo",
+     "form": "est"
+    }
+   ],
+   "laborum": [
+    {
+     "docId": "parlato",
+     "anchor": "u4",
+     "before": "officia deserunt Mollit anim id est",
+     "after": "Nam libero tempore cum soluta nobis",
+     "form": "laborum"
+    }
+   ],
+   "nam": [
+    {
+     "docId": "parlato",
+     "anchor": "u4",
+     "before": "deserunt Mollit anim id est laborum",
+     "after": "libero tempore cum soluta nobis est",
+     "form": "Nam"
+    },
+    {
+     "docId": "parlato",
+     "anchor": "u6",
+     "before": "ut et Lorem saepe eveniet applausi",
+     "after": "libero tempore cum soluta",
+     "form": "Nam"
+    }
+   ],
+   "libero": [
+    {
+     "docId": "parlato",
+     "anchor": "u4",
+     "before": "Mollit anim id est laborum Nam",
+     "after": "tempore cum soluta nobis est eligendi",
+     "form": "libero"
+    },
+    {
+     "docId": "parlato",
+     "anchor": "u6",
+     "before": "et Lorem saepe eveniet applausi Nam",
+     "after": "tempore cum soluta",
+     "form": "libero"
+    }
+   ],
+   "tempore": [
+    {
+     "docId": "parlato",
+     "anchor": "u4",
+     "before": "anim id est laborum Nam libero",
+     "after": "cum soluta nobis est eligendi Optio",
+     "form": "tempore"
+    },
+    {
+     "docId": "parlato",
+     "anchor": "u6",
+     "before": "Lorem saepe eveniet applausi Nam libero",
+     "after": "cum soluta",
+     "form": "tempore"
+    }
+   ],
+   "cum": [
+    {
+     "docId": "parlato",
+     "anchor": "u4",
+     "before": "id est laborum Nam libero tempore",
+     "after": "soluta nobis est eligendi Optio cumque",
+     "form": "cum"
+    },
+    {
+     "docId": "parlato",
+     "anchor": "u6",
+     "before": "saepe eveniet applausi Nam libero tempore",
+     "after": "soluta",
+     "form": "cum"
+    }
+   ],
+   "soluta": [
+    {
+     "docId": "parlato",
+     "anchor": "u4",
+     "before": "est laborum Nam libero tempore cum",
+     "after": "nobis est eligendi Optio cumque nihil",
+     "form": "soluta"
+    },
+    {
+     "docId": "parlato",
+     "anchor": "u6",
+     "before": "eveniet applausi Nam libero tempore cum",
+     "after": "",
+     "form": "soluta"
+    }
+   ],
+   "nobis": [
+    {
+     "docId": "parlato",
+     "anchor": "u4",
+     "before": "laborum Nam libero tempore cum soluta",
+     "after": "est eligendi Optio cumque nihil impedit",
+     "form": "nobis"
+    }
+   ],
+   "eligendi": [
+    {
+     "docId": "parlato",
+     "anchor": "u4",
+     "before": "libero tempore cum soluta nobis est",
+     "after": "Optio cumque nihil impedit quo minus",
+     "form": "eligendi"
+    }
+   ],
+   "optio": [
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "tempore cum soluta nobis est eligendi",
+     "after": "cumque nihil impedit quo minus id",
+     "form": "Optio"
+    }
+   ],
+   "cumque": [
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "cum soluta nobis est eligendi Optio",
+     "after": "nihil impedit quo minus id quod",
+     "form": "cumque"
+    }
+   ],
+   "nihil": [
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "soluta nobis est eligendi Optio cumque",
+     "after": "impedit quo minus id quod maxime",
+     "form": "nihil"
+    }
+   ],
+   "impedit": [
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "nobis est eligendi Optio cumque nihil",
+     "after": "quo minus id quod maxime placeat",
+     "form": "impedit"
+    }
+   ],
+   "quo": [
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "est eligendi Optio cumque nihil impedit",
+     "after": "minus id quod maxime placeat colpo",
+     "form": "quo"
+    }
+   ],
+   "minus": [
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "eligendi Optio cumque nihil impedit quo",
+     "after": "id quod maxime placeat colpo di",
+     "form": "minus"
+    }
+   ],
+   "quod": [
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "cumque nihil impedit quo minus id",
+     "after": "maxime placeat colpo di tosse Temporibus",
+     "form": "quod"
+    }
+   ],
+   "maxime": [
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "nihil impedit quo minus id quod",
+     "after": "placeat colpo di tosse Temporibus autem",
+     "form": "maxime"
+    }
+   ],
+   "placeat": [
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "impedit quo minus id quod maxime",
+     "after": "colpo di tosse Temporibus autem quibusdam",
+     "form": "placeat"
+    }
+   ],
+   "colpo": [
+    {
+     "docId": "parlato",
+     "anchor": "parlato:0.1.0.5.1.0",
+     "before": "quo minus id quod maxime placeat",
+     "after": "di tosse Temporibus autem quibusdam et",
+     "form": "colpo"
+    }
+   ],
+   "di": [
+    {
+     "docId": "parlato",
+     "anchor": "parlato:0.1.0.5.1.0",
+     "before": "minus id quod maxime placeat colpo",
+     "after": "tosse Temporibus autem quibusdam et aut",
+     "form": "di"
+    }
+   ],
+   "tosse": [
+    {
+     "docId": "parlato",
+     "anchor": "parlato:0.1.0.5.1.0",
+     "before": "id quod maxime placeat colpo di",
+     "after": "Temporibus autem quibusdam et aut officiis",
+     "form": "tosse"
+    }
+   ],
+   "temporibus": [
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "quod maxime placeat colpo di tosse",
+     "after": "autem quibusdam et aut officiis debitis",
+     "form": "Temporibus"
+    }
+   ],
+   "autem": [
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "maxime placeat colpo di tosse Temporibus",
+     "after": "quibusdam et aut officiis debitis ut",
+     "form": "autem"
+    }
+   ],
+   "quibusdam": [
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "placeat colpo di tosse Temporibus autem",
+     "after": "et aut officiis debitis ut et",
+     "form": "quibusdam"
+    }
+   ],
+   "aut": [
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "di tosse Temporibus autem quibusdam et",
+     "after": "officiis debitis ut et Lorem saepe",
+     "form": "aut"
+    }
+   ],
+   "officiis": [
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "tosse Temporibus autem quibusdam et aut",
+     "after": "debitis ut et Lorem saepe eveniet",
+     "form": "officiis"
+    }
+   ],
+   "debitis": [
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "Temporibus autem quibusdam et aut officiis",
+     "after": "ut et Lorem saepe eveniet applausi",
+     "form": "debitis"
+    }
+   ],
+   "saepe": [
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "aut officiis debitis ut et Lorem",
+     "after": "eveniet applausi Nam libero tempore cum",
+     "form": "saepe"
+    }
+   ],
+   "eveniet": [
+    {
+     "docId": "parlato",
+     "anchor": "u5",
+     "before": "officiis debitis ut et Lorem saepe",
+     "after": "applausi Nam libero tempore cum soluta",
+     "form": "eveniet"
+    }
+   ],
+   "applausi": [
+    {
+     "docId": "parlato",
+     "anchor": "parlato:0.1.0.6.0.0",
+     "before": "debitis ut et Lorem saepe eveniet",
+     "after": "Nam libero tempore cum soluta",
+     "form": "applausi"
+    }
+   ]
+  },
+  "languages": [
+   "la"
+  ]
+ }
+}

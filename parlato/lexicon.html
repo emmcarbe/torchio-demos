@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="la">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Lorem Ipsum in voce</title>
+<style>:root{--ground:#FFFFFF;--paper:#FFFFFF;--ink:#1B1B1B;--soft:#6A6A66;--hair:#E5E2D9;--faint:#CFCCC2;--accent:#B01E28;--accent-soft:#9a5a52;--link:#B01E28;--reading:"EB Garamond",Iowan Old Style,Palatino,"Palatino Linotype",Georgia,serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;--serif:var(--reading);--measure:44rem}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);font-family:var(--serif);
+  font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;font-feature-settings:"kern","liga","onum","pnum"}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:2px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+header.torchio{max-width:var(--measure);margin:0 auto;padding:26px 20px 14px;
+  border-bottom:1px solid var(--hair)}
+header.torchio h1{margin:0;font-family:var(--serif);font-size:23px;font-weight:600;letter-spacing:.01em}
+header.torchio .sub{margin:6px 0 0;color:var(--soft);font-family:var(--mono);
+  font-size:11.5px;letter-spacing:.06em;text-transform:uppercase}
+
+main.torchio{max-width:var(--measure);margin:0 auto;padding:10px 20px 0}
+
+.t-teiHeader{display:none}
+body.show-header .t-teiHeader{display:block;border:1px solid var(--hair);
+  border-radius:2px;padding:14px 16px;font-size:.85em;color:var(--soft)}
+
+.t-head{font-weight:600;margin:1.3em 0 .4em}
+.t-p,.t-ab{margin:.65em 0}
+.t-lg{margin:.8em 0 .8em 1.6em}
+.t-l{display:block;position:relative}
+.t-lg{padding-left:3em}
+.t-l.ln5::before{content:attr(data-n);position:absolute;left:-3em;top:.35em;
+  font-family:var(--mono);font-size:10px;color:var(--soft);user-select:none}
+.t-sp{margin:.65em 0}
+.t-speaker{font-family:var(--mono);font-size:.72em;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--soft);display:inline-block;margin-right:.5em}
+.t-stage{font-style:italic;color:var(--soft)}
+.t-opener,.t-closer{color:var(--soft);margin:.65em 0}
+.t-salute,.t-dateline,.t-signed{font-style:italic}
+
+.t-persName,.t-placeName,.t-orgName{border-bottom:1px dotted var(--accent-soft)}
+.t-foreign,.t-hi,.t-emph,.t-title{font-style:italic}
+.t-quote{margin:.8em 0 .8em 1.4em;color:var(--soft)}
+
+/* the class carries the behaviour: anything the ODD declares a member of
+   model.pPart.transcriptional is struck through like del, named or not */
+.s-3-editoriale>[data-el="del"],.s-3-editoriale.t-del,.t-del{text-decoration:line-through;color:var(--soft)}
+.t-metamark{color:var(--soft);font-size:.78em;cursor:help;border-bottom:1px dotted var(--hair)}
+.t-add{vertical-align:super;font-size:.82em}
+.t-unclear{background:#F5F4EF}
+.t-sign{color:var(--soft)}
+.t-gap{color:var(--soft);font-family:var(--mono);font-size:.85em}
+.t-abbr{border-bottom:1px dotted var(--faint)}
+
+.t-pb{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.08em;
+  color:var(--accent);vertical-align:super;margin:0 .18em;user-select:none}
+
+/* transcriptions of speech (TEI ch. 8): the spoken layer, distinct and never
+   merged into prose. An utterance is a block opened by its speaker; the
+   paralinguistic marks stand out from the words */
+.t-u{display:block;margin:.55em 0}
+.t-u .t-speaker{font-family:var(--mono);font-size:.7em;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--accent);user-select:none}
+.t-pause,.t-vocal,.t-incident,.t-kinesic{color:var(--soft)}
+.t-pause{font-family:var(--mono);font-size:.9em;margin:0 .1em}
+.t-vocal,.t-incident,.t-kinesic{font-style:italic;font-size:.85em;margin:0 .12em}
+.t-shift{display:inline-block;width:0;border-left:2px solid var(--accent-soft);
+  height:.72em;margin:0 .2em;vertical-align:-.04em}
+/* two reading notations, the reader chooses (toolbar): sober editorial signs
+   are the default; Jefferson conversation-analysis marks on demand. Both are
+   real text in the page; a body class shows one at a time */
+.spk-jeff{display:none}
+body.spk-jefferson .spk-sober{display:none}
+body.spk-jefferson .spk-jeff{display:inline}
+
+.t-note{font-size:.85em;color:var(--soft);border-left:2px solid var(--hair);
+  padding-left:.7em;margin:.5em 0}
+.t-note-mark{color:var(--faint);font-size:.55em;vertical-align:super;user-select:none}
+/* an apparatus entry in running prose is part of the sentence: it holds a
+   note, so the HTML element must be a div (a span may not contain one), but
+   it reads inline. Its note is either placed in a margin (absolute) or
+   collapsed to its mark, so it never breaks the line either */
+.t-app{display:inline}
+.t-teiHeader .t-note-mark,.header-full .t-note-mark,.t-app .t-note-mark{display:none}
+.t-app .t-note{display:none}
+@media(min-width:1180px){.t-app .t-note{display:block}}
+.t-note-mark:hover + .t-note,.t-note:hover{border-left-color:var(--accent);color:var(--ink)}
+.note-hi{background:rgba(176,30,40,.13);border-radius:2px;transition:background .15s}
+.t-note.note-hi{color:var(--ink)}
+body.notes-off .t-note{display:none}
+body.notes-off .t-note-mark{opacity:.25}
+@media(min-width:1180px){
+  .t-note{float:right;clear:right;width:14rem;margin:.1em -16.5rem .6em 1em;
+    font-size:.78em;line-height:1.4;border-left:0;padding-left:0}
+  .header-full .t-note,.t-teiHeader .t-note{float:none;width:auto;margin:.5em 0;
+    border-left:2px solid var(--hair);padding-left:.7em}
+  .t-note.placed{font-size:.78em;line-height:1.4}
+}
+
+.t-app.app-has-lem .t-rdg{display:none}
+/* an app without a lem privileges nothing: the first reading stands in the
+   text (the others are in the apparatus), never all of them concatenated */
+.t-app.app-no-lem>[data-el="rdg"]~[data-el="rdg"],
+.t-app.app-no-lem>[data-el="rdgGrp"]~[data-el="rdgGrp"]{display:none}
+/* an app that points to the text (double-end-point, location-referenced)
+   carries no text of its own: the passage is already in the base text */
+.t-app.app-pointing{display:none}
+.t-lem{border-bottom:1px dotted var(--accent-soft)}
+.t-app[data-type="lac"] [data-el="lem"]{font-family:var(--mono);font-size:.62em;
+  font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);
+  border-bottom:none;margin-right:.5em;vertical-align:.08em}
+.t-app:hover .t-lem,.t-lem:hover{background:color-mix(in srgb,var(--accent) 7%,transparent)}
+
+footer.torchio{max-width:var(--measure);margin:44px auto 0;padding:16px 20px 36px;
+  border-top:1px solid var(--hair);color:var(--soft);
+  font-family:var(--mono);font-size:11px;letter-spacing:.05em}
+footer.torchio .press{color:var(--accent)}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:8px 14px;font-family:var(--mono);font-size:11px;z-index:100}
+.skip:focus{left:0}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+
+/* Andamento — the derived tempo reading. Words fade in as they are "spoken";
+   a floating control bar plays, restarts or reveals all at once; the clock is
+   marked estimated (an approximate reconstruction, not the recording's time).
+   A word outside Andamento carries no styling: .beat only bites under the mode */
+body.spk-andamento .beat{opacity:.22;transition:opacity .22s ease}
+body.spk-andamento .beat.on{opacity:1}
+body.spk-andamento .beat.now{background:color-mix(in srgb,var(--accent) 22%,transparent);border-radius:3px}
+@media(prefers-reduced-motion:reduce){body.spk-andamento .beat{transition:none}}
+.andamento-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;z-index:60;
+  display:none;gap:6px;align-items:center;flex-wrap:wrap;justify-content:center;max-width:92vw;
+  background:var(--ink);color:var(--ground);
+  padding:7px 12px;border-radius:22px;font-family:var(--mono);font-size:12px;
+  box-shadow:0 6px 22px rgba(0,0,0,.28)}
+.andamento-bar button{background:none;border:0;color:var(--ground);font-size:13px;
+  cursor:pointer;padding:3px 8px;letter-spacing:.06em;text-transform:none}
+.andamento-bar button:hover{opacity:.75}
+.andamento-clock{margin:0 4px;opacity:.85;letter-spacing:.08em;font-variant-numeric:tabular-nums}
+.andamento-seek{-webkit-appearance:none;appearance:none;height:4px;width:min(42vw,240px);
+  background:rgba(255,255,255,.28);border-radius:3px;cursor:pointer;margin:0 6px}
+.andamento-seek::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:13px;height:13px;
+  border-radius:50%;background:var(--ground);border:2px solid var(--accent);cursor:pointer}
+.andamento-seek::-moz-range-thumb{width:13px;height:13px;border-radius:50%;background:var(--ground);
+  border:2px solid var(--accent);cursor:pointer}
+@media(prefers-reduced-motion:reduce){.andamento-bar{transition:none}}
+.torchio-bar{position:sticky;top:0;z-index:40;background:var(--ground);
+  border-bottom:1px solid var(--hair);font-family:var(--mono)}
+.torchio-bar .inner{max-width:var(--measure);margin:0 auto;padding:8px 20px;
+  display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center}
+.torchio-bar .modes{display:inline-flex;border:1px solid var(--hair);
+  border-radius:2px;overflow:hidden}
+.torchio-bar button{font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--soft);background:none;border:none;
+  cursor:pointer;padding:6px 14px}
+.torchio-bar .modes button.active{background:var(--accent);color:#fff}
+.torchio-bar .sw.off{text-decoration:line-through;opacity:.6}
+
+.t-lem{cursor:pointer}
+.t-choice{cursor:pointer}
+body.app-off .t-lem{border-bottom:none;cursor:inherit}
+[data-ref],[data-key]{cursor:pointer}
+
+.torchio-pop{position:absolute;z-index:60;max-width:22rem;background:var(--paper);
+  border:1px solid var(--hair);border-radius:2px;padding:12px 14px;
+  box-shadow:0 12px 28px -18px rgba(27,27,27,.45);font-size:15px;line-height:1.45}
+.torchio-pop .k{font-family:var(--mono);font-size:9.5px;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--soft);display:block;
+  margin-bottom:6px}
+.torchio-pop .rdgline{display:flex;gap:10px;align-items:baseline;padding:3px 0}
+.torchio-pop .sig{font-family:var(--mono);font-size:11px;font-weight:600;
+  color:var(--accent);min-width:2.2em}
+.torchio-pop .is-lem{border-bottom:1px solid var(--hair)}
+.torchio-pop .meta{font-family:var(--mono);font-size:10.5px;color:var(--soft);margin-top:8px}
+.torchio-pop .notebody{font-size:14px;line-height:1.5}
+
+/* a verse followed by its apparatus band opens the scheme on click */
+body.has-band [data-el="l"]{cursor:pointer}
+body.has-align [data-el="l"]{cursor:pointer}
+[data-change],[data-hand]{cursor:pointer}
+.t-add[data-change],.t-add[data-hand]{border-bottom:1px dotted var(--accent-soft)}
+.wv{border-bottom:1px dotted var(--accent-soft);cursor:pointer}
+.app-anchored{border-bottom:1px dotted var(--accent-soft);cursor:pointer}
+body.app-off .app-anchored{border-bottom:none;cursor:inherit}
+body.app-off .wv{border-bottom:none;cursor:inherit}
+body.app-off.has-band [data-el="l"]{cursor:inherit}
+.torchio-pop .popband{font-size:14px;max-height:18rem;overflow-y:auto}
+.torchio-pop .popband .band-e{display:block;margin:.35em 0}
+.torchio-pop .popband .band-lem{font-style:italic}
+.torchio-pop .popband .bw{color:var(--accent);cursor:pointer}
+.torchio-pop .popband .bw:hover{text-decoration:underline}
+
+/* dense notes: those the margins cannot hold collapse to their marks and open
+   on click; the ones placed in a margin (.placed) stay visible */
+body.notes-dense main.torchio .t-note:not(.placed){display:none!important}
+body.notes-dense .t-note-mark{color:var(--accent);cursor:pointer;font-size:.85em;font-weight:700;line-height:0;padding:.3em .3em;margin:-.3em -.1em}
+[data-notepop]{cursor:pointer}
+body.notes-dense.notes-off .t-note-mark{cursor:default}
+
+/* transcription levels: reading is the default */
+.t-choice .t-orig,.t-choice .t-abbr,.t-choice .t-sic{display:none}
+body.mode-dipl .t-choice .t-orig,body.mode-dipl .t-choice .t-abbr,body.mode-dipl .t-choice .t-sic{display:inline}
+body.mode-dipl .t-choice .t-reg,body.mode-dipl .t-choice .t-expan,body.mode-dipl .t-choice .t-corr{display:none}
+/* behaviour by class, not by tag: an element that declares itself a member
+   of a TEI model class behaves like the class, whatever it is called */
+body.mode-read .s-3-editoriale [data-el="del"],body.mode-read .t-del{display:none}
+body.mode-dipl .s-3-editoriale .t-orig,body.mode-dipl .s-3-editoriale .t-abbr{display:inline}
+body.mode-read .t-del{display:none}
+body.mode-read .t-am{display:none}
+body.mode-dipl .t-ex{display:none}
+body.mode-read .t-lb br{display:none}
+body.mode-read .t-lb::after{content:" "}
+body.mode-read .t-lb[data-break="no"]::after{content:none}
+body.mode-read .t-add{vertical-align:baseline;font-size:inherit}
+
+.torchio-nav{display:flex;flex-wrap:wrap;gap:22px;margin-left:auto;min-width:0}
+.torchio-nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;
+  color:var(--soft);text-transform:uppercase}
+.torchio-nav a.on{color:var(--accent)}
+.torchio-nav a.up{color:var(--accent-soft)}
+.torchio-subnav{display:flex;gap:20px;flex-wrap:wrap;max-width:var(--measure);margin:0 auto 1.2em;padding:10px 20px 12px;border-bottom:1px solid var(--hair)}
+.torchio-subnav a{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--soft);text-transform:uppercase}
+.torchio-subnav a.on{color:var(--accent)}
+.torchio-subnav a:hover{color:var(--ink);text-decoration:none}
+.torchio-nav a:hover{color:var(--ink);text-decoration:none}
+header.torchio{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:baseline}
+header.torchio .tt{min-width:14rem}
+@media(max-width:540px){
+  header.torchio{align-items:flex-start}
+  header.torchio .tt{min-width:0;width:100%}
+  .torchio-nav{width:100%;margin-left:0;gap:8px 20px}
+  .torchio-subnav{gap:8px 18px}
+  ol.toc.toc-cols{columns:1}
+}
+.about dt{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--soft);margin-top:1.2em}
+.about dd{margin:0.3em 0 0}
+.about dd.scrollbox{max-height:18rem;overflow-y:auto;border:1px solid var(--hair);
+  border-radius:2px;padding:0 12px;margin-top:.5em}
+.wit-table,.idx-table{width:100%;border-collapse:collapse;margin:.6em 0}
+.wit-table th{text-align:left;font-family:var(--mono);font-size:10px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--soft);
+  padding:6px 10px 6px 0;border-bottom:1px solid var(--hair)}
+.md-table td:first-child{font-size:1.05em;white-space:nowrap}
+.wit-table td,.idx-table td{padding:6px 10px 6px 0;border-bottom:1px solid var(--hair);
+  vertical-align:baseline}
+.agree-bar{display:inline-block;height:7px;background:var(--accent-soft);border-radius:2px;min-width:2px}
+.sigla{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--accent);
+  white-space:nowrap}
+.occ{font-family:var(--mono);font-size:10.5px;color:var(--soft)}
+.occ a{color:var(--accent);margin-right:.5em}
+h2.sec{font-size:20px;font-weight:600;margin:1.6em 0 .4em}
+.md-code{background:var(--wash,#f6f5f2);border:1px solid var(--hair);border-radius:3px;
+  padding:.7em 1em;overflow-x:auto;font-family:var(--mono);font-size:12.5px;line-height:1.5}
+.md-code code{background:none;padding:0}
+main img{max-width:100%;height:auto}
+main hr{border:0;border-top:1px solid var(--hair);margin:1.8em 0}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;
+  padding:8px 14px;font-family:var(--mono);font-size:11px;z-index:100}
+.skip:focus{left:0}
+.header-full .t-teiHeader{display:block;border:0;padding:0;color:var(--ink);font-size:1em}
+.header-full div[data-el]::before{content:attr(data-el);display:block;
+  font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--soft);margin:.9em 0 .1em}
+.header-full{border:1px solid var(--hair);border-radius:2px;padding:6px 16px 14px;
+  font-size:.92em;overflow-x:auto}
+.header-full span[data-el]+span[data-el],.t-teiHeader span[data-el]+span[data-el]{margin-left:.3em}
+.header-full div[data-el="teiHeader"]::before{content:"TEI Header"}
+.header-full div[data-el="fileDesc"]::before{content:"File Description"}
+.header-full div[data-el="titleStmt"]::before{content:"Title"}
+.header-full div[data-el="editionStmt"]::before{content:"Edition"}
+.header-full div[data-el="extent"]::before{content:"Extent"}
+.header-full div[data-el="publicationStmt"]::before{content:"Publication"}
+.header-full div[data-el="seriesStmt"]::before{content:"Series"}
+.header-full div[data-el="notesStmt"]::before{content:"Notes"}
+.header-full div[data-el="sourceDesc"]::before{content:"Source"}
+.header-full div[data-el="respStmt"]::before{content:"Responsibility"}
+.header-full div[data-el="availability"]::before{content:"Availability"}
+.header-full div[data-el="licence"]::before{content:"Licence"}
+.header-full div[data-el="listWit"]::before{content:"Witnesses"}
+.header-full div[data-el="witness"]::before{content:"Witness"}
+.header-full div[data-el="msDesc"]::before{content:"Manuscript"}
+.header-full div[data-el="msIdentifier"]::before{content:"Identifier"}
+.header-full div[data-el="msContents"]::before{content:"Contents"}
+.header-full div[data-el="physDesc"]::before{content:"Physical Description"}
+.header-full div[data-el="history"]::before{content:"History"}
+.header-full div[data-el="encodingDesc"]::before{content:"Encoding"}
+.header-full div[data-el="projectDesc"]::before{content:"Project"}
+.header-full div[data-el="editorialDecl"]::before{content:"Editorial Practice"}
+.header-full div[data-el="samplingDecl"]::before{content:"Sampling"}
+.header-full div[data-el="refsDecl"]::before{content:"Reference System"}
+.header-full div[data-el="classDecl"]::before{content:"Classification Scheme"}
+.header-full div[data-el="listPrefixDef"]::before{content:"Prefixes"}
+.header-full div[data-el="profileDesc"]::before{content:"Profile"}
+.header-full div[data-el="creation"]::before{content:"Creation"}
+.header-full div[data-el="langUsage"]::before{content:"Languages"}
+.header-full div[data-el="textClass"]::before{content:"Classification"}
+.header-full div[data-el="correspDesc"]::before{content:"Correspondence"}
+.header-full div[data-el="handNotes"]::before{content:"Hands"}
+.header-full div[data-el="revisionDesc"]::before{content:"Revision History"}
+.header-full div[data-el="listChange"]::before{content:"Changes"}
+.header-full div[data-el="biblFull"]::before{content:"Bibliographic Record"}
+.header-full div[data-el="appInfo"]::before{content:"Application"}
+.header-full div[data-el="p"]::before{content:none}
+.header-full div[data-el="ab"]::before{content:none}
+.header-full div[data-el="list"]::before{content:none}
+.header-full div[data-el="item"]::before{content:none}
+.header-full div[data-el="table"]::before{content:none}
+.header-full div[data-el="row"]::before{content:none}
+.header-full div[data-el="cell"]::before{content:none}
+.header-full div[data-el="lg"]::before{content:none}
+.header-full div[data-el="l"]::before{content:none}
+.header-full div[data-el="head"]::before{content:none}
+.header-full div[data-el="note"]::before{content:none}
+.header-full div[data-el="bibl"]::before{content:none}
+.header-full div[data-el="address"]::before{content:none}
+.header-full div[data-el="addrLine"]::before{content:none}
+.header-full div[data-el="change"]::before{content:none}
+
+.reg-filter{font-family:var(--mono);font-size:12px;padding:6px 10px;
+  border:1px solid var(--hair);border-radius:2px;background:var(--paper);
+  color:var(--ink);margin:.4em 0;width:14rem;max-width:100%}
+.reg-table th{font-family:var(--mono);font-size:10px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--soft);text-align:left;
+  padding:6px 10px 6px 0;border-bottom:2px solid var(--hair);cursor:pointer}
+.reg-table th[aria-sort="ascending"]::after{content:" \2191"}
+.reg-table th[aria-sort="descending"]::after{content:" \2193"}
+.reg-count{font-family:var(--mono);font-size:10.5px;color:var(--soft);margin-left:.8em}
+.vmap{margin:1.4em 0;padding-top:.4em;border-top:1px solid var(--hair)}
+.vmap-n{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.1em;
+  color:var(--accent);margin:0 0 .3em}
+.vmap-app{margin:.5em 0 .8em}
+.vmap-lem{font-style:italic}
+.vmap-rdg{font-size:.88em;margin:.15em 0 .15em 1.4em;color:var(--ink)}
+.vmap-wit{color:var(--soft)}
+.vmap .bw{color:var(--accent);cursor:pointer}
+.vmap .bw:hover{text-decoration:underline}
+.vmap-count{font-family:var(--mono);font-size:10px;color:var(--soft)}
+.vmap-lac .vmap-rdg{color:var(--soft)}
+.vmap-edited{color:var(--ink)}
+.vmap-mark{font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--accent)}
+/* the band is data: the popups read it, the page does not show it */
+.app-band{display:none}
+.app-band .band-lem{font-style:italic;color:var(--ink)}
+.app-band .bw{color:var(--accent);cursor:pointer}
+.app-band .bw:hover{text-decoration:underline}
+.app-band .band-sep{color:var(--faint)}
+:target{background:rgba(176,30,40,.10);border-radius:2px}
+.prevnext{display:flex;justify-content:space-between;gap:1em;margin:1.2em 0;
+  font-family:var(--mono);font-size:11px}
+ol.toc{column-gap:2.5em;padding-left:1.4em;margin:1em 0}
+ol.toc.toc-cols{columns:2}
+.idx-search{font-family:var(--mono);font-size:13px;padding:7px 11px;border:1px solid var(--hair);
+  border-radius:2px;background:var(--paper);color:var(--ink);min-width:16rem;margin:.6em 0 .2em}
+.alpha{font-family:var(--mono);font-size:11px;letter-spacing:.12em;margin:.3em 0 .6em}
+.alpha a{color:var(--accent);text-decoration:none;padding:0 .18em}
+.alpha a:hover{text-decoration:underline}
+.idx-up{font-size:.7em;color:var(--soft);text-decoration:none;margin-left:.5em}
+.idx-up:hover{color:var(--accent)}
+.totop{position:fixed;right:22px;bottom:22px;width:34px;height:34px;line-height:32px;text-align:center;
+  border:1px solid var(--hair);border-radius:2px;background:var(--paper);color:var(--accent);
+  text-decoration:none;font-size:16px}
+.totop:hover{border-color:var(--accent)}
+.t-line{display:block}
+.t-zone{display:block;margin:0 0 .2em}
+.t-surface{display:block;margin:1.6em 0;padding:1.2em 1.4em;border:1px solid var(--hair);border-radius:2px}
+.t-surface .t-surface{border:none;margin:0;padding:0}
+.lx-bar-top{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin:1em 0;
+  padding-bottom:.8em;border-bottom:1px solid var(--hair)}
+.lx-search{font-family:var(--mono);font-size:13px;padding:7px 11px;border:1px solid var(--hair);
+  border-radius:2px;background:var(--paper);color:var(--ink);min-width:14rem}
+.lx-ctl{font-family:var(--mono);font-size:11px;color:var(--soft);display:inline-flex;gap:.4em;align-items:center}
+.lx-ctl select{font-family:var(--mono);font-size:12px;padding:4px 6px;border:1px solid var(--hair);
+  border-radius:2px;background:var(--paper);color:var(--ink)}
+.lx-views{margin-left:auto;display:inline-flex;border:1px solid var(--hair);border-radius:2px;overflow:hidden}
+.lx-views button{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--soft);background:none;border:none;cursor:pointer;padding:7px 13px}
+.lx-views button.active{background:var(--accent);color:#fff}
+.lx-table{width:100%;border-collapse:collapse}
+.lx-table th{text-align:left;font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--soft);padding:6px 10px 6px 0;border-bottom:1px solid var(--hair)}
+.lx-table td{padding:4px 10px 4px 0;border-bottom:1px solid var(--faint)}
+.lx-table .lx-num{text-align:right;font-family:var(--mono);font-size:12px;white-space:nowrap}
+.lx-table .lx-w{cursor:pointer}
+.lx-sort{cursor:pointer;user-select:none}
+.lx-sort:hover,.lx-sort.on{color:var(--accent)}
+.lx-arr{color:var(--accent);font-size:8px}
+.lx-alpha{margin:0 0 1em}
+.lx-table .lx-rel{color:var(--soft)}
+.lx-table tr.is-stop .lx-w{color:var(--soft)}
+.lx-lang{font-family:var(--mono);font-size:10px;color:var(--soft)}
+.lx-flip{font-size:11px;line-height:1;color:var(--accent);background:none;border:none;cursor:pointer;padding:2px 4px}
+.lx-kwic{width:100%;border-collapse:collapse;font-size:14px}
+.lx-kwic td{padding:3px 8px;vertical-align:baseline}
+.lx-kwic .lx-b{text-align:right;color:var(--soft);width:42%}
+.lx-kwic .lx-k{text-align:center;font-weight:600;color:var(--accent);white-space:nowrap}
+.lx-kwic .lx-k a{color:inherit}
+.lx-kwic .lx-a{color:var(--soft);width:42%}
+.lx-kwic tr:hover td{background:rgba(176,30,40,.04)}
+ol.toc li{margin:.3em 0;break-inside:avoid}
+.idx-toc{font-family:var(--mono);font-size:12px;margin:.6em 0 1.2em;
+  padding-bottom:.8em;border-bottom:1px solid var(--hair)}
+.idx-toc a{color:var(--accent)}
+.standoff-notes .t-note-mark{display:none}
+.lem-note{font-family:var(--mono);font-size:11px;color:var(--soft);margin:.8em 0}
+details.lemma{border-bottom:1px solid var(--hair);padding:.45em 0}
+details.lemma summary{cursor:pointer;list-style-position:outside}
+.lem-forms{color:var(--soft);font-size:.9em}
+.kwic{margin:.5em 0 .3em}
+.kwic td{border-bottom:0;padding:2px 8px 2px 0}
+.kwic .kb{text-align:right;color:var(--soft);width:40%}
+.kwic .kf{white-space:nowrap;text-align:center}
+.kwic .kf a{font-weight:600}
+.kwic .ka{color:var(--soft);width:40%}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Vai al contenuto</a>
+<header class="torchio">
+<div class="tt"><h1>Lorem Ipsum in voce</h1><p class="sub">lessico</p></div>
+<nav class="torchio-nav"><a href="index.html">Edizione</a><a href="text.html">Testo</a><a href="indices.html" class="on">Lab</a><a href="data.html">Dati</a></nav>
+</header>
+<nav class="torchio-subnav" aria-label="Lab"><a href="indices.html">Indici</a><a href="lexicon.html" class="on">Analisi</a><a href="map.html">Mappa</a></nav>
+<main id="main" class="torchio lexicon"><p class="occ lx-stats"><b>106</b> parole · <b>89</b> forme distinte · type-token ratio <b>0.8396</b></p><div class="lx-bar-top"><input class="lx-search" type="search" placeholder="cerca una parola…" aria-label="cerca una parola…"/><label class="lx-ctl">Stopword <select class="lx-stopsel"><option value="">nessuna</option><option value="it">Italiano</option><option value="la" selected>Latino</option><option value="en">English</option><option value="grc">Ancient Greek</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="es">Español</option><option value="enm">Middle English</option><option value="ang">Old English</option><option value="fro">Ancien français</option></select></label><label class="lx-ctl"><input type="checkbox" class="lx-hidestop"/> nascondi le stopword</label><span class="lx-views" role="group"><button data-view="freq" class="active">Frequenze</button><button data-view="conc">Concordanza</button></span></div><section class="lx-view lx-freq"><table class="lx-table"><thead><tr><th class="lx-sort" data-sort="form">parola <span class="lx-arr"></span></th><th class="lx-num lx-sort" data-sort="count">assoluta <span class="lx-arr"></span></th><th class="lx-num lx-sort" data-sort="rel">per 1000 <span class="lx-arr"></span></th><th class="lx-num">stop</th></tr></thead><tbody><tr data-form="in" data-lang="la" class="is-stop"><td class="lx-w">in</td><td class="lx-num">4</td><td class="lx-num lx-rel">37.736‰</td><td class="lx-num"><button class="lx-flip">●</button></td></tr><tr data-form="et" data-lang="la" class="is-stop"><td class="lx-w">et</td><td class="lx-num">3</td><td class="lx-num lx-rel">28.302‰</td><td class="lx-num"><button class="lx-flip">●</button></td></tr><tr data-form="ut" data-lang="la" class="is-stop"><td class="lx-w">ut</td><td class="lx-num">3</td><td class="lx-num lx-rel">28.302‰</td><td class="lx-num"><button class="lx-flip">●</button></td></tr><tr data-form="cum" data-lang="la" class="is-stop"><td class="lx-w">cum</td><td class="lx-num">2</td><td class="lx-num lx-rel">18.868‰</td><td class="lx-num"><button class="lx-flip">●</button></td></tr><tr data-form="dolor" data-lang="la"><td class="lx-w">dolor</td><td class="lx-num">2</td><td class="lx-num lx-rel">18.868‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="dolore" data-lang="la"><td class="lx-w">dolore</td><td class="lx-num">2</td><td class="lx-num lx-rel">18.868‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="est" data-lang="la" class="is-stop"><td class="lx-w">est</td><td class="lx-num">2</td><td class="lx-num lx-rel">18.868‰</td><td class="lx-num"><button class="lx-flip">●</button></td></tr><tr data-form="id" data-lang="la" class="is-stop"><td class="lx-w">id</td><td class="lx-num">2</td><td class="lx-num lx-rel">18.868‰</td><td class="lx-num"><button class="lx-flip">●</button></td></tr><tr data-form="libero" data-lang="la"><td class="lx-w">libero</td><td class="lx-num">2</td><td class="lx-num lx-rel">18.868‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="lorem" data-lang="la"><td class="lx-w">lorem</td><td class="lx-num">2</td><td class="lx-num lx-rel">18.868‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="nam" data-lang="la"><td class="lx-w">nam</td><td class="lx-num">2</td><td class="lx-num lx-rel">18.868‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="soluta" data-lang="la"><td class="lx-w">soluta</td><td class="lx-num">2</td><td class="lx-num lx-rel">18.868‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="tempore" data-lang="la"><td class="lx-w">tempore</td><td class="lx-num">2</td><td class="lx-num lx-rel">18.868‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="ad" data-lang="la" class="is-stop"><td class="lx-w">ad</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">●</button></td></tr><tr data-form="adipiscing" data-lang="la"><td class="lx-w">adipiscing</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="aliqua" data-lang="la"><td class="lx-w">aliqua</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="amet" data-lang="la"><td class="lx-w">amet</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="anim" data-lang="la"><td class="lx-w">anim</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="applausi" data-lang="la"><td class="lx-w">applausi</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="aut" data-lang="la" class="is-stop"><td class="lx-w">aut</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">●</button></td></tr><tr data-form="aute" data-lang="la"><td class="lx-w">aute</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="autem" data-lang="la" class="is-stop"><td class="lx-w">autem</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">●</button></td></tr><tr data-form="cillum" data-lang="la"><td class="lx-w">cillum</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="colpo" data-lang="la"><td class="lx-w">colpo</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="consectetur" data-lang="la"><td class="lx-w">consectetur</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="culpa" data-lang="la"><td class="lx-w">culpa</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="cumque" data-lang="la"><td class="lx-w">cumque</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="cupidatat" data-lang="la"><td class="lx-w">cupidatat</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="debitis" data-lang="la"><td class="lx-w">debitis</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="deserunt" data-lang="la"><td class="lx-w">deserunt</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="di" data-lang="la"><td class="lx-w">di</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="do" data-lang="la"><td class="lx-w">do</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="duis" data-lang="la"><td class="lx-w">duis</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="eiusmod" data-lang="la"><td class="lx-w">eiusmod</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="eligendi" data-lang="la"><td class="lx-w">eligendi</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="elit" data-lang="la"><td class="lx-w">elit</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="enim" data-lang="la" class="is-stop"><td class="lx-w">enim</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">●</button></td></tr><tr data-form="esse" data-lang="la" class="is-stop"><td class="lx-w">esse</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">●</button></td></tr><tr data-form="eu" data-lang="la"><td class="lx-w">eu</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="eveniet" data-lang="la"><td class="lx-w">eveniet</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="excepteur" data-lang="la"><td class="lx-w">excepteur</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="exercitation" data-lang="la"><td class="lx-w">exercitation</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="fugiat" data-lang="la"><td class="lx-w">fugiat</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="impedit" data-lang="la"><td class="lx-w">impedit</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="incididunt" data-lang="la"><td class="lx-w">incididunt</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="ipsum" data-lang="la"><td class="lx-w">ipsum</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="irure" data-lang="la"><td class="lx-w">irure</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="labore" data-lang="la"><td class="lx-w">labore</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="laborum" data-lang="la"><td class="lx-w">laborum</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="magna" data-lang="la"><td class="lx-w">magna</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="maxime" data-lang="la"><td class="lx-w">maxime</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="minim" data-lang="la"><td class="lx-w">minim</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="minus" data-lang="la"><td class="lx-w">minus</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="mollit" data-lang="la"><td class="lx-w">mollit</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="nihil" data-lang="la"><td class="lx-w">nihil</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="nobis" data-lang="la"><td class="lx-w">nobis</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="non" data-lang="la" class="is-stop"><td class="lx-w">non</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">●</button></td></tr><tr data-form="nostrud" data-lang="la"><td class="lx-w">nostrud</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="nulla" data-lang="la"><td class="lx-w">nulla</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="occaecat" data-lang="la"><td class="lx-w">occaecat</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="officia" data-lang="la"><td class="lx-w">officia</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="officiis" data-lang="la"><td class="lx-w">officiis</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="optio" data-lang="la"><td class="lx-w">optio</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="pariatur" data-lang="la"><td class="lx-w">pariatur</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="placeat" data-lang="la"><td class="lx-w">placeat</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="proident" data-lang="la"><td class="lx-w">proident</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="qui" data-lang="la" class="is-stop"><td class="lx-w">qui</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">●</button></td></tr><tr data-form="quibusdam" data-lang="la"><td class="lx-w">quibusdam</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="quis" data-lang="la"><td class="lx-w">quis</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="quo" data-lang="la"><td class="lx-w">quo</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="quod" data-lang="la" class="is-stop"><td class="lx-w">quod</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">●</button></td></tr><tr data-form="reprehenderit" data-lang="la"><td class="lx-w">reprehenderit</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="ride" data-lang="la"><td class="lx-w">ride</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="saepe" data-lang="la"><td class="lx-w">saepe</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="sed" data-lang="la" class="is-stop"><td class="lx-w">sed</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">●</button></td></tr><tr data-form="sint" data-lang="la"><td class="lx-w">sint</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="sit" data-lang="la"><td class="lx-w">sit</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="squilla" data-lang="la"><td class="lx-w">squilla</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="sunt" data-lang="la" class="is-stop"><td class="lx-w">sunt</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">●</button></td></tr><tr data-form="telefono" data-lang="la"><td class="lx-w">telefono</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="tempor" data-lang="la"><td class="lx-w">tempor</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="temporibus" data-lang="la"><td class="lx-w">temporibus</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="tosse" data-lang="la"><td class="lx-w">tosse</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="ullamco" data-lang="la"><td class="lx-w">ullamco</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="un" data-lang="la"><td class="lx-w">un</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="velit" data-lang="la"><td class="lx-w">velit</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="venetiis" data-lang="la"><td class="lx-w">venetiis</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="veniam" data-lang="la"><td class="lx-w">veniam</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr><tr data-form="voluptate" data-lang="la"><td class="lx-w">voluptate</td><td class="lx-num">1</td><td class="lx-num lx-rel">9.434‰</td><td class="lx-num"><button class="lx-flip">○</button></td></tr></tbody></table></section><section class="lx-view lx-conc" hidden><nav class="lx-alpha alpha" aria-label="A-Z"></nav><div class="lx-conc-out"></div></section></main>
+<footer class="torchio">Pubblicato con <span class="press">Torchio</span> v0.2.0-beta.2 · 5724f51 · 2026-09-18</footer>
+<script>
+(function(){
+  var FREQ=[{"form":"in","count":4,"lang":"la","rel":37.736,"stop":true},{"form":"et","count":3,"lang":"la","rel":28.302,"stop":true},{"form":"ut","count":3,"lang":"la","rel":28.302,"stop":true},{"form":"cum","count":2,"lang":"la","rel":18.868,"stop":true},{"form":"dolor","count":2,"lang":"la","rel":18.868,"stop":false},{"form":"dolore","count":2,"lang":"la","rel":18.868,"stop":false},{"form":"est","count":2,"lang":"la","rel":18.868,"stop":true},{"form":"id","count":2,"lang":"la","rel":18.868,"stop":true},{"form":"libero","count":2,"lang":"la","rel":18.868,"stop":false},{"form":"lorem","count":2,"lang":"la","rel":18.868,"stop":false},{"form":"nam","count":2,"lang":"la","rel":18.868,"stop":false},{"form":"soluta","count":2,"lang":"la","rel":18.868,"stop":false},{"form":"tempore","count":2,"lang":"la","rel":18.868,"stop":false},{"form":"ad","count":1,"lang":"la","rel":9.434,"stop":true},{"form":"adipiscing","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"aliqua","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"amet","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"anim","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"applausi","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"aut","count":1,"lang":"la","rel":9.434,"stop":true},{"form":"aute","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"autem","count":1,"lang":"la","rel":9.434,"stop":true},{"form":"cillum","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"colpo","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"consectetur","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"culpa","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"cumque","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"cupidatat","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"debitis","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"deserunt","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"di","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"do","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"duis","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"eiusmod","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"eligendi","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"elit","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"enim","count":1,"lang":"la","rel":9.434,"stop":true},{"form":"esse","count":1,"lang":"la","rel":9.434,"stop":true},{"form":"eu","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"eveniet","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"excepteur","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"exercitation","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"fugiat","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"impedit","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"incididunt","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"ipsum","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"irure","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"labore","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"laborum","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"magna","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"maxime","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"minim","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"minus","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"mollit","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"nihil","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"nobis","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"non","count":1,"lang":"la","rel":9.434,"stop":true},{"form":"nostrud","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"nulla","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"occaecat","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"officia","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"officiis","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"optio","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"pariatur","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"placeat","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"proident","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"qui","count":1,"lang":"la","rel":9.434,"stop":true},{"form":"quibusdam","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"quis","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"quo","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"quod","count":1,"lang":"la","rel":9.434,"stop":true},{"form":"reprehenderit","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"ride","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"saepe","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"sed","count":1,"lang":"la","rel":9.434,"stop":true},{"form":"sint","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"sit","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"squilla","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"sunt","count":1,"lang":"la","rel":9.434,"stop":true},{"form":"telefono","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"tempor","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"temporibus","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"tosse","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"ullamco","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"un","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"velit","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"venetiis","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"veniam","count":1,"lang":"la","rel":9.434,"stop":false},{"form":"voluptate","count":1,"lang":"la","rel":9.434,"stop":false}];
+  var STREAM=[[0,0,0],[1,0,0],[2,0,0],[3,0,0],[4,0,0],[5,0,0],[6,0,0],[7,0,0],[8,0,0],[9,0,0],[10,0,0],[11,0,0],[12,0,0],[13,1,0],[14,0,0],[15,0,0],[16,0,0],[17,0,0],[18,0,0],[19,0,0],[20,2,0],[21,2,0],[22,2,0],[23,2,0],[24,2,0],[25,2,0],[26,2,0],[27,2,0],[28,2,0],[29,3,0],[30,3,0],[31,3,0],[32,2,0],[33,2,0],[34,2,0],[2,2,0],[35,2,0],[36,4,0],[35,2,0],[37,2,0],[35,2,0],[38,2,0],[39,5,0],[40,5,0],[41,5,0],[17,5,0],[42,5,0],[43,5,0],[44,5,0],[45,5,0],[46,5,0],[47,5,0],[48,5,0],[49,5,0],[50,5,0],[51,6,0],[52,5,0],[35,5,0],[53,5,0],[54,5,0],[55,5,0],[56,5,0],[57,7,0],[58,7,0],[59,7,0],[60,7,0],[61,7,0],[62,7,0],[63,7,0],[64,7,0],[65,7,0],[66,7,0],[67,7,0],[60,7,0],[68,7,0],[69,8,0],[70,8,0],[71,8,0],[72,8,0],[73,8,0],[74,8,0],[59,8,0],[75,8,0],[76,8,0],[77,8,0],[78,9,0],[79,9,0],[80,9,0],[81,8,0],[82,8,0],[83,8,0],[16,8,0],[84,8,0],[85,8,0],[86,8,0],[14,8,0],[16,8,0],[0,10,0],[87,8,0],[88,8,0],[89,11,0],[62,12,0],[63,12,0],[64,12,0],[65,12,0],[66,12,0]];
+  var FORMS=["Lorem","ipsum","dolor","sit","amet","consectetur","adipiscing","elit","Sed","do","eiusmod","tempor","incididunt","ride","ut","labore","et","dolore","magna","aliqua","Ut","enim","ad","minim","veniam","quis","nostrud","exercitation","ullamco","squilla","un","telefono","Duis","aute","irure","in","Venetiis","reprehenderit","voluptate","Velit","esse","cillum","eu","fugiat","nulla","pariatur","Excepteur","sint","occaecat","cupidatat","non","proident","sunt","culpa","qui","officia","deserunt","Mollit","anim","id","est","laborum","Nam","libero","tempore","cum","soluta","nobis","eligendi","Optio","cumque","nihil","impedit","quo","minus","quod","maxime","placeat","colpo","di","tosse","Temporibus","autem","quibusdam","aut","officiis","debitis","saepe","eveniet","applausi"];
+  var HREFS=["text.html#u1","text.html#parlato:0.1.0.1.2.0","text.html#u2","text.html#parlato:0.1.0.2.1.0","text.html#parlato:0.1.0.2.3","text.html#u3","text.html#parlato:0.1.0.3.2","text.html#u4","text.html#u5","text.html#parlato:0.1.0.5.1.0","text.html#parlato:0.1.0.5.3","text.html#parlato:0.1.0.6.0.0","text.html#u6"];
+  var FLANG=["la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la","la"];
+  var DOCS=["Lorem Ipsum in voce — a demonstration spoken edition"];
+  var STOP={"it":["il","lo","la","i","gli","le","un","uno","una","di","a","da","in","con","su","per","tra","fra","e","o","ma","se","che","chi","cui","non","ne","ci","vi","si","mi","ti","come","dove","quando","perche","del","dello","della","dei","degli","delle","al","allo","alla","ai","agli","alle","dal","dalla","nel","nella","sul","sulla","è","era","sono","ho","hai","ha","abbiamo","essere","avere","questo","questa","quello","quella"],"la":["et","in","ad","de","cum","ex","per","pro","sed","non","nec","ut","si","quod","qui","quae","quod","is","ea","id","hic","haec","hoc","ille","illa","illud","sum","es","est","sunt","erat","esse","atque","aut","vel","enim","autem","tamen","iam","etiam","ac","a","ab","e"],"en":["the","a","an","of","to","in","on","at","by","for","with","and","or","but","if","that","which","who","whom","this","these","those","is","are","was","were","be","been","being","have","has","had","do","does","did","not","no","as","it","its","from"],"grc":["ὁ","ἡ","τό","καί","δέ","τε","γάρ","μέν","οὖν","ἐν","εἰς","ἐκ","ἐπί","πρός","διά","κατά","μετά","ἀλλά","οὐ","μή","τις","τι","ὡς","εἰ","γε"],"fr":["le","la","les","un","une","des","de","du","au","aux","et","ou","mais","si","que","qui","dont","ne","pas","ce","cette","ces","son","sa","ses","leur","dans","sur","pour","par","avec","est","sont","était","être","avoir","je","tu","il","elle","nous","vous","ils"],"de":["der","die","das","ein","eine","und","oder","aber","wenn","dass","welche","wer","den","dem","des","in","auf","mit","für","von","zu","aus","bei","nach","ist","sind","war","sein","haben","ich","du","er","sie","es","wir","ihr","nicht","kein"],"es":["el","la","los","las","un","una","de","a","en","con","por","para","y","o","pero","si","que","quien","cuyo","no","ni","se","le","lo","su","sus","del","al","es","son","era","ser","haber","este","esta","ese","esa","aquel"],"enm":["the","a","an","of","to","in","on","at","by","for","with","and","or","but","if","that","whiche","who","this","thise","tho","is","are","was","were","be","ben","have","hath","had","nat","no","as","it","his","hir","hem","ther","thanne"],"ang":["se","seo","þæt","and","ac","gif","þe","þa","þonne","on","in","to","of","mid","for","is","wæs","wæron","beon","habban","ne","na","þis","he","heo","hit","we","ge","hi"],"fro":["li","le","la","les","un","une","de","a","en","et","ou","mais","se","que","qui","ne","pas","ce","cist","cele","son","sa","ses","lor","dedenz","sor","por","par","o","est","sont","ert","estre","avoir","jo","tu","il","ele"]};
+  var MULTI=false;
+  var KWIC=6, MAXROWS=300;
+  // a collection opens on its FIRST document, not on all of them merged: for a
+  // collated tradition the merged lexicon is a blur. "All documents" stays an
+  // option, it is just not the default
+  var FREQ_ALL=FREQ, docFilter=DOCS.length>1?0:null;
+  var TOKLBL="parole", FORMLBL="forme distinte", TTRLBL="type-token ratio";
+  var TOTAL_ALL=106, DISTINCT_ALL=89;
+  var main=document.querySelector('main.lexicon');
+  var tbody=main.querySelector('.lx-freq tbody');
+  var search=main.querySelector('.lx-search');
+  var langsel=main.querySelector('.lx-langsel');
+  var stopsel=main.querySelector('.lx-stopsel');
+  var docsel=main.querySelector('.lx-docsel');
+  var hidestop=main.querySelector('.lx-hidestop');
+  var manual={}; // words the reader flipped by hand: form -> true(stop)/false(kept)
+  var sortKey='count', sortDir=-1; // default: most frequent first
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function isStop(f){
+    if(f.form in manual)return manual[f.form];
+    var list=STOP[stopsel.value]; if(!list)return false;
+    return list.indexOf(f.form)>-1;
+  }
+  function visible(f){
+    var q=search.value.trim().toLowerCase();
+    if(q&&f.form.toLowerCase().indexOf(q)===-1)return false;
+    if(langsel&&langsel.value&&f.lang!==langsel.value)return false;
+    if(hidestop.checked&&isStop(f))return false;
+    return true;
+  }
+  function sortRows(rows){return rows.slice().sort(function(a,b){
+    if(sortKey==='form'){var x=a.form.toLowerCase(),y=b.form.toLowerCase();return x<y?-sortDir:x>y?sortDir:0;}
+    return (a[sortKey]-b[sortKey])*sortDir||a.form.localeCompare(b.form);
+  });}
+  function arrows(){main.querySelectorAll('.lx-sort').forEach(function(th){
+    var k=th.getAttribute('data-sort');
+    th.querySelector('.lx-arr').textContent=k===sortKey?(sortDir<0?'\u25BC':'\u25B2'):'';
+    th.classList.toggle('on',k===sortKey);
+  });}
+  function render(){
+    var rows=sortRows(FREQ.filter(visible));
+    if(tbody)tbody.innerHTML=rows.slice(0,1500).map(function(f){
+      return '<tr data-form="'+esc(f.form)+'"'+(isStop(f)?' class="is-stop"':'')+'>'
+        +'<td class="lx-w">'+esc(f.form)+'</td>'
+        +(MULTI?'<td class="lx-lang">'+esc(f.lang||'')+'</td>':'')
+        +'<td class="lx-num">'+f.count+'</td>'
+        +'<td class="lx-num lx-rel">'+f.rel.toFixed(3)+'\u2030</td>'
+        +'<td class="lx-num"><button class="lx-flip" title="'+(isStop(f)?'\u2212':'+')+'">'+(isStop(f)?'\u25CF':'\u25CB')+'</button></td>'
+        +'</tr>';
+    }).join('');
+    arrows();
+  }
+  // per-document frequencies, computed over the stream: a witness or a letter
+  // seen alone, with its own running-words, distinct forms and TTR, so a
+  // collection is not a single blur of all its documents at once
+  function computeFreq(df){
+    var counts={}, total=0;
+    for(var i=0;i<STREAM.length;i++){
+      if(df!==null&&STREAM[i][2]!==df)continue;
+      total++; var fi=STREAM[i][0]; counts[fi]=(counts[fi]||0)+1;
+    }
+    var rows=[];
+    for(var k in counts){var c=counts[k];rows.push({form:FORMS[k],count:c,lang:FLANG[k]||'',rel:total?Math.round(c/total*1000000)/1000:0});}
+    return {rows:rows,total:total,distinct:rows.length};
+  }
+  function setStats(total,distinct){
+    var s=main.querySelector('.lx-stats');
+    if(s)s.innerHTML='<b>'+total+'</b> '+esc(TOKLBL)+' \u00b7 <b>'+distinct+'</b> '+esc(FORMLBL)
+      +' \u00b7 '+esc(TTRLBL)+' <b>'+(total?Math.round(distinct/total*10000)/10000:0)+'</b>';
+  }
+  function applyDoc(){
+    if(docFilter===null){FREQ=FREQ_ALL;setStats(TOTAL_ALL,DISTINCT_ALL);}
+    else{var fr=computeFreq(docFilter);FREQ=fr.rows;setStats(fr.total,fr.distinct);}
+    render(); buildAlpha();
+    var q=search.value.trim();
+    concord(q||(function(){var f=FREQ.filter(function(x){return !isStop(x);})[0]||FREQ[0];return f?f.form:'';})());
+  }
+  // the concordance over the stream: every form, every occurrence, the
+  // before/after taken from the adjacent tokens of the same document; when a
+  // document is chosen, only its own occurrences
+  function kwic(word){
+    var w=word.toLowerCase(), rows=[], total=0;
+    for(var i=0;i<STREAM.length;i++){
+      if(docFilter!==null&&STREAM[i][2]!==docFilter)continue;
+      if(FORMS[STREAM[i][0]].toLowerCase()!==w)continue;
+      total++;
+      if(rows.length>=MAXROWS)continue;
+      var d=STREAM[i][2],b=[],a=[];
+      for(var j=i-1;j>=0&&b.length<KWIC&&STREAM[j][2]===d;j--)b.unshift(FORMS[STREAM[j][0]]);
+      for(var k=i+1;k<STREAM.length&&a.length<KWIC&&STREAM[k][2]===d;k++)a.push(FORMS[STREAM[k][0]]);
+      rows.push({b:b.join(' '),k:FORMS[STREAM[i][0]],a:a.join(' '),href:HREFS[STREAM[i][1]]});
+    }
+    return {rows:rows,total:total};
+  }
+  function concord(form){
+    var out=main.querySelector('.lx-conc-out'); if(!out)return;
+    var r=kwic(form);
+    if(!r.total){out.innerHTML='<p class="occ">'+esc(form)+' \u2014</p>';return;}
+    var head='<p class="occ"><b>'+esc(form)+'</b> \u00b7 '+r.total
+      +(r.total>r.rows.length?' ('+r.rows.length+' shown)':'')+'</p>';
+    out.innerHTML=head+'<table class="lx-kwic"><tbody>'+r.rows.map(function(o){
+      return '<tr><td class="lx-b">'+esc(o.b)+'</td><td class="lx-k"><a href="'+o.href+'">'+esc(o.k)+'</a></td><td class="lx-a">'+esc(o.a)+'</td></tr>';
+    }).join('')+'</tbody></table>';
+  }
+  function show(v){
+    main.querySelectorAll('.lx-view').forEach(function(s){s.hidden=!s.classList.contains('lx-'+v);});
+    main.querySelectorAll('.lx-views button').forEach(function(b){b.classList.toggle('active',b.dataset.view===v);});
+  }
+  main.querySelectorAll('.lx-views button').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.view);});});
+  main.querySelectorAll('.lx-sort').forEach(function(th){th.addEventListener('click',function(){
+    var k=th.getAttribute('data-sort');
+    if(k===sortKey)sortDir=-sortDir; else {sortKey=k;sortDir=(k==='form')?1:-1;}
+    render();
+  });});
+  main.addEventListener('click',function(e){
+    var flip=e.target.closest('.lx-flip');
+    if(flip){var row=flip.closest('[data-form]');var form=row.getAttribute('data-form');
+      var f=FREQ.find(function(x){return x.form===form;});manual[form]=!isStop(f);render();e.stopPropagation();return;}
+    var w=e.target.closest('[data-form]');
+    if(w){concord(w.getAttribute('data-form'));if(main.querySelector('.lx-conc'))show('conc');}
+  });
+  // a red alphabet in the concordance: pick a letter, see the first (most
+  // frequent) form under it. The letter is the BASE letter, diacritics stripped,
+  // so Greek does not explode into every accented variant (\u03ac, \u1f00 ...)
+  var alpha=main.querySelector('.lx-alpha'), alphaFirst={};
+  function baseLetter(s){return (String(s).charAt(0)||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase();}
+  function buildAlpha(){
+    if(!alpha)return; alphaFirst={};
+    FREQ.forEach(function(f){var L=baseLetter(f.form);if(L&&/\p{L}/u.test(L)&&!(L in alphaFirst))alphaFirst[L]=f.form;});
+    alpha.innerHTML=Object.keys(alphaFirst).sort().map(function(L){return '<a href="#" data-letter="'+esc(L)+'">'+esc(L)+'</a>';}).join('');
+  }
+  if(alpha)alpha.addEventListener('click',function(e){var a=e.target.closest('[data-letter]');if(a){e.preventDefault();concord(alphaFirst[a.getAttribute('data-letter')]);}});
+  var timer;
+  search.addEventListener('input',function(){clearTimeout(timer);timer=setTimeout(function(){render();var q=search.value.trim().toLowerCase();if(q)concord(q);},150);});
+  if(docsel)docsel.addEventListener('change',function(){docFilter=docsel.value===''?null:parseInt(docsel.value,10);applyDoc();});
+  if(langsel)langsel.addEventListener('change',render);
+  stopsel.addEventListener('change',render);
+  hidestop.addEventListener('change',render);
+  // open on the default: for a collection, the first document; else the whole,
+  // with the first content word already in the concordance
+  applyDoc();
+})();</script>
+</body>
+</html>
